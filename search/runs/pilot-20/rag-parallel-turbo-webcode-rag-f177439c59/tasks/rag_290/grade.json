@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_290",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 543.7,
+    "total_citation_tokens": 5437.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives both default mappings, 80→443 and 8080→8443, matching the gold target. The additional note about overriding them does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that PortMapperImpl’s default HTTP-to-HTTPS mappings are 80:443 and 8080:8443.\n2. Citations [1], [2], and [3] explicitly identify both mappings as the defaults.\n3. All non-trivial information in the gold target is present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0010221,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

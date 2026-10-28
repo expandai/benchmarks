@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 506.1,
+    "total_citation_tokens": 5061.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide or contradict the gold target, which is that the colormap precision is limited to at most 8 bits.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim that ImageMagick remap colormap precision is limited to at most 8 bits.\n2. Citation [5] mentions that the palette and input images in that discussion are 8-bit, and [8] discusses converting a 16-bit image to 8-bit/channel. These describe particular image formats and workflows, not a maximum precision limit for remap.\n3. No retrieved citation states or establishes that remap colormap precision is at most 8 bits. The central non-trivial claim is therefore unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011252249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

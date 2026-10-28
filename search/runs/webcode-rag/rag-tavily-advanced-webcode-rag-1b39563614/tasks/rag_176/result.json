@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_176",
+  "prompt": "pacemaker colocation constraint resource template rsc with-rsc restriction",
+  "attempt": 1,
+  "answer": "Pacemaker resource templates may be referenced in **colocation constraints**, where the template represents all primitives derived from it.\n\nRestrictions:\n\n- Templates can be used in **order**, **colocation**, and **rsc_ticket** constraints.\n- Templates **cannot** be used in location constraints.\n- A colocation constraint may contain **no more than one template reference**.\n- Resource sets may not contain a template reference.\n- Template references use the `@` sign, for example: `@BigVM`.\n\nA colocation constraint generally has the form:\n\n```text\npcs constraint colocation add source_resource with target_resource score\n```\n\nA score of `INFINITY` makes colocation mandatory; lower scores are recommendations.",
+  "num_citations": 10,
+  "citation_text_tokens": 2930,
+  "citation_text_chars": 14210,
+  "search_queries": [
+    "pacemaker colocation constraint resource template rsc with-rsc restriction"
+  ],
+  "model_cost_usd": 0.001442,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4199,
+    "output_tokens": 327,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 177
+  },
+  "latency_ms": 6749.884583987296,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017442,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

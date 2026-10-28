@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_168",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 551.0,
+    "total_citation_tokens": 5510.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies only spaces as rejected path characters. The predicted answer claims that control characters and characters above U+00FF are also rejected, which goes beyond and contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations confirm that spaces are rejected, but also identify control characters as invalid. Citation [3] further shows a validation regex that rejects characters outside the range U+0021–U+00FF, which is not limited to spaces. Step 2: The gold answer says “only spaces,” an exclusivity claim contradicted by the cited information about control characters and other invalid characters. Therefore the citations do not ground the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0012481,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

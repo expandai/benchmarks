@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_149",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 150.5,
+    "total_citation_tokens": 1505.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the 255-character limit specified by the gold target. The added clarification that these are bytes does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target says the maximum is 255 characters. Citation [1] states that n for pO should be no more than 255, and citation [3] connects the pO parameter to the number of characters printed and says that parameter should not exceed 255. The citations therefore support the stated limit and its unit.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000515975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

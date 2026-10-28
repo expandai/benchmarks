@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_170",
+ "prompt": "awk next statement executed END action historical behavior",
+ "attempt": 1,
+ "answer": "The search results do not document a distinct historical behavior for `next` inside an `END` action.\n\nThey do establish that:\n\n- `next` abandons processing of the current input record and proceeds to the next record.\n- If `next` reaches end-of-input, the `END` actions are executed.\n- POSIX says behavior is **undefined** if `next` appears in or is invoked from a `BEGIN` or `END` action.\n- `gawk` treats `next` in `BEGIN` or `END` as a syntax error.\n\nTherefore, portable awk code must not use `next` in an `END` action.",
+ "num_citations": 10,
+ "citation_text_tokens": 4881,
+ "citation_text_chars": 21954,
+ "search_queries": [
+  "awk next statement executed END action historical behavior"
+ ],
+ "model_cost_usd": 0.00190595,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6050,
+  "output_tokens": 328,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 190
+ },
+ "latency_ms": 11594.827332999557,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00890595,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

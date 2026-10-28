@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_230",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 113.6,
+    "total_citation_tokens": 1136.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides no information about which symbol is excluded. It neither confirms nor contradicts the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations do not state which symbol, if any, is excluded by `read-positioning-symbols`.\n2. Citation [1] only speculates that `read-positioning-symbols` might be a replacement; it does not say that `nil` is excluded or give the reason.\n3. The gold answer’s claim that `nil` is not positioned for efficiency reasons is therefore unsupported. The verdict is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000462225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

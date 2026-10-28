@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_139",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 384.6,
+    "total_citation_tokens": 3846.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives the valid raw-data range as -15 to -9. The predicted answer includes -8 as a valid value, which is outside that range, so it contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The source states that raw deflate windowBits may be negative, from –8 through –15. Since windowBits is the base-two logarithm of the window size, –8 corresponds to a 256-byte window; the source says that window size is rejected for raw deflate. Excluding –8 leaves the valid range –15 to –9, matching the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001068975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

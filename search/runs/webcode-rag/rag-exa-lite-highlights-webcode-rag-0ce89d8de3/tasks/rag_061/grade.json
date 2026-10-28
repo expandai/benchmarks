@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_061",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 257.0,
+    "total_citation_tokens": 2570.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is a single period. The predicted answer explicitly identifies `.` as the `--upload-file` filename and shows it in the curl command, so it includes the required answer. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is the filename `.` (a single period). Citation [1] explicitly identifies `.` as the filename used for stdin in non-blocking mode. This directly supports the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006921,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

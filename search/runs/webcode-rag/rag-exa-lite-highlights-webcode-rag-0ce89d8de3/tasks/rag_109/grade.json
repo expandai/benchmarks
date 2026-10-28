@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_109",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 502.7,
+    "total_citation_tokens": 5027.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that Bazel ignores the malloc attribute when linkshared=True is specified, matching the gold target. The additional clarification is consistent and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that the `malloc` attribute’s value is ignored when `linkshared=True` is specified.\n2. Citations [8] and [10] state this directly, covering the full non-trivial claim.\n3. Therefore, the retrieved citations contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000931225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,61 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  search-harness-overlay:
+    name: search/ offline tests (bakeoff overlay on the pinned exa-labs/benchmarks)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: search
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: search/.python-version
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Cache the tiktoken encoding (the one network fetch the tests make)
+        uses: actions/cache@v4
+        with:
+          path: search/.tiktoken-cache
+          key: tiktoken-o200k_base
+      - name: Cache the pinned Hugging Face datasets (so the pin and row-count tests run)
+        uses: actions/cache@v4
+        with:
+          path: search/.hf-cache
+          key: hf-datasets-${{ hashFiles('search/bakeoff/suites.py', 'search/bakeoff/official_suites.py') }}
+      - run: make upstream
+      - run: make venv
+      - run: make download
+      - run: make test
+      # Last: fails while any stored record still carries an absolute machine path (tools/scrub_paths.py).
+      - name: Stored records carry no machine paths
+        run: python tools/scrub_paths.py --check
+      - name: Stored records carry no per-result URLs, titles or text
+        run: python tools/strip_result_details.py --check
+
+  search-stirrup-adapter:
+    name: search/ offline tests (AA-Omniscience adapter on the pinned Stirrup)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: search
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: search/.python-version
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: make upstream
+      - run: make aa-venv
+      - run: make test-aa

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_243",
+  "prompt": "Nim compile pragma file change detection method",
+  "attempt": 1,
+  "answer": "Nim’s `{.compile.}` pragma detects source-file changes by computing a **SHA1 checksum**. It recompiles the C/C++ file only when the checksum changes. Use `nim c -f` to force recompilation.\n\nIt does **not** track dependencies such as included headers; changing those requires a forced rebuild.",
+  "num_citations": 10,
+  "citation_text_tokens": 5723,
+  "citation_text_chars": 20045,
+  "search_queries": [
+    "Nim compile pragma file change detection method"
+  ],
+  "model_cost_usd": 0.0018633,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7113,
+    "output_tokens": 71,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3267.0796249294654,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.008863300000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

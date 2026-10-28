@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_239",
+  "prompt": "sed script maximum commands per script limit",
+  "attempt": 1,
+  "answer": "There is no universal maximum number of commands per `sed` script; it depends on the implementation.\n\n- GNU `sed` 4.2.2: no built-in command-count limit; practical limit is available RAM.\n- OpenBSD `sed`: RAM is the practical limit.\n- Some older or platform-specific implementations impose limits, such as:\n  - HP-UX: reported as supporting 99 commands.\n  - Tru64/OSF: documented as up to 99 commands, though some versions supported 999.\n  - An old Minix `sed`: `MAXCMDS` was 200.\n  - macOS/BSD `sed`: a command-line script line may be limited to 2048 bytes; using `-f` avoids that particular limitation.\n\nThus, for modern GNU `sed`, use a script file and the practical limit is primarily memory, but portable scripts should not assume unlimited commands.",
+  "num_citations": 10,
+  "citation_text_tokens": 4965,
+  "citation_text_chars": 20481,
+  "search_queries": [
+    "sed script maximum commands per script limit"
+  ],
+  "model_cost_usd": 0.00183105,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6144,
+    "output_tokens": 246,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 54
+  },
+  "latency_ms": 3989.026458002627,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00583105,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

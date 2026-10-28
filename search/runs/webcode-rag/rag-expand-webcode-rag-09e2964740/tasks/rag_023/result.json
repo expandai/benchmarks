@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_023",
+  "prompt": "Hibernate Search MassIndexer MySQL JDBC idFetchSize value",
+  "attempt": 1,
+  "answer": "For MySQL, set the MassIndexer’s `idFetchSize` to `Integer.MIN_VALUE`:\n\n```java\nmassIndexer.idFetchSize(Integer.MIN_VALUE);\n```\n\nThis prevents the MySQL JDBC driver from preloading the entire primary-key result set into memory. Hibernate Search documents that MySQL may benefit from this special value. ([Hibernate Search 7.2 API](https://docs.hibernate.org/search/7.2/api/org/hibernate/search/mapper/orm/massindexing/MassIndexer.html))\n\nNote: a search result reports that MariaDB rejected this value with `invalid fetch size`; the documented recommendation is specifically for MySQL.",
+  "num_citations": 10,
+  "citation_text_tokens": 3670,
+  "citation_text_chars": 16124,
+  "search_queries": [
+    "Hibernate Search MassIndexer MySQL JDBC idFetchSize value"
+  ],
+  "model_cost_usd": 0.0014505,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4761,
+    "output_tokens": 217,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 80
+  },
+  "latency_ms": 4135.167249944061,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0034505,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_274",
+ "prompt": "lodash _.transform callback early exit iteration how",
+ "attempt": 1,
+ "answer": "Return `false` from the `_.transform` callback to stop iteration early. Mutate the accumulator before returning:\n\n```js\nconst result = _.transform([2, 3, 4], (result, n) => {\n  result.push(n * n);\n  return n % 2 === 0; // false stops iteration\n}, []);\n\nconsole.log(result); // [4, 9]\n```\n\nHere, iteration stops when `n` is `3`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3630,
+ "citation_text_chars": 13519,
+ "search_queries": [
+  "lodash _.transform callback early exit iteration how"
+ ],
+ "model_cost_usd": 0.0013146,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4779,
+  "output_tokens": 100,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 6257.494999910705,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0083146,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

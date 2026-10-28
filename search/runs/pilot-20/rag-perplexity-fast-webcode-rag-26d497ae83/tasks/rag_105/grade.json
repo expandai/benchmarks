@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_105",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 387.8,
+    "total_citation_tokens": 3878.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the return value 127, matching the gold target, and directly addresses invalid environment keys or values.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that invalid environment keys or values cause `os.spawnve` to fail with return value 127. Step 2: This fully supports the gold target answer, 127. Step 3: Citations [1] and [3] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008246,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

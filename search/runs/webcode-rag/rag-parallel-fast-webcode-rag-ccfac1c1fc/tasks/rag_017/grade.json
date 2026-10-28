@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_017",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 210.3,
+    "total_citation_tokens": 2103.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer explicitly gives the gold behavior: `llvm.sqrt` has undefined behavior for negative values other than `-0.0`. However, it also introduces a conflicting claim that newer documentation says it returns the same value as libm `sqrt`; for negative inputs, that suggests defined NaN behavior rather than undefined behavior. Because the response contains conflicting information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that llvm.sqrt has undefined behavior for negative numbers other than -0.0. Step 2: This covers the full factual claim in the gold target answer. Step 3: Citation [1] contains sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00070385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_265",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 562.4,
+    "total_citation_tokens": 5624.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides none of the excluded storage types. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations mention the SSLStaplingCache directive but do not state its storage types. The SSLSessionCache storage-type passages in other citations concern a different directive and cannot establish the gold answer. Since the specific types “none” and “nonenotnull” are unsupported, the citations do not contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001095225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

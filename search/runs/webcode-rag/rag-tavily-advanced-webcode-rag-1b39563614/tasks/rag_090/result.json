@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_090",
+  "prompt": "Kotlin curly braces code block statement position interpretation",
+  "attempt": 1,
+  "answer": "In Kotlin, curly braces can represent either:\n\n- A **code block**, grouping statements and defining scope.\n- A **lambda expression** when they appear where an expression is expected, such as on the right-hand side of an assignment or as a function argument.\n\nFor example:\n\n```kotlin\nval a = {\n    val b = 1\n    val c = b + b\n    c + c\n}\n```\n\nHere, `a` is a function object of type `() -> Int`, not the value `4`. The block is a lambda, and it must be called:\n\n```kotlin\nprintln(a())\n```\n\nThe final expression in the lambda supplies its return value. An empty `{}` corresponds to a function of type `() -> Unit`. Curly braces used with constructs such as functions, loops, or conditionals instead form ordinary code blocks.",
+  "num_citations": 10,
+  "citation_text_tokens": 2381,
+  "citation_text_chars": 9771,
+  "search_queries": [
+    "Kotlin curly braces code block statement position interpretation"
+  ],
+  "model_cost_usd": 0.001235,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3539,
+    "output_tokens": 292,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 110
+  },
+  "latency_ms": 6702.835957985371,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017235,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

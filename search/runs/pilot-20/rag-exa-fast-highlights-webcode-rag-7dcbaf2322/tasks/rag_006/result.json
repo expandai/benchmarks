@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_006",
+ "prompt": "HTML5 img sizes attribute source-size-value allowed CSS functions",
+ "attempt": 1,
+ "answer": "A `<source-size-value>` may use **CSS math functions**; other CSS functions are not allowed.\n\nThe search results explicitly identify:\n\n- `calc()`\n- `min()`\n- `max()`\n- `clamp()`\n\nFor example:\n\n```html\n<img sizes=\"min(100vw, 800px)\" ...>\n<img sizes=\"clamp(300px, 50vw, 800px)\" ...>\n```\n\nPercentages are not allowed as source-size values.",
+ "num_citations": 10,
+ "citation_text_tokens": 4715,
+ "citation_text_chars": 20107,
+ "search_queries": [
+  "HTML5 img sizes attribute source-size-value allowed CSS functions"
+ ],
+ "model_cost_usd": 0.0017319,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5805,
+  "output_tokens": 234,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 129
+ },
+ "latency_ms": 5633.876332896762,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0087319,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_262",
+  "prompt": "HTTP Vary header asterisk wildcard proxy server generation restriction",
+  "attempt": 1,
+  "answer": "A proxy server **MUST NOT generate `Vary: *`**.\n\nIn `Vary`, `*` means that unspecified aspects of the request—including factors outside the message syntax—may have influenced representation selection. A recipient therefore cannot determine whether the response is suitable for a later request without forwarding that request to the origin server. An **origin server may generate** `Vary: *`.",
+  "num_citations": 10,
+  "citation_text_tokens": 2428,
+  "citation_text_chars": 11588,
+  "search_queries": [
+    "HTTP Vary header asterisk wildcard proxy server generation restriction"
+  ],
+  "model_cost_usd": 0.0010429,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3313,
+    "output_tokens": 179,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 93
+  },
+  "latency_ms": 7065.452709095553,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0170429,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

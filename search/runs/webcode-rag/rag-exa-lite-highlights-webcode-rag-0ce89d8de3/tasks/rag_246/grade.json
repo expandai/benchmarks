@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 497.0,
+    "total_citation_tokens": 4970.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item. Although the prediction mentions 1 for v1.5.0, it also states that the maximum is 4096 in v1.6, which conflicts with the requested maximum.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] directly states that the `Rules` field in the Gateway API v1.5.0 TLSRouteSpec has `MaxItems=1`, matching the gold target.\n2. The citations also indicate a later change: [3] reports that Gateway API v1.6.0-rc.1 allows up to 4096 rules. Thus, `MaxItems: 1` is supported for the cited v1.5.0 definition, but is not a version-independent or latest-release limit.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0016256,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

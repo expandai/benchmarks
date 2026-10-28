@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_288",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 300.1,
+    "total_citation_tokens": 3001.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that invalid Base64 input produces `[64dec-fail]`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that invalid Base64 input to curl’s 64dec function outputs [64dec-fail]. Citation [2] shows that exact output in a test using “not-base64-data.”\nStep 2: The gold target answer, [64dec-fail], is directly supported by the retrieved citations. The answer contains no additional unsupported claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000722975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

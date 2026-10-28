@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 285.9,
+    "total_citation_tokens": 2859.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies threads and userdata as the Lua types that cannot be represented as literals. The predicted answer does not provide those types and instead says number types are unsupported as literal types, so it fails to match the requested answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations identify thread and userdata as primitive types, and discuss which types can be represented by name or as singleton/literal types. Step 2: They do not state that thread and userdata cannot be represented as literals. In particular, the passages about userdata being represented by concrete types concern type representation, not literal values; thread is not specifically addressed as an unsupported literal. The gold answer’s claim about both types is therefore not established by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00118385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

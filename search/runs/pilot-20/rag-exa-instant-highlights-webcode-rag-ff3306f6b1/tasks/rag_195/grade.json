@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 495.2,
+    "total_citation_tokens": 4952.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that the complete field block must be reassembled and decompressed even if it is rejected or discarded, so the connection’s compression state remains consistent. That matches the gold requirement to process the field block unless the connection is closed. The additional details do not contradict that requirement.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that field blocks must be reassembled and decompressed, even when their frames are discarded; failure to decompress requires terminating the connection with COMPRESSION_ERROR.\n2. Citation [3] applies that requirement specifically to an oversized header list and explains that decompression keeps the connection-scoped HPACK table in sync.\n3. Together, the citations support processing the oversized field block to preserve connection state, or terminating the connection rather than leaving it active without processing the block. This grounds the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00137485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_184",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 801.5,
+    "total_citation_tokens": 8015.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target states that Data.List.maximumBy chooses the rightmost element when the comparison ties. The predicted answer describes a custom comparator that breaks ties by list head, but it does not state the default rightmost-tie behavior. Its custom-selection advice does not directly contradict that behavior, so the answer is not attempted.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that maximumBy chooses the rightmost element when there are tied maxima.\n2. Citations [2], [3], and [5] state this explicitly; citation [6] says the last tied element is chosen, which expresses the same behavior.\n3. The retrieved citations contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0016624749999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

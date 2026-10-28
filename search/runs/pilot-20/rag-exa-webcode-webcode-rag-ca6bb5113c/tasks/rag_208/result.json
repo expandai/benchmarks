@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_208",
+ "prompt": "imagemagick remap colormap precision bit depth limit",
+ "attempt": 1,
+ "answer": "ImageMagick’s `-remap` colormap limit is:\n\n- **Q8 builds:** up to **256 colors**.\n- **Q16 and higher builds:** colormap size is hard-limited to **65,536 entries**; ImageMagick reports the usable maximum as **65,535 colors**.\n- Exceeding the limit can produce an `UnableToCreateColormap` or memory-allocation error. Recent behavior may reduce the palette below 65,535 colors, which is lossy.\n\nThe limit is a **colormap-size limit**, not a per-channel precision limit. ImageMagick’s quantum depths include:\n\n| Quantum depth | Values per channel |\n|---:|---:|\n| 8 | 0–255 |\n| 16 | 0–65,535 |\n| 32 | 0–4,294,967,295 |\n| 64 | 0–18,446,744,073,709,551,615 |\n\n`-depth N` controls output/file depth and, when reducing depth, normally drops higher-order bits. Using `-dither FloydSteinberg -depth 8` distributes quantization error instead. The search results also describe `-depth` as a setting rather than a general pixel-precision reduction operation.",
+ "num_citations": 10,
+ "citation_text_tokens": 5349,
+ "citation_text_chars": 20010,
+ "search_queries": [
+  "imagemagick remap colormap precision bit depth limit"
+ ],
+ "model_cost_usd": 0.00210015,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6534,
+  "output_tokens": 389,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 119
+ },
+ "latency_ms": 7446.382916998118,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00910015,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

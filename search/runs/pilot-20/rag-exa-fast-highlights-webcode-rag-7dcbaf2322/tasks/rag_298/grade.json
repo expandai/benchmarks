@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_298",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 127.6,
+    "total_citation_tokens": 1276.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says `cluster.isMaster` is determined by whether `process.env.NODE_WORKER_ID` is undefined. The predicted answer instead identifies `process.env.NODE_UNIQUE_ID` as the determining variable, so it does not provide the target condition and gives a conflicting answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that `process.env.NODE_WORKER_ID` is undefined.\n2. The retrieved citations identify `process.env.NODE_UNIQUE_ID`—not `process.env.NODE_WORKER_ID`—as the environment variable used to determine whether the process is primary/master.\n3. No citation states that `process.env.NODE_WORKER_ID` is undefined, so the specific claim in the gold target is not supported. Under the strict criteria, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005996,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

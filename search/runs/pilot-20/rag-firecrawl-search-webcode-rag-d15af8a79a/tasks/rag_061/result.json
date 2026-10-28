@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_061",
+ "prompt": "curl upload-file stdin non-blocking mode filename",
+ "attempt": 1,
+ "answer": "Use a single period (`.`) with `--upload-file`/`-T`:\n\n```bash\ncurl --upload-file . https://example.com/upload\n```\n\n`-T .` reads from standard input in non-blocking mode, allowing curl to read server output while stdin is being uploaded. A hyphen (`-`) also reads stdin, but the non-blocking behavior is specifically documented for `.`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2454,
+ "citation_text_chars": 9330,
+ "search_queries": [
+  "curl upload-file stdin non-blocking mode filename"
+ ],
+ "model_cost_usd": 0.00113805,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3468,
+  "output_tokens": 226,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 135
+ },
+ "latency_ms": 5783.87666598428,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00311805,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

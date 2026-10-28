@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 405.8,
+    "total_citation_tokens": 4058.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides none of the address selection order from the gold target. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [5] says public IPv4 is used by default, but does not mention private IPv4 or describe an address-selection sequence.\n2. Citation [2] shows an example that relabels the target address to public IPv6; it does not establish the default selection order.\n3. Citation [7] mentions multiple public IPs and labels, but does not specify an order among private IPv4, public IPv4, and public IPv6.\n4. Therefore, the retrieved citations do not contain sufficient information to derive the gold target’s specific address-selection order.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000985865,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 287.8,
+    "total_citation_tokens": 2878.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer gives the gold target of 3n + 1 SQL queries, with n defined as the number of different entity classes modified in the revision. Its additional explanation is consistent with that result.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states the query count is 3N + 1 and defines N as the number of different entity classes modified within the revision.\n2. Citations [1] and [6] explicitly state that findEntitiesGroupByRevisionType executes 3n+1 (3N + 1) SQL queries and give the same definition for n/N.\n3. Therefore, all non-trivial information in the gold target is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007859750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

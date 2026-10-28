@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_260",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 650.6,
+    "total_citation_tokens": 6506.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the rounding-mode argument for constrained frem has no effect because frem's result is never rounded, and that it is included for consistency with other constrained floating-point intrinsics. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [6] explicitly states that the rounding mode argument has no effect because the result of frem is never rounded.\n2. It also says the argument is included for consistency with the other constrained floating-point operations, which supports the remaining claim in the gold target.\n3. The retrieved passage contains all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001111475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

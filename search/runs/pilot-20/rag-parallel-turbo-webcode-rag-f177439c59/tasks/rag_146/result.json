@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "`display: contents` does **not** prevent pseudo-elements from generating boxes. The element itself generates no box, but its children and pseudo-elements still generate boxes normally. Its `::before` and `::after` are treated as generated before and after the element’s children and are placed in the parent’s principal box.\n\n```css\n.wrapper {\n  display: contents;\n}\n\n.wrapper::before {\n  content: \"Before\"; /* generates a box */\n}\n\n.wrapper::after {\n  content: \"After\";  /* generates a box */\n}\n```\n\nA `::before` or `::after` pseudo-element will not generate a box if its computed `content` is `none`; otherwise, its default `display: inline` generates an inline box.\n\nSources: [CSS Display Module Level 3](https://www.w3.org/TR/css-display/), [CSS Pseudo-Elements Module Level 4](https://www.w3.org/TR/2016/WD-css-pseudo-4-20160607), [MDN `content`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content).",
+ "num_citations": 10,
+ "citation_text_tokens": 5765,
+ "citation_text_chars": 24681,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.0020577,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6753,
+  "output_tokens": 308,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 73
+ },
+ "latency_ms": 4085.798249929212,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0030577,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

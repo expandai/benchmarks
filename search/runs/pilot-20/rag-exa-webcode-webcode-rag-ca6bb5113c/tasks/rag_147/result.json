@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_147",
+ "prompt": "gettext LC_MESSAGES mingw arbitrary value substitute",
+ "attempt": 1,
+ "answer": "On MinGW/Windows, the runtime does not define `LC_MESSAGES`. GNU gettext therefore defines it to the arbitrary value `1729`:\n\n```c\n#define LC_MESSAGES 1729\n```\n\nThis value is only an identifier for the message-locale category; it is not a Windows locale value. For `gettext` and `dgettext`, the category is `LC_MESSAGES`, and the locale name is obtained through:\n\n```c\nsetlocale(LC_MESSAGES, NULL)\n```\n\nCatalogs are located using paths of the form:\n\n```text\ndir_name/locale/LC_MESSAGES/domain_name.mo\n```\n\nOn Windows, gettext may determine the default locale from the thread locale when no environment variables or `setlocale()` calls are used.",
+ "num_citations": 10,
+ "citation_text_tokens": 6240,
+ "citation_text_chars": 21415,
+ "search_queries": [
+  "gettext LC_MESSAGES mingw arbitrary value substitute"
+ ],
+ "model_cost_usd": 0.00211635,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7722,
+  "output_tokens": 155,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 13023.20737496484,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00911635,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

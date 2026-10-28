@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_284",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 453.8,
+    "total_citation_tokens": 4538.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states the gold behavior: when the right-hand side of `|=` produces no values, the left-hand-side path is deleted, equivalent to `del(path)`. Its additional jq 1.6 caveat does not negate that documented rule; it describes a version-specific behavior for the example.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target claims that when the `|=` right-hand side outputs `empty`, the left-hand-side path is deleted, as with `del(path)`. Citation [8] states that claim directly, so all non-trivial information in the target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011564750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_028",
+  "prompt": "glibc printf_info width precision star arginfo function value",
+  "attempt": 1,
+  "answer": "For `struct printf_info`:\n\n- `prec`:\n  - No precision: `-1`\n  - `.*`: handler receives the actual argument value; arginfo receives `INT_MIN`\n\n- `width`:\n  - No width: `0`\n  - `*`: handler receives the actual argument value; arginfo receives `INT_MIN`\n\nThe arginfo function should use `INT_MIN` to detect a `*`, fill in the argument types, and return the number of arguments required.",
+  "num_citations": 10,
+  "citation_text_tokens": 3765,
+  "citation_text_chars": 15648,
+  "search_queries": [
+    "glibc printf_info width precision star arginfo function value"
+  ],
+  "model_cost_usd": 0.0014776,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4951,
+    "output_tokens": 200,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 92
+  },
+  "latency_ms": 5737.533292034641,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064776,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

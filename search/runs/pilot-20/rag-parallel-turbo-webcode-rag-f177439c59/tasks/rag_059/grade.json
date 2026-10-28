@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_059",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 313.0,
+    "total_citation_tokens": 3130.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a minimum server RAM requirement of 1 GB or more. The predicted answer says there is no stated minimum server RAM requirement, which conflicts with that target and does not provide the required value.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that Kamal can deploy to Ubuntu servers and that Ubuntu cloud images have a 1 GB minimum RAM requirement. However, they do not establish that Kamal itself has a 1 GB minimum server RAM requirement. Citation [9] specifically says Kamal has no documented minimum. The gold answer's specific 1 GB-or-more Kamal requirement is therefore not derivable from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000971475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

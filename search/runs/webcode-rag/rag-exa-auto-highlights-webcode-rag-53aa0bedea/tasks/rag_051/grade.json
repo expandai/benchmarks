@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 425.3,
+    "total_citation_tokens": 4253.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer explains the distinction between the `type` and `start` attributes and gives zero/negative examples, but it never states that zero or negative values render using decimal markers regardless of `type`. It also does not explicitly claim that non-decimal markers are used for those values, so it does not clearly contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations discuss the `type` attribute’s numbering styles and the `start` attribute’s integer value. Citation [3] raises a question about representing zero with non-decimal styles, but does not state how an `<ol>` actually renders zero or negative values when a `type` is specified. Citation [1] says the `start` value is an Arabic numeral even when the numbering type is letters or Roman numerals; that describes the value of the `start` attribute, not the rendered marker in the case asked about.\n\nStep 2: The gold target’s claim that zero and negative numbers are always rendered using the decimal system regardless of the `type` attribute is not established by the retrieved passages. This is a non-trivial behavioral claim, so the result is UNGROUNDED.\n\nStep 3: No citation contains enough information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00953293,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_112",
+  "prompt": "automake parallel make recovery locking portable test-and-set command",
+  "attempt": 1,
+  "answer": "`mkdir` is the portable test-and-set command. Automake’s suggested locking pattern is:\n\n```make\n@if test -f $@; then :; else \\\n  trap 'rm -rf data.lock data.stamp' 1 2 13 15; \\\n  if mkdir data.lock 2>/dev/null; then \\\n    rm -f data.stamp; \\\n    $(MAKE) $(AM_MAKEFLAGS) data.stamp; \\\n    result=$$?; rm -rf data.lock; exit $$result; \\\n  else \\\n    while test -d data.lock; do sleep 1; done; \\\n    test -f data.stamp; \\\n  fi; \\\nfi\n```\n\nThe first process successfully creates `data.lock`, rebuilds the stamp, and removes the lock. Other processes wait until the lock directory disappears, then succeed only if `data.stamp` exists.",
+  "num_citations": 10,
+  "citation_text_tokens": 7793,
+  "citation_text_chars": 30745,
+  "search_queries": [
+    "automake parallel make recovery locking portable test-and-set command"
+  ],
+  "model_cost_usd": 0.00251915,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9170,
+    "output_tokens": 189,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3488.249707967043,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0045191499999999996,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

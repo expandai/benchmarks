@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_002",
+  "prompt": "CSS grid find fr size flex factor sum less than threshold",
+  "attempt": 1,
+  "answer": "In CSS Grid, the threshold is a flex-factor sum of **1**:\n\n- If the sum of all `fr` factors is **at least 1**, flexible tracks expand to fill the leftover space.\n- If the sum is **less than 1**, each track receives:\n\n```text\ntrack size = leftover space × track’s flex factor\n```\n\nThe tracks therefore occupy only that corresponding fraction of the leftover space; they do not fill the entire container.\n\nExample:\n\n```css\ngrid-template-columns: 100px 0.4fr 0.5fr;\nwidth: 400px;\n```\n\nThe flex-factor sum is `0.9`. The leftover space is `400px - 100px = 300px`, so the flexible tracks are:\n\n```text\n0.4fr = 300px × 0.4 = 120px\n0.5fr = 300px × 0.5 = 150px\n```\n\nTheir combined width is `270px`, leaving `30px` unused.",
+  "num_citations": 10,
+  "citation_text_tokens": 4080,
+  "citation_text_chars": 17061,
+  "search_queries": [
+    "CSS grid find fr size flex factor sum less than threshold"
+  ],
+  "model_cost_usd": 0.00171435,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5274,
+    "output_tokens": 330,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 111
+  },
+  "latency_ms": 6389.733750023879,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01771435,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

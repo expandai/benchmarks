@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 541.5,
+    "total_citation_tokens": 5415.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that active scatter lanes are ordered from the least-significant (lowest-index) element to the most-significant (highest-index) element, matching the gold target. Its additional explanation is consistent with that ordering: for overlapping active addresses, the higher-index lane writes later.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that overlapping masked.scatter addresses are ordered from least-significant to most-significant element.\n2. Citation [1] directly gives that ordering guarantee for scatter with overlapping addresses. Citation [3] and [5] repeat the same guarantee, and [7] also identifies the right order as from LSB to MSB.\n3. The retrieved citations therefore contain the answer’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.025556480000000003,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

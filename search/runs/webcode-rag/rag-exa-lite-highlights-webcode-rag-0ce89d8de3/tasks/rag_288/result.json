@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_288",
+  "prompt": "curl variable 64dec invalid base64 decode output",
+  "attempt": 1,
+  "answer": "For curl’s variable expansion, `64dec` decodes Base64:\n\n```sh\n--expand-data \"content={{value:64dec}}\"\n```\n\nIf the variable is not valid Base64—for example, it contains characters outside the Base64 character set—curl returns:\n\n```text\n[64dec-fail]\n```\n\nExample:\n\n```sh\ncurl --variable what=not-base64-data \\\n  --expand-url \"http://example/{{what:64dec}}\"\n```\n\nExpands to:\n\n```text\nhttp://example/[64dec-fail]\n```\n\nIf the input may contain surrounding whitespace, trim it first:\n\n```sh\n{{value:trim:64dec}}\n```\n\nThe search results explicitly document this order for applying multiple functions.",
+  "num_citations": 10,
+  "citation_text_tokens": 3890,
+  "citation_text_chars": 13151,
+  "search_queries": [
+    "curl variable 64dec invalid base64 decode output"
+  ],
+  "model_cost_usd": 0.00149745,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5232,
+    "output_tokens": 158,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3008.1522080581635,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00549745,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_102",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 699.0,
+    "total_citation_tokens": 6990.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `fsave` is treated as accessing only 16 bytes, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that Cachegrind treats the large FPU instruction `fsave` as accessing only 16 bytes.\nStep 2: The gold target answer is “16 bytes,” which is directly supported by the citations.\nStep 3: Citations [1], [3], and [4] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001276225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

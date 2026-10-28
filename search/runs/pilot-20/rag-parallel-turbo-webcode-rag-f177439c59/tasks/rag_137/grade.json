@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 545.7,
+    "total_citation_tokens": 5457.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies imageAtomicExchange only. The predicted answer includes imageAtomicExchange, but also claims imageAtomicAdd can be used for floating-point image atomics, which contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that, for the OES image-atomic extension, float image data is supported by imageAtomicExchange only, directly supporting the gold target. 2. Citations [2] and [4] describe a different extension that adds floating-point imageAtomicAdd as well as imageAtomicExchange, so the word “only” should be understood in the context of [1], not as a claim about every GLSL extension. 3. The retrieved sources contain the information needed to derive the gold target in that context.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001491725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 466.4,
+    "total_citation_tokens": 4664.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes both categories from the gold target: HTTPException instances and other exceptions with registered error handlers, except when raised from an error handler. Its additional statement about routing exceptions does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] states the exclusions and the exception to those exclusions. Step 2: This covers every non-trivial claim in the gold target answer, so the target is grounded. Step 3: Citation [2] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010766,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_059",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 529.8,
+    "total_citation_tokens": 5298.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states the minimum requirement is 1 GB RAM, matching the gold target. The additional 2 GB recommendation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly applies to Kamal deployment hosts and sets the minimum RAM to 1024 MB; its check rejects servers with less than that amount.\n2. 1024 MB is equivalent to 1 GB, so the cited threshold supports the gold answer “1GB RAM or more.” Citation [6] also states an at-least-1GB server recommendation, though [2] is the direct Kamal-specific evidence.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00111885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

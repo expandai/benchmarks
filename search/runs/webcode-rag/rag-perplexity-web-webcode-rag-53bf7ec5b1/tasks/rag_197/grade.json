@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_197",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 393.4,
+    "total_citation_tokens": 3934.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that when the local and remote sizes differ, Wget downloads the remote file regardless of timestamps, which matches the gold target. The additional details do not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that a size mismatch causes Wget to download the remote file regardless of the timestamp. Citation [1] explicitly says Wget compares sizes using the Content-Length header and downloads the remote file if they differ, irrespective of the timestamp. Citations [2] and [3] also state that mismatched file sizes override timestamp-based decisions. The target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0010701,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_234",
+ "prompt": "Ecto validate_required field already has error behavior",
+ "attempt": 1,
+ "answer": "`validate_required/3` does **not** clear an existing error for the field.\n\n- If the field is missing, it marks the changeset invalid, removes the field from `changes`, and adds a `{:required}` error.\n- If the field already has an error, `validate_required/3` does not add another error.\n- If you later provide a valid value, the previous error remains, so the changeset can still be invalid.\n\nExample:\n\n```elixir\nchangeset =\n  changeset\n  |> validate_required(:key)\n  |> put_change(:key, \"value\")\n  |> validate_required(:key)\n```\n\nThe original `\"can't be blank\"` error remains. To repair it, remove the field’s errors manually or use a custom `validate_required`; Ecto considers this behavior documented and does not plan to change it.",
+ "num_citations": 10,
+ "citation_text_tokens": 4833,
+ "citation_text_chars": 19995,
+ "search_queries": [
+  "Ecto validate_required field already has error behavior"
+ ],
+ "model_cost_usd": 0.00043316,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6211,
+  "output_tokens": 257,
+  "cached_input_tokens": 6208,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 78
+ },
+ "latency_ms": 14219.730040989816,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00743316,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

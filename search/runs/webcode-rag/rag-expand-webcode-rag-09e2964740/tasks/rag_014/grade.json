@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_014",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 855.6,
+    "total_citation_tokens": 8556.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no information about how many queries are pipelined per connection. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] establishes that HAProxy can multiplex multiple concurrent DNS queries over a TCP connection.\n2. None of the citations states that exactly four queries are pipelined on the same connection or gives a limit of four.\n3. The specific number in the gold target is a non-trivial factual claim, so the retrieved citations do not contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0014076000000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

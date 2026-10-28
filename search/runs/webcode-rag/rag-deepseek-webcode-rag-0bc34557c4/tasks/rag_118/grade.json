@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_118",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 239.3,
+    "total_citation_tokens": 2393.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies a 4,096-byte limit. The predicted answer states that Docker stores up to 4,096 bytes (4 KiB) of HEALTHCHECK output, matching the target; the additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The question asks for the output size limit for a Dockerfile HEALTHCHECK command. The cited passages state that only the first 4096 bytes of the command's output are stored. This directly supports the gold target answer, 4096 bytes.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00066585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

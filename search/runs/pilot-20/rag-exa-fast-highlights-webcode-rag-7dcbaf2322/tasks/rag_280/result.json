@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_280",
+ "prompt": "node.js http built-in proxy unix domain socket request",
+ "attempt": 1,
+ "answer": "Use Node’s built-in `http.request()` with the `socketPath` option:\n\n```js\nimport { createServer, request } from 'node:http';\n\nconst socketPath = '/tmp/example.sock';\n\nconst server = createServer((_req, res) => {\n  res.end('Hello from node:http');\n});\n\nserver.listen(socketPath, () => {\n  const req = request(\n    {\n      socketPath,\n      path: '/',\n    },\n    (res) => {\n      res.on('data', chunk => process.stdout.write(String(chunk)));\n      res.on('end', () => server.close());\n    }\n  );\n\n  req.end();\n});\n```\n\nFor an existing Unix-socket HTTP service, use the same client options:\n\n```js\nimport http from 'node:http';\n\nconst req = http.request({\n  socketPath: '/var/run/docker.sock',\n  path: '/containers/json',\n  method: 'GET',\n}, (res) => {\n  let body = '';\n\n  res.on('data', chunk => body += chunk);\n  res.on('end', () => console.log(body));\n});\n\nreq.on('error', console.error);\nreq.end();\n```\n\nThe Unix socket path is specified with `socketPath`; the request path is specified separately with `path`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4747,
+ "citation_text_chars": 19997,
+ "search_queries": [
+  "node.js http built-in proxy unix domain socket request"
+ ],
+ "model_cost_usd": 0.00194045,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5924,
+  "output_tokens": 383,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 122
+ },
+ "latency_ms": 5066.811709082685,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00894045,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_218",
+  "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+  "attempt": 1,
+  "answer": "`assign_new/3` shares an assign from parent to child when all of these conditions apply:\n\n- The child is a **nested LiveView**.\n- The parent has already defined the assign, e.g. `:current_user`.\n- The child calls `assign_new/3` for the same key during its `mount/3`.\n- The child does not already have that assign.\n\nExample:\n\n```elixir\n# Parent\nsocket = assign(socket, :current_user, user)\n\n# Child\ndef mount(_params, _session, socket) do\n  {:ok, assign_new(socket, :current_user, fn ->\n    Accounts.get_user!()\n  end)}\nend\n```\n\nThe child reuses the parent’s value, so the function is not executed and an additional database query can be avoided.\n\n`assign_new/3` assigns the value only when the key does not already exist. If the parent does not provide the assign—or the LiveView is mounted through live navigation—the function is executed instead.\n\nFor `Plug.Conn` assigns, sharing is available during the initial **disconnected** mount, but not during the connected mount. A child created with `live_render/3` runs in a separate process, with its own callbacks; parent assigns are available to it on mount through `assign_new/3`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3886,
+  "citation_text_chars": 16626,
+  "search_queries": [
+    "Phoenix LiveView assign_new parent child sharing conditions"
+  ],
+  "model_cost_usd": 0.0017001,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4929,
+    "output_tokens": 390,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 116
+  },
+  "latency_ms": 5616.796209011227,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0067001000000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

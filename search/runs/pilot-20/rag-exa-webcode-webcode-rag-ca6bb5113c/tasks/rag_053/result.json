@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_053",
+ "prompt": "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes",
+ "attempt": 1,
+ "answer": "HTTP/3 SETTINGS identifiers and values are encoded as QUIC variable-length integers. Their possible sizes are:\n\n| Encoding prefix (2 MSBs) | Total size | Usable value bits | Value range |\n|---|---:|---:|---:|\n| `00` | 1 byte | 6 bits | 0–63 |\n| `01` | 2 bytes | 14 bits | 0–16,383 |\n| `10` | 4 bytes | 30 bits | 0–1,073,741,823 |\n| `11` | 8 bytes | 62 bits | 0–4,611,686,018,427,387,903 |\n\nRFC 9114 states that each SETTINGS parameter’s identifier and value are both encoded as QUIC variable-length integers. Therefore, each can use 1, 2, 4, or 8 bytes, with a maximum of 62 value bits.",
+ "num_citations": 10,
+ "citation_text_tokens": 5226,
+ "citation_text_chars": 20910,
+ "search_queries": [
+  "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes"
+ ],
+ "model_cost_usd": 0.00183935,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6398,
+  "output_tokens": 200,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 28492.75424994994,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00883935,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

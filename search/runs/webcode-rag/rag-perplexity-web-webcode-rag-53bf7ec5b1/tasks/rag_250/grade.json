@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_250",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 399.7,
+    "total_citation_tokens": 3997.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies UTC and GMT as the hard-coded `%Z` values, matching the gold target. Its additional explanation is consistent with the accepted values being platform- and locale-dependent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly identifies the hard-coded `%Z` values as UTC and GMT. Step 2: The gold target answer contains exactly those two values, and both are present in the retrieved citation. Step 3: Citation [2] alone is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008327250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

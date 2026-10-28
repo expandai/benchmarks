@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_088",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 498.2,
+    "total_citation_tokens": 4982.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is 18 bits. The predicted answer explicitly states that the default `-msmall-mem` mode assumes addresses are no larger than 18 bits, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly states that GCC’s default assumption is that addresses are no larger than 18 bits. 2. Citation [1] also identifies `-msmall-mem` with 18-bit addressing. 3. The gold target, “18 bits,” is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0009496,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

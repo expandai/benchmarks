@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_060",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 540.5,
+    "total_citation_tokens": 5405.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer to the HAProxy type-check question. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation confirms that `ifgt` is one of the `set-var` conditions.\n2. It does not explain how the condition behaves when its value is not an integer or state that the check is considered true by default.\n3. Because that specific behavior is a non-trivial claim and is absent from the retrieved passages, the gold target answer is not supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010381000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

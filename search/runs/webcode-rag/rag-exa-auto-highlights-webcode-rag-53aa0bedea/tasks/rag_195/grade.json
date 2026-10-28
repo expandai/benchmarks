@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 468.5,
+    "total_citation_tokens": 4685.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that an oversized field block must still be fully reassembled and decompressed so the compression context remains synchronized, even when the block is rejected. This captures the gold target’s obligation to process the field block for consistent connection state unless the connection is closed. The added details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The target asserts that an oversized field block must be fully processed to preserve consistent connection state. Citation [6] directly says to continue processing the complete oversized block and explains that this keeps the HPACK dynamic table synchronized.\n2. Citations [1] and [2] establish the general protocol obligation to reassemble and decompress field blocks, even if discarded, and specify that failure to decompress requires terminating the connection.\n3. Citation [5] supports the stated exception: an implementation may tear down the connection beyond its hard cap. Together, the citations support the target’s processing obligation and its qualification that the connection may instead be closed.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001384725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

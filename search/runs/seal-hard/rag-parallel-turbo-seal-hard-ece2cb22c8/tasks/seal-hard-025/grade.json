@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-025",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.444,
+    "avg_citation_tokens": 487.1,
+    "total_citation_tokens": 4384.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives the gold total of 11, and its season-by-season breakdown treats co-directed episodes as not directed solely by Charlotte Brändström, consistent with the question.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The retrieved sources give eight episodes each for Seasons 1 and 2, so the two released seasons contain 16 episodes [1].\n2. Charlotte Brändström directed two Season 1 episodes [9]. The episode entries in [8] show three Season 2 episodes directed solely by her (201, 207, and 208), while two listed episodes (202 and 203) were co-directed with Louise Hooper. The episode-credit count in [7] is seven across the released seasons; subtracting the two from Season 1 leaves five Season 2 credits, of which the cited entries identify three as sole Charlotte Brändström directing.\n3. Thus five of the 16 episodes were directed solely by Charlotte Brändström, and 16 − 5 = 11 were not directed solely by her. The sources support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00236498,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

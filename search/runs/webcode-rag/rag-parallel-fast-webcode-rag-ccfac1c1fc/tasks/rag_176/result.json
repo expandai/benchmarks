@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_176",
+ "prompt": "pacemaker colocation constraint resource template rsc with-rsc restriction",
+ "attempt": 1,
+ "answer": "A Pacemaker resource template may be referenced in a colocation constraint, but:\n\n- A colocation constraint must not contain more than one reference to a template.\n- Resource sets must not contain a reference to a template.\n- A two-resource colocation constraint must specify both `rsc` and `with-rsc`.\n\nExample:\n\n```xml\n<rsc_colocation id=\"coloc-1\"\n                rsc=\"B\"\n                with-rsc=\"A\"\n                score=\"INFINITY\"/>\n```\n\n`with-rsc` is the colocation target; Pacemaker determines its location first, then places `rsc` relative to it.",
+ "num_citations": 10,
+ "citation_text_tokens": 2123,
+ "citation_text_chars": 9311,
+ "search_queries": [
+  "pacemaker colocation constraint resource template rsc with-rsc restriction"
+ ],
+ "model_cost_usd": 0.0010886,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3371,
+  "output_tokens": 205,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 69
+ },
+ "latency_ms": 3960.58291697409,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020886,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_220",
+  "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+  "attempt": 1,
+  "answer": "In the current stable aiohttp implementation, passing a `bytes` value without `filename` causes aiohttp to:\n\n- Emit a `DeprecationWarning`\n- Use the field name as the filename (`filename = name`)\n- Create a multipart file field\n\nThe warning says this behavior will change in v4; explicitly pass `filename` or use `io.BytesIO` instead.\n\n```python\nform = aiohttp.FormData()\nform.add_field(\"data\", b\"content\", filename=\"data.bin\")\n```\n\nIn the latest source, bytes values are made multipart, but no filename fallback is assigned automatically.",
+  "num_citations": 10,
+  "citation_text_tokens": 3511,
+  "citation_text_chars": 14386,
+  "search_queries": [
+    "aiohttp FormData add_field bytes value no filename fallback"
+  ],
+  "model_cost_usd": 0.00150145,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4816,
+    "output_tokens": 248,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 119
+  },
+  "latency_ms": 4211.124749970622,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00550145,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

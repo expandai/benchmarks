@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_303",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 480.3,
+    "total_citation_tokens": 4803.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no information about the ffmpeg scale filter edge case. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that setting both scale values to negative values is identical to setting both values to 0.\n2. The citations discuss scaling with a single automatic dimension, fixed dimensions, aspect-ratio behavior, and even-dimension constraints, but none states the behavior of setting both dimensions to negative values or that this is equivalent to setting both to 0.\n3. Therefore, a specific non-trivial claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00103023,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

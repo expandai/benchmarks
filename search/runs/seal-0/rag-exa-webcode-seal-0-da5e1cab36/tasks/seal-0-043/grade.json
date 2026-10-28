@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-043",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 254.2,
+    "total_citation_tokens": 2542.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target says it is impossible for a cube number to be expressed as the sum of two cubes. The prediction gives 1729 as the answer, but 1729 is not a cube number; the displayed identities only show it is a sum of cubes, so it does not satisfy the question's stated condition and contradicts the gold target's conclusion.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved passages state that 1729 is the smallest number expressible as a sum of two positive cubes in two ways, and give its decompositions.\n2. The gold target instead claims that no cube number can be a sum of two cube numbers, attributing this to Fermat’s Last Theorem.\n3. None of the citations states or establishes that claim. The cited material about 1729 does not contain the gold target’s factual claim, so the citations do not ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000845105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

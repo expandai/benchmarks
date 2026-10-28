@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_299",
+  "prompt": "Vert.x CSRFHandler session aware token regeneration condition",
+  "attempt": 1,
+  "answer": "Vert.x `CSRFHandler` regenerates the token under these conditions:\n\n- **No session is available:** a new token is generated on every `GET`/`HEAD` request.\n- **A session exists but has no valid token:** a token is generated and stored in the session.\n- **The session ID changed:** the stored token includes the session ID; after a session upgrade—such as unauthenticated → authenticated or a role change—the old token is invalid, so a new one is generated.\n- **The token expired:** a new token is generated. Expiration is controlled by `setTimeout(...)`.\n- **After a successful unsafe request** (`POST`, `PUT`, `DELETE`, or `PATCH`): the token is regenerated to prevent replay attacks.\n\nIf a session exists, its token is valid, and it has not expired, safe requests reuse the existing token rather than regenerating it. This is why the documentation summarizes the behavior as tokens being regenerated on session upgrades.",
+  "num_citations": 10,
+  "citation_text_tokens": 7433,
+  "citation_text_chars": 29429,
+  "search_queries": [
+    "Vert.x CSRFHandler session aware token regeneration condition"
+  ],
+  "model_cost_usd": 0.0026751,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8997,
+    "output_tokens": 355,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 149
+  },
+  "latency_ms": 5296.4117910014465,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0046751,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

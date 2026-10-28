@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "For `jq`’s update assignment (`|=`):\n\n- If the RHS outputs no values—i.e. it evaluates to `empty`—the selected left-hand-side path is deleted, like `del(path)`.\n- If the RHS outputs multiple values, only the **first** value is used.\n- To leave the current value unchanged, the RHS should output `.` rather than `empty`.\n\nThis behavior differs from older jq versions, where the **last** RHS value was used and an empty RHS could output `null`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2760,
+ "citation_text_chars": 11480,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.00112205,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3956,
+  "output_tokens": 111,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3413.139957934618,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00187205,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

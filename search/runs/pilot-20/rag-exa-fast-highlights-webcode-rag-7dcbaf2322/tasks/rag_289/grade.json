@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_289",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 470.7,
+    "total_citation_tokens": 4707.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The question asks which UI frameworks support multiple specification files. The gold target identifies Swagger UI and Scalar. The predicted answer includes both, but also lists ReDoc, OpenAPI Explorer, and RapiDoc as supported frameworks, so it adds answers beyond the target for this specific capability.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target names Swagger UI and Scalar.\n2. Citation [9] explicitly lists both as OpenAPI view options supported by Micronaut OpenAPI.\n3. Both non-trivial names in the gold target are present in the retrieved source, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001075725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_124",
+  "prompt": "pulumi fully_qualified_stack_name diy backend org requirement",
+  "attempt": 1,
+  "answer": "For a DIY backend:\n\n- **Non-legacy/project-scoped DIY backends:** use the fully qualified format:\n  ```text\n  organization/<project>/<stack>\n  ```\n  The organization component must always be the literal value **`organization`**; it cannot be changed.\n\n- **Legacy DIY backends:** fully qualified names are not supported. Use only:\n  ```text\n  <stack>\n  ```\n\nProject-scoped DIY stacks are supported starting with Pulumi **v3.61.0**. Existing legacy backends must be upgraded with:\n\n```bash\npulumi state upgrade\n```\n\nSources: [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), [Aligning Projects between Service and DIY Backend](https://www.pulumi.com/blog/project-scoped-stacks-in-self-managed-backend/), [fullyQualifiedStackName](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/functions/automation.fullyQualifiedStackName.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 3873,
+  "citation_text_chars": 16803,
+  "search_queries": [
+    "pulumi fully_qualified_stack_name diy backend org requirement"
+  ],
+  "model_cost_usd": 0.00158475,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4962,
+    "output_tokens": 287,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 69
+  },
+  "latency_ms": 4105.301083996892,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00658475,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

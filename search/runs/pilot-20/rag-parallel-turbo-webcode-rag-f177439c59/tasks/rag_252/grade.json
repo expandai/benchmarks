@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_252",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 423.9,
+    "total_citation_tokens": 4239.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold threshold of -O2 and above for some PowerPC CPUs, but it also claims that POWER8 and later enable CR-bit tracking regardless of optimization level. That conflicts with the gold target's stated optimization-level threshold.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the relevant optimization level is “-O2 and above.”\n2. Citations [4], [5], and [6] directly state that CR-bit tracking support is enabled by default for other CPUs when optimization is applied at “-O2 and above.”\n3. The sources therefore support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001152725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

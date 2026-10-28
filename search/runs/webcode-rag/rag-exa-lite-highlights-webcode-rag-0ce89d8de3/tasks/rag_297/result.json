@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_297",
+  "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+  "attempt": 1,
+  "answer": "`@NotFound(action = NotFoundAction.IGNORE)` has the side effect of making a **to-one association non-lazy**—effectively eager, even if it is declared `LAZY`. If the foreign-key value has no matching row, Hibernate treats the association as `null`.\n\nFor Envers, support for `@NotFound` was added in the referenced HHH-8174 change. The annotation also implies `ConstraintMode.NO_CONSTRAINT`, so Hibernate does not generate a foreign-key constraint for that association.",
+  "num_citations": 10,
+  "citation_text_tokens": 4665,
+  "citation_text_chars": 18254,
+  "search_queries": [
+    "Hibernate Envers @NotFound IGNORE side effect to-one"
+  ],
+  "model_cost_usd": 0.00172675,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5746,
+    "output_tokens": 242,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 130
+  },
+  "latency_ms": 5045.022874954157,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00572675,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

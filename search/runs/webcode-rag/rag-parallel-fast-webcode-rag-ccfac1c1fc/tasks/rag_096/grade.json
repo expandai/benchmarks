@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_096",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 226.9,
+    "total_citation_tokens": 2269.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that an empty IFS disables line splitting in fish command substitutions, matching the gold target. Its additional explanation is consistent with that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that setting IFS to the empty string disables line splitting, and citations [6] and [8] specifically connect this behavior to command substitution. Step 2: The gold target claim—that an empty IFS disables line splitting in command substitution—is fully supported. Step 3: Citations [6] and [8] directly contain the relevant information; the other listed citations also support the core behavior.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.00065485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

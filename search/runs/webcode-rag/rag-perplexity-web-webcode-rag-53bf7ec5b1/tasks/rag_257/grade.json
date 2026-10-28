@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 400.0,
+    "total_citation_tokens": 4000.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that for the usual three revision types, the query count is 3n + 1, with n defined as the number of different entity classes modified in the revision. This matches the gold target of 3N + 1.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [3], [8], and [9] explicitly state the query count as 3n+1 (or 3N+1) and define n/N as the number of different entity classes modified within the revision.\nStep 2: This supplies all factual claims in the gold target answer. The variation in capitalization is only notation.\nStep 3: Citations [3], [8], and [9] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000932475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

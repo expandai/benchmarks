@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_211",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 460.6,
+    "total_citation_tokens": 4606.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the inner primitive's priority is ignored and only the bundle's own priority matters. The predicted answer instead says priority is inherited by the inner primitive and that resources are assigned according to their priorities, contradicting the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations say that a priority set on the bundle is inherited by its primitive.\n2. They do not say that a priority set directly on the primitive is ignored, or that only the bundle's priority matters.\n3. That missing precedence claim is a non-trivial part of the gold target, so the retrieved citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001070725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

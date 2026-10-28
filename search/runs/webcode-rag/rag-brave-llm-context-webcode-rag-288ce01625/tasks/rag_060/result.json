@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_060",
+  "prompt": "haproxy set-var ifgt iflt non-integer type check",
+  "attempt": 1,
+  "answer": "In HAProxy `set-var`, `ifgt`/`iflt` compare the variable’s content with the input:\n\n- The comparison is performed only when **both the variable and input are of type integer**.\n- If either value is non-integer, the comparison is **considered true by default**—it does not perform a string comparison or fail.\n- `set-var` preserves the input value **and its associated type**, so a numeric-looking string remains non-integer unless explicitly produced as an integer.\n\nThus, a non-integer type check cannot be used to make `ifgt`/`iflt` reject the assignment; use a separate type/conversion check if needed. (HAProxy 2.8/3.2 configuration manuals.)",
+  "num_citations": 10,
+  "citation_text_tokens": 7625,
+  "citation_text_chars": 32821,
+  "search_queries": [
+    "haproxy set var ifgt iflt non integer type check"
+  ],
+  "model_cost_usd": 0.0025901,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9065,
+    "output_tokens": 270,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 109
+  },
+  "latency_ms": 10174.47974998504,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.007590100000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

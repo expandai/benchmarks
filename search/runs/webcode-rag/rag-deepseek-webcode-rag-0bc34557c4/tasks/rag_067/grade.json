@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_067",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 280.3,
+    "total_citation_tokens": 2803.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the exception as org.hibernate.envers.exception.AuditException, matching the gold target. The transaction rollback detail is not required by the question, and the additional message is consistent with the described negative revision overflow.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] directly identifies AuditException as the exception thrown when a generated revision number is negative or overflows.\n2. Citation [3] says the transaction cannot commit because of the exception, but does not state that the current transaction is rolled back.\n3. The gold target includes the specific claim that the transaction is rolled back. Since that non-trivial claim is not established by the retrieved passages, the citations do not support every part of the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001042725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

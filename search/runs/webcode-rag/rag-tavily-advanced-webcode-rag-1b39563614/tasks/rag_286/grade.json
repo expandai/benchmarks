@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 462.6,
+    "total_citation_tokens": 4626.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides none of the algorithm information in the gold target. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] supports that SDBM was used in HAProxy versions 1.4 and prior, and that an avalanche algorithm was applied to hash results in the described consistent-hashing context.\n2. Citation [2] describes base32 as converting a binary sample to a string, but does not identify a hash algorithm for that fetch method.\n3. The sources do not establish that the base32 fetch uses SDBM, nor do they specify that its output receives a “full avalanche.” These are non-trivial claims in the gold target, so the retrieved citations do not contain enough information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010822249999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

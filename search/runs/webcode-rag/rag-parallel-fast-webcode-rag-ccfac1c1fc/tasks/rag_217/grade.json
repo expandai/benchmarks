@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_217",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 239.6,
+    "total_citation_tokens": 2396.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that with gperf's `--pic` and `--struct-type` options, the first struct field must be `int`, not a string pointer, because it stores offsets into the string pool. This fully matches the gold target. The additional note about the field's usual name does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations state that when `%pic`/`-P` is enabled with a user-defined struct, its first field must be `int`, rather than a character pointer. Citation [1] also explains that this field contains offsets into the string pool instead of actual strings.\nStep 2: The gold target’s factual claims—the required type is `int`, not `char *`, and the reason is that it holds string-pool offsets—are supported by the retrieved text.\nStep 3: Citations [1] and [2] state the type and reason; citation [3] independently confirms the type requirement under `%pic`.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000766225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

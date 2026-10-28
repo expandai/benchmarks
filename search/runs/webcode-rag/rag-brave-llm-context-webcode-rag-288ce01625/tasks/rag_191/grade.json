@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_191",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 221.2,
+    "total_citation_tokens": 2212.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `std.heap.smp_allocator`, matching the gold target. Its additional context does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly selects `std.heap.smp_allocator` for ReleaseFast mode.\n2. Citation [5] confirms that SmpAllocator is designed for ReleaseFast mode.\n3. Together, these citations support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000646475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

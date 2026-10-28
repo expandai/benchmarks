@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_076",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 408.7,
+    "total_citation_tokens": 4087.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the corrected threshold as 0.04045 and explicitly says it replaces 0.03928, matching the gold target. The additional formula details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly give the current red threshold as 0.04045 and identify 0.03928 as the previous value. Citation [3] directly says the threshold was updated from 0.03928 to 0.04045.\nStep 2 — The gold target’s factual claims are fully supported by the retrieved citations.\nStep 3 — Citations [1] and [3] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009879749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_298",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 127.5,
+    "total_citation_tokens": 1275.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer identifies `process.env.NODE_UNIQUE_ID` as the condition, while the gold target specifies that `process.env.NODE_WORKER_ID` is undefined. These are different environment variables, so the predicted answer does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explain that `cluster.isMaster` is determined by `process.env.NODE_UNIQUE_ID` and is true when that variable is undefined.\n2. The gold target instead states that `process.env.NODE_WORKER_ID` is undefined.\n3. The citations do not mention `NODE_WORKER_ID`; the specific variable in the gold target is therefore unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000625725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

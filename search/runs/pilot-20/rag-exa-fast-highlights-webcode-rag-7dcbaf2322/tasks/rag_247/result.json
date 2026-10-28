@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_247",
+ "prompt": "NixOS pkgs.formats.hocon classpath includes validation issue",
+ "attempt": 1,
+ "answer": "`pkgs.formats.hocon` uses **pyhocon** to validate generated HOCON, but pyhocon does not implement `classpath` includes. Therefore, classpath includes can fail validation even if the HOCON is intended for a Java/Scala HOCON parser.\n\nUse either:\n\n```nix\nformat = pkgs.formats.hocon {\n  doCheck = false;\n};\n```\n\nor provide an alternative validator via the `validator` option. The documentation explicitly recommends one of these approaches for classpath includes.\n\nAdditionally, a nixpkgs issue reports that the `type = \"classpath\"` generator itself appears broken and that the validator fails to parse its output.  \nSources: [HOCON format documentation](https://docharvest.github.io/docs/nixos/development/settings-options.section/), [nixpkgs issue #329448](https://github.com/NixOS/nixpkgs/issues/329448)",
+ "num_citations": 10,
+ "citation_text_tokens": 3635,
+ "citation_text_chars": 12722,
+ "search_queries": [
+  "NixOS pkgs.formats.hocon classpath includes validation issue"
+ ],
+ "model_cost_usd": 0.00164955,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5154,
+  "output_tokens": 301,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 103
+ },
+ "latency_ms": 4649.729165947065,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00864955,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

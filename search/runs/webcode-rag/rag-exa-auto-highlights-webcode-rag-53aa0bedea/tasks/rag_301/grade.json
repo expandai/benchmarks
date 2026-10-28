@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_301",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 234.8,
+    "total_citation_tokens": 2348.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states the requested behavior: GNU units prints an error and ignores the definitions in the block when the environment variable is unset. However, its added advice that `!set` provides a default value for the missing environment variable is misleading; `!set` does not supply a fallback for an unset `!var` environment variable. The response therefore includes an incorrect claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation states what GNU Units does when the variable is undefined: it prints an error message and ignores the following definitions. 2. This covers both claims in the gold target answer, so the answer is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001207725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

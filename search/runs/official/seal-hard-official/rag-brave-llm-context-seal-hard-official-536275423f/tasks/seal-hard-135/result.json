@@ -1,0 +1,46 @@
+{
+  "task_id": "seal-hard-135",
+  "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+  "attempt": 1,
+  "answer": "This is based on the **Central Limit Theorem (CLT)**—but with an important correction:\n\n- The **sample mean (or sum)** of many i.i.d. observations becomes approximately normally distributed as the sample size \\(n\\) grows, assuming finite variance.\n- The individual sampled observations themselves do **not** become normally distributed; they retain the original population distribution.\n\nFormally,\n\n\\[\n\\frac{\\bar X-\\mu}{\\sigma/\\sqrt n}\\xrightarrow{d}N(0,1),\n\\]\n\nso for large \\(n\\),\n\n\\[\n\\bar X \\approx N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]",
+  "num_citations": 10,
+  "citation_text_tokens": 2273,
+  "citation_text_chars": 10962,
+  "search_queries": [
+    "If I randomly select i i d samples from a distribution n times the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large This statement is based on which theory"
+  ],
+  "query_clipped": true,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search-high-reasoning",
+    "reasoning_effort": "high",
+    "max_output_tokens": null,
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 27, 2026"
+  },
+  "model_cost_usd": 0.0010734,
+  "search_cost_usd": 0.005,
+  "total_cost_usd": 0.0060734,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2931,
+    "output_tokens": 284,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 138
+  },
+  "latency_ms": 5998.5782080329955,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_154",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 340.9,
+    "total_citation_tokens": 3409.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly includes both required settings: nativeTransport=true and clientMode=false. The additional details do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states two requirements: nativeTransport=true and clientMode=false.\n2. Citations [1] and [2] explicitly state both requirements for unixDomainSocketPath.\n3. Therefore, all non-trivial information in the gold target is present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000743725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

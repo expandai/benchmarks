@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_207",
+  "prompt": "ffmpeg select filter expression output index routing",
+  "attempt": 1,
+  "answer": "The `select` filter routes each input frame according to the expression result:\n\n- `0`: the frame is discarded.\n- A negative value or `NaN`: sent to the **first output** (index `0`).\n- A positive value: sent to output index `ceil(value) - 1`.\n\nExamples:\n\n- `1` → output index `0` (first output)\n- `2` → output index `1` (second output)\n- `1.2` → `ceil(1.2) - 1 = 1` (second output)\n\nFor multiple outputs, specify their number with `outputs` or `n`. For example:\n\n```text\nselect=n=2:e='mod(n,2)+1' [odd][even]\n```\n\nThe expression’s `n` variable is the sequential input-frame index, starting at 0.",
+  "num_citations": 10,
+  "citation_text_tokens": 2271,
+  "citation_text_chars": 8524,
+  "search_queries": [
+    "ffmpeg select filter expression output index routing"
+  ],
+  "model_cost_usd": 0.0010345,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3265,
+    "output_tokens": 182,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6447.230249992572,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0060345,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

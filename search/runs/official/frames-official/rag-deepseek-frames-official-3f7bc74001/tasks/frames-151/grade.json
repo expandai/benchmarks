@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-151",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 9.0,
+    "avg_citation_tokens": 547.2,
+    "total_citation_tokens": 4925.0,
+    "filtered_results": 1.0,
+    "query_clipped": 1.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nThe Ground Truth Answer states that \"The Nuapada district contains 608,269 more people than the other two areas combined.\" To verify if the Predicted Answer includes this:\n\n- The Predicted Answer says Nuapada district has 610,382 citizens.\n- Minamidaitōjima has 1,329 people and Vostochnaya Niva 0 people (so combined, 1,329 + 0 = 1,329).\n- The Predicted Answer does provide the population for each area but compares Nuapada district individually to each of the other two (609,053 and 610,382 more), not to their combined population.\n- To find the difference between Nuapada and the total of the other two: 610,382 - 1,329 = 609,053.\n- However, the Predicted Answer does not directly state or calculate the difference between Nuapada and the sum of the populations of the other two areas (which should be 609,053, but the Ground Truth says 608,269, possibly due to a difference in data sources/dates).\n\nImportantly, the Ground Truth specifically requires the difference with the combined population of the other two areas, and the Predicted Answer does NOT explicitly provide this sum or the direct answer to that comparison—it only provides individual comparisons, which is not the same.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.00305
+}

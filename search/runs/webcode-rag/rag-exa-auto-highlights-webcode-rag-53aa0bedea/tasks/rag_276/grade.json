@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 508.3,
+    "total_citation_tokens": 5083.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the required representation `(V, X, X, X)` and says the non-depth channels are unspecified and not guaranteed. Its additional comments do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that, without texture-component-swizzle, depth/stencil values are (V, X, X, X), and X is implementation-defined and unspecified.\n2. Citation [1] states this behavior verbatim for the case when the feature is not enabled. Citation [4] independently confirms it.\n3. The retrieved citations contain all of the gold target’s factual claims, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010941,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

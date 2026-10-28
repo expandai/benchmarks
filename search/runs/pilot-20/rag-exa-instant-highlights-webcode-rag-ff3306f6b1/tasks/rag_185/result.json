@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_185",
+ "prompt": "ffmpeg atadenoise s frames averaging valid range constraint",
+ "attempt": 1,
+ "answer": "For FFmpeg’s `atadenoise` filter, the `s` option sets the number of frames used for averaging:\n\n- Default: `9`\n- Must be an odd number\n- Valid range: `5` to `129` inclusive\n\nExample:\n\n```bash\n-vf \"atadenoise=s=9\"\n```\n\nThe initial implementation used a default of `33`, but current FFmpeg documentation lists the default as `9`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5283,
+ "citation_text_chars": 17811,
+ "search_queries": [
+  "ffmpeg atadenoise s frames averaging valid range constraint"
+ ],
+ "model_cost_usd": 0.00186045,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6636,
+  "output_tokens": 168,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 70
+ },
+ "latency_ms": 3870.6227499060333,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00586045,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

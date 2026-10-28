@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_263",
+ "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+ "attempt": 1,
+ "answer": "`NGX_PEER_NEXT` is triggered when `proxy_next_upstream` permits trying another upstream.\n\n### HTTP status-code triggers\n\n| Directive option | Upstream status |\n|---|---:|\n| `http_500` | 500 |\n| `http_502` | 502 |\n| `http_503` | 503 |\n| `http_504` | 504 |\n| `http_403` | 403 |\n| `http_404` | 404 |\n| `http_429` | 429 |\n\nFor example:\n\n```nginx\nproxy_next_upstream http_500 http_502 http_503 http_504;\n```\n\nThe default is:\n\n```nginx\nproxy_next_upstream error timeout;\n```\n\nThus, by default, HTTP status responses do not trigger the next peer. The `error`, `timeout`, `denied`, and `invalid_header` cases can also cause a next-peer attempt. The search results specifically show `NGX_PEER_NEXT` occurring for an HTTP 404 when `http_404` is configured.\n\n`NGX_PEER_NEXT` instructs nginx to try another backend; it does not mark the peer as failed.",
+ "num_citations": 10,
+ "citation_text_tokens": 5737,
+ "citation_text_chars": 20224,
+ "search_queries": [
+  "nginx NGX_PEER_NEXT upstream status codes trigger"
+ ],
+ "model_cost_usd": 0.00233755,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7018,
+  "output_tokens": 486,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 235
+ },
+ "latency_ms": 6075.519165955484,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00633755,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

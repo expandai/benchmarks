@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_263",
+ "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+ "attempt": 1,
+ "answer": "`NGX_PEER_NEXT` is used when nginx proceeds to another upstream peer, rather than marking the current peer as failed.\n\nHTTP status conditions that can trigger trying the next peer through `proxy_next_upstream` are:\n\n- `http_500`\n- `http_502`\n- `http_503`\n- `http_504`\n- `http_403`\n- `http_404`\n- `http_429`\n\nThe corresponding directive must include the status condition, for example:\n\n```nginx\nproxy_next_upstream http_404;\n```\n\nImportant distinctions:\n\n- `http_500`, `http_502`, `http_503`, `http_504`, and `http_429` are considered unsuccessful attempts only when configured.\n- `http_403` and `http_404` can cause nginx to try another peer when configured, but are never considered unsuccessful attempts for peer-failure purposes.\n- `error`, `timeout`, and `invalid_header` also trigger trying another peer and are always considered unsuccessful attempts.\n- An nginx development discussion specifically identifies HTTP 404 as producing `state = NGX_PEER_NEXT`; it does not mark the peer as failed.",
+ "num_citations": 10,
+ "citation_text_tokens": 5184,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "nginx NGX_PEER_NEXT upstream status codes trigger"
+ ],
+ "model_cost_usd": 0.00072204,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6375,
+  "output_tokens": 495,
+  "cached_input_tokens": 6372,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 250
+ },
+ "latency_ms": 11191.54933304526,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00772204,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

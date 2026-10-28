@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_278",
+  "prompt": "typing get_args argument order different reason",
+  "attempt": 1,
+  "answer": "`typing.get_args()` can return union arguments in a different order because of **type caching**.\n\nFor example:\n\n```python\nfrom typing import List, Union, get_args\n\nget_args(get_args(List[Union[int, str]])[0])\n# (int, str)\n\nget_args(get_args(List[Union[str, int]])[0])\n# (int, str)\n```\n\n`Union[int, str]` and `Union[str, int]` compare as equal because union argument order is ignored. Generic aliases such as `List[...]` cache their subscripting results, so both expressions can reuse the same cached object:\n\n```python\nList[Union[int, str]] is List[Union[str, int]]\n# True\n```\n\nConsequently, `get_args()` may return the cached union’s order rather than the order used in the original expression. The documentation explicitly states that the order may differ due to type caching. ([Python documentation](https://docs.python.org/3/library/typing.html), [Issue 42317](https://bugs.python.org/issue42317))",
+  "num_citations": 10,
+  "citation_text_tokens": 12467,
+  "citation_text_chars": 46196,
+  "search_queries": [
+    "typing get_args argument order different reason"
+  ],
+  "model_cost_usd": 0.0038393,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 13937,
+    "output_tokens": 296,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 70
+  },
+  "latency_ms": 4816.637250012718,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0058393,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

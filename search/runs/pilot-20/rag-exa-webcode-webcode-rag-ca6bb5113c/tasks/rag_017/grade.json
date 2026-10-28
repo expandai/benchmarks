@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_017",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 422.0,
+    "total_citation_tokens": 4220.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer mentions the gold behavior as an older LLVM semantics, but then says that after D28797 negative inputs produce the libm-style result. That contradicts the gold target’s stated behavior for `llvm.sqrt` on negative numbers other than `-0.0`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that llvm.sqrt has undefined behavior for negative inputs other than -0.0. Citation [6] also contrasts this with libm sqrt, which returns NaN for negative inputs.\nStep 2: The gold target’s factual claim is directly supported by the retrieved text. The citations include later discussion of changing the intrinsic’s semantics, but they do not negate the quoted passages establishing the gold target claim.\nStep 3: Citations [1], [4], [6], and [9] contain information sufficient to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00124685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_188",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 79.0,
+    "total_citation_tokens": 790.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that protocol 3 supports a maximum of 32768 streams. The predicted answer gives a maximum of 128 streams, which contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The target claim is that gocql protocol version 3 supports 32768 streams.\n2. Citation [3] states that protocol versions greater than 2 have a hard-coded value of 32768; protocol version 3 meets that condition.\n3. Citation [2] conflicts, stating that protocol v3 supports 128 streams, but [3] directly supports the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000730475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

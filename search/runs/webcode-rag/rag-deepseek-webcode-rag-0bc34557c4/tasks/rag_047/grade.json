@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_047",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 134.4,
+    "total_citation_tokens": 1344.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the restriction as at most 1024 characters, matching the gold target of 1024 Unicode characters. Its additional statements do not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that an implicit key is limited to at most 1024 characters altogether.\n2. The gold target specifies that these are Unicode characters. The quoted passages do not identify the character units as Unicode characters.\n3. Because the Unicode qualification is a specific factual detail and is not stated in the retrieved evidence, the citations do not ground every non-trivial part of the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009132249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

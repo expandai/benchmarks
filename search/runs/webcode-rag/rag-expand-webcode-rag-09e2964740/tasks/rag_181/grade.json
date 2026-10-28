@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 472.2,
+    "total_citation_tokens": 4722.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that `select_next_some()` produces a value only for `Some(item)` and does not yield `None`, matching the gold target’s core behavior. Its additional explanation about termination and avoiding polling a terminated stream is consistent with that behavior and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] explicitly states that `select_next_some()` makes `select` run the branch only for `Some(_)` values and ignore `None`s.\n2. Citation [3] also explains that the future does not resolve to `None` when the stream is empty.\n3. These passages support the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001229725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

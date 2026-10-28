@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_060",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 760.3,
+    "total_citation_tokens": 7603.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide or contradict the gold target that the check is considered true by default.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [9] describes what `ifgt`/`iflt` check, but does not say what happens when the variable has a non-integer type.\n2. None of the retrieved citations states that such a check is considered true by default.\n3. Since that is the gold answer’s factual claim and it is not supported by the citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001393625,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

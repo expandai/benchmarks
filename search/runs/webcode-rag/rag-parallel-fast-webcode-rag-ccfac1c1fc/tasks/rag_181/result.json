@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_181",
+ "prompt": "rust futures select_next_some behavior with None",
+ "attempt": 1,
+ "answer": "`select_next_some()` does **not** resolve to `None`.\n\nWhen the underlying `Stream` returns `None`:\n\n- The `select_next_some` future becomes terminated (`is_terminated() == true`).\n- It remains pending rather than producing a value, allowing it to be used with `select!`.\n- Polling it after the stream is terminated will panic.\n- The stream must correctly implement `FusedStream`; returning `None` while reporting `is_terminated() == false` can cause a debug assertion panic.\n\nUse `.next().await` if you need to receive `Option<Item>` and handle `None` directly.",
+ "num_citations": 10,
+ "citation_text_tokens": 2546,
+ "citation_text_chars": 9451,
+ "search_queries": [
+  "rust futures select_next_some behavior with None"
+ ],
+ "model_cost_usd": 0.00137435,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3578,
+  "output_tokens": 400,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 264
+ },
+ "latency_ms": 5724.24129198771,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00237435,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

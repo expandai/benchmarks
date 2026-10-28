@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_212",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 293.4,
+    "total_citation_tokens": 2934.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies exit status 77 as the status Automake ignores, matching the gold target. The additional detail about TAP tests does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that an Automake test program exiting with status 77 has its result ignored in the final count.\nStep 2: The gold target answer is “exit status of 77,” which is directly supported by those passages. No non-trivial factual claim is missing.\nStep 3: Citations [1], [2], [3], [4], and [5] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00075785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

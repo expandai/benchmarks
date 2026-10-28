@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.333,
+    "avg_citation_tokens": 329.3,
+    "total_citation_tokens": 988.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the requested range correctly as 0 through 255 inclusive. However, it adds claims that the value must have no leading zeros and that versions 9–12 are not valid, which are not part of the stated numeric range and are inaccurate as categorical claims about the field’s allowed values. Because the response includes incorrect extra information, it is incorrect overall.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the valid range is 0 to 255, inclusive. Citation [1] explicitly gives that same range and specifies that the value is a non-negative integer. The gold target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000696725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

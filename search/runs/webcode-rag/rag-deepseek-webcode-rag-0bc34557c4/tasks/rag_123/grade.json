@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_123",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 190.1,
+    "total_citation_tokens": 1901.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists INSERT, DELETE, UPDATE, and MERGE INTO, matching the gold target exactly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target lists four valid statement types: INSERT, DELETE, UPDATE, and MERGE INTO.\n2. Citations [1], [2], and [5] explicitly name all four statement types.\n3. Therefore, the retrieved citations contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000563475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_199",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 362.2,
+    "total_citation_tokens": 3622.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that on macOS 12, `pthread_rwlock_trywrlock()` returns `EDEADLK` rather than `EBUSY` when the write lock is already owned. The predicted answer asserts that the error is `EBUSY` even when the calling thread owns the lock, directly contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim that on macOS 12, pthread_rwlock_trywrlock returns EDEADLK rather than EBUSY when the caller already owns the write lock.\n2. Citation [1] says EBUSY is the error for trywrlock when the lock is already held, but does not establish the claimed macOS 12 behavior. Citations [4] and [10] mention ownership of a read/write lock but do not identify the error code for trywrlock or establish that behavior on macOS 12.\n3. Thus the retrieved citations do not support the specific platform, version, function, and error-code claim in the gold target. A non-trivial factual claim is missing, so the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001101975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

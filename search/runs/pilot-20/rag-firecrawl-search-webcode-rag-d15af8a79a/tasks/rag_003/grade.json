@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_003",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 356.7,
+    "total_citation_tokens": 3567.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the CSS page property applies to boxes that create class A break points. The prediction instead names page boxes and page-margin boxes, which does not provide the required answer and gives a different scope.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations indicate that CSS page properties apply to page boxes and page-margin boxes.\n2. The gold target specifically says the boxes create “class A break points.” Neither citation mentions class A break points or connects them to the boxes.\n3. Because this specific factual claim is absent, the retrieved citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000959475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

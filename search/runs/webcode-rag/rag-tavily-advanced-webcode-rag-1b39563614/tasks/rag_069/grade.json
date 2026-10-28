@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 472.4,
+    "total_citation_tokens": 4724.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says this situation is an error. The predicted answer explicitly states that the enum is invalid when `allow_alias = true` and all values have distinct numbers, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly addresses an enum with `allow_alias` enabled and all values using distinct numbers.\n2. It explicitly states that this situation is an error, matching the gold target answer.\n3. The retrieved citations contain the required factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008956,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

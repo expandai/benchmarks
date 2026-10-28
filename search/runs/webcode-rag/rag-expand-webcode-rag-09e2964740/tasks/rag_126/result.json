@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_126",
+  "prompt": "ssl SSLObject suppress_ragged_eofs EOF behavior",
+  "attempt": 1,
+  "answer": "For `ssl.SSLObject`, `suppress_ragged_eofs` is not handled. Any EOF that violates the TLS protocol raises `ssl.SSLEOFError`.\n\nBy contrast, for `SSLSocket`:\n\n- `suppress_ragged_eofs=True` (default): unexpected EOF returns `b\"\"`.\n- `suppress_ragged_eofs=False`: the underlying EOF exception is raised.",
+  "num_citations": 10,
+  "citation_text_tokens": 4376,
+  "citation_text_chars": 18751,
+  "search_queries": [
+    "ssl SSLObject suppress_ragged_eofs EOF behavior"
+  ],
+  "model_cost_usd": 0.00144565,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5356,
+    "output_tokens": 89,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3009.7522500436753,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0034456499999999998,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

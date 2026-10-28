@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_084",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 472.1,
+    "total_citation_tokens": 4721.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that aiohttp's port with an SSL context specified is 8443, matching the gold target. Its additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations state that when no port is provided, the port is 8443 if an SSL context is present. Citation [7] specifically describes this as the default for `run_app` when using SSL.\nStep 2: The gold target answer, 8443, is fully supported by the retrieved citations.\nStep 3: Citations [2] and [7] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000954975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

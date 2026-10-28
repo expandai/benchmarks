@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_053",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 496.5,
+    "total_citation_tokens": 993.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that HTTP/3 SETTINGS values use QUIC variable-length integers encoded using 6, 14, 30, or 62 bits, matching the gold target. The extra comparison to HTTP/2 does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Both citations explicitly state that HTTP/3 setting values are variable-length integers of 6, 14, 30, or 62 bits. Step 2: This directly contains the complete gold target answer, with no missing non-trivial claims. The answer is GROUNDED. Step 3: Citations [1] and [2] each contain sufficient information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000407475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

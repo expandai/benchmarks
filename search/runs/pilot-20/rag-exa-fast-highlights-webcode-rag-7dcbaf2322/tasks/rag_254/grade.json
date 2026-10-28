@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_254",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 426.4,
+    "total_citation_tokens": 4264.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes both media types listed in the gold target: `application/openapi+yaml` and `application/yaml`. The additional statement does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [3] explicitly identify the two media types that MAY be used for a YAML representation of a JSON Schema with the JsonSchema type.\nStep 2: The gold target answer names both of those media types, and the citations contain the complete answer. The target is GROUNDED.\nStep 3: Citations [1], [2], and [3] each contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000980975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

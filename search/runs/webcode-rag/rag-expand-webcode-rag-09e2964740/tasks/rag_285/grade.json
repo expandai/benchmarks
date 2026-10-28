@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_285",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 1106.2,
+    "total_citation_tokens": 11062.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says URI fragments are always checked using case-sensitive comparisons. The predicted answer states this explicitly and explains that the configuration option affects only the URL portion. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that URI fragments are always checked using case-sensitive comparisons.\n2. Citations [1], [2], [5], and [6] state this directly, specifying that the case-insensitive URL option does not affect URI fragments and that fragments are always checked case-sensitively.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001800225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

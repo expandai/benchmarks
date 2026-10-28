@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_002",
+  "prompt": "CSS grid find fr size flex factor sum less than threshold",
+  "attempt": 1,
+  "answer": "To resolve the `fr` size:\n\n1. Compute the leftover space after subtracting the base sizes of non-flexible tracks.\n2. Sum the flex factors of the flexible tracks.\n3. For finding the hypothetical `1fr` size, treat any sum below `1` as `1`:\n\n```text\nhypothetical 1fr size = leftover space / max(1, flex-factor sum)\n```\n\n4. Each flexible track receives:\n\n```text\ntrack size = flex factor × hypothetical 1fr size\n```\n\nIf the sum is less than `1`, the tracks intentionally use only that fraction of the leftover space. For example, with three tracks of `0.2fr` and `1000px` of leftover space:\n\n```text\nsum = 0.6\nhypothetical 1fr = 1000px / 1 = 1000px\neach track = 0.2 × 1000px = 200px\n```\n\nThe tracks consume `600px`, leaving `400px` unfilled.\n\nIf a track’s calculated size is less than its base size, the algorithm restarts while treating that track as inflexible. ([CSS Grid specification](https://www.w3.org/TR/css-grid-2/))",
+  "num_citations": 10,
+  "citation_text_tokens": 4957,
+  "citation_text_chars": 20718,
+  "search_queries": [
+    "CSS grid find fr size flex factor sum less than threshold"
+  ],
+  "model_cost_usd": 0.0022293,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6177,
+    "output_tokens": 571,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 305
+  },
+  "latency_ms": 9332.315000006929,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0092293,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

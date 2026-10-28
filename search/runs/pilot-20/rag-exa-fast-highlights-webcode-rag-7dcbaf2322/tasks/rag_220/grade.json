@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 351.1,
+    "total_citation_tokens": 3511.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that in the described stable aiohttp source, when bytes are passed without a filename or content_transfer_encoding, the field name is used as the filename. This captures the gold target’s fallback behavior. The additional statement describes a change in a later source version, so it is version-qualified rather than a direct contradiction of the stated behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question concerns a bytes value passed to add_field without a filename.\n2. Citation [1] states that when the value is bytes and both filename and content_transfer_encoding are None, filename is assigned the value of name.\n3. Therefore, with no filename provided, name is used as the filename unless content_transfer_encoding is specified. The retrieved source contains the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001111725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

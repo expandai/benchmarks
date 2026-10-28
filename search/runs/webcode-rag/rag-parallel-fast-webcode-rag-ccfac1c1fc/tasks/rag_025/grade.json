@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_025",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 220.6,
+    "total_citation_tokens": 2206.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that an error path uses the aliased response field name rather than the schema field name, and explains that the path represents a location in the response. Its example is consistent with the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [4] directly state that an error path for an aliased field uses the aliased name because the path represents the response, not the request.\nStep 2: This covers all factual claims in the gold target answer, so it is GROUNDED.\nStep 3: Citations [1], [2], and [4] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000647975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

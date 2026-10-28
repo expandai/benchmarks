@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_096",
+  "prompt": "fish shell IFS empty string effect command substitution",
+  "attempt": 1,
+  "answer": "In fish, setting `IFS` to an empty string disables newline splitting in command substitutions:\n\n```fish\nset IFS ''\nset var (some_command)\n```\n\nUnlike other shells, fish normally splits command-substitution output only on newlines—not on spaces, tabs, or the characters in `IFS`. With `IFS` empty, newline splitting is disabled, so the output is kept together. This behavior is deprecated; use `string collect` instead:\n\n```fish\nset var (some_command | string collect)\n```\n\nSetting or unsetting `IFS` is specifically described as disabling command-substitution splitting. (Fish documentation: https://fishshell.com/docs/current/language.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 4371,
+  "citation_text_chars": 17315,
+  "search_queries": [
+    "fish shell IFS empty string effect command substitution"
+  ],
+  "model_cost_usd": 0.00165375,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5550,
+    "output_tokens": 222,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 79
+  },
+  "latency_ms": 7527.543624979444,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01765375,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

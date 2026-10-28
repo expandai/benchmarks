@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_020",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 284.3,
+    "total_citation_tokens": 2843.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the version as v1.29.0, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that protobuf option retention support in Go is version 1.29.0. Citation [10] explicitly says the `FieldOptions_OptionRetention` type was added in v1.29.0, directly supporting that version. The retrieved citations therefore contain the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000662725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

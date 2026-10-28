@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_207",
+  "prompt": "ffmpeg select filter expression output index routing",
+  "attempt": 1,
+  "answer": "For the `select` filter, the expression result determines the output pad:\n\n- Result `0`: frame is discarded.\n- Result negative or `NaN`: frame is sent to output index `0` (the first output).\n- Result greater than zero: frame is sent to output index `ceil(result) - 1`.\n\nExamples:\n\n| Expression result | Output index | Output |\n|---:|---:|---|\n| `0` | — | Discarded |\n| `-1` | `0` | First output |\n| `NaN` | `0` | First output |\n| `1` | `0` | First output |\n| `1.2` | `1` | Second output |\n| `2.0` | `1` | Second output |\n| `3.7` | `3` | Fourth output |\n\nSet the number of output pads with `outputs` or `n`; its default is `1`. The routing is therefore:\n\n```text\noutput_index = ceil(expression_result) - 1\n```\n\nfor positive results. This is documented in the FFmpeg `select` filter documentation: https://ffmpeg.org/ffmpeg-filters.html",
+  "num_citations": 10,
+  "citation_text_tokens": 5488,
+  "citation_text_chars": 21896,
+  "search_queries": [
+    "ffmpeg select filter expression output index routing"
+  ],
+  "model_cost_usd": 0.0021305,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6641,
+    "output_tokens": 392,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 140
+  },
+  "latency_ms": 12784.425416961312,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0181305,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

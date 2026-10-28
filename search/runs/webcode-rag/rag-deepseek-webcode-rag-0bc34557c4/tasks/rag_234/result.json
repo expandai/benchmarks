@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_234",
+ "prompt": "Ecto validate_required field already has error behavior",
+ "attempt": 1,
+ "answer": "`validate_required/3` does not clear an existing error for the field when it passes later. Validation errors accumulate, and passing an existing `%Ecto.Changeset{}` into the changeset function does not remove previous errors.\n\nTo retry validation after changing the field, create a new changeset with the updated parameters rather than reusing the invalid one. `validate_required/3` also considers the value already present in the underlying data, not only values submitted in the changes.",
+ "num_citations": 10,
+ "citation_text_tokens": 3377,
+ "citation_text_chars": 12679,
+ "search_queries": [
+  "Ecto validate_required field already has error behavior"
+ ],
+ "model_cost_usd": 0.00142085,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4652,
+  "output_tokens": 215,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 112
+ },
+ "latency_ms": 3576.7898749327287,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00217085,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

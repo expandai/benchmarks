@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_231",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 299.1,
+    "total_citation_tokens": 2991.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer says CSS math functions may be used, but it does not identify `calc()` and explicitly says the individual functions are unspecified. It therefore does not clearly provide the specific function in the gold target, and it contains no contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations state that source-size values may use math functions, but do not name `calc()` or give examples of which functions qualify.\n2. The gold target specifies the particular function `calc()`; identifying it requires information not explicitly present in the retrieved passages.\n3. Since a specific factual detail in the gold target is missing, the citations do not contain sufficient information to derive the target under the strict standard.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010454750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

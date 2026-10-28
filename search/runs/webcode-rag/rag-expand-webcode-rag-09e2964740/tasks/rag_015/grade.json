@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_015",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 389.0,
+    "total_citation_tokens": 3890.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that ex-command tags starting with `:` are excluded from prefixing because they are considered unique across help pages, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that ex-commands, identified as those starting with `:`, do not get a prefix, and give the reason that they are considered unique across help pages.\nStep 2: These passages contain all non-trivial claims in the gold target answer. The wording matches the target, so the answer is grounded.\nStep 3: Citations [1], [2], and [3] each independently contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008217249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

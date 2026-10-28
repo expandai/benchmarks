@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_023",
+  "prompt": "Hibernate Search MassIndexer MySQL JDBC idFetchSize value",
+  "attempt": 1,
+  "answer": "For Hibernate Search’s MassIndexer with MySQL, set:\n\n```java\n.idFetchSize(Integer.MIN_VALUE)\n```\n\nMySQL’s JDBC driver may otherwise preload the entire primary-key result set into memory. Setting the value to `1` is not recommended for this issue.",
+  "num_citations": 10,
+  "citation_text_tokens": 1802,
+  "citation_text_chars": 8019,
+  "search_queries": [
+    "Hibernate Search MassIndexer MySQL JDBC idFetchSize value"
+  ],
+  "model_cost_usd": 0.00079265,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2888,
+    "output_tokens": 59,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2893.0493330117315,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00779265,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

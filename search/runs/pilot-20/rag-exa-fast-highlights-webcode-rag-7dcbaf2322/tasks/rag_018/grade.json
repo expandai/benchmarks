@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 444.7,
+    "total_citation_tokens": 4447.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a foreign exception crossing a non-unwinding Rust ABI boundary is undefined behavior, matching the gold target. Its additional statements do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question concerns a foreign exception/unwind crossing a non-unwinding ABI boundary into Rust.\n2. Citations [2] and [4] directly state that this situation is undefined behavior.\n3. Therefore, the gold target answer is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009696,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

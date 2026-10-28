@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_037",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 501.8,
+    "total_citation_tokens": 5018.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the gold restriction: a `repr(packed)` type cannot contain a `repr(align(...))` type, including transitively, regardless of whether the packed alignment is large enough. Its additional examples and explanation are consistent with that restriction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations directly state that a packed type cannot contain a type with the align representation hint, including transitively. Step 2 — This supports the gold answer’s full non-trivial claim. Step 3 — Citations [1] and [2] contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001074225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

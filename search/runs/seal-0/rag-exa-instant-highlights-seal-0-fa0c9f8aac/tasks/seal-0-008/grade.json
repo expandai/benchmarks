@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-008",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 561.9,
+    "total_citation_tokens": 5619.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The answer gives the gold target of 11. The additional list does not change that stated count.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations provide release and end-of-support dates for the listed .NET versions, which are relevant to calculating each support lifetime. Step 2: Applying the question’s strict “more than 12 months” threshold, the dates indicate 12 qualifying versions: all listed versions except .NET Core 3.0. In particular, .NET Core 2.2 runs from December 4, 2018 to December 23, 2019, which is more than 12 months. Therefore, the retrieved evidence does not support the gold answer of 11; the dates instead support a count of 12. Step 3: No citation supports the gold answer as stated.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00265348,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

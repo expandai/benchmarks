@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-180",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 3666.9,
+    "total_citation_tokens": 36669.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 7, but the prediction explicitly says 8 nations, so it contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The answer requires counting distinct nations with more than one gold in the Open event, excluding virtual and unofficial events.\n2. The retrieved results include seven nations with repeated golds through the 2024 event: the Soviet Union, the United States, Hungary, Russia, Ukraine, Armenia, and China.\n3. But citations [1] and [6] also present Uzbekistan as the gold winner in both 2022 and 2026. The citations do not identify the 2026 event as virtual or unofficial, so under the retrieved information Uzbekistan also qualifies.\n4. Thus the cited winner lists would produce eight nations, not the gold target of seven. The target is not supported by the citations as provided.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00660723,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_151",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 390.3,
+    "total_citation_tokens": 3903.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies InvalidAccessError as the exception that should be thrown, matching the gold target. Its additional note about Chrome's reported behavior distinguishes implementation behavior from the expected exception and does not negate the answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [8], and [9] explicitly identify `InvalidAccessError` as the exception for a `CSSFontFeatureValuesMap.set()` call with too many values.\nStep 2: The gold target answer is the exception name, and the citations provide it directly. All non-trivial information in the target is supported.\nStep 3: Citations [2], [8], and [9] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001112725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

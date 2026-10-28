@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_053",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 515.9,
+    "total_citation_tokens": 5159.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that RFC 9114 SETTINGS values can be 6, 14, 30, or 62 bits long, matching the gold target. The additional explanation is consistent with that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] directly provides a table of usable bit sizes for variable-length integers. Step 2: Those sizes exactly match every value in the gold target answer, so all non-trivial information is supported. Step 3: Citation [3] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00098335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

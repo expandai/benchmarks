@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_037",
+ "prompt": "rust repr packed struct nested repr align member restriction",
+ "attempt": 1,
+ "answer": "Rust forbids a `#[repr(packed)]` type from transitively containing a type with `#[repr(align(...))]`, even when the packed alignment is large enough.\n\n```rust\n#[repr(align(16))]\nstruct Aligned(i32);\n\n#[repr(packed)] // error[E0588]\nstruct Packed(Aligned);\n```\n\nThis restriction applies to nested members as well. For example, a `#[repr(C, packed(4))]` struct containing an aligned-to-4 type such as `AtomicU32` is rejected.\n\nThe reverse nesting is allowed:\n\n```rust\n#[repr(packed)]\nstruct Packed(i32);\n\n#[repr(align(16))]\nstruct Aligned(Packed); // allowed\n```\n\n`#[repr(align)]` and `#[repr(packed)]` also cannot be applied to the same type. Rust’s documented reason for the restriction is that C compilers differ on whether the inner aligned type or the outer packed type controls the layout.",
+ "num_citations": 10,
+ "citation_text_tokens": 5018,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "rust repr packed struct nested repr align member restriction"
+ ],
+ "model_cost_usd": 0.0020072,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6287,
+  "output_tokens": 363,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 155
+ },
+ "latency_ms": 4555.241875001229,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.006007200000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

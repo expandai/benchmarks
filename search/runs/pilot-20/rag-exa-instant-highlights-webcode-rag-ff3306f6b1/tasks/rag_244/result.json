@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_244",
+ "prompt": "Spring Boot Kubernetes deployment auto-detection environment variables",
+ "attempt": 1,
+ "answer": "Spring Boot Kubernetes auto-detection looks for these environment variables:\n\n```text\nKUBERNETES_SERVICE_HOST\nKUBERNETES_SERVICE_PORT\n```\n\nWhen deployed as a Kubernetes pod, these variables are typically defined automatically. Spring Cloud Kubernetes uses Spring Boot’s `ConditionalOnCloudPlatform` for Kubernetes awareness.\n\nTo override detection:\n\n```properties\nspring.main.cloud-platform=KUBERNETES\n```\n\nTo disable it:\n\n```properties\nspring.main.cloud-platform=NONE\n```",
+ "num_citations": 10,
+ "citation_text_tokens": 4196,
+ "citation_text_chars": 19997,
+ "search_queries": [
+  "Spring Boot Kubernetes deployment auto-detection environment variables"
+ ],
+ "model_cost_usd": 0.00159515,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5426,
+  "output_tokens": 199,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 94
+ },
+ "latency_ms": 5100.773166050203,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00559515,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

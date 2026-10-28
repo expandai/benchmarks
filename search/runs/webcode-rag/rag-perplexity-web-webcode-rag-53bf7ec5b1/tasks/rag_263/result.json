@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_263",
+  "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+  "attempt": 1,
+  "answer": "`NGX_PEER_NEXT` is triggered when the upstream returns:\n\n- **HTTP 403**\n- **HTTP 404**\n\nThese statuses are treated as “try another backend” rather than marking the peer as failed. The behavior applies when the corresponding status is enabled in `proxy_next_upstream`—for example, `proxy_next_upstream http_403 http_404;`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3825,
+  "citation_text_chars": 13534,
+  "search_queries": [
+    "nginx NGX_PEER_NEXT upstream status codes trigger"
+  ],
+  "model_cost_usd": 0.0014618,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4955,
+    "output_tokens": 186,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 103
+  },
+  "latency_ms": 4016.798915923573,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064618,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

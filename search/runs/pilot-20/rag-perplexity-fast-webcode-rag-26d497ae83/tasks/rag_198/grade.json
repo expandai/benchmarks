@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_198",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.222,
+    "avg_citation_tokens": 432.2,
+    "total_citation_tokens": 3890.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `path-noscheme` as the rule used by `relative-part` instead of `path-rootless`, matching the gold target. The additional RFC grammar details are consistent with the answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks which RFC 3986 path rule appears in relative-part instead of path-rootless.\n2. Citation [5] explicitly says relative-part excludes path-rootless and adds path-noscheme.\n3. Citation [3] confirms the relative-part ABNF includes path-noscheme and not path-rootless.\n4. The gold target, “path-noscheme,” is therefore fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000866975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

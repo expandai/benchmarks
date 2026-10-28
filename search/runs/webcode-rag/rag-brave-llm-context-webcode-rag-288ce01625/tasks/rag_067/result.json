@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_067",
+  "prompt": "Hibernate Envers revision number overflow negative exception type",
+  "attempt": 1,
+  "answer": "The exception is:\n\n```text\norg.hibernate.envers.exception.AuditException:\nNegative revision numbers are not allowed\n```\n\nIt occurs when the revision number overflows the default `int`/`Integer` limit (`Integer.MAX_VALUE`) and wraps around to a negative value. Envers rolls back the transaction to preserve audit-history validity.\n\nFor a larger range, use a custom revision entity mapped with a `long`/`Long` revision number. Also verify that the database sequence is correctly configured and not producing values that overflow when mapped to `Integer`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3414,
+  "citation_text_chars": 15123,
+  "search_queries": [
+    "Hibernate Envers revision number overflow negative exception type"
+  ],
+  "model_cost_usd": 0.0013162,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4483,
+    "output_tokens": 163,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 45
+  },
+  "latency_ms": 4196.568666957319,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063162,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

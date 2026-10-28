@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_221",
+  "prompt": "kubernetes OwnerReference blockOwnerDeletion missing permission error response",
+  "attempt": 1,
+  "answer": "Setting `metadata.ownerReferences[].blockOwnerDeletion: true` requires permission on the owner:\n\n- Kubernetes returns **HTTP 422 (Unprocessable Entity)** if the caller lacks the required permission.\n- The caller needs **`delete` permission on the referenced owner object**.\n- If the `OwnerReferencesPermissionEnforcement` admission plugin is enabled, it requires **`update` permission on the owner’s `finalizers` subresource** instead.\n\nGrant the necessary permission on the owner resource, or set `blockOwnerDeletion: false`. `blockOwnerDeletion` affects deletion blocking only when the owner is deleted using **foreground cascading deletion**.",
+  "num_citations": 10,
+  "citation_text_tokens": 3000,
+  "citation_text_chars": 13935,
+  "search_queries": [
+    "kubernetes OwnerReference blockOwnerDeletion missing permission error response"
+  ],
+  "model_cost_usd": 0.00128725,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4060,
+    "output_tokens": 227,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 93
+  },
+  "latency_ms": 3515.657249954529,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00628725,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

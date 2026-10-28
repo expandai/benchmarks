@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_280",
+  "prompt": "node.js http built-in proxy unix domain socket request",
+  "attempt": 1,
+  "answer": "Use Node’s built-in `http.request()` with `socketPath`. A Unix-socket request uses `socketPath` instead of `host`/`port`; the request path and headers are sent to the HTTP server listening on that socket.\n\n```js\nconst http = require('node:http');\n\nconst proxy = http.createServer((req, res) => {\n  const upstream = http.request(\n    {\n      socketPath: '/tmp/upstream.sock',\n      method: req.method,\n      path: req.url,\n      headers: req.headers,\n    },\n    (upstreamRes) => {\n      res.writeHead(upstreamRes.statusCode, upstreamRes.headers);\n      upstreamRes.pipe(res);\n    }\n  );\n\n  upstream.on('error', (err) => {\n    res.statusCode = 502;\n    res.end(err.message);\n  });\n\n  req.pipe(upstream);\n});\n\nproxy.listen('/tmp/proxy.sock');\n```\n\nFor a direct request to a Unix-domain-socket HTTP server:\n\n```js\nconst req = http.request(\n  {\n    socketPath: '/tmp/example.sock',\n    path: '/',\n  },\n  (res) => {\n    res.pipe(process.stdout);\n  }\n);\n\nreq.end();\n```\n\nNode’s environment/global proxy settings are ignored when the request is made to a Unix-domain socket.",
+  "num_citations": 10,
+  "citation_text_tokens": 3366,
+  "citation_text_chars": 12644,
+  "search_queries": [
+    "node js http built in proxy unix domain socket request"
+  ],
+  "model_cost_usd": 0.0017708,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4751,
+    "output_tokens": 486,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 214
+  },
+  "latency_ms": 7226.888124947436,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0067708,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_181",
+  "prompt": "rust futures select_next_some behavior with None",
+  "attempt": 1,
+  "answer": "`select_next_some()` does **not** resolve to `None`.\n\n- If the stream yields `Some(item)`, the future resolves with `item`.\n- If the stream is exhausted and yields `None`, the future remains pending rather than producing `None`; its `FusedFuture::is_terminated()` state indicates that the stream is empty.\n- This is intended for use with `select!`, which disables the branch when the stream is terminated, so the branch runs only for `Some(_)` values.\n- Polling the returned future directly after the stream is empty can panic. The documentation recommends using it with a `FusedFuture`-aware primitive such as `select!`.\n- The method requires the stream to implement `FusedStream`; a stream that returns `None` while reporting `is_terminated() == false` violates the expected contract and can trigger a debug assertion or busy-loop.",
+  "num_citations": 10,
+  "citation_text_tokens": 3045,
+  "citation_text_chars": 11704,
+  "search_queries": [
+    "rust futures select_next_some behavior with None"
+  ],
+  "model_cost_usd": 0.00153715,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4114,
+    "output_tokens": 424,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 235
+  },
+  "latency_ms": 6384.955124929547,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00653715,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

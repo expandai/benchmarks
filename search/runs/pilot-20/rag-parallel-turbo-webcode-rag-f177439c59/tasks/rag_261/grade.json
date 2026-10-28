@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 511.9,
+    "total_citation_tokens": 5119.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer correctly notes that userdata lacks literal syntax, but it does not identify threads as another type that cannot be represented as a literal. It does not explicitly contradict the target, so the answer is incomplete rather than incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations identify userdata and thread as Lua types ([6]). They also provide a list of basic expressions ([5]), but do not explicitly establish that the listed expression forms exhaust all ways of representing values as literals, nor directly state that userdata and threads cannot be represented as literals. The gold target’s exclusion claim is therefore not fully supported by the retrieved passages. Since that claim is non-trivial and unsupported, the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001548975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

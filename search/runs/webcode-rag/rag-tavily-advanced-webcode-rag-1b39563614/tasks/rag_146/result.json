@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_146",
+  "prompt": "CSS display contents pseudo-elements box not generated",
+  "attempt": 1,
+  "answer": "With `display: contents`, the element itself does not generate a box, but its children and `::before`/`::after` pseudo-elements should still generate boxes normally.\n\nIf a pseudo-element is not generated, check its `content` property:\n\n```css\n.element::before {\n  content: \"\";\n}\n```\n\nIf `content` is missing, invalid, `normal`, or `none`, the pseudo-element is not rendered and behaves as if `display: none` were applied. Replaced elements and some form controls are treated specially; for those, `display: none` is recommended instead of `display: contents`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3353,
+  "citation_text_chars": 14452,
+  "search_queries": [
+    "CSS display contents pseudo-elements box not generated"
+  ],
+  "model_cost_usd": 0.0014636,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4487,
+    "output_tokens": 285,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 152
+  },
+  "latency_ms": 10376.465541077778,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0174636,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

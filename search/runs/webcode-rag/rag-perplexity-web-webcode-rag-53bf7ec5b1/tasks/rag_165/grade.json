@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_165",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 394.8,
+    "total_citation_tokens": 3948.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that resume() is equivalent to requesting Long.MAX_VALUE items. The predicted answer explicitly says resume() is not equivalent to fetch(long) and distinguishes unrestricted resume from bounded fetch, so it contradicts the target rather than giving the requested equivalence.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations say that `resume()` switches the stream to flowing mode, while `fetch(long)` requests a specified amount of elements.\n2. None of the citations state that `resume()` is equivalent to fetching `Long.MAX_VALUE` items or otherwise identify that number as the equivalent.\n3. Since the specific number in the gold target is a non-trivial factual claim not present in the retrieved sources, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001054475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

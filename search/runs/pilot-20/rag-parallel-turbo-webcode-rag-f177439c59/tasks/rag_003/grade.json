@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_003",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 569.2,
+    "total_citation_tokens": 5692.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer gives a different description of the elements to which the `page` property applies and does not mention boxes that create class A break points, as required by the gold target. It does not explicitly contradict that target, so this is not an incorrect answer under the grading rules; the key information is simply missing.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [6] gives a related applicability statement, but it says “class 1 break points,” not “class A break points.”\n2. Citation [4] describes the applicable elements in terms of block-level elements in the root element’s normal flow and optional user-agent treatment of other elements; it does not identify class A break points.\n3. The retrieved text does not establish that “class 1” means “class A,” so it does not contain all the non-trivial information in the gold target. The gold answer is therefore UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001706475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

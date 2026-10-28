@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_167",
+ "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+ "attempt": 1,
+ "answer": "With BeautifulSoup 4.8.1 or later, the `html.parser` and `html5lib` parsers provide:\n\n- `Tag.sourceline`: the line number where the tag was found\n- `Tag.sourcepos`: the position of the tag’s start tag within that line\n\n```python\nfrom bs4 import BeautifulSoup\n\nhtml = \"\"\"\\\n<html>\n  <body>\n    <p>Example</p>\n  </body>\n</html>\n\"\"\"\n\nsoup = BeautifulSoup(html, \"html5lib\")\n\np = soup.find(\"p\")\nprint(p.sourceline)\nprint(p.sourcepos)\n```\n\nTo compare another tag with a reference tag:\n\n```python\nreference = soup.find(\"p\")\n\nreference_line = reference.sourceline\nreference_pos = reference.sourcepos\n\nfor tag in reference.find_all_next():\n    print(\n        f\"line diff: {tag.sourceline - reference_line}, \"\n        f\"position diff: {tag.sourcepos - reference_pos}, \"\n        f\"tag: {tag}\"\n    )\n```\n\n`sourcepos` is a position **on a line**, not necessarily an absolute offset into the original document. Also, `sourceline` and `sourcepos` can mean slightly different things depending on the parser.",
+ "num_citations": 10,
+ "citation_text_tokens": 2861,
+ "citation_text_chars": 9631,
+ "search_queries": [
+  "beautifulsoup html5lib sourceline sourcepos position reference"
+ ],
+ "model_cost_usd": 0.00150455,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4142,
+  "output_tokens": 391,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 119
+ },
+ "latency_ms": 5501.695708022453,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00225455,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

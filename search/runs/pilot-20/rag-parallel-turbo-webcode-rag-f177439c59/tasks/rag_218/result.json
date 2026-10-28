@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_218",
+ "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+ "attempt": 1,
+ "answer": "`assign_new/3` can share assigns from a parent LiveView with a nested child when:\n\n- The child is a **nested LiveView**.\n- The child is **mounted at the same time as the parent**.\n- The child is **not rendered with `sticky: true`**.\n- Both parent and child use `assign_new/3` for the assign.\n- The child’s assign does not already exist; `assign_new/3` only assigns the value when the key is absent.\n\nAssign sharing occurs during the child’s mount. It is “performed when possible but not guaranteed,” so the function passed to `assign_new/3` should produce the same result even if it runs in the child.\n\nThe child has its own process and mount lifecycle. Updating a parent assign does not remount the child. A child is mounted only once while its `:id` remains unchanged; to remount it with new session data, provide a new `:id`.",
+ "num_citations": 10,
+ "citation_text_tokens": 6550,
+ "citation_text_chars": 25852,
+ "search_queries": [
+  "Phoenix LiveView assign_new parent child sharing conditions"
+ ],
+ "model_cost_usd": 0.0023226,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7683,
+  "output_tokens": 335,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 131
+ },
+ "latency_ms": 4922.50766698271,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0033226,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

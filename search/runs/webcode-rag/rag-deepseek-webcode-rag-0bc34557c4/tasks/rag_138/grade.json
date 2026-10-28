@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_138",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 185.1,
+    "total_citation_tokens": 1851.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target, `inline`, but also claims `none` is a supported sourcemap mode. esbuild's supported modes are `linked`, `external`, `inline`, and `both`; `none` is not a supported explicit mode. The added incorrect claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly states that the transform API can return an inline data URL comment in its code output. Step 2: This supports the gold target, “inline,” without relying on details absent from the sources. Step 3: Citation [2] contains information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00083935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

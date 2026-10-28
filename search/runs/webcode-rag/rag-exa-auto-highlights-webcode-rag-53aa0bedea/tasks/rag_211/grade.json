@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_211",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 421.2,
+    "total_citation_tokens": 4212.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that the bundle's own priority determines assignment order and that a separately configured priority on an inner primitive is ignored, matching the gold target. Its note that bundle meta-attributes are inherited by the primitive is compatible with this: the effective priority still comes from the bundle.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The cited passages state directly that a bundle’s own priority matters and that the priority of a primitive inside it is ignored. Step 2 — This covers every non-trivial claim in the gold target answer, so the answer is GROUNDED. Step 3 — Citations [1], [2], and [8] each contain the answer explicitly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009691000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

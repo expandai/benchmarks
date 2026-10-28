@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_125",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 312.6,
+    "total_citation_tokens": 3126.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies back-reference numbers from 1 to 9. The predicted answer gives the maximum as 9 and describes the range as $1–$9 or \\1–\\9, which is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the maximum back-reference number is 9, giving a range of 1 to 9.\n2. Citations [1], [3], [4], and [9] explicitly state that back-reference numbers range from 1 to 9.\n3. The retrieved sources therefore contain the information needed to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007611,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

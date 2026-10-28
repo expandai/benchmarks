@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 131.4,
+    "total_citation_tokens": 1314.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies the return type as vec2<T>. The predicted answer instead gives a named structure type with old_value and exchanged fields, so it does not provide the gold answer and contradicts it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [8] says the function formerly returned a vec2, but does not specify the element type as T; it also describes the current return type as a struct.\n2. Citation [10] mentions a vector but does not establish that its type is vec2<T>.\n3. The citations therefore do not contain all the information needed to derive the gold target answer vec2<T>.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007117250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

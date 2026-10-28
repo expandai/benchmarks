@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_074",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 507.1,
+    "total_citation_tokens": 5071.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide the target information about the measured value being twice the number of queued connections. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe avg_queue as a queue count divided by a server count, and [7] says queued connections can still be considered when a server is not RUNNING.\n2. None states that, when there are no active servers, HAProxy uses twice the number of queued connections as the measured value.\n3. That specific behavior is a non-trivial claim in the gold target and is not established by the retrieved citations, so the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00103124,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

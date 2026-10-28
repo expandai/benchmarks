@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 42.9,
+    "total_citation_tokens": 429.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is the failure string `[64dec-fail]`. Although the prediction includes that exact string, it also says invalid Base64 produces `64dec-fail` without brackets, contradicting the requested failure output.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [2] explicitly states the output when decoding is not possible is \"[64dec-fail]\". Citation [1] also supports the failure behavior, though it gives the unbracketed string.\nStep 2 — The gold target answer, [64dec-fail], is explicitly present in citation [2]. The answer is fully grounded.\nStep 3 — Citation [2] contains the exact target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0005646,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

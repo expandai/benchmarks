@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_293",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 250.7,
+    "total_citation_tokens": 2507.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies carriage return (CR) as the default separator, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the default separator for replacing linefeeds during tmux paste-buffer is carriage return (CR).\n2. Citations [1], [4], and [7] explicitly state that the default separator is carriage return (CR); [2] and [3] also confirm the LF-to-CR default behavior through the -r option description.\n3. The answer is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0006863500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

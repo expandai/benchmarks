@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_303",
+ "prompt": "ffmpeg scale filter both width height -n edge case",
+ "attempt": 1,
+ "answer": "If **both width and height are set to `-n`** (for example, `scale=-2:-2`), FFmpeg treats them like `0:0`:\n\n- The input width and height are used unchanged.\n- The aspect ratio is not recalculated or rounded.\n- `scale=-1:-1` is therefore equivalent to `scale=0:0`.\n\nThe `-n` behavior—preserving aspect ratio while making a dimension divisible by `n`—applies only when **one and only one** dimension is `-n`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2647,
+ "citation_text_chars": 9441,
+ "search_queries": [
+  "ffmpeg scale filter both width height -n edge case"
+ ],
+ "model_cost_usd": 0.00118845,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3708,
+  "output_tokens": 218,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 98
+ },
+ "latency_ms": 4467.144749942236,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0021884499999999998,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

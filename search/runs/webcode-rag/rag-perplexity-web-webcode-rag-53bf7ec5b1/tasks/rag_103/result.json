@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_103",
+  "prompt": "CockroachDB opt_join_hint valid hint keywords",
+  "attempt": 1,
+  "answer": "Valid `opt_join_hint` join algorithm keywords are:\n\n- `HASH`\n- `MERGE`\n- `LOOKUP`\n- `INVERTED`\n- `STRAIGHT`\n\nUse them with a join type and `JOIN`, for example:\n\n```sql\nINNER HASH JOIN\nLEFT LOOKUP JOIN\nINNER INVERTED JOIN\nLEFT STRAIGHT JOIN\n```\n\n`LOOKUP` and `INVERTED` can be used only with `INNER` and `LEFT` joins. The algorithm keyword alone, such as `MERGE`, is not valid hint syntax; use, for example, `INNER MERGE JOIN`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3938,
+  "citation_text_chars": 16531,
+  "search_queries": [
+    "CockroachDB opt_join_hint valid hint keywords"
+  ],
+  "model_cost_usd": 0.0013833,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4905,
+    "output_tokens": 131,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2848.985582939349,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063833,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

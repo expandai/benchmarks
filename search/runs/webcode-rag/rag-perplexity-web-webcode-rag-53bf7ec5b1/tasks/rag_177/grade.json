@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_177",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.375,
+    "avg_citation_tokens": 478.9,
+    "total_citation_tokens": 3831.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that attributes with a `__declspec` spelling ignore `HasCustomParsing` and are handled by `Parser::ParseMicrosoftDeclSpec`, matching the gold target. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited manuals explicitly state that attributes with a __declspec spelling ignore the HasCustomParsing flag and are handled by Parser::ParseMicrosoftDeclSpec.\nStep 2: This covers all non-trivial claims in the gold target answer, so the answer is grounded.\nStep 3: Citations [1], [2], and [4] each contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00084885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

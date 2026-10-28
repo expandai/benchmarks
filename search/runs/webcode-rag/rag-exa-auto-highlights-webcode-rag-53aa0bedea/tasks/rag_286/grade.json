@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 741.4,
+    "total_citation_tokens": 7414.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the hash as SDBM-style and says HAProxy applies full_hash() avalanche mixing, matching the gold target. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The target identifies the base algorithm as SDBM. Citation [7] names `hash_sdbm` and gives the same recurrence used to process the path in [1].\n2. Citation [1] states that the path hash receives a full avalanche and shows the call `hash = full_hash(hash);` after the input processing.\n3. Together, the citations support all claims in the target: SDBM hashing followed by a full avalanche on the output.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00164935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

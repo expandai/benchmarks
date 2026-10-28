@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-459",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 44.5,
+    "total_citation_tokens": 445.0,
+    "filtered_results": 0.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nTo determine if the ground truth answer (13/3 or 4.333...) is present in the predicted answer, it is necessary to analyze the calculation step by step.\n\n- The question asks for:  \n  (number in the title of Fincher's later-released 90s movie) × (sum of all the molars in an aardvark / number of adult teeth in a dog).\n\n- The predicted answer identifies the correct movie (\"Se7en\", so number = 7).\n- It says: an aardvark has 12 molars, a dog has 42 teeth.\n- The calculation performed in the predicted answer: 7 × (12 / 42) = 7 × (2 / 7) = 2.\n\n- The ground truth answer states: 13/3 or 4.333...\n\nThere is a clear discrepancy in the numbers used:\n- The predicted answer uses: 7, 12, 42.\n- The ground truth must have used: 7, a sum of molars = 13 (instead of 12), and something else for the divisor (but clearly, 7 × (13/21) = 91/21 = 13/3 = 4.333..., so the ground truth is assuming either a different molar count or some other change).\n\nTherefore, the calculated value (13/3 or 4.333...) is **not present** anywhere in the predicted answer, nor are the critical numbers used to reach it.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.00328
+}

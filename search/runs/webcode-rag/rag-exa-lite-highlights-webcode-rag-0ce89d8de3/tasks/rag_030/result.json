@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_030",
+  "prompt": "ECMA-262 ForDeclaration BoundNames forbidden string syntax error",
+  "attempt": 1,
+  "answer": "The rule means that a **bound name whose value is the string `\"let\"`** is forbidden in a `for…in` or `for…of` declaration:\n\n```js\nfor (var let of iterable) {} // SyntaxError\n```\n\nECMA-262 lists this early error:\n\n> It is a Syntax Error if the BoundNames of `ForDeclaration` contains `\"let\"`.\n\nIt also separately forbids duplicate bound names and conflicts with names in the loop body’s `VarDeclaredNames` ([ECMA-262 §13.7.5.1 as reproduced by Microsoft](https://learn.microsoft.com/en-us/openspecs/ie_standards/ms-es2018/64c34785-1111-1111-849f-a303f847396b)).\n\nThis does **not** prohibit an ordinary declaration using `let`:\n\n```js\nfor (let x of iterable) {} // valid\n```\n\nHere, the `BoundNames` contains `\"x\"`, not `\"let\"`.\n\nThe reason `\"let\"` is singled out is that it is not treated as a keyword by the lexical grammar; instead, it is treated as reserved through static-semantic restrictions ([Stack Overflow result](https://stackoverflow.com/questions/34317632/why-is-let-singled-out-in-the-for-of-specification)).",
+  "num_citations": 10,
+  "citation_text_tokens": 3274,
+  "citation_text_chars": 13841,
+  "search_queries": [
+    "ECMA-262 ForDeclaration BoundNames forbidden string syntax error"
+  ],
+  "model_cost_usd": 0.00173205,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4596,
+    "output_tokens": 486,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 209
+  },
+  "latency_ms": 7151.344458106905,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00573205,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

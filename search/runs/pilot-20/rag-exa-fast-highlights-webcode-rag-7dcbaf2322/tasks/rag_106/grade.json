@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 541.8,
+    "total_citation_tokens": 5418.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the ordering given by the gold target: masked scatter operations proceed from the least-significant to the most-significant element. Its explanation that later, higher-numbered active lanes overwrite earlier ones is consistent with that ordering.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that overlapping masked.scatter addresses are ordered from least-significant to most-significant element.\n2. Citation [1] explicitly gives this ordering guarantee for scatter with overlapping addresses. Citation [3] repeats the same LLVM LangRef statement.\n3. The citations contain the full factual claim in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.009286015,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

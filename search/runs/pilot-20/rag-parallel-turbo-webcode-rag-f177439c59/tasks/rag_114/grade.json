@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 450.2,
+    "total_citation_tokens": 4502.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target is REQUEST. The predicted answer does not identify the default dispatcher type and explicitly says it does not know. It does not provide a conflicting dispatcher type, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold answer claims that the default dispatcher type for Spring Boot’s FilterRegistrationBean is REQUEST.\n2. Citation [2] says that unspecified dispatcher types are deduced based on async support, but does not name the resulting type.\n3. Citation [1] describes what REQUEST means, but does not say it is the default.\n4. Citation [9] refers to servlet-specification defaults without identifying REQUEST as the default.\n5. Therefore, the citations do not establish the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010230999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 448.0,
+    "total_citation_tokens": 4480.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives the computed-value keywords as `none` or one or more of `size`, `layout`, and `paint`. The predicted answer adds `style` to that computed-value list, so it conflicts with the target's stated set.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] states the computed value using the same keywords as the gold target answer. 2. The target’s full factual claim is directly present in that citation, so the retrieved sources contain all non-trivial information required.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010741000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

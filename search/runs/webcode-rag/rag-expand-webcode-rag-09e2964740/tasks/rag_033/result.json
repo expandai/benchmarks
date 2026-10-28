@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_033",
+  "prompt": "prometheus operator Route continue field first-level route override",
+  "attempt": 1,
+  "answer": "The Prometheus Operator always overrides `continue` to `true` on an `AlertmanagerConfig`’s first-level route, regardless of whether you set it to `false`.\n\nThis is intentional: first-level `AlertmanagerConfig` routes are inserted before the routes in the main Alertmanager configuration, and `continue: true` lets alerts continue matching subsequent sibling routes. The field documentation explicitly states this behavior.",
+  "num_citations": 10,
+  "citation_text_tokens": 3222,
+  "citation_text_chars": 14848,
+  "search_queries": [
+    "prometheus operator Route continue field first-level route override"
+  ],
+  "model_cost_usd": 0.00126955,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4666,
+    "output_tokens": 86,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2702.291624969803,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00326955,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

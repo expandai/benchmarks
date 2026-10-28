@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_128",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 236.0,
+    "total_citation_tokens": 2360.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is HTTP status code 409, and the predicted answer states that retriable-4xx includes only 409. It matches the target without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The Envoy Gateway citations explicitly identify the only response code in the `retriable-4xx` category as 409.\nStep 2: The gold target answer is 409, and that fact is directly stated in the retrieved sources. All non-trivial information in the target is supported.\nStep 3: Citations [1] and [2] each independently contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0005858500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

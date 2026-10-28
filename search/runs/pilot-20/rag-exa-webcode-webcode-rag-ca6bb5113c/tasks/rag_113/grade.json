@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_113",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 488.2,
+    "total_citation_tokens": 4882.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that webdriver.json cannot override or disable headless mode and that the runner appends its own headless arguments, which matches the gold target that headless is always enabled for both browsers. Its mention of other browser details and a separate environment-variable mechanism does not contradict the webdriver.json behavior asked about.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that headless is always enabled for both browsers.\n2. Citations [1] and [3] state this claim explicitly.\n3. Therefore, all non-trivial information in the gold target is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00172935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

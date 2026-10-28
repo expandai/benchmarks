@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_217",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 362.1,
+    "total_citation_tokens": 3621.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer correctly states that with gperf --pic and a user-defined struct, the first field must be int because it stores an offset into the string pool rather than a string pointer. This matches the gold target; the additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer says that with gperf --pic and struct-type, the first field must be int. 2. Citation [1] explicitly states that the first field must be int rather than char because it holds offsets into the string pool instead of actual strings. 3. The retrieved passage contains the gold answer’s non-trivial information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008234749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

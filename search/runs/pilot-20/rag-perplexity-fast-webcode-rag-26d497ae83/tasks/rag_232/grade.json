@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 385.4,
+    "total_citation_tokens": 3854.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that hpx::future does not block in its destructor while its asynchronous operation is still incomplete, which matches the gold target that it never blocks even before the value is returned. Its comparison with std::future adds compatible nuance and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that `hpx::future<>` never blocks in its destructor, even if its value has not yet been returned.\n2. Citation [3] states both of those facts directly, and contrasts them with the blocking behavior of `std::future<>` returned from `std::async()`.\n3. Thus, every non-trivial claim in the gold target is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000838975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

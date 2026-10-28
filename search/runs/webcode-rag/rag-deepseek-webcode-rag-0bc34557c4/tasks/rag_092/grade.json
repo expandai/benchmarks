@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_092",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 141.6,
+    "total_citation_tokens": 1416.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that Clang’s 80-bit x87 long double uses 16-byte storage, with 10 bytes of value and 6 bytes of padding. That matches the gold target’s 128-bit storage. The additional i386 System V case is presented as a target-specific alternative, not as a denial of the 16-byte result.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] says an 80-bit x87 long double has 6 bytes of padding; with its 10 bytes of data, that totals 16 bytes, or 128 bits.\n2. Citation [8] directly describes an 80-bit x86_fp80 type with 128-bit alignment and says sizeof(long double) is 16 bytes, with some of that being padding.\n3. Together, the citations support the gold target that the type is padded to 128 bits for storage.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001037725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

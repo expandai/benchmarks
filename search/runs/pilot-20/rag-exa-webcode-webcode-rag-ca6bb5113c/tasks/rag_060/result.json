@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_060",
+ "prompt": "haproxy set-var ifgt iflt non-integer type check",
+ "attempt": 1,
+ "answer": "`ifgt` and `iflt` are valid `set-var` conditions, but they do not themselves perform type conversion or non-integer validation.\n\n- They compare only when the existing variable and the new sample are both signed integers (`SMP_T_SINT`).\n- `ifgt` sets the variable only if its current value is greater than the new sample.\n- `iflt` sets it only if its current value is less than the new sample.\n- If the variable is new, or its previous type differs, the integer comparison is skipped. The sample’s type is then stored. Therefore, a string/non-integer sample is not rejected merely because `ifgt` or `iflt` is present. [HAProxy `vars.c`](https://github.com/haproxy/haproxy/blob/5ddba59a/src/vars.c)\n\nConvert explicitly with `int(...)` when assigning if you need integer type validation:\n\n```haproxy\nset-var proc.limit int(\"${LIMIT}\")\n```\n\nThe search results state that this causes invalid values such as `foo` to fail during startup. [HAProxy Discourse](https://discourse.haproxy.org/t/dynamic-server-weight-from-a-variable/11484/4)\n\nFor ACL comparisons, `var()` has an undefined return type, so use an integer matcher:\n\n```haproxy\nacl too_low var(txn.value) -m int lt 0\n```\n\nAlternatively, subtract the variable and compare the result with a static zero:\n\n```haproxy\nacl over_limit sc1_http_req_rate(table),sub(req.limit) gt 0\n```\n\nACL right-hand operands must be static; a variable cannot be used directly after `gt` or `lt`. [HAProxy issue #2225](https://github.com/haproxy/haproxy/issues/2225)",
+ "num_citations": 10,
+ "citation_text_tokens": 5589,
+ "citation_text_chars": 20596,
+ "search_queries": [
+  "haproxy set-var ifgt iflt non-integer type check"
+ ],
+ "model_cost_usd": 0.0025817,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7169,
+  "output_tokens": 658,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 274
+ },
+ "latency_ms": 13616.830124985427,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0095817,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

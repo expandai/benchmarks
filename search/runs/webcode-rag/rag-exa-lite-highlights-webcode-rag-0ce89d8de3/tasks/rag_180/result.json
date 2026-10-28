@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_180",
+  "prompt": "coreutils chroot newroot identical old root directory behavior",
+  "attempt": 1,
+  "answer": "For `coreutils chroot`, when `NEWROOT` is identical to the old `/`:\n\n- `chroot` traditionally avoids the `chroot()` system call in this case, for compatibility with systems where unprivileged users may run `chroot /`.\n- It nevertheless normally performs `chdir(\"/\")`, so the command runs with `/` as its working directory.\n- `--skip-chdir` prevents that directory change, retaining the previous working directory. This option is permitted only when `NEWROOT` is the old `/`.\n- Historically, skipping `chdir(\"/\")` for this case caused scripts such as `cd /home/user && chroot / bin/foo` to run with the wrong working directory; the `--skip-chdir` option was added to make retaining the directory explicit.\n- A bind-mounted `/` can be a distinct tree, so another implementation change makes `chroot()` unconditional even when the argument resolves to `/`, to avoid missing that distinction. The current `src/chroot.c` result shown calls `chroot(newroot)` unconditionally and calls `chdir(\"/\")` unless `--skip-chdir` is specified.",
+  "num_citations": 10,
+  "citation_text_tokens": 4505,
+  "citation_text_chars": 17836,
+  "search_queries": [
+    "coreutils chroot newroot identical old root directory behavior"
+  ],
+  "model_cost_usd": 0.0021469,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5785,
+    "output_tokens": 584,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 344
+  },
+  "latency_ms": 8230.333792045712,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061469,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

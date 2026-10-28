@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_143",
+  "prompt": "CSS grid align-content justify-content stretch which tracks accept space",
+  "attempt": 1,
+  "answer": "For `align-content: stretch` or `justify-content: stretch`, only grid tracks with an **`auto` max track sizing function** accept the extra space. The space is divided equally among those tracks.\n\nExamples that can stretch:\n\n```css\ngrid-template-columns: auto auto;\ngrid-template-rows: minmax(100px, auto);\n```\n\nTracks that do not accept this stretch space include:\n\n- Fixed-size tracks such as `100px`\n- Flexible tracks such as `1fr`\n- `fit-content()` tracks\n\n`align-content` applies this along the block/row axis, while `justify-content` applies it along the inline/column axis. Other content-distribution values such as `space-between`, `space-around`, and `space-evenly` distribute space **between or around tracks**, rather than increasing their sizes.",
+  "num_citations": 10,
+  "citation_text_tokens": 11926,
+  "citation_text_chars": 53429,
+  "search_queries": [
+    "CSS grid align-content justify-content stretch which tracks accept space"
+  ],
+  "model_cost_usd": 0.0036923,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 13517,
+    "output_tokens": 261,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 85
+  },
+  "latency_ms": 5280.459916917607,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0056923,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

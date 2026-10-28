@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_097",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 370.4,
+    "total_citation_tokens": 3704.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the `where Self: Unpin` constraint, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly give the `next` method’s where-clause as `where Self: Unpin`.\nStep 2: The gold target answer is exactly `Self: Unpin`, so all its factual content is supported.\nStep 3: Citations [1], [2], and [3] each independently provide sufficient evidence.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00081135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

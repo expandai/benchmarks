@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_059",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 189.5,
+    "total_citation_tokens": 1895.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a minimum of 1 GB RAM or more. The predicted answer states that the minimum is 512 MB, which contradicts the target; the higher recommended amount does not fix that contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] explicitly gives 1GB RAM as the minimum, which supports the gold target answer “1GB RAM or more.”\n2. Citation [8] gives a different minimum for Kamal 2 (512 MB RAM), so the retrieved sources are inconsistent on the minimum. However, the gold target’s 1GB claim is directly stated in [5].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000686475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

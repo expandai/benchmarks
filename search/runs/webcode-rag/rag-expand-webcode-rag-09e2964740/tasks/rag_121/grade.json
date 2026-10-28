@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_121",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 400.1,
+    "total_citation_tokens": 4001.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says `.Event.Error` is available only for postsync hooks and is otherwise nil. The answer also claims it can be populated for cleanup hooks in newer Helmfile changes, which contradicts that target, despite later saying documentation explicitly covers postsync only.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly states that `.Event.Error` is exposed for `postsync` hooks when a release fails and is otherwise `nil`, directly supporting the gold target.\n2. Citation [8] describes a fix that also populates the value for cleanup global hooks, so the target’s “only” wording is version-dependent and not universally true across the retrieved sources.\n3. The gold target is directly stated in [2], so the retrieved citations do contain information to derive it, though [8] provides an important qualification.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001216725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

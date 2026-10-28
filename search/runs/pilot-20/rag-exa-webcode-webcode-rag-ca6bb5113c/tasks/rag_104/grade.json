@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_104",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 308.7,
+    "total_citation_tokens": 3087.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a NUL-terminated range=user argument can contain up to 15 argument characters, matching the gold target of 15 bytes. The mention of a 16-byte storage buffer does not contradict this.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citations show that the user-range string is stored in a fixed 16-byte character array. As a C string reserves one byte for the terminating NUL, this allows at most 15 bytes of string content. Thus the gold answer, 15 bytes, is derivable from the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008131,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

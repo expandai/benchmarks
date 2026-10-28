@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 313.8,
+    "total_citation_tokens": 3138.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides no information about hpx::future destructor behavior, so it neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] states a general preference that futures should never block in their destructors.\n2. No citation specifically identifies `hpx::future<>` or states what its destructor does when the value has not yet been returned.\n3. Therefore, the retrieved citations do not establish the gold target's specific claim about `hpx::future<>`; a relevant general statement is not enough to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007371000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

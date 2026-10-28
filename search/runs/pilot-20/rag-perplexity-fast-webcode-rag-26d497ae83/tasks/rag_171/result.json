@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_171",
+ "prompt": "CSS box-shadow spread distance corner radius adjustment proportion",
+ "attempt": 1,
+ "answer": "For an outer `box-shadow`, when the corner radius is smaller than the spread distance:\n\n1. Calculate the ratio:\n\n```text\nr = border-radius / spread\n```\n\n2. Adjust the spread by:\n\n```text\nadjusted spread = spread × (1 + (r - 1)³)\n```\n\n3. Calculate the shadow’s corner radius:\n\n```text\nshadow radius = border-radius + adjusted spread\n```\n\nIf the border radius is greater than or equal to the spread, simply use:\n\n```text\nshadow radius = border-radius + spread\n```\n\nExample: with a `10px` radius and `20px` spread:\n\n```text\nr = 10 / 20 = 0.5\nadjusted spread = 20 × (1 + (0.5 - 1)³)\n                = 20 × 0.875\n                = 17.5px\n\nshadow radius = 10px + 17.5px = 27.5px\n```\n\nThis adjustment is applied independently to each radius dimension.",
+ "num_citations": 10,
+ "citation_text_tokens": 3974,
+ "citation_text_chars": 15827,
+ "search_queries": [
+  "CSS box-shadow spread distance corner radius adjustment proportion"
+ ],
+ "model_cost_usd": 0.00162655,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5014,
+  "output_tokens": 311,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 87
+ },
+ "latency_ms": 4141.697791055776,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00262655,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

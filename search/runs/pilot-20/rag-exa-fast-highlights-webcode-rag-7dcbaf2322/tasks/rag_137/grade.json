@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 592.1,
+    "total_citation_tokens": 5921.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies only `imageAtomicExchange`. The predicted answer also lists `imageAtomicAdd` and `imageAtomicLoad`/`imageAtomicStore`, so it does not match the target and includes unsupported additional claims.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support that `imageAtomicExchange` operates on floating-point images.\n2. However, the gold target says `imageAtomicExchange` is the only such function.\n3. The citations also identify `imageAtomicAdd` as a floating-point image operation, so the “only” claim is contradicted by the retrieved evidence.\n4. Since the gold target’s full claim is not supported, it is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001341475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

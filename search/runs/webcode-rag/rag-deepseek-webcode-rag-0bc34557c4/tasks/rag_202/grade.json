@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_202",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 588.0,
+    "total_citation_tokens": 5880.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer explicitly gives the gold slowdown factor of 18.6×. However, its parenthetical totals imply a ratio of 0.056/0.005 = 11.2×, contradicting that factor. It also does not match the per-access timings over 500,000 accesses. Because the response contains contradictory numerical information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the slowdown factor is 18.6x.\n2. Citations [2] and [3] explicitly describe internal property access through the proxy as an “18.6x” slowdown on one V8 system.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00124985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

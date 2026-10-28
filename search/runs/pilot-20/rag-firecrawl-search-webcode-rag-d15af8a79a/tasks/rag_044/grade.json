@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 1454.1,
+    "total_citation_tokens": 14541.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies that the challenge is padded with leading zero bytes. The predicted answer explicitly says it is padded with leading zeroes, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] states that the challenge data is right-justified and padded with leading zeroes when necessary. 2. This directly supports the gold target’s claim that padding uses leading, not trailing, zero bytes. 3. The target’s non-trivial information is present in the retrieved citation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00218985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

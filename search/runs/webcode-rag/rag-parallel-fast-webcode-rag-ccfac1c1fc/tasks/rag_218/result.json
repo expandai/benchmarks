@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_218",
+ "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+ "attempt": 1,
+ "answer": "`assign_new` can share assigns from a parent LiveView to a nested child when:\n\n- The child is mounted while the parent is mounted.\n- The child is not rendered with `sticky: true`.\n- The child uses `assign_new` during its `mount/3` callback.\n\nFor the initial disconnected render, assigns from `Plug.Conn` can also be reused with `assign_new`. Those `Plug.Conn` assigns are unavailable during the connected mount. Assign sharing is possible but not guaranteed.",
+ "num_citations": 10,
+ "citation_text_tokens": 2135,
+ "citation_text_chars": 9386,
+ "search_queries": [
+  "Phoenix LiveView assign_new parent child sharing conditions"
+ ],
+ "model_cost_usd": 0.00098575,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3118,
+  "output_tokens": 172,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 66
+ },
+ "latency_ms": 3921.755792107433,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00198575,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

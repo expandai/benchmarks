@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_212",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 560.1,
+    "total_citation_tokens": 5601.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target, exit status 77, but also says the TAP driver reports an error for any nonzero exit status by default. That claim conflicts with treating status 77 as ignored/skipped, so the answer contains contradictory information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the exit status whose test result is ignored is 77. Citations [1], [2], and [4] explicitly identify status 77 as ignored, directly supporting the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0017836,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

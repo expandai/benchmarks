@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 378.9,
+    "total_citation_tokens": 3789.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target requires both threads and userdata. The response mentions userdata but omits threads, so it does not fully answer the question. Its examples of literals do not contradict the target, and it does not claim that threads can be represented as literals.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations identify `thread` and `userdata` as Lua types.\n2. The citation about userdata says it cannot be created or modified in Lua, but does not say that userdata cannot be represented as a literal.\n3. No citation states that threads cannot be represented as literals, and the citations do not establish that the two named types are precisely the types that cannot be represented as literals.\n4. Therefore, the gold target’s central claim is not sufficiently supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00130935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

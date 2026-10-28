@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_257",
+ "prompt": "Hibernate Envers findEntitiesGroupByRevisionType number SQL queries",
+ "attempt": 1,
+ "answer": "`findEntitiesGroupByRevisionType(Number revision)` executes **m·n + 1 SQL queries**, where:\n\n- **n** = number of different entity classes modified in the revision\n- **m** = number of different revision types\n\nSince Hibernate Envers currently has three revision types (ADD, MOD, DEL), this is commonly expressed as **3n + 1 SQL queries**.",
+ "num_citations": 10,
+ "citation_text_tokens": 3004,
+ "citation_text_chars": 14038,
+ "search_queries": [
+  "Hibernate Envers findEntitiesGroupByRevisionType number SQL queries"
+ ],
+ "model_cost_usd": 0.0011404,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4159,
+  "output_tokens": 84,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2654.468124965206,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0051404,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

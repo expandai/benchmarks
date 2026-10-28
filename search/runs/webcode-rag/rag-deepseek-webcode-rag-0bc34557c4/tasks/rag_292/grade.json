@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_292",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 463.3,
+    "total_citation_tokens": 4633.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly says direct pointer fields are unsupported, but it does not state that other field types containing pointers are also prohibited. Its unqualified claim that nested structures are supported could also suggest that a structure containing a pointer is allowed. The gold target’s restriction is therefore not fully conveyed.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support the restriction on direct pointer fields in non-native-byte-order structures; [7] also gives c_char_p as a specific example.\n2. The gold target additionally claims that any other data type containing pointer fields is also prohibited.\n3. The cited passages do not establish that broader claim. In particular, they do not say whether a nested structure that itself contains pointer fields is prohibited. Therefore, not all non-trivial information in the gold target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001511475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

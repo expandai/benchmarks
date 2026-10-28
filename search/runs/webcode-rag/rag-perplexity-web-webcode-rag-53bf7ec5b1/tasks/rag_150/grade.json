@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_150",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 383.5,
+    "total_citation_tokens": 3835.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the required defaults, `doc` and `doctest`, but also claims that `test` is hidden by default. The default hidden predicates are `doc` and `doctest`; adding `test` introduces incorrect information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly identify `doc` and `doctest` as hidden by default; the implementation excerpt also lists both among the default hidden cfgs.\nStep 2: The gold target answer consists of `doc` and `doctest`, and both claims are directly supported by the retrieved citations. Therefore, the answer is GROUNDED.\nStep 3: Citations [1], [2], [3], [5], and [6] contain information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00113835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

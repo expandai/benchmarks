@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_121",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 239.9,
+    "total_citation_tokens": 2399.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `.Event.Error` is available only in per-release `postsync` hooks and is nil otherwise, matching the gold target. Its additional clarification about failed releases and cleanup global hooks does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that `.Event.Error` is available only for `postsync` hooks and is otherwise nil.\n2. Citations [1], [4], and [6] explicitly state that it is exposed for `postsync` hooks when a release fails and otherwise has value `nil`.\n3. The retrieved citations therefore contain the full non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000699475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

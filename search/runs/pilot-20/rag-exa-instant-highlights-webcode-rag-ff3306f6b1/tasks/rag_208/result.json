@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_208",
+ "prompt": "imagemagick remap colormap precision bit depth limit",
+ "attempt": 1,
+ "answer": "ImageMagick’s `-remap` has a colormap-size limit rather than a separate remap precision limit:\n\n- For Q16 and higher builds, `MaxColormapSize` is **65,536 entries**.\n- In practice, ImageMagick supports at most **65,535 unique colors**; exceeding that may cause the colormap to be reduced or an allocation error.\n- A colormap requiring roughly 65,536 colors may also need about **157 MB** of memory.\n- `-depth N` specifies bits per channel. When reducing depth, higher-order bits are normally discarded; `-dither FloydSteinberg -depth 8` can distribute the quantization error instead.\n- `-depth` affects pixel precision when writing/reducing depth; it is not a way to bypass the `-remap` colormap-size limit.\n\nSources: [Discussion #7525](https://github.com/ImageMagick/ImageMagick/discussions/7525), [command-line options](https://imagemagick.org/command-line-options/), [Issue #7569](https://github.com/ImageMagick/ImageMagick/issues/7569).",
+ "num_citations": 10,
+ "citation_text_tokens": 4966,
+ "citation_text_chars": 19992,
+ "search_queries": [
+  "imagemagick remap colormap precision bit depth limit"
+ ],
+ "model_cost_usd": 0.0019432,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6127,
+  "output_tokens": 343,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 98
+ },
+ "latency_ms": 4670.049875043333,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0059432,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

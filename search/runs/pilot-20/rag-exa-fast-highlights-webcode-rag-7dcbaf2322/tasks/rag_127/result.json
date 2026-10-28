@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_127",
+ "prompt": "CSS quirky lengths functional notation calc exception",
+ "attempt": 1,
+ "answer": "For **quirky lengths**, the `calc()` exception is that the unitless-length quirk **does not apply inside `calc()`**.\n\n- A property accepting quirky lengths may accept a literal number token, such as `2`, and convert it to `2px` at parse time.\n- That permission does **not** make unitless values inside `calc()` into lengths.\n- Therefore, `calc(2 * 2)` should not be accepted merely because the property accepts quirky lengths; `calc(2px * 2)` computes to `4px`.\n- The CSS Working Group resolved: “This resolution does not apply to any quirks inside of calc.” citehttps://github.com/w3c/csswg-drafts/issues/4874\n\nThe search results also mention a separate `rect()` exception in `clip`, but do not establish it as part of the CSS Working Group resolution.",
+ "num_citations": 10,
+ "citation_text_tokens": 5206,
+ "citation_text_chars": 20716,
+ "search_queries": [
+  "CSS quirky lengths functional notation calc exception"
+ ],
+ "model_cost_usd": 0.00209865,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6408,
+  "output_tokens": 414,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 217
+ },
+ "latency_ms": 5788.193791988306,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00909865,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

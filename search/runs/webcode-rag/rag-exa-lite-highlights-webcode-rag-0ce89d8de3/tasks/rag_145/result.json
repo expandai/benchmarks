@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_145",
+  "prompt": "elasticsearch snapshot.get ignore_unavailable exception type thrown",
+  "attempt": 1,
+  "answer": "With `ignore_unavailable=false` (the default), `snapshot.get` throws/returns a `SnapshotMissingException`, represented in the REST response as:\n\n- HTTP status: `404`\n- Error type: `snapshot_missing_exception`\n\nWhen `ignore_unavailable=true`, unavailable snapshots are ignored and are not included in the response.\n\nIn the Python client, this is wrapped as `NotFoundError`, while the Elasticsearch error remains `snapshot_missing_exception`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4183,
+  "citation_text_chars": 15782,
+  "search_queries": [
+    "elasticsearch snapshot.get ignore_unavailable exception type thrown"
+  ],
+  "model_cost_usd": 0.0015937,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5449,
+    "output_tokens": 193,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 97
+  },
+  "latency_ms": 4319.613249972463,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0055937,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

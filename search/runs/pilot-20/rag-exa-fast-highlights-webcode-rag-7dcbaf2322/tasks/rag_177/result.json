@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_177",
+ "prompt": "clang HasCustomParsing __declspec spelling interaction",
+ "attempt": 1,
+ "answer": "`HasCustomParsing` does not appear to be a special mechanism in the `__declspec` parser itself.\n\n- `__declspec` attributes are parsed by `Parser::ParseMicrosoftDeclSpecs`.\n- The parser accepts an identifier or string name, optionally parses its argument list with `ParseMicrosoftDeclSpecArgs`, and otherwise creates a `ParsedAttr` using the `Declspec` form.\n- Plugins can register custom attributes with `__declspec` spellings. Attribute lookup matches both the normalized name and the syntax, which is `AttributeCommonInfo::AS_Declspec`.\n- If a plugin overrides `ParsedAttrInfo::parseAttributePayload`, that custom parser bypasses Clang’s normal argument parsing. In that path, `HasCustomParsing`, `NumArgs`, and `OptArgs` are not honored; the plugin must parse, validate, and add the resulting `ParsedAttr` itself.\n- `HasCustomParsing` is also documented as disabling automated subject-list checking for declaration and statement attributes.\n\nThus, a `__declspec` spelling can participate in plugin custom parsing, but the search results do not show that setting `HasCustomParsing` alone changes `ParseMicrosoftDeclSpecs` behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 4926,
+ "citation_text_chars": 20182,
+ "search_queries": [
+  "clang HasCustomParsing __declspec spelling interaction"
+ ],
+ "model_cost_usd": 0.00232495,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6190,
+  "output_tokens": 648,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 402
+ },
+ "latency_ms": 9147.465999936685,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00932495,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

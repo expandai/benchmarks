@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_112",
+  "prompt": "automake parallel make recovery locking portable test-and-set command",
+  "attempt": 1,
+  "answer": "Use `mkdir` as the portable test-and-set operation:\n\n```make\ndata.c data.h data.w data.x: data.stamp\n\t@if test -f $@; then :; else \\\n\ttrap 'rm -rf data.lock data.stamp' 1 2 13 15; \\\n\tif mkdir data.lock 2>/dev/null; then \\\n\t\trm -f data.stamp; \\\n\t\t$(MAKE) $(AM_MAKEFLAGS) data.stamp; \\\n\t\tresult=$$?; rm -rf data.lock; exit $$result; \\\n\telse \\\n\t\twhile test -d data.lock; do sleep 1; done; \\\n\t\ttest -f data.stamp; \\\n\tfi; \\\n\tfi\n```\n\n`mkdir data.lock` succeeds for the first process, which rebuilds `data.stamp`. Other processes wait until `data.lock` disappears, then succeed only if `data.stamp` exists.",
+  "num_citations": 10,
+  "citation_text_tokens": 3863,
+  "citation_text_chars": 15188,
+  "search_queries": [
+    "automake parallel make recovery locking portable test-and-set command"
+  ],
+  "model_cost_usd": 0.0015706,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4987,
+    "output_tokens": 270,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 73
+  },
+  "latency_ms": 4086.158041958697,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065706,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

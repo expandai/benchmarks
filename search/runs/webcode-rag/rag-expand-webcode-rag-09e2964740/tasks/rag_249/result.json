@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_249",
+  "prompt": "wasm32-unknown-unknown HashMap randomization behavior",
+  "attempt": 1,
+  "answer": "On `wasm32-unknown-unknown`, Rust’s `HashMap` is **not randomized** as it is on other platforms. It uses a fixed or hard-coded seed, so its behavior is deterministic and the same execution produces the same hashing/iteration behavior. [Rust documentation](https://doc.rust-lang.org/rustc/platform-support/wasm32-unknown-unknown.html)\n\nIf randomized behavior is required, a JavaScript-backed randomness source such as `getrandom` with the appropriate wasm-bindgen/JavaScript support must be used separately.",
+  "num_citations": 10,
+  "citation_text_tokens": 2638,
+  "citation_text_chars": 9852,
+  "search_queries": [
+    "wasm32-unknown-unknown HashMap randomization behavior"
+  ],
+  "model_cost_usd": 0.00117515,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3770,
+    "output_tokens": 194,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 75
+  },
+  "latency_ms": 4282.438457943499,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00317515,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

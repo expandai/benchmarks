@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_071",
+ "prompt": "GNU diff expand-tabs encoding error column width treatment",
+ "attempt": 1,
+ "answer": "GNU `diff`’s `--expand-tabs` (`-t`) option expands tabs into spaces to preserve tab alignment. When calculating the number of spaces, it:\n\n- Consults the current locale for each character’s display width.\n- Treats each encoding-error byte—an input byte not belonging to any character—as occupying exactly one column.\n- Uses tab stops every 8 display columns by default, adjustable with `--tabsize=columns`.\n\nGNU `diff` notes that output may still fail to align with the display device when encoding errors or non-ASCII characters have widths that differ from these assumptions.",
+ "num_citations": 10,
+ "citation_text_tokens": 3956,
+ "citation_text_chars": 15929,
+ "search_queries": [
+  "GNU diff expand-tabs encoding error column width treatment"
+ ],
+ "model_cost_usd": 0.0015163,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5053,
+  "output_tokens": 211,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 83
+ },
+ "latency_ms": 3932.0371659705415,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025163,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 375.2,
+    "total_citation_tokens": 3752.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target requires five valid hint keywords: HASH, MERGE, LOOKUP, INVERTED, and STRAIGHT. The predicted answer lists only HASH, MERGE, and LOOKUP, so it omits two required keywords and is incomplete.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] identifies HASH, MERGE, and LOOKUP as join-algorithm hints. Citation [1] also refers to MERGE as a join hint keyword. Step 2: The gold target additionally includes INVERTED and STRAIGHT, and neither keyword is supported by the retrieved passages. Since non-trivial keywords are missing, the citations do not contain all the information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009235999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_207",
+  "prompt": "ffmpeg select filter expression output index routing",
+  "attempt": 1,
+  "answer": "For FFmpeg’s `select` filter:\n\n- Expression result `0`: frame is discarded.\n- Negative or `NaN`: frame goes to output index `0` (the first output).\n- Positive result `v`: frame goes to output index:\n\n```text\nceil(v) - 1\n```\n\nThus:\n\n| Expression result | Output index | Output |\n|---:|---:|---|\n| `0` | — | discarded |\n| `-1` or `NaN` | `0` | first |\n| `1` | `0` | first |\n| `1.2` | `1` | second |\n| `2` | `1` | second |\n| `2.7` | `2` | third |\n\nSet the number of outputs with `n` (default is `1`). For example:\n\n```text\nselect=n=2:e='mod(n,2)+1'\n```\n\nThis produces expression values `1, 2, 1, 2, ...`, routing frames alternately to output indexes `0` and `1`:\n\n```text\n[odd][even]\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 5853,
+  "citation_text_chars": 20781,
+  "search_queries": [
+    "ffmpeg select filter expression output index routing"
+  ],
+  "model_cost_usd": 0.00225645,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7284,
+    "output_tokens": 363,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 122
+  },
+  "latency_ms": 9820.810541976243,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00425645,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

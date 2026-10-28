@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_175",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 486.8,
+    "total_citation_tokens": 4868.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies the registration status as “Reserved.” The predicted answer instead states that `identity` is “withdrawn” in the IANA registry, which contradicts the target. Although it also mentions the no-encoding meaning, the contradictory status makes the answer incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations support that RFC 7231 uses identity in Accept-Encoding as a synonym for no encoding. However, they do not establish that identity’s registration status is “Reserved”: [1] associates identity with a withdrawal note and presents “(reserved)” separately, without clearly linking that status to identity. Since the status is a non-trivial part of the gold target and is not grounded by the retrieved citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001665475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

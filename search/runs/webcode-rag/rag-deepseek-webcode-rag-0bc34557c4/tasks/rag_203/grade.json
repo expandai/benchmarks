@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 456.6,
+    "total_citation_tokens": 4566.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes `none` and the relevant `size`, `layout`, and `paint` keywords, and its mappings for `strict` and `content` are consistent with the containment keywords. It also mentions `style`, an additional valid containment keyword, which does not negate the requested information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] says the computed value is generally the specified keyword(s), with strict and content as exceptions, and gives their expanded keyword combinations.\n2. Citation [7] explicitly lists none, size, layout, and paint among the tested computed values.\n3. Together, these passages support the keywords stated in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0017201,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

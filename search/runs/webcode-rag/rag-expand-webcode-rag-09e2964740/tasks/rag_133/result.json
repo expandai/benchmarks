@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_133",
+  "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+  "attempt": 1,
+  "answer": "This is expected for a remote track.\n\nThe WebRTC specification requires that:\n\n- `remoteTrack.getCapabilities()` return an empty set.\n- `remoteTrack.applyConstraints()` always reject with `OverconstrainedError` for the constraints defined for remote tracks.\n- Remote-track settings represent the latest frame received.\n\nTherefore, this will reject by design:\n\n```js\nremoteTrack.applyConstraints({\n  width: 640,\n  height: 480\n});\n```\n\nUse `getSettings()` to inspect the received track instead:\n\n```js\nconst settings = remoteTrack.getSettings();\nconsole.log(settings.width, settings.height);\n```\n\n`applyConstraints()` is intended to configure tracks sourced from devices such as those obtained through `getUserMedia()`, not to modify an `RTCRtpReceiver`’s remote track.",
+  "num_citations": 10,
+  "citation_text_tokens": 8523,
+  "citation_text_chars": 38822,
+  "search_queries": [
+    "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+  ],
+  "model_cost_usd": 0.0030012,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9927,
+    "output_tokens": 433,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 264
+  },
+  "latency_ms": 7178.781458060257,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0050012,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

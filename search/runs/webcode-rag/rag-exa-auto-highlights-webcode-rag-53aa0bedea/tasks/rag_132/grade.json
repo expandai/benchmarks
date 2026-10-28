@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 522.6,
+    "total_citation_tokens": 5226.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target identifies the relevant restriction: TLS passthrough is incompatible with httpHeader actions. The predicted answer discusses general OpenShift passthrough behavior but neither states this incompatibility nor directly contradicts it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation explains that passthrough TLS prevents the router from terminating TLS and reading request contents, and specifically says path-based routing is unavailable.\n2. It does not mention `httpHeader` actions or state that passthrough is incompatible with them. Applying the general limitation to that specific feature would require information not stated in the retrieved sources.\n3. Since the gold target includes this specific non-trivial incompatibility, the citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013331,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

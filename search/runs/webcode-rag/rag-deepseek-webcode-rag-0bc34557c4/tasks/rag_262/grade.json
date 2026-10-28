@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_262",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 249.9,
+    "total_citation_tokens": 2499.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer states the gold restriction, but then adds that proxies supporting TCN may generate `Vary: *`. That exception contradicts the gold target’s claim that only an origin server may generate it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a proxy server MUST NOT generate the Vary asterisk value.\n2. It also states that only an origin server may generate it.\n3. Both claims appear explicitly in citations [1] and [8], so all non-trivial information in the target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000769475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

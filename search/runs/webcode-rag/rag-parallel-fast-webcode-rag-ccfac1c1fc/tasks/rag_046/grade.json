@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_046",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 248.7,
+    "total_citation_tokens": 2487.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that FFmpeg uses a 720×576 resolution in the described case, matching the gold target exactly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: The citations explicitly state that a bitmap subtitle stream used as input is converted to video and that, when no video is present, the fallback size is 720x576.\nStep 2 — Groundedness: The gold target answer, “720x576,” is directly stated in the retrieved passages. Its factual content is fully supported.\nStep 3 — Source attribution: Citations [1], [2], and [4] each contain the fallback resolution.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0006779749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

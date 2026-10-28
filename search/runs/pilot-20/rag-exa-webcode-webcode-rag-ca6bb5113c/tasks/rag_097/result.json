@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_097",
+ "prompt": "Rust StreamExt next method where clause constraint",
+ "attempt": 1,
+ "answer": "`StreamExt::next` is defined as:\n\n```rust\nfn next(&mut self) -> Next<'_, Self>\nwhere\n    Self: Unpin,\n```\n\nThe `Self: Unpin` constraint is required because `next` does not take ownership of the stream. It borrows it mutably and returns a future that holds a reference to it:\n\n```rust\nlet mut stream = stream::iter(1..=3);\n\nassert_eq!(stream.next().await, Some(1));\n```\n\nThe returned `Next<'_, Self>` future is implemented for streams satisfying:\n\n```rust\nSt: Stream + Unpin + ?Sized\n```\n\nTherefore, a `!Unpin` stream cannot be used directly with `next`. Pin it first, either on the heap:\n\n```rust\nlet mut stream = Box::pin(my_stream);\nstream.next().await;\n```\n\nor on the stack using `pin_mut!`. The `StreamExt` trait itself already has `Stream` as a supertrait, so the method only needs to add the additional `Self: Unpin` requirement in its `where` clause.",
+ "num_citations": 10,
+ "citation_text_tokens": 4897,
+ "citation_text_chars": 19292,
+ "search_queries": [
+  "Rust StreamExt next method where clause constraint"
+ ],
+ "model_cost_usd": 0.0019488,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6303,
+  "output_tokens": 311,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 75
+ },
+ "latency_ms": 7359.308292041533,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089488,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

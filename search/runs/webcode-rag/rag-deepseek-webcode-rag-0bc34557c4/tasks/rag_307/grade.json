@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_307",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 263.1,
+    "total_citation_tokens": 2631.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the separator as a tilde (~), matching the gold target. The additional note about an older version does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages explicitly identify the separator for libtool variables ending in _cmds or _eval as “~”.\nStep 2: This directly supports the gold target answer, tilde; no non-trivial detail is missing.\nStep 3: Citations [2], [3], and [5] each contain sufficient evidence.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000735475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

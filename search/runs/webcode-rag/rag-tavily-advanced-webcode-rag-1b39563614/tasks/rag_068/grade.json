@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_068",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 482.2,
+    "total_citation_tokens": 4822.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 256 distinct values, but the predicted answer says the recommended precision is at least 256 distinct values, reversing the limit. The extra statement that pressure is normalized to 0–1 does not resolve this contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] applies to pressure as an analog value and specifies a minimum precision that allows at least 256 distinct values.\n2. The gold target says a maximum of 256 distinct values. The retrieved passage does not support that limit; it states the opposite direction and permits more than 256 values.\n3. Citation [1] gives only a general recommendation to limit exposed sensor precision and does not establish a 256-value maximum. Therefore, the gold target is not sufficiently supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012766,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

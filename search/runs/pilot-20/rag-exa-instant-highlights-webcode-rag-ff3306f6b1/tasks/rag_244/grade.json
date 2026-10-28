@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_244",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 419.6,
+    "total_citation_tokens": 4196.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer names KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT, which are examples matching the gold target’s *_SERVICE_HOST and *_SERVICE_PORT environment-variable patterns. The additional information does not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [3] identifies `KUBERNETES_SERVICE_HOST` and `KUBERNETES_SERVICE_PORT` as environment variables used in Kubernetes detection, and mentions an environment-variable pattern. It does not specify the wildcard patterns `*_SERVICE_HOST` and `*_SERVICE_PORT`.\n\nSTEP 2 — GROUNDEDNESS: The gold answer specifically asserts those wildcard variable patterns. The retrieved citations do not provide that specific information; naming the two `KUBERNETES_...` variables does not establish the broader wildcard patterns. Therefore, a non-trivial claim is missing, so the answer is UNGROUNDED.\n\nSTEP 3 — SOURCE ATTRIBUTION: No citation contains enough information to derive the gold answer as stated.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010691000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

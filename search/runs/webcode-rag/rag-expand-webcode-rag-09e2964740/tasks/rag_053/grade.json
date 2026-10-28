@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_053",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.125,
+    "avg_citation_tokens": 1295.8,
+    "total_citation_tokens": 10366.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer lists all four bit sizes in the gold target—6, 14, 30, and 62 bits—and the added byte-length mappings are consistent with QUIC variable-length integer encoding.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that HTTP/3 SETTINGS values use variable-length integers of 6, 14, 30, or 62 bits.\n2. Citation [1] explicitly gives those same four bit sizes for setting values.\n3. The citation therefore contains all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001602475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

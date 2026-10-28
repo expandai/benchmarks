@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_075",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 390.5,
+    "total_citation_tokens": 3905.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide the gold information that reserved keywords are allowed as record field names. It neither confirms nor contradicts the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] discusses the naming rules for record fields and describes uses of the `as` keyword, but it does not say that `as` is permitted as a record field name. Citation [4] only states generally that many keywords cannot be used as variable names and provides no exception for record fields. Step 2: The gold target’s specific claim—that `as` is allowed as a record field name—is not established by any retrieved citation. This is a non-trivial fact, so the result is UNGROUNDED. Step 3: No citation contains information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009288499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

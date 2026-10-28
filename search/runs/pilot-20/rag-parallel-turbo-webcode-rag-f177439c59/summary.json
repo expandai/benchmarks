@@ -1,0 +1,78 @@
+{
+  "system": "rag-parallel-turbo",
+  "suite": "webcode-rag",
+  "suite_revision": "sha256:9aa83266452b348d1a5bcf322f883974bfb07a01be5215d61271e39b5e018587+grader-v2",
+  "judge_model": "openai/gpt-6-luna",
+  "primary_metric": "grounded",
+  "tasks": 307,
+  "graded": 307,
+  "failed": 0,
+  "metrics": {
+    "avg_citation_tokens": 497.6762214983713,
+    "citation_precision": 0.21972312703583063,
+    "grounded": 0.8697068403908795,
+    "score": 0.8013029315960912,
+    "total_citation_tokens": 4968.827361563518
+  },
+  "grounded_failed_as_zero": 0.8697068403908795,
+  "confidence_intervals": {
+    "confidence_level": 0.95,
+    "method": "percentile",
+    "n_resamples": 10000,
+    "seed": 0,
+    "sampling_unit": "task",
+    "metrics": {
+      "avg_citation_tokens": {
+        "estimate": 497.6762214983714,
+        "low": 481.4689657980456,
+        "high": 513.5630618892508,
+        "n": 307
+      },
+      "citation_precision": {
+        "estimate": 0.2197231270358306,
+        "low": 0.19826058631921825,
+        "high": 0.2418729641693811,
+        "n": 307
+      },
+      "grounded": {
+        "estimate": 0.8697068403908795,
+        "low": 0.8306188925081434,
+        "high": 0.9055374592833876,
+        "n": 307
+      },
+      "score": {
+        "estimate": 0.8013029315960912,
+        "low": 0.755700325732899,
+        "high": 0.8436482084690554,
+        "n": 307
+      },
+      "total_citation_tokens": {
+        "estimate": 4968.827361563518,
+        "low": 4806.878175895766,
+        "high": 5126.995765472313,
+        "n": 307
+      },
+      "grounded_failed_as_zero": {
+        "estimate": 0.8697068403908795,
+        "low": 0.8306188925081434,
+        "high": 0.9055374592833876,
+        "n": 307
+      }
+    }
+  },
+  "cost": {
+    "system_usd": 0.8244738,
+    "system_usd_per_task": 0.0026855824104234528,
+    "model_usd": 0.5174738,
+    "search_usd": 0.307,
+    "system_cost_known": true,
+    "judge_usd": 0.31818873,
+    "judge_cost_known": true
+  },
+  "mean_latency_s": 3.3294004745946753,
+  "mean_searches": 1,
+  "stop_reasons": {
+    "single_step": 307
+  },
+  "updated_at": "2026-10-26T22:31:26.410287+00:00"
+}

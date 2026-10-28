@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_287",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 477.9,
+    "total_citation_tokens": 4779.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that when the date-time separator is `T`, it must be uppercase, and the UTC designator `Z` must also be uppercase. Mentioning that a single space is an allowed alternative separator does not contradict the target’s uppercase constraint on the letters.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer concerns the case of the `T` and `Z` letters in HTML date-time syntax.\n2. Citation [2] explicitly states that literal `T` and `Z` must always be uppercase.\n3. Citation [1] also specifies capital `T` and capital `Z` in the current HTML microsyntax, while allowing a space instead of `T` in the date-time separator position.\n4. The sources contain the factual constraint stated in the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001199975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

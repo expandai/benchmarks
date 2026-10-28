@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-160",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 722.1,
+    "total_citation_tokens": 7221.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 5, but the predicted answer explicitly says 6 active players. That contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] identifies boldface as the marker for players still active and dates its rankings to 19 July 2026. 2. Among the top ten ranks in that list, five players are bold: Ronaldo, Messi, Lukaku, Lewandowski, and Kane. 3. Citation [4] is an earlier February 2026 snapshot and differs, but citation [3] directly supports the target count for the later dated list. Therefore, the retrieved citations contain sufficient information to derive the gold answer of 5.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001655105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

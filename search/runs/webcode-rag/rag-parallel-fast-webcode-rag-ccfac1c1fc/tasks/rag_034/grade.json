@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_034",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 242.0,
+    "total_citation_tokens": 2420.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a zero-length typed array view with ByteOffset equal to bufferByteLength is not out of bounds, matching the gold target. Its explanation supports that conclusion.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly addresses a length-tracking TypedArray at the specified offset and says it is out-of-bounds, contradicting the gold target. 2. Citation [2] supports the claim only for DataView, not TypedArray. 3. Citation [5] suggests that Firefox’s implementation does not treat an offset equal to the buffer length as out-of-bounds, but it does not establish the ECMAScript IsTypedArrayOutOfBounds rule. The retrieved citations therefore do not sufficiently ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001662725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

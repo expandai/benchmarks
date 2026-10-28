@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_260",
+ "prompt": "LLVM constrained frem rounding mode argument effect",
+ "attempt": 1,
+ "answer": "For `constrained.frem`, the rounding-mode argument describes or hints at the runtime rounding mode; it does **not** determine or change that mode. The actual rounding mode is determined by the runtime environment. The argument provides information the optimizer may use, including enabling additional optimization when the compiler can prove the rounding mode.\n\nSources: [LLVM issue #77192](https://github.com/llvm/llvm-project/issues/77192), [LLVM Floating Point Support](https://static.sched.com/hosted_files/llvmdevelopersmeetingbay2016/ef/LLVM%20Floating%20Point%20Support.pdf), [LLVM issue #75543](https://github.com/llvm/llvm-project/issues/75543).",
+ "num_citations": 10,
+ "citation_text_tokens": 281,
+ "citation_text_chars": 1439,
+ "search_queries": [
+  "LLVM constrained frem rounding mode argument effect"
+ ],
+ "model_cost_usd": 0.00057775,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 1078,
+  "output_tokens": 257,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 5894.670250010677,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00255775,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

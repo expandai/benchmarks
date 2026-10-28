@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_177",
+ "prompt": "clang HasCustomParsing __declspec spelling interaction",
+ "attempt": 1,
+ "answer": "`HasCustomParsing` is an attribute-level flag, not a `__declspec`-specific property.\n\n- It means “the parsing does not match the semantic content”; for example, the attribute may parse three arguments but semantically use four. It opts the attribute out of common argument checking.\n- An attribute’s spellings are listed separately in `Spellings`, which can include a `Declspec` spelling.\n- Therefore, an attribute may have both a `__declspec` spelling and custom parsing. For example, the results state that target-specific attributes with differing arguments or subjects should use `HasCustomParsing = 1` and implement their own parsing and semantic handling.\n- The presence of a `Declspec` spelling alone does not imply `HasCustomParsing`. For example, `CUDAConstant` has `GNU<\"constant\">` and `Declspec<\"__constant__\">` spellings without `HasCustomParsing` shown.\n\nIn short: `__declspec` selects the spelling/syntax; `HasCustomParsing` controls whether the attribute bypasses common argument parsing checks.",
+ "num_citations": 10,
+ "citation_text_tokens": 6697,
+ "citation_text_chars": 24852,
+ "search_queries": [
+  "clang HasCustomParsing __declspec spelling interaction"
+ ],
+ "model_cost_usd": 0.00254365,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 8092,
+  "output_tokens": 434,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 209
+ },
+ "latency_ms": 5971.301792073064,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00354365,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

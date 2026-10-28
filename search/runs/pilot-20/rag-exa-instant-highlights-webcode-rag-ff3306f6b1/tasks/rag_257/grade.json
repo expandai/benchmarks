@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 300.4,
+    "total_citation_tokens": 3004.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that there are three revision types and therefore the query count is 3n + 1, with n representing the number of different entity classes modified in the revision. This matches the gold target of 3N + 1.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the method executes 3N + 1 SQL queries.\n2. Citation [9] explicitly states 3N+1 and defines N as the number of different entity classes modified within the specified revision. Citation [2] gives the same formula and definition, using lowercase n.\n3. Thus all non-trivial claims in the gold target are supported. Other citations show a different formula, but the retrieved set includes sources that directly establish the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00078685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

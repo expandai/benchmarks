@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_010",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 497.3,
+    "total_citation_tokens": 4973.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that intermediaries SHOULD maintain DATA padding and MAY remove padding from HEADERS and PUSH_PROMISE frames, matching the gold target. The additional padding-format details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation says intermediaries SHOULD maintain padding in DATA frames, which supports retaining DATA padding.\n2. It says intermediaries MAY drop padding from header-bearing frames and identifies HEADERS and PUSH_PROMISE among those frames.\n3. These passages establish both claims in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0019272249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

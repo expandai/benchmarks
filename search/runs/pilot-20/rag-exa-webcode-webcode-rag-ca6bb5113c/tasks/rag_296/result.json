@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_296",
+ "prompt": "go unsafe.SliceData non-nil slice zero capacity result",
+ "attempt": 1,
+ "answer": "For a **non-nil slice with zero capacity**—for example, `[]int{}` or `make([]int, 0)`—`unsafe.SliceData` returns:\n\n- a **non-nil pointer**\n- to an **unspecified memory address**\n\nIt does **not** provide a valid element address, so dereferencing it (for example, `*unsafe.SliceData([]int{})`) is not safe. The pointer is only meaningfully defined as non-nil; its address must not be used to access an element.\n\nBy contrast:\n\n```go\nunsafe.SliceData(nil) // nil\n```\n\nThe documented cases are:\n\n```text\ncap(slice) > 0  -> &slice[:1][0]\nslice == nil    -> nil\notherwise       -> non-nil pointer to an unspecified memory address\n```",
+ "num_citations": 10,
+ "citation_text_tokens": 5874,
+ "citation_text_chars": 19996,
+ "search_queries": [
+  "go unsafe.SliceData non-nil slice zero capacity result"
+ ],
+ "model_cost_usd": 0.0022452,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7239,
+  "output_tokens": 363,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 185
+ },
+ "latency_ms": 15311.811790918,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0092452,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

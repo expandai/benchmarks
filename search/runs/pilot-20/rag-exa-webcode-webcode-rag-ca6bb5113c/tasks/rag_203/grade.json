@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 432.6,
+    "total_citation_tokens": 4326.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the target keywords, but it also adds `style` to the computed-value set and to the shortcut expansions. The gold target specifies only `none` or one or more of `size`, `layout`, and `paint`, so the added claims conflict with the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [2] directly states the computed value as “the keyword none or one or more of size, layout, paint.”\nStep 2 — Groundedness: This matches the gold target exactly, so all its factual content is supported. Citation [1] gives a newer definition that also includes style, but citation [2] directly supports the target answer.\nStep 3 — Source attribution: Citation [2] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00139285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 248.2,
+    "total_citation_tokens": 2482.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer does not identify threads and userdata, which are the requested types. It instead discusses Luau string, boolean, and numeric literal types, so it does not provide the gold answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citations describe the supported singleton/literal types as string and boolean, and explicitly include thread and userdata among primitive types [2]. Since thread and userdata are not among the stated literal types, the sources support the target answer that they cannot be represented as literals.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0013661,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

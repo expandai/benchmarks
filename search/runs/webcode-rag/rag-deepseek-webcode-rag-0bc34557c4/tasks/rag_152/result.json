@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_152",
+ "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+ "attempt": 1,
+ "answer": "Use the variants as follows:\n\n- **`NS_TEST_ASSERT_*`**: Use in ordinary test methods. If the check fails, the current test case is aborted.\n- **`NS_TEST_EXPECT_*`**: Use in `void`-returning methods, especially callbacks. These macros report the failure but do not return/abort when an error is detected.\n\nThe ns-3 testing documentation explicitly recommends reserving `EXPECT` for callbacks used in test programs and using `ASSERT` otherwise.",
+ "num_citations": 10,
+ "citation_text_tokens": 3317,
+ "citation_text_chars": 13939,
+ "search_queries": [
+  "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+ ],
+ "model_cost_usd": 0.00132015,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4782,
+  "output_tokens": 104,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2894.8212090181187,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020701499999999998,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

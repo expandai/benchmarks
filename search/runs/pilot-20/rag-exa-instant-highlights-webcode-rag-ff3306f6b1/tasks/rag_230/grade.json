@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_230",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.222,
+    "avg_citation_tokens": 274.8,
+    "total_citation_tokens": 2473.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies nil as the symbol excluded from positioning, and the predicted answer explicitly says that nil is excluded. Its additional explanation is consistent with the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explicitly identify nil as the symbol excluded from positioning ([4], [9]). 2. The gold target also gives an efficiency reason. Citation [4] mentions that not positioning symbols can be simpler and faster, but in the context of a different function and does not establish that efficiency is why nil is excluded. 3. Since that non-trivial rationale is not grounded, the citations do not support the entire gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00085735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

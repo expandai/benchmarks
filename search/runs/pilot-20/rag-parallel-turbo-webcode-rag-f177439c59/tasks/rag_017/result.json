@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "- **Older LLVM semantics (e.g. LLVM 3.3):** `llvm.sqrt` had undefined behavior for negative inputs other than `-0.0`. `llvm.sqrt(-0.0)` was defined to return `-0.0`. This differed from libm’s `sqrt`, which handles negative inputs and may set `errno`.\n- **After LLVM revision r293242 (January 2017):** the intended semantics changed: `llvm.sqrt` returns the same value as libm `sqrt`, but **does not trap or set `errno`**.\n- **Practical result for negative inputs:** hardware implementations commonly return NaN. The NaN’s sign may differ: the cited tests report `-NaN` from the LLVM intrinsic on x86 while libm returned plain NaN; ARM was consistent with libm.\n- **Constrained intrinsic:** `llvm.experimental.constrained.sqrt` is the libm-equivalent form, with rounding mode and exception behavior explicitly specified.",
+ "num_citations": 10,
+ "citation_text_tokens": 5592,
+ "citation_text_chars": 21061,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.00229465,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6808,
+  "output_tokens": 494,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 286
+ },
+ "latency_ms": 7298.275375040248,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00329465,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

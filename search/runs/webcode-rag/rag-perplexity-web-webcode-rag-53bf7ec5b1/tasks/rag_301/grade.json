@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_301",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 211.5,
+    "total_citation_tokens": 2115.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that an unset environment variable referenced by `!var` causes GNU units to print an error and ignore the definitions in that conditional block, matching the gold target. The additional suggestion does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations directly state what happens when the environment variable after `!var` is unset or undefined.\nStep 2: The gold target’s claims—that `units` prints an error message and ignores the block of definitions—are both explicitly supported. The answer is GROUNDED.\nStep 3: Citations [1] and [3] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000607225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

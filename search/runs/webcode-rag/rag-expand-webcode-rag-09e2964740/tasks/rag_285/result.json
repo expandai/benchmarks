@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_285",
+  "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+  "attempt": 1,
+  "answer": "`sphinx`’s `linkcheck_case_insensitive_urls` affects only the URL portion, not the URI fragment.\n\n- The URL is split at `#`; the case-insensitive comparison is applied to the part before the fragment.\n- Fragments/HTML anchors are always compared case-sensitively.\n- Anchor checking compares the requested anchor exactly against HTML `id` and `name` attributes.\n- Before checking, Sphinx URL-decodes the fragment with `unquote()`. Thus, for example, `#foo%2Fbar` is checked as `foo/bar`.\n- Consequently, an HTML element whose ID contains the literal encoded value `foo%2Fbar` may not be recognized; this is identified in the search results as a known issue.\n\nThe relevant configuration documentation explicitly states: “URI fragments (HTML anchors) are not affected by this option. They are always checked with case-sensitive comparisons.”",
+  "num_citations": 10,
+  "citation_text_tokens": 11062,
+  "citation_text_chars": 45467,
+  "search_queries": [
+    "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+  ],
+  "model_cost_usd": 0.00363555,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 12858,
+    "output_tokens": 351,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 160
+  },
+  "latency_ms": 7497.497041011229,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00563555,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 397.1,
+    "total_citation_tokens": 3971.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says NUL bytes are replaced with line terminators. The predicted answer instead describes binary-file detection, skipping or stopping at NUL bytes, and does not state that they are replaced with line terminators. Its description gives a different handling behavior rather than supplying the requested answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states how ripgrep handles NUL bytes when `-a/--text` is not enabled. Step 2: This supports the complete gold target claim that NUL bytes are replaced with line terminators. Step 3: Citation [1] contains sufficient information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0014253500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

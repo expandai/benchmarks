@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_218",
+ "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+ "attempt": 1,
+ "answer": "`assign_new/3` parent-to-child sharing is an optimization, not a guarantee.\n\n### Conditions for sharing\n\n- The child must call `assign_new/3` with the same assign key.\n- For connected parent/child LiveViews, the child must be mounted together with the parent.\n- The child must not be rendered with `sticky: true`.\n- Sharing is most likely when the child is present during the parent’s initial disconnected render.\n- Dynamically added children do not reliably receive the parent’s assigns.\n- Multiple independent LiveViews rendered with `live_render` do not share assigns through a parent.\n- Live navigation/remounts are not guaranteed to preserve sharing.\n\nThe fallback function passed to `assign_new/3` must produce the same value the child would receive from the parent:\n\n```elixir\nassign_new(socket, :current_user, fn ->\n  Accounts.get_user!(user_id)\nend)\n```\n\nTherefore, use `assign_new/3` to avoid duplicate work when possible, but do not depend on it for required data. Pass the necessary identifiers or fetching information in the child’s session, or use message passing/communication with the parent when the child needs the parent’s current state.",
+ "num_citations": 10,
+ "citation_text_tokens": 4672,
+ "citation_text_chars": 19989,
+ "search_queries": [
+  "Phoenix LiveView assign_new parent child sharing conditions"
+ ],
+ "model_cost_usd": 0.0019655,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5837,
+  "output_tokens": 422,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 172
+ },
+ "latency_ms": 19016.239707940258,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089655,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

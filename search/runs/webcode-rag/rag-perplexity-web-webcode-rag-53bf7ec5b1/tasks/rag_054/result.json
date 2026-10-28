@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_054",
+  "prompt": "Apache TraceEnable extended chunked request body size limit",
+  "attempt": 1,
+  "answer": "With `TraceEnable extended`, Apache’s core origin server limits the request body to:\n\n- **64 KB**, plus\n- **8 KB for chunk headers** when `Transfer-Encoding: chunked` is used.\n\n`LimitRequestBody` cannot be used to increase this limit; `TRACE` cannot be restricted with `<Limit>` or `<LimitExcept>`. As a **proxy server**, the request body is not restricted to 64 KB.",
+  "num_citations": 7,
+  "citation_text_tokens": 3825,
+  "citation_text_chars": 12483,
+  "search_queries": [
+    "Apache TraceEnable extended chunked request body size limit"
+  ],
+  "model_cost_usd": 0.0014835,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4653,
+    "output_tokens": 267,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 172
+  },
+  "latency_ms": 5045.483833993785,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064835,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

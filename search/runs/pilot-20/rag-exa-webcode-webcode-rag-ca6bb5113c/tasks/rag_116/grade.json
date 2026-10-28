@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_116",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 363.3,
+    "total_citation_tokens": 3633.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `socket.sendfile()` requires a `SOCK_STREAM` socket, matching the gold target. The additional statements do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The cited implementation explicitly checks for SOCK_STREAM and raises an error for sockets that do not meet the requirement; its documentation also states the socket must be SOCK_STREAM type.\nStep 2 — The gold target answer, SOCK_STREAM, is directly supported. No non-trivial claim is missing.\nStep 3 — Citation [1] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007582250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

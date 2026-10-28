@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_084",
+ "prompt": "aiohttp run_app default port ssl_context",
+ "attempt": 1,
+ "answer": "`aiohttp.web.run_app()` defaults to:\n\n- **Port:** `8080` when `ssl_context` is `None`\n- **Port with SSL:** `8443` when an `ssl_context` is provided\n- **`ssl_context`:** `None` by default, meaning plain HTTP\n\nThe current `TCPSite` implementation selects the port as:\n\n```python\nport = 8443 if self._ssl_context else 8080\n```\n\nThe default host is `None` for the Python API, which means all interfaces; the CLI defaults to `localhost`.",
+ "num_citations": 10,
+ "citation_text_tokens": 6588,
+ "citation_text_chars": 26728,
+ "search_queries": [
+  "aiohttp run_app default port ssl_context"
+ ],
+ "model_cost_usd": 0.0022364,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 8351,
+  "output_tokens": 124,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2510.0004579871893,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0032364,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

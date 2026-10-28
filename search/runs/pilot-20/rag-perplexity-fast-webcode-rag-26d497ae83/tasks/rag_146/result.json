@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "`display: contents` removes the element’s own box, but it should **not** prevent its `::before` and `::after` pseudo-elements from generating boxes. The pseudo-elements are treated as part of the element’s contents and are placed in the parent’s box alongside the element’s children.\n\nFor example:\n\n```css\n.wrapper {\n  display: contents;\n}\n\n.wrapper::before {\n  content: \"Before\";\n}\n\n.wrapper::after {\n  content: \"After\";\n}\n```\n\nIf `content` is omitted, its default value for `::before` and `::after` computes to `none`, so the pseudo-element is not generated:\n\n```css\n.wrapper::before {\n  content: none; /* or the default equivalent */\n}\n```\n\nAlso, `display: none` differs from `display: contents`: `display: none` prevents the element and its descendants from generating boxes, whereas `display: contents` removes only the element’s own box. The CSS Display specification notes that major browsers may not implement this behavior correctly in all cases.",
+ "num_citations": 10,
+ "citation_text_tokens": 3960,
+ "citation_text_chars": 18519,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.00166745,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5024,
+  "output_tokens": 343,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 123
+ },
+ "latency_ms": 4510.588791919872,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00266745,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

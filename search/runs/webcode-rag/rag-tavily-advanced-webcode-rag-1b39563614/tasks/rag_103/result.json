@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_103",
+  "prompt": "CockroachDB opt_join_hint valid hint keywords",
+  "attempt": 1,
+  "answer": "The valid CockroachDB join-algorithm hint keywords shown are:\n\n- `HASH`\n- `MERGE`\n- `LOOKUP`\n\nThey must be used with `JOIN`, such as:\n\n```sql\nINNER HASH JOIN\nINNER MERGE JOIN\nINNER LOOKUP JOIN\n```\n\nUsing only the algorithm keyword, such as `MERGE`, is invalid because it can be interpreted as SQL’s implicit `AS` syntax.",
+  "num_citations": 10,
+  "citation_text_tokens": 3752,
+  "citation_text_chars": 15298,
+  "search_queries": [
+    "CockroachDB opt_join_hint valid hint keywords"
+  ],
+  "model_cost_usd": 0.001767,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4755,
+    "output_tokens": 482,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 390
+  },
+  "latency_ms": 8638.901291997172,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017767,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 443.3,
+    "total_citation_tokens": 4433.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that tokens are regenerated only on session upgrades. The predicted answer says they are also regenerated when there is no session, when the stored token is absent, malformed, or expired, and after a valid unsafe request. These claims contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support that a session upgrade can cause token regeneration: [2] says to regenerate when the session has been upgraded, and [1] explains that the stored token is tied to the session ID.\n2. But the gold answer says tokens are regenerated *only* on session upgrades. That exclusivity is contradicted by [1], which also shows regeneration when the session has no token, when the token expires, and after a successful unsafe request to prevent replay attacks.\n3. Therefore, the citations do not ground the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011586,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

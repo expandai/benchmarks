@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_212",
+ "prompt": "automake TESTS program exit status result ignored",
+ "attempt": 1,
+ "answer": "For a normal Automake `TESTS` entry, the program’s exit status is used:\n\n- Exit status `0`: test passes.\n- Any nonzero status: test fails.\n- Exit status `77`: test is skipped, so its result is ignored when counting failures and successes.  \n  Source: [Automake testing documentation](https://www.gnu.org.cach3.com/software/automake/manual/html_node/Generalities-about-Testing.html), [Autobook](https://www.sourceware.org/autobook/autobook/autobook_42.html).\n\nIf the TAP driver is being used, a nonzero producer exit status is checked unless its `ignore_exit` setting is enabled. A TAP `Bail out!` also causes the driver to ignore the producer’s nonzero exit status.  \nSource: [Automake `tap-driver.sh`](https://gnu.googlesource.com/automake/+/refs/tags/v1.13.1/lib/tap-driver.sh).",
+ "num_citations": 9,
+ "citation_text_tokens": 5574,
+ "citation_text_chars": 18995,
+ "search_queries": [
+  "automake TESTS program exit status result ignored"
+ ],
+ "model_cost_usd": 0.0023069,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6881,
+  "output_tokens": 489,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 284
+ },
+ "latency_ms": 5913.4224590379745,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.006306900000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

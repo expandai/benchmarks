@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_111",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 410.0,
+    "total_citation_tokens": 4100.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that TestDescriptor.Type.CONTAINER is the default type returned by EngineDescriptor.getType(), matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the default `TestDescriptor.Type` for `EngineDescriptor` is `CONTAINER`.\n2. Citations [2]–[5], [8], and [9] explicitly say that `EngineDescriptor.getType()` returns `TestDescriptor.Type.CONTAINER`.\n3. Therefore, the citations contain the full factual answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0008317250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

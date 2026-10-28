@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_170",
+  "prompt": "awk next statement executed END action historical behavior",
+  "attempt": 1,
+  "answer": "Historically, `awk` implementations handled `next` in special actions as follows:\n\n- **`BEGIN { next }`**: produced an error.\n- **`END { next }`**: caused `awk` to terminate.\n\nThis behavior was undocumented and was not standardized. POSIX specifies that using `next` in either a `BEGIN` or `END` action has **undefined behavior**. In current `gawk`, `next` in either context is treated as a syntax error.\n\nIn an ordinary action, `next` skips the remaining processing of the current record; if it reaches end-of-input, the `END` actions are then executed.",
+  "num_citations": 10,
+  "citation_text_tokens": 6497,
+  "citation_text_chars": 28740,
+  "search_queries": [
+    "awk next statement executed END action historical behavior"
+  ],
+  "model_cost_usd": 0.00219715,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7666,
+    "output_tokens": 234,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 94
+  },
+  "latency_ms": 7042.812583968043,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00419715,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

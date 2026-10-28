@@ -1,0 +1,50 @@
+# Bakeoff overlay for exa-labs/benchmarks@0d817af66fb6c47afb7b097b9f4e40a763b6fc3a.
+# Merged into the upstream systems.toml by bakeoff/register.py; it may only add
+# [searchers.*] and [systems.*]. Shared [defaults] (answering model, num_results = 10)
+# come from upstream unchanged.
+
+# Expand Search, POST /v1/search {query, maxResults}: one request per search, 10 results,
+# one result per page with the provider's excerpt. $1.50 per 1,000 searches (list price).
+[searchers.expand]
+provider = "expand"
+
+# Firecrawl /v2/search, web only, no scraping: query-relevant highlight per result.
+[searchers.firecrawl-search]
+provider = "firecrawl"
+sources = ["web"]
+
+[systems.rag-expand]
+kind = "rag"
+searcher = "expand"
+
+[systems.rag-firecrawl-search]
+kind = "rag"
+searcher = "firecrawl-search"
+
+# DeepSeek Search API (POST /v1/tools/search), count = num_results (10). Evidence = `summary`.
+[searchers.deepseek]
+provider = "deepseek"
+
+[systems.rag-deepseek]
+kind = "rag"
+searcher = "deepseek"
+
+# No search at all: the designers' own setting for SimpleQA Verified and SealQA, and FRAMES'
+# "naive prompt". The answer model sees the bare question (bakeoff/official_rag.py).
+[searchers.none]
+provider = "none"
+
+[systems.rag-model-only]
+kind = "rag"
+searcher = "none"
+
+# Exa lite: Exa's current low-cost tier ($4 per 1,000 as reported by costDollars, 2026-10-28). Upstream ships
+# instant/fast/auto only, so lite is defined here with the same highlights contents as the upstream presets.
+[searchers.exa-lite-highlights]
+provider = "exa"
+type = "lite"
+contents = { highlights = true }
+
+[systems.rag-exa-lite-highlights]
+kind = "rag"
+searcher = "exa-lite-highlights"

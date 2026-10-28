@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 282.5,
+    "total_citation_tokens": 2825.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that the branch runs only when the stream yields `Some(value)` and does not run for `None`, matching the gold target. Its additional details about termination and direct polling do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that `select_next_some()` in `select!` runs its branch only for `Some(_)` stream items and ignores `None`.\n2. Citations [1] and [3] state this behavior directly.\n3. The gold target’s factual claim is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00093635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

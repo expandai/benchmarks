@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 276.8,
+    "total_citation_tokens": 2768.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the decode-failure output string `[64dec-fail]`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that when base64 decoding fails, curl produces the string `[64dec-fail]`; the source code excerpts also show that exact string being added to the output.\nStep 2: The gold target consists of that failure-output string, and the citations contain it exactly. The target is fully grounded.\nStep 3: Citations [3], [4], [5], [6], [8], and [10] each contain the exact failure string or explicitly describe it as the output.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0007573500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_042",
+ "prompt": "lodash capitalize effect non-first characters",
+ "attempt": 1,
+ "answer": "`_.capitalize` converts the first character to uppercase and the remaining characters to lowercase.\n\n```js\n_.capitalize('FRED') // 'Fred'\n_.capitalize('tEST') // 'Test'\n```\n\nIt does not skip leading spaces to find the first letter, so:\n\n```js\n_.capitalize('   abc') // remains uncapitalized after the spaces\n```\n\nTrim first if needed:\n\n```js\n_.capitalize(_.trim(value))\n```",
+ "num_citations": 10,
+ "citation_text_tokens": 2599,
+ "citation_text_chars": 10255,
+ "search_queries": [
+  "lodash capitalize effect non-first characters"
+ ],
+ "model_cost_usd": 0.00119155,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4018,
+  "output_tokens": 156,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 59
+ },
+ "latency_ms": 4095.7397079328075,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00194155,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

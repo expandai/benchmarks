@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_097",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 273.2,
+    "total_citation_tokens": 2732.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the required where-clause constraint, `Self: Unpin`, matching the gold target. The additional explanation is consistent and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the `next` method has the constraint `Self: Unpin`.\n2. Citations [5] and [6] state that the stream type must be `Unpin` for `next`.\n3. This directly supports the gold target constraint.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000735475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

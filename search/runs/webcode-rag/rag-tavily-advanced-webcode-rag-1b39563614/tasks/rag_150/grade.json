@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_150",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 412.5,
+    "total_citation_tokens": 4125.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies `doc` and `doctest` as the default hidden cfg attributes. The prediction includes both, but also claims that `test` is hidden by default, which adds an incorrect attribute.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Both citations explicitly identify `doc` and `doctest` as attributes rustdoc hides by default. Step 2: The gold target answer contains only those two attributes, and both are directly supported. Step 3: Citations [1] and [2] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000946475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

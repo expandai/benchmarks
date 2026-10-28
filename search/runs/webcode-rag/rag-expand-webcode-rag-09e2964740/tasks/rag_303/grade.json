@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_303",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 249.0,
+    "total_citation_tokens": 2490.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when both scale dimensions are negative -n values, the filter behaves like scale=0:0 and leaves the input dimensions unchanged. This matches the gold target that the case is identical to setting both values to 0.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the edge case behaves identically to setting both values to 0.\n2. Citation [1] explicitly says that when both values are -n (n >= 1), the behavior is identical to setting both values to 0; it also gives -1:-1 as equivalent to 0:0. Citation [2] states the same rule.\n3. The gold target’s claim is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000749475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

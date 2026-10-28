@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_058",
+ "prompt": "go runtime GOMAXPROCS called with zero argument behavior",
+ "attempt": 1,
+ "answer": "Calling `runtime.GOMAXPROCS(0)` returns the current GOMAXPROCS setting without changing it.\n\nThe Go runtime implementation states that if `n <= 0`, it unlocks and returns the current value. Go code commonly uses this pattern, for example:\n\n```go\ncurrent := runtime.GOMAXPROCS(0)\n```\n\nIt returns the previous/current setting, not the default CPU count.",
+ "num_citations": 10,
+ "citation_text_tokens": 6171,
+ "citation_text_chars": 20708,
+ "search_queries": [
+  "go runtime GOMAXPROCS called with zero argument behavior"
+ ],
+ "model_cost_usd": 0.0020294,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7691,
+  "output_tokens": 89,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2309.8781250882894,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.006029400000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

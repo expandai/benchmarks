@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_028",
+ "prompt": "glibc printf_info width precision star arginfo function value",
+ "attempt": 1,
+ "answer": "For `struct printf_info`:\n\n- `prec`:\n  - `-1` if no precision was specified.\n  - If precision is `*`, the **handler** receives the actual value retrieved from the argument list.\n  - The **arginfo function** receives `INT_MIN`, because the actual value is not known yet.\n\n- `width`:\n  - `0` if no width was specified.\n  - If width is `*`, the **handler** receives the actual value retrieved from the argument list.\n  - In the **arginfo function**, `INT_MIN` indicates that `*` was used for the width.\n\nThe arginfo function returns the number of arguments required and fills in their types.",
+ "num_citations": 10,
+ "citation_text_tokens": 3328,
+ "citation_text_chars": 15116,
+ "search_queries": [
+  "glibc printf_info width precision star arginfo function value"
+ ],
+ "model_cost_usd": 0.0014776,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4639,
+  "output_tokens": 265,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 113
+ },
+ "latency_ms": 3956.3626250019297,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0022275999999999997,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

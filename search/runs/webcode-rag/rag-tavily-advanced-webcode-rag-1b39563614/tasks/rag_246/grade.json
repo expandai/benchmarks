@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 510.6,
+    "total_citation_tokens": 5106.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer says 16 items. These conflict.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly shows a MaxItems validation of 1 for the TLSRoute rules list. Step 2: The gold target claim is that the maximum is 1, which is directly supported by this passage. Citation [1] shows a different limit in the v1alpha2 file, but does not negate the v1-specific evidence in [2].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010782250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

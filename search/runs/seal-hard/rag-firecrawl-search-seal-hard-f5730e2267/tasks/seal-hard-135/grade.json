@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-135",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 464.6,
+    "total_citation_tokens": 4646.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target says no theory supports the statement as written. The prediction names the Central Limit Theorem, while clarifying that it applies to the sampling distribution of the sample mean rather than to the sampled variables themselves. That distinction does not answer the question with the gold target and instead gives a different theory-related answer.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The question claims that the distribution of the sampled variables themselves becomes normal as the number of i.i.d. samples increases. Citation [4] explicitly identifies the belief that random sampling makes any variable’s distribution become normal as a misconception, and says sampling instead reproduces the population’s properties. The related normality result is the central limit theorem, which concerns the sample mean (as [1] states), not the distribution of the individual sampled variables. These passages support the gold answer that no theory supports the statement as phrased.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001255355,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_147",
+ "prompt": "gettext LC_MESSAGES mingw arbitrary value substitute",
+ "attempt": 1,
+ "answer": "On MinGW/Windows, `LC_MESSAGES` is not provided by the system. GNU gettext therefore defines it to the arbitrary value **1729**:\n\n```c\n#if !defined LC_MESSAGES\n# define LC_MESSAGES 1729\n#endif\n```\n\nThe value is only an identifier for the `LC_MESSAGES` category; it is not a Windows locale value.",
+ "num_citations": 8,
+ "citation_text_tokens": 4844,
+ "citation_text_chars": 16640,
+ "search_queries": [
+  "gettext LC_MESSAGES mingw arbitrary value substitute"
+ ],
+ "model_cost_usd": 0.0016017,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6033,
+  "output_tokens": 78,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2573.7262080656365,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0056017,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

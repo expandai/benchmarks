@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 373.9,
+    "total_citation_tokens": 3739.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the requested valid range as 0–255 inclusive. Its additional note that RFC 6455 uses version 13 and that 9–12 were reserved does not contradict that numeric range.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly states that the Sec-WebSocket-Version number must be a non-negative integer from 0 through 255, inclusive. Step 2: This contains the complete non-trivial information in the gold target answer. Step 3: Citation [2] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008667249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

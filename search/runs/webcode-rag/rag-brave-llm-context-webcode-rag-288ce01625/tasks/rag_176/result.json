@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_176",
+  "prompt": "pacemaker colocation constraint resource template rsc with-rsc restriction",
+  "attempt": 1,
+  "answer": "In a Pacemaker colocation constraint, **only one resource template may be referenced**—either in `rsc` or in `with-rsc`; the other must be a regular resource.\n\nA template reference represents **all primitive resources derived from that template**, so the constraint applies to each of those primitives.\n\nA colocation constraint must either:\n\n- specify both `rsc` and `with-rsc`, or\n- contain at least one resource set.\n\nSource: [Pacemaker Explained — Using Templates in Constraints](https://clusterlabs.org/projects/pacemaker/doc/2.1/Pacemaker_Explained/html/reusing-configuration.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 2982,
+  "citation_text_chars": 12914,
+  "search_queries": [
+    "pacemaker colocation constraint resource template rsc with rsc restriction"
+  ],
+  "model_cost_usd": 0.00128645,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3980,
+    "output_tokens": 243,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 106
+  },
+  "latency_ms": 5300.71749992203,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00628645,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

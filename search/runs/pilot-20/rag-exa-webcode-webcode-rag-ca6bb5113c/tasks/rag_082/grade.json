@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_082",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 396.1,
+    "total_citation_tokens": 3961.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies HTAB as the only allowed control character in an RFC 7230 quoted-pair and explicitly excludes the other control characters. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The quoted-pair rule lists HTAB, SP, VCHAR, and obs-text as the allowed octets after a backslash. Of these alternatives, HTAB is the control character: SP is a space, VCHAR is a visible character, and obs-text is in the range %x80-FF. Thus the source supports the gold target, HTAB.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000909725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

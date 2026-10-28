@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_037",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 395.3,
+    "total_citation_tokens": 3953.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the gold restriction: a `repr(packed)` type cannot contain a `repr(align)` type, including transitively through nested member types. Its additional statements are consistent with that restriction and do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a `repr(packed)` type may not contain a `repr(align(n))` type.\n2. Citations [1] and [2] state the restriction directly, including that the containment is prohibited transitively. Citations [3], [6], and [7] likewise state the restriction.\n3. The retrieved sources therefore contain the non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0009686,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

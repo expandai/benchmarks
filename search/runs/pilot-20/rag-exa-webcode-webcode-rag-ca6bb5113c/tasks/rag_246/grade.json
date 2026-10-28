@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 490.0,
+    "total_citation_tokens": 4900.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer says 4096 items. These values conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that the maximum number of rules in Gateway API v1 TLSRouteSpec is 1.\n2. Citation [2] mentions a proposed limit of 1, but says the existing limit is 16 and identifies the change as applying to v1alpha3; it does not establish that v1 has a maximum of 1.\n3. Citation [7] instead describes a validation change allowing up to 4096 rules, and none of the citations directly establishes a v1 maximum of 1.\n4. Therefore, the citations do not support the gold target’s specific claim for v1.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001077475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_217",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 494.2,
+    "total_citation_tokens": 4942.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the required first-field type as `int` and correctly explains that it holds an offset into the string pool rather than a `char *`. Its additional details do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation explicitly states that with gperf’s PIC option and a user-defined struct, the first field must be `int`, not `char *`.\n2. It gives the reason: the field contains offsets into the string pool rather than actual strings.\n3. These statements cover all non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000992725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

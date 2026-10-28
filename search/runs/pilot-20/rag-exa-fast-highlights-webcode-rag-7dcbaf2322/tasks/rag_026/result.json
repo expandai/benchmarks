@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_026",
+ "prompt": "Spring Vault PcfAuthenticationOptions RSA-PSS signature library requirement",
+ "attempt": 1,
+ "answer": "Spring Vault’s PCF authentication requires **Bouncy Castle**, specifically the **`bcpkix-jdk15on`** library, on the classpath to generate the RSA-PSS signature.\n\nSpring Cloud Vault explicitly checks for `org.bouncycastle.crypto.signers.PSSSigner` and reports:\n\n> “BouncyCastle (bcpkix-jdk15on) must be on the classpath”\n\nThe requirement applies when using `PcfAuthentication` with `PcfAuthenticationOptions`; the options class itself supplies configuration such as the role, certificate, key, path, and clock.",
+ "num_citations": 10,
+ "citation_text_tokens": 2591,
+ "citation_text_chars": 11931,
+ "search_queries": [
+  "Spring Vault PcfAuthenticationOptions RSA-PSS signature library requirement"
+ ],
+ "model_cost_usd": 0.00123105,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3840,
+  "output_tokens": 226,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 101
+ },
+ "latency_ms": 6910.312041989528,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00823105,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

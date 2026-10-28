@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_211",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 211.7,
+    "total_citation_tokens": 2117.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold says an inner primitive's priority is ignored and only the bundle's own priority matters. The predicted answer highlights the inner primitive's priority and says resources are assigned by highest priority first, implying that the primitive's priority affects assignment. This conflicts with the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations mention that bundles can contain an inner primitive and discuss resource priority generally. 2. None states that the inner primitive’s priority is ignored or that only the bundle’s own priority determines priority. 3. That specific claim is non-trivial and is not derivable from the retrieved passages, so the citations do not contain all the information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000717725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

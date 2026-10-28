@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 474.2,
+    "total_citation_tokens": 4742.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The response explicitly says it does not know and provides no answer about whether proxy settings apply. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] establishes that Node’s HTTP Agent has built-in proxy configuration, and [5] establishes that Node HTTP requests can use `socketPath`.\n2. Citation [4] discusses socket-versus-proxy behavior in the context of Axios. It does not establish that Node’s built-in proxy settings are ignored for a request using `socketPath`.\n3. The citations therefore do not support the gold target’s specific claim about Node.js built-in proxy settings.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00115735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

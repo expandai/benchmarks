@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_097",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 408.4,
+    "total_citation_tokens": 4084.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the `next` method’s constraint as `Self: Unpin`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is the `where`-clause constraint `Self: Unpin`.\n2. Citations [1] and [2] explicitly state that `next` has the constraint `where Self: Unpin`.\n3. The retrieved citations therefore contain the full non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000839725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

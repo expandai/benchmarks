@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_169",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 265.4,
+    "total_citation_tokens": 2654.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names `stm32f429disc1.cfg`, which matches the gold target. The additional command does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the OpenOCD config filename `stm32f429disc1.cfg`.\n2. Citation [1] explicitly provides that filename in the OpenOCD command for the STM32F407G-DISC1 with STLINK/V2.1.\n3. Citation [2] provides the same filename, with spacing artifacts in the retrieved text.\n4. The gold target contains no additional non-trivial claims beyond the filename, so the evidence fully supports it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00075585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

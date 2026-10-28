@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 295.0,
+    "total_citation_tokens": 2950.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states the requested range, 0 through 255 inclusive. However, it additionally claims that values 9–12 were never valid, which conflicts with the stated range for the Sec-WebSocket-Version number; those values are reserved, but remain within the range. The extra contradictory claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [3] explicitly states the allowed range is 0 to 255 inclusive. Citation [1] also gives the 0–255 range, with the additional formatting constraint of no leading zeros.\nStep 2 — Groundedness: The gold target’s complete factual claim, that the range is 0 to 255 inclusive, is present in the retrieved citations. Therefore, the answer is GROUNDED.\nStep 3 — Source attribution: Citation [3] directly contains the inclusive range; citation [1] also supports the bounds.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001041225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

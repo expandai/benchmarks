@@ -1,0 +1,23 @@
+[project]
+name = "search-benchmarks"
+version = "1.0.0"
+description = "Search-API bakeoff: Expand, Exa, Perplexity, Parallel, Firecrawl, DeepSeek, Tavily and Brave on exa-labs/benchmarks (pinned) plus official-grader suites, and AA-Omniscience via Stirrup"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    # The pinned harness, cloned into ./upstream (see README: `make upstream`). Installed editable,
+    # byte-identical to exa-labs/benchmarks @ 0d817af66fb6c47afb7b097b9f4e40a763b6fc3a.
+    "benchmarks",
+]
+
+[tool.uv]
+package = false
+# Same resolution cutoff as upstream's own uv.lock, so the harness sees the package versions it was pinned with.
+exclude-newer = "2026-09-27T00:00:00Z"
+
+[tool.uv.sources]
+benchmarks = { path = "upstream", editable = true }
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]

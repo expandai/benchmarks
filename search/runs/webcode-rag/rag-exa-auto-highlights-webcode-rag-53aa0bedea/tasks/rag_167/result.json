@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_167",
+  "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+  "attempt": 1,
+  "answer": "With Beautiful Soup’s `html5lib` parser:\n\n```python\nfrom bs4 import BeautifulSoup\n\nhtml = '''<p class=\"1\"\n>Paragraph 1</p>\n    <p class=\"2\">Paragraph 2</p>'''\n\nsoup = BeautifulSoup(html, \"html5lib\")\n\nfor tag in soup.find_all(\"p\"):\n    print(tag.sourceline, tag.sourcepos, tag.string)\n```\n\nOutput:\n\n```text\n2 0 Paragraph 1\n3 16 Paragraph 2\n```\n\n- `tag.sourceline` is the 1-based source line number.\n- `tag.sourcepos` is the position of the final character of the opening tag—the `>` character—within that line.\n- The position is zero-based.\n\nThus, for:\n\n```html\n    <p class=\"2\">Paragraph 2</p>\n```\n\n`sourcepos == 16` refers to the `>` in `<p class=\"2\">`.\n\nBeautiful Soup supports these properties with `html5lib` starting in version 4.8.1. You can disable tracking with:\n\n```python\nBeautifulSoup(html, \"html5lib\", store_line_numbers=False)\n```\n\nIn that case, the position values are `None`.",
+  "num_citations": 10,
+  "citation_text_tokens": 5446,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "beautifulsoup html5lib sourceline sourcepos position reference"
+  ],
+  "model_cost_usd": 0.0022772,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7031,
+    "output_tokens": 433,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 168
+  },
+  "latency_ms": 6252.258750027977,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0092772,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

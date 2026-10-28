@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-122",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 138.5,
+    "total_citation_tokens": 1385.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer gives 28.31 seconds, which contradicts the gold target of 3 seconds.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies a particular daily average for Washington, D.C., on April 30, 2025: 3 seconds.\n2. Citation [1] gives a fiscal-year average of 4 seconds, not the answer time for that specific date.\n3. Citation [3] describes which 911 metrics are available, and [6] defines call-to-answer, but neither provides the requested daily value.\n4. Citation [9] has an April 30, 2025 value, but it is data for Norfolk, not Washington, D.C.; it therefore cannot support the gold target.\n5. The retrieved citations do not contain the requested Washington, D.C. daily average, so a non-trivial factual claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00061173,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

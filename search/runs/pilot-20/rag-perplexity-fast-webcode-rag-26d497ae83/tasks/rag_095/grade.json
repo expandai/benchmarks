@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_095",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.444,
+    "avg_citation_tokens": 443.6,
+    "total_citation_tokens": 3992.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is nanoseconds. The predicted answer explicitly says that when TIMEBASE is omitted, START and END are interpreted as nanoseconds, and its example is consistent with that unit. The additional information does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the assumed units are nanoseconds.\n2. Citations [1], [2], [3], and [9] explicitly say that when the timebase is missing, start/end times are assumed to be in nanoseconds.\n3. This directly supports the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0008774750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

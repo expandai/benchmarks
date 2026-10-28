@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 253.9,
+    "total_citation_tokens": 2539.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies using the X and Z components for the ground-plane Vec2, discarding Y because it is zero on the plane. The predicted answer instead describes the Vec2's y component as a local vertical coordinate, which conflicts with that mapping.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] establishes that local coordinates relative to the ground plane can be represented as a Vec2, while global coordinates are a Vec3.\n2. It does not state to extract the X and Z components with `local_cursor.xz()`, nor that the Y coordinate is discarded because it is always zero on the plane.\n3. Those are specific factual claims in the gold target that the citations do not support, so the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008062249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

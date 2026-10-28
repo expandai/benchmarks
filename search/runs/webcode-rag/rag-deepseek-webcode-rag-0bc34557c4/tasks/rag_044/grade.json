@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 156.1,
+    "total_citation_tokens": 1561.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer says padding is added at the beginning and zero bytes are prepended, matching the gold target of leading rather than trailing zero bytes.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] says that when the challenge is shorter than 32 bytes, the TLS server pads it with zero bytes at the beginning, explicitly noting “not at the end.”\n2. This supports the gold target’s full claim that the padding direction is leading, not trailing, zero bytes.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00064385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

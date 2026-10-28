@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 176.6,
+    "total_citation_tokens": 1766.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that setting `allow_alias = true` when all enum values have distinct numbers is an error, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [10] directly states that an enum with allow_alias enabled must have multiple values sharing a number, and that having all distinct numbers is an error. Step 2: This fully supports the gold target answer, “it is an error.” Step 3: Citation [10] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000567225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

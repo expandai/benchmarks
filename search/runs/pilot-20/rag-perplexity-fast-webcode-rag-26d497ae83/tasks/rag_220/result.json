@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_220",
+ "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+ "attempt": 1,
+ "answer": "For `aiohttp.FormData.add_field()`:\n\n- If `value` is `bytes`, `bytearray`, or `memoryview`\n- And `filename` is omitted\n- And `content_transfer_encoding` is omitted\n\nthen the field’s `name` is used as the filename.\n\n```python\nform.add_field(\"file\", b\"data\")\n```\n\nuses `filename=\"file\"`.\n\nIf `content_transfer_encoding` is specified, this filename fallback does not occur.",
+ "num_citations": 10,
+ "citation_text_tokens": 3987,
+ "citation_text_chars": 15747,
+ "search_queries": [
+  "aiohttp FormData add_field bytes value no filename fallback"
+ ],
+ "model_cost_usd": 0.00147605,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5108,
+  "output_tokens": 166,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 63
+ },
+ "latency_ms": 3277.8239160543308,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00247605,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

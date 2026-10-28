@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_253",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 383.5,
+    "total_citation_tokens": 3835.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly mentions the X Consortium as the origin, but it also explicitly states that the file has copyright notices (1991 MIT and 1994 X Consortium). That contradicts the gold target's claim that it is not copyrighted, so the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] states both that install-sh is from the X Consortium and that it is not copyrighted. Step 2: Those are all the non-trivial claims in the gold target answer, so the answer is fully grounded. Step 3: Citation [2] alone contains the complete answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00096985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

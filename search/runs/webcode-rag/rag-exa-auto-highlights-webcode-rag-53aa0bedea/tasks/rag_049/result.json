@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_049",
+  "prompt": "Spring Boot server.tomcat.processor-cache negative value behavior",
+  "attempt": 1,
+  "answer": "A negative `server.tomcat.processor-cache` value is ignored by Spring Boot because the property is applied only when it is positive. Therefore, setting:\n\n```properties\nserver.tomcat.processor-cache=-1\n```\n\ndoes **not** configure Tomcat’s unlimited processor cache. Tomcat’s default processor cache of `200` remains in effect.\n\nTomcat itself defines `-1` as unlimited, but Spring Boot does not pass that value through in the behavior described by the issue.",
+  "num_citations": 10,
+  "citation_text_tokens": 4708,
+  "citation_text_chars": 21673,
+  "search_queries": [
+    "Spring Boot server.tomcat.processor-cache negative value behavior"
+  ],
+  "model_cost_usd": 0.0016872,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5703,
+    "output_tokens": 218,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 115
+  },
+  "latency_ms": 8602.020208025351,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0086872,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

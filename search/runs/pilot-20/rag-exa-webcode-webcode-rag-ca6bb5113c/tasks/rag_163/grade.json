@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 252.4,
+    "total_citation_tokens": 2524.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer correctly identifies HTTPException and exceptions with registered error handlers as generally excluded. It also states that an exception raised from an error handler is still sent, matching the gold target's exception to the exclusion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer identifies HTTPException and other exceptions with registered error handlers as excluded, with an exception for errors raised from an error handler.\n2. Citation [7] states all of these conditions, including the exception-handler caveat.\n3. Therefore, the retrieved citations contain all non-trivial information in the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000749725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

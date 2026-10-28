@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_177",
+ "prompt": "clang HasCustomParsing __declspec spelling interaction",
+ "attempt": 1,
+ "answer": "`HasCustomParsing` does **not** affect `__declspec` spellings.\n\nIt applies only to attributes with a GNU spelling, where custom parsing can be implemented in `Parser::ParseGNUAttributeArgs()`. Attributes using `__declspec` ignore this flag and are parsed by `Parser::ParseMicrosoftDeclSpec()` instead.\n\nAlso, when determining the parsed attribute kind, Clang must account for the syntax used: GNU and `__declspec` spellings may represent different attributes—for example, `__declspec(aligned)` versus `__attribute__((aligned))`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2393,
+ "citation_text_chars": 11401,
+ "search_queries": [
+  "clang HasCustomParsing __declspec spelling interaction"
+ ],
+ "model_cost_usd": 0.0010905,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3801,
+  "output_tokens": 117,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3014.7769160103053,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0018405000000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

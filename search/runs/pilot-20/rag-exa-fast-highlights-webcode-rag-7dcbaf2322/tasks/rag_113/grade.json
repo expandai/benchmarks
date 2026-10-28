@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_113",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 494.9,
+    "total_citation_tokens": 4949.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer says the runner appends headless arguments after loading webdriver.json, which supports the gold target that the configuration does not override headless behavior. However, it also claims headless mode can be disabled by omitting a test flag or setting NO_HEADLESS=1, contradicting the target that it is always enabled for both browsers.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3] explicitly state that the headless argument is always enabled for both browsers. Step 2: This directly supports the full gold target answer, with no additional factual claims missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00125235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

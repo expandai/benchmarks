@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_115",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 425.3,
+    "total_citation_tokens": 4253.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target names the server-side request attribute as `cspNonce`, but the answer gives `csp_nonce` as the injected value name and template variable. These are different names, so the answer contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target is the request-attribute name “cspNonce.” Citation [9] explicitly uses that name, but describes a Spring application, not Micronaut Views. The Micronaut-specific citation [1] identifies “csp_nonce” as a Soy injected-value key, not as a server-side request attribute. Thus, the citations do not establish that Micronaut Views uses “cspNonce” as its request-attribute name.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011172250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

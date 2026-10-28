@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_161",
+ "prompt": "valgrind massif stacks trace increase decrease verbosity requirement",
+ "attempt": 1,
+ "answer": "Use at least four `-v` options:\n\n```bash\nvalgrind --tool=massif -vvvv ./your_program\n```\n\nRepeating `-v` increases Valgrind’s verbosity. With at least four `-v` arguments, Massif produces a trace for each stack increase and decrease. The stack-increase trace includes the IP address that increased the stack.",
+ "num_citations": 10,
+ "citation_text_tokens": 5293,
+ "citation_text_chars": 23319,
+ "search_queries": [
+  "valgrind massif stacks trace increase decrease verbosity requirement"
+ ],
+ "model_cost_usd": 0.00166125,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6252,
+  "output_tokens": 82,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2420.61612510588,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00266125,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

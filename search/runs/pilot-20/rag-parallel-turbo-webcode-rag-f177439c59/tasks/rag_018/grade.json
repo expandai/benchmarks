@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 525.3,
+    "total_citation_tokens": 5253.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a foreign exception crossing a Rust non-unwinding ABI boundary is undefined behavior, matching the gold target. Its additional details do not clearly contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. A foreign exception is a native unwind in the relevant sense described by the citation.\n2. The citation identifies ABIs without an -unwind suffix, including C, as non-unwinding ABIs.\n3. Its table says a native unwind reaching a non-unwinding ABI boundary is undefined behavior in both panic modes.\n4. Therefore, the retrieved sources support the gold target answer: undefined behavior.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0012869749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

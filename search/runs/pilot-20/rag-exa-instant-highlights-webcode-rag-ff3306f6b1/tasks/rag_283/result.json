@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_283",
+ "prompt": "pytest PYTEST_ADDOPTS environment variable parsing method",
+ "attempt": 1,
+ "answer": "`PYTEST_ADDOPTS` is parsed by:\n\n1. Reading the environment variable as a string.\n2. Splitting it with `shlex.split()`.\n3. Validating the resulting arguments with pytest’s argument parser.\n4. Prepending them to the normal command-line arguments.\n\nThe implementation shown is:\n\n```python\nenv_addopts = os.environ.get(\"PYTEST_ADDOPTS\", \"\")\nif len(env_addopts):\n    args[:] = (\n        self._validate_args(shlex.split(env_addopts), \"via PYTEST_ADDOPTS\")\n        + args\n    )\n```\n\nThus, quoting is handled using `shlex` rules; for example, `--tb=\"short\"` is parsed as the option value `short`. The effective order is:\n\n```text\n<pytest.ini:addopts> $PYTEST_ADDOPTS <extra command-line arguments>\n```\n\nand later conflicting options take precedence.",
+ "num_citations": 10,
+ "citation_text_tokens": 3071,
+ "citation_text_chars": 12028,
+ "search_queries": [
+  "pytest PYTEST_ADDOPTS environment variable parsing method"
+ ],
+ "model_cost_usd": 0.0013929,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4257,
+  "output_tokens": 274,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 83
+ },
+ "latency_ms": 4644.027833011933,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0053929,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

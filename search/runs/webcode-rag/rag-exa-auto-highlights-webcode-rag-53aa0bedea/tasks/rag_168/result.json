@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_168",
+  "prompt": "node http.request path illegal characters which rejected",
+  "attempt": 1,
+  "answer": "`http.request()` rejects path characters outside the range `U+0021`–`U+00FF`:\n\n- Control characters `U+0000`–`U+001F`, including:\n  - NUL (`\\0`)\n  - carriage return (`\\r`)\n  - newline (`\\n`)\n  - space (`U+0020`)\n  - tab (`\\t`)\n- Characters above `U+00FF`, such as non-Latin-1 or two-byte Unicode characters (for example, emoji).\n\nThese cause `ERR_UNESCAPED_CHARACTERS`. The validation regex shown in the results is:\n\n```js\n/[^\\u0021-\\u00ff]/\n```\n\nSource: Node.js PR #8923 and commit `b961d9fd83`.",
+  "num_citations": 10,
+  "citation_text_tokens": 5545,
+  "citation_text_chars": 20188,
+  "search_queries": [
+    "node http.request path illegal characters which rejected"
+  ],
+  "model_cost_usd": 0.0021591,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6837,
+    "output_tokens": 375,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 206
+  },
+  "latency_ms": 7961.162749910727,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0091591,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

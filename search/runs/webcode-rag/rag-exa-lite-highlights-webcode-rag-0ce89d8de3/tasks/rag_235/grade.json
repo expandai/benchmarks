@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_235",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 287.5,
+    "total_citation_tokens": 2875.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target requires the year and month fields to be zero. The answer says `to_timeout/1` raises when either field is set, conveying that those components cannot be nonzero; its additional details do not contradict the constraint.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citation states that `to_timeout/1` raises when the month or year fields are set. This supports the gold target’s constraint that those fields must be zero for a duration passed to `to_timeout/1`. The gold target contains no additional non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008866,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

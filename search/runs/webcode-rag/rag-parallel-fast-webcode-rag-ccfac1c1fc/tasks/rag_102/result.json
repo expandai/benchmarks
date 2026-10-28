@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_102",
+ "prompt": "valgrind cachegrind fsave large FPU instruction simulated access size",
+ "attempt": 1,
+ "answer": "Cachegrind treats x86/amd64 FPU instructions with data sizes of 28 or 108 bytes—such as `fsave`—as if they access only 16 bytes. This may reduce accuracy, although these instructions are described as rare.",
+ "num_citations": 10,
+ "citation_text_tokens": 2356,
+ "citation_text_chars": 8934,
+ "search_queries": [
+  "valgrind cachegrind fsave large FPU instruction simulated access size"
+ ],
+ "model_cost_usd": 0.00093205,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3460,
+  "output_tokens": 56,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2376.824541017413,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00193205,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

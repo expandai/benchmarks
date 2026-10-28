@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_046",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 606.6,
+    "total_citation_tokens": 6066.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when no video is present, the fallback resolution is 720×576, matching the gold target. The additional context does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is 720x576.\n2. The cited passages directly state that when no video is present, the bitmap subtitle stream is converted using a 720×576 canvas (also rendered as 720x576 in some citations).\n3. The retrieved citations therefore contain the full factual answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.001231725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

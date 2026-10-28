@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_294",
+ "prompt": "JUnit TestExecutionListener finish event methods invocation order",
+ "attempt": 1,
+ "answer": "JUnit `TestExecutionListener` methods are invoked sequentially:\n\n- **Start-event methods:** invocation order\n- **Finish-event methods:** reverse registration order\n\nFor example, if listeners are registered as `Listener1`, then `Listener2`:\n\n```text\ntestPlanExecutionStarted:\n  Listener1\n  Listener2\n\ntestPlanExecutionFinished:\n  Listener2\n  Listener1\n```\n\nFor an individual test/container, `executionFinished()` is called after all of its children have been skipped or finished. `testPlanExecutionFinished()` is called after all tests have been executed.",
+ "num_citations": 10,
+ "citation_text_tokens": 2642,
+ "citation_text_chars": 12954,
+ "search_queries": [
+  "JUnit TestExecutionListener finish event methods invocation order"
+ ],
+ "model_cost_usd": 0.00110425,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3832,
+  "output_tokens": 122,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2608.124874997884,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00185425,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

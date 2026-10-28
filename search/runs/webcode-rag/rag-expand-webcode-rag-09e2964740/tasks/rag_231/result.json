@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_231",
+  "prompt": "HTML img sizes attribute source-size-value valid CSS functions",
+  "attempt": 1,
+  "answer": "For the `img` `sizes` attribute, a `<source-size-value>` must be a **non-negative CSS length**. Percentages are not allowed.\n\nCSS functions allowed by the current specification are **CSS math functions**, including:\n\n- `calc()`\n- `min()`\n- `max()`\n- `clamp()`\n- `sin()`\n- `cos()`\n- `tan()`\n- `asin()`\n- `acos()`\n- `atan()`\n- `atan2()`\n- `pow()`\n- `sqrt()`\n- `hypot()`\n- `log()`\n- `exp()`\n- `abs()`\n- `sign()`\n\nExamples:\n\n```html\nsizes=\"calc(100vw - 2rem)\"\n```\n\n```html\nsizes=\"min(100vw, 600px)\"\n```\n\nA bare parenthesized expression such as `(100vw - 2rem)` is invalid; it must be wrapped in `calc()`. Earlier HTML specifications allowed only `calc()`, but later specifications changed this to allow “math functions.”",
+  "num_citations": 10,
+  "citation_text_tokens": 10554,
+  "citation_text_chars": 43892,
+  "search_queries": [
+    "HTML img sizes attribute source-size-value valid CSS functions"
+  ],
+  "model_cost_usd": 0.0035175,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 12141,
+    "output_tokens": 402,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 174
+  },
+  "latency_ms": 7042.898707906716,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0055175,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

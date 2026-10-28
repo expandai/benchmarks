@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_148",
+ "prompt": "haproxy maximum chunked encoding chunk size limit",
+ "attempt": 1,
+ "answer": "HAProxy’s maximum HTTP/1 chunk size depends on the version:\n\n- **Before HAProxy 2.2.9:** **2 GB − 1 byte** (`2,147,483,647` bytes). Larger chunks are treated as an error.\n- **HAProxy 2.2.9 and later:** increased to **2⁵² − 1 bytes**, approximately **4 PB**.\n\nThe limit is not presented as configurable; the `tune.chksize` global option was deprecated and ignored.",
+ "num_citations": 10,
+ "citation_text_tokens": 3811,
+ "citation_text_chars": 14669,
+ "search_queries": [
+  "haproxy maximum chunked encoding chunk size limit"
+ ],
+ "model_cost_usd": 0.0013653,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4929,
+  "output_tokens": 111,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2510.1531670661643,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0053653,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

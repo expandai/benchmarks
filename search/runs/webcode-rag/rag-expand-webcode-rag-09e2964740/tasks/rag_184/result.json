@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_184",
+  "prompt": "Haskell Data.List maximumBy multiple largest tie-breaker selection",
+  "attempt": 1,
+  "answer": "Use a combined comparison: compare lengths normally, then compare the first elements in reverse order so the smaller head is considered larger:\n\n```haskell\nimport Data.List (maximumBy)\nimport Data.Ord (comparing)\n\nlongest :: Ord a => [[a]] -> [a]\nlongest = maximumBy (comparing length <> flip (comparing head))\n```\n\n`<>` uses the second comparison only when the first returns `EQ`. `flip` reverses the head comparison, so a smaller first element wins the tie.\n\nFor example, among lists with equal maximum length, `[1, ...]` is selected over `[2, ...]`.\n\n`maximumBy` requires a non-empty input, and `head` also fails if every candidate list is empty. A safer alternative for the tie-breaker is:\n\n```haskell\nlongest = maximumBy (comparing length <> flip (comparing (fmap Down . listToMaybe)))\n```\n\nThe search result explicitly recommends `comparing listToMaybe` as safer, but the exact `Down` composition for that variant is not provided there.",
+  "num_citations": 10,
+  "citation_text_tokens": 8015,
+  "citation_text_chars": 26998,
+  "search_queries": [
+    "Haskell Data.List maximumBy multiple largest tie-breaker selection"
+  ],
+  "model_cost_usd": 0.00283055,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9614,
+    "output_tokens": 356,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 125
+  },
+  "latency_ms": 5413.533500046469,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.004830549999999999,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

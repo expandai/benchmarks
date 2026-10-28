@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_109",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 129.4,
+    "total_citation_tokens": 1294.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer accurately restates that the malloc attribute is ignored for a cc_binary when linkshared=True is specified.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Both citations state that the value of the attribute is ignored when `linkshared=True` is specified.\n2. These passages appear in the `cc_binary` reference context, and the surrounding attribute being discussed is `malloc`.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000607225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

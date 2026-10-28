@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_126",
+  "prompt": "ssl SSLObject suppress_ragged_eofs EOF behavior",
+  "attempt": 1,
+  "answer": "`SSLObject` does not handle `suppress_ragged_eofs`. For memory-BIO-based SSL objects, all EOF conditions that violate the protocol are reported by raising `ssl.SSLEOFError`.\n\nFor comparison, `SSLSocket`:\n\n- `suppress_ragged_eofs=True`: unexpected EOF is returned as `b\"\"`.\n- `suppress_ragged_eofs=False`: the exception is raised.",
+  "num_citations": 10,
+  "citation_text_tokens": 3220,
+  "citation_text_chars": 12657,
+  "search_queries": [
+    "ssl SSLObject suppress_ragged_eofs EOF behavior"
+  ],
+  "model_cost_usd": 0.0013314,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4179,
+    "output_tokens": 239,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 145
+  },
+  "latency_ms": 5597.8547090198845,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063314,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

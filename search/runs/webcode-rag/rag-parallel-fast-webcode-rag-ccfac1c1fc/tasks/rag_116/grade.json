@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_116",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 248.6,
+    "total_citation_tokens": 2486.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that socket.sendfile() requires a SOCK_STREAM socket, matching the gold target. The additional note about non-blocking sockets does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is SOCK_STREAM. Citation [2] explicitly states that the socket must be of SOCK_STREAM type, and citation [1] confirms that other socket types are rejected. The answer is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00061007,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

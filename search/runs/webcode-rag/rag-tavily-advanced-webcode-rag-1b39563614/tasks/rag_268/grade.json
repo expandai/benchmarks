@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_268",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 470.1,
+    "total_citation_tokens": 4701.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states a minimum requirement of at least 32 octets. The predicted answer instead says the specification requires at least 8 octets, which contradicts the gold target. Its separate statement about Okta requiring 32 characters does not resolve that contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target asserts a minimum requirement of 32 octets.\n2. Citations [1] and [2] state a minimum of 8 octets for HS256, not 32.\n3. Citation [3] states 32 characters, which does not establish a general 32-octet requirement.\n4. Therefore, the retrieved citations do not support the gold target; the cited OpenID Connect passages instead give a different minimum.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001059225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

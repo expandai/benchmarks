@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_010",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 321.8,
+    "total_citation_tokens": 3218.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes the gold-target guidance: intermediaries SHOULD retain padding on DATA frames and MAY drop padding on HEADERS and PUSH_PROMISE frames. The added statement about changing the amount of padding does not contradict that guidance.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says intermediaries SHOULD retain padding for DATA frames; citations [1] and [2] state this directly, and [3] expresses the same requirement as “preserve.”\n2. The gold target says intermediaries MAY drop padding for HEADERS and PUSH_PROMISE frames; all three quoted passages support this.\n3. All non-trivial claims in the gold target are present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00093435,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

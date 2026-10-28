@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_151",
+  "prompt": "CSSFontFeatureValuesMap set method exception too many values",
+  "attempt": 1,
+  "answer": "`CSSFontFeatureValuesMap.set()` throws an `InvalidAccessError` when the supplied sequence contains more values than the associated feature block allows.\n\nExamples:\n\n```js\nrule.swash.set(\"toomany\", [1, 3]);          // Invalid: swash allows 1 value\nrule.characterVariant.set(\"toomany\", [3, 3, 4]); // Invalid: max 2 values\nrule.styleset.set(\"sitedefaults\", [3, 7, 13]);   // Valid\n```\n\nThe method accepts either a single value or an array of values. MDN documents the signature as `set(key, value)`, where `value` must be an integer matching the alternative font feature’s index. ([W3C](https://lists.w3.org/Archives/Public/www-style/2013Jul/0121.html), [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFeatureValuesMap/set))",
+  "num_citations": 10,
+  "citation_text_tokens": 3660,
+  "citation_text_chars": 14536,
+  "search_queries": [
+    "CSSFontFeatureValuesMap set method exception too many values"
+  ],
+  "model_cost_usd": 0.00164605,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5260,
+    "output_tokens": 276,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 69
+  },
+  "latency_ms": 4818.3542910264805,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00864605,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

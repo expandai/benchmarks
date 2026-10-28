@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_080",
+  "prompt": "R parser #line directive placement constraint vs C",
+  "attempt": 1,
+  "answer": "R is stricter than C:\n\n- **R:** `#line` must begin as the **first five characters of the line**—no indentation or other characters may precede it. Whitespace may occur between `#line` and the line number or filename. Any remaining text on that line is treated as a comment and ignored.  \n  — [R Language Definition, §10.5](https://rstudio.github.io/r-manuals/r-lang/Parser.html)\n\n- **C:** The `#` must be the first preprocessing token, but it may be preceded by whitespace (and, after comment replacement, comments). Horizontal whitespace may also occur between `#` and `line`; for example, an indented `#line` is valid. Non-whitespace text after the directive is not generally ignored—it may cause an error or alter the directive’s meaning.  \n  — [C preprocessing directives result](https://stackoverflow.com/questions/62631133/what-characters-are-valid-to-occur-before-and-after-a-preprocessing-directive-in)\n\nThus, R requires effectively:\n\n```text\n#line 10\n```\n\nwhereas C permits forms such as:\n\n```text\n    #line 10\n# line 10\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 3960,
+  "citation_text_chars": 17642,
+  "search_queries": [
+    "R parser #line directive placement constraint vs C"
+  ],
+  "model_cost_usd": 0.00173665,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5104,
+    "output_tokens": 384,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 125
+  },
+  "latency_ms": 5465.605541947298,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00573665,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

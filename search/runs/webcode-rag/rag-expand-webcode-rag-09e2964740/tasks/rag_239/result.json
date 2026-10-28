@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_239",
+  "prompt": "sed script maximum commands per script limit",
+  "attempt": 1,
+  "answer": "There is no universal `sed` script command limit; it depends on the implementation:\n\n- **Oracle `sed`**: maximum of **200 commands**; also a combined limit of **200 `-e` and `-f` arguments**.\n- **HP-UX `sed`**: maximum of **100 commands**.\n- **Digital UNIX `sed`**: maximum of **99 commands**.\n- **GNU `sed`**: no built-in command-count limit is stated; script size is limited mainly by available memory.\n\nFor portability, keep scripts below the lowest target limit or split them across multiple `sed` invocations.",
+  "num_citations": 10,
+  "citation_text_tokens": 7940,
+  "citation_text_chars": 33800,
+  "search_queries": [
+    "sed script maximum commands per script limit"
+  ],
+  "model_cost_usd": 0.00260925,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9396,
+    "output_tokens": 217,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 80
+  },
+  "latency_ms": 5397.5289589725435,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0046092500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

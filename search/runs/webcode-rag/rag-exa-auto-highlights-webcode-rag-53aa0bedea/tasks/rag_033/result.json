@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_033",
+  "prompt": "prometheus operator Route continue field first-level route override",
+  "attempt": 1,
+  "answer": "For a `Prometheus Operator` `AlertmanagerConfig`:\n\n- The first-level route’s `continue` value is overridden to `true`, even if the CRD specifies `continue: false`.\n- The operator does this in `continueToNextRoute.processRoute()` by setting `r.Continue = true`.\n- This causes alerts matching an `AlertmanagerConfig` route to continue to subsequent sibling routes, including routes from the main Alertmanager configuration. This can result in duplicate notifications.\n- Nested child routes retain the value specified in the configuration.\n- The root Alertmanager route itself cannot have `continue: true`; validation rejects it.\n\nThe operator’s API documentation describes this behavior as: \"`continue` ... will always be overridden to true for the first-level route by the Prometheus operator.\"\n\nA pull request proposed removing this override so users could control `continue`, but the provided results do not establish that the change was merged.",
+  "num_citations": 10,
+  "citation_text_tokens": 5377,
+  "citation_text_chars": 20989,
+  "search_queries": [
+    "prometheus operator Route continue field first-level route override"
+  ],
+  "model_cost_usd": 0.00216525,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6804,
+    "output_tokens": 387,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 195
+  },
+  "latency_ms": 6763.986625010148,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00916525,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

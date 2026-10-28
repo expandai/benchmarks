@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_116",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 282.7,
+    "total_citation_tokens": 2827.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that socket.sendfile() requires a SOCK_STREAM socket, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The cited passages explicitly state that socket.sendfile requires a SOCK_STREAM socket.\nStep 2 — The gold target answer is exactly SOCK_STREAM, and that requirement is directly present in the retrieved sources. No non-trivial factual claim is missing.\nStep 3 — Citations [1] and [3] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000652225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

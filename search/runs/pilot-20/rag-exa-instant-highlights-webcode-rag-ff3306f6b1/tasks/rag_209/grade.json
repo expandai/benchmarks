@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_209",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 568.9,
+    "total_citation_tokens": 5689.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that napi_type_tag_object returns napi_invalid_arg when the object is already tagged, exactly matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that attempting to tag an object that already has a type tag returns `napi_invalid_arg`.\nStep 2: The gold target answer contains this status, and the sources directly support it. There are no missing non-trivial claims.\nStep 3: Citations [1], [2], [7], and [8] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001066225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

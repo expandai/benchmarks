@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_127",
+ "prompt": "CSS quirky lengths functional notation calc exception",
+ "attempt": 1,
+ "answer": "In Quirks Mode, some properties that normally accept only `<length>` also accept a bare `<number>`, interpreting it as a pixel length.\n\n**Exception:** this quirk does not apply inside `calc()` or other math functions. Numbers inside the function remain `<number>` values; they are not converted to pixel lengths. However, a math function that resolves to a `<number>` may be accepted by a quirky-length property, with the final result interpreted as a pixel length.\n\nFor example:\n\n```css\n/* Bare number is interpreted as 2px in Quirks Mode */\nstroke-width: 2;\n\n/* The number inside calc() is not treated as a length */\nstroke-width: calc(2px * 2); /* length result: 4px */\n\n/* A calc() resolving to a number might be accepted in Quirks Mode */\nstroke-width: calc(2 * 2);   /* result may be interpreted as 4px */\n```\n\nThus, quirky-length handling does **not** propagate into `calc()`; only the function’s final result can trigger the quirk.",
+ "num_citations": 10,
+ "citation_text_tokens": 4664,
+ "citation_text_chars": 17388,
+ "search_queries": [
+  "CSS quirky lengths functional notation calc exception"
+ ],
+ "model_cost_usd": 0.00191685,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6036,
+  "output_tokens": 340,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 111
+ },
+ "latency_ms": 7081.381874973886,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00266685,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

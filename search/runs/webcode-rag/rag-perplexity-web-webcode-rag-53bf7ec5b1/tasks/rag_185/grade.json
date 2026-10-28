@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_185",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 384.0,
+    "total_citation_tokens": 3840.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that the valid range is 5 to 129 and that the value must be odd, matching the gold target. The examples are also valid.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states the constraint for the atadenoise `s` option: “Must be odd number in range [5, 129].”\nStep 2: The gold target answer is exactly this constraint, so every non-trivial factual claim is supported.\nStep 3: Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007771,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

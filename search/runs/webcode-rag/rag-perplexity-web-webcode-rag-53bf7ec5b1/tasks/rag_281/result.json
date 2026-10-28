@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_281",
+  "prompt": "automake per-target compilation flags object rename trigger condition",
+  "attempt": 1,
+  "answer": "Automake renames intermediate object files when **per-target compilation flags are used**. It does this for the target as soon as it detects such flags, without checking whether source files are actually shared.\n\nFor example:\n\n```make\ntrue_SOURCES = generic.c\ntrue_CPPFLAGS = -DEXIT_CODE=0\n\nfalse_SOURCES = generic.c\nfalse_CPPFLAGS = -DEXIT_CODE=1\n```\n\nproduces separate objects such as:\n\n```text\ntrue-generic.o\nfalse-generic.o\n```\n\nPer-target flags include `_CFLAGS`, `_CPPFLAGS`, `_CXXFLAGS`, `_FFLAGS`, `_OBJCFLAGS`, and the other language-specific target flag variables listed in the Automake manual. Global variables such as `AM_CPPFLAGS` alone do not trigger renaming. [`Renamed Objects`](https://www.gnu.org/software/automake/manual/1.16.5/html_node/Renamed-Objects.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 3859,
+  "citation_text_chars": 15946,
+  "search_queries": [
+    "automake per-target compilation flags object rename trigger condition"
+  ],
+  "model_cost_usd": 0.00156995,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4850,
+    "output_tokens": 298,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 98
+  },
+  "latency_ms": 3898.072791984305,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00656995,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

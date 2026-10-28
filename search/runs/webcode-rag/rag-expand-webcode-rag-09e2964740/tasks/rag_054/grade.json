@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_054",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 516.8,
+    "total_citation_tokens": 5168.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states a 64 KiB request-body limit and an additional 8 KiB for chunk headers when Transfer-Encoding: chunked is used, matching the gold target. The extra details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [3] directly state the 64Kb limit and the additional 8Kb for chunk headers when Transfer-Encoding: chunked is used. Citation [4] states the same figures using lowercase “k.”\nStep 2: The gold target's factual claims are all stated directly in the retrieved sources, so the answer is GROUNDED.\nStep 3: Citations [1], [2], [3], and [4] contain information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0010942249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

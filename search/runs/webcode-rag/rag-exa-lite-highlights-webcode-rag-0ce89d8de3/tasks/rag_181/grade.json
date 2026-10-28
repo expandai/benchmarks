@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 519.4,
+    "total_citation_tokens": 5194.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that `select_next_some()` returns actual items from `Some(item)` and does not yield a `None` item when the stream ends; instead, termination is handled separately. This captures the gold target’s key behavior of running the branch only for `Some(_)` values and ignoring `None`s. The additional details are consistent with that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says `select_next_some` runs a branch only for `Some(_)` stream values and ignores `None` values.\n2. Citation [1] states this behavior directly.\n3. All non-trivial information in the gold target is present in the retrieved citation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011571,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

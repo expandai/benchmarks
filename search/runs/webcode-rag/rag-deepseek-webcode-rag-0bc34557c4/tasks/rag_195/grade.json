@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 305.5,
+    "total_citation_tokens": 3055.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes the required obligation: the field block must be reassembled and decompressed even if it will be discarded or rejected, unless the connection is terminated. Its additional statement about a COMPRESSION_ERROR when the block is not decompressed is consistent with preserving the compression context and does not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation requires the receiver to reassemble and decompress a field block even when it will be discarded. 2. It further requires connection termination if the block is not decompressed. 3. This supports the gold answer’s obligation to process the field block to preserve consistent connection state, unless the connection is closed.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00114985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

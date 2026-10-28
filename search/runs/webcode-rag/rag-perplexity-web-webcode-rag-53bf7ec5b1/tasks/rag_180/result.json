@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_180",
+  "prompt": "coreutils chroot newroot identical old root directory behavior",
+  "attempt": 1,
+  "answer": "When `NEWROOT` is identical to the existing `/`, GNU Coreutils `chroot` avoids making the `chroot` system call. This is done for consistency with systems where an unprivileged user may use `chroot` in this case.\n\nIt still changes the working directory to `/` by default. Use `--skip-chdir` to retain the existing working directory; that option is permitted only when `NEWROOT` is the old `/` directory.",
+  "num_citations": 10,
+  "citation_text_tokens": 3720,
+  "citation_text_chars": 13565,
+  "search_queries": [
+    "coreutils chroot newroot identical old root directory behavior"
+  ],
+  "model_cost_usd": 0.0015563,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5093,
+    "output_tokens": 236,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 135
+  },
+  "latency_ms": 4418.422000017017,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065563,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

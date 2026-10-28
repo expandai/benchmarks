@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_155",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 614.0,
+    "total_citation_tokens": 6140.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives `http` as the valid middleware_type value, matching the gold target. The additional qualification does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] explicitly states that middleware_type must be http. 2. Citation [3] also shows FastAPI’s middleware decorator used with \"http\". 3. The retrieved citations therefore support the gold target answer, http.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011552250000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

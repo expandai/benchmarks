@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_282",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 539.3,
+    "total_citation_tokens": 5393.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `yypstate_delete` does nothing when passed a null pointer, matching the gold target. Its additional explanation is consistent with that behavior and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that yypstate_delete does nothing when passed a null pointer.\n2. Citation [1] explicitly states this behavior in the documentation and in the change description. Citation [2] also states it, and [5] shows the null-pointer guard in the implementation.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00102885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

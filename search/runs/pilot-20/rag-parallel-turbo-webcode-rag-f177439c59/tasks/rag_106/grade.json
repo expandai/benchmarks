@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 355.7,
+    "total_citation_tokens": 3557.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that overlapping masked.scatter stores are ordered from the least-significant vector element to the most-significant, explicitly describing lane 0 before lane 1. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state the ordering guarantee for scatter operations when addresses overlap. Step 2: This directly matches the gold target answer; no non-trivial factual claim is missing. Step 3: Citations [1], [3], and [5] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000764975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

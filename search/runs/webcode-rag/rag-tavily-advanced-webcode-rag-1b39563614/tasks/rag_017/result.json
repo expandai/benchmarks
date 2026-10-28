@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_017",
+  "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+  "attempt": 1,
+  "answer": "According to the current LLVM Language Reference, `llvm.sqrt` returns the same result as the corresponding `libm` `sqrt`, but without trapping or setting `errno`. For IEEE-754 types, its result matches a conforming `libm` implementation.[LLVM LangRef](https://llvm.org/docs/LangRef.html)\n\nFor a negative, nonzero argument:\n\n- **`libm sqrt`**: returns `NaN` and may raise a floating-point exception and/or set `errno`.[Julia discussion](https://discourse.julialang.org/t/fastest-sqrt-and-log-with-negative-check/107575)\n- **`llvm.sqrt`**: returns the corresponding `libm` result—therefore `NaN`—but does not trap or set `errno`, according to the LLVM documentation.\n- **`llvm.sqrt(-0.0)`**: an older LLVM RFC explicitly states that it returns `-0.0`.[LLVM RFC](https://discourse.llvm.org/t/rfc-how-to-fix-sqrt-vs-llvm-sqrt-optimization-asymmetry/29901)\n\nThe older 2013 RFC described negative inputs other than `-0.0` as having undefined behavior, so that statement reflects historical LLVM semantics rather than the current Language Reference wording.",
+  "num_citations": 10,
+  "citation_text_tokens": 5269,
+  "citation_text_chars": 19493,
+  "search_queries": [
+    "LLVM llvm.sqrt negative number behavior vs libm"
+  ],
+  "model_cost_usd": 0.00215955,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6546,
+    "output_tokens": 436,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 163
+  },
+  "latency_ms": 11005.25674992241,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01815955,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_063",
+  "prompt": "emacs calc rewrite apply pattern plus operator internal name",
+  "attempt": 1,
+  "answer": "In Emacs Calc rewrite patterns, use:\n\n```calc\napply(f, args)\n```\n\nFor the `+` operator, Calc’s internal function name is `add`. Thus:\n\n```calc\napply(quote(add), [a,b])\n```\n\nmatches `a + b`.\n\nTo match any function call, including `+`:\n\n```calc\napply(f, x)\n```\n\nFor `a + b`, this binds:\n\n```calc\nf = add\nx = [a,b]\n```\n\nCalc also treats `-`, `*`, etc. as function calls with internal names such as `sub`, `mul`, `div`, `pow`, and `neg`.",
+  "num_citations": 10,
+  "citation_text_tokens": 5600,
+  "citation_text_chars": 19999,
+  "search_queries": [
+    "emacs calc rewrite apply pattern plus operator internal name"
+  ],
+  "model_cost_usd": 0.0019865,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6761,
+    "output_tokens": 247,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 104
+  },
+  "latency_ms": 5128.78470798023,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059865000000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

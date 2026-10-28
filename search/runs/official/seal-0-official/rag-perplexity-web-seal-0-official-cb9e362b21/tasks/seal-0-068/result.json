@@ -1,0 +1,45 @@
+{
+  "task_id": "seal-0-068",
+  "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+  "attempt": 1,
+  "answer": "This statement is based on the **Central Limit Theorem (CLT)**—with an important correction:\n\nThe CLT says that if \\(X_1,\\ldots,X_n\\) are i.i.d. random variables with finite mean \\(\\mu\\) and variance \\(\\sigma^2\\), then the **sample mean**\n\n\\[\n\\bar X=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nbecomes approximately normally distributed as \\(n\\) increases:\n\n\\[\n\\bar X \\approx N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]\n\nEquivalently, the standardized mean converges to a standard normal distribution:\n\n\\[\n\\frac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\xrightarrow{d}N(0,1).\n\\]\n\nThe individual sampled variables \\(X_i\\) do **not** become normally distributed; their distribution remains the original population distribution. The **Law of Large Numbers** instead states that \\(\\bar X\\) gets closer to \\(\\mu\\) as \\(n\\) increases.",
+  "num_citations": 10,
+  "citation_text_tokens": 3829,
+  "citation_text_chars": 16136,
+  "search_queries": [
+    "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?"
+  ],
+  "query_clipped": false,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search-high-reasoning",
+    "reasoning_effort": "high",
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 28, 2026"
+  },
+  "model_cost_usd": 0.00167685,
+  "search_cost_usd": 0.005,
+  "total_cost_usd": 0.00667685,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4380,
+    "output_tokens": 485,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 249
+  },
+  "latency_ms": 6360.047790920362,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

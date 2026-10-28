@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_168",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 514.5,
+    "total_citation_tokens": 5145.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target statement that only spaces are rejected under the documented behavior, but it also says newer Node.js behavior rejects additional characters. That conflicts with the target's claim that only spaces are rejected.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that only spaces are rejected in a Node.js http.request path.\n2. Citations [1] and [3] explicitly state that currently only spaces are rejected.\n3. The retrieved citations therefore contain the full non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00106785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

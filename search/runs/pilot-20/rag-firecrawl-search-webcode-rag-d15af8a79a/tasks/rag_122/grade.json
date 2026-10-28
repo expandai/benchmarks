@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 55.2,
+    "total_citation_tokens": 552.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that explicit register operands must appear at the end of the operand list, matching the gold target. Its additional claim about not referencing them by placeholders is also consistent with Rust’s asm! rules.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citation states that explicit register operands must be at the end of the operand list. This supports the gold answer that they appear after the other operands. The named-arguments qualification is consistent with that ordering requirement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000488225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

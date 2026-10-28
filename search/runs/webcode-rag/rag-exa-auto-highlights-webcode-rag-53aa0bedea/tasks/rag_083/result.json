@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_083",
+  "prompt": "Spring SockJS sessionCookieNeeded false IE 8 9 transport",
+  "attempt": 1,
+  "answer": "In IE 8 and 9:\n\n- `sessionCookieNeeded(true)` (the default) makes SockJS prefer an iframe-based transport such as `iframe-htmlfile`, because `XDomainRequest` does not send cookies.\n- `sessionCookieNeeded(false)` tells SockJS that cookies and the HTTP session are unnecessary, so it should choose `xdr-streaming`.\n- With `false`, the `JSESSIONID` cookie is not available. Do not use it if authentication, HTTP sessions, or sticky-session load balancing depend on cookies.\n\n```java\nregistry.addEndpoint(\"/endpoint\")\n        .withSockJS()\n        .setSessionCookieNeeded(false);\n```\n\nIf iframe transport fails, check `X-Frame-Options`: it must allow `SAMEORIGIN` or `ALLOW-FROM`, rather than `DENY`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4451,
+  "citation_text_chars": 19993,
+  "search_queries": [
+    "Spring SockJS sessionCookieNeeded false IE 8 9 transport"
+  ],
+  "model_cost_usd": 0.0017128,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5695,
+    "output_tokens": 241,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 67
+  },
+  "latency_ms": 5163.752249907702,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0087128,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

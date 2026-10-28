@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_135",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.9,
+    "avg_citation_tokens": 855.1,
+    "total_citation_tokens": 8551.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies write-barrier activity as excluded, matching the gold target. Its additional statement does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: The citations explicitly state that GCCPUFraction excludes CPU time used for write barrier activity.\nStep 2 — Groundedness: The gold target is “write barrier activity,” and this excluded activity is directly identified in the sources. The target’s non-trivial information is fully supported.\nStep 3 — Source attribution: Citations [1], [3], [4], [5], [6], [7], [8], [9], and [10] contain the relevant statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 9
+  },
+  "judge_cost_usd": 0.0016206,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

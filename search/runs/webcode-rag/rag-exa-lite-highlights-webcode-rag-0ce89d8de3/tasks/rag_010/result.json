@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_010",
+  "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+  "attempt": 1,
+  "answer": "- **DATA padding:** Intermediaries **SHOULD maintain** the padding.\n- **HEADERS and PUSH_PROMISE padding:** Intermediaries **MAY pass it through, re-pad it, or drop it**.\n\nThe distinction is that padding on HEADERS and PUSH_PROMISE is on non-flow-controlled frames and can block other streams on a multiplexed connection, similarly to large header blocks. Padding on DATA frames is flow-controlled. (HTTP/2 issue #505)",
+  "num_citations": 10,
+  "citation_text_tokens": 4754,
+  "citation_text_chars": 20668,
+  "search_queries": [
+    "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+  ],
+  "model_cost_usd": 0.00191325,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6084,
+    "output_tokens": 327,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 224
+  },
+  "latency_ms": 6274.435375002213,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00591325,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

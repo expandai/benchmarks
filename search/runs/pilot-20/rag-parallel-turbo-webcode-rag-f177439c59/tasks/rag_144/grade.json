@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 583.2,
+    "total_citation_tokens": 5832.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that Prisma's increment, decrement, multiply, and divide operations do not update a field when it is null, matching the gold target. The additional explanation and example do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [2] directly states how atomic increment and decrement behave when the field is null, and also names multiply and divide.\nStep 2 — The gold target’s complete factual claim is explicitly present in the retrieved citation, with no unsupported additions. Therefore, the answer is grounded.\nStep 3 — Citation [2] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00103285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_167",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.7,
+    "avg_citation_tokens": 406.4,
+    "total_citation_tokens": 4064.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `tag.sourcepos` as the zero-based position of the final `>` of the opening tag, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the position reference is the final greater-than sign. Citation [1] explicitly says that html5lib's sourcepos returns the position of the final greater-than sign, directly supporting the target. No additional non-trivial claims are present.",
+    "judge_cost_known": true,
+    "num_answer_sources": 7
+  },
+  "judge_cost_usd": 0.000868975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

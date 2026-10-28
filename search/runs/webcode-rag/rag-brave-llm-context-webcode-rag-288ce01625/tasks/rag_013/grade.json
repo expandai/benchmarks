@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 702.0,
+    "total_citation_tokens": 7020.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies 501 and 505 as the excluded 5xx status codes, matching the gold target. The additional information does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly say that the source-address HTTP failure counter includes 5xx status codes other than 501 and 505. Step 2: This directly supports the gold target’s claim that 501 and 505 are excluded; no additional non-trivial claims are in the target. Step 3: Citations [1] and [3] provide the relevant counter behavior, with [3] specifically describing the source-address counter.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00130335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_281",
+  "prompt": "automake per-target compilation flags object rename trigger condition",
+  "attempt": 1,
+  "answer": "Automake renames intermediate object files whenever it detects **per-target compilation flags**, not only when a source is actually shared between targets.\n\nPer-target flags include:\n\n`_CCASFLAGS`, `_CFLAGS`, `_CPPFLAGS`, `_CXXFLAGS`, `_FFLAGS`, `_GCJFLAGS`, `_LFLAGS`, `_OBJCFLAGS`, `_OBJCXXFLAGS`, `_RFLAGS`, `_UPCFLAGS`, and `_YFLAGS`.\n\nFor example:\n\n```make\nbin_PROGRAMS = true false\n\ntrue_SOURCES = generic.c\ntrue_CPPFLAGS = -DEXIT_CODE=0\n\nfalse_SOURCES = generic.c\nfalse_CPPFLAGS = -DEXIT_CODE=1\n```\n\nAutomake produces separate objects such as:\n\n```text\ntrue-generic.o\nfalse-generic.o\n```\n\nIt does not check whether sources are actually shared; it renames **all objects for a target** once per-target compilation flags are used. Without such flags, objects may be shared, for example `version.o`.\n\nThe resulting name can also be affected by the target’s `_SHORTNAME` variable.",
+  "num_citations": 10,
+  "citation_text_tokens": 5176,
+  "citation_text_chars": 21220,
+  "search_queries": [
+    "automake per-target compilation flags object rename trigger condition"
+  ],
+  "model_cost_usd": 0.00183525,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6252,
+    "output_tokens": 227,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6503.904875018634,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00383525,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_168",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 554.5,
+    "total_citation_tokens": 5545.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that only spaces are rejected. The predicted answer claims that many other characters, including control characters and characters above U+00FF, are also rejected, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target says the rejected illegal characters are “only spaces.” 2. Citation [6] explicitly says control characters, as well as spaces, generate `ERR_UNESCAPED_CHARACTERS`; citation [5] also names CRLF, carriage return, newline, and null as rejected path values. 3. The retrieved sources therefore do not support the claim that only spaces are rejected; they provide evidence against it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011921000000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

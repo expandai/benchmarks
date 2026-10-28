@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_305",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 406.4,
+    "total_citation_tokens": 4064.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer correctly identifies Hans and Hant as ISO 15924 script codes for Simplified and Traditional Chinese, respectively. Both are included in the gold target’s set of accepted codes, so the answer provides valid target information without contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations identify Hans and Hant as ISO script codes, and mention Hani in the `ko-Hani` tag. They do not provide the full list in the gold target.\nStep 2 — The gold target also includes Hanb and Bopo, which are not supported by the retrieved passages. Because these are specific factual claims missing from the citations, the answer is UNGROUNDED.\nStep 3 — No citation, alone or in combination, contains sufficient information to derive the complete gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010636,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

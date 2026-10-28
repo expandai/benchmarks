@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_249",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 513.5,
+    "total_citation_tokens": 5135.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that HashMap is not randomized on the wasm32-unknown-unknown target, matching the gold target. Its added explanation about deterministic behavior does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [3], and [4] directly state that HashMaps on the `wasm32-unknown-unknown` target are not randomized like on other platforms.\nStep 2: This directly supports the gold target answer, with no additional non-trivial claims missing.\nStep 3: Citations [1], [3], and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00103685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

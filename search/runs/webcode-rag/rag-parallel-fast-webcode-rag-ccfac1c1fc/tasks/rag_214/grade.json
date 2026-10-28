@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_214",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 220.0,
+    "total_citation_tokens": 2200.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `cargo install` builds remote crates in a temporary target directory by default, matching the gold target's temporary folder in the platform's temporary directory. The additional information about overriding the target directory and choosing the crate source does not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that for crates.io or `--git` installs, Cargo builds in a temporary target directory by default.\n2. The gold answer additionally specifies that this is a new temporary folder located in the platform’s temporary directory.\n3. The retrieved passages do not state that location or establish that the target directory is a newly created folder in the platform’s temporary directory. Therefore, a non-trivial detail in the gold answer is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00083335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

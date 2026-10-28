@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 246.0,
+    "total_citation_tokens": 2460.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer describes other TLS passthrough restrictions but does not say that passthrough is incompatible with httpHeader actions. It does not contradict the gold target, but it omits the requested information.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe a restriction on combining passthrough termination with insecureEdgeTerminationPolicy: Allow, and a restriction concerning route paths.\n2. None of the retrieved passages mention httpHeader actions or state that passthrough termination is incompatible with them.\n3. The gold target’s specific compatibility claim is therefore unsupported by the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007756,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

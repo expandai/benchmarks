@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 434.2,
+    "total_citation_tokens": 4342.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says tokens are regenerated only on session upgrades. The prediction lists several other regeneration conditions, including missing or malformed tokens and successful unsafe requests, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support that a session upgrade invalidates the existing session-bound token and causes regeneration. 2. However, the gold answer says tokens are regenerated *only* on session upgrades. Citation [2] gives other regeneration conditions: token expiration and successful unsafe interactions; it also generates a token when the session has no usable stored token. 3. Therefore, the session-upgrade condition is supported, but the exclusivity claim is not and is contradicted by the retrieved source. The gold target is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001160475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

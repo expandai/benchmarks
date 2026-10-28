@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_192",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 123.7,
+    "total_citation_tokens": 1237.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that setting the conditional edges limit to zero results in no annotation, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state the behavior for a value of 0: it means no annotation.\nStep 2: The gold target answer is “no annotation,” and this claim is directly supported by the retrieved sources. No additional non-trivial claims are included.\nStep 3: Citations [1], [2], and [3] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00046110000000000004,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

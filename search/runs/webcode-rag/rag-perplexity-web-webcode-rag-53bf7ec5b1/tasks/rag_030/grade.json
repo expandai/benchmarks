@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_030",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 276.9,
+    "total_citation_tokens": 2769.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies `let` as the string whose presence in the BoundNames causes the Syntax Error, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that a Syntax Error occurs if the BoundNames of ForDeclaration contains the string \"let\". Step 2: This directly supports the gold target answer, \"let\". No non-trivial claim is missing. Step 3: Citations [1], [8], and [10] contain the relevant rule.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0007180999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

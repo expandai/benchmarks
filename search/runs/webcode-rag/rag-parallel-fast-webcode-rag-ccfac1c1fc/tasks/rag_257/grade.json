@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 194.9,
+    "total_citation_tokens": 1949.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a fixed formula of 3N + 1, where N is the number of entity classes. The predicted answer instead makes the multiplier depend on m, the number of revision types involved, so it can give a different query count when m is not 3. Its example only matches the gold formula when m happens to equal 3.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [4] directly associates `findEntitiesGroupByRevisionType` with `3n+1` SQL queries.\n2. It defines `n` as the number of different entity classes modified in the revision, matching the gold answer’s `N` (capitalization only differs).\n3. Therefore, all non-trivial information in the gold target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009540999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

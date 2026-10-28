@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_149",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 232.6,
+    "total_citation_tokens": 2326.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the maximum as 255 characters, matching the gold target. Its added clarification that this is less than 256 is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is that the maximum limit is 255 characters. The retrieved sources state that n should not exceed 255 (and one describes the pO parameter as less than 256 bytes), which supports that limit. No non-trivial factual claim in the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0006041,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

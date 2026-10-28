@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_168",
+  "prompt": "node http.request path illegal characters which rejected",
+  "attempt": 1,
+  "answer": "`http.request()` rejects path characters outside the range `\\u0021–\\u00ff` (printable Latin-1), using:\n\n```js\n/[^\\\\u0021-\\\\u00ff]/\n```\n\nTherefore, rejected characters include:\n\n- Spaces (` `)\n- Control characters, including carriage return (`\\r`) and line feed (`\\n`)\n- Tabs and other characters below `\\u0021`\n- Unicode characters above `\\u00ff`, including two-byte characters\n\nThe resulting error is:\n\n```text\nTypeError [ERR_UNESCAPED_CHARACTERS]:\nRequest path contains unescaped characters\n```\n\nEscape special characters such as spaces, `&`, and `?` when constructing the URI, using `encodeURI()` or `encodeURIComponent()`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4413,
+  "citation_text_chars": 16264,
+  "search_queries": [
+    "node http request path illegal characters which rejected"
+  ],
+  "model_cost_usd": 0.0017391,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5733,
+    "output_tokens": 255,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 86
+  },
+  "latency_ms": 5376.895749941468,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0067391,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

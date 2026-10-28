@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 392.2,
+    "total_citation_tokens": 3922.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `server.undertow.options.server.record-request-start-time=true` as the required prerequisite for using `%D`, and its YAML expresses the same property.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] show that Undertow’s `record-request-start-time` option is set to `true`, under `options.server`, and say this is required when `%D` is included in the access log pattern.\nStep 2: The gold target is the equivalent fully qualified configuration property, `server.undertow.options.server.record-request-start-time=true`. The sources contain the necessary setting and prerequisite, so all non-trivial information is supported.\nStep 3: Citations [1] and [2] contain the configuration and its relation to `%D`.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000898975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

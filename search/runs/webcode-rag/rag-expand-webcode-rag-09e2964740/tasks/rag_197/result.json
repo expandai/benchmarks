@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_197",
+  "prompt": "wget time-stamping Content-Length size mismatch behavior",
+  "attempt": 1,
+  "answer": "With `wget --timestamping` (`-N`), Wget compares the local file with the remote file using both timestamps and size:\n\n- If no local file exists, it downloads the remote file.\n- If the `Content-Length` differs, it downloads the remote file regardless of timestamps.\n- If sizes match, it uses `Last-Modified`: it downloads only when the remote file is newer; otherwise it skips the download.\n- For HTTP, Wget obtains the remote metadata with a `HEAD` request.\n\nWith `-c` (`--continue`), the behavior is different:\n\n- Remote size equal to local size: Wget refuses to download.\n- Remote size smaller than local: no download occurs.\n- Remote size larger than local: Wget treats the local file as incomplete and appends `remote_size - local_size` bytes.\n\nThe manual also notes that bogus `Content-Length` headers can cause repeated retries; `--ignore-length` makes Wget disregard that header.\n\nA reported Wget 1.16.3 issue showed that, with `-N -c`, an HTTP `304 Not Modified` response could cause Wget to skip downloading even when the local file was larger than the remote file. With `--no-if-modified-since`, the server instead returned `416`, which Wget reported as “already fully retrieved.”",
+  "num_citations": 10,
+  "citation_text_tokens": 5540,
+  "citation_text_chars": 21644,
+  "search_queries": [
+    "wget time-stamping Content-Length size mismatch behavior"
+  ],
+  "model_cost_usd": 0.00217975,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6694,
+    "output_tokens": 422,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 142
+  },
+  "latency_ms": 5754.625000059605,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0041797499999999994,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

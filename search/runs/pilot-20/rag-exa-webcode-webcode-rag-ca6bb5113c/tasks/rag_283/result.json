@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_283",
+ "prompt": "pytest PYTEST_ADDOPTS environment variable parsing method",
+ "attempt": 1,
+ "answer": "pytest parses `PYTEST_ADDOPTS` using `shlex.split()`:\n\n```python\nenv_addopts = os.environ.get(\"PYTEST_ADDOPTS\", \"\")\nif len(env_addopts):\n    args[:] = (\n        self._validate_args(shlex.split(env_addopts), \"via PYTEST_ADDOPTS\")\n        + args\n    )\n```\n\nThus, the environment-variable contents are tokenized with `shlex.split`, validated, and prepended to the regular command-line arguments. The effective order is:\n\n```text\n<pytest.ini:addopts> $PYTEST_ADDOPTS <extra command-line arguments>\n```\n\nBecause `shlex` parses backslashes, full Windows paths containing `\\` may be parsed incorrectly.",
+ "num_citations": 10,
+ "citation_text_tokens": 2961,
+ "citation_text_chars": 11275,
+ "search_queries": [
+  "pytest PYTEST_ADDOPTS environment variable parsing method"
+ ],
+ "model_cost_usd": 0.0013346,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4259,
+  "output_tokens": 225,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 70
+ },
+ "latency_ms": 11143.653834005818,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008334600000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

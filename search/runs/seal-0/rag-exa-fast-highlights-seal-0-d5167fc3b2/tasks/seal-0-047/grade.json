@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-047",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 427.2,
+    "total_citation_tokens": 4272.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 6, while the prediction is 7, so the numeric answer contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] lists maximum masses for the ten heaviest living animals. Six listed maxima exceed 60 tonnes: 190, 120, 110, 120, 120, and 110. The remaining listed maxima are 57 tonnes or less, so the table supports a count of six. Step 2: The gold answer is fully derivable from [2], so it is grounded. However, citation [1] gives a conflicting maximum mass of 80 tonnes for the sperm whale, which would produce a count of seven if used with the rest of that table. This conflict does not remove the explicit support for six in [2].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00136248,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

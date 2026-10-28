@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_232",
+  "prompt": "hpx::future destructor blocking behavior vs std::future",
+  "attempt": 1,
+  "answer": "`hpx::future` and `std::future` differ as follows:\n\n- **`hpx::future`**: Its destructor **never blocks**, even if the asynchronous operation has not completed.\n- **`std::future` returned by `std::async`**: Its destructor **must block** if the future is the last reference to an unfinished shared state.\n\nBoth may block when explicitly calling `get()` if the result is not ready.",
+  "num_citations": 10,
+  "citation_text_tokens": 3868,
+  "citation_text_chars": 16961,
+  "search_queries": [
+    "hpx::future destructor blocking behavior vs std::future"
+  ],
+  "model_cost_usd": 0.00135855,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4974,
+    "output_tokens": 96,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2951.8678749445826,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00635855,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

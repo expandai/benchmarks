@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_130",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 445.8,
+    "total_citation_tokens": 4458.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states the gold-target behavior: a zero-length Idempotency-Key makes the request idempotent for Transport retry purposes, while the header is not sent on the wire. Its additional qualifications do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states both parts of the gold target: a zero-length Idempotency-Key value makes the request idempotent, and the header is not sent on the wire. Step 2: The retrieved source contains all non-trivial information in the gold target, so the answer is GROUNDED. Step 3: Citation [1] alone is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009278499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

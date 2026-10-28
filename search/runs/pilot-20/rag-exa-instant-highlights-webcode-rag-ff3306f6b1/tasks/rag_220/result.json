@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_220",
+ "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+ "attempt": 1,
+ "answer": "In the stable aiohttp implementation, calling:\n\n```python\nform.add_field(\"field\", b\"value\")\n```\n\nwith no `filename` and no `content_transfer_encoding`:\n\n- emits a `DeprecationWarning`;\n- uses the field name (`\"field\"`) as the filename;\n- creates a multipart file field.\n\nThe warning says that in v4, passing raw `bytes` will no longer create a file field. Explicitly provide a filename or use `io.BytesIO` instead:\n\n```python\nform.add_field(\"field\", b\"value\", filename=\"data.bin\")\n# or\nform.add_field(\"field\", io.BytesIO(b\"value\"))\n```\n\nThe latest source shown no longer applies the `filename = name` fallback for bytes.",
+ "num_citations": 10,
+ "citation_text_tokens": 4311,
+ "citation_text_chars": 18190,
+ "search_queries": [
+  "aiohttp FormData add_field bytes value no filename fallback"
+ ],
+ "model_cost_usd": 0.0017138,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5651,
+  "output_tokens": 251,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 93
+ },
+ "latency_ms": 3956.201290944591,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0057138,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

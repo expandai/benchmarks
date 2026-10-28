@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 223.8,
+    "total_citation_tokens": 2238.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the target value, <CACHE>, or any contradictory factual claim.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target is the specific log replacement `<CACHE>`.\n2. None of the retrieved citations states that HAProxy logs `<CACHE>` as the server name when an object is served from cache. Citation [1] has a title referring to the situation but does not provide the replacement value. Citations [3]–[5] discuss logging server names from the stream interface, but do not connect cache-served objects to `<CACHE>`.\n3. Since the specific value in the gold target is not supported by the retrieved citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007156,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 299.8,
+    "total_citation_tokens": 2998.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the maximum input length as 200 characters, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The target answer states that the maximum input length is 200 characters.\n2. Citation [1] labels the limit as the “maximum length of a numeral” and sets L_MAXLENNUM to 200; its buffer includes one additional byte for the terminating null character.\n3. Citation [6] independently gives the same maximum-length definition and value.\n4. The citations therefore support the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000764725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

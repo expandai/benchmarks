@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-080",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 594.9,
+    "total_citation_tokens": 5949.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target says no square number is prime, so no such sum exists. The predicted answer incorrectly treats 4 as a prime number.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] gives examples of positive perfect squares and a definition of a prime number.\n2. It does not state or establish that every perfect square fails to be prime. In particular, the cited examples alone do not cover all squares; deriving the general claim requires an additional argument about the divisors of any square.\n3. Therefore, the retrieved citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00144348,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

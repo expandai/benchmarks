@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_014",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 391.4,
+    "total_citation_tokens": 3914.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no information about the number of queries pipelined on the same connections. It does not contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] establishes that HAProxy supports DNS resolution over TCP and describes TCP as connection-oriented.\n2. None of the citations state that four DNS queries are pipelined, or that they are sent on the same connections.\n3. The specific number and pipelining behavior in the gold target are non-trivial claims and are not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008342250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

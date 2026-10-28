@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 391.3,
+    "total_citation_tokens": 3913.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that stencil sampling returns the stencil value in the first component and unspecified values in the remaining three components, matching the gold target (V, X, X, X).",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer states that sampling returns a four-component value with the stencil value in the first component and implementation-defined unspecified values in the remaining components.\n2. Citation [1] explicitly gives that return form and defines S and X accordingly.\n3. The retrieved citation therefore contains the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000948975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

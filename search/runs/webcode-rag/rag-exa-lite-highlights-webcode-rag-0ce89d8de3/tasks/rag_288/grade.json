@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_288",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 389.0,
+    "total_citation_tokens": 3890.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `[64dec-fail]` as curl’s output when `64dec` cannot decode invalid Base64, matching the gold target. The additional examples and explanation do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the exact failure output `[64dec-fail]` for an invalid Base64 decode.\n2. Citation [1] states that invalid Base64 input makes `64dec` return `64dec-fail`; citation [2] shows the bracketed output in a test, and citation [3] explicitly gives the bracketed failure string.\n3. The citations establish the gold target without any missing non-trivial details.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009327249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

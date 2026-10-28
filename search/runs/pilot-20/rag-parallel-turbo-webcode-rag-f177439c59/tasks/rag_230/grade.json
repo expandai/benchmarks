@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_230",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 402.8,
+    "total_citation_tokens": 4028.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not attempt to identify the excluded symbol, nor does it contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation says that read-positioning-symbols converts each symbol occurrence into a symbol-with-position object.\n2. No retrieved citation says that nil is excluded from positioning, or that it is excluded for efficiency reasons.\n3. Since the gold answer’s specific excluded symbol and reason are not supported by the citations, a non-trivial claim is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008625999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

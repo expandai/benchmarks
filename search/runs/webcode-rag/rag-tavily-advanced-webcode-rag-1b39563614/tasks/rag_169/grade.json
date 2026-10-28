@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_169",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 422.1,
+    "total_citation_tokens": 4221.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The question asks for the OpenOCD config file name, and the gold target is `stm32f429disc1.cfg`. The response does not provide that name; it instead gives a different configuration snippet referencing `target/stm32f4x.cfg`, so it does not answer the requested file name.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations connect the STM32F407G-DISC1 with STLINK/V2.1 and identify a configuration using the `stlink-v2-1.cfg` interface file. However, none names `stm32f429disc1.cfg`. That specific filename is a non-trivial factual claim in the gold target and cannot be derived from the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012861,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

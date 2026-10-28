@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_267",
+ "prompt": "sphinx texinfo_documents multiple authors separator markup",
+ "attempt": 1,
+ "answer": "For `texinfo_documents`, use plain text in the author field, separating authors with `and`, for example:\n\n```python\ntexinfo_documents = [\n    (\n        \"index\",\n        \"manual\",\n        \"Manual title\",\n        \"Jane Smith and John Doe\",\n        \"manual\",\n        \"Description\",\n        \"Miscellaneous\",\n    ),\n]\n```\n\nTexinfo also supports placing authors on separate lines with multiple `@author` commands, but the Sphinx search results do not specify a special Sphinx markup or separator syntax for generating that form. The `author` value is passed directly to the Texinfo writer.",
+ "num_citations": 10,
+ "citation_text_tokens": 5196,
+ "citation_text_chars": 20637,
+ "search_queries": [
+  "sphinx texinfo_documents multiple authors separator markup"
+ ],
+ "model_cost_usd": 0.0020314,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6547,
+  "output_tokens": 329,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 198
+ },
+ "latency_ms": 5753.443708992563,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0090314,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

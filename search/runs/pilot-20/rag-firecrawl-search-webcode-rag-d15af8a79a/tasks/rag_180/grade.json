@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_180",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 28.9,
+    "total_citation_tokens": 289.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the gold information that coreutils chroot avoids the chroot system call when the new root is identical to the old root. It also does not contradict that information, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that coreutils avoids the chroot system call when newroot is identical to the old root directory.\n2. The citations describe chroot’s general behavior, but none states what coreutils does when those directories are identical or that it avoids the system call in that case.\n3. This specific factual claim is not supported by the retrieved citations, so the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000413225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

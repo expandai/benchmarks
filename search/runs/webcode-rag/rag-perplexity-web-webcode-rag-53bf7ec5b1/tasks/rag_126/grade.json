@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_126",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 399.1,
+    "total_citation_tokens": 3991.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that all protocol-violating EOF conditions on an SSLObject are reported by raising SSLEOFError, matching the gold target. The additional comparison to SSLSocket does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that protocol-violating EOF conditions on SSLObject are reported through SSLEOFError.\n2. Citations [2]–[8] explicitly state this behavior in English, including that SSLObject does not handle suppress_ragged_eofs.\n3. Citations [9] and [10] state the same behavior in Korean and Chinese, respectively.\n4. The gold target’s factual claim is directly supported, so the answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.001091725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

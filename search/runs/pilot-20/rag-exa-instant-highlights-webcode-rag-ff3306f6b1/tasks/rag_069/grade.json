@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 356.1,
+    "total_citation_tokens": 3561.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that setting allow_alias when all enum values have distinct numbers is an error. The predicted answer says the enum compiles normally and the option has no effect, directly contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations describe what happens when enum values are duplicated: aliases require `allow_alias`, and without it a warning or rejection may occur. They do not say that setting `allow_alias` when all enum values are distinct causes an error. Therefore, the specific claim in the gold target is not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000922475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

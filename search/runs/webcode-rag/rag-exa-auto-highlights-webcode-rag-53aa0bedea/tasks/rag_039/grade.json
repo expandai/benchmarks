@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_039",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 419.5,
+    "total_citation_tokens": 4195.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes all three databases in the gold target, but it also claims PostgreSQL supports stored-function metadata lookup. The target’s supported-database list is MySQL, Microsoft SQL Server, and Oracle, so the extra database claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [3], [5], and [8] explicitly identify MySQL, Microsoft SQL Server, and Oracle as databases with stored-function metadata lookup support.\nStep 2: Each database named in the gold target appears in the retrieved sources, and the sources present the same three-database list. The gold target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0014165999999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

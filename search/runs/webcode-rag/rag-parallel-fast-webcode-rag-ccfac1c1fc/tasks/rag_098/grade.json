@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 248.3,
+    "total_citation_tokens": 2483.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum input length of 200 characters. The predicted answer instead says there is no documented maximum and that practical limits are implementation-dependent, so it does not provide the target and conflicts with it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations mention a maximum size for a formatted item and a general maximum field width, but neither states that Lua's `file:read(\"n\")` accepts a maximum of 200 characters.\nStep 2 — The specific claim “200 characters” is not established by the retrieved passages. Because this is a non-trivial numeric claim, the gold target is ungrounded.\nStep 3 — No citation contains enough information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008906,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

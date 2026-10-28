@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_009",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 374.5,
+    "total_citation_tokens": 3745.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all four attributes in the gold target—name, align, hspace, and vspace—and adds no contradictory information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the four namespace-less embed attributes excluded from being passed as plugin parameters.\n2. Citation [1] explicitly names `name`, `align`, `hspace`, and `vspace` as the exceptions to the attributes passed as plugin parameters, and confirms that these four exceptions are legacy attributes.\n3. Thus, every non-trivial fact in the gold target is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000901475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

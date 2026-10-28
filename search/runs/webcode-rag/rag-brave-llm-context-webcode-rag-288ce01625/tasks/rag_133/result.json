@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_133",
+  "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+  "attempt": 1,
+  "answer": "`applyConstraints()` rejecting on a WebRTC remote `MediaStreamTrack` is expected behavior.\n\nThe WebRTC specification states that for remote tracks:\n\n- `getCapabilities()` must return an empty set.\n- `applyConstraints()` must always reject with an `OverconstrainedError` for the defined constraints.\n\nTherefore, constraints such as resolution or frame rate cannot be applied directly to a received remote track using `track.applyConstraints()`. For locally sourced tracks, unsatisfiable mandatory constraints also reject with `OverconstrainedError`; constraints using `min`, `max`, or `exact` are mandatory.",
+  "num_citations": 10,
+  "citation_text_tokens": 3243,
+  "citation_text_chars": 14740,
+  "search_queries": [
+    "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+  ],
+  "model_cost_usd": 0.0013827,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4437,
+    "output_tokens": 228,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 102
+  },
+  "latency_ms": 5850.104375043884,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063827,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

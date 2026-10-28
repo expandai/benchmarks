@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "`display: contents` should not prevent `::before` or `::after` from generating boxes. The CSS Display specification says that the element’s own box is removed, while its children and pseudo-elements—including `::before` and `::after`—continue to generate boxes normally.\n\n```css\n.wrapper {\n  display: contents;\n}\n\n.wrapper::before {\n  content: \"Before\";\n  display: block;\n}\n```\n\nIf the pseudo-element is not generating a box, check that:\n\n- It has a non-`normal` `content` value. `content` is supported for `::before` and `::after`; some elements, such as inputs, do not support these pseudo-elements.\n- You are not using a pseudo-element such as `::marker` or `::first-line`, where `display` does not apply or only a limited set of properties is allowed.\n- The browser is not exhibiting an implementation bug. The search results specifically note inconsistent browser behavior for `display: contents` on pseudo-elements, including a known Gecko issue and older implementation problems.\n\nThus, for `::before` and `::after`, the expected behavior is that their boxes are generated even when the originating element has `display: contents`; failure to do so is likely a browser limitation or a missing `content` declaration.",
+ "num_citations": 10,
+ "citation_text_tokens": 4265,
+ "citation_text_chars": 20133,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.0019139,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5453,
+  "output_tokens": 459,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 186
+ },
+ "latency_ms": 5325.268083950505,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089139,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

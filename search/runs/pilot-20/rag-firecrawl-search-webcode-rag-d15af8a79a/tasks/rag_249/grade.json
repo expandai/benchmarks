@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_249",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 36.3,
+    "total_citation_tokens": 363.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides no information about HashMap randomization behavior. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] confirms that the target supports std::collections::HashMap, but its excerpt does not state whether HashMap randomization is enabled or disabled.\n2. Citation [3] mentions a dependency's attempt to generate random numbers failing in WASM, but does not connect this to HashMap behavior or say that hash maps are not randomized.\n3. Therefore, the specific claim that hash maps are not randomized on wasm32-unknown-unknown is not established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00043235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

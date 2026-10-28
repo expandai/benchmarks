@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 149.3,
+    "total_citation_tokens": 1493.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer lists HASH, MERGE, LOOKUP, and INVERTED, but omits STRAIGHT, which is part of the gold target list. It is therefore incomplete.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved grammar explicitly lists HASH, MERGE, and LOOKUP in citation [2]. 2. Citations [3] and [7] also list INVERTED. 3. No citation lists STRAIGHT as a valid opt_join_hint keyword. 4. Because STRAIGHT is a non-trivial item in the gold target and is missing from the retrieved citations, the citations do not contain all of the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0006248499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

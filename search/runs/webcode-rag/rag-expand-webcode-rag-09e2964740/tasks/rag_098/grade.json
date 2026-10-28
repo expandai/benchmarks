@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 749.8,
+    "total_citation_tokens": 7498.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the maximum input length as 200 characters, matching the gold target. Its additional detail does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum input length is 200 characters.\n2. Citation [1] says inputs longer than 200 characters cause the numeral format to fail, and citations [3] and [5] identify 200 as the maximum numeral length.\n3. The retrieved sources therefore contain the factual information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0013666,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

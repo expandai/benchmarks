@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_060",
+ "prompt": "haproxy set-var ifgt iflt non-integer type check",
+ "attempt": 1,
+ "answer": "`ifgt`/`iflt` comparisons require both the existing variable and the new sample to be scalar integers. If either side is a string or non-scalar type, the condition is ignored.\n\nFrom the HAProxy regression test:\n\n```haproxy\nhttp-response set-var(res.ifgt_res1,ifgt) int(55)  # existing variable is a string: ignored\nhttp-response set-var(res.ifgt_res2,ifgt) str(text) # sample is a string: ignored\n\nhttp-response set-var(res.ifgt_res_int1,ifgt) int(55) # 5 > 55: false\nhttp-response set-var(res.ifgt_res_int2,ifgt) int(2)  # 5 > 2: true\n```\n\nLikewise for `iflt`:\n\n```haproxy\nhttp-response set-var(res.iflt_res_int1,iflt) int(55) # 5 < 55: true\nhttp-response set-var(res.iflt_res_int2,iflt) int(2)  # 5 < 2: false\n```\n\nIf a variable was produced through `var()`, its type defaults to string during configuration parsing, so convert it explicitly to an integer where needed. The search results also show `int(2)` being used to store an integer variable.",
+ "num_citations": 10,
+ "citation_text_tokens": 6628,
+ "citation_text_chars": 22068,
+ "search_queries": [
+  "haproxy set-var ifgt iflt non-integer type check"
+ ],
+ "model_cost_usd": 0.0024149,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7793,
+  "output_tokens": 389,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 4722.195417038165,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0094149,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_052",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 288.1,
+    "total_citation_tokens": 2881.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says excess precision is truncated toward minus infinity. The predicted answer explicitly says flooring/rounding toward negative infinity, which is semantically equivalent, and its example is consistent with that direction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] explicitly states that the epoch-second calculation uses floor division, rounding toward negative infinity. Step 2 — This directly supports the gold target answer, “truncated toward minus infinity.” Step 3 — Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000693475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

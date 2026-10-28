@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_063",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 247.1,
+    "total_citation_tokens": 2471.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `add` as Emacs Calc’s internal function name for the `+` operator, matching the gold target. The additional explanation does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that, in an `apply(f,x)` rewrite pattern, the plus expression `a+b` matches with `f = add`.\nStep 2: This fully supports the gold target answer, `add`; no additional non-trivial claim is included.\nStep 3: Citations [1] and [2] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000664725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

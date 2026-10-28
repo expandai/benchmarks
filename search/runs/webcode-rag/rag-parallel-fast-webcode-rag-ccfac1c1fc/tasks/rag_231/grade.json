@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_231",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 253.9,
+    "total_citation_tokens": 2539.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes `calc()`, the gold target, and identifies `min()` and `max()` as examples of CSS math functions. It does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly names calc() as the CSS function allowed in a <source-size-value>.\n2. The gold target answer is calc(), so its non-trivial information is directly present in the retrieved citations.\n3. Citation [1] also refers to math functions generally, but citation [2] alone supplies the specific answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00082835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_166",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 340.2,
+    "total_citation_tokens": 3402.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides none of the requested size constraint. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims a specific limit: 10,000 bytes for the total length of expressions supplied with R’s command-line `-e` option.\n2. None of the citations identifies R’s `-e` option or gives that 10,000-byte limit.\n3. Citation [7] mentions a general command-line size limit of “several dozen kilobytes,” which does not establish the specific R limit.\n4. Because the key specific fact is absent, the citations do not contain sufficient information to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00077672,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

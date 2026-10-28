@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 384.8,
+    "total_citation_tokens": 3848.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies threads and userdata as the Lua types that cannot be represented as literals. The predicted answer instead says the claim is false and discusses literal types in Luau, without identifying threads or userdata; its denial contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations identify `userdata` and `thread` as Lua types, and [4] supports that userdata values cannot be created in Lua.\n2. However, none of the citations explicitly states that these two types cannot be represented as literals. In particular, the sources do not establish that `thread` cannot be represented as a literal; describing threads as execution threads or relating them to coroutines does not provide that fact.\n3. Since a specific non-trivial part of the gold answer is not supported, the citations do not contain sufficient information to derive the full answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012301,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 525.9,
+    "total_citation_tokens": 5259.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says explicit-register operands must appear at the end of the operand list after all other operand types. The predicted answer says they do not necessarily have to be last in current Rust syntax, which contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations state that positional arguments come before named arguments and that explicit register operands come after named arguments, supporting the gold target’s ordering claim. 2. This supports the non-trivial claim in the gold target. 3. Citations [2] and [8] describe a later relaxation of the ordering rules, so the statement is version-dependent; however, the retrieved citations do contain the rule stated in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0016022249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_139",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 39.7,
+    "total_citation_tokens": 397.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold range is -15 to -9. The predicted answer includes -8 as a valid value, which extends the range beyond the gold target and makes the answer incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target says the valid njs range for raw data is -15 to -9.\n2. Citation [2] gives a general zlib raw range of -8 to -15, which includes -8 and therefore does not establish the gold target’s narrower range. It also does not identify this as the njs-specific range.\n3. Citation [4] mentions behavior for windowBits set to 8 in raw deflate streams, but the excerpt is incomplete and does not state the valid range or establish that -8 is excluded.\n4. No citation provides all the non-trivial information in the gold target. Therefore, the target is not sufficiently grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005671,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

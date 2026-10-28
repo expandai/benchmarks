@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_033",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 517.1,
+    "total_citation_tokens": 5171.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the first-level route’s `continue` value is overridden to `true`, matching the gold target. Its additional explanation is consistent with that claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [10] directly states that the first-level route’s continue field is always overridden to true. Citation [1] corroborates this behavior in the implementation for top-level routes.\nStep 2: The retrieved sources contain the full factual claim in the gold target answer. Therefore, the answer is GROUNDED.\nStep 3: Citation [10] directly contains the answer; citation [1] also supports it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00103285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

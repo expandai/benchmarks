@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 438.2,
+    "total_citation_tokens": 4382.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that an unfinished hpx::future does not wait in its destructor, matching the gold target. Its additional comparison with std::future does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] directly states that HPX futures do not wait during destruction when the value has not been extracted, addressing the destructor behavior in the gold target.\n2. Its statement that HPX applies the same semantics regardless of how a future was created supports the broad claim about hpx::future.\n3. The source does not explicitly say “even if the value has not been returned to the future yet”; it speaks of the value not being extracted. However, in the context of the cited question about destruction without a prior get/wait, this is sufficient to derive the target claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0012861,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

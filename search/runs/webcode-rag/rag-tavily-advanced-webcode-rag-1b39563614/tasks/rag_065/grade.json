@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 444.9,
+    "total_citation_tokens": 4449.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the requested cache-related log replacement, nor does it contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations mention identifying cache-served responses from logs and describe HAProxy returning cached resources, but neither gives the specific log replacement value `<CACHE>`.\nStep 2 — The target answer is the specific token `<CACHE>`. That non-trivial detail is not present in the retrieved citations, so the target is ungrounded.\nStep 3 — No citation contains information sufficient to derive the exact target token.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00095935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

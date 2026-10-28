@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_146",
+  "prompt": "CSS display contents pseudo-elements box not generated",
+  "attempt": 1,
+  "answer": "`display: contents` does **not** prevent pseudo-elements from generating boxes. The CSS Display specification states that the element itself generates no box, but its children and pseudo-elements still generate boxes normally. They are treated as if they replaced the element in the document tree.\n\nIf a `::before` or `::after` pseudo-element is not generated, check its `content` declaration: `content: none` or the default `normal` prevents generation.",
+  "num_citations": 10,
+  "citation_text_tokens": 1766,
+  "citation_text_chars": 8107,
+  "search_queries": [
+    "CSS display contents pseudo elements box not generated"
+  ],
+  "model_cost_usd": 0.0009292,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2695,
+    "output_tokens": 213,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 115
+  },
+  "latency_ms": 4859.111582976766,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059292,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

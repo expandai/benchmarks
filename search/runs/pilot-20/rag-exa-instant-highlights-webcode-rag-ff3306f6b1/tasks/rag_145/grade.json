@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 376.3,
+    "total_citation_tokens": 3763.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies the Elasticsearch error type as `snapshot_missing_exception`, which corresponds to the gold target `SnapshotMissingException`. Its additional note about the Python client raising `NotFoundError` does not contradict the requested Elasticsearch exception type.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] directly discusses Snapshot.get for a missing snapshot and names SnapshotMissingException, while clarifying the Python client surfaces NotFoundError and Elasticsearch reports snapshot_missing_exception.\n2. Citation [8] explains that setting ignore_unavailable prevents an exception when a requested snapshot is missing; it does not identify a different exception type when unavailable snapshots are not ignored.\n3. The gold target is the exception name SnapshotMissingException, which is explicitly present in the Snapshot.get discussion in [3].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00133035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

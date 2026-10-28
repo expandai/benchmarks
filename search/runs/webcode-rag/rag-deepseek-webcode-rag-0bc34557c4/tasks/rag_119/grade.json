@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 366.9,
+    "total_citation_tokens": 3669.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that with no usable servers, avg_queue returns twice the total number of queued connections, matching the gold target. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [7] explicitly states the avg_queue behavior when there is no running server. 2. It says the value is twice the total number of queued connections, matching the gold target answer. 3. The retrieved citations therefore contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000781975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_087",
+ "prompt": "Quarkus smallrye-kafka channel attribute resolution fallback Map name",
+ "attempt": 1,
+ "answer": "SmallRye Kafka resolves a channel attribute in this order:\n\n1. **Direct channel configuration**  \n   `mp.messaging.incoming.my-channel.attribute=value`\n\n2. **A `Map<String, Object>` named after the channel**, such as `my-channel`; or, if configured, the name specified by the `kafka-configuration` attribute.\n\n3. **The default Kafka configuration map**, exposed under the name **`default-kafka-broker`**, when the selected map does not contain the attribute.\n\nIf `kafka-configuration` is explicitly set but no map with that name exists, deployment fails.",
+ "num_citations": 10,
+ "citation_text_tokens": 5837,
+ "citation_text_chars": 25183,
+ "search_queries": [
+  "Quarkus smallrye-kafka channel attribute resolution fallback Map name"
+ ],
+ "model_cost_usd": 0.0021526,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7243,
+  "output_tokens": 285,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 156
+ },
+ "latency_ms": 4989.050708012655,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0029026,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

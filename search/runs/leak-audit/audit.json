@@ -1,0 +1,145 @@
+{
+  "rules": {
+    "official": "bakeoff.official_rag.contamination_reason (host, term, canary, verbatim_question)",
+    "webcode_hosts": [
+      "github.com/exa-labs",
+      "exa-labs/benchmarks",
+      "artificialanalysis.ai",
+      "huggingface\\.co/datasets/[^\\s]*webcode"
+    ],
+    "webcode_terms": [
+      "\\bwebcode\\b",
+      "\\bexa[- ]labs\\b"
+    ],
+    "verbatim_query": "whole normalized query in text, title, or URL slug (no length floor)",
+    "answer_with_query": "text contains both the query and the expected answer (answer >= 15 chars)"
+  },
+  "per_system": {
+    "rag-exa-fast-highlights": {
+      "run_dir": "runs/pilot-20/rag-exa-fast-highlights-webcode-rag-7dcbaf2322",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 3070,
+      "leaked_citations": 0,
+      "tasks_with_leak": 0,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 272.0,
+      "grounded_recorded": 0.8859934853420195,
+      "leak_tasks": []
+    },
+    "rag-exa-instant-highlights": {
+      "run_dir": "runs/pilot-20/rag-exa-instant-highlights-webcode-rag-ff3306f6b1",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 2987,
+      "leaked_citations": 0,
+      "tasks_with_leak": 0,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 263.0,
+      "grounded_recorded": 0.8566775244299675,
+      "leak_tasks": []
+    },
+    "rag-exa-webcode": {
+      "run_dir": "runs/pilot-20/rag-exa-webcode-webcode-rag-ca6bb5113c",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 3070,
+      "leaked_citations": 0,
+      "tasks_with_leak": 0,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 266.0,
+      "grounded_recorded": 0.8664495114006515,
+      "leak_tasks": []
+    },
+    "rag-firecrawl-search": {
+      "run_dir": "runs/pilot-20/rag-firecrawl-search-webcode-rag-d15af8a79a",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 3058,
+      "leaked_citations": 2,
+      "tasks_with_leak": 2,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 167.0,
+      "grounded_recorded": 0.5439739413680782,
+      "leak_tasks": [
+        "rag_090",
+        "rag_105"
+      ]
+    },
+    "rag-parallel-turbo": {
+      "run_dir": "runs/pilot-20/rag-parallel-turbo-webcode-rag-f177439c59",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 3046,
+      "leaked_citations": 0,
+      "tasks_with_leak": 0,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 267.0,
+      "grounded_recorded": 0.8697068403908795,
+      "leak_tasks": []
+    },
+    "rag-perplexity-fast": {
+      "run_dir": "runs/pilot-20/rag-perplexity-fast-webcode-rag-26d497ae83",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 2803,
+      "leaked_citations": 0,
+      "tasks_with_leak": 0,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 290.0,
+      "grounded_recorded": 0.9446254071661238,
+      "leak_tasks": []
+    },
+    "rag-deepseek": {
+      "run_dir": "runs/webcode-rag/rag-deepseek-webcode-rag-0bc34557c4",
+      "tasks": 305,
+      "graded": 305,
+      "citations": 3011,
+      "leaked_citations": 4,
+      "tasks_with_leak": 4,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 248.0,
+      "grounded_recorded": 0.8131147540983606,
+      "leak_tasks": [
+        "rag_005",
+        "rag_031",
+        "rag_283",
+        "rag_285"
+      ]
+    },
+    "rag-parallel-fast": {
+      "run_dir": "runs/webcode-rag/rag-parallel-fast-webcode-rag-ccfac1c1fc",
+      "tasks": 307,
+      "graded": 307,
+      "citations": 3070,
+      "leaked_citations": 2,
+      "tasks_with_leak": 2,
+      "tasks_leak_in_judge_sources": 0,
+      "grounded_recorded_sum": 268.0,
+      "grounded_recorded": 0.8729641693811075,
+      "leak_tasks": [
+        "rag_003",
+        "rag_164"
+      ]
+    }
+  },
+  "reasons": {
+    "verbatim_query": 4,
+    "host": 4
+  },
+  "domains": {
+    "www.facebook.com": {
+      "count": 4,
+      "reasons": {
+        "verbatim_query": 4
+      }
+    },
+    "huggingface.co": {
+      "count": 4,
+      "reasons": {
+        "host": 4
+      }
+    }
+  },
+  "regrade_pairs": 8
+}

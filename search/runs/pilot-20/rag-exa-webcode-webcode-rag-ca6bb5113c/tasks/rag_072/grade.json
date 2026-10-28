@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_072",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 114.5,
+    "total_citation_tokens": 1145.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives a maximum captured link URL length of 100,000 characters, matching the gold target. The additional version-specific details and other limits do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum character limit for captured links is 100000.\n2. Citation [1] explicitly gives a maximum link URL length of 100,000 characters for plugin 3.7 and later; citations [2], [3], and [5] also state that links can be captured with up to 100000 characters.\n3. The retrieved citations therefore contain the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000507725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

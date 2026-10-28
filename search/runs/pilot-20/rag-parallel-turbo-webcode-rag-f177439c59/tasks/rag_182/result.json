@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_182",
+ "prompt": "GNU make LOADLIBES variable relationship LDLIBS",
+ "attempt": 1,
+ "answer": "`LOADLIBES` and `LDLIBS` have the same purpose: they contain library flags or names passed to the linker.\n\n- `LDLIBS` is the preferred variable.\n- `LOADLIBES` is deprecated but still supported, retained mainly for compatibility with other `make` implementations.\n- GNU make’s built-in link rules include both, typically in this order:\n\n```make\n$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@\n```\n\nThey have no default value and no intrinsic behavior beyond being included in link commands. Use `LDLIBS` for libraries such as `-lfoo`; use `LDFLAGS` for non-library linker flags such as `-L`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3265,
+ "citation_text_chars": 11966,
+ "search_queries": [
+  "GNU make LOADLIBES variable relationship LDLIBS"
+ ],
+ "model_cost_usd": 0.0012291,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4173,
+  "output_tokens": 155,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2705.0279160030186,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0022291,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

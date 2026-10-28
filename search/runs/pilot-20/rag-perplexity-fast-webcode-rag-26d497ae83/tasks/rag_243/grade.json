@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_243",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 289.1,
+    "total_citation_tokens": 2891.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says Nim's compile pragma detects file changes using a SHA1 checksum. The predicted answer instead explicitly says it uses a CRC checksum, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] states that the compile pragma detects file changes using a CRC checksum.\n2. The gold target answer specifies SHA1 checksum, a different checksum method.\n3. No retrieved citation says that the method is SHA1, so the gold target’s key factual claim is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000656975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

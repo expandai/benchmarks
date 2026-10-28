@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_298",
+  "prompt": "node.js cluster isMaster how determined condition",
+  "attempt": 1,
+  "answer": "`cluster.isMaster` is determined by an environment variable:\n\n- One result states it is determined by `process.env.NODE_UNIQUE_ID`.\n- Another states a process is considered the master when `process.env.NODE_WORKER_ID` is `undefined`.\n\nThus, `cluster.isMaster` is `true` for the main process and `false` for processes forked as workers.",
+  "num_citations": 10,
+  "citation_text_tokens": 3225,
+  "citation_text_chars": 14063,
+  "search_queries": [
+    "node.js cluster isMaster how determined condition"
+  ],
+  "model_cost_usd": 0.00121485,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4476,
+    "output_tokens": 80,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4550.21866702009,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01721485,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

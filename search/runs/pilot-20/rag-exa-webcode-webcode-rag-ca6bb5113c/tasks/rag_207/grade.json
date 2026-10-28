@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_207",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 558.0,
+    "total_citation_tokens": 5580.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the routing formula `ceil(result) - 1`, which matches the gold target `ceil(val)-1`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer states that the output index is ceil(val)-1.\n2. Citations [1], [4], and [7] explicitly state this routing rule.\n3. The retrieved sources therefore contain the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001251225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

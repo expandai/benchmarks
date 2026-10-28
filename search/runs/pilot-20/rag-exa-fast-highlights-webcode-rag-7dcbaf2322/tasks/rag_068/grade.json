@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_068",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 376.3,
+    "total_citation_tokens": 3763.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 256 distinct values, whereas the predicted answer says the precision should represent at least 256 distinct values. These are different requirements, so the answer does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citation recommends precision that allows at least 256 distinct values for pressure and other analog values. The gold target instead says a maximum of 256 distinct values. That upper-limit claim is not supported; the retrieved text states a minimum threshold in the opposite direction. Therefore, a non-trivial claim in the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000875225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

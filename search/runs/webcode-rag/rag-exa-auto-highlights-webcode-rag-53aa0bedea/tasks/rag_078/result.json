@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_078",
+  "prompt": "jq |= update-assignment RHS produces no values",
+  "attempt": 1,
+  "answer": "With `|=`, an RHS that produces no values (`empty`) deletes the corresponding LHS path, as if using `del(path)`.\n\n```jq\n{\"a\": 1} | .a |= empty\n```\n\nproduces:\n\n```json\n{}\n```\n\nThis differs from plain assignment:\n\n```jq\n{\"a\": 1} | .a = (.a | empty)\n```\n\nwhich produces no output at all.\n\nFor multiple LHS paths, jq’s documented behavior is to delete each path whose update produces `empty`, but jq 1.6 has known bugs/inconsistent behavior in some cases, particularly with expressions such as:\n\n```jq\n.a[] |= empty\n```\n\nFor reliable deletion, use `del(...)` directly.",
+  "num_citations": 10,
+  "citation_text_tokens": 5115,
+  "citation_text_chars": 18813,
+  "search_queries": [
+    "jq |= update-assignment RHS produces no values"
+  ],
+  "model_cost_usd": 0.0018711,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6381,
+    "output_tokens": 230,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 72
+  },
+  "latency_ms": 4626.512082992122,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0088711,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_218",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 469.2,
+    "total_citation_tokens": 4692.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes both conditions in the gold target: the child is mounted with the parent, and it is not rendered with `sticky: true`. However, it also makes an inaccurate extra claim that the child’s `assign_new/3` function must return the same value the parent would provide for sharing to work. When the parent assign is available for the child to reuse, the child’s callback is not needed. Because the answer adds misleading information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The quoted passage directly states both conditions in the gold target: the child is mounted when the parent is mounted, and the child is not rendered with `sticky: true`. Step 2 — Both non-trivial claims in the gold target are explicitly present in citation [1], so the answer is fully grounded. Step 3 — Citation [1] contains the information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001539225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

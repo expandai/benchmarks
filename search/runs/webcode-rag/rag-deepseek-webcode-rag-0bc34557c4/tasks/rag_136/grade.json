@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_136",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 226.0,
+    "total_citation_tokens": 2260.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is GT. The predicted answer states that Haskell's Ord Double comparison involving NaN returns GT and gives the corresponding examples, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citation explicitly states that comparing a NaN with a NaN using Haskell’s `compare` returns `GT`. Step 2 — This directly supports the gold target answer, `GT`; no additional non-trivial claim is required. Step 3 — Citation [5] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000703725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

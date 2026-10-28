@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_179",
+ "prompt": "eshell dollars expansion range end inclusive exclusive vs bash",
+ "attempt": 1,
+ "answer": "Eshell uses **half-open ranges**: the start is inclusive, but the end is exclusive.\n\n- Eshell: `$expr[start..end]` includes indices `start` through `end - 1`.\n- Bash: ranges are **closed**, so both the start and end are included.\n\nExample:\n\n```eshell\n$exec-path[1..3]\n```\n\nreturns elements at indices 1 and 2, not 3. This differs from Bash’s `{1..3}`, which produces 1, 2, and 3.",
+ "num_citations": 8,
+ "citation_text_tokens": 4303,
+ "citation_text_chars": 15995,
+ "search_queries": [
+  "eshell dollars expansion range end inclusive exclusive vs bash"
+ ],
+ "model_cost_usd": 0.00150655,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5470,
+  "output_tokens": 116,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3483.736249967478,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00550655,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

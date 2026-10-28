@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_244",
+  "prompt": "Spring Boot Kubernetes deployment auto-detection environment variables",
+  "attempt": 1,
+  "answer": "Spring Boot auto-detects a Kubernetes deployment by checking for environment variables matching:\n\n- `*_SERVICE_HOST`\n- `*_SERVICE_PORT`\n\nFor example, `KUBERNETES_SERVICE_HOST` indicates Kubernetes. You can override the detection with:\n\n```properties\nspring.main.cloud-platform=KUBERNETES\n```\n\nor disable it with:\n\n```properties\nspring.main.cloud-platform=NONE\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 2908,
+  "citation_text_chars": 14227,
+  "search_queries": [
+    "Spring Boot Kubernetes deployment auto detection environment variables"
+  ],
+  "model_cost_usd": 0.0010788,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3903,
+    "output_tokens": 86,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3219.271167065017,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0060788000000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

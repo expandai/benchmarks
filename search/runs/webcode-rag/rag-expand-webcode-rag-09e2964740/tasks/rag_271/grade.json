@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 953.5,
+    "total_citation_tokens": 9535.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the requested range, 0 through 255 inclusive. However, it adds that leading zeros are prohibited, which is not imposed by RFC 6455’s syntax (`1*DIGIT` permits them). Because the response includes a false extra claim, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Both citations explicitly state that the Sec-WebSocket-Version number ranges from 0 to 255, inclusive. This contains the full factual claim in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0019049750000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

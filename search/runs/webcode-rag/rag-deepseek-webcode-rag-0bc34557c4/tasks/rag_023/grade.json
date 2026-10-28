@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_023",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 102.4,
+    "total_citation_tokens": 1024.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives `Integer.MIN_VALUE` as the MySQL `idFetchSize` value, matching the gold target. The additional explanation and default value do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly identify Integer.MIN_VALUE as the special idFetchSize value that can be used for MySQL. Citation [1] uses the equivalent Integer#MIN_VALUE notation, while [2] and [3] state Integer.MIN_VALUE directly.\nStep 2: The gold target answer contains only this value, and the retrieved citations support it. Therefore, the answer is fully grounded.\nStep 3: Citations [2] and [3] directly contain the answer; [1] also supports it using equivalent notation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000527225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_117",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 285.1,
+    "total_citation_tokens": 2851.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer states an exception that allows multiple bitmap files in use—one per MIDX layer—whereas the gold target says at most one bitmap file is in use. That contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target’s claim that there is at most one bitmap is stated directly in citations [1]–[4] and [8], so it is grounded in those sources. However, [5] describes incremental MIDX chains where multiple bitmap files can be used together, which makes the gold target too broad as a current, universal answer. The direct support is present, but the retrieved set also contains a relevant exception.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0015009749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

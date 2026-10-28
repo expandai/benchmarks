@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_113",
+ "prompt": "wasm-bindgen webdriver.json headless argument override behavior",
+ "attempt": 1,
+ "answer": "The search results state that:\n\n- `webdriver.json` can provide browser-specific capabilities under `\"moz:firefoxOptions\"` and `\"goog:chromeOptions\"`.\n- The `headless` argument is **always enabled for both browsers** when running headless tests.\n- Omitting `--headless` from `wasm-pack test` disables headless mode.\n- The file path itself can be overridden with `WASM_BINDGEN_WEBDRIVER_JSON`; otherwise, `webdriver.json` is used.\n\nThey do not specify whether a `headless` entry in `webdriver.json` or a browser `args` value can override the automatically enabled headless argument.",
+ "num_citations": 10,
+ "citation_text_tokens": 6043,
+ "citation_text_chars": 26056,
+ "search_queries": [
+  "wasm-bindgen webdriver.json headless argument override behavior"
+ ],
+ "model_cost_usd": 0.0022587,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7605,
+  "output_tokens": 298,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 158
+ },
+ "latency_ms": 4299.161290982738,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0030087000000000004,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

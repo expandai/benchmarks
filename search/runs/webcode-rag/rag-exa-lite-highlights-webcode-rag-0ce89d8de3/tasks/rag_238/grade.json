@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_238",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 510.9,
+    "total_citation_tokens": 5109.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the GRUB TPM measured boot event type as EV_IPL, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that GRUB logs all measured events with the type EV_IPL.\nStep 2: The gold target answer consists of that event type, and it is directly stated in the retrieved sources. Therefore, all non-trivial information is grounded.\nStep 3: Citations [1], [2], [4], and [8] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00099485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_297",
+ "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+ "attempt": 1,
+ "answer": "`@NotFound(action = NotFoundAction.IGNORE)` treats a missing referenced row as `null`, even when the foreign-key column contains a non-null value.\n\nFor a to-one association, it also has the side effect of making the association **non-lazy**. Therefore, `@NotFound(IGNORE)` cannot preserve lazy loading for `@ManyToOne` or `@OneToOne` associations.",
+ "num_citations": 10,
+ "citation_text_tokens": 1948,
+ "citation_text_chars": 8366,
+ "search_queries": [
+  "Hibernate Envers @NotFound IGNORE side effect to-one"
+ ],
+ "model_cost_usd": 0.00086995,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3058,
+  "output_tokens": 88,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2327.3684170562774,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00161995,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

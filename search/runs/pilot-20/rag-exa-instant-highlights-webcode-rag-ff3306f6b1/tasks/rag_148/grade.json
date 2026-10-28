@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_148",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 381.1,
+    "total_citation_tokens": 3811.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly gives the gold value, 2 GB − 1 byte (2,147,483,647 bytes), for earlier HAProxy versions. Its additional version-specific claim does not contradict that value; it qualifies which versions it applies to.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the limit is 2GB - 1, or 2147483647 bytes.\n2. Citations [2] and [4] state this exact limit, so the gold target is directly supported.\n3. Citation [3] notes that the limit was later extended to 4 PB in HAProxy 2.2.9, meaning the limit is version-dependent; however, that does not remove the direct support for the gold target in [2] and [4].",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001424725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

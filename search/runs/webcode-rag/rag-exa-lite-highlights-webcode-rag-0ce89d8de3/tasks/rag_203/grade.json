@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 441.4,
+    "total_citation_tokens": 4414.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer includes `style` as a valid computed-value keyword and in the shortcut expansions, but the gold target specifies `none` or one or more of `size`, `layout`, and `paint`. The added keyword is inconsistent with the exhaustive set in the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] directly states the computed value keywords as “none” or one or more of “size, layout, paint.”\n2. This contains all the non-trivial information in the gold target answer, so the target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001049225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

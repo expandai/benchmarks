@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_200",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 413.5,
+    "total_citation_tokens": 4135.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the name section appears after the data section, matching the gold target. The added claim that it should appear only once does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [3], and [4] directly state that the name section occurs only after the data section. Step 2: The gold target claim, “only after the data section,” is explicitly supported by these passages. The additional once-only requirement in the citations is not part of the gold target and does not conflict with it. Therefore, the target answer is fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008636000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

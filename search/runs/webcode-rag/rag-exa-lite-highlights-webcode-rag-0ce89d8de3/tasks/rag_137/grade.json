@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 573.9,
+    "total_citation_tokens": 5739.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the target function, `imageAtomicExchange`, but also claims that `imageAtomicAdd`, `imageAtomicLoad`, and `imageAtomicStore` are float image atomic operations. Those extra claims conflict with the target, which specifies `imageAtomicExchange` only.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations directly identify `imageAtomicExchange` as a float image atomic operation.\n2. However, the gold target says `imageAtomicExchange` is the only such function. Citations [1], [2], and [7] also explicitly identify `imageAtomicAdd` as a float image atomic operation, so the exclusivity claim is contradicted.\n3. Since the gold target contains a non-trivial claim (“only”) that is not supported and is contradicted by the retrieved sources, the target is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001294225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

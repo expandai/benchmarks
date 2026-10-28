@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_299",
+ "prompt": "Vert.x CSRFHandler session aware token regeneration condition",
+ "attempt": 1,
+ "answer": "For a session-aware `CSRFHandler`, a token is regenerated when:\n\n- No session exists (a token is issued on every request).\n- The session has no stored CSRF token.\n- The stored token belongs to a different session ID, such as after a session upgrade or ID regeneration.\n- The stored token is malformed or its timestamp cannot be parsed.\n- The token has expired (`currentTimeMillis() > timestamp + timeout`).\n\nOtherwise, on a safe request, the existing token is reused when it belongs to the current session and has not expired.\n\nAfter a valid unsafe request, Vert.x always generates and stores a new token to prevent replay attacks.",
+ "num_citations": 10,
+ "citation_text_tokens": 4433,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "Vert.x CSRFHandler session aware token regeneration condition"
+ ],
+ "model_cost_usd": 0.00171905,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5816,
+  "output_tokens": 221,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 83
+ },
+ "latency_ms": 3477.949458057992,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00871905,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

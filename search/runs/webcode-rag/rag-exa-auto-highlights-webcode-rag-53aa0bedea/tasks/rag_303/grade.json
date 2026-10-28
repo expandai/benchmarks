@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_303",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 460.8,
+    "total_citation_tokens": 4608.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target gives the general rule that using the same negative-divisibility form for both dimensions behaves like setting both to 0. The prediction only states the special case `-1:-1` and explicitly says it does not specify the behavior for `-2` or other `-n` values. Its stated special case is consistent with the target, but it does not provide the requested general edge-case behavior.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] describes the behavior of 0 and the special case where both values are -1, but it does not say that setting both dimensions to -n is identical to setting both to 0.\n2. Citation [5] explains that -2 adjusts a dimension to an even value, but does not cover the case where both dimensions are -2 (or both are -n) or establish the claimed equivalence.\n3. Therefore, the retrieved citations do not contain enough information to derive the gold target answer; a specific non-trivial edge-case claim is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00172885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

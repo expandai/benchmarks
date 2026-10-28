@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_169",
+  "prompt": "theCore STM32F407G-DISC1 STLINK V2.1 OpenOCD config file",
+  "attempt": 1,
+  "answer": "For the new **STM32F407G-DISC1** board with **STLINK/V2.1**, use:\n\n```cfg\n# This is an STM32F4 discovery board with a single STM32F407VGT6 chip.\n\nsource [find interface/stlink-v2-1.cfg]\ntransport select hla_swd\n\n# increase working area to 64KB\nset WORKAREASIZE 0x10000\n\nsource [find target/stm32f4x.cfg]\nreset_config srst_only\n```\n\nThe relevant change from the older board configuration is:\n\n```cfg\nsource [find interface/stlink-v2-1.cfg]\n```\n\ninstead of:\n\n```cfg\nsource [find interface/stlink-v2.cfg]\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 4221,
+  "citation_text_chars": 15975,
+  "search_queries": [
+    "theCore STM32F407G-DISC1 STLINK V2.1 OpenOCD config file"
+  ],
+  "model_cost_usd": 0.00164265,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5352,
+    "output_tokens": 254,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 95
+  },
+  "latency_ms": 7489.088458940387,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01764265,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

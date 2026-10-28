@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_083",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 389.3,
+    "total_citation_tokens": 3893.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that with `sessionCookieNeeded=false`, SockJS can choose `xdr-streaming` in IE 8/9, matching the gold target. The additional caveats do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly identify xdr-streaming as the transport the SockJS client should choose in IE 8 and 9 when sessionCookieNeeded is turned off. Step 2: The gold target answer is “xdr-streaming,” and that transport name is directly present in the retrieved citations. Step 3: Citations [5], [6], and [7] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000938225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

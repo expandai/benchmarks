@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_142",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 482.5,
+    "total_citation_tokens": 4825.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the minimum is 6 bytes and explains the minimum supported_versions extension encoding as a 2-byte type, 2-byte length, and 2-byte selected-version value. This matches the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] establishes that a TLS 1.3 ServerHello must include the supported_versions extension. 2. Citation [1] establishes that an extension has a two-byte type and a two-byte content-length field. 3. The excerpts do not state the size of the supported_versions extension’s ServerHello value (the selected_version), so they do not establish that its contents add two bytes and that the minimum is six bytes. A non-trivial detail needed for the gold answer is therefore missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00127885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

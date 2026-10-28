@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_127",
+  "prompt": "CSS quirky lengths functional notation calc exception",
+  "attempt": 1,
+  "answer": "In quirks mode, “quirky lengths” are accepted as a literal number token and converted to a pixel length at parse time. This exception does **not** apply inside `calc()`.\n\nTherefore:\n\n```css\nstroke-width: 2px;       /* length */\nstroke-width: 2;         /* quirky length, converted to 2px */\nstroke-width: calc(2 * 2); /* not converted from number to length */\nstroke-width: calc(2px * 2); /* 4px */\n```\n\nInside `calc()`, unitless values remain `<number>` values. They cannot be combined with lengths or automatically converted into lengths. The CSS Working Group resolution explicitly states that quirky-length rules do not apply inside `calc()`.\n\nSource: [W3C CSSWG issue #4874](https://github.com/w3c/csswg-drafts/issues/4874)",
+  "num_citations": 8,
+  "citation_text_tokens": 3939,
+  "citation_text_chars": 16849,
+  "search_queries": [
+    "CSS quirky lengths functional notation calc exception"
+  ],
+  "model_cost_usd": 0.00156035,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4898,
+    "output_tokens": 280,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 92
+  },
+  "latency_ms": 4272.4376659607515,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00656035,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

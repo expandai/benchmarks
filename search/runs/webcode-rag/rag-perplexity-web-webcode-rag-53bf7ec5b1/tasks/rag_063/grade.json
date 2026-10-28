@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_063",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 390.3,
+    "total_citation_tokens": 3903.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The response explicitly identifies `add` as the internal name for the infix `+` operator, matching the gold target. Its additional explanation does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks for the internal function name of the plus operator when matched with Calc rewrite `apply`.\n2. Citation [1] explicitly states that `apply(f,x)` matches `a+b` with `f = add`.\n3. Citation [9] independently identifies infix `+` as `add`.\n4. The gold target answer, “add,” is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013347250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

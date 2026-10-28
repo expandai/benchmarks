@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_122",
+  "prompt": "rust asm! explicit register operands position operand list",
+  "attempt": 1,
+  "answer": "Explicit register operands must appear **at the end of the `asm!` operand list**, after all other operands. They cannot be referenced with `{}` placeholders; write the register name directly in the assembly template.\n\nFor example:\n\n```rust\nunsafe {\n    asm!(\n        \"mul {}\",\n        in(reg) a,                  // positional operand first\n        inlateout(\"rax\") b => lo,   // explicit register operands last\n        lateout(\"rdx\") hi,\n    );\n}\n```\n\nThey also cannot precede positional operands; otherwise the compiler reports that positional arguments cannot follow explicit register arguments.",
+  "num_citations": 10,
+  "citation_text_tokens": 4607,
+  "citation_text_chars": 15090,
+  "search_queries": [
+    "rust asm explicit register operands position operand list"
+  ],
+  "model_cost_usd": 0.00160975,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5830,
+    "output_tokens": 127,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3659.851250005886,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00660975,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

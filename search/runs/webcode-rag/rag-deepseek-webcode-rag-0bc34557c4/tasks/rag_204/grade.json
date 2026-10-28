@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_204",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 105.2,
+    "total_citation_tokens": 1052.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists both valid values, 4 and 8, and correctly describes their corresponding color depths, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [4] and [5] explicitly identify the two allowed values and their color counts. Citation [3] also supports the 4-bit and 8-bit options.\nStep 2: Both non-trivial claims in the gold target—4 means 16 colors and 8 means 256 colors—are stated in the retrieved citations. The target is GROUNDED.\nStep 3: Citations [4] and [5] independently contain the complete answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0004950999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

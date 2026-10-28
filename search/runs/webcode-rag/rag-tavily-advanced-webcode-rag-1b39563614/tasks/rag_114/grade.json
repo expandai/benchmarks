@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 353.8,
+    "total_citation_tokens": 3538.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the default dispatcher type is REQUEST. The predicted answer claims that FORWARD and INCLUDE are also matched by default, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target is simply REQUEST, which implies REQUEST is the default dispatcher type. Citation [1] says REQUEST-only is what the default should be, but distinguishes that from the implementation’s actual default. Citation [4] explicitly says the unspecified registration also matches FORWARD and INCLUDE, and may match ASYNC. The citations therefore do not support REQUEST as the sole default; the directly stated default behavior is broader.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001072725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

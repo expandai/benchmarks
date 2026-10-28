@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 513.8,
+    "total_citation_tokens": 5138.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer does not state the key behavior that zero or negative numbering is rendered in decimal regardless of the `type` attribute. Its categorical claim that `type` controls marker style is misleading for the case asked about, and it only demonstrates decimal output after explicitly setting `type=\"1\"`.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations describe the available `type` styles and discuss zero or negative starting values, but they do not state that zero and negative list markers are always rendered in decimal regardless of `type`. The quoted material in [1] and [2] instead says that the type controls numbering style for list labels. Step 2: The gold target’s central claim—that zero and negative values always use decimal notation regardless of the type attribute—is a specific rendering rule not established by these sources. Since this non-trivial claim is missing, the result is UNGROUNDED. Step 3: No citation contains information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001406975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

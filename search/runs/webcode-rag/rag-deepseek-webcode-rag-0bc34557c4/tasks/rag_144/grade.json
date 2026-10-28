@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 335.8,
+    "total_citation_tokens": 3358.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide information about how atomic operations behave on null fields. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim about what happens when the field's current value is null: increment, decrement, multiply, and divide do not update it.\n2. The citations discuss atomic operations generally or the behavior of an undefined operation value, but none states what happens when the field itself is null.\n3. Therefore, the retrieved sources do not contain the gold target's non-trivial factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000764225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

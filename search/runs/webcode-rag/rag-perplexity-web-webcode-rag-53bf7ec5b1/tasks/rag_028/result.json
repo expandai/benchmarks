@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_028",
+  "prompt": "glibc printf_info width precision star arginfo function value",
+  "attempt": 1,
+  "answer": "For `struct printf_info`:\n\n- `width`\n  - No width specified: `0`\n  - Constant width: that width\n  - Width specified as `*`:\n    - In the **arginfo function**: `INT_MIN`\n    - In the **handler function**: the actual `int` value retrieved from the argument list\n\n- `prec`\n  - No precision specified: `-1`\n  - Constant precision: that precision\n  - Precision specified as `*`:\n    - In the **arginfo function**: `INT_MIN`\n    - In the **handler function**: the actual `int` value retrieved from the argument list\n\nThe `*` width and precision arguments are required to be `int` values. (GNU C Library manual: [Conversion Specifier Options](https://www.sourceware.org/glibc/manual/2.44/html_node/Conversion-Specifier-Options.html); [printf.h](https://elixir.bootlin.com/glibc/glibc-2.35/source/stdio-common/printf.h))",
+  "num_citations": 8,
+  "citation_text_tokens": 3864,
+  "citation_text_chars": 14770,
+  "search_queries": [
+    "glibc printf_info width precision star arginfo function value"
+  ],
+  "model_cost_usd": 0.00158145,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4824,
+    "output_tokens": 313,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 86
+  },
+  "latency_ms": 4742.794958990999,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00658145,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

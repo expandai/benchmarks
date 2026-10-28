@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_266",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 121.9,
+    "total_citation_tokens": 1219.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no answer. It neither includes nor contradicts the gold target, “Destination.”",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations identify Owner as the replica-ownership setting and describe changing ownership to the destination bucket owner. However, the actual valid value is omitted in [1], and [2] points elsewhere for the default and valid values. Step 2: The gold target specifies the exact value “Destination,” which is a non-trivial string not present in the retrieved text. Therefore, the citations do not contain all the information needed to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00053385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

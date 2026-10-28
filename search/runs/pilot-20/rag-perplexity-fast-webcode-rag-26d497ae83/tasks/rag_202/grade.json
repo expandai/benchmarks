@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_202",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 398.8,
+    "total_citation_tokens": 3988.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer states the target slowdown factor of 18.6×, but its additional 500,000-access comparison (0.056 s versus 0.005 s) implies an 11.2× slowdown, contradicting that factor. Since the response includes conflicting information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] directly state that internal access through the proxy was 18.6 times slower than direct external access in the cited V8 test.\nStep 2: The gold target’s sole factual claim, an 18.6x slowdown, is explicitly supported. The citations qualify this as a result from one system, matching the cited example.\nStep 3: Citations [1] and [2] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009601,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

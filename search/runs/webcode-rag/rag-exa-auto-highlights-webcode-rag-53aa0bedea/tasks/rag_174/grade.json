@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 530.4,
+    "total_citation_tokens": 5304.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides none of the requested information about padding retention for HTTP/2 frame types. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that DATA, HEADERS, and PUSH_PROMISE frames can contain padding. However, they do not state the intermediary-specific rules in the gold target: that intermediaries SHOULD retain DATA-frame padding and MAY drop HEADERS- or PUSH_PROMISE-frame padding. Those are non-trivial normative claims missing from the retrieved passages, so the target answer cannot be derived from the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001101225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

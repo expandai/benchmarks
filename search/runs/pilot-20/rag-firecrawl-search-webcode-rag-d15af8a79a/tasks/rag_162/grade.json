@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_162",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 42.7,
+    "total_citation_tokens": 427.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the logging category or contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that MockMvc’s log() method logs result data as a DEBUG message. They do not identify the logging category or provide the package name org.springframework.test.web.servlet.result. Since that specific package is the gold target and is absent from the retrieved passages, the answer is not sufficiently supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000369725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

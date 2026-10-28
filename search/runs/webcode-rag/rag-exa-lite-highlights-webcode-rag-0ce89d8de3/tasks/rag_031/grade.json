@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_031",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 107.1,
+    "total_citation_tokens": 1071.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 5 words, and the predicted answer gives 5 words, which correctly states the limit.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] states that a Front-Cover Text may be at most 5 words. Citations [2] and [4]–[10] repeat the same limit, and [3] describes the limit as up to five words.\nStep 2: The gold target answer, “at most 5 words,” is directly supported by the retrieved citations. All non-trivial information is present.\nStep 3: Citation [1] directly contains the answer; the other cited sources also support it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 10
+  },
+  "judge_cost_usd": 0.000422225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

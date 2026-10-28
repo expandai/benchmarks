@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_284",
+  "prompt": "jq |= update-assignment right-hand side outputs empty",
+  "attempt": 1,
+  "answer": "In `jq`, `|=` runs the RHS filter against the current value of the LHS. If that filter produces no value—`empty`—the LHS path is deleted. This is the documented behavior for current jq versions. ([jq manual](https://manpages.debian.org/trixie/jq/jq.1.en.html))\n\n```sh\njq -cn '{a:{b:{c:1,d:2}}} |\n  .a.b.c |= select(. != 1)'\n```\n\nOutput:\n\n```json\n{\"a\":{\"b\":{\"d\":2}}}\n```\n\nIf you want to keep the existing value, make the RHS output `.` instead of `empty`:\n\n```jq\n.foo |= if condition then new_value else . end\n```\n\nAlso, if the RHS produces multiple values, current jq uses only the first; jq 1.5 and earlier used the last.",
+  "num_citations": 10,
+  "citation_text_tokens": 6660,
+  "citation_text_chars": 23320,
+  "search_queries": [
+    "jq |= update-assignment right-hand side outputs empty"
+  ],
+  "model_cost_usd": 0.00264985,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7888,
+    "output_tokens": 565,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 373
+  },
+  "latency_ms": 9530.063333921134,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0046498500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

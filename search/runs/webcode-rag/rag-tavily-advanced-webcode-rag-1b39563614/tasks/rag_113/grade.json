@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_113",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 387.2,
+    "total_citation_tokens": 3872.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states that `--headless` is always enabled for both Chrome and Firefox, matching the gold target. However, it then claims that omitting the flag disables headless mode, which contradicts the stated override behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the headless argument is always enabled for both browsers.\n2. Citations [2] and [4] explicitly say the headless argument is always enabled for both browsers.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008276000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_074",
+  "prompt": "haproxy avg_queue no active server behavior",
+  "attempt": 1,
+  "answer": "When a backend has **no active servers**, HAProxy does not normally accumulate requests in the queue waiting for a server. Requests fail with **503**, and HAProxy logs:\n\n```text\nbackend <name> has no server available!\n```\n\nThe backend’s connection-error counter (`econ`) includes errors caused by having no active servers.\n\nFor queue metrics:\n\n- `qcur` is the current number of requests queued **without a server assigned**.\n- Queueing is disabled by default.\n- If queueing is configured, requests can wait for a server slot; `timeout queue` can eventually produce a 503.\n- `avg_queue`/queue-time statistics are averages over the last 1,024 requests, so they are not necessarily a current queue depth.",
+  "num_citations": 10,
+  "citation_text_tokens": 4085,
+  "citation_text_chars": 14905,
+  "search_queries": [
+    "haproxy avg_queue no active server behavior"
+  ],
+  "model_cost_usd": 0.00170625,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5112,
+    "output_tokens": 357,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 196
+  },
+  "latency_ms": 8159.891207935289,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01770625,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

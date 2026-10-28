@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 373.5,
+    "total_citation_tokens": 3735.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that Node.js built-in proxy settings are ignored for an HTTP request over a Unix domain socket. Its explanation that the request connects directly through `socketPath` is consistent with the gold target and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citations [1], [2], [9], and [10] state directly that proxy settings are ignored when a request is made to a Unix domain socket.\nStep 2 — Groundedness: The gold target answer, “proxy settings will be ignored,” is explicitly supported by those passages. No additional factual claims are present. Therefore, the answer is GROUNDED.\nStep 3 — Source attribution: Citations [1], [2], [9], and [10] each contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000837225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

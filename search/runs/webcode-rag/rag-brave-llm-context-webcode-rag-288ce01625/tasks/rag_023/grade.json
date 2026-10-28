@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_023",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 212.5,
+    "total_citation_tokens": 2125.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is Integer.MIN_VALUE. The predicted answer explicitly gives Integer.MIN_VALUE as the MySQL MassIndexer idFetchSize value, so it matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state the MySQL-specific MassIndexer idFetchSize value as Integer.MIN_VALUE. Step 2: This exactly matches the gold target answer, with no missing non-trivial information. Step 3: Citations [1], [2], and [6] directly support the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00059835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

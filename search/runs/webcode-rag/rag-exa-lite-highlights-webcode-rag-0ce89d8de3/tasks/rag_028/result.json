@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_028",
+  "prompt": "glibc printf_info width precision star arginfo function value",
+  "attempt": 1,
+  "answer": "For `struct printf_info`:\n\n| Format | `arginfo` function sees | Handler function sees |\n|---|---:|---:|\n| No width | `width == 0` | `width == 0` |\n| Literal width, e.g. `%10s` | `width == 10` | `width == 10` |\n| Star width, e.g. `%*s` | `width == INT_MIN` | Actual `int` retrieved from the argument list |\n| No precision | `prec == -1` | `prec == -1` |\n| Literal precision, e.g. `%.10s` | `prec == 10` | `prec == 10` |\n| Star precision, e.g. `%.*s` | `prec == INT_MIN` | Actual `int` retrieved from the argument list |\n\nThe `arginfo` function should account for each `*` width or precision argument as a `PA_INT` argument. Its prototype is:\n\n```c\nint arginfo(const struct printf_info *info,\n            size_t n, int *argtypes);\n```\n\nIt returns the number of arguments required and fills `argtypes` with their types. The handler receives the resolved arguments through:\n\n```c\nint handler(FILE *stream,\n            const struct printf_info *info,\n            const void *const *args);\n```\n\nFor a negative width, `printf` treats it as left justification, changes the padding to spaces, and uses the corresponding positive width. A negative precision supplied through `*` means that the precision is omitted.",
+  "num_citations": 10,
+  "citation_text_tokens": 4987,
+  "citation_text_chars": 20197,
+  "search_queries": [
+    "glibc printf_info width precision star arginfo function value"
+  ],
+  "model_cost_usd": 0.00219535,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6454,
+    "output_tokens": 485,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 154
+  },
+  "latency_ms": 6671.626374940388,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061953500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

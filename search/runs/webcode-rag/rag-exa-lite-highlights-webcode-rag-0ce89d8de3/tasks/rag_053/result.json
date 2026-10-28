@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_053",
+  "prompt": "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes",
+  "attempt": 1,
+  "answer": "In an HTTP/3 `SETTINGS` frame, each setting identifier and value is encoded independently as a QUIC variable-length integer. The encoding uses the two most-significant bits of the first byte to indicate the total length:\n\n| Prefix bits | Total size | Usable value bits | Value range |\n|---|---:|---:|---:|\n| `00` | 1 byte | 6 bits | `0–63` |\n| `01` | 2 bytes | 14 bits | `0–16,383` |\n| `10` | 4 bytes | 30 bits | `0–1,073,741,823` |\n| `11` | 8 bytes | 62 bits | `0–4,611,686,018,427,387,903` |\n\nThus, HTTP/3 SETTINGS values may use 6, 14, 30, or 62 value bits; they are not fixed-width. RFC 9114 specifies that both the setting identifier and value use QUIC variable-length integers.",
+  "num_citations": 10,
+  "citation_text_tokens": 5400,
+  "citation_text_chars": 20605,
+  "search_queries": [
+    "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes"
+  ],
+  "model_cost_usd": 0.0020844,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6543,
+    "output_tokens": 374,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 150
+  },
+  "latency_ms": 6132.331165950745,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0060844,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

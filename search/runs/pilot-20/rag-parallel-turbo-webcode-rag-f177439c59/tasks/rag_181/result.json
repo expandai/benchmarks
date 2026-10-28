@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_181",
+ "prompt": "rust futures select_next_some behavior with None",
+ "attempt": 1,
+ "answer": "For `futures::stream::StreamExt::select_next_some()`:\n\n- It returns the next stream item as `Poll::Ready(item)` when one exists.\n- If `poll_next()` returns `None`, it does **not** complete with `None`. Instead, it:\n  - returns `Poll::Pending`,\n  - wakes the current task, and\n  - becomes terminated if the stream is terminated.\n- Polling it after termination triggers an assertion: `\"SelectNextSome polled after terminated\"`.\n- If a new item is later pushed into a `FuturesUnordered`, it can become usable again; the library tests explicitly cover this case.\n\nThis differs from `futures_option::SelectNextSome`, which resolves to `None` when no future is present.",
+ "num_citations": 10,
+ "citation_text_tokens": 2093,
+ "citation_text_chars": 7657,
+ "search_queries": [
+  "rust futures select_next_some behavior with None"
+ ],
+ "model_cost_usd": 0.00115655,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3086,
+  "output_tokens": 321,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 157
+ },
+ "latency_ms": 4615.56320800446,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00215655,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

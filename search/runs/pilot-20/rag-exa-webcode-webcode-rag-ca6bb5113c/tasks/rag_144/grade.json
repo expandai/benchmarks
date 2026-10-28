@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 550.0,
+    "total_citation_tokens": 5500.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides none of the gold target information. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [7] supports the claim that incrementing a null field leaves it null, using the example of null plus a number.\n2. The gold answer also claims that decrement, multiplication, and division do not update a null field.\n3. The retrieved citations do not explicitly establish those three behaviors. Citation [1] only indicates that a pull request concerns clarifying null behavior; it provides no substantive explanation. Therefore, at least one non-trivial part of the gold answer is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010971750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

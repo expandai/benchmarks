@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 124.2,
+    "total_citation_tokens": 1242.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the return type as vec2<T>, while the predicted answer gives a distinct predeclared structure type with old_value and exchanged members. It does not include the gold answer and contradicts it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The retrieved citations identify the return type as a structure, specifically `__atomic_compare_exchange_result<T>`. Citation [7] mentions `vec2` only to say that the function no longer returns one.\nStep 2: The gold target `vec2<T>` is not supported by the retrieved sources; the available evidence instead contradicts it. Therefore, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000662225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

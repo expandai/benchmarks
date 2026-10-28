@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_176",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 700.6,
+    "total_citation_tokens": 7006.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and provides none of the constraint restriction stated in the gold target. It does not contradict the target, so this is not an attempt.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim: at most one of `rsc` and `with-rsc` may reference a template, and the other must reference a regular resource.\n2. Citation [1] says a colocation constraint specifies both `rsc` and `with-rsc`, but does not explain whether either can reference a template or impose a limit.\n3. Citation [6] describes templates being referenced in primitives, but does not state the colocation restriction.\n4. No retrieved citation contains the specific restriction, so a non-trivial factual claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013905150000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

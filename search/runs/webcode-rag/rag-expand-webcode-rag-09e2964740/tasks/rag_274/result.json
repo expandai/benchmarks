@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_274",
+  "prompt": "lodash _.transform callback early exit iteration how",
+  "attempt": 1,
+  "answer": "Return `false` from the `_.transform` callback to stop iteration early:\n\n```js\nconst result = _.transform(collection, (accumulator, value, key) => {\n  accumulator[key] = value;\n\n  if (/* stop condition */) {\n    return false;\n  }\n}, {});\n```\n\nThe callback receives `(accumulator, value, key, collection)`. Mutate the accumulator; its return value is used to determine whether iteration continues. Returning `false` breaks the loop.",
+  "num_citations": 10,
+  "citation_text_tokens": 4107,
+  "citation_text_chars": 15584,
+  "search_queries": [
+    "lodash _.transform callback early exit iteration how"
+  ],
+  "model_cost_usd": 0.0013979,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5093,
+    "output_tokens": 104,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3349.505165941082,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0033979,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

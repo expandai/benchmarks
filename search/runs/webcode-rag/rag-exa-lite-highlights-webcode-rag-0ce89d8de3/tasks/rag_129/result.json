@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_129",
+  "prompt": "ripgrep NUL bytes handling without text flag",
+  "attempt": 1,
+  "answer": "Without `-a/--text`, ripgrep enables binary detection based on NUL (`\\0`) bytes:\n\n- In its default mode, seeing a NUL causes ripgrep to stop searching that file. In recursive searches, the file may be skipped.\n- If a match was found before the NUL, ripgrep may suppress the match, stop searching, and emit a warning.\n- `--binary` changes this: ripgrep continues after NUL bytes until it finds a match or reaches EOF, then may stop and warn.\n- NUL bytes cannot be matched directly while binary detection is enabled; use `-a/--text` to disable that detection.\n- Without `--text`, ripgrep replaces NUL bytes with line terminators during searching, which also helps avoid excessively large lines.\n- `--null-data` is different: it uses NUL as the line terminator and implies `--text`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4777,
+  "citation_text_chars": 19684,
+  "search_queries": [
+    "ripgrep NUL bytes handling without text flag"
+  ],
+  "model_cost_usd": 0.0019098,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6003,
+    "output_tokens": 341,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 149
+  },
+  "latency_ms": 5924.7127920389175,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059098,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

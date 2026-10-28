@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_281",
+  "prompt": "automake per-target compilation flags object rename trigger condition",
+  "attempt": 1,
+  "answer": "Automake renames object files when it detects **per-target compilation flags**—for example, `target_CFLAGS`, `target_CPPFLAGS`, or analogous per-target flag variables.\n\nIt renames **all objects belonging to that target**, without checking whether the source files are actually shared. For example:\n\n```make\ntrue_CPPFLAGS = -DEXIT_CODE=0\nfalse_CPPFLAGS = -DEXIT_CODE=1\n```\n\nBoth targets use `generic.c`, so Automake generates:\n\n```text\ntrue-generic.o\nfalse-generic.o\n```\n\nWithout per-target compilation flags, shared objects can retain their normal names, such as `version.o`. Object naming can also be affected by the target’s `_SHORTNAME` variable.",
+  "num_citations": 10,
+  "citation_text_tokens": 4235,
+  "citation_text_chars": 17773,
+  "search_queries": [
+    "automake per-target compilation flags object rename trigger condition"
+  ],
+  "model_cost_usd": 0.0015249,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5361,
+    "output_tokens": 154,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3736.7450839374214,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0085249,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

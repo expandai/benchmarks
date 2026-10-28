@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_252",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 59.0,
+    "total_citation_tokens": 590.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that CR-bit tracking is enabled by default at -O2 and higher, matching the gold target. Its additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that CR-bit tracking is enabled by default at -O2 and higher (citations [1], [3], and [8]); citations [2] and [4] also identify -O2 and above as the optimization threshold for the default.\nStep 2: The gold target, “-O2 and above,” is directly supported by the retrieved citations. No non-trivial claim is missing.\nStep 3: Citations [1], [2], [3], [4], and [8] contain information sufficient to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0008757249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

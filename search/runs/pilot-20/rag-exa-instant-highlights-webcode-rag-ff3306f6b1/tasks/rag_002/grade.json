@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_002",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 483.9,
+    "total_citation_tokens": 4839.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that when the flex-factor sum is less than 1, it is set to 1. The predicted answer instead says the tracks use only the original fractional sum and leave some leftover space unfilled, directly contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim about the flex factor sum: when that sum is less than 1, set the sum to 1.\n2. Citation [1] describes the resulting partial-fill behavior, but does not state that the sum is set to 1.\n3. Citation [2] says individual flex factors below 1 are treated as 1 during the find-fr-size algorithm; it does not state that a sum below 1 is set to 1. These are distinct claims, so the retrieved passages do not establish the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00158335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

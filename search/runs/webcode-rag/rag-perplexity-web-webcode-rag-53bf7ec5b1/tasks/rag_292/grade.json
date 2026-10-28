@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_292",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.111,
+    "avg_citation_tokens": 443.6,
+    "total_citation_tokens": 3992.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes the full restriction from the gold target: BigEndianStructure cannot contain pointer fields or field types that contain pointers. Its additional statement about other field types does not contradict that restriction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says non-native-byte-order structures cannot contain pointer-type fields.\n2. It also says they cannot contain other data types that contain pointer-type fields.\n3. Citation [1] states both restrictions explicitly, so all non-trivial claims in the gold target are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000938725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

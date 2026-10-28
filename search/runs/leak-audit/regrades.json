@@ -1,0 +1,153 @@
+{
+  "rag-firecrawl-search/rag_090": {
+    "system": "rag-firecrawl-search",
+    "task_id": "rag_090",
+    "leaked_indices": [
+      2
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "UNGROUNDED",
+    "recorded_grounded": 0.0,
+    "groundedness": "UNGROUNDED",
+    "grounded": 0.0,
+    "source_indices": [],
+    "reasoning": "1. Citation [2] discusses code blocks and helper functions, but does not state that braces in the relevant position denote a lambda literal. 2. None of the other citations identifies the braces as a lambda literal either. 3. The gold target\u2019s key factual claim is therefore unsupported by the retrieved citations.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.000379175,
+    "cost_known": true
+  },
+  "rag-firecrawl-search/rag_105": {
+    "system": "rag-firecrawl-search",
+    "task_id": "rag_105",
+    "leaked_indices": [
+      1
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "GROUNDED",
+    "recorded_grounded": 1.0,
+    "groundedness": "UNGROUNDED",
+    "grounded": 0.0,
+    "source_indices": [],
+    "reasoning": "The citation gives the return value 127 for an unspecified kind of \u201cvalues.\u201d It does not identify those values as invalid environment keys or values, or connect that condition specifically to os.spawnve. Therefore, the retrieved citations do not establish the answer for the condition asked about.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.000742925,
+    "cost_known": true
+  },
+  "rag-deepseek/rag_005": {
+    "system": "rag-deepseek",
+    "task_id": "rag_005",
+    "leaked_indices": [
+      2
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "GROUNDED",
+    "recorded_grounded": 1.0,
+    "groundedness": "GROUNDED",
+    "grounded": 1.0,
+    "source_indices": [
+      3
+    ],
+    "reasoning": "Step 1: Citation [3] explicitly states that a Back-Cover Text may be at most 25 words. Step 2: This supports the full gold target answer, with no additional non-trivial claims. Step 3: Citation [3] contains sufficient information to derive the answer.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.000348425,
+    "cost_known": true
+  },
+  "rag-deepseek/rag_031": {
+    "system": "rag-deepseek",
+    "task_id": "rag_031",
+    "leaked_indices": [
+      3
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "GROUNDED",
+    "recorded_grounded": 1.0,
+    "groundedness": "GROUNDED",
+    "grounded": 1.0,
+    "source_indices": [
+      1,
+      2,
+      3,
+      6,
+      8,
+      9
+    ],
+    "reasoning": "Step 1: The cited passages state that a Front-Cover Text may contain up to five words, or at most 5 words. Step 2: This directly supports the gold target answer, \u201cat most 5 words.\u201d No non-trivial factual claim is missing.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.000376925,
+    "cost_known": true
+  },
+  "rag-parallel-fast/rag_164": {
+    "system": "rag-parallel-fast",
+    "task_id": "rag_164",
+    "leaked_indices": [
+      10
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "GROUNDED",
+    "recorded_grounded": 1.0,
+    "groundedness": "GROUNDED",
+    "grounded": 1.0,
+    "source_indices": [
+      3
+    ],
+    "reasoning": "The gold target answer states that the Hibernate XML mapping node value \u201c.\u201d maps to the parent element. Citation [3] explicitly gives that mapping. The full factual claim is present in the retrieved citation.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.0004973,
+    "cost_known": true
+  },
+  "rag-deepseek/rag_283": {
+    "system": "rag-deepseek",
+    "task_id": "rag_283",
+    "leaked_indices": [
+      2
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "GROUNDED",
+    "recorded_grounded": 1.0,
+    "groundedness": "GROUNDED",
+    "grounded": 1.0,
+    "source_indices": [
+      1,
+      2,
+      4
+    ],
+    "reasoning": "Step 1: The citations explicitly identify shlex as the module used to parse or split PYTEST_ADDOPTS arguments.\nStep 2: The gold target answer is \u201cshlex module,\u201d and that information is directly present in the retrieved citations. The answer is fully grounded.\nStep 3: Citations [1], [2], and [4] contain supporting information.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.0006178,
+    "cost_known": true
+  },
+  "rag-deepseek/rag_285": {
+    "system": "rag-deepseek",
+    "task_id": "rag_285",
+    "leaked_indices": [
+      1
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "UNGROUNDED",
+    "recorded_grounded": 0.0,
+    "groundedness": "UNGROUNDED",
+    "grounded": 0.0,
+    "source_indices": [],
+    "reasoning": "1. The gold target claims that URI fragments or anchors are always checked using case-sensitive comparisons.\n2. Citations [2] and [4] show that Sphinx compiles the configured `linkcheck_case_insensitive_urls` patterns, but do not state how case sensitivity applies to URI fragments or anchor comparisons.\n3. Citation [6] describes splitting a URI at `#` and checking an anchor, but does not establish that the comparisons are always case-sensitive.\n4. The key factual claim is therefore not supported by the retrieved citations.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.0007678,
+    "cost_known": true
+  },
+  "rag-parallel-fast/rag_003": {
+    "system": "rag-parallel-fast",
+    "task_id": "rag_003",
+    "leaked_indices": [
+      4
+    ],
+    "remaining_citations": 9,
+    "recorded_groundedness": "UNGROUNDED",
+    "recorded_grounded": 0.0,
+    "groundedness": "UNGROUNDED",
+    "grounded": 0.0,
+    "source_indices": [],
+    "reasoning": "1. Citation [7] states which elements the CSS `page` property applies to: block-level elements in the root element\u2019s normal flow, with possible user-agent support for other elements such as table rows.\n2. None of the retrieved citations says that it applies to boxes that create class A break points. That specific claim is non-trivial and is not established by the cited information.\n3. Therefore, the sources do not contain all the information in the gold target answer.",
+    "judge_calls": 1,
+    "judge_cost_usd": 0.000596925,
+    "cost_known": true
+  }
+}

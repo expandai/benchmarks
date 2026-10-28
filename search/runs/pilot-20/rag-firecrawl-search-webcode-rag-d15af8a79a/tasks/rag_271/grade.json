@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 772.2,
+    "total_citation_tokens": 7722.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the range as 0–255 inclusive, matching the gold target. The additional statement about representation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the Sec-WebSocket-Version number's valid range is 0 to 255 inclusive.\n2. Citations [1] and [4] explicitly specify the version range as 0–255 and say the registry value is within 0 and 255 inclusive.\n3. These passages directly support the full range in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001402225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

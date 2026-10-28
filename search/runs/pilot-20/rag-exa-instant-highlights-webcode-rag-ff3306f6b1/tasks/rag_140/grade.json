@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_140",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.25,
+    "avg_citation_tokens": 519.5,
+    "total_citation_tokens": 4156.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five valid language options specified in the gold target, with no contradictions.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] lists the supported languages as html, latex, cals, wiki, and mediawiki. Citation [2] states the same options directly in the function documentation.\nStep 2: The retrieved sources contain every language named in the gold target answer, so the answer is fully grounded.\nStep 3: Citation [1] or [2] independently contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008326,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

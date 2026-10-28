@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 536.8,
+    "total_citation_tokens": 5368.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer names the relevant padded frame types but does not state which padding intermediaries should retain or may drop. It does not directly contradict the gold target; it simply fails to provide the requested requirement.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe padding in DATA and HEADERS frames, including the PADDED flag and padding's purpose. 2. They do not state the intermediary behavior in the gold target: that intermediaries SHOULD retain DATA-frame padding. 3. They also do not state that intermediaries MAY drop padding for HEADERS and PUSH_PROMISE frames; PUSH_PROMISE is not covered in the relevant excerpts. These are specific, non-trivial normative claims, so the retrieved citations do not contain sufficient information to derive the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001101225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

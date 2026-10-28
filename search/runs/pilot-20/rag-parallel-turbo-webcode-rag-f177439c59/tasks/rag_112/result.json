@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_112",
+ "prompt": "automake parallel make recovery locking portable test-and-set command",
+ "attempt": 1,
+ "answer": "`mkdir` is the portable test-and-set command for recovering safely under parallel `make`.\n\n```make\nif mkdir data.lock 2>/dev/null; then \\\n  rm -f data.stamp; \\\n  $(MAKE) $(AM_MAKEFLAGS) data.stamp; \\\n  result=$$?; rm -rf data.lock; exit $$result; \\\nelse \\\n  while test -d data.lock; do sleep 1; done; \\\nfi\n```\n\nThe first process that successfully creates `data.lock` performs the rebuild; other processes wait until the lock directory is removed.",
+ "num_citations": 10,
+ "citation_text_tokens": 6789,
+ "citation_text_chars": 26330,
+ "search_queries": [
+  "automake parallel make recovery locking portable test-and-set command"
+ ],
+ "model_cost_usd": 0.0021409,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7969,
+  "output_tokens": 124,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3847.399541991763,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0031409,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

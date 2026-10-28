@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 389.6,
+    "total_citation_tokens": 3896.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact address selection order in the gold target: private IPv4, public IPv4, then public IPv6. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited Prometheus documentation directly states the address-selection order. Step 2: The gold target answer contains exactly that order—private IPv4, then public IPv4, then public IPv6—with no missing factual claims. Step 3: Citations [1]–[6] each contain the exact ordering.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0008702250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

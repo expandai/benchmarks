@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_283",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 307.1,
+    "total_citation_tokens": 3071.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly identifies `shlex` via `shlex.split()` as the method used to parse `PYTEST_ADDOPTS`, matching the gold target. The additional explanation is consistent and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the method used to parse PYTEST_ADDOPTS as the shlex module.\n2. Citation [2] explicitly shows pytest applying `shlex.split()` to the environment-variable contents.\n3. This directly supports the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008096,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

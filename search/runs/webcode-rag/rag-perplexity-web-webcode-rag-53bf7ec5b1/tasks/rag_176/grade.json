@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_176",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 387.4,
+    "total_citation_tokens": 3874.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the key restriction from the gold target: only one of `rsc` or `with-rsc` may reference a resource template, and the other must reference a regular resource. The example is consistent with that restriction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citations [1] and [3] state the restriction directly.\nStep 2 — Groundedness: The gold target’s full factual claim—that only one of `rsc` or `with-rsc` may reference a template and the other must be a regular resource—is explicitly present in the retrieved citations. Therefore, the answer is GROUNDED.\nStep 3 — Source attribution: Citations [1] and [3] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000869725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

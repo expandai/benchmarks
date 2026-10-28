@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_171",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 517.5,
+    "total_citation_tokens": 5175.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the adjustment factor 1 + (r − 1)³, matching the gold target. Its additional explanation and formulas do not contradict the requested proportion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] directly gives the spread-distance adjustment factor as 1 + (r-1)³ and defines r as the ratio of the border radius to the spread distance.\n2. Citation [5] explicitly states the same formula.\n3. The gold target contains no additional non-trivial claim beyond this formula, so the retrieved citations fully support it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001201475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

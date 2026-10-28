@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_074",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 408.5,
+    "total_citation_tokens": 4085.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the measured value is twice the number of queued connections. The predicted answer does not provide that behavior and instead describes avg_queue as an average over the last 1,024 requests, which conflicts with the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe queued-request counts and the averaging window for HAProxy stats. 2. None states that the measured value is twice the number of queued connections. 3. That specific claim is non-trivial and is not derivable from the retrieved citations, so the gold target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001005475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

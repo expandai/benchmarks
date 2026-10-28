@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_146",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 398.1,
+    "total_citation_tokens": 3981.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `display: contents` does not suppress `::before` and `::after`, matching the gold target that these pseudo-elements still exist. Its additional caveats do not contradict that point.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that ::before and ::after pseudo-elements still exist when display: contents is used.\n2. Citation [8] states this explicitly, so the non-trivial claim in the gold target is supported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000883475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

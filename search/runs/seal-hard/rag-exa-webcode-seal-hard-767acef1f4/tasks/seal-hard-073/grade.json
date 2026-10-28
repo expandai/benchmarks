@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-073",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 518.9,
+    "total_citation_tokens": 5189.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer exactly matches the gold target, Block sort.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] identifies “Block sort” and states it is stable and in-place, with best-case n. 2. However, its worst-case complexity is blank, and the citations do not establish that Block sort is a comparison sort with worst-case O(n log n). 3. Citation [2] describes block merge sort as stable, linear, and in-place, but does not provide the claimed worst-case complexity or explicitly equate it with the Block sort entry. Therefore, the citations do not contain all the non-trivial information needed to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00113425,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

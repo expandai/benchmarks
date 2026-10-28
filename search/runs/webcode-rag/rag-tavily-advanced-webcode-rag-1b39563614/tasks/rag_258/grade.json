@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_258",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 427.0,
+    "total_citation_tokens": 4270.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `:ignore` is permitted only when `Ecto.Repo.init/2` is called with the `:supervisor` context, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The retrieved citations explicitly state that `:ignore` is permitted only when the callback is invoked in the `:supervisor` case.\nStep 2: The gold target answer is exactly this restriction, and the citations contain the full non-trivial claim.\nStep 3: Citations [1], [2], and [3] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009026,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_152",
+ "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+ "attempt": 1,
+ "answer": "- **`NS_TEST_ASSERT_*`**: Use in normal test-case code. If the check fails, it reports the error and aborts the current test case. This is appropriate for critical prerequisites or checks where continuing could cause cascading failures.\n- **`NS_TEST_EXPECT_*`**: Use primarily inside `void` methods, especially callbacks used by your test programs. It reports a failure but allows execution to continue, so multiple checks can be performed.\n\nFor floating-point comparisons, use the tolerance form, such as `NS_TEST_ASSERT_MSG_EQ_TOL` or `NS_TEST_EXPECT_MSG_EQ_TOL`, rather than plain `*_MSG_EQ`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3859,
+ "citation_text_chars": 15104,
+ "search_queries": [
+  "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+ ],
+ "model_cost_usd": 0.0014611,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5197,
+  "output_tokens": 135,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2830.4579589748755,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0024611,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

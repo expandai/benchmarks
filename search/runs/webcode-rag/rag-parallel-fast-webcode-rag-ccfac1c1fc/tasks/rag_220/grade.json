@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 228.9,
+    "total_citation_tokens": 2289.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer correctly states that when a bytes value is added without an explicit filename, aiohttp uses the field name as the filename and emits a deprecation warning. The question does not specify content_transfer_encoding, so omitting that exception does not contradict the requested default behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] shows the bytes-value behavior and explicitly sets filename to name when filename and content_transfer_encoding are both None.\nStep 2: This supports the gold target’s claim that the name argument is used as the fallback filename unless content_transfer_encoding is specified.\nStep 3: Citation [1] contains the relevant information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000990475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 247.1,
+    "total_citation_tokens": 2471.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target indicates the server name is logged as “<CACHE>” when HAProxy serves a cached object. The predicted answer says the value is blank, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] says that serving an object from cache changes the server-name field in the log. 2. The quoted passage does not identify the replacement as `<CACHE>`; the displayed replacement is blank. 3. Since the specific value in the gold target is not established by the retrieved text, the target is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009067249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

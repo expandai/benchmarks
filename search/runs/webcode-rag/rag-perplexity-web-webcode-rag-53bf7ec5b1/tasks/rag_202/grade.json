@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_202",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 398.4,
+    "total_citation_tokens": 3984.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the gold slowdown factor of 18.6×, but its additional 500,000-access timings imply a slowdown of 0.056 ÷ 0.005 = 11.2×, contradicting that factor. The contradictory claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target asks for the slowdown factor for internal property proxy access in V8.\n2. Citations [1] and [2] explicitly compare external direct access with internal proxy access and state that the internal access is an “18.6x” slowdown.\n3. The gold target’s stated factor is therefore directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009669749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

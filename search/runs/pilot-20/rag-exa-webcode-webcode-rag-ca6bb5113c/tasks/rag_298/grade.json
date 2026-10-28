@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_298",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 130.1,
+    "total_citation_tokens": 1301.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies `process.env.NODE_WORKER_ID` being undefined as the condition. The predicted answer instead says the condition is based on `process.env.NODE_UNIQUE_ID`, so it does not provide the gold answer and gives a different environment variable.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target says the condition involves `process.env.NODE_WORKER_ID` being undefined. The retrieved documentation instead identifies `process.env.NODE_UNIQUE_ID` as the determining variable and says `isPrimary` is true when that variable is undefined. Since the specific variable name in the gold target is absent from the citations, the gold target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00060385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

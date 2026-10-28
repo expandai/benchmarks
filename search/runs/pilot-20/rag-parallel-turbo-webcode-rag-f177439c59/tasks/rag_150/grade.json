@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_150",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 499.3,
+    "total_citation_tokens": 4993.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target names `doc` and `doctest`, but it also claims that `test` is default-hidden. The gold target specifies only `doc` and `doctest`, so the added claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the default-hidden attributes as “doc and doctest.”\n2. Citations [4], [5], and [8] explicitly state that rustdoc hides both by default.\n3. The full non-trivial information in the gold target is present in the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0013276,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

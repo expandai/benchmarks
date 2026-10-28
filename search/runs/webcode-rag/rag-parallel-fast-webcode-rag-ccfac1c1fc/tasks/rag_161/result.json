@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_161",
+ "prompt": "valgrind massif stacks trace increase decrease verbosity requirement",
+ "attempt": 1,
+ "answer": "For Massif stack increase/decrease traces:\n\n```bash\nvalgrind --tool=massif --stacks=yes -v -v -v -v ./your_program\n```\n\n- Enable stack profiling with `--stacks=yes`; it is disabled by default.\n- Use at least four `-v` options (`-v -v -v -v`) to make Massif produce a trace for each stack increase and decrease.\n- The stack-increase trace contains the IP address that increased the stack.\n- This produces a lot more output and slows Massif significantly.",
+ "num_citations": 10,
+ "citation_text_tokens": 2159,
+ "citation_text_chars": 9371,
+ "search_queries": [
+  "valgrind massif stacks trace increase decrease verbosity requirement"
+ ],
+ "model_cost_usd": 0.0010598,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3107,
+  "output_tokens": 236,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 113
+ },
+ "latency_ms": 4859.3154170084745,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020598,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

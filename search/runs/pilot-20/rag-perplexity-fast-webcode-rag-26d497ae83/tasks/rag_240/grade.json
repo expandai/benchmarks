@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_240",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 362.0,
+    "total_citation_tokens": 3620.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target point that a `SelectedListValue` allows only one `SelectedValue` as an element. However, it also says a GraphQL `ListValue` contains one or more values; GraphQL list values can be empty, so this added claim is inaccurate.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that a SelectedListValue allows only one SelectedValue as an element. Step 2: This contains the full non-trivial claim in the gold target answer. Step 3: Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009587249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

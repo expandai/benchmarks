@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_060",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 384.6,
+    "total_citation_tokens": 3846.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not attempt to state whether the check is true by default. It neither includes nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations mention `ifgt` as a condition and describe how empty strings and integer expressions evaluate. Step 2 — None states what happens to an `ifgt`/`iflt` check when its value has a non-integer type, nor that such a check is considered true by default. That specific non-trivial claim is therefore missing. Step 3 — No citation contains information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00093485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

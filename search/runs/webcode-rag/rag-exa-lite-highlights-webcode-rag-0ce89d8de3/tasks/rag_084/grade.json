@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_084",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 471.8,
+    "total_citation_tokens": 4718.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when ssl_context is specified, aiohttp.web.run_app() uses HTTPS with port 8443, matching the gold target. The additional information about the plain-HTTP default does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is 8443. Citations [2] and [4] state that when the port is unspecified, aiohttp selects 8443 if an SSL context is set. Citation [5] also shows a test confirming that behavior. The target is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0009736,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

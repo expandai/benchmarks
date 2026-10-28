@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_193",
+ "prompt": "Spring Boot Undertow access log %D response time prerequisite",
+ "attempt": 1,
+ "answer": "Enable Undertow’s `record-request-start-time` server option:\n\n```properties\nserver.undertow.accesslog.enabled=true\nserver.undertow.accesslog.pattern=%t %a %r %s (%D ms)\nserver.undertow.options.server.record-request-start-time=true\n```\n\nRecording request start times is required for `%D` to work in the access-log pattern.",
+ "num_citations": 10,
+ "citation_text_tokens": 3438,
+ "citation_text_chars": 10952,
+ "search_queries": [
+  "Spring Boot Undertow access log %D response time prerequisite"
+ ],
+ "model_cost_usd": 0.0012866,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4763,
+  "output_tokens": 80,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3506.433125003241,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020366,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

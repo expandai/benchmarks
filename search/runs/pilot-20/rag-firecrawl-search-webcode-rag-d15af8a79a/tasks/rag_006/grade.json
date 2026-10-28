@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_006",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 119.1,
+    "total_citation_tokens": 1191.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide the required CSS function, calc(). It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The specification excerpt says a source-size-value may be a length or auto, but it does not name the CSS function calc().\nStep 2 — The gold answer specifically identifies calc(), a non-trivial detail not stated in the citations. The retrieved sources therefore do not contain enough information to derive the gold answer.\nStep 3 — No citation specifically contains the answer calc().",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000507975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

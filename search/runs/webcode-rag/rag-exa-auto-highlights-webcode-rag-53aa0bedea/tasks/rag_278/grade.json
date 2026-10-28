@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_278",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 491.1,
+    "total_citation_tokens": 4911.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies type caching as the reason. The predicted answer explicitly explains that cached generic types can cause Union arguments to appear in a different order in get_args(), so it matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly identifies generic type caching as the reason `get_args` may return Union arguments in a different order. Citation [2] also explicitly attributes the behavior to type caching.\nStep 2: The gold target answer, “type caching,” is fully supported by the retrieved passages.\nStep 3: Citation [1] contains sufficient information to derive the answer; citation [2] corroborates it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010521,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

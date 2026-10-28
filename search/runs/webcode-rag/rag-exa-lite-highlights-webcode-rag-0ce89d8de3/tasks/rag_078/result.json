@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_078",
+  "prompt": "jq |= update-assignment RHS produces no values",
+  "attempt": 1,
+  "answer": "With `|=`, an RHS that produces no values—such as `empty`—does not make the whole jq expression produce no output. It means “delete the path being updated,” equivalent to `del(path)`.\n\nExamples:\n\n```jq\nnull | .a |= empty\n# null\n```\n\n```jq\n{\"a\": 1, \"b\": 2} | .a |= empty\n# {\"b\": 2}\n```\n\nThis differs from `=`:\n\n```jq\nnull | .a = empty\n# no output\n```\n\nFor multiple paths, jq 1.6 has a known bug:\n\n```sh\necho '[1, 2]' | jq '.[] |= empty'\n# [2]\n```\n\nOnly the first path is deleted instead of all paths. For that case, use `del` explicitly:\n\n```jq\ndel(.[])\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 3577,
+  "citation_text_chars": 13588,
+  "search_queries": [
+    "jq |= update-assignment RHS produces no values"
+  ],
+  "model_cost_usd": 0.00162375,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4710,
+    "output_tokens": 372,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 187
+  },
+  "latency_ms": 5798.388083931059,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00562375,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

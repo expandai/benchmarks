@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_298",
+  "prompt": "node.js cluster isMaster how determined condition",
+  "attempt": 1,
+  "answer": "`cluster.isMaster` is a deprecated alias for `cluster.isPrimary`.\n\nIt is determined by `process.env.NODE_UNIQUE_ID`:\n\n- If `process.env.NODE_UNIQUE_ID` is `undefined`, `cluster.isMaster` is `true`.\n- Otherwise, it is `false` because the process is a worker.\n\nUse:\n\n```js\nconst cluster = require('node:cluster');\n\nif (cluster.isPrimary) {\n  // primary process\n} else {\n  // worker process\n}\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 1320,
+  "citation_text_chars": 5115,
+  "search_queries": [
+    "node.js cluster isMaster how determined condition"
+  ],
+  "model_cost_usd": 0.00067605,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2196,
+    "output_tokens": 106,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2831.7009169841185,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00767605,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

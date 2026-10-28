@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 Expand AI, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----------------------------------------------------------------------------
+
+Third-party material and pinned dependencies (not vendored; see search/README.md "Reproduce")
+
+* exa-labs/benchmarks (the harness, cloned into search/upstream at commit
+  0d817af66fb6c47afb7b097b9f4e40a763b6fc3a): MIT, Copyright (c) 2025 Exa Labs. Its README notes
+  that upstream datasets retain their own terms: BrowseComp is MIT, FRAMES and DeepSearchQA are
+  Apache-2.0, WideSearch is CC0-1.0; BrowseComp is decrypted only in memory and must not be republished.
+* ArtificialAnalysis/stirrup (the agent loop, cloned into search/aa-stirrup/.stirrup-src at commit
+  c092cee80ce09cd1dfb93aef053296a9ecd9dbb6): MIT.
+* Datasets read at pinned revisions from the Hugging Face Hub at run time, each under its own license:
+  google/frames-benchmark (Apache-2.0), google/simpleqa-verified (MIT), vtllms/sealqa (Apache-2.0),
+  ArtificialAnalysis/AA-Omniscience-Public (Apache-2.0; a byte-identical copy is included at
+  search/data/AA-Omniscience_dataset_public.csv so the offline tests run without network; its
+  license text and NOTICE are in search/data/LICENSE-Apache-2.0.txt).
+* Verbatim grader prompts reproduced in search/METHODOLOGY.md, search/bakeoff/official_prompts.py
+  and search/aa-stirrup/aastirrup/grader_prompt.txt are quoted from the benchmark designers' papers and
+  notebooks (FRAMES, SimpleQA Verified, SealQA, AA-Omniscience) for the purpose of faithful
+  evaluation; copyright remains with their authors. Vendor prices quoted in search/METHODOLOGY.md are
+  the vendors' published list prices as read on the stated dates.
+* Adapters for Exa, Perplexity, Parallel, Tavily and Brave are upstream's (exa-labs/benchmarks, MIT)
+  and are used unmodified from the pinned clone.
+* The stored run records (search/runs/, search/aa-stirrup/runs/) contain questions, model
+  answers, judge verdicts and reasoning, scores, costs, latencies and per-record citation counts;
+  the URLs, titles and text the search providers returned have been removed (search/runs/EXCLUDED.md).

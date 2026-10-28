@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_151",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 389.8,
+    "total_citation_tokens": 3898.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies InvalidAccessError as the exception required when too many values are supplied. Its note about Chrome potentially deviating describes an implementation discrepancy and does not negate the requested specification answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the exception type thrown when CSSFontFeatureValuesMap.set() receives too many values. 2. Citations [8] and [9] explicitly state that the method throws InvalidAccessError when the input sequence exceeds the allowed number of values. 3. Citation [2] also identifies InvalidAccessError as the spec-required exception in the discussion of exceeding the limit. The target answer is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0011626,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

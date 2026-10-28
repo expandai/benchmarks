@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_283",
+  "prompt": "pytest PYTEST_ADDOPTS environment variable parsing method",
+  "attempt": 1,
+  "answer": "`PYTEST_ADDOPTS` is parsed as a command line using Python’s `shlex` module. Its options are prepended to the user-provided command-line arguments:\n\n```text\n<configuration file addopts> $PYTEST_ADDOPTS <extra command-line arguments>\n```\n\nFor example:\n\n```bash\nexport PYTEST_ADDOPTS=\"-v\"\npytest -m slow\n```\n\nThe resulting command-line options are equivalent to:\n\n```text\npytest -v -m slow\n```\n\n`PYTEST_ADDOPTS` is handled by pytest and is not included in the `args` attribute of `InvocationParams`.",
+  "num_citations": 10,
+  "citation_text_tokens": 2219,
+  "citation_text_chars": 9211,
+  "search_queries": [
+    "pytest PYTEST_ADDOPTS environment variable parsing method"
+  ],
+  "model_cost_usd": 0.0009635,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3221,
+    "output_tokens": 132,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3480.1875840639696,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059635,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

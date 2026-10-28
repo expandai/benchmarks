@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_250",
+ "prompt": "python strptime %Z accepted hard-coded timezone values",
+ "attempt": 1,
+ "answer": "For Python’s `datetime.strptime()` with `%Z`, the hard-coded accepted timezone names are:\n\n- `UTC`\n- `GMT`\n\nIt also accepts any timezone name in `time.tzname` for the machine’s locale. Therefore, `EST` is accepted only if it appears in the machine’s local `time.tzname`; it is not universally accepted.\n\n`%Z` alone does **not** create an aware `datetime`; the parsed timezone name is discarded. Use `%z` to produce an aware object:\n\n```python\ndatetime.strptime(\"UTC+0000\", \"%Z%z\")\n# datetime.datetime(1900, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)\n```\n\nSource: [Python datetime documentation](https://docs.python.org/3.12/library/datetime.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 6458,
+ "citation_text_chars": 24006,
+ "search_queries": [
+  "python strptime %Z accepted hard-coded timezone values"
+ ],
+ "model_cost_usd": 0.00228085,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7852,
+  "output_tokens": 265,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 88
+ },
+ "latency_ms": 4105.43595906347,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00328085,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

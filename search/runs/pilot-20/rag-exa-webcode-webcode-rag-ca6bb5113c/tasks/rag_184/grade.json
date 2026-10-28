@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_184",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 439.4,
+    "total_citation_tokens": 4394.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that Data.List.maximumBy chooses the rightmost element when elements compare equal, matching the gold target. Its examples and additional tie-breaking alternatives are consistent with that claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when maximumBy encounters multiple largest elements, it chooses the rightmost.\n2. Citations [1] and [2] state this directly, including the tie-breaking behavior.\n3. All non-trivial information in the gold target is present in the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000951975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

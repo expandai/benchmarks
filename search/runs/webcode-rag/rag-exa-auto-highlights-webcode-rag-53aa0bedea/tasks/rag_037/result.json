@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_037",
+  "prompt": "rust repr packed struct nested repr align member restriction",
+  "attempt": 1,
+  "answer": "Rust forbids a `#[repr(packed)]` struct from containing a `#[repr(align(...))]` type, even transitively through nested structs, unions, or fields. This produces error E0588. The restriction applies even when the packed alignment is at least as large as the aligned type’s alignment.\n\n```rust\n#[repr(align(16))]\nstruct Aligned(i32);\n\n#[repr(packed)]\nstruct Packed(Aligned); // error[E0588]\n```\n\nThe restriction exists because GCC and MSVC can disagree about which alignment wins for a type that is both packed and aligned. Rust therefore rejects the ambiguous combination.\n\nThe reverse nesting is allowed:\n\n```rust\n#[repr(packed)]\nstruct Packed(i32);\n\n#[repr(align(16))]\nstruct Aligned(Packed); // allowed\n```\n\nAlso, `#[repr(packed)]` and `#[repr(align(...))]` cannot be applied to the same type. References to packed fields cannot be created because those fields may be unaligned. (Rust error E0588; Rust `repr` documentation.)",
+  "num_citations": 10,
+  "citation_text_tokens": 5605,
+  "citation_text_chars": 19997,
+  "search_queries": [
+    "rust repr packed struct nested repr align member restriction"
+  ],
+  "model_cost_usd": 0.0021532,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7279,
+    "output_tokens": 278,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 50
+  },
+  "latency_ms": 5810.7858339790255,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0091532,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_085",
+ "prompt": "click CliRunner isolation stderr error handling mode",
+ "attempt": 1,
+ "answer": "In Click’s `CliRunner.isolation()`, the captured `stderr` stream is opened with:\n\n```python\nerrors=\"backslashreplace\"\n```\n\nrather than the default `\"strict\"` error handling mode. This prevents encoding errors from being raised when stderr contains undecodable bytes.\n\nAlso:\n\n- Click 8.1.x: use `CliRunner(mix_stderr=False)` for separately captured stdout and stderr.\n- Click 8.2+: `mix_stderr` was removed; stdout and stderr are always captured separately.\n- `catch_exceptions=False` makes command exceptions propagate instead of being stored in `result.exception`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2867,
+ "citation_text_chars": 12280,
+ "search_queries": [
+  "click CliRunner isolation stderr error handling mode"
+ ],
+ "model_cost_usd": 0.00148805,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4196,
+  "output_tokens": 366,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 234
+ },
+ "latency_ms": 4898.342708009295,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00223805,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

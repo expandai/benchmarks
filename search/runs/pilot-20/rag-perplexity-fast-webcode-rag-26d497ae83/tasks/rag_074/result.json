@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_074",
+ "prompt": "haproxy avg_queue no active server behavior",
+ "attempt": 1,
+ "answer": "When there are no active servers, `avg_queue` treats **twice the number of queued connections** as the measured value.\n\nIn other words:\n\n```text\navg_queue = queued connections × 2\n```\n\nThis is described as a fair estimate because HAProxy expects one server to become available soon, while preferring to send new traffic elsewhere.",
+ "num_citations": 10,
+ "citation_text_tokens": 3231,
+ "citation_text_chars": 14570,
+ "search_queries": [
+  "haproxy avg_queue no active server behavior"
+ ],
+ "model_cost_usd": 0.00115485,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4260,
+  "output_tokens": 75,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2254.0327919414267,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00215485,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

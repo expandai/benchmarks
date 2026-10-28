@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_077",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 378.1,
+    "total_citation_tokens": 3781.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives Linux kernel 2.1.126 as the starting version, matching the gold target's minimum version; “starting with” implies that version and later.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] explicitly state that GNU/Linux supports O_NOFOLLOW on kernel version 2.1.126 and later. Citation [4] additionally says the flag was added in Linux 2.1.126.\nStep 2: The sources contain the gold target’s full factual claim, including the minimum version and that later versions are supported. The answer is GROUNDED.\nStep 3: Citations [1] and [2] directly provide the answer; citation [4] supports the version threshold.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000856725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

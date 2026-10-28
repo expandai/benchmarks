@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_286",
+ "prompt": "haproxy base32 fetch hash function algorithm",
+ "attempt": 1,
+ "answer": "HAProxy’s `base32` fetch is a **32-bit SDBM-style hash followed by `full_hash()` avalanche mixing**. It is not Base32 encoding.\n\nAlgorithm:\n\n1. Initialize `hash = 0`.\n2. Hash the first `Host` header value, if present.\n3. Parse the request path.\n4. Exclude the query string beginning with `?`.\n5. Append/hash the path only if it begins with `/`.\n6. Apply `full_hash(hash)`.\n7. Return the result as a signed integer sample.\n\nThe per-byte hash recurrence is:\n\n```c\nhash = byte + (hash << 6) + (hash << 16) - hash;\n```\n\nEquivalently:\n\n```text\nhash = byte + hash * 65599\n```\n\nConceptually:\n\n```text\nhash = 0\n\nfor byte in Host:\n    hash = byte + hash * 65599\n\nfor byte in path_before_question_mark\n    if path starts with \"/\":\n        hash = byte + hash * 65599\n\nreturn full_hash(hash)\n```\n\nThe hashing method is identified in HAProxy’s hashing documentation as **SDBM**, and the source code then applies the full avalanche hash.",
+ "num_citations": 10,
+ "citation_text_tokens": 5535,
+ "citation_text_chars": 20530,
+ "search_queries": [
+  "haproxy base32 fetch hash function algorithm"
+ ],
+ "model_cost_usd": 0.00236455,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6934,
+  "output_tokens": 526,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 269
+ },
+ "latency_ms": 26061.899167019874,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00936455,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

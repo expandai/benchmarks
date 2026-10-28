@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_053",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 540.0,
+    "total_citation_tokens": 5400.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that HTTP/3 SETTINGS values may use 6, 14, 30, or 62 value bits, matching the gold target. Its additional explanation is consistent with QUIC variable-length integer encoding.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] establishes that HTTP/3 SETTINGS identifiers and values use QUIC variable-length integers.\n2. Citation [3] gives the usable bit sizes for QUIC variable-length integers: 6, 14, 30, or 62 bits.\n3. Together, these passages support every bit size stated in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001052975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

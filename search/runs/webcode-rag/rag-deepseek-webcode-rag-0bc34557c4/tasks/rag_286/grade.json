@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 331.3,
+    "total_citation_tokens": 3313.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer gives the SDBM recurrence (`byte + (hash << 6) + (hash << 16) - hash`) and says to apply HAProxy’s `full_hash` avalanche function to the result. This matches the gold target, even though it does not explicitly call the recurrence SDBM.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The cited code shows the per-character recurrence `hash = character + (hash << 6) + (hash << 16) - hash`, which identifies the SDBM hash algorithm.\n2. The citation explicitly says the URL hash is followed by a full avalanche hash, and the code applies `full_hash(hash)` to the result.\n3. Together, the retrieved source supports all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010106,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

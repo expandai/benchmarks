@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_167",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 382.3,
+    "total_citation_tokens": 3823.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that with Beautiful Soup’s html5lib parser, sourcepos gives the position of the final `>` of the opening tag, matching the gold target. The added detail about zero-based indexing does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that for html5lib, `sourcepos` points to the final character of the opening tag.\n2. Citation [2] explicitly identifies that character as the final greater-than sign.\n3. The gold target answer, “position of the final greater-than sign,” is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008422249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

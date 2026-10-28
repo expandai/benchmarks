@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_085",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 256.2,
+    "total_citation_tokens": 2562.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target is the specific error-handling mode `backslashreplace`. The predicted answer only says that `click.File` has an `errors` argument for specifying an error-handling mode, without naming `backslashreplace`. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations mention CliRunner-related stderr stream behavior and an `errors` parameter, but neither states the specific error-handling mode `backslashreplace`.\n2. Since that specific value is a non-trivial factual claim in the gold target and is absent from the retrieved citations, the citations do not contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007877250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

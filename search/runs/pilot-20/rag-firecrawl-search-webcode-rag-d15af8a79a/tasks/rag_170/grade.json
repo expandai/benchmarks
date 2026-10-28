@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_170",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 54.2,
+    "total_citation_tokens": 542.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly says that historically, executing `next` in an `END` action terminated awk, matching the gold target. The additional information does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [4] explicitly states the historical behavior when `next` is executed in an `END` action: awk terminates.\n2. This directly supports the gold target answer, “cause awk to terminate.”\n3. No additional non-trivial claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00038397500000000005,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

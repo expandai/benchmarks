@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 418.2,
+    "total_citation_tokens": 4182.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies valid HTTP status codes from 100 to 599. The predicted answer instead says res.sendStatus accepts codes through 999, which contradicts the gold range.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] explicitly state the range 100 to 599; citation [2] specifies that the endpoints are inclusive. Step 2: This covers the gold target answer, “100 to 599,” with no missing non-trivial claims. Step 3: Citations [1] and [2] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009261,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

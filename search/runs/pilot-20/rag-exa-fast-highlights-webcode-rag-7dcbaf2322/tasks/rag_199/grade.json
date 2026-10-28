@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_199",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 535.5,
+    "total_citation_tokens": 5355.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that macOS may return EDEADLK from pthread_rwlock_trywrlock(), contrasting with EBUSY on glibc/Linux. This captures the gold target’s key point that macOS 12 returns EDEADLK instead of EBUSY, and it adds no contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support that macOS may return EDEADLK, rather than Linux's EBUSY, when the calling thread already owns the write lock.\n2. The gold target specifically claims this behavior on macOS 12.\n3. None of the citations identify macOS 12, so that specific version claim is unsupported. Because this is a non-trivial detail, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00125535,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

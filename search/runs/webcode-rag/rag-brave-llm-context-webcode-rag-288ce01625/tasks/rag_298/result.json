@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_298",
+  "prompt": "node.js cluster isMaster how determined condition",
+  "attempt": 1,
+  "answer": "`cluster.isMaster` is determined by `process.env.NODE_UNIQUE_ID`:\n\n- If `process.env.NODE_UNIQUE_ID` is `undefined`, `cluster.isMaster` is `true`.\n- Otherwise, it is `false` because the process is a worker.\n\nIn current Node.js versions, `cluster.isMaster` is a deprecated alias for `cluster.isPrimary`.",
+  "num_citations": 10,
+  "citation_text_tokens": 1932,
+  "citation_text_chars": 7912,
+  "search_queries": [
+    "node js cluster isMaster how determined condition"
+  ],
+  "model_cost_usd": 0.0008421,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2985,
+    "output_tokens": 80,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3764.9842909304425,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0058421,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

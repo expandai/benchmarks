@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_010",
+ "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+ "attempt": 1,
+ "answer": "HTTP/2 treats intermediary handling differently:\n\n- **DATA padding:** Intermediaries **SHOULD maintain** it. The entire DATA payload—including the Pad Length and padding—is subject to flow control ([RFC 9113, §6.1](https://www.rfc-editor.org/rfc/rfc9113.html)).\n- **HEADERS and PUSH_PROMISE padding:** Intermediaries **MAY pass it through, re-pad it, or remove it**. These frames are not flow-controlled; excessive padding can block other streams similarly to a large header block ([HTTP/2 issue #505](https://github.com/httpwg/http2-spec/issues/505)).\n\nThe padding format and sender/receiver requirements for HEADERS and PUSH_PROMISE were later stated explicitly: padding must be zero when sent, and a receiver may treat non-zero padding as a `PROTOCOL_ERROR` ([RFC 9113, §§6.2 and 6.6](https://www.rfc-editor.org/rfc/rfc9113.html)).",
+ "num_citations": 10,
+ "citation_text_tokens": 4973,
+ "citation_text_chars": 20666,
+ "search_queries": [
+  "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+ ],
+ "model_cost_usd": 0.0020354,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6275,
+  "output_tokens": 389,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 175
+ },
+ "latency_ms": 9695.102667086758,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0090354,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

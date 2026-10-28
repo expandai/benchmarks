@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_285",
+ "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+ "attempt": 1,
+ "answer": "`sphinx` applies `linkcheck_case_insensitive_urls` only to the URL portion before `#`.\n\n- The configured regex is matched against `req_url`, which excludes the fragment.\n- URL comparison is case-insensitive when matched.\n- URI fragments remain case-sensitive: `_normalise_url()` case-folds the portion before `#` but preserves the fragment unchanged.\n- Anchor checking therefore still requires the fragment’s case to match the corresponding HTML `id` or `name`.\n- The fragment is URL-decoded before anchor checking.\n\nFor example, a URL such as `https://example.org/PATH#Section` may compare case-insensitively in its path, but `#Section` and `#section` are treated as different anchors.",
+ "num_citations": 10,
+ "citation_text_tokens": 4833,
+ "citation_text_chars": 20254,
+ "search_queries": [
+  "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+ ],
+ "model_cost_usd": 0.001878,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6231,
+  "output_tokens": 267,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 110
+ },
+ "latency_ms": 4421.399500104599,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0058779999999999995,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

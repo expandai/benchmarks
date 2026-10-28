@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 496.6,
+    "total_citation_tokens": 4966.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that remapping is limited to at most 8 bits of precision. The predicted answer explicitly says there is no separate remap precision limit and instead emphasizes a colormap-size limit, contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations discuss a colormap-size limit of 65,536 colors and describe what `-depth 8` does to channel precision. Step 2: None states that remapping is limited to at most 8 bits of precision. A maximum number of colormap entries is not the same as a maximum per-channel precision, so the target’s claim is not derivable from these passages. Step 3: No citation contains sufficient information to establish the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001309225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

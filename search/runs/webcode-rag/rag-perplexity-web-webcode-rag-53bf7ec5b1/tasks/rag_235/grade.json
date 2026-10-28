@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_235",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 355.3,
+    "total_citation_tokens": 3553.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a Duration’s year and month fields must be set to 0, matching the gold target. Its additional explanation is consistent with that constraint.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited Kernel documentation explicitly states that a Duration passed to `to_timeout` must have both `year` and `month` fields set to `0`.\nStep 2: This matches the entire gold target answer; no non-trivial factual claim is missing.\nStep 3: Citations [4]–[9] each contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0009167250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

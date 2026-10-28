@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 465.6,
+    "total_citation_tokens": 4656.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that with `--null-data`, NUL bytes are treated as line terminators, matching the gold target. It also clarifies that this option implies `--text` and distinguishes that behavior from ripgrep’s default binary detection.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states how ripgrep handles NUL bytes when the text flag is not enabled. Step 2: This supports the full gold target claim that NUL bytes are replaced with line terminators. Step 3: Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001393975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_241",
+  "prompt": "multiprocessing log_to_stderr handler format string",
+  "attempt": 1,
+  "answer": "```python\nimport logging\nimport multiprocessing\n\nlogger = multiprocessing.log_to_stderr(logging.INFO)\n\nformatter = logging.Formatter(\n    \"%(processName)s | %(asctime)s | %(levelname)-8s | %(message)s\"\n)\n\nfor handler in logger.handlers:\n    handler.setFormatter(formatter)\n```\n\n`log_to_stderr()` adds a `StreamHandler` that writes to `sys.stderr`; configure the formatter on that handler. Call `log_to_stderr()` only once, since each call adds another handler and can duplicate output.",
+  "num_citations": 10,
+  "citation_text_tokens": 6808,
+  "citation_text_chars": 30814,
+  "search_queries": [
+    "multiprocessing log_to_stderr handler format string"
+  ],
+  "model_cost_usd": 0.0024973,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8329,
+    "output_tokens": 346,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 229
+  },
+  "latency_ms": 6737.433084053919,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0044973,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

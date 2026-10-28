@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_180",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 440.1,
+    "total_citation_tokens": 4401.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that when the new root is identical to the old root, coreutils avoids the chroot system call. The predicted answer explicitly states that chroot() is still called, including when NEWROOT is `/`, which contradicts the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citations [3], [5], and [6] explicitly state that chroot avoids the system call when NEWROOT is identical to the old root directory, directly supporting the gold target.\n2. Citations [1] and [4] describe behavior that differs: the current code calls chroot(newroot), and the patch notes that chroot should be called unconditionally, including when DIR is '/'. This creates a version/context conflict, but does not remove the explicit support for the gold target in [3], [5], and [6].",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0014139749999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

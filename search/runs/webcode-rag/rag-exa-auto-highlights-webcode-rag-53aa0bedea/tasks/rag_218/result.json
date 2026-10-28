@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_218",
+  "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+  "attempt": 1,
+  "answer": "`assign_new/3` can share assigns from a parent LiveView to a child only under these conditions:\n\n- The parent already has the assign.\n- The child also calls `assign_new/3` for the same key in `mount/3`.\n- The child is mounted at the same time as the parent.\n- The child is not rendered with `sticky: true`.\n- The child is part of the parent-child LiveView tree, rather than being mounted independently.\n\nEven then, sharing is an optimization, not a guarantee. The function passed to `assign_new/3` must return the same value as the parent’s assign would; otherwise, pass the required data—or identifiers for fetching it—in the child’s session.\n\nFor disconnected renders, `assign_new/3` can reuse assigns set by the Plug pipeline. If no such assign exists, or the LiveView is mounted through live navigation, the function runs instead.",
+  "num_citations": 10,
+  "citation_text_tokens": 4710,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "Phoenix LiveView assign_new parent child sharing conditions"
+  ],
+  "model_cost_usd": 0.0018271,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5989,
+    "output_tokens": 275,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 83
+  },
+  "latency_ms": 5266.369041055441,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.008827100000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

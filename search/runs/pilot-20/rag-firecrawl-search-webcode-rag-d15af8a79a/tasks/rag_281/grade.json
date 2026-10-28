@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_281",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 51.2,
+    "total_citation_tokens": 512.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer correctly identifies the trigger: Automake renames object files when it detects per-target compilation flags. It omits the extra detail that all objects are renamed without checking whether sources are shared, but the question asks for the trigger condition and the answer does not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citation explicitly says Automake renames all objects of a target as soon as it sees per-target compilation flags. That supports the stated trigger and indicates the renaming is not conditional on first checking whether source files are shared. The gold target's claims are therefore grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006865999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

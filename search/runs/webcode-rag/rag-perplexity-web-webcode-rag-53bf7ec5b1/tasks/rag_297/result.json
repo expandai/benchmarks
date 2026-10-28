@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_297",
+  "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+  "attempt": 1,
+  "answer": "`@NotFound(action = NotFoundAction.IGNORE)` has these effects on a Hibernate Envers to-one association:\n\n- A broken, non-null foreign key is tolerated and the association is treated as `null`.\n- For an Envers relation to a non-audited entity, it prevents `EntityNotFoundException` when the current target entity no longer exists.\n- The to-one association is implicitly eager/non-lazy, even if mapped with `FetchType.LAZY`.\n- Hibernate assumes there is no physical foreign-key constraint and may use physical joins for implicit HQL or Criteria joins.\n\nThis eager loading is the main side effect.",
+  "num_citations": 10,
+  "citation_text_tokens": 3863,
+  "citation_text_chars": 17441,
+  "search_queries": [
+    "Hibernate Envers @NotFound IGNORE side effect to-one"
+  ],
+  "model_cost_usd": 0.0015047,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4949,
+    "output_tokens": 223,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 90
+  },
+  "latency_ms": 4192.902874900028,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065047,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_028",
+ "prompt": "glibc printf_info width precision star arginfo function value",
+ "attempt": 1,
+ "answer": "For `struct printf_info` in glibc:\n\n- `info->width`\n  - `0` if no width is specified.\n  - The actual `int` value if the width is specified with `*` when passed to the handler.\n  - `INT_MIN` when passed to the arginfo function for a `*` width, because the value is not yet known.\n\n- `info->prec`\n  - `-1` if no precision is specified.\n  - The actual `int` value if the precision is specified with `*` when passed to the handler.\n  - `INT_MIN` when passed to the arginfo function for a `*` precision.\n\nThe width and precision `*` arguments are both `int` arguments. A negative width selects left justification and uses its absolute value; a negative precision is treated as omitted.\n\nThe arginfo function should describe the conversion’s additional arguments in `argtypes` and return the number of arguments it expects. (GNU C Library manual: [Conversion Specifier Options](https://sourceware.org/glibc/manual/latest/html_node/Conversion-Specifier-Options.html), [Defining the Output Handler](https://sourceware.org/glibc/manual/latest/html_node/Defining-the-Output-Handler.html))",
+ "num_citations": 10,
+ "citation_text_tokens": 4985,
+ "citation_text_chars": 20701,
+ "search_queries": [
+  "glibc printf_info width precision star arginfo function value"
+ ],
+ "model_cost_usd": 0.0019895,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6269,
+  "output_tokens": 352,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 84
+ },
+ "latency_ms": 4778.711625025608,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0059895,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 269.4,
+    "total_citation_tokens": 2694.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the X and Z components as the ground-plane coordinates and says the Y component is discarded because it is zero on the plane, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly says to discard the Y coordinate because the point is supposed to be on the plane.\n2. It gives the resulting local Vec2 as `local_cursor.xz()`.\n3. These statements cover all factual claims in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000661225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

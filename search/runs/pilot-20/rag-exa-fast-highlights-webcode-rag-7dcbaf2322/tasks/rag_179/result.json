@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_179",
+ "prompt": "eshell dollars expansion range end inclusive exclusive vs bash",
+ "attempt": 1,
+ "answer": "Eshell uses **half-open ranges**: `start..end` includes `start` but excludes `end`.\n\nBash uses **closed ranges**: both `start` and `end` are included.\n\nExample:\n\n- Eshell: `$exec-path[1..3]` returns indices 1 and 2.\n- Bash: `{1..3}` produces `1`, `2`, and `3`.\n\nEshell’s behavior matches Emacs Lisp functions such as `substring`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4692,
+ "citation_text_chars": 17679,
+ "search_queries": [
+  "eshell dollars expansion range end inclusive exclusive vs bash"
+ ],
+ "model_cost_usd": 0.0016355,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6053,
+  "output_tokens": 102,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2445.4460840206593,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0086355,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

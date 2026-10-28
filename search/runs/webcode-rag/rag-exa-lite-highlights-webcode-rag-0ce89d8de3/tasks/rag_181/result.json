@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_181",
+  "prompt": "rust futures select_next_some behavior with None",
+  "attempt": 1,
+  "answer": "`select_next_some()` does **not** yield `None` when the stream ends.\n\nIts behavior is:\n\n- If `poll_next()` returns `Some(item)`, it returns `Poll::Ready(item)`.\n- If `poll_next()` returns `None`, it expects the stream to be terminated, wakes the task, and returns `Poll::Pending`.\n- Its `FusedFuture::is_terminated()` delegates to the stream’s `is_terminated()` status.\n\nTherefore, in a `select!` loop, `select_next_some()` is useful for handling only actual stream items: termination is skipped, and `select!` can choose its `complete` branch once all futures/streams are terminated.\n\nFor an empty `FuturesUnordered`, the first poll returns `Pending` and then its `select_next_some()` future reports terminated. If a future is pushed later, a newly created `select_next_some()` can receive the new item.\n\nA stream that returns `None` while reporting `is_terminated() == false` is incompatible with this behavior: in debug mode it can panic, and the issue notes that it can cause a busy loop.",
+  "num_citations": 10,
+  "citation_text_tokens": 5194,
+  "citation_text_chars": 19977,
+  "search_queries": [
+    "rust futures select_next_some behavior with None"
+  ],
+  "model_cost_usd": 0.0022997,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6521,
+    "output_tokens": 558,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 318
+  },
+  "latency_ms": 8144.97758296784,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062997,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

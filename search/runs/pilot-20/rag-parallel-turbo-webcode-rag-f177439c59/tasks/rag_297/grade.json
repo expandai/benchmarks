@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_297",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 460.4,
+    "total_citation_tokens": 4604.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that @NotFound(IGNORE) makes to-one associations implicitly eager, matching the gold target. The additional explanation is consistent with that answer and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the side effect of @NotFound IGNORE is implicit eager loading of to-one relations.\n2. Citations [1]–[4] state this directly. Citation [5] gives the equivalent wording that a to-one association becomes non-lazy.\n3. The citations contain the full factual claim in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00101085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

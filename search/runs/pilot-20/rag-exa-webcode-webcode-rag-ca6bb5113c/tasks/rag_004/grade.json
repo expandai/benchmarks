@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_004",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 304.4,
+    "total_citation_tokens": 3044.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists both worker types in the gold target: DedicatedWorker and SharedWorker. The additional statement about Window and ServiceWorker does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the worker types that expose FileReaderSync: DedicatedWorker and SharedWorker.\n2. Citations [2] and [3] explicitly list both types in the Exposed annotation for FileReaderSync.\n3. The retrieved sources therefore contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007041,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

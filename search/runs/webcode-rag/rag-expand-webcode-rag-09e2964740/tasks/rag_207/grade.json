@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_207",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 585.3,
+    "total_citation_tokens": 5853.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold expression, `ceil(v) - 1`, but also gives an incorrect routing example: with `mod(n,2)+1`, frame numbers starting at 0 route even-numbered frames to output 0 and odd-numbered frames to output 1, whereas the displayed labels `[odd][even]` imply the reverse. The extra incorrect information makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] states the output index for a non-negative expression result is `ceil(val)-1`. Citation [10] shows the corresponding implementation, bounded by the number of outputs.\nStep 2: The gold target, `ceil(val)-1`, is directly present in the retrieved sources. All non-trivial information in the target is supported.\nStep 3: Citations [1] and [10] contain information sufficient to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001462725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

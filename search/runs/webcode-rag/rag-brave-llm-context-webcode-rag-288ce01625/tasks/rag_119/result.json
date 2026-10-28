@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_119",
+  "prompt": "haproxy avg_queue behavior no active server",
+  "attempt": 1,
+  "answer": "When no servers are active, HAProxy’s `avg_queue` treats the measured value as **twice the number of queued connections**.\n\nNormally:\n\n```text\navg_queue = total queued connections / number of active servers\n```\n\nBut with zero active servers:\n\n```text\navg_queue = 2 × total queued connections\n```\n\nThis behavior is documented in the HAProxy 2.6 configuration manual: [avg_queue](https://docs.haproxy.org/2.6/configuration.html).",
+  "num_citations": 10,
+  "citation_text_tokens": 6748,
+  "citation_text_chars": 29204,
+  "search_queries": [
+    "haproxy avg_queue behavior no active server"
+  ],
+  "model_cost_usd": 0.00219495,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7902,
+    "output_tokens": 183,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 75
+  },
+  "latency_ms": 8299.872792093083,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00719495,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

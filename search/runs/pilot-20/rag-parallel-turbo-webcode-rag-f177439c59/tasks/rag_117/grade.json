@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_117",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 381.9,
+    "total_citation_tokens": 3819.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a repository may have at most one reachability bitmap in use, matching the gold target. The detail about whether it belongs to a single pack or the MIDX does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that a repository may have at most one bitmap.\n2. Citation [5] supports the interpretation that there is a single active bitmap index in use, while noting that multiple indexes may be available in cases such as alternates.\n3. The gold target’s claim that at most one bitmap file is in use is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000869225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

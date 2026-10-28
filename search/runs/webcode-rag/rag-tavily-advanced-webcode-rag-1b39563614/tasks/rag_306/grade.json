@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_306",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 233.5,
+    "total_citation_tokens": 2335.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the suggested increase is 30 times the default value. The predicted answer instead explicitly says a ten-fold increase, from 1,600 to 16,000, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target says the suggested increase is 30 times the default value. Citation [3] gives the default and describes a ten-fold increase, not a thirty-fold increase. Citation [1] is truncated before specifying any factor. Thus, the specific factor in the gold target is not present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000661225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

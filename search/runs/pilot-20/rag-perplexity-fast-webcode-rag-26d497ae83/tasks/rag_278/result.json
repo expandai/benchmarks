@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_278",
+ "prompt": "typing get_args argument order different reason",
+ "attempt": 1,
+ "answer": "`typing.get_args` can return union arguments in a different order because of **type caching**.\n\nFor example, generic types may reuse a cached object:\n\n```python\nList[Union[int, str]] is List[Union[str, int]]\n```\n\nAs a result, both can produce:\n\n```python\nget_args(...)[0]  # Union[int, str]\nget_args(get_args(...)[0])  # (int, str)\n```\n\nThe Python documentation therefore states that when a `Union` or `Literal` is contained in another generic type, the returned order **may differ from the original argument order due to type caching**. The issue discussion attributes this to caching by generic types; union hashing based on a `frozenset` can also cause differently ordered unions to share a cache entry.",
+ "num_citations": 10,
+ "citation_text_tokens": 3851,
+ "citation_text_chars": 14528,
+ "search_queries": [
+  "typing get_args argument order different reason"
+ ],
+ "model_cost_usd": 0.00143395,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4930,
+  "output_tokens": 168,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2871.7195419594646,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00243395,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

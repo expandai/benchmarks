@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-063",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 351.6,
+    "total_citation_tokens": 3516.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives 19,630 VND per liter, which is the same amount as the gold target's 19.630 VND using different thousands-separator formatting.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target is 19.630 VND for RON 92-III gasoline. Citation [3] repeats that value as an expected answer, but it is a dataset record rather than a source establishing the official price. The pricing passages in [4] and [5] associate values near 19.630 with RON95-III, not RON92. For RON92, they report 19,230 or 19,238 VND. Therefore, the retrieved pricing information does not support the gold target for the fuel specified in the question.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00153123,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

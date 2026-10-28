@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_197",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 622.0,
+    "total_citation_tokens": 6220.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target behavior: a size mismatch causes Wget to download regardless of timestamps. But it also says that in a `-c` case Wget may omit the download despite a different local size. That caveat conflicts with the gold target’s unqualified claim that the remote file will be downloaded no matter what the timestamp says.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that a size mismatch causes Wget to download the remote file regardless of the timestamp.\n2. Citations [2] and [6] state this rule directly for differing file sizes. Citation [7] specifically says Wget compares the Content-Length size and downloads the remote file if the sizes differ, regardless of timestamp.\n3. All non-trivial information in the gold target is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0013400999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

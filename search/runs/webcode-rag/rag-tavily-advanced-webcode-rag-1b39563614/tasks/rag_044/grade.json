@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 392.2,
+    "total_citation_tokens": 3922.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no information about the padding direction, so it neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the padding consists of leading (not trailing) zero bytes.\n2. None of the retrieved citations contains that direction or identifies the padding bytes as leading zero bytes. The citations discuss TLS padding or ClientHello generally, but do not provide the specific fact needed.\n3. Therefore, a non-trivial claim in the gold target is unsupported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000818725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

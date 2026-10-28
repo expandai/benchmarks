@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 230.6,
+    "total_citation_tokens": 2306.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is the exact failure output string `[64dec-fail]`. The predicted answer includes that string, but it also states that curl’s function outputs `64dec-fail` without the brackets. Since this presents a conflicting output as the answer, the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is the failure output “[64dec-fail].” Citation [2] states this exact output when the sequence cannot be decoded. Citation [1] also confirms that invalid Base64 produces the failure string. The retrieved sources therefore support the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000691475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

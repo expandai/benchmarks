@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 314.7,
+    "total_citation_tokens": 3147.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes all five valid hint keywords listed in the gold target. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] enumerates the supported join-hint cases: AstHash, AstLookup, AstInverted, AstMerge, and AstStraight.\n2. These correspond to the gold target keywords HASH, LOOKUP, INVERTED, MERGE, and STRAIGHT.\n3. All non-trivial keywords in the gold target are supported by the retrieved citation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000826225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

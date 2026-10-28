@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_070",
+ "prompt": "service worker FetchEvent replacesClientId engine implementation status",
+ "attempt": 1,
+ "answer": "`FetchEvent.replacesClientId` does not appear to have shipped in any browser engine.\n\n- **WebKit:** Implementation work exists in PR #13130, but the PR is still **open**. The related WebKit bug states that `targetClientId` was removed and `replacesClientId` was not implemented.\n- **Gecko/Firefox:** Bug 1487534 remains **NEW**.\n- **Chromium:** The search results state that the attribute was not present in Chromium source.\n- **Safari:** Historically shipped the older `targetClientId` name, not `replacesClientId`.\n\nThus, the current implementation status shown by these results is: **proposed/in progress in WebKit, unimplemented or not shipped elsewhere**.",
+ "num_citations": 10,
+ "citation_text_tokens": 4851,
+ "citation_text_chars": 17769,
+ "search_queries": [
+  "service worker FetchEvent replacesClientId engine implementation status"
+ ],
+ "model_cost_usd": 0.0018664,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6175,
+  "output_tokens": 269,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 109
+ },
+ "latency_ms": 4729.540916043334,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0058664,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

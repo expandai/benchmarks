@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 456.1,
+    "total_citation_tokens": 4561.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and does not provide the gold information that avg_queue behavior with no active server is twice the number of queued connections. It also does not contradict that information.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations define queued-request counts and queue-time averages, but none state that HAProxy’s avg_queue value is twice the number of queued connections.\n2. That specific relationship is a non-trivial factual claim in the gold target and is not supported by the retrieved citations.\n3. Therefore, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010031,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

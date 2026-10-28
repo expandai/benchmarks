@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_281",
+ "prompt": "automake per-target compilation flags object rename trigger condition",
+ "attempt": 1,
+ "answer": "Automake renames an object when it sees **per-target compilation flags**—for example, `foo_CFLAGS`, `foo_CPPFLAGS`, `foo_CXXFLAGS`, or other per-target `*FLAGS` variables.\n\nIt renames **all objects belonging to that target**, without checking whether source files are actually shared. Even a “dummy” definition such as:\n\n```make\nfoo_CFLAGS = $(AM_CFLAGS)\n```\n\ntriggers the renamed-object behavior, even if `AM_CFLAGS` is undefined.\n\nFor example, objects may become:\n\n```text\ntrue-generic.o\nfalse-generic.o\n```\n\ninstead of both targets using `generic.o`. Global flags such as `AM_CPPFLAGS`, by themselves, do not trigger this renaming.",
+ "num_citations": 10,
+ "citation_text_tokens": 3154,
+ "citation_text_chars": 12825,
+ "search_queries": [
+  "automake per-target compilation flags object rename trigger condition"
+ ],
+ "model_cost_usd": 0.00141635,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4370,
+  "output_tokens": 270,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 109
+ },
+ "latency_ms": 4774.144832976162,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00216635,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

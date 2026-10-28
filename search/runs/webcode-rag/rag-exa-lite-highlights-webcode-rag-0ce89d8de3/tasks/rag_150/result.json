@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_150",
+  "prompt": "rustdoc doc auto_cfg hide default hidden cfg attributes",
+  "attempt": 1,
+  "answer": "Use Rustdoc’s `auto_cfg(hide(...))` attribute:\n\n```rust\n#![doc(auto_cfg(hide(doc, doctest, test)))]\n```\n\n`auto_cfg` is enabled by default, and Rustdoc’s current default hidden cfgs include `test`, `doc`, and `doctest`. The `hide(...)` list can contain identifiers or key/value items.\n\nFor example:\n\n```rust\n#![doc(auto_cfg(hide(doc, doctest, test)))]\n\n#[cfg(any(unix, doc))]\npub fn example() {}\n```\n\nThis suppresses those predicates in automatically generated cfg markers. It affects `#[doc(auto_cfg)]` output, not explicitly written `#[doc(cfg(...))]` attributes.",
+  "num_citations": 10,
+  "citation_text_tokens": 5521,
+  "citation_text_chars": 20718,
+  "search_queries": [
+    "rustdoc doc auto_cfg hide default hidden cfg attributes"
+  ],
+  "model_cost_usd": 0.0021768,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6999,
+    "output_tokens": 356,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 198
+  },
+  "latency_ms": 5306.871957960539,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061768,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

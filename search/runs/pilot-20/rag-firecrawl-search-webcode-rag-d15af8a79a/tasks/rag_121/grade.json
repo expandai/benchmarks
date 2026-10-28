@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_121",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 108.4,
+    "total_citation_tokens": 1084.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no information about which Helmfile hook events are available. It neither confirms nor contradicts the gold target, so this is not an attempt to answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citation says `.Event.Error` is available in `postsync` hooks when a release fails. It does not state that it is available only in those hooks or that it is nil in all other events. The gold target includes those unsupported claims, so the citations do not ground the full answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000487225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

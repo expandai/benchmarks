@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_046",
+  "prompt": "ffmpeg filter_complex bitmap subtitle stream no video fallback resolution",
+  "attempt": 1,
+  "answer": "When using a bitmap subtitle stream as input to `-filter_complex`, FFmpeg converts it to video:\n\n- It uses the subtitle codec’s configured size, if available.\n- Otherwise, it uses the maximum dimensions of video streams in the same input file.\n- If there is no video, the fallback canvas resolution is **720×576**.\n\nThis behavior is described as experimental and temporary.",
+  "num_citations": 7,
+  "citation_text_tokens": 3916,
+  "citation_text_chars": 13573,
+  "search_queries": [
+    "ffmpeg filter_complex bitmap subtitle stream no video fallback resolution"
+  ],
+  "model_cost_usd": 0.00136415,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4790,
+    "output_tokens": 139,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 55
+  },
+  "latency_ms": 4461.373250000179,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00636415,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_072",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 130.0,
+    "total_citation_tokens": 1300.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the maximum captured link URL length is 100,000 characters for Build Scan Gradle plugin 3.7 and later, matching the gold target. The additional version-specific and link-label/count details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state the maximum link URL length. Step 2: The gold target, “100000 characters,” is supported by the sources. Citation [2] clarifies that this limit applies to Build Scan plugin 3.7 and later; older versions have a 1,000-character limit. Step 3: The cited sources contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000548725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

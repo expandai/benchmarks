@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 476.2,
+    "total_citation_tokens": 4762.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide or contradict the target status codes, 501 and 505.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies 501 and 505 as the 5xx status codes excluded from src_http_fail_cnt.\n2. The citations discuss error-code ranges and list 501 as a status HAProxy may emit, but do not say that 501 is excluded from src_http_fail_cnt.\n3. None of the retrieved citations mentions 505 or establishes that it is excluded.\n4. Since the specific exclusion claims are not supported, the citations do not contain sufficient information to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010273349999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

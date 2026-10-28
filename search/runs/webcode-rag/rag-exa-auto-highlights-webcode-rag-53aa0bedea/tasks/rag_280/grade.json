@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 479.0,
+    "total_citation_tokens": 4790.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer explains how to connect directly to a Unix-domain socket with `socketPath`, but it does not state the gold target that proxy settings will be ignored. It does not clearly contradict that target, so it is an incomplete attempt.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] confirms Node.js has built-in proxy configuration, but does not say how it interacts with a Unix socket request.\n2. Citation [8] documents the `socketPath` option, but does not address proxy settings.\n3. Citation [4] explicitly describes socket-over-proxy behavior, but in the context of Axios, not Node.js's built-in `http` request behavior. The retrieved sources therefore do not establish the gold claim for the API asked about. Since this missing interaction is a non-trivial fact, the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0016531,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

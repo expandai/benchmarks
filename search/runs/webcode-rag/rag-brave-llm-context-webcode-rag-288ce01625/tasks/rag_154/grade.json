@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_154",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 459.9,
+    "total_citation_tokens": 4599.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide or contradict the required settings.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved citations do not state that `nativeTransport=true` is required for a Unix-domain socket path.\n2. Citation [10] describes `clientMode=true` as making a Netty consumer connect as a TCP client, but it does not state that `clientMode=false` is a required constraint for this use case.\n3. Since the gold target includes specific requirements that are not established by the retrieved citations, the answer is not sufficiently grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000965225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

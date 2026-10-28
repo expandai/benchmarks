@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_126",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 385.8,
+    "total_citation_tokens": 3858.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains that SSLObject does not support suppress_ragged_eofs and says EOF handling is left to the caller, but it never states the key behavior in the gold target: protocol-violating EOF conditions are reported via SSLEOFError. It does not clearly contradict that behavior, so the answer is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [6] establishes that SSLObject lacks the suppress_ragged_eofs machinery, and [7] shows that SSLSocket can suppress an SSL_ERROR_EOF or raise the caught SSLError.\n2. However, the citations do not establish that all protocol-violating EOF conditions for SSLObject are reported specifically as SSLEOFError. Citation [8] mentions SSLEOFError, but does not make that claim about SSLObject or all such EOF conditions.\n3. Because that specific exception-type claim is non-trivial and not grounded by the retrieved passages, the gold target is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012751,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

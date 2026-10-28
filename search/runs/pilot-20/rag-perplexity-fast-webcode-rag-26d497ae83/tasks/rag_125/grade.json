@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_125",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 363.3,
+    "total_citation_tokens": 3633.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target gives the supported back-reference range as 1 to 9. The predicted answer states that the maximum is 9 and explicitly gives the range `$1`–`$9` (also `\\1`–`\\9`), so it includes the gold information without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum back-reference number is 9 (the range is 1 to 9).\n2. Citation [1] explicitly gives the range as 1 to 9, and citation [6] independently confirms the numbers are 1-9.\n3. The citations therefore contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007884750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

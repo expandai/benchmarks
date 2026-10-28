@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 31.3,
+    "total_citation_tokens": 313.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says only “I don't know” and does not address the destructor behavior or contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target makes two specific claims: that `hpx::future<>` never blocks in its destructor, and that this remains true when the value has not yet been returned. Citation [7] states a general expectation about futures and destructors, but does not identify `hpx::future<>` or establish the stated behavior in that condition. The other citations do not provide this information. Therefore, the retrieved sources do not support all the non-trivial claims in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000407225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

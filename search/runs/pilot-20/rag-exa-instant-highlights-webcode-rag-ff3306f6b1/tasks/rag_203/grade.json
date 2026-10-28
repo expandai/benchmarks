@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 439.8,
+    "total_citation_tokens": 4398.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly gives the gold-target value for CSS Containment Level 1: `none` or one or more of `size`, `layout`, and `paint`. Its additional distinction about Level 2 does not contradict that Level 1 answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states the contain property’s computed value as “the keyword none or one or more of size, layout, paint.” Step 2: This directly contains all the non-trivial information in the gold target answer. Citation [2] describes the Level 2 property with additional keywords, but citation [1] still provides direct support for the gold target. Step 3: Citation [1] contains sufficient information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001208475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

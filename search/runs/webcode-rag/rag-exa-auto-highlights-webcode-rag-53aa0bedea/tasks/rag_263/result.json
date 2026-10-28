@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_263",
+  "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+  "attempt": 1,
+  "answer": "`NGX_PEER_NEXT` indicates that nginx should try another backend; it does **not** mark the current peer as failed.\n\nFor HTTP response statuses, the relevant `proxy_next_upstream` triggers are:\n\n- `http_500`\n- `http_502`\n- `http_503`\n- `http_504`\n- `http_403`\n- `http_404`\n- `http_429`\n\nThese trigger trying the next server only when the corresponding option is included in `proxy_next_upstream`. The search results explicitly identify **HTTP 404** as producing `state = NGX_PEER_NEXT`.\n\nImportant distinction:\n\n- `http_500`, `http_502`, `http_503`, `http_504`, and `http_429` count as unsuccessful attempts when enabled.\n- `http_403` and `http_404` can cause a retry when enabled, but are never considered unsuccessful attempts.\n- `error`, `timeout`, and `invalid_header` are always considered unsuccessful attempts, even if not configured.",
+  "num_citations": 10,
+  "citation_text_tokens": 5184,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "nginx NGX_PEER_NEXT upstream status codes trigger"
+  ],
+  "model_cost_usd": 0.0021255,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6381,
+    "output_tokens": 442,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 224
+  },
+  "latency_ms": 6340.210958034731,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0091255,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

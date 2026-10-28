@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_212",
+  "prompt": "automake TESTS program exit status result ignored",
+  "attempt": 1,
+  "answer": "For Automake tests listed in `TESTS`:\n\n- Exit status `0`: test passes.\n- Exit status `77`: test is skipped/ignored in the final failure count.\n- Exit status `99`: hard error.\n- Any other nonzero status: test fails.\n\nWith a test driver, you can also use `--ignore-exit` to ignore the test script’s exit status:\n\n```sh\nTEST_LOG_DRIVER_FLAGS='--ignore-exit' make check\n```\n\nBy default, the driver reports an error when a test script exits with a nonzero status.",
+  "num_citations": 10,
+  "citation_text_tokens": 2791,
+  "citation_text_chars": 11165,
+  "search_queries": [
+    "automake TESTS program exit status result ignored"
+  ],
+  "model_cost_usd": 0.00115315,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3682,
+    "output_tokens": 194,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 71
+  },
+  "latency_ms": 4247.534916969016,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00615315,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

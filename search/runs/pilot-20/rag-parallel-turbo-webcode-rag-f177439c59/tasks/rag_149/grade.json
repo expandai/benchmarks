@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_149",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 408.2,
+    "total_citation_tokens": 4082.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target gives a maximum of 255 characters. The prediction states that the limit is 255 bytes and clarifies that it must be less than 256; in this termcap context, that matches the requested 255-character limit.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum is 255 characters.\n2. Citations [1] and [2] explicitly describe pO as redirecting the next n characters and say n should be no more than 255. Citation [5] also says the parameter should not exceed 255.\n3. The sources therefore contain the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000930475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

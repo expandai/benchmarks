@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_191",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 220.7,
+    "total_citation_tokens": 2207.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `std.heap.smp_allocator` as the recommended general-purpose allocator for ReleaseFast mode, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly identifies `std.heap.smp_allocator` as a solid general-purpose allocator choice when compiling in fast mode.\n2. Citation [6] also associates `std.heap.smp_allocator` with `ReleaseFast` mode.\n3. The gold target answer is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00058535,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

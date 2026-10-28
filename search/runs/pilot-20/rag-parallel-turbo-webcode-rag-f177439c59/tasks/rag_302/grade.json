@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_302",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 570.5,
+    "total_citation_tokens": 5705.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `enableProfiledLibs` as the GHC override parameter name, matching the gold target. The additional detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Both citations explicitly show the GHC profiling override parameter as `enableProfiledLibs`.\nStep 2: The gold target answer is exactly that parameter name, so all non-trivial information is present in the citations. The answer is GROUNDED.\nStep 3: Citations [1] and [2] contain the parameter name.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001070475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

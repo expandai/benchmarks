@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_280",
+ "prompt": "node.js http built-in proxy unix domain socket request",
+ "attempt": 1,
+ "answer": "Use Node’s built-in `node:http` module with the `socketPath` request option:\n\n```js\nimport { request } from 'node:http';\n\nconst req = request(\n  {\n    socketPath: '/tmp/example-node.sock',\n    path: '/',\n  },\n  (res) => {\n    let body = '';\n\n    res.on('data', (chunk) => {\n      body += chunk;\n    });\n\n    res.on('end', () => {\n      console.log(body);\n    });\n  },\n);\n\nreq.on('error', console.error);\nreq.end();\n```\n\nThe server can listen on the same Unix socket path:\n\n```js\nimport { createServer } from 'node:http';\n\nconst server = createServer((_req, res) => {\n  res.end('Hello from node:http');\n});\n\nserver.listen('/tmp/example-node.sock');\n```\n\nFor a Unix-domain-socket request, use `socketPath` and provide the HTTP request `path`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4828,
+ "citation_text_chars": 20250,
+ "search_queries": [
+  "node.js http built-in proxy unix domain socket request"
+ ],
+ "model_cost_usd": 0.00197985,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5952,
+  "output_tokens": 410,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 212
+ },
+ "latency_ms": 5159.572290955111,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00597985,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

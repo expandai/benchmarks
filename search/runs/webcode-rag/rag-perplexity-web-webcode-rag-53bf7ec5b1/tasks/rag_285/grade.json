@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_285",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 394.0,
+    "total_citation_tokens": 3940.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that URI fragments remain case-sensitive and are always checked using case-sensitive comparisons, which matches the gold target. The additional detail that certain anchors may be skipped by ignore patterns does not contradict how comparisons are performed when anchors are checked.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages explicitly state that URI fragments (HTML anchors) are always checked with case-sensitive comparisons.\nStep 2: This directly supports the full gold target answer; no non-trivial claim is missing.\nStep 3: Citations [1], [2], and [10] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00088585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

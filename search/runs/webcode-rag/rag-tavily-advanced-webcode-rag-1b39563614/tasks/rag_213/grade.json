@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_213",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 387.2,
+    "total_citation_tokens": 3872.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that public JavaBean properties are not used and that object fields are used for conversion. The predicted answer does not affirm that, and its claim that mutable properties can be populated by invoking setter methods conflicts with the target’s distinction. Therefore, the answer is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] says object properties are used for conversion, but does not establish that these are specifically the object’s fields rather than JavaBean properties. 2. None of the citations states that public JavaBean properties are not used or that fields are used instead. 3. Therefore, the gold answer’s key distinction is unsupported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000977475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

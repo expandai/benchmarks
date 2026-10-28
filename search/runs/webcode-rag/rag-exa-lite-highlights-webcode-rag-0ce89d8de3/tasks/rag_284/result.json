@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_284",
+  "prompt": "jq |= update-assignment right-hand side outputs empty",
+  "attempt": 1,
+  "answer": "`|=` does not pass the RHS output directly to the jq output. It updates the value at the path and returns the modified input.\n\nIf the RHS evaluates to `empty`, its behavior depends on the jq version:\n\n- In jq 1.6 and older behavior, `|= empty` can produce `null` or other incorrect results.\n- The intended newer behavior is to delete the selected path, like `del(path)`.\n\nExamples from the results:\n\n```jq\nnull | .a = empty\n```\n\nproduces an empty stream, whereas:\n\n```jq\nnull | .a |= empty\n```\n\nproduces:\n\n```text\nnull\n```\n\nFor object paths, newer behavior is intended to delete the path:\n\n```jq\n{\"a\": 1, \"b\": 1} | .a |= empty\n```\n\nUse `=` instead when you want to explicitly control the RHS evaluation, for example:\n\n```jq\n.a = (.a | ...)\n```\n\nAlso avoid expressions such as `.[] |= empty` in jq 1.6; their behavior is documented as inconsistent and buggy.",
+  "num_citations": 10,
+  "citation_text_tokens": 4428,
+  "citation_text_chars": 16264,
+  "search_queries": [
+    "jq |= update-assignment right-hand side outputs empty"
+  ],
+  "model_cost_usd": 0.00212805,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5604,
+    "output_tokens": 606,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 375
+  },
+  "latency_ms": 8506.47270900663,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061280499999999995,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

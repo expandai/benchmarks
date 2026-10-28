@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_121",
+ "prompt": "helmfile hook Event.Error which events available",
+ "attempt": 1,
+ "answer": "Helmfile currently supports these hook events:\n\n- `prepare`\n- `preapply`\n- `presync`\n- `preuninstall`\n- `postuninstall`\n- `postsync`\n- `cleanup`\n\n`.Event.Error` is populated only for **per-release `postsync` hooks when the release fails**. Otherwise, its value is `nil`.\n\nExample:\n\n```yaml\nhooks:\n  - events:\n      - postsync\n    command: notify.sh\n    args:\n      - '{{`{{ if .Event.Error }}failure{{ else }}success{{ end }}`}}'\n```\n\n`.Event.Name` contains the name of the triggered event.",
+ "num_citations": 10,
+ "citation_text_tokens": 2842,
+ "citation_text_chars": 11866,
+ "search_queries": [
+  "helmfile hook Event.Error which events available"
+ ],
+ "model_cost_usd": 0.00127105,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3904,
+  "output_tokens": 246,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 106
+ },
+ "latency_ms": 4295.90112506412,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00827105,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

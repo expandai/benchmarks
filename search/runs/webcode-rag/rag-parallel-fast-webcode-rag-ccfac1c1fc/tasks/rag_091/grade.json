@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_091",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 241.0,
+    "total_citation_tokens": 2410.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and does not provide the gold target information that any remainder is ignored. It also makes no contradictory factual claim, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that any remainder is ignored when a typed `#load` file size is not a multiple of the type size.\n2. Citation [3] says typed `#load` interprets a file as an array of the requested type, but its example has a file size evenly divisible by `u32` and does not state how a remainder is handled.\n3. Because the specific remainder behavior is not supported by the retrieved citations, the gold target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007220999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

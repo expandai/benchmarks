@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 31.6,
+    "total_citation_tokens": 316.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the return type or contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] notes that atomicCompareExchangeWeak has a predeclared return type, and citation [10] indicates a signature section, but neither passage specifies the return type as vec2<T>.\nStep 2: The specific type vec2<T> is a non-trivial factual claim absent from the retrieved passages, so the citations do not sufficiently ground the gold target answer.\nStep 3: No citation contains enough information to derive vec2<T>.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00038185,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

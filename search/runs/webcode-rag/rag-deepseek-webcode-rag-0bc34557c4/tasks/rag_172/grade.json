@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_172",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 296.8,
+    "total_citation_tokens": 2968.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer directly says to explicitly set `resolver = \"3\"` in the virtual workspace’s `[workspace]` definition, matching the gold target. Its additional explanation does not contradict the requested point.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says a virtual workspace must explicitly set the resolver field in its [workspace] definition.\n2. Citation [6] states this directly, and citation [7] corroborates where to put the field.\n3. The retrieved sources contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000811225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

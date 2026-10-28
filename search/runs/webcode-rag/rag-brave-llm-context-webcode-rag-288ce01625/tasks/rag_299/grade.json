@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 160.8,
+    "total_citation_tokens": 1608.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says tokens are regenerated only on session upgrades. The predicted answer also claims regeneration occurs when no token exists or when the token expires, which adds conditions beyond session upgrades and contradicts the stated exclusivity.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citations [8] and [10] directly state that tokens are regenerated only on session upgrades.\nStep 2 — Groundedness: The gold target’s sole factual claim is explicitly present in both citations. No non-trivial information is missing, so the answer is GROUNDED.\nStep 3 — Source attribution: Citations [8] and [10] each contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0005662250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

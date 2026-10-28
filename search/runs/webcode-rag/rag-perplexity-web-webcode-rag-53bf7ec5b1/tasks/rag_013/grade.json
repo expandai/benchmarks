@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 338.7,
+    "total_citation_tokens": 3387.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies 501 and 505 as the excluded 5xx status codes. The predicted answer lists exactly 501 and 505 and adds a consistent explanation of the default counting behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies 501 and 505 as the excluded 5xx status codes.\n2. Citations [2] and [3] explicitly state that `http_fail_cnt` counts 5xx responses other than 501 or 505. Citation [5] also explicitly names 501 and 505 as exceptions to the default failure range.\n3. The retrieved citations therefore contain the specific status codes in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000805975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

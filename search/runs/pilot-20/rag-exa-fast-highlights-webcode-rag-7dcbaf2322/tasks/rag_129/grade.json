@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 479.3,
+    "total_citation_tokens": 4793.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says NUL bytes are replaced with line terminators. The predicted answer instead describes binary detection and stopping behavior, and never gives that replacement behavior; its account conflicts with the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that without the text flag, NUL bytes are replaced with line terminators.\n2. Citation [2] states this directly, so the target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001513725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

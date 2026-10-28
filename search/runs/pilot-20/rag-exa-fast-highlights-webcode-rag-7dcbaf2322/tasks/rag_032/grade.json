@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 369.8,
+    "total_citation_tokens": 3698.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Bazel tracks the top 20 action mnemonics, matching the gold target of 20 mnemonics with the largest number of executed actions. The extra flag information does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation says the action statistics show the most executed action types and that the default is to collect the top 20.\n2. It also identifies the all-mnemonics flag, connecting these action types to mnemonics.\n3. This supports the gold target’s claim that the default tracking limit is the 20 mnemonics with the largest number of executed actions.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00086235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

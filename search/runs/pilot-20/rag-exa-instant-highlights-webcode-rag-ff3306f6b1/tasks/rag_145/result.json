@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_145",
+ "prompt": "elasticsearch snapshot.get ignore_unavailable exception type thrown",
+ "attempt": 1,
+ "answer": "- `ignore_unavailable=true`: unavailable snapshots are ignored, so no exception is thrown for them.\n- `ignore_unavailable=false` (default): a missing snapshot produces:\n  - **Python client exception:** `NotFoundError`\n  - **Elasticsearch error type:** `snapshot_missing_exception`\n\nThe error response identifies the missing snapshot as `\"[foo:bar] is missing\"`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3763,
+ "citation_text_chars": 16611,
+ "search_queries": [
+  "elasticsearch snapshot.get ignore_unavailable exception type thrown"
+ ],
+ "model_cost_usd": 0.001507,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4843,
+  "output_tokens": 247,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 163
+ },
+ "latency_ms": 4481.082250014879,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.005507,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

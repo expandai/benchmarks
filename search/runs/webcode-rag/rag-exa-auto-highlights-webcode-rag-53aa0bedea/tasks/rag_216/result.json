@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_216",
+  "prompt": "emacs define-modify-macro arglist disallowed parameter types",
+  "attempt": 1,
+  "answer": "For Emacs’s `define-modify-macro`, the arglist explicitly disallows `&key`:\n\n```elisp\n(define-modify-macro foo (&key x) ...)\n;; Error: &key not allowed in define-modify-macro\n```\n\nSupported lambda-list keywords are:\n\n- `&optional`\n- `&rest`\n\nKeyword arguments are not supported; use `&rest` if you need to pass keyword-like arguments through to the underlying function. `&aux` variables are also not supported by the `define-modify-macro` lambda-list specification.",
+  "num_citations": 10,
+  "citation_text_tokens": 3338,
+  "citation_text_chars": 13093,
+  "search_queries": [
+    "emacs define-modify-macro arglist disallowed parameter types"
+  ],
+  "model_cost_usd": 0.0016258,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4531,
+    "output_tokens": 411,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 288
+  },
+  "latency_ms": 7897.666707984172,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0086258,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

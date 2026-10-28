@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_278",
+ "prompt": "typing get_args argument order different reason",
+ "attempt": 1,
+ "answer": "`typing.get_args()` can return Union arguments in a different order because of type caching.\n\nSpecifically:\n\n- Generic types such as `List` cache their `__getitem__` results.\n- `Union[int, str]` and `Union[str, int]` are considered equal, since Union argument order does not affect equality.\n- Consequently, `List[Union[int, str]]` and `List[Union[str, int]]` can reuse the same cached type object.\n- A later `get_args()` call therefore reflects the cached object’s argument order rather than necessarily the order originally written.\n\nThus, for a Union nested in a generic type, the order returned by `get_args()` may differ from the original argument order.",
+ "num_citations": 10,
+ "citation_text_tokens": 3728,
+ "citation_text_chars": 13867,
+ "search_queries": [
+  "typing get_args argument order different reason"
+ ],
+ "model_cost_usd": 0.001454,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5087,
+  "output_tokens": 152,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2990.0272079976276,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0054540000000000005,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

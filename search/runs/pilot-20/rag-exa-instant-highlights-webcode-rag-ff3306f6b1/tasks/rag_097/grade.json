@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_097",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 450.0,
+    "total_citation_tokens": 4500.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly identifies the `where` constraint as `Self: Unpin`, matching the gold target. The added explanation is consistent with the constraint.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly show the `where` clause on `StreamExt::next` as `Self: Unpin`.\nStep 2: The gold target contains exactly this constraint, with no additional factual claims. The citations support it fully, so the answer is GROUNDED.\nStep 3: Citations [1], [2], [6], and [8] contain the constraint.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0009222249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

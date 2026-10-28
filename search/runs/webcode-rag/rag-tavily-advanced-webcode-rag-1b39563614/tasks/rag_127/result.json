@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_127",
+  "prompt": "CSS quirky lengths functional notation calc exception",
+  "attempt": 1,
+  "answer": "In CSS, **quirky/unitless lengths are not accepted inside `calc()`**. Within a `calc()` expression, unitless numbers remain `<number>` values; they do not become lengths based on the property context.\n\nTherefore:\n\n```css\nwidth: 0;              /* valid */\nwidth: 5px;            /* valid */\nwidth: calc(0 + 5px);  /* invalid */\nwidth: calc(10 + 2px); /* invalid */\n```\n\nThe CSS Values specification explicitly states that unitless `0` lengths are unsupported in `calc()`, even though unitless `0` is valid as a normal length value. The CSSWG discussion also describes this as a deliberate rule: numbers inside `calc()` are always numbers, not lengths.\n\nSource: [CSS Values and Units Level 3](https://www.w3.org/TR/css-values-3), [CSSWG issue #4874](https://github.com/w3c/csswg-drafts/issues/4874)",
+  "num_citations": 10,
+  "citation_text_tokens": 4852,
+  "citation_text_chars": 19658,
+  "search_queries": [
+    "CSS quirky lengths functional notation calc exception"
+  ],
+  "model_cost_usd": 0.0020012,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6167,
+    "output_tokens": 383,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 173
+  },
+  "latency_ms": 9072.220000089146,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.018001200000000002,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

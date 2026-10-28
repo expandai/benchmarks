@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_012",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 397.1,
+    "total_citation_tokens": 3971.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is +0, indicating the default constructor function's length property is zero. The predicted answer says the Function constructor's length property is 1, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target gives +0𝔽 as the length of an ECMAScript default constructor function. The retrieved passages state that the Function prototype object has length +0𝔽/0, but do not establish that this is the length of a default constructor function. The general rules and constructor snippets in the other citations do not connect a default constructor to that value. Since the relevant entity-to-value claim is missing, the citations do not contain enough information to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001128975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

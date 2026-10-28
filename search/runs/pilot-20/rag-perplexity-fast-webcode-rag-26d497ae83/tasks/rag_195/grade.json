@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.333,
+    "avg_citation_tokens": 465.7,
+    "total_citation_tokens": 1397.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that an oversized field block must still be processed to maintain consistent connection state unless the connection is closed, matching the gold target. Its added details about reassembling and decompressing the field block are consistent with that requirement and do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states the obligation and its exception. Step 2: This covers the full gold target claim, including that processing is required for a consistent connection state unless the connection is closed. Step 3: Citation [2] alone contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00051485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

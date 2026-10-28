@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_051",
+  "prompt": "HTML ol type attribute zero negative number rendering",
+  "attempt": 1,
+  "answer": "The `<ol>` `type` attribute controls the marker style, not the starting number. Its valid values are:\n\n- `1` — decimal numbers\n- `a` / `A` — lowercase/uppercase letters\n- `i` / `I` — lowercase/uppercase Roman numerals\n\nUse `start` to specify the first ordinal value:\n\n```html\n<ol type=\"1\" start=\"0\">\n  <li>First</li>\n  <li>Second</li>\n</ol>\n```\n\nHTML permits zero and negative `start` values, but browser support has historically been inconsistent. The search results specifically report that some browsers ignore them; older Opera versions honored `0` but could remove all markers for negative values. ([Blooberry](http://www.blooberry.com/indexdot/html/tagpages/o/ol.htm), [W3C HTML reference](https://w3c.github.io/html-reference/ol.html))",
+  "num_citations": 10,
+  "citation_text_tokens": 4087,
+  "citation_text_chars": 15635,
+  "search_queries": [
+    "HTML ol type attribute zero negative number rendering"
+  ],
+  "model_cost_usd": 0.00167095,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5206,
+    "output_tokens": 308,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 108
+  },
+  "latency_ms": 9100.024334038608,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01767095,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

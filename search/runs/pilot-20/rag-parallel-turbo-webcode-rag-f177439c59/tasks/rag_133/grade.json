@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_133",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 478.0,
+    "total_citation_tokens": 4780.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `OverconstrainedError` as the rejection error, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states that applyConstraints() rejects with an OverconstrainedError when constraints cannot be applied. Step 2: The gold target consists only of the error name, which is explicitly present in the citation. The sources do not specifically connect this behavior to remote WebRTC tracks, but that detail is not part of the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001049475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

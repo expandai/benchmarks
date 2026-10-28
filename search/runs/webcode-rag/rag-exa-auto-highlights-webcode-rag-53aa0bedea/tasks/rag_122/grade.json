@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 555.7,
+    "total_citation_tokens": 5557.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that explicit-register operands come after the other operand categories, and its example places one at the end of the operand list. `clobber_abi` and `options` are trailing assembly clauses, not operand types, so listing them afterward does not conflict with the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says explicit register operands must appear at the end of the operand list, after all other operand types.\n2. Citation [1] states this rule explicitly, so the gold target is directly supported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0013708499999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

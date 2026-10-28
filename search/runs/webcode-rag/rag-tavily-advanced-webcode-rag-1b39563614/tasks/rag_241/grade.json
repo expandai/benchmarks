@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_241",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 362.0,
+    "total_citation_tokens": 3620.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted format string omits the space between the closing bracket and `%(message)s`. The gold target includes that space, so the stated format does not match.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly gives the handler’s format string, but it has no space between `]` and `%(message)s`.\n2. The gold target includes a space at that position. Citation [5] shows example output with a space after the closing bracket, but it does not state the handler’s format string; it therefore does not establish the exact string requested.\n3. Since the exact format string in the gold target is not explicitly supported by the retrieved citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010936,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

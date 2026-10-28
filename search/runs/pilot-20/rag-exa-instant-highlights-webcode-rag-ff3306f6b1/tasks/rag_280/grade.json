@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 482.8,
+    "total_citation_tokens": 4828.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target states that proxy settings are ignored for this request. The response shows how to make a Unix-domain-socket request with `socketPath`, but it does not mention whether proxy settings are ignored. It does not contradict the gold target, so it is not attempted.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [9] explicitly addresses providing both a socket and a proxy.\n2. It says that when both are specified, the request uses the socket, and confirms that the socket takes precedence even when a proxy is provided.\n3. This supports the gold target that proxy settings are ignored in this situation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00114735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

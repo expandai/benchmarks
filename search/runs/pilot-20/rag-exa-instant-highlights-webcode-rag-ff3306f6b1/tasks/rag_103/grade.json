@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 285.2,
+    "total_citation_tokens": 2852.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The question asks for the valid hint keywords, and the gold target includes HASH, MERGE, LOOKUP, INVERTED, and STRAIGHT. The prediction lists only HASH, MERGE, and LOOKUP, omitting INVERTED and STRAIGHT, so it does not provide the complete answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [4] identifies HASH, MERGE, and LOOKUP as join hint keywords; citation [5] also gives examples using those three. Step 2: The gold target additionally names INVERTED and STRAIGHT, which are not identified as valid hint keywords in the retrieved citations. These are specific non-trivial keywords, so the citations do not contain all the information in the gold target. The answer is UNGROUNDED. Step 3: No citation contains sufficient information to derive the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00082735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

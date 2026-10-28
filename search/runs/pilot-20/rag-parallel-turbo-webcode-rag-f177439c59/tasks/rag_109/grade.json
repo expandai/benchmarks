@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_109",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 485.9,
+    "total_citation_tokens": 4859.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that the `malloc` attribute is ignored when `linkshared=True`, matching the gold target. The additional context does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The retrieved documentation explicitly states that the `malloc` attribute’s value is ignored when `linkshared=True` is specified. Step 2: This covers the full non-trivial claim in the gold target answer, with no unsupported additions. Step 3: Citations [1], [2], [3], [4], and [5] each contain the relevant statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000995225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

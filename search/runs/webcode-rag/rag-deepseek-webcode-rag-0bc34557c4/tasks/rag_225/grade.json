@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 342.0,
+    "total_citation_tokens": 3420.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a valid range of 100 to 599. The predicted answer instead states that res.sendStatus() accepts 100 through 999, which contradicts the target; noting that standard codes are generally 100–599 does not resolve the conflicting claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] directly states the valid HTTP status-code range as 100 to 599, inclusive. Step 2: This matches the gold target answer, and no additional non-trivial claims in the target are missing. Step 3: Citation [3] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008881000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

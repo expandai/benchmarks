@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 498.5,
+    "total_citation_tokens": 4985.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that overlapping masked.scatter stores are ordered from the least-significant vector element to the most-significant, matching the gold target. Its clarification about the highest-numbered active lane storing last is consistent with that order.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that overlapping LLVM scatter addresses are ordered from least-significant to most-significant element.\n2. Citations [2], [5], [6], and [7] explicitly state this ordering guarantee for scatter with overlapping addresses.\n3. The retrieved citations therefore contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00114935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

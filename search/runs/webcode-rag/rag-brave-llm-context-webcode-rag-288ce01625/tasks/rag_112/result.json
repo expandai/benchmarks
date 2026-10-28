@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_112",
+  "prompt": "automake parallel make recovery locking portable test-and-set command",
+  "attempt": 1,
+  "answer": "Use `mkdir` as the portable test-and-set operation:\n\n```make\n          trap 'rm -rf elc-lock elc-stamp' 1 2 13 15; \\\n          if mkdir elc-lock 2>/dev/null; then \\\n            rm -f elc-stamp; \\\n            $(MAKE) $(AM_MAKEFLAGS) elc-stamp; \\\n            rmdir elc-lock; \\\n          else \\\n            while test -d elc-lock; do sleep 1; done; \\\n            test -f elc-stamp; exit $$?; \\\n          fi\n```\n\nA successful `mkdir elc-lock` identifies the first process; other parallel processes wait until the lock directory disappears, then succeed only if `elc-stamp` exists. The Automake manual notes that locking solutions still violate the `make -n` promise, and portable parsing of `MAKEFLAGS` is not easy.",
+  "num_citations": 10,
+  "citation_text_tokens": 3065,
+  "citation_text_chars": 12373,
+  "search_queries": [
+    "automake parallel make recovery locking portable test and set command"
+  ],
+  "model_cost_usd": 0.00143925,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4116,
+    "output_tokens": 342,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 145
+  },
+  "latency_ms": 5988.635374931619,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064392500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

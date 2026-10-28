@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_193",
+  "prompt": "Spring Boot Undertow access log %D response time prerequisite",
+  "attempt": 1,
+  "answer": "For Undertow, enable request start-time recording for `%D` response time to work:\n\n```properties\nserver.undertow.accesslog.enabled=true\nserver.undertow.accesslog.pattern=%t %a %r %s (%D ms)\nserver.undertow.options.server.record-request-start-time=true\n```\n\nEquivalent YAML:\n\n```yaml\nserver:\n  undertow:\n    accesslog:\n      enabled: true\n      pattern: \"%t %a %r %s (%D ms)\"\n    options:\n      server:\n        record-request-start-time: true\n```\n\n`%D` reports the response time in microseconds, despite the example’s `ms` label. (Search results 1–2.)",
+  "num_citations": 10,
+  "citation_text_tokens": 2028,
+  "citation_text_chars": 8252,
+  "search_queries": [
+    "Spring Boot Undertow access log D response time prerequisite"
+  ],
+  "model_cost_usd": 0.00096195,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3138,
+    "output_tokens": 148,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3791.5957919321954,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.005961950000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

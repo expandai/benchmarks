@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 351.1,
+    "total_citation_tokens": 3511.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The response initially states that aiohttp uses the field name as the filename when a bytes value is passed without an explicit filename, matching the gold target. However, it later says that the latest source assigns no filename fallback automatically, which contradicts the gold target. A contradictory factual claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target concerns passing a bytes value without a filename.\n2. Citation [1] says that when the value is bytes and both `filename` and `content_transfer_encoding` are `None`, the code assigns `filename = name`.\n3. This directly supports the gold claim that the `name` argument is used as the filename unless `content_transfer_encoding` is specified.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00087385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

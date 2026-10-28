@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_058",
+ "prompt": "go runtime GOMAXPROCS called with zero argument behavior",
+ "attempt": 1,
+ "answer": "`runtime.GOMAXPROCS(0)` returns the current GOMAXPROCS setting without changing it. The function returns the previous setting, and when `n < 1`, it does not change the current setting.\n\nIn current Go runtimes, calling it with zero alone does not make the setting custom. However, the pattern:\n\n```go\nruntime.GOMAXPROCS(runtime.GOMAXPROCS(0))\n```\n\nsets the runtime’s state from automatic to custom, disabling background GOMAXPROCS updates, even though the numeric value does not change.",
+ "num_citations": 10,
+ "citation_text_tokens": 4443,
+ "citation_text_chars": 17044,
+ "search_queries": [
+  "go runtime GOMAXPROCS called with zero argument behavior"
+ ],
+ "model_cost_usd": 0.0016223,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5909,
+  "output_tokens": 121,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2882.5881250668317,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0023723,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

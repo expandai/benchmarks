@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 371.0,
+    "total_citation_tokens": 3710.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives the valid range as 100–599. The predicted answer instead says `res.sendStatus()` accepts codes through 999, which contradicts that range, even though it later mentions that some Node.js versions limit valid codes to 100–599.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages state that status codes outside 100 to 599 are invalid for Node.js response status codes.\nStep 2: The gold target answer is exactly the range 100 to 599, so its factual claim is directly supported by the retrieved citations.\nStep 3: Citations [1], [2], and [6] each contain the range.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00093035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

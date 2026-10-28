@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_231",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 1055.4,
+    "total_citation_tokens": 10554.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes `calc()`, which matches the gold target. Its additional explanation is consistent with the requirement that a source-size value resolve to a non-negative CSS length; the examples also show valid length-valued math expressions. It does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The cited specifications explicitly state that a source-size-value may use `calc()` and that any other CSS function is invalid. 2. This directly supports the gold target answer, `calc()`.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.002299225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

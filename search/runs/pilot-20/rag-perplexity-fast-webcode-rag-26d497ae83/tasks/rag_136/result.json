@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_136",
+ "prompt": "Haskell Ord Double compare NaN result value",
+ "attempt": 1,
+ "answer": "`compare NaN x` and `compare x NaN` both return `GT`, including:\n\n```haskell\ncompare NaN NaN == GT\n```\n\nThis behavior means `Ord Double` does not define a total order for `NaN`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3929,
+ "citation_text_chars": 11941,
+ "search_queries": [
+  "Haskell Ord Double compare NaN result value"
+ ],
+ "model_cost_usd": 0.0013173,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5001,
+  "output_tokens": 56,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2004.3885000050068,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0023173,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

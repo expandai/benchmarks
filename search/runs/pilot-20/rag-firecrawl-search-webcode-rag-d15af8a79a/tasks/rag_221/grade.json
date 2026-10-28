@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_221",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 55.3,
+    "total_citation_tokens": 553.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains a permission issue and offers remediation, but it does not state the requested error response code, 422 (Unprocessable Entity). It does not contradict that code, so the answer is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations describe a permission-related blockOwnerDeletion error, but none states that the response is HTTP 422 (Unprocessable Entity). Because that specific status code is a non-trivial claim in the gold target and is not present in the retrieved passages, the answer is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00046885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

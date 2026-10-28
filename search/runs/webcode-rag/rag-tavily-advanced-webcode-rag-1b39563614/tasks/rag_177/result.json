@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_177",
+  "prompt": "clang HasCustomParsing __declspec spelling interaction",
+  "attempt": 1,
+  "answer": "`HasCustomParsing` does **not** affect attributes using the `__declspec` spelling.\n\nAccording to Clang’s Internals Manual:\n\n- For attributes with GNU spelling, setting `HasCustomParsing = 1` enables special parsing in `Parser::ParseGNUAttributeArgs()`.\n- Attributes with a `__declspec` spelling **ignore this flag** and are handled by `Parser::ParseMicrosoftDeclSpec`.\n- `HasCustomParsing = 1` also opts the attribute out of common semantic handling, including automated subject checking, so additional implementation work may be required.",
+  "num_citations": 10,
+  "citation_text_tokens": 3430,
+  "citation_text_chars": 15215,
+  "search_queries": [
+    "clang HasCustomParsing __declspec spelling interaction"
+  ],
+  "model_cost_usd": 0.00126815,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4502,
+    "output_tokens": 119,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 5757.79504107777,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01726815,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 111.7,
+    "total_citation_tokens": 1117.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer says 16 items. These values contradict each other.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved sources that specify the existing validation limit state a maximum of 16 items.\n2. Citation [4] mentions 1 as a proposed restriction, but explicitly says the current setting is 16.\n3. Therefore, the sources do not support the gold target that the allowed maximum is 1; they indicate 16 instead.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000548575,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

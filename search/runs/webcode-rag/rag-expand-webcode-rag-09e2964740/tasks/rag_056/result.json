@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_056",
+  "prompt": "doxygen \\image command inline option caption behavior HTML",
+  "attempt": 1,
+  "answer": "Use the option in braces, with no space between `\\image` and `{inline}`:\n\n```text\n\\image{inline} html image.png \"caption\"\n```\n\nThe syntax is:\n\n```text\n\\image['{'option[,option]'}'] <format> <file> [\"caption\"] [<sizeindication>=<size>]\n```\n\nFor HTML, `inline` places the image in the text line. Its caption is **not displayed below the image**; instead, it is emitted as the image’s HTML tooltip (`title` attribute). For example, the generated HTML may look like:\n\n```html\n<img src=\"image.png\" alt=\"\" class=\"inline\" title=\"caption\">\n```\n\nThe caption must be quoted, even when it contains no spaces.",
+  "num_citations": 10,
+  "citation_text_tokens": 4086,
+  "citation_text_chars": 15987,
+  "search_queries": [
+    "doxygen \\image command inline option caption behavior HTML"
+  ],
+  "model_cost_usd": 0.001655,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5195,
+    "output_tokens": 297,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 133
+  },
+  "latency_ms": 6057.257166947238,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0036550000000000003,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

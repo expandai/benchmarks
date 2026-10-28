@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_053",
+ "prompt": "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes",
+ "attempt": 1,
+ "answer": "In RFC 9114, each SETTINGS identifier and value is encoded as a QUIC variable-length integer. The encoding uses **2 bits** of the first byte to indicate the total encoded length:\n\n| Prefix (2 MSB) | Total bytes | Usable value bits | Value range |\n|---|---:|---:|---:|\n| `00` | 1 | 6 | 0–63 |\n| `01` | 2 | 14 | 0–16,383 |\n| `10` | 4 | 30 | 0–1,073,741,823 |\n| `11` | 8 | 62 | 0–4,611,686,018,427,387,903 |\n\nThus, RFC 9114 SETTINGS values can be **6, 14, 30, or 62 bits**, depending on their encoded length.",
+ "num_citations": 10,
+ "citation_text_tokens": 5159,
+ "citation_text_chars": 20909,
+ "search_queries": [
+  "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes"
+ ],
+ "model_cost_usd": 0.0018017,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6305,
+  "output_tokens": 188,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3271.5102919610217,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0088017,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

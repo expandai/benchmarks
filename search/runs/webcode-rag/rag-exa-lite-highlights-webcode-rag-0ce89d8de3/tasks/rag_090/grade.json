@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_090",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 293.7,
+    "total_citation_tokens": 2937.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly identifies a brace expression in an ordinary statement position as a lambda literal. However, it also makes the unqualified claim that a block’s value is its last expression (or Unit). A regular Kotlin block, such as a block-bodied function body, does not generally return its last expression as its value. Because the response includes this incorrect claim, it is not fully correct.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that curly braces in a statement position are interpreted as a lambda literal. Citations [1] and [5] state this directly. The target’s full factual claim is therefore supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001246475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

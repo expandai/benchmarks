@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_272",
+  "prompt": "argparse parse_intermixed_args mutually exclusive group restriction",
+  "attempt": 1,
+  "answer": "`parse_intermixed_args()` does **not** support mutually exclusive groups that contain both optional and positional arguments. It raises an exception when such a parser is used.\n\nThe current Python documentation states:\n\n> “In particular, subparsers, and mutually exclusive groups that include both optionals and positionals are not supported.”\n\nHowever, a mutually exclusive group containing **only positional arguments** can be supported in newer implementations: the CPython rewrite notes that “required mutually exclusive groups containing positional arguments are now supported.”",
+  "num_citations": 10,
+  "citation_text_tokens": 4858,
+  "citation_text_chars": 20252,
+  "search_queries": [
+    "argparse parse_intermixed_args mutually exclusive group restriction"
+  ],
+  "model_cost_usd": 0.00165805,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6124,
+    "output_tokens": 106,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2927.5457080220804,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00565805,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

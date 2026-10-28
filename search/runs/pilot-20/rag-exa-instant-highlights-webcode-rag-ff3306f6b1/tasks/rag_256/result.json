@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "In `jq`, `|=` treats the RHS as an update expression:\n\n- If the RHS produces **one or more values**, only the **first** value is used.\n- If the RHS produces **no values**—for example, `empty`—the LHS path is deleted, equivalent to `del(path)`.\n\nExamples:\n\n```jq\n{a: 1} | .a |= empty\n# {}\n```\n\n```jq\n{a: 1} | .a |= range(5)\n# {\"a\":0}\n```\n\nThis differs from `=`:\n\n```jq\n{a: 1} | .a = (empty)\n# produces no output\n```\n\nThe behavior with array paths such as `.[] |= empty` is problematic in jq 1.6 and some earlier versions. For example:\n\n```sh\necho '[1, 2]' | jq -c '.[] |= empty'\n# [2]\n```\n\nThis has been identified as a bug; use `del(.[])` when deletion is intended. ([jq issue #2397](https://github.com/stedolan/jq/issues/2397), [Stack Overflow](https://stackoverflow.com/questions/76207747/update-assignment-of-empty-only-deletes-first-path))",
+ "num_citations": 10,
+ "citation_text_tokens": 5163,
+ "citation_text_chars": 18112,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.0023184,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6543,
+  "output_tokens": 569,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 305
+ },
+ "latency_ms": 7942.410624935292,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0063184,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

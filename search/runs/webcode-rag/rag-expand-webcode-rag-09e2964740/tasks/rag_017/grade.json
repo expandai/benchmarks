@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_017",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.7,
+    "avg_citation_tokens": 340.0,
+    "total_citation_tokens": 3400.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that `llvm.sqrt` has undefined behavior for negative inputs other than `-0.0`, matching the gold target. Its additional comparisons and explanations do not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages explicitly state that llvm.sqrt has undefined behavior for negative arguments other than -0.0 (or, equivalently, for non-zero negative arguments). Step 2: This covers the complete non-trivial claim in the gold target. The citations provide sufficient evidence, so the answer is grounded. Step 3: Citations [1], [2], [3], [6], [7], [9], and [10] state the relevant behavior explicitly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 7
+  },
+  "judge_cost_usd": 0.001046225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

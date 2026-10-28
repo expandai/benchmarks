@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_207",
+ "prompt": "ffmpeg select filter expression output index routing",
+ "attempt": 1,
+ "answer": "In FFmpeg’s `select` filter, the expression result determines the output pad:\n\n- `0`: discard the frame.\n- Negative or `NaN`: send it to output index `0` (the first output).\n- Positive value: send it to output index `ceil(value) - 1`.\n\nThus:\n\n| Expression result | Output index |\n|---:|---:|\n| `0` | Discarded |\n| `-1` or `NaN` | `0` |\n| `0.1` through `1.0` | `0` |\n| `1.2` | `1` |\n| `2.0` | `1` |\n| `2.1` | `2` |\n\nMultiple outputs must be enabled with `outputs` or its alias `n`; the default is one output. For example:\n\n```ffmpeg\nselect=n=2:e='mod(n,2)+1'\n```\n\nThis creates two outputs:\n\n```text\nresult 1 → output 0\nresult 2 → output 1\n```\n\nA complete routing example from the documentation is:\n\n```ffmpeg\nselect=n=2:e='mod(n, 2)+1' [odd][even];\n[odd] pad=h=2*ih [tmp];\n[tmp][even] overlay=y=h\n```\n\nThe filter’s outputs are addressed as `output0`, `output1`, and so on, and should be connected using filtergraph labels. (FFmpeg select filter documentation; FFmpeg `f_select.c` source.)",
+ "num_citations": 10,
+ "citation_text_tokens": 5378,
+ "citation_text_chars": 20719,
+ "search_queries": [
+  "ffmpeg select filter expression output index routing"
+ ],
+ "model_cost_usd": 0.00228955,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6658,
+  "output_tokens": 521,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 196
+ },
+ "latency_ms": 5869.991541956551,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00628955,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

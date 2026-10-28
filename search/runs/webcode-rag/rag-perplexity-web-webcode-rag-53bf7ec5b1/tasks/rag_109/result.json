@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_109",
+  "prompt": "bazel cc_binary malloc attribute when linkshared specified",
+  "attempt": 1,
+  "answer": "When `linkshared=True` is specified on a `cc_binary`, the `malloc` attribute is ignored.\n\nNormally, `malloc` overrides the default dependency on `@bazel_tools//tools/cpp:malloc`, an empty `cc_library`, so the binary uses libc’s `malloc`.",
+  "num_citations": 9,
+  "citation_text_tokens": 3848,
+  "citation_text_chars": 14140,
+  "search_queries": [
+    "bazel cc_binary malloc attribute when linkshared specified"
+  ],
+  "model_cost_usd": 0.00128295,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4830,
+    "output_tokens": 63,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2443.043665960431,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00628295,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

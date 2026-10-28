@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 529.2,
+    "total_citation_tokens": 5292.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that setting `allow_alias = true` when all enum numbers are distinct causes a validation error, matching the gold target that it is an error.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question describes an enum with `allow_alias` enabled and all values having distinct numbers, so no aliases are found.\n2. Citation [4] explicitly returns an error when `allowAlias` is true but `foundAlias` is false.\n3. This directly supports the gold target that it is an error.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001204475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

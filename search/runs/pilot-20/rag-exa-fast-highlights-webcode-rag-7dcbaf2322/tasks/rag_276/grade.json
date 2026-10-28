@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 525.6,
+    "total_citation_tokens": 5256.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that without `texture-component-swizzle`, the sampled result is `(V, X, X, X)`, with the non-depth channels unspecified, matching the gold target. Its additional guidance does not contradict that result.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states the behavior when the texture-component-swizzle feature is not enabled. Step 2: It explicitly gives the values as (V, X, X, X) and specifies that X is implementation-defined and unspecified, matching all non-trivial information in the gold target. Step 3: Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001079975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

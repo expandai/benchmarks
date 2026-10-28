@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_010",
+  "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+  "attempt": 1,
+  "answer": "An HTTP/2 intermediary:\n\n- **DATA frames:** **SHOULD retain padding**.\n- **HEADERS and PUSH_PROMISE frames:** **MAY drop padding**.\n\nPadding has no application semantic value and is used to obscure frame or message sizes. An intermediary may change the amount of padding when doing so improves the protection padding provides. This is stated in RFC 9113, Section 10.7, and the HTTP/2 drafts.",
+  "num_citations": 10,
+  "citation_text_tokens": 12028,
+  "citation_text_chars": 50647,
+  "search_queries": [
+    "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+  ],
+  "model_cost_usd": 0.00365825,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 13712,
+    "output_tokens": 192,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 95
+  },
+  "latency_ms": 5606.046042055823,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00565825,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

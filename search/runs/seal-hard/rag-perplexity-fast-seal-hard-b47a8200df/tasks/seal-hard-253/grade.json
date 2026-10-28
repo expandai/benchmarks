@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-253",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 238.9,
+    "total_citation_tokens": 2389.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer gives French, which is part of the gold target, but omits Standard German. Since the gold target includes both languages and the response does not provide the full answer, it is incomplete.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] identifies Standard German and French as Indo-European and gives their native-speaker counts, along with the counts for Indonesian and Javanese.\n2. French (74 million) is above Javanese (69 million) and below Indonesian (75 million), so it satisfies the question.\n3. Standard German (76 million) is above Indonesian (75 million), so it does not satisfy the question. The gold target includes this non-trivial, contradicted answer as well as French; therefore the citations do not ground the entire gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000936105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

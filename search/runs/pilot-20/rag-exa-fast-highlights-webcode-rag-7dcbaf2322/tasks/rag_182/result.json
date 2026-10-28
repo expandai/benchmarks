@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_182",
+ "prompt": "GNU make LOADLIBES variable relationship LDLIBS",
+ "attempt": 1,
+ "answer": "In GNU make, `LOADLIBES` is a deprecated but still supported alternative to `LDLIBS`. Both are intended for library flags such as `-lm` or `-lfoo`; `LDLIBS` is the preferred variable.\n\nGNU make’s built-in linking rule places them after the object files:\n\n```make\n$(CC) $(LDFLAGS) $(TARGET_ARCH) $^ $(LOADLIBES) $(LDLIBS) -o $@\n```\n\nThus:\n\n- Use `LDLIBS` for libraries, such as `-lm`.\n- Use `LDFLAGS` for non-library linker flags, such as `-L/path`.\n- `LOADLIBES` remains available for compatibility, but should generally not be used for new Makefiles.\n- If both variables are set, the built-in rule includes both, in the order `LOADLIBES` followed by `LDLIBS`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4311,
+ "citation_text_chars": 15375,
+ "search_queries": [
+  "GNU make LOADLIBES variable relationship LDLIBS"
+ ],
+ "model_cost_usd": 0.0017594,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5555,
+  "output_tokens": 309,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 115
+ },
+ "latency_ms": 5258.289915975183,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0087594,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

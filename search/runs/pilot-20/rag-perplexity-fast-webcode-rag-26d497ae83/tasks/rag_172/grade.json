@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_172",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 389.3,
+    "total_citation_tokens": 3893.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that a Cargo virtual workspace must explicitly set the resolver field in the root workspace definition, and shows `resolver = \"3\"`. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that a virtual workspace still needs the resolver field explicitly set in its `[workspace]` definition.\n2. Citations [1] and [2] state that requirement directly, and [10] independently confirms that virtual workspaces must set `resolver` explicitly.\n3. The retrieved citations contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008866,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

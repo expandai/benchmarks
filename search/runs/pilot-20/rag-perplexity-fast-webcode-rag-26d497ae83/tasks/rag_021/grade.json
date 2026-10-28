@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.714,
+    "avg_citation_tokens": 310.4,
+    "total_citation_tokens": 2173.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact output string in the gold target, `[64dec-fail]`. The additional documentation caveat does not negate that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that when the Base64 sequence cannot be decoded, curl outputs `[64dec-fail]`.\nStep 2: The gold target answer is exactly that failure-output string, so all its factual content is supported.\nStep 3: Citations [2], [3], [5], [6], and [7] directly contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0006993500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

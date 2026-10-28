@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 233.6,
+    "total_citation_tokens": 2336.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is `<CACHE>`, indicating the server-name value logged for a cache-served object. The predicted answer says that value is blank, which contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] says that a cached response changes the server name shown in the log, but the replacement value is rendered as blank and does not state `<CACHE>`. Step 2: The specific replacement string is a non-trivial fact in the gold target and is not present in the retrieved text. Therefore the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00085985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

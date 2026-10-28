@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_091",
+  "prompt": "Odin #load typed file size not multiple of type",
+  "attempt": 1,
+  "answer": "`#load(path, []T)` interprets the file as a slice of `T`. The implementation calculates the length by dividing the file’s byte size by `size_of(T)`:\n\n```cpp\ndata_len /= sz;\n```\n\nTherefore, if the file size is not an exact multiple of `size_of(T)`, the remainder is discarded rather than diagnosed. For example, an 8-byte file loaded as `[]u32` has length 2; a non-multiple would similarly produce a truncated element count.\n\nUse:\n\n```odin\ndata := #load(\"file\", []u32)\n```\n\nand ensure that the file size is a multiple of `size_of(u32)`—or load it as `[]u8` if it should remain byte-oriented.\n\nAlso, `transmute([]u32)#load(\"file\")` is a reported bug: it behaves as though it were `#load(\"file\", []u32)`, changing the length from bytes to `u32` elements. The issue recommends using the typed `#load` form directly.",
+  "num_citations": 10,
+  "citation_text_tokens": 5918,
+  "citation_text_chars": 19999,
+  "search_queries": [
+    "Odin #load typed file size not multiple of type"
+  ],
+  "model_cost_usd": 0.00264365,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7724,
+    "output_tokens": 594,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 370
+  },
+  "latency_ms": 8899.43620795384,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00964365,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

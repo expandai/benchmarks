@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_138",
+ "prompt": "esbuild CLI transform API sourcemap supported modes",
+ "attempt": 1,
+ "answer": "- **CLI transform API:** supports only the **`inline`** sourcemap mode, because it writes output to stdout and cannot generate a separate `.js.map` file.\n  ```bash\n  esbuild --sourcemap=inline\n  ```\n\n- **JavaScript/Go transform API:** supports **`inline`**, **`external`**, and **`both`**. It does **not** support **`linked`**, since transform output has no associated filename.\n\nThe available sourcemap modes are `linked`, `external`, `inline`, and `both`; all four are supported by the build API.",
+ "num_citations": 10,
+ "citation_text_tokens": 5566,
+ "citation_text_chars": 20656,
+ "search_queries": [
+  "esbuild CLI transform API sourcemap supported modes"
+ ],
+ "model_cost_usd": 0.00220835,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6842,
+  "output_tokens": 415,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 281
+ },
+ "latency_ms": 31422.59195796214,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00920835,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

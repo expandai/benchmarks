@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_303",
+  "prompt": "ffmpeg scale filter both width height -n edge case",
+  "attempt": 1,
+  "answer": "When **both** `width` and `height` are negative `-n` values, the FFmpeg `scale` filter does **not** calculate dimensions to preserve aspect ratio. Instead, it behaves like `0:0`, using the input dimensions unchanged.\n\nExamples:\n\n```text\nscale=-1:-1\nscale=-2:-2\nscale=-10:-42\n```\n\nAll are equivalent to:\n\n```text\nscale=0:0\n```\n\nAspect-ratio preservation using `-n` occurs only when **exactly one** dimension is `-n`; the other dimension must be explicitly specified. The calculated dimension is then adjusted to be divisible by `n`. (FFmpeg scale documentation and changelog.)",
+  "num_citations": 10,
+  "citation_text_tokens": 2490,
+  "citation_text_chars": 10401,
+  "search_queries": [
+    "ffmpeg scale filter both width height -n edge case"
+  ],
+  "model_cost_usd": 0.0011727,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3573,
+    "output_tokens": 233,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 80
+  },
+  "latency_ms": 4430.033042095602,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0031727,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

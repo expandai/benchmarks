@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_294",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 547.5,
+    "total_citation_tokens": 5475.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that JUnit TestExecutionListener finish-event methods are invoked in reverse registration order, matching the gold target. Its example is consistent with that order.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that JUnit TestExecutionListener finish-event methods are invoked in reverse registration order.\n2. Citations [1]–[6] explicitly state that methods for finish events are called in reverse order, alongside the contrast that start-event methods are called in registration order.\n3. The retrieved sources therefore support the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.001083225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

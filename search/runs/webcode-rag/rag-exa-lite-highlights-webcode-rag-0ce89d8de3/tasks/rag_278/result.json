@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_278",
+  "prompt": "typing get_args argument order different reason",
+  "attempt": 1,
+  "answer": "`typing.get_args()` can return Union arguments in a different order because of type caching, not because `get_args()` itself reorders them.\n\n`Union[int, str]` and `Union[str, int]` are considered equal, and `_UnionGenericAlias` hashes their arguments as a `frozenset`. Consequently, generic aliases such as `List[...]`, `Tuple[...]`, or `Annotated[...]` can reuse the cached object created with the other order:\n\n```python\nTuple[Union[int, str]].__args__\n# (typing.Union[int, str],)\n\nTuple[Union[str, int]].__args__\n# (typing.Union[int, str],)\n```\n\nThus, when a Union is nested inside another generic type, caching may cause its original argument order not to be preserved. The documented behavior is that the order returned for a Union may differ from the order in which its arguments were written.",
+  "num_citations": 10,
+  "citation_text_tokens": 5304,
+  "citation_text_chars": 19412,
+  "search_queries": [
+    "typing get_args argument order different reason"
+  ],
+  "model_cost_usd": 0.00196495,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6694,
+    "output_tokens": 243,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 51
+  },
+  "latency_ms": 4536.176042049192,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00596495,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

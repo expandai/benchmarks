@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_093",
+  "prompt": "org clocktable :step untilnow range starting point",
+  "attempt": 1,
+  "answer": "With `:step`, `:block untilnow` starts at the beginning of 2003—not the beginning of time.\n\nTo choose a different starting point, use `:tstart` and `:tend` instead of `:block`:\n\n```org\n#+BEGIN: clocktable :step month :tstart \"<2025-01-01>\" :tend \"<now>\"\n#+END:\n```\n\n`:step` requires either `:block`, or both `:tstart` and `:tend`. Relative starts are also supported, for example:\n\n```org\n#+BEGIN: clocktable :step week :tstart \"<-12w>\" :tend \"<now>\"\n#+END:\n```\n\nThe time strings must be quoted.",
+  "num_citations": 10,
+  "citation_text_tokens": 4182,
+  "citation_text_chars": 14743,
+  "search_queries": [
+    "org clocktable :step untilnow range starting point"
+  ],
+  "model_cost_usd": 0.00173005,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5524,
+    "output_tokens": 291,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 133
+  },
+  "latency_ms": 4908.0571660306305,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00573005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

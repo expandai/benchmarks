@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 271.3,
+    "total_citation_tokens": 2713.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the failure output as `[64dec-fail]`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the exact string `[64dec-fail]`.\n2. Citation [2] explicitly states that this is the output when the Base64 sequence cannot be decoded. Citation [3] also shows the implementation adding that exact string on decode failure.\n3. The citations contain all the information in the gold target, with no missing non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006791000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

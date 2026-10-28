@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_121",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 79.1,
+    "total_citation_tokens": 791.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides none of the requested hook event information. It does not contradict the gold target, so it is not attempted.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [4] directly states that `.Event.Error` is exposed only for postsync hooks when a release fails and is otherwise nil. Citation [5] gives the same information, though its event name appears to contain a typo. Step 2: The gold target’s claims are directly supported by citation [4]. Step 3: Citation [4] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00045410000000000003,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

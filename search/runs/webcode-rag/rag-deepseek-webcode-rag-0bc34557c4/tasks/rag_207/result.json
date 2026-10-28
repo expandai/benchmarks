@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_207",
+ "prompt": "ffmpeg select filter expression output index routing",
+ "attempt": 1,
+ "answer": "The `select` filter can route frames to multiple outputs using `outputs` (`n`) and the expression result:\n\n- Result `0`: frame is discarded.\n- Negative or `NaN`: frame goes to output index `0`.\n- Positive/nonnegative result: frame goes to output index `ceil(result) - 1`.\n- `outputs` sets the number of outputs; its default is `1`.\n\nFor example:\n\n```ffmpeg\nselect=n=2:e='mod(n,2)+1'[odd][even]\n```\n\nThis routes frames to two outputs:\n\n- `mod(n,2) + 1 == 1` → output index `0` (`[odd]`)\n- `mod(n,2) + 1 == 2` → output index `1` (`[even]`)\n\nAnother example: an expression result of `1.2` routes to output index:\n\n```text\nceil(1.2) - 1 = 1\n```\n\nThat is the second output.",
+ "num_citations": 10,
+ "citation_text_tokens": 5642,
+ "citation_text_chars": 20404,
+ "search_queries": [
+  "ffmpeg select filter expression output index routing"
+ ],
+ "model_cost_usd": 0.00218075,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7274,
+  "output_tokens": 302,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 89
+ },
+ "latency_ms": 4482.921082992107,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00293075,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

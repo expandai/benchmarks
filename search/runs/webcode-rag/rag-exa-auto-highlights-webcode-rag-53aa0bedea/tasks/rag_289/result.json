@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_289",
+  "prompt": "micronaut openapi multiple spec files UI frameworks support",
+  "attempt": 1,
+  "answer": "Micronaut OpenAPI supports multiple specifications through:\n\n- **OpenAPI groups** or **Micronaut versioning** for multiple generated definitions.\n- `micronaut.openapi.groups.*` for configuring group titles and filenames.\n- `micronaut.openapi.additional.files` for loading additional YAML/JSON specifications from directories or files.\n- `micronaut.openapi.additional.files-merge-mode`:\n  - `append`: generated elements take precedence for duplicates.\n  - `replace`: additional-file elements replace generated duplicates; this is the default.\n\nSupported UI frameworks/views include:\n\n- Swagger UI\n- ReDoc\n- OpenAPI Explorer\n- Scalar\n- RapiDoc\n\nViews are disabled by default. Swagger UI can be enabled with:\n\n```properties\nswagger-ui.enabled=true\n```\n\nThe UI configuration also supports setting the specification filename via `specFile`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4734,
+  "citation_text_chars": 20464,
+  "search_queries": [
+    "micronaut openapi multiple spec files UI frameworks support"
+  ],
+  "model_cost_usd": 0.00178135,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5758,
+    "output_tokens": 285,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 107
+  },
+  "latency_ms": 5344.912291970104,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00878135,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

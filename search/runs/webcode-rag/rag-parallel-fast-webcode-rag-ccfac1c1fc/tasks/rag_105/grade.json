@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_105",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 229.9,
+    "total_citation_tokens": 2299.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that invalid keys or values in the env dictionary cause os.spawnve() to return 127, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the return value for os.spawnve when the environment keys or values are invalid.\n2. Citations [1], [2], and [5] state that invalid environment keys or values cause the function to fail and return 127.\n3. The cited information directly supports the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0006371,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

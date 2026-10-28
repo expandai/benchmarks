@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_023",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 209.4,
+    "total_citation_tokens": 2094.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `Integer.MIN_VALUE` as the `idFetchSize` value, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is the specific JDBC fetch-size value `Integer.MIN_VALUE`.\n2. Citation [3] explicitly instructs using `.idFetchSize(Integer.MIN_VALUE)` to disable the MySQL JDBC driver's behavior. Citation [5] also states that MySQL might benefit from `Integer.MIN_VALUE`.\n3. The sources contain the full, specific value requested; no non-trivial information is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00060985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

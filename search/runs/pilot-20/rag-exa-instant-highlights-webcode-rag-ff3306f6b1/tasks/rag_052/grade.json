@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_052",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 481.6,
+    "total_citation_tokens": 4816.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and gives no answer about the truncation direction. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims truncation toward minus infinity.\n2. Citation [3] directly states that `unix_epoch_second()` uses floor division, explicitly defined as rounding toward negative infinity, and gives the −1.5 → −2 example.\n3. Citation [2] describes the prior truncation-toward-zero bug and notes the fix adding floor semantics, consistent with the behavior documented in [3].\n4. The cited evidence supports the gold target’s direction of truncation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001067545,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_142",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 226.5,
+    "total_citation_tokens": 2265.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold target of 6 bytes. Its explanation that the supported_versions extension has a 4-byte type-and-length header plus a 2-byte version value is consistent with that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] establishes that a ServerHello must include the supported_versions extension, whose selected version value is 0x0304 (two bytes).\n2. Citation [10] establishes that an extension has a two-byte type and a two-byte content-length field.\n3. Combining these, the minimum supported extension entry is 2 + 2 + 2 = 6 bytes. Thus the citations support the target, interpreting it as the minimum length of the extension entry/content (not including the enclosing extensions vector’s own length prefix).",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0014131,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

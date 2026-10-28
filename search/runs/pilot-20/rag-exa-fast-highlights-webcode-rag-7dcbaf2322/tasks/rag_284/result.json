@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_284",
+ "prompt": "jq |= update-assignment right-hand side outputs empty",
+ "attempt": 1,
+ "answer": "`empty` produces **no result at all**—not even `null`—so an `|=` update whose RHS evaluates to `empty` has no value to assign.\n\nFor example:\n\n```jq\nnull | .a |= empty\n```\n\nhas historically produced:\n\n```jq\nnull\n```\n\nwhile:\n\n```jq\nnull | .a = empty\n```\n\nproduces an empty output stream. The jq wiki documents this difference.\n\nThe behavior of `|= ... empty` has varied between jq versions. In particular, jq 1.6 has known bugs involving empty update results, especially with array paths such as:\n\n```jq\n[0,1,2] | .[] |= empty\n```\n\nThe documented workaround is to avoid `|=` when appropriate, using `=` instead:\n\n```jq\n.a = (.a | ...)\n```\n\nIf the RHS does not depend on the existing `.a` value, replace `|=` with `=` directly. To delete a path explicitly, use `del(path)` rather than relying on `empty` inside `|=`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4442,
+ "citation_text_chars": 16277,
+ "search_queries": [
+  "jq |= update-assignment right-hand side outputs empty"
+ ],
+ "model_cost_usd": 0.0019783,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5605,
+  "output_tokens": 481,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 255
+ },
+ "latency_ms": 9152.576416032389,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089783,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

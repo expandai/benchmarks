@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_063",
+ "prompt": "emacs calc rewrite apply pattern plus operator internal name",
+ "attempt": 1,
+ "answer": "In Emacs Calc rewrite patterns, the infix `+` operator’s internal function name is **`add`**.\n\nExamples:\n\n```calc\napply(f, args)\n```\n\nmatches any function call. For example, matching `a+b` binds:\n\n```text\nf = add\nargs = [a,b]\n```\n\nTo match only addition, use:\n\n```calc\napply(quote(add), args)\n```\n\nFor exactly two arguments:\n\n```calc\napply(quote(add), [a,b])\n```\n\nIf the function name is a meta-variable and must also be used on the right-hand side, use `apply` there too:\n\n```calc\napply(f, [x]) := apply(f, [x+1])\n```\n\nThe ordinary form `f(x+1)` is not correct for preserving the matched function name.",
+ "num_citations": 10,
+ "citation_text_tokens": 3279,
+ "citation_text_chars": 12180,
+ "search_queries": [
+  "emacs calc rewrite apply pattern plus operator internal name"
+ ],
+ "model_cost_usd": 0.0015028,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4279,
+  "output_tokens": 361,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 185
+ },
+ "latency_ms": 4645.91525006108,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025028000000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

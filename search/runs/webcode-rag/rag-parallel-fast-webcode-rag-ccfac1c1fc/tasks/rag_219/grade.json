@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_219",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 269.0,
+    "total_citation_tokens": 2690.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all valid SVG values from the gold target: 2, 4, 8, 16, and 32. Its additional descriptions are consistent with those values and do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2] and [5] explicitly list the possible SVG register values.\nStep 2: The gold target answer is exactly “2, 4, 8, 16, 32,” and all values are present in the retrieved citations. No non-trivial claim is missing.\nStep 3: Citations [2] and [5] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00075235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

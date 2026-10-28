@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 216.0,
+    "total_citation_tokens": 2160.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that explicit register operands must appear at the end of the Rust `asm!` operand list, after the other operands, which matches the gold target. Its additional statement about referencing explicit registers directly is consistent and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [5] and [10] directly state the rule for explicit register operands.\nStep 2: The gold target’s full factual claim—that explicit register operands must appear at the end of the operand list after all other operand types—is explicitly present in those citations. Therefore, the answer is grounded.\nStep 3: Citations [5] and [10] each contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000718725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

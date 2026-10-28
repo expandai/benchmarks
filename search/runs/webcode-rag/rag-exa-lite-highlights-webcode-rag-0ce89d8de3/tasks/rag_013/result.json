@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_013",
+  "prompt": "haproxy src_http_fail_cnt 5xx status codes excluded",
+  "attempt": 1,
+  "answer": "In HAProxy 3.0+, `http_fail_cnt` is controlled by the global `http-fail-codes` directive. Status-code ranges can be excluded and then re-added. For example:\n\n```haproxy\nhttp-fail-codes -550-580 +555,599,556-566\n```\n\nThis excludes `550–580` except for `555` and `556–566`; `599` is also included. The search results do not specify the default set of excluded 5xx codes.",
+  "num_citations": 10,
+  "citation_text_tokens": 4909,
+  "citation_text_chars": 18965,
+  "search_queries": [
+    "haproxy src_http_fail_cnt 5xx status codes excluded"
+  ],
+  "model_cost_usd": 0.00202115,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6098,
+    "output_tokens": 414,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 301
+  },
+  "latency_ms": 6861.50383297354,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00602115,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

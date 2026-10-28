@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_071",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 571.7,
+    "total_citation_tokens": 5717.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that each encoding-error byte is treated as occupying one column, matching the gold target. Its caveats about inaccurate alignment do not contradict that treatment.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly states the column-width assumption for encoding errors: each encoding-error byte is displayed in a single column. Step 2: This directly supports the gold target, “single column per encoding error.” Step 3: Citation [2] contains the information needed to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001236225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

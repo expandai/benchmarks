@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 73.8,
+    "total_citation_tokens": 738.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer discusses TLS passthrough behavior and an insecure termination policy, but it does not state the key restriction that passthrough is incompatible with httpHeader actions. It also does not directly contradict that restriction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations provide general information about passthrough termination and mention a restriction involving `insecureEdgeTerminationPolicy`.\n2. None state that passthrough termination is incompatible with `httpHeader` actions.\n3. That specific compatibility claim is a non-trivial fact in the gold target and is not supported by the retrieved citations. Therefore, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000583725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

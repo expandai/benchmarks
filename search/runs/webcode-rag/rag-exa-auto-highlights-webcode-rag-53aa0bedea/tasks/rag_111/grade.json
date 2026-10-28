@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_111",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 212.5,
+    "total_citation_tokens": 2125.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target: TestDescriptor.Type.CONTAINER.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited EngineDescriptor API documentation explicitly states that its getType() method returns `TestDescriptor.Type.CONTAINER`.\nStep 2: This directly supports the full gold target answer; no non-trivial details are missing.\nStep 3: Citations [1], [3], [5], [7], and [9] each explicitly provide the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000609585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

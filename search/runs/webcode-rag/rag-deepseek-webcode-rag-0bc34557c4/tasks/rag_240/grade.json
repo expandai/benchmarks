@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_240",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 239.4,
+    "total_citation_tokens": 2394.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the key restriction: a SelectedListValue allows only one SelectedValue as an element. The prediction instead describes a type restriction on each element (object value selections) and does not give the one-element cardinality restriction; its wording also suggests a list of potentially multiple elements. It therefore does not provide the required answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [7] describes GraphQL ListValue syntax as allowing one or more values, including examples with multiple values.\n2. Citation [9] limits the kinds of values supported as list elements in a requirement map to object value selections. It does not say that only one SelectedValue may occur as an element.\n3. None of the retrieved citations states or establishes the gold target’s specific cardinality claim that only one SelectedValue is allowed as an element. A non-trivial claim is missing, so the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012326,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

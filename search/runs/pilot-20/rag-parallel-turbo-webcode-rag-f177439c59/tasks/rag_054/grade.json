@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_054",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 349.6,
+    "total_citation_tokens": 3496.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the 64 KiB limit but omits the additional 8 KiB allowed for chunk headers when Transfer-Encoding: chunked is used. Its broad statement that Apache caps the request bodies at 64 KiB conflicts with that chunked-request allowance.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] supports the 64K limit for TraceEnable extended when Apache acts as the origin.\n2. The gold answer additionally claims that 8Kb is added for chunk headers when Transfer-Encoding: chunked is used. No citation supports that claim.\n3. Because this is a specific factual detail missing from the retrieved sources, the citations do not contain all non-trivial information in the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00089985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

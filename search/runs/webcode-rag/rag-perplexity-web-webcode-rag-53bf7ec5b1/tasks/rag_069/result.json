@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_069",
+  "prompt": "protobuf allow_alias enum all values distinct numbers behavior",
+  "attempt": 1,
+  "answer": "An enum with `option allow_alias = true` must contain at least two values sharing the same number. If all enum values have distinct numbers, the enum is invalid according to the protobuf language specification.\n\n```proto\nenum Example {\n  option allow_alias = true;\n\n  ZERO = 0;\n  ONE = 1;\n  TWO = 2;\n}\n```\n\nThis is an error. Remove `allow_alias` when no aliases are needed.",
+  "num_citations": 10,
+  "citation_text_tokens": 3801,
+  "citation_text_chars": 13106,
+  "search_queries": [
+    "protobuf allow_alias enum all values distinct numbers behavior"
+  ],
+  "model_cost_usd": 0.00145315,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4810,
+    "output_tokens": 209,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 113
+  },
+  "latency_ms": 4556.292957975529,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00645315,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

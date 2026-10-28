@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_092",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 224.9,
+    "total_citation_tokens": 2249.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says that `-mlong-double-80` storage is padded to 128 bits. The predicted answer states the same and correctly describes the additional 48 bits as padding.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2] and [4] explicitly state that -mlong-double-80 is padded to 128 bits for storage. Step 2: This directly supports the full gold target answer; no non-trivial claim is missing. Step 3: Citations [2] and [4] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000617475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

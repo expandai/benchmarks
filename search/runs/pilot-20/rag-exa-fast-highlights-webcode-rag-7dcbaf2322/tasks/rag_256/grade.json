@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_256",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 484.5,
+    "total_citation_tokens": 4845.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that when the RHS of jq’s update assignment (`|=`) produces no values, the corresponding LHS path is deleted, matching `del(path)`. This fully matches the gold target. The additional examples and caveat do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target says that when the `|=` RHS produces no values, the LHS path is deleted as with `del(path)`. Citation [2] states this directly. Citation [1] also describes the deletion behavior in the implementation. The full non-trivial claim is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011651,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

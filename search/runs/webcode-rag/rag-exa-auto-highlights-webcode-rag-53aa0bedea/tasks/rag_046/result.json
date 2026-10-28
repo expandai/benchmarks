@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_046",
+  "prompt": "ffmpeg filter_complex bitmap subtitle stream no video fallback resolution",
+  "attempt": 1,
+  "answer": "A bitmap subtitle stream used as an input to `-filter_complex` is converted into a video canvas:\n\n- If the file contains video, the canvas uses the size of the largest video.\n- If no video is present, the fallback resolution is **720×576**.\n\nThis behavior was described as experimental and temporary.",
+  "num_citations": 10,
+  "citation_text_tokens": 6066,
+  "citation_text_chars": 19997,
+  "search_queries": [
+    "ffmpeg filter_complex bitmap subtitle stream no video fallback resolution"
+  ],
+  "model_cost_usd": 0.0018762,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7179,
+    "output_tokens": 68,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4464.356333017349,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0088762,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 444.0,
+    "total_citation_tokens": 4440.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that without the feature, the non-depth components are unspecified and implementation-defined, matching the gold target of (V, X, X, X). Its additional advice does not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The target identifies the sampled depth/stencil value as V and says the other components are unspecified without the feature.\n2. Citation [2] says enabling the feature sets the behavior to (V, 0, 0, 1), and explicitly says the feature defines behavior that was previously implementation-defined for reading and sampling depth/stencil textures. This supports the target’s characterization of the non-depth components without the feature as implementation-defined/unspecified.\n3. The recommendation to provide (V, 0, 0, 1) even without the feature does not make those values guaranteed; it is explicitly a recommendation. The cited specification therefore contains the necessary information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00150585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

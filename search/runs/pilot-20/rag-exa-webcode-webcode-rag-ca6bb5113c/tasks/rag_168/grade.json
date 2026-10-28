@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_168",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 527.2,
+    "total_citation_tokens": 5272.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies only spaces as rejected path characters. The predicted answer includes spaces but also claims that control characters and Unicode characters above U+00FF are rejected, adding information that contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that spaces are rejected, so they support that a space is among the invalid path characters.\n2. The gold target says “only spaces,” which implies spaces are the sole rejected characters.\n3. The retrieved sources also identify control characters as rejected; citation [3] additionally names them alongside spaces. Therefore the sources do not support the exclusivity claim, and the gold target is not fully derivable.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001228975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

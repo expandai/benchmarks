@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 431.1,
+    "total_citation_tokens": 4311.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly says that the field name is used as the filename when `filename` and `content_transfer_encoding` are omitted. However, it also states that the latest source no longer applies that fallback for bytes, which contradicts the gold target's stated behavior without a version distinction in the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation says that for a bytes-like value, when no filename is provided and content_transfer_encoding is not provided, aiohttp assigns `filename = name`.\n2. This directly supports the gold target’s filename fallback claim in the no-filename case.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001234225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

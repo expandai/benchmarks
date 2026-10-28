@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_053",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 530.5,
+    "total_citation_tokens": 5305.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target requires the complete set of variable-length integer sizes: 6, 14, 30, or 62 bits. The prediction gives only the 62-bit maximum and incorrectly says the encoding-size breakdown is not specified, so it does not provide the requested answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that SETTINGS identifiers and values use QUIC variable-length integers, and citation [6] mentions a 62-bit maximum for QPACK integers. However, none of the retrieved passages gives the four possible encoded bit lengths (6, 14, 30, or 62 bits). That specific information is non-trivial and is required to derive the gold target answer, so the citations are insufficient.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001124225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

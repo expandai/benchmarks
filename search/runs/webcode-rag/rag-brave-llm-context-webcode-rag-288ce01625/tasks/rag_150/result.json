@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_150",
+  "prompt": "rustdoc doc auto_cfg hide default hidden cfg attributes",
+  "attempt": 1,
+  "answer": "`rustdoc`’s `auto_cfg` hides `doc` and `doctest` cfg attributes by default. The list of attributes hidden by default may change.\n\nYou can explicitly hide cfg predicates with:\n\n```rust\n#![doc(auto_cfg(hide(doc, doctest)))]\n```\n\nYou can hide additional predicates as well:\n\n```rust\n#![doc(auto_cfg(hide(unix, doctest, feature = \"something\")))]\n```\n\nTo override a hide rule for an item and its descendants, use `show`:\n\n```rust\n#![doc(auto_cfg(hide(unix)))]\n\n#[doc(auto_cfg(show(unix)))]\npub mod child {}\n```\n\n`auto_cfg(hide(...))` and `auto_cfg(show(...))` affect automatically generated cfg markers only; they do not affect explicit `#[doc(cfg(...))]` attributes.",
+  "num_citations": 10,
+  "citation_text_tokens": 4283,
+  "citation_text_chars": 16751,
+  "search_queries": [
+    "rustdoc doc auto_cfg hide default hidden cfg attributes"
+  ],
+  "model_cost_usd": 0.0018535,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5557,
+    "output_tokens": 387,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 204
+  },
+  "latency_ms": 5851.305666030385,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0068535,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

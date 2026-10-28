@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-070",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 74.5,
+    "total_citation_tokens": 745.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 2023, but the predicted answer identifies 2015 as the first year. This directly contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that the first year meeting the question’s thresholds was 2023.\n2. None of the retrieved citations identifies 2023 as that first year. Citation [6] explicitly says the more-than-2°F threshold was crossed in 2015, while [2] says the first time above 1°C was “last year” in a citation titled Annual Global Temperature, 1880-2015—also indicating 2015.\n3. Citation [1] gives a temperature estimate for 2022, but does not establish 2023 as the first year exceeding both thresholds.\n4. Because the specific year in the gold target is not supported by the retrieved citations, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00064448,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

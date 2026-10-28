@@ -1,0 +1,12 @@
+#!/bin/sh
+# The pinned harness's `bench` CLI with the overlay registered: the Expand, Firecrawl, DeepSeek and
+# no-search searchers, and the simpleqa-verified, seal-0, seal-hard, aa-omniscience-public and *-official suites.
+# Uses the venv made by `make venv` in this directory (see README.md); override with EXA_BENCH_VENV.
+set -eu
+export PYTHONDONTWRITEBYTECODE=1  # keep the pinned upstream tree byte-identical
+HERE=$(cd "$(dirname "$0")" && pwd)
+PY="${EXA_BENCH_VENV:-$HERE/.venv}/bin/python"
+export HF_HOME="${HF_HOME:-$HERE/.hf-cache}" HF_HUB_DISABLE_XET=1 HF_HUB_DISABLE_TELEMETRY=1
+export TIKTOKEN_CACHE_DIR="${TIKTOKEN_CACHE_DIR:-$HERE/.tiktoken-cache}"
+mkdir -p "$TIKTOKEN_CACHE_DIR"
+PYTHONPATH="$HERE${PYTHONPATH:+:$PYTHONPATH}" exec "$PY" -m bakeoff "$@"

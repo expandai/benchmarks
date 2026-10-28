@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_229",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 403.9,
+    "total_citation_tokens": 4039.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a negative count causes the enumerable to be traversed twice: first to determine the position and then to perform the split. This matches the gold target. The added linear-time complexity claim is consistent with two traversals.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a negative count causes two enumerations: first to calculate the position, then to perform the split.\n2. Citation [2] states this exact behavior for Enum.split/2. Citation [5] states the same behavior.\n3. All non-trivial information in the gold target is present in the retrieved sources, so the answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000891725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

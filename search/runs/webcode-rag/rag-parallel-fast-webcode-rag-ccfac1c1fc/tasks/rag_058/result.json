@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_058",
+ "prompt": "go runtime GOMAXPROCS called with zero argument behavior",
+ "attempt": 1,
+ "answer": "`runtime.GOMAXPROCS(0)` queries the current GOMAXPROCS value and returns it; it is commonly used to obtain the number of CPUs available to the process.\n\nThe default may be container-aware in Go 1.25: it can reflect a container’s CPU limit when that limit is below the host’s core count. Calling `GOMAXPROCS` disables automatic GOMAXPROCS updates.",
+ "num_citations": 10,
+ "citation_text_tokens": 2386,
+ "citation_text_chars": 9374,
+ "search_queries": [
+  "go runtime GOMAXPROCS called with zero argument behavior"
+ ],
+ "model_cost_usd": 0.001465,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3379,
+  "output_tokens": 517,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 424
+ },
+ "latency_ms": 7155.4637079825625,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.002465,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

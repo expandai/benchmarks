@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_240",
+ "prompt": "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue",
+ "attempt": 1,
+ "answer": "`SelectedListValue` is more restrictive than GraphQL’s standard `ListValue`.\n\n| Type | Allowed elements |\n|---|---|\n| `ListValue` | Any GraphQL `Value` literal or variable, including multiple elements and an empty list, e.g. `[1, 2, 3]` |\n| `SelectedListValue` | Exactly one `SelectedValue` element, or one nested `SelectedListValue`: `[SelectedValue]` or `[SelectedListValue]` |\n\nThus, a `SelectedListValue` selects one value from each element of an output list:\n\n```graphql\nparts[id]\n```\n\nis valid, while:\n\n```graphql\nparts[id, name]\n```\n\nis invalid because it contains multiple `SelectedValue` elements. To select multiple fields, use one `SelectedObjectValue`:\n\n```graphql\nparts[{ id, name }]\n```\n\nFor nested lists, the `SelectedListValue` structure must match the output list’s shape.",
+ "num_citations": 10,
+ "citation_text_tokens": 2629,
+ "citation_text_chars": 10876,
+ "search_queries": [
+  "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue"
+ ],
+ "model_cost_usd": 0.00144825,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3792,
+  "output_tokens": 417,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 212
+ },
+ "latency_ms": 5209.565375000238,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00544825,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

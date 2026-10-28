@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_193",
+ "prompt": "Spring Boot Undertow access log %D response time prerequisite",
+ "attempt": 1,
+ "answer": "For Undertow in Spring Boot, enable:\n\n```properties\nserver.undertow.options.server.record-request-start-time=true\n```\n\nThen configure the access log, for example:\n\n```properties\nserver.undertow.accesslog.enabled=true\nserver.undertow.accesslog.pattern=%t %a \"%r\" %s (%D ms)\n```\n\nThe `record-request-start-time` server option is required for `%D` (and `%T`) to report request-processing time; otherwise, the time fields may appear as `-`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3709,
+ "citation_text_chars": 14066,
+ "search_queries": [
+  "Spring Boot Undertow access log %D response time prerequisite"
+ ],
+ "model_cost_usd": 0.0014171,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5141,
+  "output_tokens": 110,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 15282.660291995853,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0084171,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

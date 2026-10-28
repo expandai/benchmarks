@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_143",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 427.3,
+    "total_citation_tokens": 4273.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold specifies that stretch applies only to tracks whose maximum track sizing function is `auto`. The answer says only `auto`-sized tracks stretch and gives `auto` tracks as examples; this is a reasonable equivalent shorthand and does not contradict the gold.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states that only `auto` grid track sizes can be stretched by `align-content` and `justify-content`. Step 2: This supports the gold target’s condition that stretching applies only to tracks with an auto sizing function; “auto track sizes” expresses the same relevant restriction. Step 3: Citation [2] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001249225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

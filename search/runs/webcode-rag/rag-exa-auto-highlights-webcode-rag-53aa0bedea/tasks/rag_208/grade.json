@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 562.1,
+    "total_citation_tokens": 5621.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that ImageMagick remap colormap precision is limited to at most 8 bits. The predicted answer instead emphasizes support for tens of thousands of colormap entries in Q16 builds and says the limit is colormap size rather than image bit depth, which does not provide the gold answer and conflicts with its stated precision limit.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations discuss a colormap-size limit of 65,536 colors and include a third-party remapping script that uses `-depth 8`. They do not state that ImageMagick’s `-remap` colormap precision is limited to at most 8 bits. The script’s use of 8-bit depth does not establish a general precision limit for `-remap`, so a non-trivial claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001294475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

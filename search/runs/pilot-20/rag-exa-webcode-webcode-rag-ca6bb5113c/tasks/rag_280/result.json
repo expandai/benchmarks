@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_280",
+ "prompt": "node.js http built-in proxy unix domain socket request",
+ "attempt": 1,
+ "answer": "Use Node’s built-in `node:http` client and pass the Unix socket path as `socketPath`:\n\n```js\nimport { request } from 'node:http';\n\nconst req = request(\n  {\n    socketPath: '/tmp/example-node.sock',\n    path: '/',\n  },\n  (res) => {\n    res.on('data', (chunk) => {\n      process.stdout.write(String(chunk));\n    });\n  },\n);\n\nreq.end();\n```\n\nFor CommonJS:\n\n```js\nconst http = require('node:http');\n\nconst req = http.request(\n  {\n    socketPath: '/var/run/docker.sock',\n    path: '/containers/json',\n  },\n  (res) => {\n    let body = '';\n\n    res.on('data', (chunk) => {\n      body += chunk;\n    });\n\n    res.on('end', () => {\n      console.log(body);\n    });\n  },\n);\n\nreq.end();\n```\n\nThe Node.js API uses `socketPath` for Unix domain sockets. The search results do not show a built-in option for using a Unix domain socket specifically as an HTTP proxy.",
+ "num_citations": 10,
+ "citation_text_tokens": 4747,
+ "citation_text_chars": 19997,
+ "search_queries": [
+  "node.js http built-in proxy unix domain socket request"
+ ],
+ "model_cost_usd": 0.00073822,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5924,
+  "output_tokens": 516,
+  "cached_input_tokens": 5921,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 288
+ },
+ "latency_ms": 13184.988750028424,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0077382200000000005,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

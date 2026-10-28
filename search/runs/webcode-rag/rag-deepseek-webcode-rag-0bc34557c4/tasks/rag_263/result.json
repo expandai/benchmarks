@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_263",
+ "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+ "attempt": 1,
+ "answer": "`NGX_PEER_NEXT` is an internal instruction to try another upstream peer; it is not itself an HTTP status code and does **not** mark the current peer as failed.\n\nIt is triggered when the failure matches `proxy_next_upstream`:\n\n- `error` — connection, request transmission, or response-header error\n- `timeout` — timeout during connection, request transmission, or response-header reading\n- `invalid_header` — empty or invalid upstream response\n- `http_500`\n- `http_502`\n- `http_503`\n- `http_504`\n- `http_403`\n- `http_404`\n- `http_429`\n\nThe default is:\n\n```nginx\nproxy_next_upstream error timeout;\n```\n\nTherefore, HTTP status codes do not trigger `NGX_PEER_NEXT` unless explicitly configured. For example:\n\n```nginx\nproxy_next_upstream error timeout http_404 http_502;\n```\n\nWith `proxy_next_upstream http_404`, nginx is expected to try all available backends and then return `404` if none succeeds. Sources: [nginx-devel](http://mailman.nginx.org/pipermail/nginx-devel/2018-May/011131.html), [nginx documentation discussion](https://www.mail-archive.com/nginx-devel@nginx.org/msg07876.html), [upstream retry description](https://cloud.tencent.cn/developer/article/2334560?from=15425&policyId=undefined&traceId=&frompage=seopage#1).",
+ "num_citations": 10,
+ "citation_text_tokens": 3792,
+ "citation_text_chars": 10994,
+ "search_queries": [
+  "nginx NGX_PEER_NEXT upstream status codes trigger"
+ ],
+ "model_cost_usd": 0.00202825,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5320,
+  "output_tokens": 582,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 256
+ },
+ "latency_ms": 9990.692834020592,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0027782500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

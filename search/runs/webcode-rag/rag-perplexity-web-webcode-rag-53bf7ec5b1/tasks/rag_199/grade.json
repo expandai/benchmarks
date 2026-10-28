@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_199",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 489.1,
+    "total_citation_tokens": 3913.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that on macOS 12, pthread_rwlock_trywrlock returns EDEADLK rather than EBUSY when the write lock is already owned. The predicted answer asserts the opposite behavior, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The target makes a specific claim about macOS 12: that `pthread_rwlock_trywrlock` returns EDEADLK rather than EBUSY when the caller already owns the write lock.\n2. Citation [1] says EDEADLK may be returned when the current thread owns the lock, but does not identify macOS 12 or establish that this is the error returned instead of EBUSY by Gnulib on that platform.\n3. Citation [2] gives the POSIX rule that EBUSY applies when the lock is already held and says EDEADLK was removed as a trywrlock error. It does not establish macOS 12 behavior.\n4. The retrieved citations therefore do not substantiate the target's platform- and version-specific claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010230999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

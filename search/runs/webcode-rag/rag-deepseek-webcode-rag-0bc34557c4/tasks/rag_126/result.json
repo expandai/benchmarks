@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_126",
+ "prompt": "ssl SSLObject suppress_ragged_eofs EOF behavior",
+ "attempt": 1,
+ "answer": "`SSLObject` does not support `suppress_ragged_eofs`. All EOF conditions that violate the TLS protocol are reported by raising `SSLEOFError`.\n\nFor comparison, `SSLSocket` defaults to `suppress_ragged_eofs=True`, causing `recv()` to return `b\"\"` for an unexpected EOF; with `False`, it raises the exception instead.\n\nSources: [Python SSL documentation](https://raw.githubusercontent.com/python/cpython/3.7/Doc/library/ssl.rst#7), [SSL documentation](https://python.github.io/python-docs-fa/library/ssl.html#ssl.SSLContext.set_npn_protocols#8)",
+ "num_citations": 10,
+ "citation_text_tokens": 2392,
+ "citation_text_chars": 10130,
+ "search_queries": [
+  "ssl SSLObject suppress_ragged_eofs EOF behavior"
+ ],
+ "model_cost_usd": 0.00113765,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3572,
+  "output_tokens": 204,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 60
+ },
+ "latency_ms": 3940.8881249837577,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00188765,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

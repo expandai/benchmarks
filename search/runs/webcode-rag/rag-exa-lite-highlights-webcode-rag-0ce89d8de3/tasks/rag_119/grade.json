@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 514.3,
+    "total_citation_tokens": 5143.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The response says “I don't know” and provides no answer about avg_queue behavior, so it neither includes nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations describe avg_queue as a queued-connection count divided by a server count, but they do not state what it returns when there are no active servers. In particular, none says that the result is twice the number of queued connections. That specific behavior is a non-trivial claim missing from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010053500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

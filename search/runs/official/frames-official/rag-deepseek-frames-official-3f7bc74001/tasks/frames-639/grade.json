@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-639",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 134.9,
+    "total_citation_tokens": 1349.0,
+    "filtered_results": 0.0,
+    "query_clipped": 1.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nThe key calculation involves subtracting the diameter of the pitching plate (\"rubber\") in softball from the distance between the points of the bases in baseball, and then multiplying the result by the year Joe DiMaggio married Marilyn Monroe. According to the ground truth, the diameter of the pitching plate is 16 feet. The predicted answer, however, uses 0.5 feet (which is actually the width, not the diameter), leading to a different calculation:\n\n- Ground Truth: (90 - 16) × 1954 = 74 × 1954 = 144,596\n- Predicted: (90 - 0.5) × 1954 = 89.5 × 1954 = 174,883\n\nThe substance of the ground truth answer (i.e., the correct subtraction value for the diameter of the pitching plate as 16 feet, and therefore the correct numeric answer) is NOT present in the predicted answer. The predicted answer uses the wrong measurement (0.5 feet instead of 16 feet), which fundamentally alters the calculation and final result.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.00258
+}

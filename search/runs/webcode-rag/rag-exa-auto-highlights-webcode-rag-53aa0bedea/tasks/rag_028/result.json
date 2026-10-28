@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_028",
+  "prompt": "glibc printf_info width precision star arginfo function value",
+  "attempt": 1,
+  "answer": "For glibc’s `struct printf_info`:\n\n| Format component | No `*` specified | When specified as `*` in the **arginfo function** | When specified as `*` in the **handler function** |\n|---|---:|---:|---:|\n| `info->width` | `0` if omitted | `INT_MIN` | Actual `int` value retrieved from the argument list |\n| `info->prec` | `-1` if omitted | `INT_MIN` | Actual `int` value retrieved from the argument list |\n\nThus, the arginfo function can detect a star by testing:\n\n```c\nif (info->width == INT_MIN) {\n    /* width comes from an argument */\n}\n\nif (info->prec == INT_MIN) {\n    /* precision comes from an argument */\n}\n```\n\nThe arginfo function must return the number of arguments expected by the conversion and fill the `argtypes` array with their types. The handler receives the resolved width and precision values. ([Conversion Specifier Options](https://sourceware.org/glibc/manual/latest/html_node/Conversion-Specifier-Options.html), [Defining the Output Handler](https://www.sourceware.org/glibc/manual/latest/html_node/Defining-the-Output-Handler.html))",
+  "num_citations": 10,
+  "citation_text_tokens": 4834,
+  "citation_text_chars": 20462,
+  "search_queries": [
+    "glibc printf_info width precision star arginfo function value"
+  ],
+  "model_cost_usd": 0.00205765,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6124,
+    "output_tokens": 439,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 165
+  },
+  "latency_ms": 7696.143166976981,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00905765,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

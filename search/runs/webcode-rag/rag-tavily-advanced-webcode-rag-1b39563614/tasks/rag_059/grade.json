@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_059",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 443.9,
+    "total_citation_tokens": 4439.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives the minimum requirement as 1 GB RAM or more. The predicted answer instead identifies 2 GB as the minimum, which does not match the specified minimum.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target states that Kamal’s minimum server RAM requirement is 1GB or more.\n2. The retrieved sources instead specify at least 2GB or describe 2GB as the absolute minimum; none says that 1GB is sufficient or is the minimum.\n3. Since the specific minimum amount in the gold target is not supported by the citations, a non-trivial claim is missing. The sources also point to a different threshold, so the gold target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010156,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

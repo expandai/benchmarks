@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 219.3,
+    "total_citation_tokens": 2193.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes `none`, `size`, `layout`, and `paint`, covering the keywords in the gold target. It also says the computed value is as specified and mentions `strict` and `content`, which are valid `contain` values and do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the contain property accepts the keyword none or one or more of size, layout, and paint.\n2. Citation [3] explicitly gives that same set of values.\n3. The retrieved citation therefore contains all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008131,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

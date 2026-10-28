@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 252.0,
+    "total_citation_tokens": 2520.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer lists valid `<ol>` type values and distinguishes the `start` attribute, but it never states the key point that an invalid or numeric `type` value results in decimal markers. It does not directly contradict the gold target, so this is not attempted rather than incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] says zero and negative start values are permitted, and that when an ordered-list type is specified, numbering is mapped to that type.\n2. Citation [8] likewise says zero and negative integers are allowed and that `type` changes the counter’s representation.\n3. These passages do not support the gold target’s claim that rendering always uses the decimal system regardless of the `type` attribute; the passage from [2] instead indicates that the type can determine the representation. Therefore, the gold target is not grounded in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00091535,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

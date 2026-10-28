@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_249",
+ "prompt": "wasm32-unknown-unknown HashMap randomization behavior",
+ "attempt": 1,
+ "answer": "On `wasm32-unknown-unknown`, `std::collections::HashMap` is supported, but its default hashing is **not randomized as it is on other platforms**.[Rust platform-support documentation](https://doc.rust-lang.org/rustc/platform-support/wasm32-unknown-unknown.html)\n\nThis target does not import functions from the host, and Rust’s standard-library source selects an `unsupported` random implementation for `wasm32-unknown-unknown`.[Rust source](https://github.com/rust-lang/rust/blob/d2f24127/library/std/src/sys/random/mod.rs)\n\nTherefore, repeated executions generally have deterministic hash behavior and iteration order for the same program, although `HashMap` iteration order remains unspecified and should not be relied upon. A custom hasher can be supplied if you need explicit deterministic or randomized behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 4682,
+ "citation_text_chars": 17940,
+ "search_queries": [
+  "wasm32-unknown-unknown HashMap randomization behavior"
+ ],
+ "model_cost_usd": 0.0021623,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5933,
+  "output_tokens": 566,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 387
+ },
+ "latency_ms": 7163.656249991618,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0061623,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

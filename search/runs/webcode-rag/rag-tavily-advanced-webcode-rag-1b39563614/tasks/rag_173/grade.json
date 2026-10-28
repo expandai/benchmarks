@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_173",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 418.2,
+    "total_citation_tokens": 4182.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides none of the restricted statements. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] mentions a restriction enforced by gawk, but the excerpt ends before stating what the restriction is. 2. Citation [8] describes starting the debugger, but does not identify statements restricted in its eval command. 3. None of the citations supports the gold answer’s specific list: exit, getline, next, nextfile, or return. Because these specific statement names are non-trivial claims and are absent from the retrieved passages, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00092635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

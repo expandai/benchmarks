@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 255.1,
+    "total_citation_tokens": 2551.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the padding consists of leading zero bytes rather than trailing ones, matching the gold target. The added length condition does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] directly state the padding direction and byte value. Step 2: The gold target answer, “leading (not trailing) zero bytes,” is fully present in those passages. No non-trivial detail is missing. Step 3: Citations [1] and [2] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000650475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

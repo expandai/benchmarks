@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_063",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 539.1,
+    "total_citation_tokens": 5391.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `add` as the internal Calc function name for the `+` operator, matching the gold target. The additional example does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target asks for the internal name of the plus operator in Emacs Calc rewrite apply patterns.\n2. Citation [1] directly states that `+` is represented by `add` in an `apply` pattern.\n3. Citation [8] also lists `add` as the name for the `+` operator.\n4. The gold target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001035475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

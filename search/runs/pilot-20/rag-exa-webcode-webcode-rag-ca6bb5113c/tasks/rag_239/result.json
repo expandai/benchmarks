@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_239",
+ "prompt": "sed script maximum commands per script limit",
+ "attempt": 1,
+ "answer": "There is no single maximum for all `sed` implementations.\n\n- **GNU sed 4.2.2:** no fixed command-count limit was found; practical limit is available RAM.\n- **OpenBSD sed:** RAM is described as the limiting factor.\n- **MINIX sed:** `MAXCMDS` is defined as **200** compiled commands, configurable in the source.\n- **Some older HP-UX/Tru64 implementations:** limits around **99–100 commands** have been documented or observed.\n\nTherefore, the limit is implementation-dependent. For modern GNU/OpenBSD `sed`, the practical limit is generally memory, while older or specialized versions may impose a fixed limit.",
+ "num_citations": 10,
+ "citation_text_tokens": 4965,
+ "citation_text_chars": 20481,
+ "search_queries": [
+  "sed script maximum commands per script limit"
+ ],
+ "model_cost_usd": 0.00189685,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6148,
+  "output_tokens": 300,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 157
+ },
+ "latency_ms": 15618.449834058993,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00889685,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

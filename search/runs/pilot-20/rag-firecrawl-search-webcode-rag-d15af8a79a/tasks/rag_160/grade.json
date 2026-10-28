@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_160",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 99.3,
+    "total_citation_tokens": 993.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no information about the restriction on sum()'s start value. It neither confirms nor contradicts the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citation states that the `start` type is only `int` and that `sum` is restricted to numbers. A string is not an integer or number, so this supports the gold target that the start value is not allowed to be a string.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00044222500000000003,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

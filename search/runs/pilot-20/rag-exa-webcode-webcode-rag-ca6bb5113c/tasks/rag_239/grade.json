@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_239",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 496.5,
+    "total_citation_tokens": 4965.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 199 commands per script. The predicted answer instead asserts that there is no single maximum and gives implementation-dependent limits, including 200 for MINIX sed. It neither provides the target answer nor agrees with it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe command limits for particular sed implementations, but none states a maximum of 199 commands per script.\n2. Citation [2] gives MAXCMDS as 200, not 199, and does not explain that this corresponds to 199 usable commands.\n3. Because the gold answer’s specific number, 199, is not established by the retrieved sources, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011181,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

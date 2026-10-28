@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_127",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 503.8,
+    "total_citation_tokens": 5038.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies `rect()` in the `clip` property as the relevant exception. The predicted answer instead says the quirky-length conversion does not affect numbers inside functional notation and never mentions this exception, so it fails to provide the requested answer and contradicts the target’s implication.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target is “rect() in the clip property.” 2. The citations discuss quirky lengths, calc(), and CSS functional notation, but none identifies rect() in the clip property as the answer. 3. Therefore, a specific non-trivial fact in the gold target is absent from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012205999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

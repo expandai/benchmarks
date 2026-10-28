@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_285",
+ "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+ "attempt": 1,
+ "answer": "`linkcheck_case_insensitive_urls` does **not** make URI fragments or anchors case-insensitive.\n\nBehavior:\n\n- The URI is split at `#` into `req_url` and `anchor`.\n- The configured regular expressions are matched against `req_url`, excluding the fragment.\n- When a matching pattern is found, Sphinx case-folds the URL portion when comparing the requested URL with the response URL.\n- The fragment remains unchanged and case-sensitive:\n\n```python\nurl_part, sep, fragment = normalised_url.partition('#')\nif sep:\n    return f'{url_part.casefold()}#{fragment}'\n```\n\nTherefore, for a link such as:\n\n```text\nhttps://example.org/PATH#MyAnchor\n```\n\nthe URL path may be compared case-insensitively if configured, but `#MyAnchor` is still checked with its original casing. `#MyAnchor` and `#myanchor` are treated as different anchors.",
+ "num_citations": 10,
+ "citation_text_tokens": 4844,
+ "citation_text_chars": 20243,
+ "search_queries": [
+  "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+ ],
+ "model_cost_usd": 0.0020343,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6237,
+  "output_tokens": 396,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 197
+ },
+ "latency_ms": 5228.505125036463,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0090343,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

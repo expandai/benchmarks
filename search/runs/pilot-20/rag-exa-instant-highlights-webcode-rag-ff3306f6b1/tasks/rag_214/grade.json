@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_214",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 306.2,
+    "total_citation_tokens": 3062.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a remote crate installed from crates.io is built in a new temporary target directory inside the platform’s temporary directory, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the default target directory is a new temporary folder in the platform’s temporary directory. Citation [1] explicitly gives that default, and also establishes that crates.io or Git installs use a temporary target directory by default. The answer’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00080985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

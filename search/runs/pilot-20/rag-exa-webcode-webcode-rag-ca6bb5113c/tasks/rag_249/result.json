@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_249",
+ "prompt": "wasm32-unknown-unknown HashMap randomization behavior",
+ "attempt": 1,
+ "answer": "For `wasm32-unknown-unknown`, Rust’s standard-library `HashMap` is supported, but its hash maps are **not randomized**, unlike those on other platforms.\n\nThe standard library selects an `unsupported` randomness implementation for this target, including `hashmap_random_keys`. Consequently, `HashMap` execution and iteration behavior is deterministic rather than seeded from OS randomness.",
+ "num_citations": 10,
+ "citation_text_tokens": 5200,
+ "citation_text_chars": 19999,
+ "search_queries": [
+  "wasm32-unknown-unknown HashMap randomization behavior"
+ ],
+ "model_cost_usd": 0.00178035,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6738,
+  "output_tokens": 80,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 5847.6477089570835,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00878035,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

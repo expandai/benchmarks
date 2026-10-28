@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_074",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 508.5,
+    "total_citation_tokens": 5085.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and does not provide the behavior described in the gold target, nor does it contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe avg_queue as dividing queued connections by the number of servers (or alive servers). 2. None says that when there are no active servers, twice the queued connection count is used as the measured value. 3. That specific behavior is a non-trivial claim in the gold target and is not established by the retrieved citations. Therefore, the citations do not sufficiently ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00103024,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

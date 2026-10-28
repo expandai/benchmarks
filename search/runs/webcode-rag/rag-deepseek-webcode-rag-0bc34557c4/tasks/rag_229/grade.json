@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_229",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 424.1,
+    "total_citation_tokens": 4241.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides none of the information in the gold target. It does not contradict it, so this is NOT_ATTEMPTED.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes a specific claim about `Enum.split` with a negative count: it enumerates the enumerable twice, first to calculate the position and then to perform the split.\n2. Citation [1] says a custom implementation enumerates the list twice, but does not establish that this is how `Enum.split` handles negative counts or that its first pass calculates the position.\n3. Citation [2] shows a custom negative-count implementation that reverses the list, but does not explain the built-in `Enum.split` behavior or state the claimed two-pass process.\n4. Therefore, the retrieved citations do not contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001003725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

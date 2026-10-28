@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_123",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 340.2,
+    "total_citation_tokens": 3402.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all four SQL statement types in the gold target: INSERT, DELETE, UPDATE, and MERGE INTO. It adds no contradictory information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [3], and [6] explicitly list the valid statement types. Step 2: The gold target answer contains exactly those four types, so all non-trivial claims are supported. Step 3: These citations provide sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000758475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

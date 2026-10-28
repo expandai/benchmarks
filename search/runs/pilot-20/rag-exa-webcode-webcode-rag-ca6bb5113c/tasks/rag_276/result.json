@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Without `texture-component-swizzle`, WebGPU does not guarantee defined values for the non-red components when sampling a depth or stencil aspect as a regular `texture_2d`. The result is effectively:\n\n```text\n(V, X, X, X)\n```\n\nwhere `V` is the depth or stencil value and `X` is implementation-defined. Therefore, sampling `.g`, `.b`, or `.a` is not portable.\n\nWith the optional feature enabled, the result is defined as:\n\n```text\n(V, 0, 0, 1)\n```\n\nFor a depth texture bound as `texture_depth`, the shader receives only an `f32`, so there are no additional channels to access. Thus, without `texture-component-swizzle`, there is no portable way to obtain defined non-depth channels from such a sampled texture.",
+ "num_citations": 10,
+ "citation_text_tokens": 5252,
+ "citation_text_chars": 20382,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.00214245,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6372,
+  "output_tokens": 458,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 282
+ },
+ "latency_ms": 9761.659916024655,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00914245,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

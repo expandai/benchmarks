@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_118",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 540.8,
+    "total_citation_tokens": 5408.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly gives the limit as 4,096 bytes. However, it also claims Docker appends `...` when truncating output; that is not part of Docker’s health-check output limit behavior, so the answer includes an incorrect factual claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations state that Docker stores up to 4096 bytes of health-check command output and truncates or discards anything beyond that limit. Step 2: The gold target answer, “4096 bytes,” is directly supported. No non-trivial factual claim is missing. Step 3: Citations [1], [3], and [5] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00123685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

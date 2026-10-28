@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_181",
+ "prompt": "rust futures select_next_some behavior with None",
+ "attempt": 1,
+ "answer": "`select_next_some()` does **not** resolve to `None`.\n\nFor a `Stream`:\n\n- If the next item is `Some(value)`, the returned future resolves to `value`.\n- If `poll_next` returns `None`, `select_next_some()` treats the stream as empty/terminated rather than producing a `None` value. It remains pending and reports termination through `FusedFuture::is_terminated()`.\n- It is intended for use with `select!`, which avoids polling terminated futures. If polled after the stream is empty, it can panic.\n- The stream must implement `Unpin + FusedStream`.\n\nThus, it is useful when you want a `select!` branch to run only for `Some(_)` items and ignore `None` results. A regular `.next()` future, by contrast, resolves to `None` when the stream terminates.\n\nA stream that returns `None` while claiming via `FusedStream::is_terminated()` that it has not terminated can cause a debug panic and is incompatible with the expected contract.",
+ "num_citations": 9,
+ "citation_text_tokens": 3769,
+ "citation_text_chars": 14687,
+ "search_queries": [
+  "rust futures select_next_some behavior with None"
+ ],
+ "model_cost_usd": 0.0017627,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4877,
+  "output_tokens": 453,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 229
+ },
+ "latency_ms": 7423.894791980274,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0027627,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

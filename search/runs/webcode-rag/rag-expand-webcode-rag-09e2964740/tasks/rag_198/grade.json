@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_198",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 737.1,
+    "total_citation_tokens": 7371.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The question asks which RFC 3986 path rule appears in relative-part instead of path-rootless. The answer explicitly identifies path-noscheme and shows it in the relative-part grammar, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the RFC 3986 path rule used in `relative-part` instead of `path-rootless`.\n2. Citation [6] gives the `relative-part` alternatives and explicitly includes `path-noscheme` while omitting `path-rootless`.\n3. The citation therefore contains the specific answer, `path-noscheme`.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001312225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

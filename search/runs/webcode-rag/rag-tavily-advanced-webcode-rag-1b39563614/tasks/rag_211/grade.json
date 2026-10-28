@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_211",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 388.6,
+    "total_citation_tokens": 3886.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer to the question. It does not contradict the gold target, so this is NOT_ATTEMPTED.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a primitive’s priority is ignored and that only the bundle’s own priority setting matters. 2. The retrieved citations do not state either rule. Citation [1] discusses priority among parameter lists, not priority assignment between a bundle and its inner primitive. Citation [3] mentions creating a resource inside a bundle but does not explain priority. 3. Because these specific claims are unsupported, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000866725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

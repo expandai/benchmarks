@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_067",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 351.4,
+    "total_citation_tokens": 3514.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names `org.hibernate.envers.exception.AuditException`, which is the AuditException requested by the gold target. The additional message and explanation are consistent and do not contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Evidence: Citation [2] identifies the exception type as AuditException for a negative generated revision number. Citation [7] says the transaction cannot commit because of the exception.\n2. Groundedness: The exception type is supported, but none of the citations explicitly says that the current transaction is rolled back. Being unable to commit does not, by itself, establish the specific rollback claim. Since that non-trivial detail is missing, the gold target is UNGROUNDED.\n3. Source attribution: No citation contains sufficient information to derive the complete gold target, including the rollback claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011443500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

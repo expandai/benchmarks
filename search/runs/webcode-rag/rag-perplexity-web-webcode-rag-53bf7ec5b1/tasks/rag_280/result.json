@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_280",
+  "prompt": "node.js http built-in proxy unix domain socket request",
+  "attempt": 1,
+  "answer": "For a request made through a Unix domain socket, Node.js ignores the built-in proxy settings.\n\nUse `socketPath` instead of `host` or `port`:\n\n```js\nconst http = require('node:http');\n\nconst req = http.request({\n  socketPath: '/path/to/socket.sock',\n  path: '/',\n  method: 'GET',\n}, (res) => {\n  res.on('data', chunk => process.stdout.write(chunk));\n});\n\nreq.end();\n```\n\n`socketPath` cannot be used together with `host` or `port`. Therefore, Node’s built-in `HTTP_PROXY`/`HTTPS_PROXY` support cannot proxy a request whose destination is a Unix domain socket.",
+  "num_citations": 10,
+  "citation_text_tokens": 3750,
+  "citation_text_chars": 14958,
+  "search_queries": [
+    "node.js http built-in proxy unix domain socket request"
+  ],
+  "model_cost_usd": 0.00159875,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5018,
+    "output_tokens": 287,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 141
+  },
+  "latency_ms": 4133.763624937274,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065987500000000004,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

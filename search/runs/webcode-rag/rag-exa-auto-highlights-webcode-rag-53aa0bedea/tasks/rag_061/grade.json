@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_061",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 274.5,
+    "total_citation_tokens": 2745.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `.` as the `--upload-file` filename, matching the gold target. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly identify `.` (a single period) as the filename used for stdin in non-blocking mode.\nStep 2: The gold target is exactly this filename, and the retrieved citations support it, so all factual content in the target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0007229749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

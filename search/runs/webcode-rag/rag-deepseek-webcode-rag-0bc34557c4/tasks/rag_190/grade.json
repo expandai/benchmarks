@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_190",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 156.0,
+    "total_citation_tokens": 1560.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that retrieval occurs every 10 days, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] directly links the disabled setting to retrieving the public key every 10 days and shows `public_key_retrieval_on_startup = false`.\n2. Citation [5] independently states that API keys are downloaded every 10 days.\n3. The citations contain the non-trivial claim in the gold target: the retrieval frequency is every 10 days.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000597845,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_141",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 374.4,
+    "total_citation_tokens": 3744.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the default quantum as 5000, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The retrieved citations explicitly state that when mapfile/readarray is given -C without -c, the default quantum is 5000. Step 2: The gold target answer is 5000, and that factual value is directly supported. Step 3: Citations [1]–[5] each state the default; citation [6] also gives the same default in Chinese. These citations are sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.000887725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

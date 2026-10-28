@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_217",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 493.9,
+    "total_citation_tokens": 4939.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the required first-field type, `int`, and correctly explains that it stores an offset into the string pool rather than a string pointer. Its additional details do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] directly states the required type for the first struct field when %pic is enabled with %struct-type: int, not char *, because the field stores string-pool offsets.\nStep 2: This contains all non-trivial information in the gold target answer, so the answer is GROUNDED.\nStep 3: Citation [5] alone is sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009911,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

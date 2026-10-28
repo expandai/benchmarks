@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_033",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 301.0,
+    "total_citation_tokens": 3010.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the Prometheus Operator always overrides `continue` to `true` for the first-level route, matching the gold target. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states that the `continue` field is always overridden to true for the first-level route by the Prometheus Operator. Citation [1] also supports this, though its passage is truncated.\nStep 2: The retrieved citations contain the full non-trivial claim in the gold target answer. Therefore, the answer is grounded.\nStep 3: Citations [1] and [2] contain information supporting the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007067250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.7,
+    "avg_citation_tokens": 386.8,
+    "total_citation_tokens": 3868.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies ordering from the least-significant to the most-significant element. The predicted answer states that stores occur in this order, explicitly describing lane 0 followed by subsequent lanes. It includes no contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The retrieved citations directly state that masked scatter stores with overlapping addresses are ordered from least-significant to most-significant element. Citation [8] expresses the same ordering as LSB to MSB.\nStep 2: The gold target answer contains this ordering claim, and it is directly supported by the retrieved citations. No non-trivial claim is missing.\nStep 3: Citations [1]–[6] and [8] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 7
+  },
+  "judge_cost_usd": 0.0008773499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

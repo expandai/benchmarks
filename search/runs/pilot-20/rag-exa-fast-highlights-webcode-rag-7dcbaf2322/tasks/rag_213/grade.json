@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_213",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 403.7,
+    "total_citation_tokens": 4037.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Spring Data Cassandra uses field access by default and explicitly notes that public JavaBean properties are not used under the documented default behavior. Its qualification that property access can be explicitly configured adds a valid exception without undermining the requested default distinction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citations [3] and [8] directly state both claims in the gold target: object fields are used for mapping, and public JavaBean properties are not used. Step 2 — Every non-trivial claim in the gold target is explicitly supported by the retrieved citations, so the target is fully grounded. Step 3 — Citations [3] and [8] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001032725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

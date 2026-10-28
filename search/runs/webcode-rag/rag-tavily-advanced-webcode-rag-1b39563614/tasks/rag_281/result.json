@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_281",
+  "prompt": "automake per-target compilation flags object rename trigger condition",
+  "attempt": 1,
+  "answer": "Automake renames intermediate object files when it sees that **per-target compilation flags are defined**—for example, `target_CFLAGS`, `target_CPPFLAGS`, `target_CXXFLAGS`, and the other per-target flag variables.\n\nIt does this for **all objects belonging to that target**, regardless of whether source files are actually shared between targets. For example, `true_CPPFLAGS` and `false_CPPFLAGS` cause `generic.o` to become `true-generic.o` and `false-generic.o`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3968,
+  "citation_text_chars": 16006,
+  "search_queries": [
+    "automake per-target compilation flags object rename trigger condition"
+  ],
+  "model_cost_usd": 0.0013652,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4943,
+    "output_tokens": 108,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6661.1138340085745,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0173652,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

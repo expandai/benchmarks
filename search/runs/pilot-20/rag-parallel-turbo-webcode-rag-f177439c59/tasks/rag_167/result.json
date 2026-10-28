@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_167",
+ "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+ "attempt": 1,
+ "answer": "With BeautifulSoup and the `html5lib` parser:\n\n```python\nfrom bs4 import BeautifulSoup\n\nhtml = \"\"\"<ul>\n<li>Django</li>\n<li>Flask</li>\n</ul>\"\"\"\n\nsoup = BeautifulSoup(html, \"html5lib\")\n\nfor tag in soup.find_all(\"li\"):\n    print(tag.sourceline, tag.sourcepos, tag.string)\n```\n\n`Tag.sourceline` is the line number where the tag was found, and `Tag.sourcepos` is its character position within that line. Beautiful Soup’s API describes both as positions in the original source document. [Beautiful Soup API](https://www.crummy.com/software/BeautifulSoup/bs4/doc/api/bs4.html)\n\nFor `html5lib`, `sourcepos` refers to the position of the final `>` character of the opening tag—not the position of its initial `<`. Thus, for `<li>`, the position is `3`:\n\n```text\n< l i >\n0 1 2 3\n```\n\nFor example, the documented output is:\n\n```text\n6 3 Django\n7 3 Flask\n```\n\n[TutorialsPoint](https://www.tutorialspoint.com/beautiful_soup/beautiful_soup_get_tag_position.htm)\n\nBy contrast, `html.parser` reports the position of the initial `<`; in that parser, a tag at the beginning of a line has `sourcepos == 0`. These properties are supported by `html.parser` and `html5lib`, but not by the `lxml` parser. [TutorialsPoint](https://www.tutorialspoint.com/beautiful_soup/beautiful_soup_get_tag_position.htm)\n\nLine/position tracking can be disabled with:\n\n```python\nsoup = BeautifulSoup(\n    html,\n    \"html5lib\",\n    store_line_numbers=False\n)\n```\n\nIn that case, `sourceline` and `sourcepos` are always `None`. [Beautiful Soup builder documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc.es/api/bs4.builder.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 4536,
+ "citation_text_chars": 17947,
+ "search_queries": [
+  "beautifulsoup html5lib sourceline sourcepos position reference"
+ ],
+ "model_cost_usd": 0.00230665,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5752,
+  "output_tokens": 724,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 283
+ },
+ "latency_ms": 7328.613957972266,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00330665,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

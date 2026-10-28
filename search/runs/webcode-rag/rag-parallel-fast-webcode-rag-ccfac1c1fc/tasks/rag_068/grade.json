@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_068",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 232.0,
+    "total_citation_tokens": 2320.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target sets an upper limit of 256 distinct values. The predicted answer instead says the attribute should allow at least 256 values, which sets a lower bound and permits more than 256. This does not match the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] directly states that pressure attributes should allow a maximum of 256 distinct values. Step 2 — This contains the full factual claim in the gold target answer. Step 3 — Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000625975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

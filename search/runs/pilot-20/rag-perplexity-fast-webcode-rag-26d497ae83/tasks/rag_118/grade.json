@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_118",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 397.8,
+    "total_citation_tokens": 3978.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that Docker HEALTHCHECK output is limited to the first 4096 bytes, matching the gold target. The additional detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] state that HEALTHCHECK command output is stored and that only the first 4096 bytes are stored. Step 2: The gold target, “4096 bytes,” is directly supported by this passage. Step 3: Citations [1] and [2] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00081485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_197",
+ "prompt": "wget time-stamping Content-Length size mismatch behavior",
+ "attempt": 1,
+ "answer": "With Wget’s time-stamping mode (`-N`/`--timestamping`):\n\n- Wget checks the remote `Last-Modified` timestamp.\n- If the local and remote `Content-Length` values differ, Wget downloads the remote file regardless of the timestamps.\n- If the timestamps indicate that the remote file is not newer and the sizes match, Wget does not download it.\n- A missing local file is downloaded unconditionally.\n\nIf the server sends an incorrect `Content-Length`, Wget may repeatedly retry, believing the document was truncated. `--ignore-length` disables use of that header.\n\nWhen using `-c`/`--continue`, behavior differs: a remote file larger than the local file is treated as incomplete and the missing bytes are appended; if the sizes are equal, or the remote file is smaller, Wget refuses to download.",
+ "num_citations": 6,
+ "citation_text_tokens": 3925,
+ "citation_text_chars": 14957,
+ "search_queries": [
+  "wget time-stamping Content-Length size mismatch behavior"
+ ],
+ "model_cost_usd": 0.0015222,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4779,
+  "output_tokens": 273,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 92
+ },
+ "latency_ms": 4309.6206249902025,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025222,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

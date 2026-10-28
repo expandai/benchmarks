@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "`display: contents` should **not prevent an element’s `::before` and `::after` pseudo-elements from generating boxes**.\n\nThe CSS Display specification defines `contents` as:\n\n- The element itself generates no box.\n- Its children **and pseudo-elements still generate boxes normally**.\n- `::before` and `::after` are placed before and after the element’s children.\n\nTherefore, if a `::before` or `::after` box is not generated in this situation, that behavior is not what the specification describes and may be a browser implementation issue. Also, pseudo-elements that do not allow the `display` property are outside this particular behavior; tree-abiding pseudo-elements that allow `display` should interact with `display: contents` like normal elements.",
+ "num_citations": 10,
+ "citation_text_tokens": 4214,
+ "citation_text_chars": 19999,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.0017366,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5267,
+  "output_tokens": 350,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 187
+ },
+ "latency_ms": 5332.035624887794,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0057366,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

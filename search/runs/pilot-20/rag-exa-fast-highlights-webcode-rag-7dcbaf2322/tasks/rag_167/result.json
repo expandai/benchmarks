@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_167",
+ "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+ "attempt": 1,
+ "answer": "With BeautifulSoup’s `html5lib` parser:\n\n```python\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html, \"html5lib\")\ntag = soup.find(\"li\")\n\nprint(tag.sourceline)  # line number in the original HTML\nprint(tag.sourcepos)   # position of the tag's closing `>` on that line\n```\n\nFor `html5lib`, `sourcepos` refers to the position of the final greater-than sign (`>`), rather than the initial `<`. BeautifulSoup obtains the position immediately after the tag ends and subtracts one.\n\nThese properties are available with BeautifulSoup 4.8.1 and later.",
+ "num_citations": 10,
+ "citation_text_tokens": 2515,
+ "citation_text_chars": 9956,
+ "search_queries": [
+  "beautifulsoup html5lib sourceline sourcepos position reference"
+ ],
+ "model_cost_usd": 0.00117005,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3620,
+  "output_tokens": 221,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 78
+ },
+ "latency_ms": 3771.809666068293,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00817005,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

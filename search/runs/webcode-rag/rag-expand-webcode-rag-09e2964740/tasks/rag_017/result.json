@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_017",
+  "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+  "attempt": 1,
+  "answer": "`llvm.sqrt` differs from `libm sqrt` for negative inputs:\n\n| Input | `libm sqrt` | `llvm.sqrt` |\n|---|---|---|\n| Positive number | Square root | Square root |\n| `-0.0` | IEEE result, `-0.0` | Defined to return `-0.0` |\n| Negative number other than `-0.0` | Returns `NaN` | Undefined behavior |\n\nThe undefined behavior for `llvm.sqrt` allows better optimization because implementations do not need to account for `errno` being set. In practice, LLVM optimizations may produce values such as `0.0` for negative inputs, particularly under fast-math assumptions.",
+  "num_citations": 10,
+  "citation_text_tokens": 3400,
+  "citation_text_chars": 13812,
+  "search_queries": [
+    "LLVM llvm.sqrt negative number behavior vs libm"
+  ],
+  "model_cost_usd": 0.00127805,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4388,
+    "output_tokens": 151,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3948.0655000079423,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0032780500000000002,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

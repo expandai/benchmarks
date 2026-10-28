@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 397.7,
+    "total_citation_tokens": 3977.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer claims the maximum is 4096 rules. This directly contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims the maximum is 1 for Gateway API v1 TLSRouteSpec rules.\n2. Citations [6] and the first passage from [9] support a maximum of one specifically for v1alpha3, not the stable v1 API.\n3. Citation [9] says that in 1.6.0 a TLSRoute may contain up to 4096 rules, which does not support the gold target for v1.\n4. Therefore the retrieved citations do not establish that the v1 maximum is 1; the version-specific evidence instead points to a different limit.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00104885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

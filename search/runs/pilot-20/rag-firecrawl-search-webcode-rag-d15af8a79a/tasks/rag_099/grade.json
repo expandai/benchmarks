@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_099",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 43.9,
+    "total_citation_tokens": 439.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is the constant value 7, and the predicted answer gives 7 exactly.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citation explicitly gives the KEYFRAMES_RULE value as 7, supporting the numeric part of the gold target. However, the retrieved text does not state that the constant has type “unsigned short.” Since that is an additional factual detail in the gold target and is not supported by the citations, the full target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000410725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

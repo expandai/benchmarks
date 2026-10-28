@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_033",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 285.7,
+    "total_citation_tokens": 2857.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the Prometheus Operator overrides the first-level route’s `continue` field to `true`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that the `continue` field is always overridden to true for the first-level route.\n2. Citations [1] and [2] state this explicitly.\n3. Therefore, the citations contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006902249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

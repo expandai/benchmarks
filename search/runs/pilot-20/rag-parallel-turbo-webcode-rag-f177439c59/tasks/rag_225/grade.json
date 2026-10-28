@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 534.6,
+    "total_citation_tokens": 5346.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that res.sendStatus() accepts status codes from 100 to 599 inclusive, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] identifies 100 to 599 as the range for valid HTTP status codes in some Node.js versions. Citation [3] explicitly states that all valid status codes are from 100 to 599, inclusive. Step 2: These passages support the gold target answer, 100 to 599, with no missing non-trivial claims. Step 3: Citations [1] and [3] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010631,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

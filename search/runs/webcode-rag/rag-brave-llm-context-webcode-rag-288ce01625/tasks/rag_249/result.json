@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_249",
+  "prompt": "wasm32-unknown-unknown HashMap randomization behavior",
+  "attempt": 1,
+  "answer": "On `wasm32-unknown-unknown`, Rust’s standard `HashMap` is **not randomized like it is on other platforms**. Its `RandomState` uses a fixed or effectively predictable seed; reported sources include stack and heap addresses, which are predictable because WebAssembly memory has no address randomization.\n\nConsequences:\n\n- HashMap behavior is generally deterministic across runs.\n- Hash keys can be crafted to cause collisions.\n- User-controlled input can degrade operations to quadratic time, potentially causing a denial of service.\n- For adversarial keys, use a map with a per-instance seed from a randomness source available in the WebAssembly host, or use `BTreeMap`.",
+  "num_citations": 10,
+  "citation_text_tokens": 1514,
+  "citation_text_chars": 6514,
+  "search_queries": [
+    "wasm32 unknown unknown HashMap randomization behavior"
+  ],
+  "model_cost_usd": 0.0009353,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2585,
+    "output_tokens": 241,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 99
+  },
+  "latency_ms": 5038.097125012428,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059353,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

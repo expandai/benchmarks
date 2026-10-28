@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 506.6,
+    "total_citation_tokens": 5066.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the remap colormap is limited to at most 8 bits of precision. The predicted answer instead says Q16 and higher support colormaps up to 65,536 colors and characterizes precision as distinct from colormap size, so it does not provide the gold answer and conflicts with it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citation states that ImageMagick's color-component range is 0–255. Step 2: A range of 0–255 corresponds to 8 bits, supporting the gold target that precision is at most 8 bits. Step 3: Citation [7] discusses ImageMagick color quantization, which is relevant to remapping.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00150085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

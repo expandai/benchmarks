@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_084",
+ "prompt": "aiohttp run_app default port ssl_context",
+ "attempt": 1,
+ "answer": "`aiohttp.web.run_app()` defaults to:\n\n- **Port 8080** for plain HTTP (`ssl_context=None`)\n- **Port 8443** for HTTPS when `ssl_context` is provided\n\nThe `ssl_context` parameter defaults to `None`, meaning plain HTTP. When SSL is configured, pass an `ssl.SSLContext` instance:\n\n```python\nweb.run_app(app, ssl_context=ssl_context)\n```\n\nIf no host is specified, the server listens on `0.0.0.0` when a TCP server is launched.",
+ "num_citations": 10,
+ "citation_text_tokens": 4524,
+ "citation_text_chars": 19175,
+ "search_queries": [
+  "aiohttp run_app default port ssl_context"
+ ],
+ "model_cost_usd": 0.00163945,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5992,
+  "output_tokens": 118,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2497.956749983132,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00563945,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

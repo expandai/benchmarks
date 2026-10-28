@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_242",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 534.4,
+    "total_citation_tokens": 5344.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the 16-byte prefix, 16-byte HMAC key, and 16-byte AES key, matching the gold target exactly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly states the composition of the 48-byte `ticketKeys` buffer: a 16-byte prefix, a 16-byte HMAC key, and a 16-byte AES key.\n2. These components match all the non-trivial information in the gold target answer.\n3. Therefore, the retrieved citations fully ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009632250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

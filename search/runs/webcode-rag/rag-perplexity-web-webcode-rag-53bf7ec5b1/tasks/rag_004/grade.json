@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_004",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 377.8,
+    "total_citation_tokens": 3778.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly lists both DedicatedWorker and SharedWorker, matching the gold target. Its additional claims that FileReaderSync is not exposed in Window or ServiceWorker do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold answer names the worker types in which FileReaderSync is exposed. Citations [1], [2], and [7] explicitly give its exposure as DedicatedWorker and SharedWorker. Both non-trivial claims in the gold answer are therefore present in the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000812225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

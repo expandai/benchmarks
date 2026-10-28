@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_092",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 536.7,
+    "total_citation_tokens": 5367.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold information that the value is padded to 128 bits, but it also says IA-32 uses 12-byte (96-bit) storage with only 2 bytes of padding. That contradicts the stated 128-bit storage padding, so the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the 80-bit long double is padded to 128 bits for storage.\n2. Citations [1] and [2] explicitly state this storage padding size.\n3. The retrieved sources therefore contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00117735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

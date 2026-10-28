@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_008",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 396.6,
+    "total_citation_tokens": 3966.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes both conditions in the gold target: CR-bit tracking is enabled by default for POWER8 and newer, and for other CPUs with -O2 or higher optimization. The additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] states the default condition for CR-bit tracking: POWER8 and above, and all other CPUs when optimization is applied at -O2 and above.\nStep 2: This contains all non-trivial information in the gold target answer, so the answer is GROUNDED.\nStep 3: Citation [3] alone is sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000856475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

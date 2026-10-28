@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_303",
+  "prompt": "ffmpeg scale filter both width height -n edge case",
+  "attempt": 1,
+  "answer": "In FFmpeg’s `scale` filter, if **both width and height are set to `-n`** (`n >= 1`), they behave as if both were set to `0`.\n\nSince `0` means “use the input dimension,” the output keeps the input size unchanged.\n\nExamples:\n\n```text\nscale=-1:-1\nscale=-2:-2\nscale=-4:-8\n```\n\nThese do **not** calculate aspect-ratio-based dimensions or round both dimensions. They effectively preserve the original width and height. Only one dimension should be `-n` when you want automatic aspect-ratio calculation with divisibility adjustment.",
+  "num_citations": 10,
+  "citation_text_tokens": 4497,
+  "citation_text_chars": 17169,
+  "search_queries": [
+    "ffmpeg scale filter both width height -n edge case"
+  ],
+  "model_cost_usd": 0.00169495,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5590,
+    "output_tokens": 248,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 110
+  },
+  "latency_ms": 9679.084665956907,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01769495,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

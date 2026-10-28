@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 93.8,
+    "total_citation_tokens": 938.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer states that in pre-v4 aiohttp the field name is used as the filename whenever a bytes-like value is supplied without an explicit filename. The gold target specifies an important exception: this fallback does not apply when content_transfer_encoding is specified. The answer omits that exception while making a broader claim, so it does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citation supports the fallback that the name argument is used as the filename for a bytes value when the relevant setting is not set. However, the retrieved text truncates the condition at “content_transfer_ ...” and does not state that content_transfer_encoding is specified. That specific condition is a non-trivial part of the gold target, so the citations do not contain enough information to derive the full answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00107085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

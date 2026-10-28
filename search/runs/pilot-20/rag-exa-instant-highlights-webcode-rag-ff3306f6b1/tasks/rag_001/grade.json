@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_001",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 152.3,
+    "total_citation_tokens": 1523.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and provides no information about the dictionary size. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations give the file size of ispell.words, but none state how many words it contains. Step 2: The gold answer's specific count, 38,400 words, is not present and cannot be derived from the listed file sizes alone. Because a non-trivial numerical claim is missing, the target is ungrounded. Step 3: No citation contains sufficient information to derive the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005444299999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

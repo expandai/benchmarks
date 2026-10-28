@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_126",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 51.0,
+    "total_citation_tokens": 510.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that protocol-violating EOFs for SSLObject raise SSLEOFError, matching the gold target. Its additional explanation about suppress_ragged_eofs is consistent with that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that suppress_ragged_eofs is not handled in this context.\n2. It also explicitly says all protocol-violating EOF conditions are reported via SSLEOFError, matching the gold target answer.\n3. The cited passage contains the full non-trivial claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0004541,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

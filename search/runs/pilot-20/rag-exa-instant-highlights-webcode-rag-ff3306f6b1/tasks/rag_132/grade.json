@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 519.1,
+    "total_citation_tokens": 5191.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no information about the TLS passthrough restriction. It neither includes nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that route TLS passthrough is incompatible with httpHeader actions.\n2. None of the citations mention httpHeader actions or state that they are incompatible with TLS passthrough. Citations [1] and [5] show a route configured with `termination: reencrypt`, but do not establish the claimed restriction.\n3. This specific factual claim is absent from the retrieved sources, so they do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00102794,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

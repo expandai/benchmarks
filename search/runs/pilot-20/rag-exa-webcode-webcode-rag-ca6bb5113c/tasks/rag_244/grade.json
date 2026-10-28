@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_244",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 420.8,
+    "total_citation_tokens": 4208.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly identifies the `*_SERVICE_HOST` and `*_SERVICE_PORT` environment-variable patterns specified by the gold target. The additional Kubernetes-specific examples and configuration details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the `*_SERVICE_HOST` and `*_SERVICE_PORT` environment-variable patterns.\n2. Citation [3] gives both exact suffixes, and citation [2] establishes that Kubernetes detection uses an environment-variable pattern and names `KUBERNETES_SERVICE_HOST` and `KUBERNETES_SERVICE_PORT` as examples.\n3. Together these citations contain the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000954475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

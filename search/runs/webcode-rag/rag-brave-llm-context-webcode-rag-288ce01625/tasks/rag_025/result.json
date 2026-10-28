@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_025",
+  "prompt": "GraphQL error path aliased field name behavior",
+  "attempt": 1,
+  "answer": "GraphQL error paths must use the aliased field name, because the path describes the field’s position in the response rather than in the request.\n\nFor example, with:\n\n```graphql\n{\n  greeting {\n    fname: name\n  }\n}\n```\n\nthe error path should be:\n\n```json\n[\"greeting\", \"fname\"]\n```\n\nnot:\n\n```json\n[\"greeting\", \"name\"]\n```\n\nThe GraphQL specification states that a path segment associated with an aliased field must use the alias.",
+  "num_citations": 10,
+  "citation_text_tokens": 3147,
+  "citation_text_chars": 13862,
+  "search_queries": [
+    "GraphQL error path aliased field name behavior"
+  ],
+  "model_cost_usd": 0.0012185,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4361,
+    "output_tokens": 107,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3284.0693339239806,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062185,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

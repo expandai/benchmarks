@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_236",
+  "prompt": "Spring Security JdbcMutableAclService classIdentityQuery sidIdentityQuery default",
+  "attempt": 1,
+  "answer": "`JdbcMutableAclService` defaults:\n\n```java\nclassIdentityQuery = \"call identity()\";\nsidIdentityQuery   = \"call identity()\";\n```\n\nBoth queries retrieve the generated identity of newly inserted rows:\n\n- `classIdentityQuery`: from `acl_class`\n- `sidIdentityQuery`: from `acl_sid`\n\nThese defaults are for HSQLDB. For PostgreSQL, use:\n\n```sql\nclassIdentityQuery: select currval(pg_get_serial_sequence('acl_class', 'id'))\nsidIdentityQuery:   select currval(pg_get_serial_sequence('acl_sid', 'id'))\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 3572,
+  "citation_text_chars": 15735,
+  "search_queries": [
+    "Spring Security JdbcMutableAclService classIdentityQuery sidIdentityQuery default"
+  ],
+  "model_cost_usd": 0.00131565,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4668,
+    "output_tokens": 124,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6278.62591703888,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00331565,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

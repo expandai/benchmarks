@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 228.8,
+    "total_citation_tokens": 2288.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the valid HTTP status code range as 100–599 inclusive, matching the gold target. The extra detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations state that valid HTTP status codes are 100 through 599 inclusive, and that Node.js may throw for values outside that range when setting the response status code. Citation [2] appears in the Express `res.sendStatus()` documentation.\nStep 2 — The gold target answer, “100 to 599,” is directly supported by the retrieved text. No non-trivial claim is missing, so the answer is GROUNDED.\nStep 3 — Citations [1] and [2] contain the relevant range; [2] also connects it to Express response status codes.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006481,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

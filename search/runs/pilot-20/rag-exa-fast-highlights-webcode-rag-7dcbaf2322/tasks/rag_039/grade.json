@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_039",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 431.7,
+    "total_citation_tokens": 4317.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes all three databases in the gold target: MySQL, Microsoft SQL Server, and Oracle. It adds MariaDB and PostgreSQL as additional current support and distinguishes this from the older reference-page list; these additions do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target names MySQL, Microsoft SQL Server, and Oracle as databases supported for stored-function metadata lookup.\n2. Citation [1] explicitly identifies those same three databases for stored-function metadata lookup.\n3. Thus, the retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001298475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

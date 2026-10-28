@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_074",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 495.0,
+    "total_citation_tokens": 4950.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and gives no information about the HAProxy avg_queue behavior. It neither includes nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] describes the usual avg_queue calculation as queued connections divided by the number of alive servers. 2. It does not say what value HAProxy uses when there are no alive servers, nor does it say that the measured value becomes twice the queued connections. 3. Since that specific behavior is the non-trivial claim in the gold target and is absent from the retrieved citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00101324,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

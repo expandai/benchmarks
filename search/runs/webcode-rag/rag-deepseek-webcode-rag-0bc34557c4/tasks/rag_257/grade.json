@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 254.0,
+    "total_citation_tokens": 2540.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer gives a different general formula, mn + 1, where m is the number of revision types involved. Although it also mentions 3n + 1, it presents that as an older-documentation formula rather than the answer, so the response does not consistently provide the gold target and introduces a conflicting claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states the query count as 3N + 1 and defines N as the number of different entity classes modified in the revision.\n2. Citation [10] states the same formula and definition, using lowercase n instead of uppercase N.\n3. Therefore, the retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009327249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

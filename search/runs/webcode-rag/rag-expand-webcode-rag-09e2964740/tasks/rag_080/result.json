@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_080",
+  "prompt": "R parser #line directive placement constraint vs C",
+  "attempt": 1,
+  "answer": "In **R**, `#line` has a stricter placement rule:\n\n```text\n#line nn [\"filename\"]\n```\n\nIt **must begin at the first five characters of the line**—that is, no leading whitespace is allowed. Any text after the directive is treated as a comment and ignored.\n\nIn **C**, `#line` is a preprocessor directive handled before parsing. The provided C example shows it appearing between ordinary source-code lines:\n\n```c\nint\n#line 5 \"file\"\nn = 9;\n```\n\nThe search results do not state an equivalent “first five characters” restriction for C.",
+  "num_citations": 10,
+  "citation_text_tokens": 3313,
+  "citation_text_chars": 14709,
+  "search_queries": [
+    "R parser #line directive placement constraint vs C"
+  ],
+  "model_cost_usd": 0.00152405,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4364,
+    "output_tokens": 361,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 229
+  },
+  "latency_ms": 6162.1895000571385,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00352405,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

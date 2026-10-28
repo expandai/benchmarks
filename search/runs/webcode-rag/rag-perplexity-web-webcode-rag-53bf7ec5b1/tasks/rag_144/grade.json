@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 379.5,
+    "total_citation_tokens": 3795.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that increment, decrement, multiply, and divide do not update a nullable field when its current value is NULL, which matches the gold target. The additional guidance about using set does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a null field is not updated by increment, decrement, multiply, or divide.\n2. Citations [1] and [2] state this exact behavior and list all four operations.\n3. Therefore, all non-trivial information in the gold target is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000790975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

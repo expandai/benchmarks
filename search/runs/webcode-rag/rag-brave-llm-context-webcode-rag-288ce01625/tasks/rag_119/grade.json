@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 674.8,
+    "total_citation_tokens": 6748.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when there are no active servers, HAProxy's avg_queue is twice the number of queued connections, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when there are no active servers, avg_queue uses twice the number of queued connections.\n2. Citations [1] and [6] explicitly state this behavior.\n3. The gold target’s factual claim is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001161475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

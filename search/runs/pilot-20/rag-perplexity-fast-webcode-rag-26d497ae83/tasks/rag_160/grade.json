@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_160",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 359.6,
+    "total_citation_tokens": 3596.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that a string is prohibited as the `start` value, which matches the gold target. Its additional claims about other usable types do not negate that required answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citations [1] and [4] explicitly state that the start value cannot be a string.\nStep 2 — Groundedness: The gold target’s sole factual claim is directly present in the retrieved citations, so it is GROUNDED.\nStep 3 — Source attribution: Citations [1] and [4] each contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001088225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

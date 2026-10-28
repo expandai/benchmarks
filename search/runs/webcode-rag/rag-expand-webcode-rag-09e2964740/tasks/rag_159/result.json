@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_159",
+  "prompt": "CSS writing modes Ogham vertical intrinsic direction",
+  "attempt": 1,
+  "answer": "Ogham is not automatically handled by CSS Writing Modes’ vertical mixed typesetting. The CSS specification recommends using sideways text orientation for Ogham.\n\nFor a bottom-to-top Ogham inscription:\n\n```css\n.ogham {\n  writing-mode: vertical-lr;\n  text-orientation: sideways-left;\n}\n```\n\nThis makes the text run bottom to top. In newer CSS Writing Modes terminology, the equivalent is:\n\n```css\n.ogham {\n  writing-mode: sideways-lr;\n}\n```\n\nOgham’s Unicode glyphs have horizontal orientation, so they need to be rotated sideways rather than treated as intrinsically vertical. CSS `writing-mode` is preferable to `transform: rotate(...)` because it affects layout dimensions and flow, not merely the rendered graphics.",
+  "num_citations": 10,
+  "citation_text_tokens": 7212,
+  "citation_text_chars": 33094,
+  "search_queries": [
+    "CSS writing modes Ogham vertical intrinsic direction"
+  ],
+  "model_cost_usd": 0.00252035,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8450,
+    "output_tokens": 340,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 176
+  },
+  "latency_ms": 5453.813958098181,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00452035,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

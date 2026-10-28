@@ -1,0 +1,51 @@
+{
+  "call": "judge/groundedness",
+  "openrouter_model": "openai/gpt-6-luna",
+  "served_model": "openai/gpt-6-luna",
+  "provider": "OpenAI",
+  "attempts": 1,
+  "finish_reason": "stop",
+  "usage": {
+    "input_tokens": 752,
+    "output_tokens": 147,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 32
+  },
+  "reported_cost_usd": 0.0001487,
+  "table_cost_usd": 0.00014869999999999998,
+  "reasoning_text_returned": false,
+  "text_chars": 413
+}
+{
+  "parsed": {
+    "evidence": "[1] \u201cjson.dumps(obj, *, skipkeys=False, ensure_ascii=True, ...)\u201d and \u201cIf ensure_ascii is true (the default)\u201d",
+    "reasoning": "Step 1 \u2014 The citation gives the function signature with `ensure_ascii=True` and explicitly states that true is the default. Step 2 \u2014 This directly supports the gold target answer, True. Step 3 \u2014 Citation [1] contains the answer.",
+    "groundedness": "GROUNDED",
+    "source_indices": [
+      1
+    ]
+  }
+}
+{
+  "call": "answer/rag",
+  "openrouter_model": "openai/gpt-5.6-luna",
+  "served_model": "openai/gpt-5.6-luna",
+  "provider": "OpenAI",
+  "attempts": 1,
+  "finish_reason": "stop",
+  "usage": {
+    "input_tokens": 364,
+    "output_tokens": 23,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "reported_cost_usd": 0.0001004,
+  "table_cost_usd": 0.00010039999999999999,
+  "reasoning_text_returned": false,
+  "text_chars": 71
+}
+{
+  "answer": "The default value of `ensure_ascii` in Python\u2019s `json.dumps` is `True`."
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 378.6,
+    "total_citation_tokens": 3786.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states that in the stable implementation the field name becomes the filename unless content_transfer_encoding is supplied. However, it also says the latest/master source does not perform that fallback, which contradicts the gold target’s unqualified behavior. Because the response includes conflicting information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] states the fallback behavior directly; citation [1] shows the corresponding condition and assignment in the implementation.\nStep 2: The gold target’s factual claim—that the name argument becomes the filename unless content_transfer_encoding is specified—is fully supported by the retrieved sources.\nStep 3: Citations [1] and [3] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009565999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

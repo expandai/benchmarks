@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_068",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 366.0,
+    "total_citation_tokens": 3660.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 256 distinct values. The predicted answer instead says the minimum precision should be at least 256 distinct values, reversing the limit and contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The retrieved issue discusses recommended precision for pressure and other analog values.\n2. Its recommendation is that the precision allow for at least 256 distinct values.\n3. The gold target says a maximum of 256 distinct values, which is the opposite limit and is not stated in the citation. Therefore, the citations do not support the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008472250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

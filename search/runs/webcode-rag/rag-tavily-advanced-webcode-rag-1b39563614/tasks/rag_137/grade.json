@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 349.0,
+    "total_citation_tokens": 3490.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes imageAtomicExchange, matching the gold target, but also names imageAtomicAdd, imageAtomicLoad, imageAtomicStore, imageAtomicMin, and imageAtomicMax as float-image atomic functions. This contradicts the target’s “imageAtomicExchange only.”",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [9] directly limits the core image-atomic float case to imageAtomicExchange. 2. That supports the gold target answer. 3. Citations [1] and [2] describe additional float image operations provided by extensions, so “only” should be understood as applying to the cited core built-in rule, not to every GLSL extension.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0013612250000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

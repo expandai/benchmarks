@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_198",
+  "prompt": "RFC 3986 relative-part path rule instead of path-rootless",
+  "attempt": 1,
+  "answer": "In RFC 3986, `relative-part` uses `path-noscheme`, not `path-rootless`:\n\n```abnf\nrelative-ref   = relative-part [ \"?\" query ] [ \"#\" fragment ]\n\nrelative-part = \"//\" authority path-abempty\n              / path-absolute\n              / path-noscheme\n              / path-empty\n```\n\n`path-rootless` is used in `hier-part` for a URI with a scheme:\n\n```abnf\nhier-part = \"//\" authority path-abempty\n          / path-absolute\n          / path-rootless\n          / path-empty\n```\n\nSources: [Pike RFC 3986](http://pike.lysator.liu.se/rfc3986.xml), [NIST URI Usage](https://pages.nist.gov/OSCAL/learn/concepts/uri-use)",
+  "num_citations": 10,
+  "citation_text_tokens": 3754,
+  "citation_text_chars": 14820,
+  "search_queries": [
+    "RFC 3986 relative-part path rule instead of path-rootless"
+  ],
+  "model_cost_usd": 0.0015494,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4907,
+    "output_tokens": 269,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 91
+  },
+  "latency_ms": 6075.122959096916,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0175494,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

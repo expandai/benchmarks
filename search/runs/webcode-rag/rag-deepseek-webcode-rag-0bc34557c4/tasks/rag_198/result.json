@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_198",
+ "prompt": "RFC 3986 relative-part path rule instead of path-rootless",
+ "attempt": 1,
+ "answer": "RFC 3986 uses `relative-part` for `relative-ref`, not `path-rootless`:\n\n```abnf\nrelative-ref  = relative-part [ \"?\" query ] [ \"#\" fragment ]\n```\n\n`relative-part` distinguishes the possible forms of a relative reference, including an authority form beginning with `//`, an absolute path, a path whose first segment cannot contain `:`, and an empty path. `path-rootless`, by contrast, is used in the URI `hier-part` and permits a path beginning with a segment.\n\nThis separation eliminated ambiguity between a URI and a relative reference whose first segment contains a colon, using five separate path-matching rules.",
+ "num_citations": 10,
+ "citation_text_tokens": 3137,
+ "citation_text_chars": 13846,
+ "search_queries": [
+  "RFC 3986 relative-part path rule instead of path-rootless"
+ ],
+ "model_cost_usd": 0.0015536,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4199,
+  "output_tokens": 420,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 279
+ },
+ "latency_ms": 5598.731915932149,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0023036000000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

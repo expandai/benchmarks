@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_165",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 322.0,
+    "total_citation_tokens": 3220.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says resume() is equivalent to requesting Long.MAX_VALUE items. The predicted answer says resume() is not equivalent to fetch(n), and describes it as a separate flowing mode rather than giving the Long.MAX_VALUE equivalence. This conflicts with the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies `Long.MAX_VALUE` items as the amount equivalent to `resume()`.\n2. The citations describe `resume()` as setting flowing mode and `fetch(long)` as requesting a specified amount, but none identifies `Long.MAX_VALUE` or states that `resume()` is equivalent to fetching that amount.\n3. Since this specific value/equivalence is a non-trivial claim missing from the retrieved sources, the gold target is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00097585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

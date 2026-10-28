@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_128",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 231.0,
+    "total_citation_tokens": 2310.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies HTTP response code 409. The predicted answer states that retriable-4xx includes HTTP 409 Conflict, matching the target without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: The cited Envoy Gateway API references explicitly state that the only response code in the retriable-4xx category is 409. Step 2 — Groundedness: The gold target answer is 409, and the retrieved citations directly support it. Step 3 — Source attribution: Citations [1], [3], and [5] each independently contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000594475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

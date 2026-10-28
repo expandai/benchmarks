@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_263",
+  "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+  "attempt": 1,
+  "answer": "`NGX_PEER_NEXT` is used to tell nginx to try another upstream backend; it does **not** mark the current peer as failed.\n\nWith `proxy_next_upstream`, the triggers are:\n\n| Configuration parameter | Trigger |\n|---|---|\n| `error` | Error connecting, sending the request, or reading response headers |\n| `timeout` | Timeout connecting, sending the request, or reading response headers |\n| `invalid_header` | Empty or invalid upstream response |\n| `http_500` | Upstream returns HTTP 500 |\n| `http_502` | Upstream returns HTTP 502 |\n| `http_503` | Upstream returns HTTP 503 |\n| `http_504` | Upstream returns HTTP 504 |\n| `http_403` | Upstream returns HTTP 403 |\n| `http_404` | Upstream returns HTTP 404 |\n| `http_429` | Upstream returns HTTP 429 |\n\nFor example:\n\n```nginx\nproxy_next_upstream error timeout http_404;\n```\n\nIn the reported `NGX_PEER_NEXT` case, the trigger was an upstream **HTTP 404**, with `proxy_next_upstream http_404;`. nginx is expected to try the available backends and then return 404 if none succeeds.\n\nThe conditions `error`, `timeout`, `invalid_header`, and `denied` are always considered unsuccessful attempts. HTTP 500, 502, 503, 504, and 429 are considered unsuccessful attempts only when enabled; HTTP 403 and 404 are never considered unsuccessful attempts.",
+  "num_citations": 10,
+  "citation_text_tokens": 5180,
+  "citation_text_chars": 19999,
+  "search_queries": [
+    "nginx NGX_PEER_NEXT upstream status codes trigger"
+  ],
+  "model_cost_usd": 0.0021782,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6371,
+    "output_tokens": 488,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 157
+  },
+  "latency_ms": 8516.135000041686,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061782,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

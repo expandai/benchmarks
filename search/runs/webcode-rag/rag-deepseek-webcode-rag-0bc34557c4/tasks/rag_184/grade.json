@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_184",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 313.2,
+    "total_citation_tokens": 3132.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that Data.List.maximumBy chooses the later/rightmost element when comparisons tie, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [6] explicitly states that `maximumBy` chooses the last element when list elements compare equal.\n2. Citation [4] corroborates that `maximumBy` returns a later element when it ties with the extremum seen so far.\n3. These passages support the gold target that the rightmost tied maximum is chosen.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000831725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

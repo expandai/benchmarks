@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_239",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 403.7,
+    "total_citation_tokens": 4037.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a limit of 199 commands per script. The predicted answer instead gives a limit of 999 subcommands for AIX sed, which conflicts with the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [7] explicitly states that some sed implementations limit a script to 199 commands.\n2. This matches the gold target answer, “199 commands per script.”\n3. The cited wording qualifies that this is a limit in some implementations, rather than a universal limit, but the gold target does not make a broader claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000810725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

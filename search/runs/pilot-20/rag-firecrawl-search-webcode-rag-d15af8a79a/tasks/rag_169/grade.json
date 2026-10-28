@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_169",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 58.0,
+    "total_citation_tokens": 580.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the configuration filename or any contradictory information.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [10] mentions the STM32F407G-DISC1 board, but gives no OpenOCD configuration filename. 2. Citation [6] provides an example using a different board configuration, `board/st_nucleo_f4.cfg`. 3. None of the retrieved citations contains or allows deriving the specific filename `stm32f429disc1.cfg`. Therefore, a non-trivial detail in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000430225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

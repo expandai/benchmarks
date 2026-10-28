@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_152",
+ "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+ "attempt": 1,
+ "answer": "Use them based on what should happen after a failed check:\n\n- **`NS_TEST_ASSERT_*`**: Reports the failure and **stops/aborts the current test case**. Use it when later checks depend on the failed condition, or generally in normal test methods.\n- **`NS_TEST_EXPECT_*`**: Reports the failure but **continues execution**. Use it when you want to check multiple independent conditions and report all failures—for example, checking A, B, and C even if A fails.\n\nThe ns-3 manual specifically says to reserve `EXPECT` variants for methods—especially callbacks—returning `void`; otherwise, use the `ASSERT` variants.\n\nExample:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ(value, expected, \"Required precondition failed\");\n```\n\nUse this if continuing would make subsequent checks invalid.\n\n```cpp\nNS_TEST_EXPECT_MSG_EQ(valueA, expectedA, \"A failed\");\nNS_TEST_EXPECT_MSG_EQ(valueB, expectedB, \"B failed\");\nNS_TEST_EXPECT_MSG_EQ(valueC, expectedC, \"C failed\");\n```\n\nUse this when the checks are independent and you want all failures reported.",
+ "num_citations": 10,
+ "citation_text_tokens": 4786,
+ "citation_text_chars": 20193,
+ "search_queries": [
+  "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+ ],
+ "model_cost_usd": 0.00182895,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6174,
+  "output_tokens": 238,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 9381.895625032485,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00882895,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_095",
+ "prompt": "ffmpeg ffmetadata chapter missing timebase assumed units",
+ "attempt": 1,
+ "answer": "In current FFmpeg documentation, if a chapter’s `TIMEBASE` is omitted, `START` and `END` are interpreted as **nanoseconds**.\n\n```ini\n[CHAPTER]\nSTART=0\nEND=60000000000\ntitle=Chapter 1\n```\n\nThis represents a chapter from 0 to 60 seconds. To use another unit, specify the timebase explicitly:\n\n```ini\n[CHAPTER]\nTIMEBASE=1/1000\nSTART=0\nEND=60000\ntitle=Chapter 1\n```\n\nHere, the values are in milliseconds. (FFmpeg Formats Documentation: https://ffmpeg.org/ffmpeg-formats.html)",
+ "num_citations": 9,
+ "citation_text_tokens": 3992,
+ "citation_text_chars": 13903,
+ "search_queries": [
+  "ffmpeg ffmetadata chapter missing timebase assumed units"
+ ],
+ "model_cost_usd": 0.00153715,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4978,
+  "output_tokens": 244,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 99
+ },
+ "latency_ms": 3790.903792018071,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00253715,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

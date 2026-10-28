@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_152",
+  "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+  "attempt": 1,
+  "answer": "Use **`NS_TEST_ASSERT_*`** in normal test methods. If the check fails, it reports the error and aborts/returns from the test.\n\nUse **`NS_TEST_EXPECT_*`** specifically in **`void`-returning methods, especially callbacks**, because these variants are designed to avoid using a `return` statement. An `EXPECT` failure is reported, but execution does not return immediately.\n\nIn short:\n\n- **Regular test code:** `NS_TEST_ASSERT_*`\n- **`void` callbacks used by your test programs:** `NS_TEST_EXPECT_*`\n\nFor floating-point comparisons, use the tolerance variants such as `NS_TEST_ASSERT_MSG_EQ_TOL` rather than ordinary equality checks.",
+  "num_citations": 10,
+  "citation_text_tokens": 1887,
+  "citation_text_chars": 6996,
+  "search_queries": [
+    "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+  ],
+  "model_cost_usd": 0.0008925,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2865,
+    "output_tokens": 147,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 5002.548000076786,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0058925,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

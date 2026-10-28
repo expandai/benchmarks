@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_218",
+  "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+  "attempt": 1,
+  "answer": "`assign_new/3` can share assigns from a parent to a nested child **when the child is mounted**, allowing assigns to be shared down the nested LiveView tree.\n\nThe documented conditions are:\n\n- The child must be a **nested LiveView** rendered by the parent.\n- The lookup must occur during the child’s **mount**.\n- During a disconnected/static mount, assigns from the `conn` can be available through `assign_new/3`.\n- During connected mounting, the LiveView uses its **session** to rebuild the shared assign.\n\nFor example:\n\n```elixir\ndef mount(%{user_id: user_id}, socket) do\n  {:ok, assign_new(socket, :current_user, fn ->\n    Accounts.get_user!(user_id)\n  end)}\nend\n```\n\nThe search results also show that this behavior was the subject of a clarification/bug report in Phoenix LiveView 0.13.3, which was closed in favor of another issue.",
+  "num_citations": 10,
+  "citation_text_tokens": 3548,
+  "citation_text_chars": 14505,
+  "search_queries": [
+    "Phoenix LiveView assign_new parent child sharing conditions"
+  ],
+  "model_cost_usd": 0.0015715,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4693,
+    "output_tokens": 332,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 128
+  },
+  "latency_ms": 9356.041457969695,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0175715,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

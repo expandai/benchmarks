@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_140",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 503.8,
+    "total_citation_tokens": 5038.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five valid language options in the gold target: html, latex, cals, wiki, and mediawiki, without adding contradictory information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target names five valid language options: html, latex, cals, wiki, and mediawiki.\n2. Citation [1] explicitly lists all five as the permitted LANGUAGE values; citation [2] independently lists the same five supported source languages.\n3. Every non-trivial item in the gold target is present in the retrieved citations, so the answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009376,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

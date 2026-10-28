@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_212",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 241.9,
+    "total_citation_tokens": 2419.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is exit status 77. The predicted answer explicitly says that status 77 marks a test as skipped/ignored and shows `exit 77`, which answers the question correctly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2] and [4] explicitly state that exit status 77 causes a test result to be ignored. Step 2: This directly supports the gold target answer, “exit status of 77.” No non-trivial information in the target is missing. Step 3: Citations [2] and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007826,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

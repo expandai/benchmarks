@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 516.5,
+    "total_citation_tokens": 5165.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that explicit register operands come after positional operands and places them at the end of the operand ordering, after named operands and other operand types. This matches the gold target. The additional explanation is consistent with the requested Rust `asm!` ordering.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims explicit register operands must appear at the end of the operand list, after all other operand types.\n2. Citations [1] and [2] state that requirement explicitly.\n3. Therefore, the retrieved citations contain the non-trivial information in the gold target. Citation [4] describes relaxed ordering rules, but does not erase the direct supporting passages for the target claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013126000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

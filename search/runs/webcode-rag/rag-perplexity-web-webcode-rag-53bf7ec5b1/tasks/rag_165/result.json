@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_165",
+  "prompt": "vertx ReadStream resume fetch equivalence",
+  "attempt": 1,
+  "answer": "`resume()` is **not equivalent** to `fetch(long)`:\n\n- `resume()` switches the stream to **flowing mode**, so elements are delivered to the handler continuously.\n- `fetch(amount)` remains in **fetch mode** and requests only the specified number of elements. If the stream is paused, reading recommences with that amount; otherwise, the amount is added to the current demand.\n\nThus, use `resume()` for unrestricted flowing, and `fetch(n)` for bounded demand.",
+  "num_citations": 10,
+  "citation_text_tokens": 3948,
+  "citation_text_chars": 15418,
+  "search_queries": [
+    "vertx ReadStream resume fetch equivalence"
+  ],
+  "model_cost_usd": 0.00150675,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5154,
+    "output_tokens": 182,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 77
+  },
+  "latency_ms": 5108.317542006262,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00650675,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

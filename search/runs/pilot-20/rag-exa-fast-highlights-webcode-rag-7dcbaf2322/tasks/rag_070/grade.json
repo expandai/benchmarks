@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_070",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 471.1,
+    "total_citation_tokens": 4711.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer reports that no browser had shipped the feature historically and says the available results do not establish a current implementation. But it explicitly leaves Chrome's status unknown, so it does not clearly confirm the gold target that no current engines implement it, nor does it contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that no current engines implement FetchEvent.replacesClientId.\n2. Citation [2] explicitly says no browser had shipped the property and, in its 2023 discussion, that no browser was implementing it yet.\n3. Citation [6] corroborates that WebKit's bug remained NEW and that replacesClientId had not been implemented; [1] shows the related WebKit pull request was still open.\n4. These passages support the gold target's engine implementation-status claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0012361,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

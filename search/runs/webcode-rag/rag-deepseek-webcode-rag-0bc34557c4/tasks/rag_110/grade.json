@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_110",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 432.6,
+    "total_citation_tokens": 4326.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that `with_ties` must be reapplied when the limit is redefined. The predicted answer instead claims Ecto does not support `WITH TIES` and says raw SQL is required; it neither provides the required interaction behavior nor aligns with the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations discuss Ecto’s lack of support for WITH TIES, but neither says that with_ties must be reapplied when a limit is redefined. That specific requirement is missing, so the gold target is not grounded in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00108485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

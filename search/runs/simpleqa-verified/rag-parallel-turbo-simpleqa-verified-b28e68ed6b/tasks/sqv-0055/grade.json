@@ -1,0 +1,31 @@
+{
+  "task_id": "sqv-0055",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 487.5,
+    "total_citation_tokens": 2925.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted longitude, 35.11667° E, is outside the acceptable range of 33.7586 to 33.8022, so it contradicts the gold target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [3] and [6] give Lilongwe’s decimal longitude as 33.76806, and citation [4] gives it as 33.78725. Step 2: Both values fall within the stated acceptable range of 33.7586 to 33.8022, so the citations support an acceptable longitude answer. Citations [1] and [2] report a conflicting longitude, but the retrieved set also contains direct city-coordinate values that support the accepted answer. Step 3: Citations [3], [4], and [6] contain the supporting longitude information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000984355,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

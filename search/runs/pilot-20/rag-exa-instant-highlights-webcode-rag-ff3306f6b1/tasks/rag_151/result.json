@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_151",
+ "prompt": "CSSFontFeatureValuesMap set method exception too many values",
+ "attempt": 1,
+ "answer": "`CSSFontFeatureValuesMap.set()` should throw an `InvalidAccessError` when the supplied sequence contains more values than the associated feature allows.\n\nAllowed values:\n\n- `@swash`, `@annotation`, `@ornaments`, `@stylistic`: one value\n- `@character-variant`: one or two values\n- `@styleset`: unlimited values\n\nFor example:\n\n```js\nrule.characterVariant.set(\"alpha-2\", [1, 2, 3]);\n// InvalidAccessError\n```\n\nHowever, the search results note that Chrome instead stores `[0]` when too many values are supplied, so browser behavior may differ from the specification.",
+ "num_citations": 10,
+ "citation_text_tokens": 3711,
+ "citation_text_chars": 14413,
+ "search_queries": [
+  "CSSFontFeatureValuesMap set method exception too many values"
+ ],
+ "model_cost_usd": 0.0014998,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5059,
+  "output_tokens": 196,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 53
+ },
+ "latency_ms": 3431.564124999568,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0054998,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_130",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 548.3,
+    "total_citation_tokens": 5483.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states both key points from the gold target: a zero-length Idempotency-Key slice causes the request to be treated as idempotent, while the header is not sent on the wire. Its additional explanation is consistent with that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a zero-length Idempotency-Key value makes the request count as idempotent.\n2. The cited passage explicitly says the request is treated as idempotent in that case.\n3. The gold target also claims the header is not sent on the wire; the passage states this explicitly.\n4. Both non-trivial claims are present in the retrieved citations, so the answer is fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0010861,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_179",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 260.1,
+    "total_citation_tokens": 2601.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Eshell ranges exclude the end index, matching the gold target, and contrasts this with Bash ranges that include both endpoints. Its example is consistent with that distinction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that the Eshell range excludes the end index.\n2. It explicitly contrasts Bash, where both endpoints are included, and says Eshell matches Emacs Lisp functions such as `substring`.\n3. These passages support every non-trivial claim in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000653975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

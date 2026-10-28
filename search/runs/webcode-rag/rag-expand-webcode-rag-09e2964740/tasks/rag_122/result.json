@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_122",
+  "prompt": "rust asm! explicit register operands position operand list",
+  "attempt": 1,
+  "answer": "In `asm!`, **positional operands must come before named operands and explicit register operands**.\n\nThe documented ordering is:\n\n1. Template strings\n2. Positional operands\n3. Named operands\n4. Explicit register operands\n5. `clobber_abi`\n6. `options`\n\nHowever, newer ordering rules allow **named and explicit-register operands to be freely mixed**, and allow `options` and `clobber_abi` in any position after the template strings. Explicit register operands still cannot be referenced with `{}` in the template; write the register name directly.",
+  "num_citations": 10,
+  "citation_text_tokens": 9632,
+  "citation_text_chars": 34309,
+  "search_queries": [
+    "rust asm! explicit register operands position operand list"
+  ],
+  "model_cost_usd": 0.0029807,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 11333,
+    "output_tokens": 123,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3479.789291974157,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0049807,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

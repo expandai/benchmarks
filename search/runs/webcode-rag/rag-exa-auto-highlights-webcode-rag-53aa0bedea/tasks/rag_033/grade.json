@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_033",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 537.7,
+    "total_citation_tokens": 5377.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the first-level route’s `continue` value is always overridden to `true`, matching the gold target. Its additional details do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that the operator sets `continue: true` for the top-level route and that the value is overridden to true for the first-level route. Step 2: This directly supports the full gold target claim; no non-trivial factual detail is missing. Step 3: Citations [2], [3], and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001081475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

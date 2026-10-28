@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_003",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 388.1,
+    "total_citation_tokens": 3881.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the relevant boxes as block-level elements in the root element’s normal flow. This is a standard description of the boxes to which the `page` property applies and is consistent with the target’s reference to boxes creating class A break points. The additional note about possible user-agent support for other elements does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the CSS `page` property applies to boxes that create class A break points. Citation [2] states this directly, so the target’s non-trivial claim is present in the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00120935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

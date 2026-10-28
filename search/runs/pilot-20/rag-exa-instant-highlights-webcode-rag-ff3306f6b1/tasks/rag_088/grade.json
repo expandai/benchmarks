@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_088",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 511.2,
+    "total_citation_tokens": 3067.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that GCC’s SPU `-msmall-mem` assumes addresses are no larger than 18 bits, matching the gold target. The additional statement about `-mlarge-mem` does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states that -msmall-mem generates code for 18-bit addressing. Citations [5] and [6] clarify that GCC's default assumption is that addresses are never larger than 18 bits. Step 2: The gold target answer, “18 bits,” is fully supported by these passages. Step 3: Citations [2], [5], and [6] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0007646,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

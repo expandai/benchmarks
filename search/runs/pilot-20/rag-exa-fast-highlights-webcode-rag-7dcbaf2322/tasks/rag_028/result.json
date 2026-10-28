@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_028",
+ "prompt": "glibc printf_info width precision star arginfo function value",
+ "attempt": 1,
+ "answer": "For a custom glibc `printf` conversion:\n\n| Format component | No specification | Explicit value | `*` in the **arginfo** function | `*` in the **handler** |\n|---|---:|---:|---:|---:|\n| `info->width` | `0` | Specified width | `INT_MIN` | Actual `int` retrieved from the argument list |\n| `info->prec` | `-1` | Specified precision | `INT_MIN` | Actual `int` retrieved from the argument list |\n\nThus, inside the `printf_arginfo_function`, test:\n\n```c\nif (info->width == INT_MIN) {\n    /* Width was specified with *. */\n}\n\nif (info->prec == INT_MIN) {\n    /* Precision was specified with *. */\n}\n```\n\nThe `*` width and precision arguments are `int` arguments; `parse_printf_format` records them as `PA_INT`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4987,
+ "citation_text_chars": 20197,
+ "search_queries": [
+  "glibc printf_info width precision star arginfo function value"
+ ],
+ "model_cost_usd": 0.00223375,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6454,
+  "output_tokens": 517,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 312
+ },
+ "latency_ms": 7477.872624993324,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00923375,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

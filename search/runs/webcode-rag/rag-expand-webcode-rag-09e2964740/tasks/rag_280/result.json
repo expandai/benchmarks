@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_280",
+  "prompt": "node.js http built-in proxy unix domain socket request",
+  "attempt": 1,
+  "answer": "For a Node.js `http.request()` using a Unix domain socket, pass `socketPath` and omit `host`/`port`:\n\n```js\nimport { request } from 'node:http';\n\nconst req = request(\n  {\n    socketPath: '/tmp/example-node.sock',\n    path: '/',\n  },\n  (res) => {\n    res.on('data', (chunk) => console.log(String(chunk)));\n  },\n);\n\nreq.end();\n```\n\n`socketPath` cannot be used together with `host` or `port`. Built-in proxy settings (`proxyEnv`, `HTTP_PROXY`, etc.) are ignored when the request is made to a Unix domain socket.",
+  "num_citations": 10,
+  "citation_text_tokens": 6835,
+  "citation_text_chars": 28672,
+  "search_queries": [
+    "node.js http built-in proxy unix domain socket request"
+  ],
+  "model_cost_usd": 0.00232985,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8360,
+    "output_tokens": 200,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 58
+  },
+  "latency_ms": 4637.608333025128,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00432985,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

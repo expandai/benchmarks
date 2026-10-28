@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_285",
+  "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+  "attempt": 1,
+  "answer": "`linkcheck_case_insensitive_urls` affects only the URL portion before the `#`. URI fragments (HTML anchors) remain case-sensitive and are always checked using case-sensitive comparisons.\n\nFor example, with:\n\n```python\nlinkcheck_case_insensitive_urls = [r'https://example\\.org/.*']\n```\n\nthe path casing in:\n\n```text\nhttps://example.org/PATH#Section\n```\n\nmay be compared case-insensitively, but the fragment `Section` must match the destination anchor’s casing exactly. The fragment is URL-decoded before anchor checking. Anchors matching an `anchors_ignore` or `anchors_ignore_for_url` pattern can instead be skipped.",
+  "num_citations": 10,
+  "citation_text_tokens": 3940,
+  "citation_text_chars": 16676,
+  "search_queries": [
+    "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+  ],
+  "model_cost_usd": 0.0015833,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5033,
+    "output_tokens": 271,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 128
+  },
+  "latency_ms": 4422.539209015667,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065833,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

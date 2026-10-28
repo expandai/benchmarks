@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 98.2,
+    "total_citation_tokens": 982.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says this situation is an error, while the predicted answer says it is valid and the option simply has no effect. These claims conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explain that allow_alias permits different enum names to share a number and show an example with duplicate numbers.\n2. They do not state that setting allow_alias when all enum values have distinct numbers causes an error.\n3. Since the gold target’s claim that this situation is an error is not supported, the citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007859750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_241",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 506.9,
+    "total_citation_tokens": 5069.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact format string in the gold target. The additional explanation is consistent with that answer and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the exact default format string used by multiprocessing logging.\n2. Citations [1], [2], [9], and [10] each state that `DEFAULT_LOGGING_FORMAT` is `'[%(levelname)s/%(processName)s] %(message)s'`.\n3. The citations therefore contain the complete gold target, with no missing factual claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001001225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

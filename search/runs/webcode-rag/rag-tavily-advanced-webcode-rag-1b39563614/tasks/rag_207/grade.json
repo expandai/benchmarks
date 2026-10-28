@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_207",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 548.8,
+    "total_citation_tokens": 5488.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold formula, `ceil(result) - 1`, for positive expression results. However, it also claims that a `NaN` result is sent to output index 0; in FFmpeg's select routing, a NaN is treated as zero and the frame is discarded. This incorrect extra statement makes the predicted answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the routing rule `ceil(val)-1` for the select filter’s output index.\n2. Citations [1] and [3] explicitly state that a non-negative, non-NaN evaluation result routes the frame to the output with index `ceil(val)-1`.\n3. The retrieved sources contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0017840999999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

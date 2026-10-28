@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_136",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 328.8,
+    "total_citation_tokens": 3288.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is GT. The predicted answer states that Haskell's `compare` involving NaN returns GT, including `compare nan nan`, and the additional explanation is consistent with the behavior of floating-point comparisons.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [1] states that `compare` returns `GT` when either argument is NaN. Citation [2] gives the specific example `compare nan nan` returning `GT`.\n\nSTEP 2 — GROUNDEDNESS: The gold target answer is `GT`. The citations directly support that result, so all factual content in the target is grounded.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citations [1] and [2] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00092835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

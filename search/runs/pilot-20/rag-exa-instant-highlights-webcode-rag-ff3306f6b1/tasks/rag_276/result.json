@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Without `texture-component-swizzle`, there is no portable way to sample the non-depth components of a depth/stencil texture as defined values. For a regular `texture_2d` binding, the result is `(V, X, X, X)`, where `V` is the depth or stencil value and the other components are implementation-defined ([proposal](https://github.com/gpuweb/gpuweb/blob/main/proposals/texture-component-swizzle.md)).\n\nPortable options are:\n\n- Bind the depth aspect as `texture_depth` and sample its single `f32` depth value; this type does not return non-depth components ([CTS discussion](https://github.com/gpuweb/cts/pull/4427)).\n- For stencil, bind a stencil-aspect view separately as a `uint` binding ([issue #1230](https://github.com/gpuweb/gpuweb/issues/1230)).\n- If you need a predictable four-component value, construct it in the shader from the sampled scalar, rather than reading `.g`, `.b`, or `.a`.\n\nThe `(V, 0, 0, 1)` behavior is guaranteed only when the `texture-component-swizzle` feature is enabled; implementations are merely encouraged to provide it otherwise.",
+ "num_citations": 10,
+ "citation_text_tokens": 5147,
+ "citation_text_chars": 20470,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.0022012,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6199,
+  "output_tokens": 543,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 282
+ },
+ "latency_ms": 6768.272874993272,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0062012000000000005,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

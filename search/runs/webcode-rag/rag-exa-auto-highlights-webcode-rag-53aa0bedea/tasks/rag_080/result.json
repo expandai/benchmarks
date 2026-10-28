@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_080",
+  "prompt": "R parser #line directive placement constraint vs C",
+  "attempt": 1,
+  "answer": "R’s `#line` placement is stricter than C’s:\n\n- **R:** `#line` must be the **first five characters of the line**—i.e. it must start in column 1 with no leading whitespace. Whitespace is allowed between `#line` and the line number, and any remaining text on the line is treated as a comment and ignored.\n- **C:** The `#` may be preceded by whitespace, and whitespace may occur between `#` and the directive name. The directive continues through the newline; extra non-whitespace text may cause an error or affect its meaning.\n\nThus, for example, leading indentation before `#line` is not permitted by R, whereas C permits whitespace before the `#`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4100,
+  "citation_text_chars": 17884,
+  "search_queries": [
+    "R parser #line directive placement constraint vs C"
+  ],
+  "model_cost_usd": 0.00174205,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5260,
+    "output_tokens": 356,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 197
+  },
+  "latency_ms": 6235.403417027555,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00874205,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

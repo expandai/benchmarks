@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_153",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 390.3,
+    "total_citation_tokens": 3903.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when the target contains no slash, `$(@D)` expands to `.`; this matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that when the target name has no slash (or is just a filename), `$(@D)` is `.`.\nStep 2: The gold target answer is `.`, and that answer is directly supported by the retrieved citations. The answer is GROUNDED.\nStep 3: Citations [1], [3], [4], [5], and [10] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0008730999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

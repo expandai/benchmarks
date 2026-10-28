@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_094",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 700.0,
+    "total_citation_tokens": 7000.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the Haskell codebase is well over 100,000 lines. The predicted answer specifically reports 61,000 lines of Haskell, which contradicts that target; the additional C line count does not resolve the contradiction.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] gives the compiler’s language-specific counts: 61k lines of Haskell and 109k lines of C. Together these indicate a compiler codebase of about 170k lines, but they do not support a Haskell codebase of well over 100k lines. Citation [9] confirms that the core is written in Haskell, but provides no size estimate. Step 2: Given the question asks about the Haskell codebase size, the gold target’s claim of well over 100K lines is not supported; the cited Haskell count is 61k. This is a missing non-trivial fact, so the verdict is UNGROUNDED. Step 3: No citation supports the gold target as a Haskell-only size claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0017203499999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

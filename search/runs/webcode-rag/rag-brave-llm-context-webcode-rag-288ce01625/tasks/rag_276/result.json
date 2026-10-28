@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_276",
+  "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+  "attempt": 1,
+  "answer": "Without `texture-component-swizzle`, the non-depth components of sampled depth/stencil textures are not portable or guaranteed.\n\n- A depth-aspect view may be bound to either a `texture_depth_*` binding or a normal non-depth 2D/cube texture binding.\n- A stencil-aspect view must use a normal texture binding with `sampleType: \"uint\"`.\n- When `texture-component-swizzle` is enabled, sampling is defined as if the texture contained `(V, 0, 0, 1)`, where `V` is the depth or stencil value.\n- Without the feature, the unspecified components are implementation-defined. Implementations should provide `(V, 0, 0, 1)` where possible, but this is not a guarantee.\n\nTherefore, do not rely on `.g`, `.b`, or `.a` having particular values. Sample the depth value through a `texture_depth_*` binding, or sample the stencil value through its required `uint` texture binding, then construct the desired vector explicitly in WGSL, for example:\n\n```wgsl\nlet d: f32 = textureSample(depthTexture, sampler, uv);\nlet value = vec4f(d, 0.0, 0.0, 1.0);\n```\n\nIf an application requires the texture-view channels themselves to be rearranged or replaced, it must enable `texture-component-swizzle`; there is no portable equivalent without it.",
+  "num_citations": 10,
+  "citation_text_tokens": 4440,
+  "citation_text_chars": 16900,
+  "search_queries": [
+    "WebGPU sampling depth stencil texture non depth channels without texture component swizzle"
+  ],
+  "model_cost_usd": 0.00238885,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5644,
+    "output_tokens": 815,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 516
+  },
+  "latency_ms": 11509.146584081464,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.007388850000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

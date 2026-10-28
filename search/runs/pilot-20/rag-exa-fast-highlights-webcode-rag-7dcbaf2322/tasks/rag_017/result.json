@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "Historically, `llvm.sqrt` differed from `libm sqrt` for negative inputs:\n\n- **Before the D28797 change:** `llvm.sqrt(x)` had undefined behavior for negative numbers other than `-0.0`; `llvm.sqrt(-0.0)` returned `-0.0`. By contrast, `libm sqrt(x)` returned `NaN` for negative inputs and could set `errno`. ([D28797](https://reviews.llvm.org/D28797), [LLVM RFC](https://lists.llvm.org/pipermail/cfe-commits/Week-of-Mon-20130909/088596.html))\n- **After D28797:** the LLVM LangRef described `llvm.sqrt` as returning the same value as `libm sqrt`, but **without trapping or setting `errno`**. Thus, for a negative input, the result matches `libm`’s `NaN` result while avoiding its side effect on `errno`. ([commit](https://lists.llvm.org/pipermail/llvm-commits/Week-of-Mon-20170123/423815.html), [D39204](https://reviews.llvm.org/D39204))\n\nSo the key distinction is: **same numeric result as `libm sqrt`, but no `errno` or trapping side effects in `llvm.sqrt`.**",
+ "num_citations": 10,
+ "citation_text_tokens": 4220,
+ "citation_text_chars": 17536,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.0018938,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5555,
+  "output_tokens": 421,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 137
+ },
+ "latency_ms": 5324.278709013015,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0088938,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

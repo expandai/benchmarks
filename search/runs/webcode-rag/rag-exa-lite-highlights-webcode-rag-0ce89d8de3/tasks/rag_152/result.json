@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_152",
+  "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+  "attempt": 1,
+  "answer": "Use **`NS_TEST_ASSERT_*` by default**:\n\n- **`NS_TEST_ASSERT_*`**: reports the failure and **aborts the current test case**. Use it when continuing would be meaningless—for example, if a failed check makes subsequent checks invalid.\n- **`NS_TEST_EXPECT_*`**: reports the failure but **continues execution**. Use it when you want to check multiple independent conditions and collect all failures, or in **void-returning callbacks**, where the ns-3 manual specifically recommends reserving `EXPECT` variants for callbacks.\n\nExample:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ(ptr != nullptr, true, \"Pointer must be valid\");\n// Dereferencing ptr is meaningful only if the assertion passed.\n\nNS_TEST_EXPECT_MSG_EQ(conditionA, true, \"A failed\");\nNS_TEST_EXPECT_MSG_EQ(conditionB, true, \"B failed\");\nNS_TEST_EXPECT_MSG_EQ(conditionC, true, \"C failed\");\n```\n\nNote: ns-3 also documents an `--assert-on-failure`/`-m` option that can make assertion failures behave like hard assertions, depending on the test runner version.",
+  "num_citations": 10,
+  "citation_text_tokens": 4735,
+  "citation_text_chars": 20200,
+  "search_queries": [
+    "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+  ],
+  "model_cost_usd": 0.0018037,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6097,
+    "output_tokens": 233,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4354.4346250128,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0058037,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

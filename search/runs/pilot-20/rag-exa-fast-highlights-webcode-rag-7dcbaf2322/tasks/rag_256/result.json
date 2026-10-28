@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "With jq’s update assignment (`|=`), if the RHS produces no values—for example, `empty`—the corresponding LHS path is deleted, rather than the whole expression producing no output.\n\n```jq\nnull | .a |= empty\n```\n\nproduces:\n\n```jq\nnull\n```\n\nwhereas:\n\n```jq\nnull | .a = empty\n```\n\nproduces no output.\n\nFor example:\n\n```sh\njq -nc '{\"a\":[1,2,3]} | .a[] |= empty'\n```\n\ncan produce:\n\n```json\n{\"a\":[2]}\n```\n\nThe documented behavior is that an empty RHS causes the LHS path to be deleted, like `del(path)`. Internally, jq queues paths whose update produces `empty` and deletes them after processing.\n\nHowever, handling multiple paths with an empty RHS has known bugs and version differences. In jq 1.6, for example:\n\n```sh\necho '[1,2]' | jq -c '.[] |= empty'\n```\n\nproduces:\n\n```json\n[2]\n```\n\nrather than deleting all elements. Use `del(...)` when deleting multiple paths.",
+ "num_citations": 10,
+ "citation_text_tokens": 4845,
+ "citation_text_chars": 16792,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.00193795,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6154,
+  "output_tokens": 333,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 92
+ },
+ "latency_ms": 4745.192292029969,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00893795,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

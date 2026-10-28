@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_284",
+ "prompt": "jq |= update-assignment right-hand side outputs empty",
+ "attempt": 1,
+ "answer": "In jq, `empty` produces no results at all—not even `null`. However, `|=` is an update assignment, not a normal pipe. Its RHS is evaluated as an update to the value selected by the LHS.\n\nThus these behave differently:\n\n```jq\nnull | .a = empty    # produces no output\nnull | .a |= empty   # produces null in jq 1.6\n```\n\nThe behavior of `empty` on the RHS of `|=` has historically been undefined or buggy, and differs between jq versions. In some proposed/fixed implementations, an empty update deletes the selected path instead.\n\nIf you want the RHS to produce output directly, use a normal pipe:\n\n```jq\n.a | ...\n```\n\nIf you want to assign the result of an expression, use plain assignment:\n\n```jq\n.a = (.a | ...)\n```\n\nAlso avoid relying on multiple RHS outputs with `|=`; only one output is used, and the behavior has differed between implementations.",
+ "num_citations": 10,
+ "citation_text_tokens": 5988,
+ "citation_text_chars": 19995,
+ "search_queries": [
+  "jq |= update-assignment right-hand side outputs empty"
+ ],
+ "model_cost_usd": 0.0024391,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7357,
+  "output_tokens": 500,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 291
+ },
+ "latency_ms": 6220.399750047363,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0064391,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

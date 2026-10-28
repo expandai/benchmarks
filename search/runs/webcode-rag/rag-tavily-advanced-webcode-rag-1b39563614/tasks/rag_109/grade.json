@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_109",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 412.3,
+    "total_citation_tokens": 4123.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that the `malloc` attribute is ignored when `linkshared=True`, matching the gold target. Its added explanation—that a custom malloc library therefore does not take effect for that link—is consistent with the attribute being ignored.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations directly state that the `malloc` attribute's value is ignored when `linkshared=True` is specified.\nStep 2 — This matches the gold target's factual claim completely, with no additional non-trivial details missing.\nStep 3 — Citations [1], [2], and [3] each contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008935999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_105",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 534.0,
+    "total_citation_tokens": 5340.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says it does not know and provides no return value, while making no contradictory claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is the return value 127.\n2. Citation [5] shows an `os.spawnve()` call with an invalid `env` argument (`None`) returning `127`.\n3. This directly supports the gold answer for that invalid-environment case.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001186515,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

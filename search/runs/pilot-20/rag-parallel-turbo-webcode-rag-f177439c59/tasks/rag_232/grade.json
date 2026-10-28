@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 469.2,
+    "total_citation_tokens": 4692.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that hpx::future destructors never block even when the asynchronous operation is incomplete, which matches the gold target. Its comparison with std::future also correctly notes the exception for futures associated with std::async using an asynchronous launch policy.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that an hpx::future destructor never blocks, including when its value has not yet been returned.\n2. Citations [6] and [10] state both parts of this claim directly.\n3. The retrieved citations therefore contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009611,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

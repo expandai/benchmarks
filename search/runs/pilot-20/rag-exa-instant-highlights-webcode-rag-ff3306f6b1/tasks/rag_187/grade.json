@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_187",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 479.8,
+    "total_citation_tokens": 4798.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies valid ACKs, URGs, and RSTs as acceptable. The predicted answer says only ACK segments are acceptable, excluding URG and RST segments, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explicitly state that when RCV.WND is zero, ACK segments are the exception to the rule that no segments are acceptable.\n2. They also state that the TCP must process the RST and URG fields of incoming segments. This is not the same as saying RST or URG segments are acceptable; the sources distinguish processing those fields from segment acceptability.\n3. Therefore, the gold target’s claim that URGs and RSTs are valid/acceptable segment types is not supported, and it conflicts with the cited distinction. The citations do not ground all of the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.001146475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

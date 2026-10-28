@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_172",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 38.6,
+    "total_citation_tokens": 386.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no information about opting into the Cargo virtual workspace resolver edition 2024, so it neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations contain related information: [5] says a virtual workspace has to opt in with `resolver = \"2\"`, and [2] gives the Cargo.toml syntax for that opt-in.\n2. However, the supplied text does not establish the gold target’s claim specifically for edition 2024, nor does it explicitly say the resolver field must be set in the `[workspace]` definition for that case. Citation [1] is truncated before stating what the edition-2024 compatibility entails.\n3. Because a non-trivial part of the gold target is not established by the retrieved passages, the citations do not sufficiently ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010918500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

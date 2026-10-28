@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_020",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 563.3,
+    "total_citation_tokens": 5633.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly identifies protobuf-go v1.29.0, matching the gold target, but it also gives an incorrect release date: March 8, 2023 is not the release date for v1.29.0. Because the response includes a factual error, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks which Go protobuf version supports option retention.\n2. Citation [9] identifies release v1.29.0 and lists support for the protobuf retention feature among its changes.\n3. Thus, the gold target answer 1.29.0 is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001138225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

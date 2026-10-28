@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_276",
+  "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+  "attempt": 1,
+  "answer": "Without `texture-component-swizzle`, the non-first components of a sampled depth/stencil aspect are not portable:\n\n- Sampling it as a regular `texture_2d` gives `(V, X, X, X)`, where `V` is the depth or stencil value and `X` is implementation-defined.\n- With `texture-component-swizzle`, the result is guaranteed to be `(V, 0, 0, 1)`.\n- A `texture_depth` binding returns only `f32`, so there are no non-depth channels to sample.\n\nTherefore, without the feature, sample the value and construct the desired vector in WGSL yourself—for example, conceptually `vec4f(value, 0.0, 0.0, 1.0)`—rather than relying on `.g`, `.b`, or `.a`. The search results do not establish a portable WebGPU method for accessing a stencil aspect specifically as a regular sampled texture.",
+  "num_citations": 10,
+  "citation_text_tokens": 5254,
+  "citation_text_chars": 20471,
+  "search_queries": [
+    "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+  ],
+  "model_cost_usd": 0.00229155,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6402,
+    "output_tokens": 576,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 375
+  },
+  "latency_ms": 8773.755167028867,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00629155,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

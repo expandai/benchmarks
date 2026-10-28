@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_247",
+  "prompt": "NixOS pkgs.formats.hocon classpath includes validation issue",
+  "attempt": 1,
+  "answer": "`pkgs.formats.hocon` uses `pyhocon` to validate generated HOCON by default, but `pyhocon` does not implement classpath includes. Therefore, configurations using:\n\n```nix\nformat.lib.mkInclude {\n  type = \"classpath\";\n  value = \"...\";\n}\n```\n\nwill fail validation even if the HOCON is intended for a parser that supports classpath includes.\n\nUse either an alternative validator:\n\n```nix\nformat = pkgs.formats.hocon {\n  validator = yourValidator;\n};\n```\n\nor disable validation:\n\n```nix\nformat = pkgs.formats.hocon {\n  doCheck = false;\n};\n```\n\nThe search results also report that the classpath include generator itself may be broken and that the default validator fails to parse it.",
+  "num_citations": 10,
+  "citation_text_tokens": 3192,
+  "citation_text_chars": 11452,
+  "search_queries": [
+    "NixOS pkgs.formats.hocon classpath includes validation issue"
+  ],
+  "model_cost_usd": 0.0014379,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4701,
+    "output_tokens": 219,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 50
+  },
+  "latency_ms": 4079.568958026357,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0054379,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

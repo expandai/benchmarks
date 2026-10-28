@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_187",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 561.6,
+    "total_citation_tokens": 5616.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies ACK segments as an exception at a zero receive window and says the receiver must process RST and URG fields. These cover the segment types in the gold target: valid ACKs, URGs, and RSTs. The additional sequence-number and length details do not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explicitly say that with a zero receive window, ACK segments are the exception to the rule that no segments are acceptable.\n2. They separately require processing the RST and URG fields of incoming segments. They do not say that URG- or RST-bearing segments are acceptable; rather, they distinguish field processing from segment acceptability.\n3. The gold target lists URGs and RSTs alongside valid ACKs as acceptable segment types, so its claim about which segments are acceptable is not supported by the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0016520999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

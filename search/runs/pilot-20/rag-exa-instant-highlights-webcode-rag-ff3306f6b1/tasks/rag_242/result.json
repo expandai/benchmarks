@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_242",
+ "prompt": "node tls server ticketKeys buffer internal composition",
+ "attempt": 1,
+ "answer": "A Node.js TLS server’s `ticketKeys` buffer is exactly **48 bytes**, divided into:\n\n| Offset | Length | Component |\n|---:|---:|---|\n| 0–15 | 16 bytes | Key name/prefix |\n| 16–31 | 16 bytes | HMAC key |\n| 32–47 | 16 bytes | AES key |\n\nThe native implementation copies these sections as follows:\n\n```cpp\nmemcpy(ticket_key_name_, buf.data(), 16);\nmemcpy(ticket_key_hmac_, buf.data() + 16, 16);\nmemcpy(ticket_key_aes_, buf.data() + 32, 16);\n```\n\nThis layout is documented for `tls.createServer({ ticketKeys })` and applies to `server.getTicketKeys()` / `server.setTicketKeys()` as well.",
+ "num_citations": 10,
+ "citation_text_tokens": 5208,
+ "citation_text_chars": 20127,
+ "search_queries": [
+  "node tls server ticketKeys buffer internal composition"
+ ],
+ "model_cost_usd": 0.0018446,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6539,
+  "output_tokens": 175,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3021.8344999011606,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0058446,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

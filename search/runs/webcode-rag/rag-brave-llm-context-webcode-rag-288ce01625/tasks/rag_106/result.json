@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_106",
+  "prompt": "LLVM masked.scatter overlapping addresses ordering",
+  "attempt": 1,
+  "answer": "For overlapping addresses, `llvm.masked.scatter` stores active lanes in increasing lane order—from lane 0 (LSB) to the highest lane. Therefore, later lanes overwrite earlier lanes, and the highest-numbered active lane wins.",
+  "num_citations": 10,
+  "citation_text_tokens": 3775,
+  "citation_text_chars": 12717,
+  "search_queries": [
+    "LLVM masked scatter overlapping addresses ordering"
+  ],
+  "model_cost_usd": 0.00126105,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4800,
+    "output_tokens": 51,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4595.715584000573,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006261050000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

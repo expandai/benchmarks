@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_250",
+ "prompt": "python strptime %Z accepted hard-coded timezone values",
+ "attempt": 1,
+ "answer": "`%Z` accepts:\n\n- Any value in `time.tzname` for the machine’s locale\n- The hard-coded values `UTC` and `GMT`\n\nSupport is platform-specific. For example, if `time.tzname` is `('PST', 'PDT')`, those names may be accepted, but `EST` or `EDT` will not be unless they are the local timezone values. Invalid values raise `ValueError`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2631,
+ "citation_text_chars": 8733,
+ "search_queries": [
+  "python strptime %Z accepted hard-coded timezone values"
+ ],
+ "model_cost_usd": 0.0010645,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3793,
+  "output_tokens": 97,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2658.243416924961,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0018145,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

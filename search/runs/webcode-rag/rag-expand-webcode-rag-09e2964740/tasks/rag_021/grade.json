@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.444,
+    "avg_citation_tokens": 264.4,
+    "total_citation_tokens": 2380.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The response gives the exact failure output, `[64dec-fail]`, matching the gold target. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1]–[4] explicitly state the output produced when `64dec` cannot decode a sequence.\nStep 2: The gold target, `[64dec-fail]`, is the exact failure-output string given in those citations. All non-trivial information is present.\nStep 3: Citations [1], [2], [3], and [4] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007432249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

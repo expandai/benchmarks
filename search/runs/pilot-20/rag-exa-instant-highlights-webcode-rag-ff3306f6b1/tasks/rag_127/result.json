@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_127",
+ "prompt": "CSS quirky lengths functional notation calc exception",
+ "attempt": 1,
+ "answer": "The unitless-length (“quirky length”) exception does **not** apply inside `calc()`.\n\n- In quirks mode, a property accepting quirky lengths may accept a **literal number token**, such as `height: 100`, and convert it to `100px` at parse time.\n- That conversion does not affect numbers inside functional notation. Thus, `height: calc(100)` is not treated as `100px`.\n- Within `calc()`, numbers remain numbers. Mixing them directly with lengths is invalid—for example, `calc(10 + 2px)`.\n- A property whose grammar explicitly accepts `<number>` as well as a length may separately allow a calculation that evaluates to a number, such as `calc(2 * 2)`, and interpret the result according to that property’s grammar.\n\nThe CSS Working Group resolution was: quirky lengths accept a number token converted to pixels at parse time, and this resolution “does not apply to any quirks inside of `calc`.”",
+ "num_citations": 10,
+ "citation_text_tokens": 5038,
+ "citation_text_chars": 20521,
+ "search_queries": [
+  "CSS quirky lengths functional notation calc exception"
+ ],
+ "model_cost_usd": 0.00225035,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6194,
+  "output_tokens": 585,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 377
+ },
+ "latency_ms": 6286.984374979511,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00625035,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

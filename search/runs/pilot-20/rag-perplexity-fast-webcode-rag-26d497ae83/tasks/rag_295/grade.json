@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_295",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 371.1,
+    "total_citation_tokens": 3711.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer says SendSessionTicket can be called once per connection and that calling it again errors, matching the gold target that it can only be called once.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: The citations explicitly state that SendSessionTicket can only be called once; citations [8] and [9] also say that only a single session ticket can be generated per connection.\n\nSTEP 2 — GROUNDEDNESS: The gold target's full claim, that it can only be called once, is directly stated in the retrieved sources. No non-trivial detail is missing.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citations [1]–[7] and [10] directly contain the answer; [8] and [9] provide consistent supporting information about a single ticket per connection.",
+    "judge_cost_known": true,
+    "num_answer_sources": 10
+  },
+  "judge_cost_usd": 0.000955975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

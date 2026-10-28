@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_301",
+  "prompt": "gnu units !var environment variable not set behavior",
+  "attempt": 1,
+  "answer": "If the environment variable used by `!var` is unset, GNU Units prints an error message and ignores the definitions in that block.\n\nUse `!set` beforehand to provide a default value:\n\n```text\n!set VARIABLE default\n!var VARIABLE default\n...\n!endvar\n```\n\n`!set` changes the variable only if it is not already set, and only for the current `units` invocation.",
+  "num_citations": 10,
+  "citation_text_tokens": 3768,
+  "citation_text_chars": 15985,
+  "search_queries": [
+    "gnu units !var environment variable not set behavior"
+  ],
+  "model_cost_usd": 0.00130945,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4816,
+    "output_tokens": 88,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2705.9265839634463,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0033094500000000002,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

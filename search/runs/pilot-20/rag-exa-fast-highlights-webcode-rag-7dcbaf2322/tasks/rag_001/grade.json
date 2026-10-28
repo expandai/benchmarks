@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_001",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 157.7,
+    "total_citation_tokens": 1577.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides no information about the dictionary size. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The question asks for the number of words in the Slackware ispell.words dictionary. The citations identify the file and provide its approximate size (346K), and citation [1] shows only a partial sample of its contents. None gives the number of entries or enough information to derive an exact count of 38,400 words. Therefore, a non-trivial factual claim in the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000562975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

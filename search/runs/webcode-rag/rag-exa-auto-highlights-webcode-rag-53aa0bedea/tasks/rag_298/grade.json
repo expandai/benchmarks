@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_298",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 132.0,
+    "total_citation_tokens": 1320.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies `process.env.NODE_WORKER_ID` as the condition, but the predicted answer instead says the condition is `process.env.NODE_UNIQUE_ID`. It does not provide the gold target’s key information and gives a conflicting variable as the answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The relevant citations state that `isMaster`/`isPrimary` is determined by `process.env.NODE_UNIQUE_ID`, and is true when that variable is undefined.\nStep 2: The gold target instead claims `process.env.NODE_WORKER_ID` is undefined. None of the retrieved citations supports that specific variable name; the cited variable is `NODE_UNIQUE_ID`. Since this is a non-trivial factual detail, the gold target is not grounded.\nStep 3: No citation contains information sufficient to derive the gold target as stated.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0006491,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

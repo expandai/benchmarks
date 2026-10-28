@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_085",
+  "prompt": "click CliRunner isolation stderr error handling mode",
+  "attempt": 1,
+  "answer": "`click.testing.CliRunner` invokes commands in-process inside `isolation()`, which temporarily replaces `sys.stdin`, `sys.stdout`, and `sys.stderr` with in-memory streams and restores them afterward.\n\nRelevant options and behavior:\n\n- `capture=\"sys\"` is the default and captures Python-level writes.\n- `capture=\"fd\"` captures file-descriptor-level writes as well; it is unavailable on Windows.\n- `catch_exceptions=True` is the default. Exceptions are recorded in the result; `SystemExit` is interpreted as the exit code.\n- `result.stdout` and `result.stderr` provide separate streams.\n- `result.output` contains the combined output as seen in the terminal.\n- The old `mix_stderr` parameter was removed in Click 8.2.",
+  "num_citations": 10,
+  "citation_text_tokens": 3248,
+  "citation_text_chars": 13508,
+  "search_queries": [
+    "click CliRunner isolation stderr error handling mode"
+  ],
+  "model_cost_usd": 0.0013995,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4365,
+    "output_tokens": 257,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 92
+  },
+  "latency_ms": 6686.693917028606,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017399500000000002,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

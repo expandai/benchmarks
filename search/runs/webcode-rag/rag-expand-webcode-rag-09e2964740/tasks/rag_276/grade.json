@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 980.5,
+    "total_citation_tokens": 9805.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that sampling the stencil aspect returns the stencil value in the first component, with the remaining components unspecified and implementation-defined. This matches the target’s (V, X, X, X) result, with V representing the sampled value.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer states that sampling returns the stencil value in the first component and implementation-defined unspecified values in the remaining three components.\n2. Citations [4] and [6] explicitly specify this returned vector and define the unspecified components.\n3. The citations therefore contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0018581,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

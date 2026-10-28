@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_233",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 446.6,
+    "total_citation_tokens": 4466.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and does not provide the scan range limit from the gold target, nor does it contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that Guile recognizes coding declarations in source files and that a declaration must appear within some initial portion of a file. However, the retrieved passage in [1] ends before giving the scan-range limit, and no citation states that the limit is the top 500 characters. That specific factual claim is missing, so the citations do not sufficiently ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009361,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

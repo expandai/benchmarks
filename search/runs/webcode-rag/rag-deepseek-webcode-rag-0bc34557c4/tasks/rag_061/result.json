@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_061",
+ "prompt": "curl upload-file stdin non-blocking mode filename",
+ "attempt": 1,
+ "answer": "Use `.` (a single period) as the `--upload-file` filename to read from stdin in non-blocking mode, allowing curl to read server output while stdin is being uploaded:\n\n```bash\ncurl --upload-file . URL\n```\n\n`-` also reads from stdin, but `.` enables non-blocking mode.",
+ "num_citations": 10,
+ "citation_text_tokens": 1040,
+ "citation_text_chars": 4496,
+ "search_queries": [
+  "curl upload-file stdin non-blocking mode filename"
+ ],
+ "model_cost_usd": 0.0006398,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2219,
+  "output_tokens": 71,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2581.698541995138,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0013898,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

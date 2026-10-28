@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 553.9,
+    "total_citation_tokens": 5539.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says this behavior is an error. The predicted answer explicitly says the Protobuf compiler reports an error when `allow_alias = true` is set and no enum values share numbers, so it matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that enabling `allow_alias` when all enum values have distinct numbers results in an error.\n2. Citation [2] explicitly checks for `allow_alias && !has_duplicates` and says this condition generates an error because no enum values share numbers.\n3. Thus the citation directly supports the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00121885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

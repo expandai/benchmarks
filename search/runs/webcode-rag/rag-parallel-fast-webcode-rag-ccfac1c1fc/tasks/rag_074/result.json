@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_074",
+ "prompt": "haproxy avg_queue no active server behavior",
+ "attempt": 1,
+ "answer": "When there are no active servers, HAProxy treats the measured `avg_queue` value as **twice the number of queued connections**:\n\n```text\navg_queue = 2 × queued connections\n```\n\nThis behavior is documented in the HAProxy 1.5.2 Configuration Manual. If no server is available to handle a request, HAProxy may return **503 Service Unavailable**.",
+ "num_citations": 10,
+ "citation_text_tokens": 8148,
+ "citation_text_chars": 29968,
+ "search_queries": [
+  "haproxy avg_queue no active server behavior"
+ ],
+ "model_cost_usd": 0.0026297,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 9617,
+  "output_tokens": 188,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 102
+ },
+ "latency_ms": 4969.04470899608,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0036297,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

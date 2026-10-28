@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-008",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 651.6,
+    "total_citation_tokens": 6516.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer gives 12 versions, which contradicts the gold target of 11.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: The citations provide support-duration rules and version release/end-of-support dates. They show that .NET Core 3.0 had less than 12 months of support, while the other listed releases through .NET 10 had more than 12 months. STEP 2 — GROUNDEDNESS: The retrieved information therefore does not support the gold count of 11: counting the listed released versions with support exceeding 12 months gives 12, including .NET 10. The exact target count is not grounded in the citations. STEP 3 — SOURCE ATTRIBUTION: The sources provide relevant dates and lifecycle rules, but none supports the specific answer 11.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001838105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

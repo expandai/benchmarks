@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 410.9,
+    "total_citation_tokens": 4109.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that when a bytes-like value is provided without a filename or content_transfer_encoding, aiohttp uses the field name as the filename. This matches the gold target; the additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that when a bytes value has no filename, the field name is used as its filename unless content_transfer_encoding is specified.\n2. Citation [1] states that rule directly. Citation [2] also shows the implementation assigning `name` to `filename` when both `filename` and `content_transfer_encoding` are unset.\n3. The retrieved sources contain the full non-trivial claim, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000979975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

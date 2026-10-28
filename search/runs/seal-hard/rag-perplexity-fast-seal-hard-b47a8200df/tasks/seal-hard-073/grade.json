@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-073",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 382.3,
+    "total_citation_tokens": 3823.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is Block sort. Timsort has the stated time complexities and is stable, but it is not generally considered an in-place sorting algorithm, so it does not correctly answer the question.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] identifies Block sort in the comparison-sorts table and gives best-case n, average- and worst-case n log n, and Stable = Yes. Its note says it combines an in-place merge algorithm with bottom-up merge sort. However, the table's In-place field for Block sort is blank, and the note does not explicitly establish that Block sort itself is in-place. Step 2: The gold target names Block sort, and the retrieved citation supports its comparison-based status, stability, and stated time complexities. But the in-place property is not established. Since that is a non-trivial claim in the question, the sources do not contain all the information needed to derive the target answer. Step 3: Citation [2] contains relevant information, but does not sufficiently establish the full set of properties.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00047075999999999997,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

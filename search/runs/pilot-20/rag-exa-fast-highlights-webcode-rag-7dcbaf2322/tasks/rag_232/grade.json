@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 436.4,
+    "total_citation_tokens": 4364.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that an hpx::future destructor does not block even when the asynchronous operation is unfinished, which matches the gold target. Its comparison with std::future adds relevant information and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [10] directly states that HPX futures do not wait during destruction when the value has not been extracted. This supports the target’s claim that destruction does not block even when the result has not been obtained. Step 2: The citation contains the target’s non-trivial claim; no unsupported supplementary details are added. Step 3: Citation [10] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011841,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

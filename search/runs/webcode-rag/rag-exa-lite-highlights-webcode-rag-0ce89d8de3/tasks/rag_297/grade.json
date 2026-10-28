@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_297",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 466.5,
+    "total_citation_tokens": 4665.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that @NotFound(action = IGNORE) makes a to-one association non-lazy, effectively eager, which matches the gold target. Its additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the side effect as implicit eager loading of to-one relations.\n2. The citations state that @NotFound makes a to-one association non-lazy, which supports that claim.\n3. The retrieved citations therefore contain the information needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001077975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

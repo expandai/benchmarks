@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_304",
+  "prompt": "CSS flexbox main size depends on cross size auto indefinite substitute",
+  "attempt": 1,
+  "answer": "When calculating a flex item’s flex base size, if the main size depends on the cross size and the cross size is `auto` and indefinite, Flexbox uses `fit-content` as the cross-size substitute. The resulting main size becomes the flex base size. This is specified in the Flexbox layout algorithm, §9.2, step 2E:\n\n> “If a cross size is needed to determine the main size … and the flex item’s cross size is auto and not definite, in this calculation use fit-content as the flex item’s cross size.”\n\nIf the item has an intrinsic aspect ratio, a `content` flex basis, and a definite cross size, the main size is instead calculated from the cross size and aspect ratio. (W3C CSS Flexible Box Layout Module, §9.2.)",
+  "num_citations": 10,
+  "citation_text_tokens": 4292,
+  "citation_text_chars": 20006,
+  "search_queries": [
+    "CSS flexbox main size depends on cross size auto indefinite substitute"
+  ],
+  "model_cost_usd": 0.00168035,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5402,
+    "output_tokens": 275,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 104
+  },
+  "latency_ms": 4914.906459045596,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00568035,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

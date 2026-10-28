@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_294",
+  "prompt": "JUnit TestExecutionListener finish event methods invocation order",
+  "attempt": 1,
+  "answer": "JUnit `TestExecutionListener` finish-event methods are invoked **sequentially in reverse registration order**.\n\nFor example, if listeners are registered as:\n\n1. `ListenerA`\n2. `ListenerB`\n3. `ListenerC`\n\nfinish events are invoked as:\n\n1. `ListenerC`\n2. `ListenerB`\n3. `ListenerA`\n\nAdditionally, for a container, `executionFinished(...)` is called after all its children have been skipped or have finished.",
+  "num_citations": 10,
+  "citation_text_tokens": 3500,
+  "citation_text_chars": 17193,
+  "search_queries": [
+    "JUnit TestExecutionListener finish event methods invocation order"
+  ],
+  "model_cost_usd": 0.00133485,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4860,
+    "output_tokens": 100,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2413.8327500550076,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00533485,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

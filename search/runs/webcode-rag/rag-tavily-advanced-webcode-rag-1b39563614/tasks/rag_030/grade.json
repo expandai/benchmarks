@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_030",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 285.7,
+    "total_citation_tokens": 2857.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target is the forbidden bound name \"let\". The predicted answer gives a different syntax-error condition involving overlap with VarDeclaredNames and does not identify \"let\". It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [8] contains a syntax-error rule involving the BoundNames of ForDeclaration.\n2. The quoted text does not identify the string \"let\" as forbidden.\n3. Since the gold target is the specific string \"let\" and that fact is absent, the citations do not contain sufficient information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00101785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

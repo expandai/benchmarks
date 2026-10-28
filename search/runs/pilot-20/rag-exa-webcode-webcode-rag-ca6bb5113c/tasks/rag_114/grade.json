@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 189.1,
+    "total_citation_tokens": 1891.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives REQUEST as the current default, matching the gold target. However, it also claims older Spring Boot versions defaulted to FORWARD, INCLUDE, REQUEST, and sometimes ASYNC; that added claim is not accurate for FilterRegistrationBean and makes the response factually incorrect overall.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [4] explicitly state that REQUEST is the default dispatcher type for Spring Boot filter registration.\nStep 2: The gold target’s sole factual claim, REQUEST, is directly supported. Older documentation in [3] describes prior behavior, but [4] explicitly grounds the stated default without a version qualifier in the gold target.\nStep 3: Citations [1] and [4] contain information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009672249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

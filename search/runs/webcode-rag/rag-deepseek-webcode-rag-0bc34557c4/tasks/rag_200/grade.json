@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_200",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 230.8,
+    "total_citation_tokens": 2308.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the WebAssembly name section appears only after the data section, which matches the gold target. The additional claim that it should appear only once does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages directly state the name section's placement requirement. Step 2: The gold target answer, “only after the data section,” is fully supported by the citations; the extra statement that it should appear only once is not required by the target. Step 3: Citations [1], [2], [7], and [8] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00068235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

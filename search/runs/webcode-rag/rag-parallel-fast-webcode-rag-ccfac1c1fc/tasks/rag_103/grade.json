@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 228.1,
+    "total_citation_tokens": 2281.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five gold keywords: HASH, MERGE, LOOKUP, INVERTED, and STRAIGHT. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly gives examples containing all five algorithm keywords in the gold target: HASH, MERGE, LOOKUP, INVERTED, and STRAIGHT. Citation [6] independently confirms HASH, MERGE, LOOKUP, and INVERTED. Step 2: Every non-trivial keyword in the gold target is present in the retrieved sources, so the answer is fully grounded. Step 3: Citation [2] contains all five keywords and is sufficient on its own.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007164750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

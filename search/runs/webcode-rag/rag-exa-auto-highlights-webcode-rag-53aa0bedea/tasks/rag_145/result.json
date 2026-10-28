@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_145",
+  "prompt": "elasticsearch snapshot.get ignore_unavailable exception type thrown",
+  "attempt": 1,
+  "answer": "For `snapshot.get`:\n\n- `ignore_unavailable=true`: unavailable snapshots are ignored and only available snapshots are returned.\n- `ignore_unavailable=false` (default): the request returns an error for unavailable snapshots. For a missing snapshot, Elasticsearch returns `snapshot_missing_exception`; in the Python client, this is raised as `NotFoundError` (`TransportError(404, 'snapshot_missing_exception', ...)`).",
+  "num_citations": 10,
+  "citation_text_tokens": 3870,
+  "citation_text_chars": 17047,
+  "search_queries": [
+    "elasticsearch snapshot.get ignore_unavailable exception type thrown"
+  ],
+  "model_cost_usd": 0.0015066,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5043,
+    "output_tokens": 205,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 117
+  },
+  "latency_ms": 5744.0054579637945,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0085066,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

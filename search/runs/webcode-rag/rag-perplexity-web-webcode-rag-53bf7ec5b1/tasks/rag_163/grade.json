@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 385.9,
+    "total_citation_tokens": 3859.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies HTTPException instances and exceptions with registered error handlers as excluded from the signal, and correctly notes that exceptions raised from an error handler are still included. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the signal excludes `HTTPException` and other exceptions with registered error handlers.\n2. It qualifies that exclusion: it does not apply when the exception was raised from an error handler.\n3. Citation [2] states all of these points directly, and citation [1] provides the same information in translation. Therefore, all non-trivial claims in the gold target are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008567249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 32.0,
+    "total_citation_tokens": 320.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies threads and userdata as the Lua types that cannot be represented as literals. The predicted answer instead says the statement is false and lists types that can be represented as literals; it does not provide the requested types and contradicts the intended answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] says Lua has eight basic types, but it does not name them or identify threads and userdata as types that cannot be represented as literals. The other citations do not provide that information either. Step 2: The gold target answer names two specific types, and neither name nor the relevant claim is supported by the retrieved citations. The answer is therefore UNGROUNDED. Step 3: No citation contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000630475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

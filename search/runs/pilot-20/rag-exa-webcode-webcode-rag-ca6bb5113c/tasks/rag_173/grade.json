@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_173",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 537.5,
+    "total_citation_tokens": 5375.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five restricted statements in the gold target: exit, getline, next, nextfile, and return. The additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state the statements that cannot be executed with debugger `eval`: exit, getline, next, nextfile, and return.\nStep 2 — These are all the non-trivial items in the gold target answer, so the answer is fully supported.\nStep 3 — Citations [1] and [2] each contain the full restriction.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001005225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

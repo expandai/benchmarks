@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 405.7,
+    "total_citation_tokens": 4057.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer matches the gold target: it states 3n + 1 SQL queries, with n representing the number of different entity classes modified in the specified revision.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer states that the query executes 3N + 1 SQL queries.\n2. Citation [3] explicitly gives `3N+1` and defines N as the number of different entity classes modified within the specified revision. Citations [1], [2], and [4] state the same formula and definition using lowercase n.\n3. Therefore, all non-trivial claims in the gold answer are present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0008749750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

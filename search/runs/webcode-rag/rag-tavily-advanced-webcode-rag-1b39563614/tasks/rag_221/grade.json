@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_221",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 335.7,
+    "total_citation_tokens": 3357.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains the permission issue but does not state the HTTP response code, 422 (Unprocessable Entity). It does not contradict that code, so the answer is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations show the permission error and describe it as “forbidden,” but none gives the HTTP response status code. The gold target specifically identifies the response as 422 (Unprocessable Entity), and that non-trivial status code is not present in the retrieved passages. Therefore, the sources do not contain enough information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000893475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

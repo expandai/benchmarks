@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 526.6,
+    "total_citation_tokens": 5266.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer names DATA, HEADERS, and PUSH_PROMISE, which are the relevant frame types, and saying their padding can be retained does not contradict the target. However, it omits the key policy distinction: intermediaries SHOULD retain DATA padding but MAY drop padding for HEADERS and PUSH_PROMISE. Since the required information is incomplete without contradicting the target, this is NOT_ATTEMPTED.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that DATA, HEADERS, and PUSH_PROMISE frames can contain padding. 2. They do not include the claim that intermediaries SHOULD retain DATA padding or MAY drop HEADERS and PUSH_PROMISE padding. These are non-trivial normative requirements, so the gold target is not derivable from the retrieved passages.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011966000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

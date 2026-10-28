@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "`llvm.sqrt` and `libm` `sqrt` differ for negative inputs:\n\n| Input | `llvm.sqrt` | `libm sqrt` |\n|---|---|---|\n| Negative number less than `-0.0` | Undefined behavior historically; LLVM may produce an undefined value and may optimize assuming this case does not occur | Returns NaN |\n| `-0.0` | Defined to return `-0.0` | Returns `-0.0`, like IEEE square root |\n\nThe LLVM intrinsic’s negative-input behavior was intended to avoid concerns about `errno` and floating-point environment side effects. In contrast, lowering `llvm.sqrt` to a `libm` call can set `errno`; LLVM discussions specifically identify this as a semantic mismatch.\n\nSources: [LLVM LangRef change discussion](https://reviews.llvm.org/D28797), [LLVM vectorization discussion](https://reviews.llvm.org/D27618), [LLVM sqrt mapping patch](https://lists.llvm.org/pipermail/cfe-commits/Week-of-Mon-20130909/088596.html).",
+ "num_citations": 10,
+ "citation_text_tokens": 4530,
+ "citation_text_chars": 19104,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.00188215,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5758,
+  "output_tokens": 369,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 136
+ },
+ "latency_ms": 7767.259540967643,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00588215,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_152",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 480.6,
+    "total_citation_tokens": 4806.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target’s key point: EXPECT variants are intended for void-returning methods, especially callbacks. Its distinction between ASSERT (stop the current test case) and EXPECT (continue after reporting a failure) is also consistent with the question. However, the additional claim that `test.py -m` can make ASSERT behave like EXPECT is unsupported and incorrect, so the answer contains misleading extra information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that EXPECT variants are designed for use in methods, especially callbacks, that return void.\n2. This covers the full non-trivial claim in the gold target answer.\n3. Therefore, the retrieved citations ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0014558499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

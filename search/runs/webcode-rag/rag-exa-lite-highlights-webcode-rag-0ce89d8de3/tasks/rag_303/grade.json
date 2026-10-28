@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_303",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 387.1,
+    "total_citation_tokens": 3871.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no information about the ffmpeg scale filter edge case. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explains that a value of 0 uses the corresponding input dimension and that setting both values to -1 uses the input size.\n2. None of the citations states that setting both dimensions to a negative multiple (-n) is identical to setting both to 0, or provides enough information to derive that equivalence.\n3. The key factual claim in the gold target is therefore unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009630999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

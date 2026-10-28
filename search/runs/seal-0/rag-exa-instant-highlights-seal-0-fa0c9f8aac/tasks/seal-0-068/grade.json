@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-068",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 527.0,
+    "total_citation_tokens": 4743.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target states that no theory supports the claim as phrased. The predicted answer names the Central Limit Theorem, which applies to sums or averages of i.i.d. variables rather than the sampled variables themselves, so it gives an incorrect answer to the question.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe the Central Limit Theorem as applying to sums, averages, or sample means—not to the distribution of the individual sampled variables.\n2. This distinction is relevant to why the statement as worded may be unsupported by the cited theorem.\n3. However, none of the citations states that no theory supports the statement, nor establishes that broader claim. They only explain what the Central Limit Theorem says.\n4. Because the gold target’s non-trivial claim is not fully established by the retrieved citations, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00133973,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

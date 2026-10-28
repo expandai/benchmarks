@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_279",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 385.5,
+    "total_citation_tokens": 3855.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `#pragma init_seg(library)` has priority 400, matching the gold target. The extra details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target asks for the priority value corresponding to Windows `init_seg(library)`.\n2. Citations [1] and [2] explicitly state that `init_seg(library)` is represented with priority 400 on Windows; [7] corroborates the value for `init_seg(lib)`.\n3. The gold target’s factual claim is directly present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00891875,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

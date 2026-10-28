@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_197",
+  "prompt": "wget time-stamping Content-Length size mismatch behavior",
+  "attempt": 1,
+  "answer": "With Wget’s time-stamping option (`-N`), a `Content-Length` mismatch normally causes the remote file to be downloaded regardless of the timestamps.\n\nHowever, when Wget uses `If-Modified-Since`, a server may respond with `304 Not Modified`; that response does not provide the file size, so Wget cannot perform the size comparison and may incorrectly skip the download. Using `--no-if-modified-since` makes Wget issue a `HEAD` request to obtain both the timestamp and size.\n\nIf a server sends an incorrect `Content-Length`, use `--ignore-length`; otherwise Wget may think the document was not completely retrieved.",
+  "num_citations": 10,
+  "citation_text_tokens": 2213,
+  "citation_text_chars": 8896,
+  "search_queries": [
+    "wget time stamping Content Length size mismatch behavior"
+  ],
+  "model_cost_usd": 0.0010633,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3265,
+    "output_tokens": 206,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 66
+  },
+  "latency_ms": 4823.484500055201,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006063300000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

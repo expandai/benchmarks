@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_256",
+  "prompt": "jq |= update assignment RHS outputs no values behavior",
+  "attempt": 1,
+  "answer": "For jq’s update assignment (`|=`), if the RHS produces no values (for example, `empty` or `select(false)`), the path on the left-hand side is deleted, as if using `del(path)`.\n\nExamples:\n\n```jq\n{\"a\": 1, \"b\": 2} | .a |= empty\n```\n\nproduces:\n\n```json\n{\"b\":2}\n```\n\nFor arrays, the selected element is removed and subsequent indices shift. This behavior is distinct from assigning `null`, which retains the field or array slot with a JSON `null` value. The RHS is evaluated with the value at the path as its input.",
+  "num_citations": 10,
+  "citation_text_tokens": 2802,
+  "citation_text_chars": 10903,
+  "search_queries": [
+    "jq update assignment RHS outputs no values behavior"
+  ],
+  "model_cost_usd": 0.0013173,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3729,
+    "output_tokens": 321,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 180
+  },
+  "latency_ms": 6426.815124927089,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063173,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

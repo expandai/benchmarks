@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Without `texture-component-swizzle`, the non-depth channels of a sampled depth/stencil aspect are not guaranteed. The proposal specifies the result as:\n\n- With the feature: `(V, 0, 0, 1)`\n- Without the feature: `(V, X, X, X)`, where `X` is implementation-defined/unspecified\n\nTherefore, do not rely on `.g`, `.b`, or `.a`. Use only the value in `.r`, or construct the desired value yourself in WGSL, for example:\n\n```wgsl\nlet v = textureSampleLevel(depthTexture, sampler, uv, 0.0).r;\nlet value = vec4f(v, 0.0, 0.0, 1.0);\n```\n\nAlternatively, a `texture_depth*` binding returns only an `f32`, so it has no non-depth channels to access. The search results also indicate that the exact support and binding rules for sampling depth/stencil formats have had limitations and API discussion, particularly for combined depth-stencil textures.",
+ "num_citations": 10,
+ "citation_text_tokens": 5256,
+ "citation_text_chars": 20462,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.0023931,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6381,
+  "output_tokens": 665,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 442
+ },
+ "latency_ms": 7969.205584027804,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0093931,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

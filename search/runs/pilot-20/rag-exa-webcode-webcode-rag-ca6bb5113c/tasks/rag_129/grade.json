@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 483.6,
+    "total_citation_tokens": 4836.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says NUL bytes are replaced with line terminators. The predicted answer instead describes ripgrep treating NUL bytes as binary-detection markers that can stop or alter searching, and never states that they are replaced with line terminators. This gives a conflicting account of the requested handling.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citation directly states what ripgrep does to NUL bytes when the text flag is not enabled. Step 2 — This fully supports the gold target, “replaced with line terminators.” Step 3 — Citation [2] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001189475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

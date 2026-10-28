@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_112",
+ "prompt": "automake parallel make recovery locking portable test-and-set command",
+ "attempt": 1,
+ "answer": "The portable filesystem-level test-and-set command is:\n\n```sh\nif mkdir data.lock 2>/dev/null; then\n    # First process: perform the recovery\nelse\n    # Follower: wait for the lock to disappear\n    while test -d data.lock; do sleep 1; done\n    test -f data.stamp\nfi\n```\n\nUse a trap to remove the lock and stamp on interruption:\n\n```sh\ntrap 'rm -rf data.lock data.stamp' 1 2 13 15\n```\n\nThe search results identify `mkdir` as the portable test-and-set mechanism, including on old NFS and filesystems without link support.",
+ "num_citations": 10,
+ "citation_text_tokens": 5757,
+ "citation_text_chars": 21837,
+ "search_queries": [
+  "automake parallel make recovery locking portable test-and-set command"
+ ],
+ "model_cost_usd": 0.00205725,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7164,
+  "output_tokens": 222,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 77
+ },
+ "latency_ms": 4523.902290966362,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00280725,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

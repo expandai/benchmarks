@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-008",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 540.4,
+    "total_citation_tokens": 5404.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer explicitly gives 12 versions, while the gold target is 11, so the numerical answer contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims the number is 11.\n2. Citation [3] provides release and end dates that can be compared to identify versions with lifetimes longer than 12 months.\n3. Those dates show 12 qualifying versions, including .NET Core 2.2 (December 4, 2018 to December 24, 2019), which exceeds 12 months. .NET Core 3.0 is an example of a version below the threshold.\n4. Therefore, the retrieved evidence does not support the gold target of 11; its dates instead imply 12.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.002071355,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

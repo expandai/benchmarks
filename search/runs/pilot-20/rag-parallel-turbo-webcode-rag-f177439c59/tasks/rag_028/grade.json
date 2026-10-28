@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_028",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 461.4,
+    "total_citation_tokens": 4614.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer directly states that glibc uses `INT_MIN` for the `width` or `prec` field in the `arginfo` function when the corresponding `*` is specified, matching the gold target. Its additional explanation is consistent with the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is INT_MIN.\n2. Citation [2] explicitly states that when width or precision is specified with `*`, the printf_info structure passed to the arginfo function contains INT_MIN.\n3. Citation [8] independently confirms that INT_MIN indicates a `*` width or precision.\n4. The retrieved sources therefore contain the target value and its relevant context.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001072975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

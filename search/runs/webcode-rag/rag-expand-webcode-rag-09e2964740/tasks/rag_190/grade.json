@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_190",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 413.6,
+    "total_citation_tokens": 4136.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Grafana retrieves the public key every 10 days, matching the gold target. Its additional condition does not contradict that frequency.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: The cited passages directly state that when `public_key_retrieval_on_startup` is disabled, the public key is retrieved every 10 days.\n\nSTEP 2 — GROUNDEDNESS: The gold target answer, “every 10 days,” is directly supported by the retrieved citations. It contains no additional factual claims requiring support.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citation [1] alone is sufficient; citations [2]–[8] also state the same frequency.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.000995475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

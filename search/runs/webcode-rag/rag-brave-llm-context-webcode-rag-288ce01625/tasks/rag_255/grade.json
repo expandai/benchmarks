@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_255",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 556.9,
+    "total_citation_tokens": 5569.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies the class name `url`, explicitly contrasting it with `uri`. The predicted answer gives `url` and makes the same distinction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks for the CSS class used for an RFC 7992 <uri> element.\n2. Citation [3] explicitly states that the class is \"url\" and clarifies that it is not \"uri\". Citation [1] states the same. Citation [7] also identifies the class as \"url\".\n3. The retrieved citations contain the full gold target answer, so the answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00111135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

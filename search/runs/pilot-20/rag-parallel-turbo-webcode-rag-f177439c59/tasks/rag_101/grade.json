@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_101",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 589.7,
+    "total_citation_tokens": 5897.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes all four scope parameter usage locations in the gold target: authorization request, authorization response, token request, and token response. The additional statement about the change controller does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the four locations where the scope parameter may be used.\n2. Citation [9] explicitly lists all four locations for the registry entry named “scope.”\n3. Thus, the citation contains all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010281,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

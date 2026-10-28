@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 324.9,
+    "total_citation_tokens": 3249.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that Bazel tracks the top 20 action mnemonics, ranked by the number of executed actions, which matches the gold target. The additional flag information does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages state that the default limit is 20 action mnemonics/types, selected by the largest number of executed actions.\nStep 2: This covers the full gold target answer; no non-trivial claim is missing.\nStep 3: Citations [1], [3], [6], and [10] each provide sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007936,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

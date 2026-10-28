@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_129",
+  "prompt": "ripgrep NUL bytes handling without text flag",
+  "attempt": 1,
+  "answer": "Without `-a/--text`, ripgrep uses NUL-byte-based binary detection:\n\n- A file containing a NUL byte is considered binary.\n- By default, ripgrep stops searching the file when it encounters the NUL byte.\n- If the NUL occurs after a match, ripgrep may suppress that match, stop searching, and emit a warning.\n- `--binary` makes ripgrep continue past NUL bytes until it finds a match or reaches EOF, then warns if it stops after a match.\n- `-a/--text` disables special NUL/binary handling and searches the file as text, potentially printing binary data.\n\nSources: [Debian `rg` manpage](https://manpages.debian.org/testing/ripgrep/rg.1.en.html), [ripgrep GUIDE](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md).",
+  "num_citations": 10,
+  "citation_text_tokens": 4425,
+  "citation_text_chars": 18251,
+  "search_queries": [
+    "ripgrep NUL bytes handling without text flag"
+  ],
+  "model_cost_usd": 0.0017648,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5519,
+    "output_tokens": 321,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 131
+  },
+  "latency_ms": 6662.3035840457305,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0177648,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

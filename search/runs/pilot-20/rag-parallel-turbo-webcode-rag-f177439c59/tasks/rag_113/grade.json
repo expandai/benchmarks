@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_113",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 536.6,
+    "total_citation_tokens": 5366.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states that webdriver.json cannot override the headless argument and that it is added for both browsers. However, it also says headless mode can be disabled by omitting --headless when invoking wasm-pack test, which conflicts with the stated behavior that the runner always adds the headless argument. The added contradictory claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited guide passages explicitly state that the headless argument is always enabled for both browsers. Step 2: This directly supports the full gold target answer; no non-trivial claim is missing. Step 3: Citations [1], [3], and [5] contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0014215999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

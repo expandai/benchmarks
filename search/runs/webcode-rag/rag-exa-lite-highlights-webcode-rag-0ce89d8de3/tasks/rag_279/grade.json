@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_279",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 484.6,
+    "total_citation_tokens": 4846.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the `library` init_seg value maps to priority 400, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [4] explicitly state that on Windows, init_seg(library) (also written init_seg(lib)) has priority 400.\nStep 2: The gold target answer is “priority of 400,” and that exact factual claim is supported by the retrieved citations. No non-trivial information is missing.\nStep 3: Citations [1], [2], and [4] contain information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0010171,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

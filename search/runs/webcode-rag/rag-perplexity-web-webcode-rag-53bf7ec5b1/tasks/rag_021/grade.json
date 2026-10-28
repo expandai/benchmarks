@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.75,
+    "avg_citation_tokens": 272.0,
+    "total_citation_tokens": 1088.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the failure output as `[64dec-fail]`, matching the gold target. Its additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [3], and [4] explicitly state that an undecodable Base64 sequence outputs `[64dec-fail]`. Citation [1] also describes the failure output, but without the brackets. Step 2: The gold target answer is exactly the failure string stated in citations [2]–[4], so all of its factual content is supported. Step 3: Citations [2], [3], and [4] directly contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000459475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

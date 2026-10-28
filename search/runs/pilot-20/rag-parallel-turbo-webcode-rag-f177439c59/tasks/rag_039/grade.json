@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_039",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 586.0,
+    "total_citation_tokens": 5860.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes all three databases in the gold target: MySQL, Microsoft SQL Server, and Oracle. The additional databases listed are consistent with the broader set of databases supported for SimpleJdbcCall metadata lookup and do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly lists MySQL, Microsoft SQL Server, and Oracle as databases with accurate metadata for SimpleJdbcCall. Step 2: These are all the database names in the gold target, so every non-trivial claim is supported. Step 3: Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001209475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

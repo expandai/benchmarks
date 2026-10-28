@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_153",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 41.1,
+    "total_citation_tokens": 411.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer. It neither includes the gold target “.” nor contradicts it, so it is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] identifies `$(@D)` as the directory component and mentions a target that does not contain a slash, but it does not state that the value is `.`.\n2. Citation [8] describes `$(@D)` as the directory part of `$@`, but gives no value for a target without a slash.\n3. The gold answer’s specific value, `.`, is not present in the retrieved citations, so they do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000541975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

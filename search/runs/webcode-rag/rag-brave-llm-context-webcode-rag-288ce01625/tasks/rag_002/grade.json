@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_002",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 286.2,
+    "total_citation_tokens": 2862.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says that when the sum of flex factors is below 1, it is treated as 1. The predicted answer identifies 1 as the threshold and states that tracks below that threshold receive their flex factor multiplied directly by the leftover space, which is the equivalent result of using a sum of 1. It does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when calculating the flex factor sum, a value below 1 is set to 1.\n2. Citations [4] and [6] state this rule explicitly in the “Find the Size of an fr” algorithm.\n3. The retrieved citations contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008966,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

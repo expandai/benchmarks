@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_170",
+ "prompt": "awk next statement executed END action historical behavior",
+ "attempt": 1,
+ "answer": "`next` abandons the rest of the current record and begins processing the next record. If that `next` reaches the end of the input, the `END` actions are executed.\n\nHowever, using `next` directly in a `BEGIN` or `END` action has undefined behavior according to POSIX. GNU awk treats it as a syntax error.",
+ "num_citations": 8,
+ "citation_text_tokens": 3849,
+ "citation_text_chars": 17475,
+ "search_queries": [
+  "awk next statement executed END action historical behavior"
+ ],
+ "model_cost_usd": 0.0016036,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4807,
+  "output_tokens": 335,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 257
+ },
+ "latency_ms": 8440.491332905367,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0056036,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

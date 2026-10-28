@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_289",
+  "prompt": "micronaut openapi multiple spec files UI frameworks support",
+  "attempt": 1,
+  "answer": "Micronaut OpenAPI supports multiple specification files.\n\n- **Multiple definitions:** Use Micronaut versioning or `OpenAPIGroup` annotations. Groups can define separate output filenames, such as `v1`, `v2`, and `v3`.\n- **Merging existing specs:** Configure `micronaut.openapi.additional.files` with comma-separated files or directories. Merge mode can be:\n  - `append`: generated specification entries take precedence.\n  - `replace`: additional-file entries take precedence.\n- **UI framework support:**\n  - **Swagger UI** — supports multiple specification files out of the box.\n  - **Scalar** — supports multiple specification files out of the box.\n  - **ReDoc, RapiDoc, and OpenAPI Explorer** — do not support multiple files simultaneously; a custom template is required.\n  - Micronaut also supports generating views for Swagger UI, ReDoc, OpenAPI Explorer, Scalar, and RapiDoc.\n\nSources: [Micronaut OpenAPI documentation](https://docs.micronaut.io/5.2.x/openapi/), [Multiple OpenAPI definitions issue](https://github.com/micronaut-projects/micronaut-openapi/issues/225).",
+  "num_citations": 10,
+  "citation_text_tokens": 6823,
+  "citation_text_chars": 30604,
+  "search_queries": [
+    "micronaut openapi multiple spec files UI frameworks support"
+  ],
+  "model_cost_usd": 0.0025046,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8099,
+    "output_tokens": 400,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 148
+  },
+  "latency_ms": 5888.296375051141,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0045046,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-206",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 0.0,
+    "avg_citation_tokens": 0.0,
+    "total_citation_tokens": 0.0,
+    "filtered_results": 0.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation: The ground truth answer is \"10001\" (binary for 17). The predicted answer is \"10000\" (binary for 16). To check, let's verify the steps:\n\n- Ages given: 21, 21, 20, 17\n- Combined: 21+21+20+17 = 79\n- The number to divide by: Predicted - 5 (said five of the Birmingham Six came from Belfast/capital of N. Ireland), but ground truth implies the answer should be divided by a number giving 17 as the result (so it should be 79/5=15.8, rounds to 16; but to get 17, must be divided by 79/4.65).\n- Rounding: 79/5=15.8, rounds to 16, binary 10000.\n- The predicted answer (10000) does NOT match the ground truth answer (10001).\n\nBased on this, the vital fact in the ground truth (binary 10001) is NOT present in the predicted answer (binary 10000).\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.002534
+}

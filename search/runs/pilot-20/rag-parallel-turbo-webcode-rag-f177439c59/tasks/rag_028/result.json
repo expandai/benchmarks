@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_028",
+ "prompt": "glibc printf_info width precision star arginfo function value",
+ "attempt": 1,
+ "answer": "For a glibc custom `printf` conversion:\n\n| `printf_info` member | No `*` specified | `*` specified in `arginfo` | `*` specified in handler |\n|---|---:|---:|---:|\n| `prec` | `-1` | `INT_MIN` | Actual precision argument value |\n| `width` | `0` | `INT_MIN` | Actual width argument value |\n\nThus, the `arginfo` function cannot know the actual width or precision when `*` is used; it receives `INT_MIN` for those fields. The handler receives the values retrieved from the argument list. The `arginfo` function should use its return value to specify how many arguments the conversion expects and fill `argtypes` with their types. (glibc manual: [Conversion Specifier Options](https://sourceware.org/glibc/manual/latest/html_node/Conversion-Specifier-Options.html), [Defining the Output Handler](https://sourceware.org/glibc/manual/latest/html_node/Defining-the-Output-Handler.html))",
+ "num_citations": 10,
+ "citation_text_tokens": 4614,
+ "citation_text_chars": 19139,
+ "search_queries": [
+  "glibc printf_info width precision star arginfo function value"
+ ],
+ "model_cost_usd": 0.0018774,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5787,
+  "output_tokens": 359,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 128
+ },
+ "latency_ms": 5116.223832941614,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0028774,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

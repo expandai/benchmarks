@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_279",
+ "prompt": "clang init_seg library init_priority value Windows",
+ "attempt": 1,
+ "answer": "On Windows, Clang maps `init_seg` to these initialization priorities:\n\n| `init_seg` | Priority |\n|---|---:|\n| `compiler` | 200 |\n| `library` / `lib` | 400 |\n| `user` | 65535 (default) |\n\nA lower value means higher initialization priority. Thus, `compiler` initializes first, followed by `library`, then `user`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2284,
+ "citation_text_chars": 9234,
+ "search_queries": [
+  "clang init_seg library init_priority value Windows"
+ ],
+ "model_cost_usd": 0.00094235,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3338,
+  "output_tokens": 90,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2684.0070839971304,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00194235,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

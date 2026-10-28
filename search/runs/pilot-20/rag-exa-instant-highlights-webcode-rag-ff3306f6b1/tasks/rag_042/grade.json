@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_042",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 232.5,
+    "total_citation_tokens": 2325.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that lodash's `_.capitalize` converts all characters after the first to lowercase, matching the gold target. The examples and additional distinction about `_.upperFirst` do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that non-first characters are converted to lower case.\n2. Citations [1] and [10] explicitly state that the remaining characters are converted to lower case.\n3. The retrieved citations directly support the gold target, and it contains no additional unsupported claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00059585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

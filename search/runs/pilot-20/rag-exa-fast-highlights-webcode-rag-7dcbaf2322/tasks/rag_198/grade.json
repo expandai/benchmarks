@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_198",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 399.7,
+    "total_citation_tokens": 3997.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly identifies `path-noscheme` as the relevant alternative in RFC 3986’s `relative-part`. However, it also claims the original rule excludes `/` as a valid relative reference; that is false because `path-absolute` permits `/` alone. The extra incorrect claim makes the predicted answer incorrect overall.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited RFC 3986 grammar explicitly includes `path-noscheme` in the `relative-part` rule. Step 2: The gold target is `path-noscheme`, which is directly present in the cited rule; no non-trivial claim is missing. Step 3: Citations [1], [5], [7], and [8] each contain the relevant rule.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001532975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

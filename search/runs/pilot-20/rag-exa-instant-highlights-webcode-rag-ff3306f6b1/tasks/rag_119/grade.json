@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 493.6,
+    "total_citation_tokens": 4936.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide the gold-target information, nor does it contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe avg_queue as a queued-connection count divided by the number of servers (or alive servers).\n2. None states what avg_queue returns when there are no active/alive servers, nor that it returns twice the queued-connection count.\n3. Since this specific behavior is a non-trivial factual claim missing from the citations, the gold target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001011055,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

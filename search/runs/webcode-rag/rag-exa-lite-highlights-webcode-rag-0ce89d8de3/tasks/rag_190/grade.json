@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_190",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 569.9,
+    "total_citation_tokens": 5699.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly gives the requested retrieval frequency as every 10 days, matching the gold target. The additional configuration note does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks how often the public key is retrieved when `public_key_retrieval_on_startup` is disabled.\n2. Citation [9] directly states that when this setting is disabled, the key is retrieved every 10 days.\n3. Citation [3] independently confirms the retrieval interval is 10 days.\n4. Therefore, the citations contain the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001122975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

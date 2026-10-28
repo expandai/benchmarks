@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_207",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 216.8,
+    "total_citation_tokens": 2168.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the target routing formula, ceil(value) - 1, but incorrectly states that a result of 0 sends the frame to the first output. In the select filter, a zero result discards the frame, so the answer contradicts the correct behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is `ceil(val)-1`. Citation [2] explicitly states this is the output index used for routing, so the target is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007691,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

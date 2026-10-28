@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_034",
+ "prompt": "ECMAScript IsTypedArrayOutOfBounds zero-length ByteOffset equals bufferByteLength",
+ "attempt": 1,
+ "answer": "A zero-length TypedArray whose `[[ByteOffset]]` equals `bufferByteLength` is **not considered out of bounds**.\n\n`IsTypedArrayOutOfBounds` returns `true` only if:\n\n```text\nbyteOffsetStart > bufferByteLength\nor\nbyteOffsetEnd > bufferByteLength\n```\n\nBecause equality does not satisfy `>`, the result is `false`. The specification explicitly notes: “0-length TypedArrays are not considered out-of-bounds.” (Search results 1 and 3.)",
+ "num_citations": 10,
+ "citation_text_tokens": 5350,
+ "citation_text_chars": 19979,
+ "search_queries": [
+  "ECMAScript IsTypedArrayOutOfBounds zero-length ByteOffset equals bufferByteLength"
+ ],
+ "model_cost_usd": 0.00189,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6759,
+  "output_tokens": 167,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 55
+ },
+ "latency_ms": 3196.760124992579,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00589,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

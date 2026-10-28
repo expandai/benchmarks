@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_168",
+ "prompt": "node http.request path illegal characters which rejected",
+ "attempt": 1,
+ "answer": "In the documented Node.js behavior shown, **only spaces are rejected** in `http.request()`/`http.get()` paths. An exception is thrown:\n\n```text\nTypeError: Request path contains unescaped characters.\n```\n\nThe path must not contain a literal space; encode it as `%20` (or otherwise URL-encode the relevant value). The documentation notes that this behavior may change in the future.",
+ "num_citations": 10,
+ "citation_text_tokens": 3600,
+ "citation_text_chars": 14024,
+ "search_queries": [
+  "node http.request path illegal characters which rejected"
+ ],
+ "model_cost_usd": 0.00144405,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4860,
+  "output_tokens": 191,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 102
+ },
+ "latency_ms": 4552.145582973026,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0021940500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

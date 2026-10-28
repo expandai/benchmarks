@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_052",
+  "prompt": "parse_datetime @ epoch timestamp excess precision truncation direction",
+  "attempt": 1,
+  "answer": "Excess precision is truncated toward **minus infinity** (floor), not toward zero.\n\nFor example:\n\n- `@-1.5` → `-2` seconds\n- Excess fractional digits on negative timestamps cause the value to be rounded down.\n- Positive fractional epochs are unaffected in the same way.\n\nGNU `parse-datetime` explicitly skips excess digits and applies “truncating toward -Infinity.”",
+  "num_citations": 10,
+  "citation_text_tokens": 5556,
+  "citation_text_chars": 20692,
+  "search_queries": [
+    "parse_datetime @ epoch timestamp excess precision truncation direction"
+  ],
+  "model_cost_usd": 0.00186685,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7060,
+    "output_tokens": 85,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3654.917916050181,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00886685,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

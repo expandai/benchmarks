@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 432.4,
+    "total_citation_tokens": 3892.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no information about how an HTML ordered list renders a zero or negative type attribute. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold answer makes the specific claim that rendering always uses the decimal system, regardless of the `type` attribute.\n2. The retrieved passages explain that `type` selects the marker style, including letter and Roman-numeral styles, but do not say how zero or negative ordinal values render.\n3. No citation establishes that zero or negative values are always rendered in decimal regardless of `type`; therefore, a non-trivial claim in the gold answer is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009716,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_051",
+  "prompt": "HTML ol type attribute zero negative number rendering",
+  "attempt": 1,
+  "answer": "The `type` attribute does **not** specify the starting number. It specifies the marker style, with only these valid values:\n\n- `1` — decimal numbers\n- `a` — lowercase letters\n- `A` — uppercase letters\n- `i` — lowercase Roman numerals\n- `I` — uppercase Roman numerals\n\nUse the `start` attribute for zero or negative values:\n\n```html\n<ol start=\"0\">\n  <li>First</li>\n  <li>Second</li>\n</ol>\n```\n\nrenders as:\n\n```text\n0. First\n1. Second\n```\n\n```html\n<ol start=\"-2\">\n  <li>First</li>\n  <li>Second</li>\n  <li>Third</li>\n</ol>\n```\n\nrenders as:\n\n```text\n-2. First\n-1. Second\n0. Third\n```\n\nThe current HTML reference defines `start` as an integer, while `type` is restricted to `1`, `a`, `A`, `i`, or `I`. The `start` value is always specified as an Arabic integer, even if the list’s marker type is letters or Roman numerals. Legacy browsers had inconsistent support for zero and negative values.",
+  "num_citations": 10,
+  "citation_text_tokens": 4253,
+  "citation_text_chars": 16942,
+  "search_queries": [
+    "HTML ol type attribute zero negative number rendering"
+  ],
+  "model_cost_usd": 0.00202205,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5516,
+    "output_tokens": 536,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 269
+  },
+  "latency_ms": 9561.669792048633,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00902205,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

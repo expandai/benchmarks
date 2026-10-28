@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_155",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 327.4,
+    "total_citation_tokens": 3274.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is `http`. The predicted answer explicitly states that `http` is the only valid value and demonstrates it in the FastAPI decorator, so it contains the required information without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the value `http`.\n2. Citations [2], [3], and [8] explicitly identify `http` as the middleware type/value (and [8] says it is currently the only supported value).\n3. The target contains no additional factual claims that are missing from the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000703475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

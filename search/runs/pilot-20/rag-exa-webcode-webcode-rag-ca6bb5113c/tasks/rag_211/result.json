@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_211",
+ "prompt": "pacemaker bundle inner primitive priority resource assignment",
+ "attempt": 1,
+ "answer": "For a Pacemaker **bundle with an inner primitive**, resource assignment priority is determined by the **bundle’s priority**. The inner primitive’s priority is **ignored**.\n\nResource assignment order is:\n\n1. Highest priority\n2. If already active, highest score on its current node\n3. Highest score on its preferred node\n4. If still tied, the resource listed first in the CIB\n\nUtilization is supported for bundles only when they contain an inner primitive; the bundle’s utilization is considered based on that primitive.",
+ "num_citations": 10,
+ "citation_text_tokens": 4217,
+ "citation_text_chars": 19991,
+ "search_queries": [
+  "pacemaker bundle inner primitive priority resource assignment"
+ ],
+ "model_cost_usd": 0.00145985,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5312,
+  "output_tokens": 110,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 5561.122165992856,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00845985,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

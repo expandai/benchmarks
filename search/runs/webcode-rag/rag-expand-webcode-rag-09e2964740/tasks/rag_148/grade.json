@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_148",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 206.4,
+    "total_citation_tokens": 2064.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the maximum chunked encoding chunk size as 2 GB minus 1 byte (2,147,483,647 bytes), matching the gold target. It adds no contradictory information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3] explicitly state the maximum supported chunk size and give the exact byte value. Step 2: The gold target answer, “2GB - 1 (2147483647 bytes),” is fully supported by those passages. Therefore, the answer is GROUNDED. Step 3: Citations [1] and [3] contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000605975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

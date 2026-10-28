@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_217",
+  "prompt": "gperf --pic struct-type first field type requirement",
+  "attempt": 1,
+  "answer": "With `gperf --pic` (`-P` or `%pic`) and a user-defined struct (`-t` or `%struct-type`), the **first field must be of type `int`**, not `char` or `const char`.\n\nIt must still be the first field and is normally named `name` (or the name specified with `-K`/`%define slot-name`). The `int` stores an offset into the generated string pool; convert it with:\n\n```c\nstringpool + o\n```\n\nWithout `--pic`, the first field must be `char` or `const char`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3621,
+  "citation_text_chars": 15004,
+  "search_queries": [
+    "gperf --pic struct-type first field type requirement"
+  ],
+  "model_cost_usd": 0.00128705,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4520,
+    "output_tokens": 131,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4370.643083006144,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01728705,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

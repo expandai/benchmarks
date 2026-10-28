@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-039",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 382.3,
+    "total_citation_tokens": 3823.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer exactly matches the gold target, Block sort.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] identifies Block sort as a comparison sort and gives it best-case n, worst-case n log n, and Stable = Yes. 2. However, the table's In-place entry for Block sort is blank. The note says that it combines a block-based in-place merge algorithm with bottom-up merge sort, but does not explicitly establish that Block sort itself is in-place. 3. Since the in-place property is a non-trivial claim in the question and the gold answer, the citations do not establish every required property. The answer is therefore UNGROUNDED under the strict criteria.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0015023550000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

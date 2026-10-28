@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_306",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 193.0,
+    "total_citation_tokens": 1930.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says to increase max-lisp-eval-depth to 30 times its default value. The predicted answer instead recommends a factor of 2, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations mention increasing the limit by a factor of two in Calc, and one example sets it to 10000 from a default of 500 (20 times the default). None says to increase it to 30 times its default value. That specific suggested factor is missing, so the gold target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0006256,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

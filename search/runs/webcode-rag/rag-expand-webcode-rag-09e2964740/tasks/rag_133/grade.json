@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_133",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 852.3,
+    "total_citation_tokens": 8523.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `OverconstrainedError` as the rejection error for `applyConstraints()` on a remote track, matching the gold target. The additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3] directly state that applying constraints to a remote MediaStreamTrack rejects with OverconstrainedError. Step 2: This supports the entire gold target answer, which is the error name. Step 3: Citations [1] and [3] contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00146535,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

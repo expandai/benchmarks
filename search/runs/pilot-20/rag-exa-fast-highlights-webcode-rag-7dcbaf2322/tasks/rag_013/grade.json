@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 511.9,
+    "total_citation_tokens": 5119.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and does not provide the status codes 501 and 505. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target names two specific excluded status codes: 501 and 505. None of the retrieved citations states that either code is excluded from `src_http_fail_cnt` or `http_fail_cnt`. Citation [2] tests a custom range and does not establish those exclusions. Because these specific factual claims are unsupported, the citations do not contain sufficient information to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00106396,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

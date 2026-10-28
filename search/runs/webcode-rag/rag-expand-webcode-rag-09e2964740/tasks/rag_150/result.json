@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_150",
+  "prompt": "rustdoc doc auto_cfg hide default hidden cfg attributes",
+  "attempt": 1,
+  "answer": "`rustdoc`’s `auto_cfg` hides these cfg attributes by default:\n\n- `test`\n- `doc`\n- `doctest`\n\nTo hide additional cfgs, add `doc(auto_cfg(hide(...)))` at the crate root or on a module:\n\n```rust\n#![doc(auto_cfg(hide(unix, feature, target_os)))]\n```\n\nThis affects `auto_cfg`-generated compatibility markers, not explicit `#[doc(cfg(...))]` attributes. The setting is inherited by child items, and `doc(auto_cfg(show(...)))` can re-enable a hidden cfg for an item and its descendants.\n\nSource: [The rustdoc book — `#[doc(auto_cfg(hide(...)))]`](https://doc.rust-lang.org/rustdoc/unstable-features.html?highlight=doc)",
+  "num_citations": 10,
+  "citation_text_tokens": 12366,
+  "citation_text_chars": 47382,
+  "search_queries": [
+    "rustdoc doc auto_cfg hide default hidden cfg attributes"
+  ],
+  "model_cost_usd": 0.00413985,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 14640,
+    "output_tokens": 400,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 224
+  },
+  "latency_ms": 6428.9240000071,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00613985,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

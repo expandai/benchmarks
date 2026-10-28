@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_285",
+  "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+  "attempt": 1,
+  "answer": "`linkcheck_case_insensitive_urls` applies case-insensitive comparison only to the URL portion before `#`; URI fragments remain case-sensitive.\n\nSphinx:\n\n- Splits `URI#fragment` into the request URL and anchor.\n- URL-matching regular expressions are tested against the URL without the fragment.\n- Decodes the fragment with `unquote()`.\n- Checks the anchor separately when `linkcheck_anchors` is enabled.\n- During URL normalization, applies `casefold()` to the URL portion but preserves the fragment exactly:\n\n```python\nurl_part, sep, fragment = normalised_url.partition('#')\nif sep:\n    return f'{url_part.casefold()}#{fragment}'\n```\n\nTherefore, `/Path#Section` and `/path#Section` can compare as equivalent when configured, but `/path#Section` and `/path#section` do not.",
+  "num_citations": 10,
+  "citation_text_tokens": 4546,
+  "citation_text_chars": 20249,
+  "search_queries": [
+    "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+  ],
+  "model_cost_usd": 0.00187655,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5966,
+    "output_tokens": 321,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 140
+  },
+  "latency_ms": 6232.561625074595,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00887655,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

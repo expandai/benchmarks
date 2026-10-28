@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_216",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 141.3,
+    "total_citation_tokens": 1413.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and does not provide the required information that &key is not allowed in the arglist. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] describes the arguments to a DEFINE-MODIFY-MACRO, but the retrieved passage does not specify whether `&key` is allowed. Citation [2] only lists a section on modify macros and provides no relevant arglist restriction. Step 2: The gold answer makes the specific claim that `&key` is disallowed; that non-trivial claim is not established by any retrieved citation. Therefore, the citations do not contain sufficient information to derive the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005236,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

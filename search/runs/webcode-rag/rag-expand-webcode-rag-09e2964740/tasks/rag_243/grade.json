@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_243",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 334.4,
+    "total_citation_tokens": 3344.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target, SHA1 checksum, but also asserts that the compiler uses a CRC checksum and says the sources conflict. CRC contradicts the gold target, so the response is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly says Nim computes a SHA1 checksum to detect whether the file has changed.\n2. This directly supports the gold target answer, “SHA1 checksum.”\n3. Citation [1] gives a different checksum method, but citation [2] contains the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007616000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

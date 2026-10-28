@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 548.6,
+    "total_citation_tokens": 5486.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says \"I don't know\" and provides none of the gold information, without contradicting it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [6] supports the increment case: incrementing a null field leaves it null, and it explains this using SQL null arithmetic. 2. The gold target additionally asserts that decrement, multiply, and divide also leave a null field unchanged. 3. No retrieved citation explicitly states the null behavior for those three operations, so the sources do not contain all non-trivial claims in the target. 4. Therefore, the target is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001174725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

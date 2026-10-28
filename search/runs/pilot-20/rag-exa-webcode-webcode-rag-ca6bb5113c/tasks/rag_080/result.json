@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_080",
+ "prompt": "R parser #line directive placement constraint vs C",
+ "attempt": 1,
+ "answer": "In R, `#line` must begin at the very start of the line: `#` must be the first character, and `line` must occupy the next four characters—the first five characters overall. Leading whitespace is not allowed.\n\nC is less restrictive: a preprocessing directive may have whitespace before `#`, and whitespace may appear between `#` and the directive name. For example:\n\n```c\n   #line 5 \"file\"\n```\n\nis permitted in C, whereas the corresponding leading whitespace would violate R’s `#line` placement rule.",
+ "num_citations": 10,
+ "citation_text_tokens": 4277,
+ "citation_text_chars": 18632,
+ "search_queries": [
+  "R parser #line directive placement constraint vs C"
+ ],
+ "model_cost_usd": 0.00168455,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5486,
+  "output_tokens": 261,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 142
+ },
+ "latency_ms": 10068.241792032495,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00868455,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

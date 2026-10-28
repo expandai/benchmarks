@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_210",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 144.5,
+    "total_citation_tokens": 1445.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the `binaryData` field requires Kubernetes 1.10 or later for both the API server and kubelet, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that using the ConfigMap `binaryData` field requires version 1.10 or later for both the apiserver and kubelet. Citation [10] explicitly states this requirement, so all non-trivial information in the gold target is present.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0004456,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_148",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 196.6,
+    "total_citation_tokens": 1966.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer says the maximum is 2^52 − 1 bytes, whereas the gold target gives 2^31 − 1 bytes (2 GB − 1) as the answer. Mentioning the gold value as a previous limit does not resolve the contradiction with the stated maximum.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the maximum chunk size is 2GB - 1, equal to 2147483647 bytes. Citation [4] explicitly gives both the limit and the byte count, and citation [5] independently confirms the 2GB - 1 maximum. The retrieved citations therefore contain the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007498499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

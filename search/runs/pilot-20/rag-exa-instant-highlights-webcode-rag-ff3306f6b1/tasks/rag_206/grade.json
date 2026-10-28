@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_206",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 439.4,
+    "total_citation_tokens": 4394.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly says the node with the lexicographically smaller Node ID increments its epoch, matching the gold target. Its additional statement that the greatest-ID node does not change its epoch does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer identifies which node increments during a same-`configEpoch` conflict: the node with the lexicographically smaller Node ID.\n2. Citation [1] directly states that the node with the lexicographically smaller Node ID increments its current epoch and uses it as the new config epoch. Citations [3] and [4] corroborate this rule.\n3. The gold target’s factual claim is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00103085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

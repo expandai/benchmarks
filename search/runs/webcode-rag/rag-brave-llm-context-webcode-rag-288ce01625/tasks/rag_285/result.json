@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_285",
+  "prompt": "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling",
+  "attempt": 1,
+  "answer": "`linkcheck_case_insensitive_urls` does **not** apply to URI fragments (HTML anchors). URL/path comparisons may be case-insensitive for matching configured URLs, but fragments are **always checked case-sensitively**.  \nSource: [Sphinx configuration](https://www.sphinx-doc.org/en/master/usage/configuration.html)\n\nWhen anchor checking is enabled (`linkcheck_anchors = True`, the default):\n\n1. Sphinx splits the URI at `#` into the page URL and fragment.\n2. It URL-decodes the fragment before checking it.\n3. It searches the downloaded HTML for a matching `id` or `name`.\n4. The anchor comparison remains case-sensitive.\n\nThus, configuring:\n\n```python\nlinkcheck_case_insensitive_urls = [r'https://example\\.com/.*']\n```\n\ndoes not make `#Anchor` match `#anchor`. Encoded fragments are also decoded before lookup; an issue documents a failure involving `%2F`-encoded fragment characters.",
+  "num_citations": 10,
+  "citation_text_tokens": 3420,
+  "citation_text_chars": 14972,
+  "search_queries": [
+    "sphinx linkcheck_case_insensitive_urls URI fragments anchor handling"
+  ],
+  "model_cost_usd": 0.00148235,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4658,
+    "output_tokens": 265,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 56
+  },
+  "latency_ms": 4843.0509170284495,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00648235,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

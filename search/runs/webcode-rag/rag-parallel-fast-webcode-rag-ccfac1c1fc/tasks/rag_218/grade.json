@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_218",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 213.5,
+    "total_citation_tokens": 2135.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes both gold conditions: the child LiveView is mounted while the parent LiveView is mounted, and the child is not rendered with `sticky: true`. Its added details do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] directly states both conditions in the gold target: the child must be mounted when the parent is mounted, and it must not be rendered with `sticky: true`.\nStep 2: Both non-trivial claims are present in the retrieved source, so the target is fully grounded.\nStep 3: Citation [5] alone contains enough information to derive the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006730999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

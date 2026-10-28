@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_236",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 322.8,
+    "total_citation_tokens": 3228.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `call identity()` as the default for both `classIdentityQuery` and `sidIdentityQuery`, matching the gold target. The additional PostgreSQL configuration information does not contradict the answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state that both JdbcMutableAclService identity-query properties default to `call identity()`.\nStep 2 — The gold target answer is `call identity()`, so its factual content is fully supported.\nStep 3 — Citations [1] and [4] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000768225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

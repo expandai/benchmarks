@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_132",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 509.3,
+    "total_citation_tokens": 5093.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide the gold-target information that TLS passthrough termination is incompatible with httpHeader actions. It makes no contradictory claim.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that TLS passthrough termination is incompatible with httpHeader actions.\n2. Citation [5] discusses a passthrough restriction involving an ingress path, not httpHeader actions. Citation [9] describes TLS passthrough behavior but does not mention httpHeader actions or their compatibility.\n3. No retrieved citation contains the specific incompatibility claim, so a non-trivial factual claim in the gold target is unsupported. Verdict: UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010651,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

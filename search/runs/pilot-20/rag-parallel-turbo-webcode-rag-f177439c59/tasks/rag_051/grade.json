@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 592.2,
+    "total_citation_tokens": 5922.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that `type=\"0\"` and `type=\"-1\"` are not valid ordered-list type values and that the list uses the default decimal style, matching the gold target that decimal notation is used regardless of the type attribute. The added explanation about the `start` attribute does not contradict that.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations discuss integer start values and say that zero and negative values are allowed. Citation [7] also mentions fallback behavior when a numbering system has no equivalent for those values.\nStep 2: These passages do not establish that an HTML ordered list always renders zero or negative values using the decimal system regardless of its type attribute. In particular, the cited fallback passage does not identify the fallback as decimal for the relevant HTML list types. This leaves a non-trivial claim in the gold target unsupported, so the result is UNGROUNDED.\nStep 3: No citation contains enough information to derive the complete gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00149285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

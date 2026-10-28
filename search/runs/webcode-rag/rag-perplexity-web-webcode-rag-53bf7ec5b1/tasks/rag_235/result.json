@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_235",
+  "prompt": "elixir to_timeout Duration year month fields constraint",
+  "attempt": 1,
+  "answer": "`to_timeout/1` requires a `Duration`’s `year` and `month` fields to be set to `0`. Durations containing nonzero years or months cannot be reliably converted to milliseconds because months and years have varying numbers of days.\n\n`to_timeout/1` supports units only up to weeks: `:week`, `:day`, `:hour`, `:minute`, `:second`, and `:millisecond`. A nonzero `:year` or `:month` field raises an error.",
+  "num_citations": 10,
+  "citation_text_tokens": 3553,
+  "citation_text_chars": 14031,
+  "search_queries": [
+    "elixir to_timeout Duration year month fields constraint"
+  ],
+  "model_cost_usd": 0.0012715,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4549,
+    "output_tokens": 112,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2581.2999580521137,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062715,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

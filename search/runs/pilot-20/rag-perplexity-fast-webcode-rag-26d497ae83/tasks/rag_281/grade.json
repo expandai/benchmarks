@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_281",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 383.5,
+    "total_citation_tokens": 3835.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Automake renames a target’s object files when per-target compilation flags are used and does so without checking whether source files are shared. This matches the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation states that Automake does not determine whether source files are shared before renaming objects.\n2. It also states that Automake renames all objects of a target as soon as it sees per-target compilation flags.\n3. These passages support every non-trivial claim in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008289749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

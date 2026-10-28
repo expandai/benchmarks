@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_199",
+ "prompt": "gnulib pthread_rwlock_trywrlock error code already owned write lock",
+ "attempt": 1,
+ "answer": "On glibc/Linux, `pthread_rwlock_trywrlock()` returns **`EBUSY`** when the lock is already write-locked—including when it is owned by the calling thread. glibc’s implementation explicitly returns `EBUSY`; it does not return `EDEADLK`.\n\n`EDEADLK` is specified for `pthread_rwlock_wrlock()` when the calling thread already owns the lock. Some platforms, such as macOS, may return `EDEADLK` from `trywrlock()`, so this behavior is not portable.\n\nTherefore, in gnulib or portable code:\n\n- Treat `EBUSY` as “the write lock could not be acquired.”\n- Do not use `trywrlock()`’s error code to reliably detect ownership.\n- Track ownership explicitly if you need to know whether the current thread already owns the write lock.",
+ "num_citations": 10,
+ "citation_text_tokens": 5355,
+ "citation_text_chars": 20232,
+ "search_queries": [
+  "gnulib pthread_rwlock_trywrlock error code already owned write lock"
+ ],
+ "model_cost_usd": 0.00207365,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6692,
+  "output_tokens": 334,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 147
+ },
+ "latency_ms": 4899.92733404506,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.009073649999999999,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

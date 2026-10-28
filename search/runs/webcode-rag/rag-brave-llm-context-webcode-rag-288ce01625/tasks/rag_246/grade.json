@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 548.9,
+    "total_citation_tokens": 5489.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer says the maximum is 16. These values contradict each other.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The question asks for the maximum number of items in the Gateway API v1 TLSRouteSpec rules field. The relevant retrieved passages state a maximum of 16, not 1. No citation supports the gold target answer of MaxItems: 1. Since that specific limit is absent from the citations, the gold target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001077225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

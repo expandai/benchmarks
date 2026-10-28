@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_068",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 461.6,
+    "total_citation_tokens": 4616.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 256 distinct values, while the predicted answer says at least 256 distinct values. This reverses the constraint and is contradictory.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] discusses the recommended precision for pressure values and specifies at least 256 distinct values. Step 2: The gold target says a maximum of 256 distinct values, which reverses the recommendation in the citation: it states a minimum, not a maximum. No retrieved citation supports the gold target claim. Step 3: Therefore, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00093835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

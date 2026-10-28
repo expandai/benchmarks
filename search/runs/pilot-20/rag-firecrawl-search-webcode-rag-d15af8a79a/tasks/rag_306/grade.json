@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_306",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 41.4,
+    "total_citation_tokens": 414.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the suggested increase is 30 times the default value. The predicted answer instead states a 20× increase, which conflicts with the target; the vague mention of another default does not correct this mismatch.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations suggest increasing max-lisp-eval-depth, but neither states that it should be increased to 30 times its default value.\n2. Citation [3] gives an example of 10000 against a default of 500, which is 20 times the default, not 30. Citation [2] gives no specific factor.\n3. Therefore, the specific non-trivial claim in the gold target is not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00048097499999999997,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

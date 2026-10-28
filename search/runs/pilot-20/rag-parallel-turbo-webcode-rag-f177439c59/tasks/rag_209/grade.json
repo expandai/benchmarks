@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_209",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 358.0,
+    "total_citation_tokens": 3580.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no status. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] states that the object must not already be tagged, and citation [8] gives the function signature. Neither citation specifies the status returned when an already-tagged object is passed. The general status information in [2] does not identify that specific status.\nStep 2: The gold target, `napi_invalid_arg`, is a specific non-trivial status value. That claim is not present in the retrieved citations, so the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000861525,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

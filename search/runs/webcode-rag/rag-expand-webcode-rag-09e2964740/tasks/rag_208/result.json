@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_208",
+  "prompt": "imagemagick remap colormap precision bit depth limit",
+  "attempt": 1,
+  "answer": "ImageMagick’s `-remap` has an **8-bit-per-channel precision limit for the colormap**.\n\n- The source image may be 16-bit or deeper.\n- The remap colormap must have at most 8-bit precision.\n- Deeper colormaps are automatically coalesced, so distinct colors deeper than 8 bits may map to the same color; the mean color of the cube may be used.\n- To avoid this, reduce the colormap to 8-bit precision before remapping:\n\n```bash\nmagick ColourMap.tif -depth 8 map.tif\nmagick InputImage.tif -remap map.tif Remapped.tif\n```\n\nThe search results also indicate a separate colormap-size limit: typically **65,536 entries**, with ImageMagick documentation referring to a maximum of **65,535 colors** in some versions.",
+  "num_citations": 10,
+  "citation_text_tokens": 7286,
+  "citation_text_chars": 28502,
+  "search_queries": [
+    "imagemagick remap colormap precision bit depth limit"
+  ],
+  "model_cost_usd": 0.00234935,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8510,
+    "output_tokens": 185,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3741.6440000524744,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00434935,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

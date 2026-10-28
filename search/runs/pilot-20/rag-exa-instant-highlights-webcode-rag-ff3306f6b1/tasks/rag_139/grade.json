@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_139",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 540.2,
+    "total_citation_tokens": 5402.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the valid raw-data windowBits range as -15 to -9, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly gives “-15 to -9 for raw data,” and citation [1] confirms that raw deflate rejects values outside -15..-9. Step 2: The gold target’s range is stated directly in the retrieved sources, so it is grounded. Citation [1] also contains a separate raw-inflate check that allows -15..-8; the exact -15..-9 claim is nevertheless directly supported by the type documentation and the raw-deflate check.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0014292250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

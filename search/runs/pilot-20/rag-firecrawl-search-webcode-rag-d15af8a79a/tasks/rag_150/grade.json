@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_150",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 48.8,
+    "total_citation_tokens": 488.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies the default hidden attributes as `doc` and `doctest`. The prediction includes both, but also claims `test` is hidden by default, which adds incorrect information.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [4] explicitly identify both `doc` and `doctest` as attributes hidden by default. Step 2: The gold target answer consists of those two attributes, and both are stated in the retrieved sources. Therefore, all non-trivial information in the target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000454225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 460.2,
+    "total_citation_tokens": 4602.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The response does not name the exception type for `snapshot.get`. It says the documentation does not specify it and distinguishes the documentation for `snapshot.status`, but it does not explicitly state that `snapshot.get` throws a different exception. The gold answer is therefore neither confirmed nor clearly contradicted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The question asks which exception type is thrown by `snapshot.get` when unavailable snapshots are not ignored.\n2. The sources describe `get` as returning an error for unavailable snapshots, but do not identify that error as `SnapshotMissingException`.\n3. The explicit `SnapshotMissingException` statement in [2] applies to the `status` method, not `get`. Applying it to `get` would require an unsupported inference.\n4. Therefore, the citations do not contain the gold target exception type for the requested operation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011157250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

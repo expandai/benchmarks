@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_179",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.25,
+    "avg_citation_tokens": 537.9,
+    "total_citation_tokens": 4303.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer says Eshell ranges include the start and exclude the end, while Bash ranges include both endpoints. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] says Eshell range syntax excludes the end index.\n2. Citation [1] explicitly contrasts this with Bash, where both the start and end are included, and says Eshell matches Emacs Lisp functions such as `substring`.\n3. Citation [2] corroborates the half-open Eshell versus closed Bash distinction. All non-trivial claims in the gold target are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009140999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_265",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 383.0,
+    "total_citation_tokens": 3830.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists both excluded storage types, `none` and `nonenotnull`, matching the gold target. The additional statement does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The question asks which storage types are excluded from the storage types supported for `SSLStaplingCache`. The citations state that `none` and `nonenotnull` are the exceptions to the storage types supported by `SSLSessionCache`. These are exactly the two types in the gold target answer, so all of its factual content is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007893500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

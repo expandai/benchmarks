@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_078",
+ "prompt": "jq |= update-assignment RHS produces no values",
+ "attempt": 1,
+ "answer": "In jq, `|=` treats an RHS that produces no values (`empty`) as a deletion of the path, rather than as “no assignment.”\n\nFor example:\n\n```jq\n{\"a\": 1} | .a |= empty\n```\n\nproduces:\n\n```jq\n{}\n```\n\nThis differs from ordinary assignment:\n\n```jq\n{\"a\": 1} | .a = (.a | empty)\n```\n\nwhich produces no output.\n\nConceptually, `|=` behaves like:\n\n```jq\n_modify(lhs; rhs)\n```\n\nFor each path matched by the LHS:\n\n- the RHS receives the current value at that path;\n- if it produces one or more values, only the first is used;\n- if it produces no values, the path is deleted.\n\nFor example:\n\n```jq\n{\"a\": 0, \"b\": true}\n| .a |= select(. % 2 == 1) + 1\n```\n\nproduces:\n\n```json\n{\"b\":true}\n```\n\nHowever, jq 1.6 has a known bug with multiple paths and `empty`; for example:\n\n```jq\n[1, 2] | .[] |= empty\n```\n\nproduces `[2]` rather than deleting both elements. Use `del(...)` when deleting multiple paths, or avoid expressions of the form `A | .[] |= E` when `E` can produce `empty`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4800,
+ "citation_text_chars": 17793,
+ "search_queries": [
+  "jq |= update-assignment RHS produces no values"
+ ],
+ "model_cost_usd": 0.0019892,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6071,
+  "output_tokens": 393,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 99
+ },
+ "latency_ms": 9572.524875053205,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089892,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

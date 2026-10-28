@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_091",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 500.4,
+    "total_citation_tokens": 5004.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the gold information that any remainder is ignored. It also does not contradict that information, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations explain that a typed #load interprets a file as an array of the specified type, and show an example where the file size is evenly divisible by the type size.\n2. None of the citations state that a remainder is ignored when the file size is not a multiple of the type size.\n3. Because that specific behavior is a non-trivial claim in the gold target and is not established by the retrieved sources, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000998795,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

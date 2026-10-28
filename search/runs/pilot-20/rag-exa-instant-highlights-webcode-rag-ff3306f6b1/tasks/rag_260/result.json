@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_260",
+ "prompt": "LLVM constrained frem rounding mode argument effect",
+ "attempt": 1,
+ "answer": "For `llvm.experimental.constrained.frem`, the rounding-mode argument has **no effect on the computed remainder**: when `frem` produces a meaningful result, it is always exact, so rounding is not needed.\n\nThe argument was retained primarily for implementation uniformity with other constrained intrinsics. The constrained intrinsic is still needed to preserve exceptional behavior, such as `frem inf, x` and `frem x, 0`.\n\nSources: [D27028](https://reviews.llvm.org/D27028), [LLVM commit discussion](https://lists.llvm.org/pipermail/llvm-commits/Week-of-Mon-20180305/531396.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 4222,
+ "citation_text_chars": 20245,
+ "search_queries": [
+  "LLVM constrained frem rounding mode argument effect"
+ ],
+ "model_cost_usd": 0.0016623,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5325,
+  "output_tokens": 276,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 131
+ },
+ "latency_ms": 3832.227624952793,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0056623,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

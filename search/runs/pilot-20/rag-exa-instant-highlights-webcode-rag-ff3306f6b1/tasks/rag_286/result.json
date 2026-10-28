@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_286",
+ "prompt": "haproxy base32 fetch hash function algorithm",
+ "attempt": 1,
+ "answer": "HAProxy’s `base32` fetch computes a 32-bit hash as follows:\n\n1. Initialize `hash` to `0`.\n2. Hash the first `Host` header value, if present.\n3. Parse the request path.\n4. Hash the path only if it begins with `/`.\n5. Exclude the query string: hashing stops at the first `?`.\n6. Apply `full_hash(hash)`.\n7. Return the resulting 32-bit integer.\n\nThe per-byte hash update is:\n\n```c\nhash = byte + (hash << 6) + (hash << 16) - hash;\n```\n\nEquivalently:\n\n```text\nhash = byte + hash * 65599\n```\n\nThis is the SDBM-style hash recurrence. In pseudocode:\n\n```text\nhash = 0\n\nfor byte in Host:\n    hash = byte + (hash << 6) + (hash << 16) - hash\n\nif path begins with \"/\":\n    for byte in path before \"?\":\n        hash = byte + (hash << 6) + (hash << 16) - hash\n\nhash = full_hash(hash)\nreturn hash\n```\n\n`full_hash()` is then used as a final avalanche step to produce the 32-bit result. The supplied results do not include the implementation details of `full_hash()`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5490,
+ "citation_text_chars": 20488,
+ "search_queries": [
+  "haproxy base32 fetch hash function algorithm"
+ ],
+ "model_cost_usd": 0.0022796,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6959,
+  "output_tokens": 450,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 169
+ },
+ "latency_ms": 5160.284667043015,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0062796,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

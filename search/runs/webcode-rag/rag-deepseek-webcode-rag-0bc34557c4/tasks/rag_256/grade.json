@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_256",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 276.0,
+    "total_citation_tokens": 2760.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that when the RHS of jq’s update assignment produces no values, the selected left-hand-side path is deleted, matching del(path), which fully matches the gold target. The additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when the |= update RHS outputs no values, the left-hand-side path is deleted, as with del(path).\n2. Citations [1] and [2] explicitly state this behavior in the same terms.\n3. Therefore, all non-trivial information in the gold target is present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000872225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

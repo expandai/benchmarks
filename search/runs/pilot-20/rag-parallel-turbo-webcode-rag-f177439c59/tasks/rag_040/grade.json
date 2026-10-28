@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_040",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 392.7,
+    "total_citation_tokens": 3927.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and does not provide the target information that the value will be rounded down. It also does not contradict it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] identifies the sub-byte types and says byte_size computes size from tensor shape and type. 2. It does not say how a fractional byte count is handled or that the result is rounded down. 3. That specific behavior is a non-trivial claim in the gold target, so the retrieved citations do not establish it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000868095,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

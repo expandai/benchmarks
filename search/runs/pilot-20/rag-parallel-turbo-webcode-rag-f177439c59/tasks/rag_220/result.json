@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_220",
+ "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+ "attempt": 1,
+ "answer": "In aiohttp 3.x, `FormData.add_field()` uses the field name as the filename when the value is `bytes`, `bytearray`, or `memoryview` and no `filename` is provided—unless `content_transfer_encoding` is specified.\n\n```python\nform.add_field(\"file\", b\"content\")\n```\n\nbehaves as though the filename were `\"file\"`.\n\nTo specify it explicitly:\n\n```python\nform.add_field(\"file\", b\"content\", filename=\"file.txt\")\n```\n\nIn aiohttp 4, passing raw bytes no longer creates a file field implicitly; use `filename=...` or pass an `io.BytesIO` object instead.",
+ "num_citations": 10,
+ "citation_text_tokens": 5408,
+ "citation_text_chars": 21287,
+ "search_queries": [
+  "aiohttp FormData add_field bytes value no filename fallback"
+ ],
+ "model_cost_usd": 0.0020891,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6917,
+  "output_tokens": 300,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 156
+ },
+ "latency_ms": 3705.8749590069056,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0030891,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

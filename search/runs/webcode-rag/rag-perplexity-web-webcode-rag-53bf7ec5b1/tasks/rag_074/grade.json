@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_074",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 399.4,
+    "total_citation_tokens": 3994.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that when no servers are active, the measured value is twice the number of queued connections, matching the gold target. Its example is consistent with that rule, and no claim contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when there are no active servers, twice the number of queued connections is used as the measured value.\n2. Citation [2] explicitly says this is what avg_queue considers when there are no active servers.\n3. The retrieved source contains the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009762249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

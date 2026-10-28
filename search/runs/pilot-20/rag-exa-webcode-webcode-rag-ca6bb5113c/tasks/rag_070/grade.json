@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_070",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 514.9,
+    "total_citation_tokens": 5149.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the feature is implemented in no current engines. Although the response notes open or unimplemented work for WebKit and Firefox, it also explicitly claims that Chrome, Firefox, and Safari support the feature in actual browser behavior. That contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations report that no browser had shipped `replacesClientId` in 2021, and show a WebKit implementation PR still open in 2023. 2. Those statements are historical and do not establish the implementation status in current engines. 3. The 2026 citation discusses alignment with browser behavior but does not explicitly state whether current engines implement `replacesClientId`. Therefore, the claim about current engines is not sufficiently established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001475725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

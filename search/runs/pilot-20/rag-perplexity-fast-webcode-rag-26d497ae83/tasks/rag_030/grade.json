@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_030",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 275.6,
+    "total_citation_tokens": 2756.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the forbidden BoundNames string as \"let,\" matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the string \"let\".\n2. Citation [1] explicitly states that a ForDeclaration whose BoundNames contains \"let\" is a Syntax Error.\n3. Citation [7] states the same rule. The citations directly support the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00069885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

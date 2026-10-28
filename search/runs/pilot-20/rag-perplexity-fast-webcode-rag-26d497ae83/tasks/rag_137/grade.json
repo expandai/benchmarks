@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 394.2,
+    "total_citation_tokens": 3942.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the requested imageAtomicExchange, but it also claims that imageAtomicAdd is available for float images. The gold target specifies imageAtomicExchange only, so the additional function contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly limits the base image atomic operation for float data to imageAtomicExchange and supplies its float signature.\n2. Citation [4] describes additional float image atomic operations provided by the GLSL atomic-float extension, so the word “only” is accurate for the base set described in [1], but not if that extension is included.\n3. The gold target answer is directly supported by [1].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011642249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

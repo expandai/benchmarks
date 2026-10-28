@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_169",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 357.8,
+    "total_citation_tokens": 3578.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact configuration filename in the gold target, `stm32f429disc1.cfg`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the OpenOCD config filename `stm32f429disc1.cfg`.\n2. Citation [1] gives the command `openocd -f board/stm32f429disc1.cfg` specifically for new STM32F407G-DISC1 boards with STLINK/V2.1.\n3. Citation [3] independently gives the same command for the STM32F407G-DISC1.\n4. The retrieved citations therefore contain the complete filename in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011443500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

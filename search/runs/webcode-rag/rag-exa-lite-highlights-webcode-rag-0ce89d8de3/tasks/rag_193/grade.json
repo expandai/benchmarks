@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 318.1,
+    "total_citation_tokens": 3181.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes the required Undertow option, `server.undertow.options.server.record-request-start-time=true`, represented as equivalent YAML, and identifies it as the prerequisite for `%D` access-log response time.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [3], and [7] state that Undertow’s `record-request-start-time` option must be enabled for access-log response timing; [3] and [7] give the exact Spring Boot property and value in the gold target.\nStep 2: The gold target contains one non-trivial claim—the required property is `server.undertow.options.server.record-request-start-time=true`. That exact property is present in the retrieved citations, so the target is fully grounded.\nStep 3: Citations [3] and [7] contain the exact property; [1] also supports the prerequisite using its YAML form.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008526,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

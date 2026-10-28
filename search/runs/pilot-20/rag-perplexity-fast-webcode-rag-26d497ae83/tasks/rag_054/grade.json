@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_054",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 385.5,
+    "total_citation_tokens": 3855.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the specified limit of 64 KB of body data, plus 8 KB for chunk headers when Transfer-Encoding: chunked is used. Its additional comments distinguish proxy behavior and do not contradict the requested limit.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3]–[5] state the 64Kb request-body limit and the additional 8Kb for chunk headers when `Transfer-Encoding: chunked` is used; citation [2] gives the same figures with lowercase “k”.\nStep 2: The target’s factual claims are all directly present in the retrieved sources, so the answer is grounded.\nStep 3: Citations [1]–[5] contain sufficient information to derive the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.001074475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

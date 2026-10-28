@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_147",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 122.1,
+    "total_citation_tokens": 1221.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the MinGW gettext substitute value for LC_MESSAGES as 1729, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations state that systems lacking LC_MESSAGES use an arbitrary substitute, identify that substitute as 1729, and specifically name mingw as an example.\nStep 2: The gold target answer is 1729, and the retrieved passages directly support that value. No non-trivial information in the gold target is missing.\nStep 3: Citations [1] and [5] directly establish the value; [2] corroborates the use of 1729 for LC_MESSAGES.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00051385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

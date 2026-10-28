@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_049",
+ "prompt": "Spring Boot server.tomcat.processor-cache negative value behavior",
+ "attempt": 1,
+ "answer": "Tomcat itself treats `processorCache=-1` as **unlimited**; `0` disables processor reuse, and the default is `200`.\n\nHowever, in the affected Spring Boot implementation, `server.tomcat.processor-cache` was applied **only when positive**. Therefore, setting it to `-1` did not configure Tomcat’s unlimited cache—the property was ignored, leaving Tomcat’s default processor-cache value (`200`).",
+ "num_citations": 10,
+ "citation_text_tokens": 4959,
+ "citation_text_chars": 20565,
+ "search_queries": [
+  "Spring Boot server.tomcat.processor-cache negative value behavior"
+ ],
+ "model_cost_usd": 0.00185745,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6024,
+  "output_tokens": 293,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 200
+ },
+ "latency_ms": 11098.471957957372,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00885745,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

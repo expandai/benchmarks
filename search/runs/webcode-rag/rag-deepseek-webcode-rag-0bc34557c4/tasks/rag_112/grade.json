@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_112",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 575.7,
+    "total_citation_tokens": 5757.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `mkdir` as the portable test-and-set mechanism, matching the gold target. The additional example does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the command `mkdir`.\n2. Citation [4] explicitly identifies `mkdir` as a portable test-and-set and shows it used to acquire the lock directory.\n3. Citation [2] independently states that `mkdir` is the most portable filesystem mechanism for test-and-set semantics.\n4. The retrieved citations contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011290999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

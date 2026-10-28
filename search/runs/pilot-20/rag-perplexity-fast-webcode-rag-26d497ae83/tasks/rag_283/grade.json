@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_283",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 375.3,
+    "total_citation_tokens": 3753.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies Python’s `shlex` module via `shlex.split()`, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the PYTEST_ADDOPTS environment variable is parsed using the shlex module.\n2. Citation [10] explicitly says the command line in PYTEST_ADDOPTS is parsed by the shlex module. Citation [4] also shows the implementation calling shlex.split on the variable's value.\n3. The gold target’s factual claim is supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008261,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

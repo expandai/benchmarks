@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_187",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 553.1,
+    "total_citation_tokens": 5531.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies ACKs, URGs, and RSTs, matching the gold target. Its additional details do not contradict the requested answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations state that ACK segments are the only segments acceptable when RCV.WND is zero.\n2. They separately state that the RST and URG fields of incoming segments must still be processed; they do not say that URG or RST segments are acceptable.\n3. Since the gold answer lists URGs and RSTs as acceptable segment types, that claim is not supported and conflicts with the stated acceptability rule. The gold target is therefore UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001467975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_176",
+ "prompt": "pacemaker colocation constraint resource template rsc with-rsc restriction",
+ "attempt": 1,
+ "answer": "In a Pacemaker `rsc_colocation` constraint, a resource template may be referenced by either `rsc` or `with-rsc`, but **not both**. The other attribute must reference a regular resource.\n\nExample:\n\n```xml\n<rsc_colocation\n    id=\"vm-template-colo-base-rsc\"\n    rsc=\"vm-template\"\n    rsc-role=\"Started\"\n    with-rsc=\"base-rsc\"\n    score=\"INFINITY\"/>\n```\n\nThis applies the colocation to all primitive resources derived from `vm-template`.\n\nA colocation constraint must either contain at least one resource set, or specify both `rsc` and `with-rsc`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5009,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "pacemaker colocation constraint resource template rsc with-rsc restriction"
+ ],
+ "model_cost_usd": 0.001854,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6303,
+  "output_tokens": 232,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 87
+ },
+ "latency_ms": 14041.78445902653,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008854,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

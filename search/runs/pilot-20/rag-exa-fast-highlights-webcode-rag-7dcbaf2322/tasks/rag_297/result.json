@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_297",
+ "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+ "attempt": 1,
+ "answer": "`@NotFound(action = NotFoundAction.IGNORE)` has the side effect of making a **to-one association non-lazy**, even when it is declared with `FetchType.LAZY`. Hibernate treats an orphaned foreign-key value as if it were `null` rather than throwing an exception.  \n\nFor example:\n\n```java\n@ManyToOne(fetch = FetchType.LAZY)\n@NotFound(action = NotFoundAction.IGNORE)\nprivate SomeEntity association;\n```\n\nThe association will still be loaded non-lazily. Hibernate may therefore issue additional queries, and its behavior can vary depending on whether the association is loaded with `JOIN` or `SELECT` fetching. (Hibernate `@NotFound` Javadoc; Hibernate developers’ discussion.)",
+ "num_citations": 10,
+ "citation_text_tokens": 5036,
+ "citation_text_chars": 19929,
+ "search_queries": [
+  "Hibernate Envers @NotFound IGNORE side effect to-one"
+ ],
+ "model_cost_usd": 0.00184485,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6132,
+  "output_tokens": 260,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 107
+ },
+ "latency_ms": 3621.4968339772895,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00884485,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

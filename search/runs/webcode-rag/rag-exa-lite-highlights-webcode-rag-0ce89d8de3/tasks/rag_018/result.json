@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_018",
+  "prompt": "foreign exception non-unwind ABI boundary Rust behavior",
+  "attempt": 1,
+  "answer": "A foreign exception crossing a Rust **non-unwinding ABI boundary** such as `extern \"C\"` is **undefined behavior**. It is **not guaranteed to abort**.\n\nRelevant distinctions:\n\n- **Foreign exception → Rust via `extern \"C\"`:** undefined behavior.\n- **Rust panic → foreign caller via `extern \"C\"`:** Rust automatically catches it and aborts the process.\n- **Foreign exception → Rust via `extern \"C-unwind\"`:** permitted when using the unwind ABI. If `panic=abort`, the process aborts.\n- Catching a foreign exception with `std::panic::catch_unwind` has unspecified behavior: it either aborts or returns `Err` containing an opaque type.",
+  "num_citations": 10,
+  "citation_text_tokens": 4313,
+  "citation_text_chars": 20235,
+  "search_queries": [
+    "foreign exception non-unwind ABI boundary Rust behavior"
+  ],
+  "model_cost_usd": 0.00168865,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5392,
+    "output_tokens": 284,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 132
+  },
+  "latency_ms": 4741.653832956217,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00568865,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

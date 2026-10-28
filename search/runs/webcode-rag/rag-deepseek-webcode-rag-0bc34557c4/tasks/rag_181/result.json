@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_181",
+ "prompt": "rust futures select_next_some behavior with None",
+ "attempt": 1,
+ "answer": "When the underlying stream is empty and yields `None`, `select_next_some()` becomes terminated:\n\n- Its initial `is_terminated()` is `false`.\n- Polling it while the stream is empty returns `Poll::Pending`.\n- Afterwards, `is_terminated()` is `true`.\n- If a new future is pushed into the underlying `FuturesUnordered`, it can become active again; the tests verify that it later processes the newly added item.\n\nThe tests also show this behavior works with `select!`, where termination is handled by the `complete` branch.",
+ "num_citations": 10,
+ "citation_text_tokens": 2531,
+ "citation_text_chars": 10526,
+ "search_queries": [
+  "rust futures select_next_some behavior with None"
+ ],
+ "model_cost_usd": 0.0016646,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4115,
+  "output_tokens": 530,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 409
+ },
+ "latency_ms": 7117.496334016323,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0024146000000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

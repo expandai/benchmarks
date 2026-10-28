@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_071",
+ "prompt": "GNU diff expand-tabs encoding error column width treatment",
+ "attempt": 1,
+ "answer": "GNU `diff` treats tab and encoding-error widths as follows:\n\n- `--expand-tabs` (`-t`) expands tabs into spaces so tab-aligned columns remain aligned.\n- Tab stops are normally every 8 display/print columns; `--tabsize=NUM` changes this.\n- For column calculations, `diff` assumes the output device respects tab stops and displays each character with the width reported by the operating system.\n- It assumes **each encoding-error byte occupies one column**.\n- This is only a guess: there is no standard width for displayed encoding errors. Some programs use one column per byte, others use two columns, and Emacs may use four.\n- Consequently, output containing encoding errors or non-ASCII characters may not line up with the display device, and `--ignore-tab-expansion` (`-E`) analysis may differ from what the device displays.\n\nSources: [GNU diffutils documentation update](https://lists.libreplanet.org/archive/html/diffutils-devel/2023-07/txtLnL_3AmLXk.txt), [Paul Eggert’s explanation](https://public-inbox.org/bug-gnulib/9946e92b-daca-7c7c-bf8d-ff95897774f3@cs.ucla.edu/), [diff manual](http://odysseus.fi.muni.cz/pub/gnu/old-gnu/Manuals/diffutils/html_mono/diff.html).",
+ "num_citations": 7,
+ "citation_text_tokens": 3534,
+ "citation_text_chars": 14249,
+ "search_queries": [
+  "GNU diff expand-tabs encoding error column width treatment"
+ ],
+ "model_cost_usd": 0.00163715,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4634,
+  "output_tokens": 399,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 93
+ },
+ "latency_ms": 4981.413832982071,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0056371500000000005,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

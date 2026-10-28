@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_139",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 436.9,
+    "total_citation_tokens": 4369.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold range of -15 to -9 for raw compression, but it also states that raw inflate accepts -15 to -8. That broader range conflicts with the gold target for the requested valid raw-data range.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] explicitly states that raw-data windowBits range from -15 to -9.\nStep 2: This matches the gold target answer, and the answer contains no additional unsupported factual claims.\nStep 3: Citation [2] alone contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009996,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

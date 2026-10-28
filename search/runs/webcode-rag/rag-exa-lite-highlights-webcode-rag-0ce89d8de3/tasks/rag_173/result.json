@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_173",
+  "prompt": "gawk debugger eval command restricted statements",
+  "attempt": 1,
+  "answer": "The gawk debugger’s `eval` command cannot execute statements containing:\n\n- `exit`\n- `getline`\n- `next`\n- `nextfile`\n- `return`\n\nIt can otherwise evaluate AWK statements in the running program’s context, including assignments and function calls. A `return` inside a user-defined function was documented as restricted in older versions; a later search result reports that a patch fixed that issue.",
+  "num_citations": 10,
+  "citation_text_tokens": 5829,
+  "citation_text_chars": 20121,
+  "search_queries": [
+    "gawk debugger eval command restricted statements"
+  ],
+  "model_cost_usd": 0.00198495,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7518,
+    "output_tokens": 88,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3012.9197920905426,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00598495,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

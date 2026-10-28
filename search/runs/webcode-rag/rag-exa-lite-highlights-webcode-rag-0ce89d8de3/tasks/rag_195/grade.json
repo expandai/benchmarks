@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 471.6,
+    "total_citation_tokens": 4716.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states the central obligation: an oversized field block must still be processed to keep connection state consistent, unless the connection is closed. However, it additionally claims that failing to decompress it requires termination specifically with COMPRESSION_ERROR. RFC 9113 permits closing the connection as an alternative to processing the block and does not require that particular error code for merely declining to process an oversized block. This unsupported, over-specific claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The target requires processing an oversized field block to preserve consistent connection state, with connection closure as the exception. Citations [4] and [5] directly say to decode or continue processing the complete block so the connection-scoped HPACK dynamic table remains synchronized. Citation [4] also states that the connection is torn down only beyond a hard cap, supporting the stated exception. The retrieved sources therefore contain all the target’s non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001524725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

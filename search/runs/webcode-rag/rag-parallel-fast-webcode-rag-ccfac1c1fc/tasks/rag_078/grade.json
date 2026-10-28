@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_078",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 256.2,
+    "total_citation_tokens": 2562.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides no information about what happens when the jq update-assignment right-hand side produces no values. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation describes `|=` as modifying the value at the LHS and says only one RHS output is used as the final value.\n2. It does not state what happens when the RHS produces no values, nor that the LHS path is deleted as with `del(path)`.\n3. That deletion behavior is a non-trivial claim in the gold target and is not established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000670225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_198",
+ "prompt": "RFC 3986 relative-part path rule instead of path-rootless",
+ "attempt": 1,
+ "answer": "RFC 3986 uses `path-noscheme` in `relative-part`, not `path-rootless`:\n\n```abnf\nrelative-part = \"//\" authority path-abempty\n              / path-absolute\n              / path-noscheme\n              / path-empty\n```\n\nThis is intentional: a relative-path reference cannot have a colon in its first segment, because that could be mistaken for a scheme name. `path-noscheme` is defined as:\n\n```abnf\npath-noscheme = segment-nz-nc *( \"/\" segment )\n```\n\nwhere `segment-nz-nc` is a nonempty segment without `:`.\n\nBy contrast, `path-rootless` permits a colon in its first segment and is used in the URI `hier-part`, allowing examples such as `about:blank`, `file:foo/bar`, and `urn:example.net:foo:bar`.\n\nHowever, the RFC 3986 errata proposes adding `path-abempty` to `relative-part`:\n\n```abnf\nrelative-part = \"//\" authority path-abempty\n              / path-absolute\n              / path-noscheme\n              / path-abempty\n              / path-empty\n```\n\nThe stated reason is that the original rule excludes `/` as a valid relative reference.",
+ "num_citations": 10,
+ "citation_text_tokens": 3997,
+ "citation_text_chars": 17074,
+ "search_queries": [
+  "RFC 3986 relative-part path rule instead of path-rootless"
+ ],
+ "model_cost_usd": 0.0018761,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5369,
+  "output_tokens": 445,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 183
+ },
+ "latency_ms": 5285.04508396145,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0088761,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

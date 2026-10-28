@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_240",
+ "prompt": "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue",
+ "attempt": 1,
+ "answer": "`SelectedListValue` differs from GraphQL’s `ListValue` by allowing only one `SelectedValue` as an element, rather than arbitrary value literals or variables.\n\nIts grammar is:\n\n```graphql\nSelectedListValue ::\n  [ SelectedValue ]\n  [ SelectedListValue ]\n```\n\nSo `SelectedListValue` supports a single selected value, potentially nested in further lists. In contrast, `ListValue` may contain any value literal or variable, such as `[1, 2, 3]`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2092,
+ "citation_text_chars": 9136,
+ "search_queries": [
+  "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue"
+ ],
+ "model_cost_usd": 0.00109215,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3222,
+  "output_tokens": 239,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 130
+ },
+ "latency_ms": 3958.494415972382,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00209215,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

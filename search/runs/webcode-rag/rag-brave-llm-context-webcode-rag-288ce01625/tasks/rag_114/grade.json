@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 180.5,
+    "total_citation_tokens": 1805.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the default dispatcher type is REQUEST. The predicted answer claims the default also matches FORWARD, INCLUDE, and sometimes ASYNC, so it contradicts the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [6] explicitly identifies REQUEST as the default, and citation [4] also lists REQUEST among the dispatcher types matched when none is specified. Step 2: The target answer, REQUEST, is supported by the retrieved citations. Citation [4] clarifies that the default behavior may also include other dispatcher types, so the evidence does not establish that REQUEST is the only default type; the target does not make that exclusivity claim. Step 3: Citations [4] and [6] contain evidence supporting the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000911725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

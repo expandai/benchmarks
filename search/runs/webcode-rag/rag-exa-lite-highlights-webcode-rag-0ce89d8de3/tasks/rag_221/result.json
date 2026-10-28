@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_221",
+  "prompt": "kubernetes OwnerReference blockOwnerDeletion missing permission error response",
+  "attempt": 1,
+  "answer": "The error means the caller is trying to set:\n\n```yaml\nmetadata:\n  ownerReferences:\n  - blockOwnerDeletion: true\n```\n\nbut lacks permission on the **owner resource’s `finalizers` subresource**.\n\nGrant the controller’s ServiceAccount `update` permission on the owner’s `/finalizers` subresource. For example, if the owner is a Deployment:\n\n```yaml\n- apiGroups: [\"apps\"]\n  resources: [\"deployments/finalizers\"]\n  verbs: [\"update\"]\n```\n\nIf the owner is a Pod:\n\n```yaml\n- apiGroups: [\"\"]\n  resources: [\"pods/finalizers\"]\n  verbs: [\"update\"]\n```\n\nApply the equivalent rule for the actual owner kind and API group. This is required when the `OwnerReferencesPermissionEnforcement` admission plugin is enabled. The permission check is based on the owner’s finalizers subresource, not the dependent resource. (Search results: [Kubernetes OwnerReference](https://kubernetes.io/docs/reference/kubernetes-api/definitions/owner-reference-v1-meta/), [Kubernetes issue #101185](https://github.com/kubernetes/kubernetes/issues/101185))",
+  "num_citations": 10,
+  "citation_text_tokens": 4420,
+  "citation_text_chars": 18442,
+  "search_queries": [
+    "kubernetes OwnerReference blockOwnerDeletion missing permission error response"
+  ],
+  "model_cost_usd": 0.0019443,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5709,
+    "output_tokens": 431,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 186
+  },
+  "latency_ms": 6178.380000055768,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059443,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

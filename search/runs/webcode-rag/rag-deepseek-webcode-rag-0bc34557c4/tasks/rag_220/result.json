@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_220",
+ "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+ "attempt": 1,
+ "answer": "In aiohttp 3.x, passing a `bytes`, `bytearray`, or `memoryview` value without a filename falls back to using the field name as the filename:\n\n```python\nform.add_field(\"data\", b\"content\")\n# filename becomes \"data\"\n```\n\nIf `content_transfer_encoding` is also `None`, aiohttp emits a `DeprecationWarning` recommending that you explicitly provide `filename` or use `io.BytesIO` instead. [aiohttp.formdata](https://docs.aiohttp.org/en/v3.12.14/_modules/aiohttp/formdata.html#FormData)\n\nIn aiohttp v4, passing bytes no longer creates a file field unless `filename` is explicitly provided. [CHANGES/8303.breaking.rst](https://github.com/aio-libs/aiohttp/blob/7275bea9eae591d5246b8fd9e2e9ba004b6f30f7/CHANGES/8303.breaking.rst)",
+ "num_citations": 10,
+ "citation_text_tokens": 1929,
+ "citation_text_chars": 8184,
+ "search_queries": [
+  "aiohttp FormData add_field bytes value no filename fallback"
+ ],
+ "model_cost_usd": 0.0012838,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3619,
+  "output_tokens": 316,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 100
+ },
+ "latency_ms": 4285.169166978449,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020338,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

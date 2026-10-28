@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_292",
+ "prompt": "ctypes BigEndianStructure non-native byte order field type restriction",
+ "attempt": 1,
+ "answer": "`BigEndianStructure`/`LittleEndianStructure` only accept field types that support byte-order swapping:\n\n- Simple ctypes types such as `c_int`, `c_ushort`, and `c_char`\n- Arrays of supported types\n- Nested `Structure` types in current ctypes\n\nPointer fields are not supported, including `c_char_p`. A `c_char_p` field represents a pointer to string data elsewhere; it is not an inline variable-length string, and pointers have no meaningful non-native byte order in this context.\n\nFor an inline string, use a character array, for example:\n\n```python\nclass PacketString(BigEndianStructure):\n    _fields_ = [\n        (\"length\", c_ushort),\n        (\"value\", c_char * 0),\n    ]\n```\n\nA fixed-size inline string could instead use `c_char * N`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4633,
+ "citation_text_chars": 18282,
+ "search_queries": [
+  "ctypes BigEndianStructure non-native byte order field type restriction"
+ ],
+ "model_cost_usd": 0.00198225,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5952,
+  "output_tokens": 412,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 235
+ },
+ "latency_ms": 6510.812291060574,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0027322500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_197",
+ "prompt": "wget time-stamping Content-Length size mismatch behavior",
+ "attempt": 1,
+ "answer": "With Wget time-stamping enabled, it downloads the remote file if the local file does not exist **or if the local and remote file sizes differ**, regardless of timestamps. The documented behavior is:\n\n> “If the local file does not exist, or the sizes of the files do not match, Wget will download the remote file no matter what the time-stamps say.”\n\nIf the server’s `Content-Length` is larger than the actual response body, Wget may wait for more data and hang. Wget provides an option to ignore the header—`--ignore-length`—which treats `Content-Length` as if it were not present.",
+ "num_citations": 10,
+ "citation_text_tokens": 1996,
+ "citation_text_chars": 8712,
+ "search_queries": [
+  "wget time-stamping Content-Length size mismatch behavior"
+ ],
+ "model_cost_usd": 0.00106585,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2872,
+  "output_tokens": 290,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 153
+ },
+ "latency_ms": 5735.415667062625,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00304585,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

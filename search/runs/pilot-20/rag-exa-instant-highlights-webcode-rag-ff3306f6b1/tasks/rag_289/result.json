@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_289",
+ "prompt": "micronaut openapi multiple spec files UI frameworks support",
+ "attempt": 1,
+ "answer": "Micronaut OpenAPI supports multiple specification files in several ways:\n\n- **Multiple generated specifications:** Use **OpenAPI groups** or Micronaut versioning.  \n  Source: [Support for Multiple OpenAPI Definitions](https://github.com/micronaut-projects/micronaut-openapi/issues/225), [Multiple swagger definition](https://github.com/micronaut-projects/micronaut-openapi/issues/509)\n\n- **Additional existing YAML/JSON files:** Configure `micronaut.openapi.additional.files` with a comma-separated list of file or directory paths. Supported prefixes include `file:`, `classpath:`, and `project:`.  \n  Source: [Micronaut OpenAPI guide](https://micronaut-projects.github.io/micronaut-openapi/6.15.0/guide/)\n\n- **Merge behavior:** `micronaut.openapi.additional.files-merge-mode` supports:\n  - `append`: generated elements take precedence\n  - `replace`: additional-file elements take precedence  \n  The default is `replace`.\n\n- **Multiple-file generation:** A fix for generating from multiple Swagger files was merged in September 2024.  \n  Source: [PR #1738](https://github.com/micronaut-projects/micronaut-openapi/pull/1738)\n\nThe supported UI frameworks/views listed are:\n\n- Swagger UI\n- ReDoc\n- OpenAPI Explorer\n- Scalar\n- RapiDoc\n\nSource: [OpenApiViewConfig API documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/api/io/micronaut/openapi/view/OpenApiViewConfig.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 4868,
+ "citation_text_chars": 21467,
+ "search_queries": [
+  "micronaut openapi multiple spec files UI frameworks support"
+ ],
+ "model_cost_usd": 0.00193645,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5788,
+  "output_tokens": 408,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 70
+ },
+ "latency_ms": 5158.08666695375,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00593645,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

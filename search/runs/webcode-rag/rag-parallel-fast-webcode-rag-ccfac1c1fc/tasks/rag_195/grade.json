@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 235.8,
+    "total_citation_tokens": 2358.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not state whether an oversized field block must be processed or provide any related information. It neither confirms nor contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold answer requires a specific obligation: a rejected field block must still be processed to preserve consistent connection state, unless the connection is closed.\n2. The retrieved excerpts mention field-block processing as a discrete unit and field-section decompression, but none state this rejection obligation or the exception for a closed connection.\n3. Because that non-trivial claim is absent, the citations do not contain sufficient information to derive the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000673725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

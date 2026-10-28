@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_218",
+  "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+  "attempt": 1,
+  "answer": "`assign_new/3` can share assigns from a parent LiveView to a child LiveView when:\n\n- The parent and child are both mounted while connected.\n- The child is mounted when the parent is mounted.\n- The child is **not** rendered with `sticky: true`.\n- The child calls `assign_new/3` for the same assign in its `mount/3` callback.\n\nExample:\n\n```elixir\n# Parent\ndef mount(_params, _session, socket) do\n  {:ok, assign(socket, :current_user, user)}\nend\n\n# Child\ndef mount(_params, _session, socket) do\n  {:ok, assign_new(socket, :current_user, fn -> load_user() end)}\nend\n```\n\nIf the parent assign is available, the child’s fallback function is not needed. However, assign sharing is “performed when possible but not guaranteed.” If it must always be available, pass the value to the child through its session instead.",
+  "num_citations": 10,
+  "citation_text_tokens": 2195,
+  "citation_text_chars": 9719,
+  "search_queries": [
+    "Phoenix LiveView assign_new parent child sharing conditions"
+  ],
+  "model_cost_usd": 0.0011852,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3215,
+    "output_tokens": 318,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 111
+  },
+  "latency_ms": 5738.44958411064,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0061852,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

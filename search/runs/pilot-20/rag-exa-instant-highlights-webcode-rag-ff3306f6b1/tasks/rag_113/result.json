@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_113",
+ "prompt": "wasm-bindgen webdriver.json headless argument override behavior",
+ "attempt": 1,
+ "answer": "`webdriver.json` cannot override or remove the automatically added headless argument.\n\nWhen creating the WebDriver session, wasm-bindgen:\n\n- Firefox: appends `\"-headless\"` to `moz:firefoxOptions.args`.\n- Chrome: appends `\"headless\"`, `\"disable-dev-shm-usage\"`, and `\"no-sandbox\"` to `goog:chromeOptions.args`.\n- Edge: appends the equivalent arguments to `ms:edgeOptions.args`.\n\nIf `args` already exists in `webdriver.json`, these arguments are appended to it; they are not replaced. The guide therefore states that the `headless` argument is always enabled.\n\nTo disable headless mode, use:\n\n```bash\nNO_HEADLESS=1\n```\n\nThe configuration file itself can be selected with `WASM_BINDGEN_TEST_WEBDRIVER_JSON`; otherwise, `webdriver.json` is read from the crate root.",
+ "num_citations": 10,
+ "citation_text_tokens": 4890,
+ "citation_text_chars": 20450,
+ "search_queries": [
+  "wasm-bindgen webdriver.json headless argument override behavior"
+ ],
+ "model_cost_usd": 0.00197375,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6518,
+  "output_tokens": 287,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 97
+ },
+ "latency_ms": 4145.081333932467,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00597375,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

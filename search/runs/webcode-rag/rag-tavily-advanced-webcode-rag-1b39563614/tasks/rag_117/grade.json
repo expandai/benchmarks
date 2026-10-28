@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_117",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 399.7,
+    "total_citation_tokens": 3997.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a Git repository may have at most one bitmap file in use, matching the gold target. Its added detail about the bitmap being associated with a single pack or the MIDX does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a repository may have at most one bitmap file in use.\n2. Citation [1] says this directly. Citations [4] and [6] also confirm the one-bitmap limit, including when the bitmap corresponds to multiple packs.\n3. The citations therefore contain the factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000858225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 591.0,
+    "total_citation_tokens": 5910.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes `imageAtomicExchange`, which matches the gold target, but also claims that `imageAtomicAdd`, `imageAtomicLoad`, and `imageAtomicStore` are applicable GLSL floating-point image atomic operations. The gold target specifies `imageAtomicExchange` only, and the additional function claims are incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations identify imageAtomicExchange as an image atomic operation that accepts float data.\n2. However, they also identify imageAtomicAdd as a float image atomic operation.\n3. Therefore, the sources do not support the gold answer’s exclusivity claim that imageAtomicExchange is the only function.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012514750000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

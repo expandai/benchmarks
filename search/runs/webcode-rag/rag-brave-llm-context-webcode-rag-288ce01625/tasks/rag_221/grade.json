@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_221",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 259.1,
+    "total_citation_tokens": 2591.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains the permission issue and how to fix it, but it does not state the error response code requested by the question. It does not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is the response code and status: 422 (Unprocessable Entity).\n2. Citation [6] explicitly states that 422 (Unprocessable Entity) is returned when the required permission to set `blockOwnerDeletion` is lacking.\n3. The retrieved citations therefore contain the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000769725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

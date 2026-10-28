@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_233",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 276.2,
+    "total_citation_tokens": 2762.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Guile scans the first 500 characters of a Scheme source file, matching the gold target's top 500 characters.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the scan range limit is the top 500 characters of the file.\n2. Citations [1] and [5] explicitly state that the coding declaration is sought in, or the file is scanned across, the top 500 characters.\n3. The retrieved citations therefore contain the factual information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006894749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

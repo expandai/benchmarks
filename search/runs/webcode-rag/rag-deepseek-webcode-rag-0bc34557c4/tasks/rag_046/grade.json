@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_046",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 151.5,
+    "total_citation_tokens": 1515.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when no video stream is present, the bitmap subtitle stream is converted to video at 720×576, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target answer is “720x576.” Citation [1] explicitly gives 720×576 as the fallback when no video is present, and citation [4] states the same fallback as 720x576. Thus the target answer is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00053685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

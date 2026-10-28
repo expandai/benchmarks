@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_218",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 354.8,
+    "total_citation_tokens": 3548.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer discusses assign_new/3 and gives related requirements, but it omits the target conditions that the child is mounted when the parent is mounted and is not rendered with sticky: true. It does not directly contradict those conditions, so this is NOT_ATTEMPTED.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations say that nested LiveView children can access parent assigns on mount using `assign_new`.\n2. They do not establish that the child is mounted when the parent is mounted.\n3. They do not mention `sticky: true` or state that the condition depends on whether it is used.\n4. Those are non-trivial conditions in the gold target, so the retrieved citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009376,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

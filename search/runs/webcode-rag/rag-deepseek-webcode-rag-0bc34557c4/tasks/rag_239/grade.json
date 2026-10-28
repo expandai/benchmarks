@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_239",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 294.0,
+    "total_citation_tokens": 2940.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the limit is 199 commands per script. The predicted answer instead gives 100 commands for HP-UX and a portable limit of 99, so it does not provide the target answer and contradicts it.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations give limits of 100 commands for particular sed implementations and a portable limit of 99 commands. None states or supports a maximum of 199 commands per script. Since the gold target's specific number is absent and conflicts with the retrieved limits, the sources do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00077485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

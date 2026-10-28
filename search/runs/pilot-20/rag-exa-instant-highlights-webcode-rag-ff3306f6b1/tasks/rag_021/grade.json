@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 213.1,
+    "total_citation_tokens": 2131.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer includes the exact gold output string, `[64dec-fail]`, and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the failure output of curl’s `64dec` function: `[64dec-fail]`.\n2. Citations [4], [6], and [7] explicitly state that an undecodable sequence outputs `[64dec-fail]`. Citation [1] also confirms that invalid Base64 causes the function to return the failure string, though it omits the brackets in its rendering.\n3. The retrieved sources therefore contain the specific failure output given in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000690225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

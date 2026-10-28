@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 382.5,
+    "total_citation_tokens": 3825.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that session-aware tokens are regenerated only on session upgrades. The predicted answer claims additional regeneration conditions, including a missing or expired token and after successful unsafe requests, so it contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that tokens are regenerated only on session upgrades.\n2. Citations [1] and [2] state this condition verbatim.\n3. The retrieved citations therefore contain the complete non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000935725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

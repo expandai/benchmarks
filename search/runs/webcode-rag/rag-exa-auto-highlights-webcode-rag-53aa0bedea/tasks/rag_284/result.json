@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_284",
+  "prompt": "jq |= update-assignment right-hand side outputs empty",
+  "attempt": 1,
+  "answer": "`empty` produces no value at all—not even `null`. For `|=`, the documented behavior is that if the RHS produces no values, the LHS path is deleted, equivalent to `del(path)`.\n\nHowever, jq 1.6 has a bug with empty update results. For example:\n\n```sh\necho '[1, 2]' | jq -c '.[] |= empty'\n```\n\nmay produce:\n\n```json\n[2]\n```\n\ninstead of deleting both elements. The behavior is documented as inconsistent in jq 1.6.\n\nUse `del` explicitly as a workaround:\n\n```sh\necho '[1, 2]' | jq -c 'del(.[])'\n```\n\nwhich produces:\n\n```json\n[]\n```\n\nFor jq 1.6, also consider replacing `|=` with `=` when appropriate, for example:\n\n```jq\n.a = (.a | ...)\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 4538,
+  "citation_text_chars": 15761,
+  "search_queries": [
+    "jq |= update-assignment right-hand side outputs empty"
+  ],
+  "model_cost_usd": 0.0018001,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5785,
+    "output_tokens": 295,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 105
+  },
+  "latency_ms": 5273.669042042457,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0088001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

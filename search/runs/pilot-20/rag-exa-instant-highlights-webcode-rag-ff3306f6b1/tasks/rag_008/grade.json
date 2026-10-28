@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_008",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 494.2,
+    "total_citation_tokens": 4942.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that -mcrbits is enabled by default for POWER8 and later regardless of optimization level, and for other CPUs at -O2 or higher. This matches the gold target. The additional note about overriding the setting does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that CR-bit tracking defaults on for POWER8 and above. Citation [8] explicitly says this.\n2. The gold target also states that it defaults on for all other CPUs when optimization is applied at -O2 and above. Citation [8] explicitly includes this condition.\n3. The retrieved passage contains every non-trivial claim in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001041475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

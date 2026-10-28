@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_082",
+ "prompt": "RFC 7230 quoted-pair backslash escape allowed control characters",
+ "attempt": 1,
+ "answer": "RFC 7230 allows a quoted-pair to escape **only HTAB** among control characters.\n\nIts grammar is:\n\n```abnf\nquoted-pair = \"\\\" ( HTAB / SP / VCHAR / obs-text )\n```\n\nThus, backslash-escaping is allowed for:\n\n- **HTAB** (horizontal tab)\n- **SP** (space)\n- **VCHAR** (visible US-ASCII characters)\n- **obs-text** (`%x80-FF`)\n\nOther control characters—including **NUL, CR, and LF**—are not allowed. RFC 7230 explicitly states that the rule no longer allows escaping control characters other than HTAB.",
+ "num_citations": 10,
+ "citation_text_tokens": 8494,
+ "citation_text_chars": 34036,
+ "search_queries": [
+  "RFC 7230 quoted-pair backslash escape allowed control characters"
+ ],
+ "model_cost_usd": 0.00275335,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 9958,
+  "output_tokens": 220,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 78
+ },
+ "latency_ms": 5424.247374990955,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00473335,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

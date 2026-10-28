@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_171",
+ "prompt": "CSS box-shadow spread distance corner radius adjustment proportion",
+ "attempt": 1,
+ "answer": "For an **outset `box-shadow`**, the older CSS rule adjusts a corner radius when the radius is smaller than the spread:\n\n\\[\nr' = r + s\\left[1+\\left(\\frac{r}{s}-1\\right)^3\\right]\n\\]\n\nwhere:\n\n- \\(r\\) is the original corner radius\n- \\(s\\) is the spread distance\n- \\(r'\\) is the shadow’s adjusted radius\n\nIf \\(r \\ge s\\), the radius is simply increased by the spread:\n\n\\[\nr' = r+s\n\\]\n\nExample: with a 10px radius and 20px spread:\n\n\\[\nr' = 10 + 20[1+(0.5-1)^3] = 27.5\\text{px}\n\\]\n\nrather than 30px.\n\nA newer CSS Working Group resolution uses a coverage-based adjustment. For horizontal and vertical radii \\(r_w,r_h\\), and element dimensions \\(w,h\\):\n\n\\[\nc=\\min\\left(\\frac{2r_w}{w},\\frac{2r_h}{h}\\right)\n\\]\n\nThen, for each radius component:\n\n```js\nif (radius >= spread || coverage >= 1)\n    adjusted = radius + spread;\nelse\n    adjusted = radius\n      + spread * (1 - (1 - radius / spread)**3 * (1 - coverage**3));\n```\n\nThis preserves circular corners and makes the spread adjustment depend on how much of the element’s width or height the radius covers. The CSS Working Group resolved to use this “last option,” and a Chromium commit dated October 16, 2025 says it applied the coverage-based algorithm.",
+ "num_citations": 10,
+ "citation_text_tokens": 5184,
+ "citation_text_chars": 20064,
+ "search_queries": [
+  "CSS box-shadow spread distance corner radius adjustment proportion"
+ ],
+ "model_cost_usd": 0.0023334,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6579,
+  "output_tokens": 574,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 217
+ },
+ "latency_ms": 6787.366874981672,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0093334,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

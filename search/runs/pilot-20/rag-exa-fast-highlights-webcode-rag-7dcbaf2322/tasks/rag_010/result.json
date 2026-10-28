@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_010",
+ "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+ "attempt": 1,
+ "answer": "HTTP/2 intermediaries treat them differently:\n\n- **DATA padding:** Intermediaries **SHOULD maintain** it. DATA frames are flow-controlled, and the entire DATA payload—including the pad length and padding—is counted toward flow control.  \n  Source: [HTTP/2 issue #505](https://github.com/httpwg/http2-spec/issues/505), [RFC 9113 §6.1](https://www.rfc-editor.org/rfc/rfc9113.html).\n\n- **HEADERS and PUSH_PROMISE padding:** Intermediaries **MAY pass it through, re-pad it, or drop it**. These are non-flow-controlled, header-bearing frames, and padding can block other streams similarly to a large header block.  \n  Source: [HTTP/2 issue #505](https://github.com/httpwg/http2-spec/issues/505).\n\nAll three frame types use a `PADDED` flag, an optional `Pad Length`, and trailing padding; the padding octets must be zero when sent. HEADERS and PUSH_PROMISE padding applies to their individual frame payloads, not to subsequent CONTINUATION frames.",
+ "num_citations": 10,
+ "citation_text_tokens": 4872,
+ "citation_text_chars": 20648,
+ "search_queries": [
+  "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+ ],
+ "model_cost_usd": 0.002147,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6203,
+  "output_tokens": 497,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 261
+ },
+ "latency_ms": 6359.445417067036,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.009147,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

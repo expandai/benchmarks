@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_106",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 379.8,
+    "total_citation_tokens": 3798.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that overlapping addresses are handled from the least-significant element to the most-significant element, matching the gold target. Its lane 0, then lane 1 explanation is consistent with that ordering.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages directly state the ordering guarantee for masked scatter operations with overlapping addresses.\nStep 2: The gold target’s sole factual claim—that the order is from least-significant to most-significant element—is explicitly present in the retrieved citations. Therefore, it is fully grounded.\nStep 3: Citations [1], [2], and [3] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000928975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

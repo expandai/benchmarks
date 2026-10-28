@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 443.6,
+    "total_citation_tokens": 4436.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explains that `select_next_some()` produces values only for `Some(_)` and does not resolve with `None`; a terminated stream’s branch is treated as terminated by `select!`. This matches the gold target that branches run only for `Some` values and `None`s are ignored. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The implementation returns `Poll::Ready(item)` only when polling the stream returns `Some(item)`.\n2. When the stream returns `None`, the future returns `Poll::Pending` instead of yielding `None`.\n3. Therefore the citations support that `select_next_some` ignores `None` results and lets the `select!` branch run for `Some` values. The gold target’s claims are all supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001228975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

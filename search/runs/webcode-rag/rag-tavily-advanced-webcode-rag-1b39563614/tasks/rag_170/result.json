@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_170",
+  "prompt": "awk next statement executed END action historical behavior",
+  "attempt": 1,
+  "answer": "Historically, `awk` implementations behaved as follows:\n\n- `next` in a `BEGIN` action produced an error.\n- `next` in an `END` action caused `awk` to terminate.\n\nThis behavior was undocumented and was not standardized. POSIX specifies that using `next` in either `BEGIN` or `END` has undefined behavior. GNU `awk` treats it as a syntax error.",
+  "num_citations": 10,
+  "citation_text_tokens": 4045,
+  "citation_text_chars": 17482,
+  "search_queries": [
+    "awk next statement executed END action historical behavior"
+  ],
+  "model_cost_usd": 0.0014163,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4941,
+    "output_tokens": 151,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 62
+  },
+  "latency_ms": 6023.400333011523,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0174163,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

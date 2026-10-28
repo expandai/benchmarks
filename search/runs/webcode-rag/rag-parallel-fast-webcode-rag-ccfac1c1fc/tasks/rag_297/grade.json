@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_297",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 203.6,
+    "total_citation_tokens": 2036.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that @NotFound(action = IGNORE) implicitly fetches the to-one association eagerly even when configured as lazy, which matches the gold target. Its additional explanation about missing rows does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited Envers documentation explicitly states that applying `@NotFound(action = NotFoundAction.IGNORE)` causes implicit eager loading of to-one relations. Step 2: This directly supports the entire gold target answer, with no missing non-trivial claims. Step 3: Citations [3], [4], [5], and [7] each contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0006666,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

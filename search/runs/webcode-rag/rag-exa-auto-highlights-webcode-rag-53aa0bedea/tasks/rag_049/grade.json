@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_049",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 470.8,
+    "total_citation_tokens": 4708.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says a negative processor-cache value makes the cache unlimited, with a theoretical maximum equal to the maximum number of connections. The predicted answer says the negative value is ignored and the cache remains at the default of 200, directly contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] supports the Tomcat-level claim that a processor-cache value of -1 means unlimited, with the theoretical maximum tied to getMaxConnections().\n2. However, the question concerns the Spring Boot property, and [1] says Spring Boot only applies that property when it is positive, preventing -1 from configuring an unlimited cache.\n3. Therefore, the retrieved sources do not support the gold answer as a description of the Spring Boot property’s negative-value behavior; the directly relevant Spring Boot citation contradicts that conclusion.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0014021,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

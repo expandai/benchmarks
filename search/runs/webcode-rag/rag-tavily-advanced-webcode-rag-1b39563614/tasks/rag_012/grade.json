@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_012",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 370.9,
+    "total_citation_tokens": 3709.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a length value of +0, but the predicted answer says the Function constructor’s length is 1. This directly contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [10] says a default constructor is a no-argument constructor.\n2. Citation [4] says a function’s `length` indicates its number of parameters, and demonstrates that a function with no parameters has length 0.\n3. Taken together, these citations support the gold target value of +0𝔽 for the default constructor function’s length property.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001125725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

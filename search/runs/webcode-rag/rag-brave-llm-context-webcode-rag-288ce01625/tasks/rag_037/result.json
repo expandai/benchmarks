@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_037",
+  "prompt": "rust repr packed struct nested repr align member restriction",
+  "attempt": 1,
+  "answer": "Rust imposes these restrictions:\n\n- `#[repr(align(...))]` and `#[repr(packed(...))]` cannot be applied to the same type.\n- A `#[repr(packed)]` struct cannot transitively contain a type declared with `#[repr(align(...))]`, including as a nested member.\n- The reverse is allowed: a `#[repr(align(...))]` struct may contain a packed struct.\n- Both modifiers can be used only with the Rust or C representations.\n\nSource: [Rust Reference — Type layout](https://doc.rust-lang.org/reference/type-layout.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 2795,
+  "citation_text_chars": 12173,
+  "search_queries": [
+    "rust repr packed struct nested repr align member restriction"
+  ],
+  "model_cost_usd": 0.00124335,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3798,
+    "output_tokens": 245,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 114
+  },
+  "latency_ms": 4646.071583032608,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00624335,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_126",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 489.6,
+    "total_citation_tokens": 4896.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that all EOF conditions violating the TLS protocol are reported by raising ssl.SSLEOFError, matching the gold target. The added detail about SSLObject not having the suppression option does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that SSLObject does not handle suppress_ragged_eofs and reports protocol-violating EOF conditions via SSLEOFError.\n2. Citations [1] and [2] state this directly, matching the target’s factual claim.\n3. The retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009645999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

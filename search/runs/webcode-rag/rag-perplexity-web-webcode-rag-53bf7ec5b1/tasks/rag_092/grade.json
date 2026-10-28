@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_092",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 396.7,
+    "total_citation_tokens": 3967.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the 80-bit value is padded to 128 bits for storage, matching the gold target. Its additional calculation that the padding is 48 bits is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that the -mlong-double-80 option pads the 80-bit long double to 128 bits for storage. Step 2: This directly supplies the gold target answer, with no unsupported non-trivial claims. Step 3: Citations [1], [2], [3], [7], and [9] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0008521,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

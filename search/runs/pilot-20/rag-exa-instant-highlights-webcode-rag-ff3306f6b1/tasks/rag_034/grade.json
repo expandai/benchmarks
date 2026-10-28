@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_034",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 535.0,
+    "total_citation_tokens": 5350.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that a zero-length TypedArray whose ByteOffset equals the buffer byte length is not considered out of bounds, matching the gold target. Its explanation is consistent with that conclusion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says a zero-length TypedArray with ByteOffset equal to bufferByteLength is not considered out of bounds.\n2. Citation [3] explicitly says zero-length TypedArrays are not considered out of bounds, and its check returns true only when the start or end offset is greater than bufferByteLength, not equal to it.\n3. Citation [8] gives the same comparison and explicit note, so the sources support the target claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001102725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

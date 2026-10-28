@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_025",
+ "prompt": "GraphQL error path aliased field name behavior",
+ "attempt": 1,
+ "answer": "GraphQL error paths must use the **aliased field name**, not the schema field name, because the path identifies a position in the response rather than in the request.\n\nFor example:\n\n```graphql\n{\n  greeting {\n    fname: name\n    lname: name\n  }\n}\n```\n\nErrors should use:\n\n```json\n[\n  { \"path\": [\"greeting\", \"fname\"] },\n  { \"path\": [\"greeting\", \"lname\"] }\n]\n```\n\nnot:\n\n```json\n[\n  { \"path\": [\"greeting\", \"name\"] },\n  { \"path\": [\"greeting\", \"name\"] }\n]\n```\n\nThe GraphQL specification states that an aliased field’s path segment **must use the alias**. List positions in the path are 0-indexed integers.",
+ "num_citations": 10,
+ "citation_text_tokens": 4509,
+ "citation_text_chars": 19140,
+ "search_queries": [
+  "GraphQL error path aliased field name behavior"
+ ],
+ "model_cost_usd": 0.00176825,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5960,
+  "output_tokens": 232,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 63
+ },
+ "latency_ms": 5478.116250014864,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00576825,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

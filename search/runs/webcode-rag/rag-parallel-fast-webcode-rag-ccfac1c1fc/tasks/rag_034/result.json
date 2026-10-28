@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_034",
+ "prompt": "ECMAScript IsTypedArrayOutOfBounds zero-length ByteOffset equals bufferByteLength",
+ "attempt": 1,
+ "answer": "A zero-length view whose `ByteOffset` equals `bufferByteLength` is **not out of bounds** under the current rule: `IsTypedArrayOutOfBounds` returns `true` only if:\n\n- `byteOffsetStart > bufferByteLength`, or\n- `byteOffsetEnd > bufferByteLength`.\n\nWhen both are equal, neither condition holds, so it returns `false`. Earlier wording used `≥`, which would have classified the view as out of bounds, but the cited proposal issue shows that this was changed to `>`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2420,
+ "citation_text_chars": 9378,
+ "search_queries": [
+  "ECMAScript IsTypedArrayOutOfBounds zero-length ByteOffset equals bufferByteLength"
+ ],
+ "model_cost_usd": 0.00129905,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3512,
+  "output_tokens": 351,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 235
+ },
+ "latency_ms": 5969.365291995928,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00229905,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

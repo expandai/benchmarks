@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_014",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 391.5,
+    "total_citation_tokens": 3915.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides none of the information in the gold target about four queries being pipelined on the same connections. It does not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations support that HAProxy can multiplex multiple DNS queries over one persistent TCP connection.\n2. None of the citations state that the number of queries pipelined on a connection is specifically four.\n3. Since the specific number is a non-trivial claim in the gold target and is absent from the retrieved sources, the answer is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000827475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

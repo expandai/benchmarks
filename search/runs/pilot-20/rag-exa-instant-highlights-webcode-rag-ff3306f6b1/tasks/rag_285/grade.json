@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_285",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 483.3,
+    "total_citation_tokens": 4833.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that URI fragments remain case-sensitive for anchor checking, matching the gold target that they are always checked with case-sensitive comparisons. Its additional detail that the URL path may be compared case-insensitively does not contradict that fragment-specific behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The source states explicitly that URI fragments are case-sensitive. Its normalization code also shows that when case-insensitive URL comparison is enabled, only the part before the fragment is case-folded; the fragment is retained unchanged. When case-insensitive comparison is disabled, the URL is returned without case-folding. Step 2: This supports the target claim that URI fragments are always compared case-sensitively. Step 3: Citation [3] contains the relevant evidence.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011998500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

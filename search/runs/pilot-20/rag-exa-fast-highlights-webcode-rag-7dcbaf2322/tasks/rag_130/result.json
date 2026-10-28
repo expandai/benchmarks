@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_130",
+ "prompt": "go net/http Transport Idempotency-Key zero-length slice behavior",
+ "attempt": 1,
+ "answer": "A zero-length `Idempotency-Key` slice causes `net/http.Transport` to:\n\n- Treat the request as idempotent, enabling eligible retries on network errors.\n- Omit the `Idempotency-Key` header from the request sent over the wire.\n\nThe same behavior applies to `X-Idempotency-Key`. For retries, the request must also have no body or have `Request.GetBody` defined; current documentation additionally says the connection must already have been used successfully.",
+ "num_citations": 10,
+ "citation_text_tokens": 5252,
+ "citation_text_chars": 20188,
+ "search_queries": [
+  "go net/http Transport Idempotency-Key zero-length slice behavior"
+ ],
+ "model_cost_usd": 0.001718,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6383,
+  "output_tokens": 102,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2657.8184169484302,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008718,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

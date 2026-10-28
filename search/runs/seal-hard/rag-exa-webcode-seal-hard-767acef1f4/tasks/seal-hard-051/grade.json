@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-051",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 743.2,
+    "total_citation_tokens": 7432.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives 34, matching the gold target exactly.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] gives a ranked follower table, so it provides information relevant to identifying accounts above 50 million followers.\n2. The gold target asks for the count of *non-brand* accounts, which requires distinguishing brand accounts from non-brand accounts.\n3. Although [2] has a “Brand account” column, the retrieved text shows no values in that column. The citations do not explicitly identify which accounts count as brands or provide the resulting non-brand count.\n4. Therefore, the sources do not establish all the information needed to derive the specific answer of 34.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001767105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_018",
+ "prompt": "foreign exception non-unwind ABI boundary Rust behavior",
+ "attempt": 1,
+ "answer": "A foreign exception (native, non-Rust unwind) crossing a Rust **non-unwinding ABI** boundary—such as `extern \"C\"` or `extern \"stdcall\"`—is **undefined behavior**, regardless of whether Rust is compiled with `panic=unwind` or `panic=abort`.\n\nIn contrast:\n\n- `extern \"C-unwind\"` permits foreign unwinding.\n- With `panic=abort`, a foreign unwind reaching an unwinding ABI boundary aborts the process.\n- `catch_unwind` currently does **not** safely catch foreign exceptions; a foreign exception unwinding through a frame containing `catch_unwind` is also unspecified/undefined according to the cited RFC.\n\nSources: [Rust Reference](https://doc.rust-lang.org/reference/items/functions.html?highlight=target_), [FFI-unwind RFC](https://github.com/rust-lang/project-ffi-unwind/blob/master/rfcs/0000-c-unwind-abi.md).",
+ "num_citations": 10,
+ "citation_text_tokens": 5253,
+ "citation_text_chars": 21921,
+ "search_queries": [
+  "foreign exception non-unwind ABI boundary Rust behavior"
+ ],
+ "model_cost_usd": 0.0019806,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6315,
+  "output_tokens": 335,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 134
+ },
+ "latency_ms": 4454.0235419990495,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0029806,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

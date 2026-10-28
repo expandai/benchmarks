@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 220.1,
+    "total_citation_tokens": 2201.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says this situation is an error, while the predicted answer explicitly says the enum is valid with either setting. This directly contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations say an error occurs when aliasing is not enabled and multiple symbols share a numeric value.\n2. The question specifies that all enum values have distinct numbers, so those cited conditions do not establish that this case is an error.\n3. No citation states that an enum with distinct numeric values is an error. The gold target answer is therefore not supported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0009737249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

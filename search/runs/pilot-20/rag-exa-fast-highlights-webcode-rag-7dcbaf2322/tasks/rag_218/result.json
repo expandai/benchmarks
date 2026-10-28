@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_218",
+ "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+ "attempt": 1,
+ "answer": "`assign_new/3` can share assigns from a parent LiveView to a child when all of these conditions apply:\n\n- The parent defines the assign.\n- The child also requests the same key with `assign_new/3`.\n- The child is mounted together with the parent.\n- The child is not rendered with `sticky: true`.\n- The child is present during the parent’s initial/disconnected render, so LiveView can determine which assigns it may need.\n\nExample:\n\n```elixir\n# Parent\nassign_new(socket, :current_user, fn -> load_user() end)\n\n# Child\nassign_new(socket, :current_user, fn -> load_user() end)\n```\n\nWhen sharing occurs, the child receives the parent’s value and its function is not needed. However, this is an optimization, not a guarantee. The function must return the same result as the parent’s value.\n\nSharing should not be relied on for:\n\n- Dynamically added child LiveViews.\n- Multiple independent LiveViews rendered from a controller.\n- Child LiveViews mounted as part of later navigation.\n- Cases where there is no parent LiveView.\n\nFor data that the child must always have, pass the necessary information—such as IDs—in the child’s session and rebuild the data there, or use message passing/communication with the parent.",
+ "num_citations": 10,
+ "citation_text_tokens": 4726,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "Phoenix LiveView assign_new parent child sharing conditions"
+ ],
+ "model_cost_usd": 0.00187085,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5876,
+  "output_tokens": 335,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 65
+ },
+ "latency_ms": 4969.658709014766,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00887085,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

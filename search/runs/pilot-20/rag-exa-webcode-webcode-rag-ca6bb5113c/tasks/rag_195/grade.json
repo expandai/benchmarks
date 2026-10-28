@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 472.8,
+    "total_citation_tokens": 4728.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer includes the key requirement: an oversized field block must still be processed so the HPACK compression context and connection state remain consistent, unless the connection is closed. Its added explanation is consistent with the gold target.",
+    "groundedness": "PARTIAL",
+    "groundedness_reasoning": "1. The citations support the core obligation: received field blocks must be reassembled and decompressed, including when discarded, and oversized blocks must be processed to preserve connection-scoped HPACK state. 2. None of the quoted passages states the gold answer’s explicit exception, “unless the connection is closed.” 3. That exception is a straightforward qualification on whether processing can continue after the connection has ended; the non-trivial protocol obligation itself is supported. The answer is therefore grounded, with that qualification inferred rather than stated verbatim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0015407250000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

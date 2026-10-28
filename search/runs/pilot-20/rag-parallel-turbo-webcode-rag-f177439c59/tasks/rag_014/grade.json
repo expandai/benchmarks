@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_014",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 573.6,
+    "total_citation_tokens": 5736.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that 4 queries are pipelined on each TCP connection, matching the gold target. The additional statement about idle connections is not relevant and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that four queries are pipelined on the same connections in TCP mode.\n2. Citations [2] and [5] contain that exact statement, including the number, mode, and connection detail.\n3. Thus, the retrieved citations contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010552250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

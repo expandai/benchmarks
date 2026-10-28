@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "According to the LLVM RFC in the search results:\n\n- **`libm::sqrt`**: For a negative input, it returns `NaN` and may set `errno`/raise a floating-point exception.\n- **`llvm.sqrt`**: Has **undefined behavior for negative values other than `-0.0`**. It does not need to preserve `errno` or other observable error state.\n- **`llvm.sqrt(-0.0)`**: Is defined to return `-0.0`, matching IEEE `sqrt`.\n\nThe results also quote newer LLVM documentation as saying `llvm.sqrt` returns the same value as `libm` `sqrt` without trapping or setting `errno`, so the search results contain conflicting documentation.",
+ "num_citations": 10,
+ "citation_text_tokens": 2103,
+ "citation_text_chars": 8489,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.00148895,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3158,
+  "output_tokens": 583,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 426
+ },
+ "latency_ms": 8908.909707912244,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00248895,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-062",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 639.8,
+    "total_citation_tokens": 6398.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 13, while “fewer than a dozen” means fewer than 12, which contradicts the target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] provides a hotel list with room counts and identifies each hotel's country.\n2. Counting the U.S. entries in that list with more than 3,500 rooms gives 13: the Venetian, MGM Grand, Wynn & Encore, Mandalay Bay, Luxor, Aria, Excalibur, Caesars Palace, Bellagio, Circus Circus, Paris Las Vegas, Fontainebleau Las Vegas, and Resorts World Las Vegas.\n3. The table therefore supports the gold target answer of 13. Citation [1] gives a conflicting broad statement (“Fewer than a dozen”), but it does not outweigh the explicit count derivable from the listed properties and room counts in [2].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001590965,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_232",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 386.8,
+    "total_citation_tokens": 3868.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that an hpx::future destructor never blocks, including when the asynchronous operation has not completed, matching the gold target. Its comparison with std::future and note about get() do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that `hpx::future<>` never blocks in its destructor, even when its value has not yet been returned.\n2. Citations [2], [3], [6], and [10] state this claim explicitly.\n3. The citations also provide the comparison with `std::future` returned by `std::async()`, whose destructor is required to block if the value has not been set.\n4. Thus, the retrieved sources contain all non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0009866,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

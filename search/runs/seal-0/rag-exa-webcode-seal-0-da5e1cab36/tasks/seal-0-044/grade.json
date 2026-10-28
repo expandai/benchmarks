@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-044",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 277.3,
+    "total_citation_tokens": 2773.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target states that no square number is prime, so the requested sum cannot be formed from two prime perfect squares. The prediction incorrectly treats the squares of prime numbers as prime perfect squares.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation defines a perfect square as an integer squared and a prime as a whole number greater than 1 with only the divisors 1 and itself.\n2. If an integer n has |n| > 1, then n² has |n| as a proper divisor, so it cannot be prime. The remaining squares, 0 and 1, are not prime because they are not greater than 1.\n3. Thus the gold target’s claim that no square number is prime follows from the cited definitions and elementary divisibility.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001117355,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

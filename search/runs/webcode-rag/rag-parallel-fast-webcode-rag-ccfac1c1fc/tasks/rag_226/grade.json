@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_226",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 222.8,
+    "total_citation_tokens": 2228.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `nonblock on` is equivalent to a 1-second timeout, matching the gold target. Its example `nonblock 1` is consistent with that value.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that `on` is treated as 1 second.\n2. Citations [1] and [2] say explicitly that `on` is treated as 1s, and citation [3] gives the equivalent wording, “a one second timeout.”\n3. The retrieved citations contain the full factual claim, so the target is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00062035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

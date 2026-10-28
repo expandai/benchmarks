@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_202",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 483.3,
+    "total_citation_tokens": 4833.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that internal proxy access is 18.6× slower, matching the gold target's 18.6x slow-down. Its reported timings are also consistent with approximately that ratio.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly compares external direct property access with internal proxy access in V8. 2. It explicitly states the internal access caused an “18.6x” slowdown. 3. The gold target’s factual claim is therefore present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000915975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

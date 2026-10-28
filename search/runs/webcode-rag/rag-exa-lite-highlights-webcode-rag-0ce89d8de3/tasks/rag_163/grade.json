@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 265.0,
+    "total_citation_tokens": 2650.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies HTTPException instances and exceptions with registered error handlers as excluded. It also correctly states the caveat that exceptions raised from an error handler are sent to the signal, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer identifies HTTPException and other exceptions with registered error handlers as excluded from the signal.\n2. It includes the exception-to-the-rule: an exception raised from an error handler is not excluded.\n3. Citation [6] states all of these points, so the retrieved citations contain the complete answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006934749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

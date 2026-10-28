@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_096",
+  "prompt": "fish shell IFS empty string effect command substitution",
+  "attempt": 1,
+  "answer": "In fish, setting `IFS` to an empty string disables line splitting in command substitutions.\n\n```fish\nbegin\n    set -l IFS\n    set data (cat data.txt)\nend\n```\n\nHere, the output of `cat data.txt` is assigned to `data` without being split into an array by newlines.\n\nNormally, fish command substitutions split output on newlines—not on spaces or tabs. To split on another delimiter, use `string split`, `string split0`, or `string collect`.",
+  "num_citations": 10,
+  "citation_text_tokens": 2809,
+  "citation_text_chars": 12154,
+  "search_queries": [
+    "fish shell IFS empty string effect command substitution"
+  ],
+  "model_cost_usd": 0.00120805,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3724,
+    "output_tokens": 231,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 120
+  },
+  "latency_ms": 5014.983874978498,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00620805,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

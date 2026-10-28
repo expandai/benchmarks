@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_199",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 358.6,
+    "total_citation_tokens": 1793.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that on macOS 12, `pthread_rwlock_trywrlock()` returns `EDEADLK` instead of the expected `EBUSY`, matching the gold target. The additional specification detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] directly states the error code is `EDEADLK` instead of `EBUSY` when the current thread already owns the write lock, and identifies macOS 12. Step 2 — This supports every non-trivial claim in the gold target answer. Step 3 — Citation [1] contains the sufficient information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000559475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

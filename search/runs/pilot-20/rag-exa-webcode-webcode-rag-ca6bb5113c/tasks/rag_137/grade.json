@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 587.3,
+    "total_citation_tokens": 5873.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies only imageAtomicExchange as the applicable function. The prediction also claims imageAtomicAdd accepts float data and that imageAtomicLoad/imageAtomicStore are available, which adds incorrect information.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations directly support that `imageAtomicExchange` is a float image atomic function.\n2. However, they also identify `imageAtomicAdd` as a float image atomic function.\n3. Therefore, the citations do not support the exclusivity implied by “imageAtomicExchange only”; that claim is contradicted by the retrieved evidence.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001393475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

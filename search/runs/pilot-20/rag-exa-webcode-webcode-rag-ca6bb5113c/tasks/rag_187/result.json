@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_187",
+ "prompt": "RFC 793 TCP RCV.WND zero acceptable segment types",
+ "attempt": 1,
+ "answer": "When **RCV.WND = 0**, RFC 793 states that:\n\n- **Zero-length segments** are acceptable only when `SEG.SEQ = RCV.NXT`.\n- **Segments containing data** (`SEG.LEN > 0`) are **not acceptable**.\n- **ACK segments** are the exception and may be received and processed.\n- The TCP must also process the **RST** and **URG** fields of all incoming segments, even with a zero receive window.\n\nThus, a TCP can maintain a zero receive window while transmitting data and receiving ACKs.",
+ "num_citations": 10,
+ "citation_text_tokens": 5635,
+ "citation_text_chars": 21131,
+ "search_queries": [
+  "RFC 793 TCP RCV.WND zero acceptable segment types"
+ ],
+ "model_cost_usd": 0.0018571,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6853,
+  "output_tokens": 120,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 5644.4859999464825,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0088571,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_195",
+ "prompt": "HTTP/2 RFC 9113 oversized field block rejected processing obligation",
+ "attempt": 1,
+ "answer": "Yes. Under RFC 9113, a receiving endpoint **must reassemble and decompress a field block even if it will be discarded or rejected**. If it does not decompress the field block, it **must terminate the connection with a `COMPRESSION_ERROR` connection error**.\n\nThis is because field blocks can modify the compression context maintained by the receiver. The search results do not specify the exact error response for a field section exceeding an advertised size limit.",
+ "num_citations": 10,
+ "citation_text_tokens": 3055,
+ "citation_text_chars": 12985,
+ "search_queries": [
+  "HTTP/2 RFC 9113 oversized field block rejected processing obligation"
+ ],
+ "model_cost_usd": 0.00164665,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4096,
+  "output_tokens": 519,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 422
+ },
+ "latency_ms": 7980.205624946393,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00239665,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

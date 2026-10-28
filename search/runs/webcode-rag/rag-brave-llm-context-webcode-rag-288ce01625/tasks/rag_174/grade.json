@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 590.5,
+    "total_citation_tokens": 5905.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target, including the distinct recommendations for DATA versus HEADERS and PUSH_PROMISE frames.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [6], [7], and [9] directly state the intermediary padding rules for DATA, HEADERS, and PUSH_PROMISE frames.\nStep 2: Every non-trivial claim in the gold target answer—including the SHOULD and MAY requirements and the specified frame types—is present in the retrieved citations. The answer is grounded.\nStep 3: Citations [6], [7], and [9] each contain the full rule.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00107485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

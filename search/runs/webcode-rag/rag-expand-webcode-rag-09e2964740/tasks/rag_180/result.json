@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_180",
+  "prompt": "coreutils chroot newroot identical old root directory behavior",
+  "attempt": 1,
+  "answer": "When `NEWROOT` is identical to the existing `/`, GNU Coreutils `chroot` treats it specially:\n\n- It determines this by canonicalizing `NEWROOT` and checking whether it resolves to `/`.\n- It avoids making the `chroot()` system call in this case. This permits the command to work consistently on systems where unprivileged users may not call `chroot`.\n- Normally, `chroot` changes the working directory to `/` after changing the root.\n- `--skip-chdir` is permitted only when `NEWROOT` is the old `/`; it preserves the current working directory instead.\n\nThus:\n\n```sh\nchroot /\n```\n\nkeeps the existing root but normally changes the working directory to `/`, while:\n\n```sh\nchroot --skip-chdir /\n```\n\nkeeps both the existing root and the current working directory.",
+  "num_citations": 10,
+  "citation_text_tokens": 5090,
+  "citation_text_chars": 18703,
+  "search_queries": [
+    "coreutils chroot newroot identical old root directory behavior"
+  ],
+  "model_cost_usd": 0.0022781,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6593,
+    "output_tokens": 525,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 344
+  },
+  "latency_ms": 7227.621917030774,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0042781,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

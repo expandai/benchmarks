@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_172",
+  "prompt": "Cargo virtual workspace resolver edition 2024 opt-in",
+  "attempt": 1,
+  "answer": "In a **virtual Cargo workspace**, setting `edition = \"2024\"` in workspace members does **not** automatically opt in to resolver 3, because the virtual workspace has no `[package]` edition to infer it from.\n\nSet it explicitly in the workspace root:\n\n```toml\n[workspace]\nresolver = \"3\"\nmembers = [\"crate-a\", \"crate-b\"]\n```\n\nResolver 3 enables Rust-version-aware dependency resolution. Without the explicit setting, a virtual workspace may default to the older resolver.",
+  "num_citations": 10,
+  "citation_text_tokens": 4133,
+  "citation_text_chars": 16443,
+  "search_queries": [
+    "Cargo virtual workspace resolver edition 2024 opt-in"
+  ],
+  "model_cost_usd": 0.00143475,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5226,
+    "output_tokens": 107,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3192.8284580353647,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0034347500000000003,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

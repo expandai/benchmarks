@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_297",
+ "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+ "attempt": 1,
+ "answer": "`@NotFound(action = NotFoundAction.IGNORE)` has these effects on a to-one association:\n\n- It treats an orphaned foreign-key value—one with no matching referenced row—as `null`.\n- It makes the to-one association **non-lazy**, even if it is configured with `FetchType.LAZY`.\n- It implies `ConstraintMode.NO_CONSTRAINT`, so Hibernate does not generate a foreign-key constraint for that association.\n- For a non-null join-column value with no matching entity, Hibernate may log an `ObjectNotFoundException` at INFO level and return a non-null entity whose association is `null`.\n- Combining `IGNORE` with a non-optional to-one association causes a `MappingException`.\n- On the `mappedBy` side of a to-one association, `IGNORE` is logged as ignored and should be removed.\n\nThe provided results do not describe any additional Envers-specific side effect.",
+ "num_citations": 10,
+ "citation_text_tokens": 2812,
+ "citation_text_chars": 11549,
+ "search_queries": [
+  "Hibernate Envers @NotFound IGNORE side effect to-one"
+ ],
+ "model_cost_usd": 0.00135625,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3928,
+  "output_tokens": 312,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 122
+ },
+ "latency_ms": 4851.969041978009,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00535625,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

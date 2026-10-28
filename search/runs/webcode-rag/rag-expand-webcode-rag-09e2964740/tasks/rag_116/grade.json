@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_116",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 989.0,
+    "total_citation_tokens": 9890.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is SOCK_STREAM. The predicted answer explicitly states that socket.sendfile() requires a socket of type SOCK_STREAM, so it contains the required answer. The additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: The citations explicitly state that the socket used with `sendfile` must be of `SOCK_STREAM` type. Step 2 — Groundedness: The gold target answer is `SOCK_STREAM`, and this exact requirement is present in the retrieved citations. All non-trivial information in the target is supported, so the answer is GROUNDED. Step 3 — Source attribution: Citations [1], [3], and [5] state the requirement directly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0015679749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

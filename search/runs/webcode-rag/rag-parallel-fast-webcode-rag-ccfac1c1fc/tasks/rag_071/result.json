@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_071",
+ "prompt": "GNU diff expand-tabs encoding error column width treatment",
+ "attempt": 1,
+ "answer": "For `--expand-tabs` (`-t`), GNU `diff`:\n\n- Consults the locale to determine each character’s column width.\n- Treats each encoding error—an input byte not part of any character—as occupying one column.\n- Uses those widths when expanding tabs to preserve alignment.\n\nThe manual warns that these assumptions can be incorrect for encoding errors and non-ASCII characters, so complex input may not align properly.",
+ "num_citations": 10,
+ "citation_text_tokens": 2365,
+ "citation_text_chars": 9533,
+ "search_queries": [
+  "GNU diff expand-tabs encoding error column width treatment"
+ ],
+ "model_cost_usd": 0.0010171,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3349,
+  "output_tokens": 150,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 58
+ },
+ "latency_ms": 4833.343375008553,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020171,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_030",
+  "prompt": "ECMA-262 ForDeclaration BoundNames forbidden string syntax error",
+  "attempt": 1,
+  "answer": "For `for-in` and `for-of` declarations, ECMA-262 specifies these early errors:\n\n- A Syntax Error if `BoundNames` of `ForDeclaration` contains `\"let\"`.\n- A Syntax Error if a bound name also occurs in `VarDeclaredNames` of the loop body.\n- A Syntax Error if `BoundNames` contains duplicate entries.\n\n`\"let\"` is singled out because it is not treated as a keyword by the lexical grammar; its restriction is imposed by static semantic rules instead. Other reserved words, such as `function` or `for`, are rejected by the applicable grammar rules.",
+  "num_citations": 10,
+  "citation_text_tokens": 3873,
+  "citation_text_chars": 15015,
+  "search_queries": [
+    "ECMA-262 ForDeclaration BoundNames forbidden string syntax error"
+  ],
+  "model_cost_usd": 0.0016011,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5205,
+    "output_tokens": 250,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 119
+  },
+  "latency_ms": 5287.258958094753,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0086011,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

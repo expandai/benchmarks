@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_285",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 494.0,
+    "total_citation_tokens": 4940.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target indicates that URI fragments/anchors are checked with case-sensitive comparisons. The prediction explicitly says fragments remain case-sensitive and that anchor existence uses the original anchor value. Its additional detail that the URL portion can be compared case-insensitively applies to the configured URL matching, not to fragments, so it does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that URI fragments/anchors continue to be compared case-sensitively.\n2. Citation [2] and citation [4] explicitly state that URI fragments are case-sensitive; the normalization code folds the URL portion but preserves the fragment unchanged.\n3. Citation [3] explicitly states that anchor checks remain case-sensitive. Together, these support the gold target without missing non-trivial information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00116585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

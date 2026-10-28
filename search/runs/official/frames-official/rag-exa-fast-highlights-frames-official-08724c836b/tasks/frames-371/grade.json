@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-371",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 449.9,
+    "total_citation_tokens": 4499.0,
+    "filtered_results": 0.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:\nThe ground truth answer states:\n- The French Revolution began 2 years before the Haitian Revolution.\n- The Haitian Revolution lasted 2 years longer.\n- Louis XVI was 34 years old when the French Revolution began and 36 when the Haitian Revolution began.\n\nThe predicted answer provides:\n- The time between the starts: \"about 2 years and 3 months\" (which matches the substance of \"2 years before\").\n- Duration difference: \"about 1 year and 10 months longer, or roughly 2 years,\" and it acknowledges \"3 years longer\" by years, but clarifies with the precise duration (so the substance of the ground truth is captured).\n- For leader ages: the LLM gives the ages for Toussaint Louverture and Robespierre, stating Robespierre was 30 at the start of the French Revolution, and Toussaint 47–48 at the start of the Haitian Revolution, and notes that these are the most commonly identified leaders (not Louis XVI).\n\nThe ground truth specifies Louis XVI as the leader, with his ages at the two revolution starts, but the predicted answer gives the ages for Robespierre instead (and clarifies the leader distinction). \n\nThus, both timeline questions are answered equivalently, but the predicted answer does not mention Louis XVI or his ages at all, and does not satisfy that part of the ground truth.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.003388
+}

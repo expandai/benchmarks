@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_133",
+  "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+  "attempt": 1,
+  "answer": "This is expected for a remote track.\n\nA track received through `RTCPeerConnection` is a remote `MediaStreamTrack`. The WebRTC specification states that:\n\n- `getCapabilities()` on a remote track returns an empty set.\n- `applyConstraints()` on a remote track must reject with `OverconstrainedError`.\n- No constrainable properties are defined for remote audio tracks.\n- For remote video tracks, `width`, `height`, `frameRate`, and `aspectRatio` describe the received media, but are not constraints you can apply to the remote source.\n\nTherefore, `applyConstraints()` should be used on locally captured tracks, such as tracks obtained from `getUserMedia()`, rather than on tracks received from `RTCRtpReceiver`. Use `getSettings()` on a remote track to inspect its current received configuration.",
+  "num_citations": 10,
+  "citation_text_tokens": 4513,
+  "citation_text_chars": 19963,
+  "search_queries": [
+    "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+  ],
+  "model_cost_usd": 0.0019577,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5921,
+    "output_tokens": 398,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 224
+  },
+  "latency_ms": 6598.518291953951,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059577,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

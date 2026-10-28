@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_011",
+  "prompt": "WGSL atomicCompareExchangeWeak return type",
+  "attempt": 1,
+  "answer": "`atomicCompareExchangeWeak` returns the internal structure type:\n\n```wgsl\n__atomic_compare_exchange_result<T>\n```\n\nwith these members:\n\n```wgsl\nstruct __atomic_compare_exchange_result<T> {\n  old_value: T;\n  exchanged: bool;\n}\n```\n\n`old_value` is the original atomic value, and `exchanged` indicates whether the exchange occurred. This type cannot be explicitly declared in WGSL source, but its type may be inferred.",
+  "num_citations": 10,
+  "citation_text_tokens": 3455,
+  "citation_text_chars": 14594,
+  "search_queries": [
+    "WGSL atomicCompareExchangeWeak return type"
+  ],
+  "model_cost_usd": 0.0012284,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4439,
+    "output_tokens": 99,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3859.2540830140933,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0032284,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

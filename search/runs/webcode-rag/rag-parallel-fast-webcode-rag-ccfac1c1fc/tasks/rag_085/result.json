@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_085",
+ "prompt": "click CliRunner isolation stderr error handling mode",
+ "attempt": 1,
+ "answer": "In Click’s `CliRunner`:\n\n- `CliRunner.isolation()` replaces `sys.stdout` and `sys.stderr` with in-memory wrappers.\n- In current Click, stdout and stderr are independent. Stderr is always collected and does not raise an exception; the `mix_stderr` parameter was removed.\n- The default capture mode is `capture=\"sys\"`.\n- The stderr stream uses `errors=\"backslashreplace\"` (since Click 8.0).\n- Since Click 8.2, the stderr stream is always returned.",
+ "num_citations": 10,
+ "citation_text_tokens": 2321,
+ "citation_text_chars": 9343,
+ "search_queries": [
+  "click CliRunner isolation stderr error handling mode"
+ ],
+ "model_cost_usd": 0.00115125,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3324,
+  "output_tokens": 267,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 150
+ },
+ "latency_ms": 4785.762292100117,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00215125,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

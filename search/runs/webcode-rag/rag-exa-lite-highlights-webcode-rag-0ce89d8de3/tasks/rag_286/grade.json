@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 653.2,
+    "total_citation_tokens": 6532.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies the per-byte operation as SDBM (hash = byte + hash × 65599) and says a full avalanche is applied to the output, matching the gold target. The additional details do not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] shows the byte-by-byte recurrence used to hash the Host and path, followed by `full_hash(hash)`. That recurrence is the SDBM hash update, so it supports the SDBM part of the target as well as the full avalanche step. Citation [2] explicitly names SDBM as a HAProxy hashing function.\nStep 2: The citations contain both non-trivial claims in the gold target: SDBM hashing and full avalanche of the output. The target is grounded.\nStep 3: Citation [1] contains the algorithm and avalanche operation; citation [2] supplies explicit SDBM identification.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001506225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

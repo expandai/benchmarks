@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_028",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 498.7,
+    "total_citation_tokens": 4987.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is INT_MIN. The predicted answer explicitly states that `info->width` and `info->prec` are INT_MIN in the arginfo function when the corresponding format component uses `*`, and shows checks for that value. This matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is `INT_MIN`.\n2. Citation [1] explicitly states that for `*` width and precision, the `printf_info` structure passed to the arginfo function contains `INT_MIN`.\n3. The gold target is fully supported by the retrieved citation.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00103335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

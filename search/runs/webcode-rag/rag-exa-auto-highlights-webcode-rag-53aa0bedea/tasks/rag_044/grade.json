@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 532.7,
+    "total_citation_tokens": 5327.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies that a short V2ClientHello challenge is padded with leading, not trailing, zero bytes. The predicted answer states exactly that.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] directly states that a short client challenge is padded with leading, not trailing, zero bytes.\n2. Citation [2] independently describes the challenge as left-padded when forming the ClientHello random.\n3. These passages contain the full non-trivial claim in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010456,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

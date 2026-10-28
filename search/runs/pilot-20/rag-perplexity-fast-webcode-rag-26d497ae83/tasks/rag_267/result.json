@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_267",
+ "prompt": "sphinx texinfo_documents multiple authors separator markup",
+ "attempt": 1,
+ "answer": "For `texinfo_documents`, use Texinfo markup `@*` to separate multiple authors:\n\n```python\ntexinfo_documents = [\n    (\n        \"index\",\n        \"project\",\n        \"Project Title\",\n        \"John@*Sarah\",\n        \"Project\",\n        \"Project description\",\n        \"Miscellaneous\",\n        False,\n    ),\n]\n```\n\nThe author field is inserted as Texinfo markup, so special characters such as `@` and `{}` must be escaped when intended literally.",
+ "num_citations": 9,
+ "citation_text_tokens": 3807,
+ "citation_text_chars": 15114,
+ "search_queries": [
+  "sphinx texinfo_documents multiple authors separator markup"
+ ],
+ "model_cost_usd": 0.00134295,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4878,
+  "output_tokens": 103,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2154.1357079986483,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00234295,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

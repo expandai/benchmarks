@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_158",
+ "prompt": "node.js tls createServer dhparam minimum key length requirement",
+ "attempt": 1,
+ "answer": "The minimum DH parameter key length for `tls.createServer()` is **1024 bits**. A shorter key causes an error. Node.js strongly recommends using **2048 bits or larger**.\n\nExample:\n\n```bash\nopenssl dhparam -outform PEM -out dhparam.pem 2048\n```\n\nIn current Node.js versions, custom DHE parameters are discouraged in favor of:\n\n```js\ndhparam: 'auto'\n```",
+ "num_citations": 10,
+ "citation_text_tokens": 5988,
+ "citation_text_chars": 25439,
+ "search_queries": [
+  "node.js tls createServer dhparam minimum key length requirement"
+ ],
+ "model_cost_usd": 0.0019025,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7169,
+  "output_tokens": 92,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2485.4207079624757,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0029024999999999997,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

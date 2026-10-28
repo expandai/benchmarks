@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_089",
+ "prompt": "bevy 3D ground plane local cursor coordinates which components Vec2",
+ "attempt": 1,
+ "answer": "For a Bevy 3D ground plane, local cursor coordinates use the **X and Z components**:\n\n```rust\nlet local_cursor = inverse_transform_matrix.transform_point3(global_cursor);\nlet local_coords: Vec2 = local_cursor.xz();\n```\n\nSo:\n\n```rust\nVec2::new(local_cursor.x, local_cursor.z)\n```\n\nThe Y component is discarded because the point lies on the plane.",
+ "num_citations": 10,
+ "citation_text_tokens": 2765,
+ "citation_text_chars": 11743,
+ "search_queries": [
+  "bevy 3D ground plane local cursor coordinates which components Vec2"
+ ],
+ "model_cost_usd": 0.0011667,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4245,
+  "output_tokens": 88,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2601.0856250068173,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0019167,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

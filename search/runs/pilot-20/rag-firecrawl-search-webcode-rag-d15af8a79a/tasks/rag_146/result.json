@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "`display: contents` removes the element’s own box, but its child elements and pseudo-elements still generate boxes. Therefore, a `::before` or `::after` should still render, provided it has a `content` value; pseudo-elements require `content: \"\"` even for an empty box, and are not generated when `content` is absent or `none`.\n\nSources: [W3Cplus](https://w3cplus.medium.com/do-you-really-understand-css-display-fdfbe71875b8), [Facebook result](https://www.facebook.com/fb-answers/mdn-content-none-pseudo-element-not-generated/)",
+ "num_citations": 10,
+ "citation_text_tokens": 312,
+ "citation_text_chars": 1608,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.00059085,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 1116,
+  "output_tokens": 260,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 123
+ },
+ "latency_ms": 4982.15475003235,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00257085,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

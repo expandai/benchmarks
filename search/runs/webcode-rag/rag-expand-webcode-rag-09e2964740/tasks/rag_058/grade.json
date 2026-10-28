@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_058",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 609.6,
+    "total_citation_tokens": 6096.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that calling runtime.GOMAXPROCS(0) queries the current setting without changing it, matching the gold target. The additional claim about nonpositive arguments is consistent with Go's behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that calling GOMAXPROCS with zero queries the current value.\n2. Citation [1] directly says that `runtime.GOMAXPROCS(0)` reads the current setting and does not change it.\n3. Citations [4] and [8] also establish that an argument below 1 leaves the setting unchanged and returns the previous setting, which is therefore the current value.\n4. The retrieved citations support the gold target completely.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00120685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

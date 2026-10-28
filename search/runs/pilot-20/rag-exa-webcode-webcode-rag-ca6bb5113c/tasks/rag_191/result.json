@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_191",
+ "prompt": "zig ReleaseFast mode recommended general purpose allocator",
+ "attempt": 1,
+ "answer": "`std.heap.smp_allocator` is recommended for `ReleaseFast` builds, particularly with multithreading enabled. It is a singleton, so only one should be instantiated per process.\n\nTypical selection:\n\n```zig\nswitch (builtin.mode) {\n    .Debug, .ReleaseSafe => debug_allocator.allocator(),\n    .ReleaseFast, .ReleaseSmall => std.heap.smp_allocator,\n}\n```\n\nFor WASI, use `std.heap.wasm_allocator` instead.",
+ "num_citations": 10,
+ "citation_text_tokens": 5188,
+ "citation_text_chars": 20246,
+ "search_queries": [
+  "zig ReleaseFast mode recommended general purpose allocator"
+ ],
+ "model_cost_usd": 0.0017872,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6679,
+  "output_tokens": 98,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 16094.868041924201,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0087872,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

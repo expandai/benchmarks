@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_096",
+ "prompt": "fish shell IFS empty string effect command substitution",
+ "attempt": 1,
+ "answer": "In fish, setting `IFS` to an empty string disables newline splitting of command substitution output.\n\nNormally, if a command substitution produces multiple lines, each line becomes a separate argument:\n\n```fish\n# output: line1 and line2\necho (printf 'line1\\nline2\\n')\n```\n\nWith `IFS` empty:\n\n```fish\nset IFS ''\nset data (cat file)\n```\n\nthe output is not split into separate arguments by line. This use of `IFS` is deprecated; the documentation recommends using `string split` instead.\n\nAlso, a command substitution with no output expands to an empty list, not a one-element list containing an empty string. Consequently, an unquoted token containing it can disappear entirely.",
+ "num_citations": 10,
+ "citation_text_tokens": 6881,
+ "citation_text_chars": 28612,
+ "search_queries": [
+  "fish shell IFS empty string effect command substitution"
+ ],
+ "model_cost_usd": 0.00217175,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7958,
+  "output_tokens": 152,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2727.2272910922766,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00317175,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

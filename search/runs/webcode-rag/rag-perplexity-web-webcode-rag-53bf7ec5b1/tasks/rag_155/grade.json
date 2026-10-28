@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_155",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.286,
+    "avg_citation_tokens": 221.0,
+    "total_citation_tokens": 1547.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies `http` as the valid middleware_type value. The predicted answer states that `http` is the only currently supported value, matching the target without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks which value is valid for `app.middleware`'s `middleware_type`.\n2. Citation [1] explicitly states that the parameter currently only supports `http`.\n3. Citation [3] corroborates this with the `@app.middleware(\"http\")` example.\n4. The gold target answer, `http`, is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000485225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

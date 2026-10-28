@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_221",
+ "prompt": "kubernetes OwnerReference blockOwnerDeletion missing permission error response",
+ "attempt": 1,
+ "answer": "The error means the actor creating or updating the dependent resource is setting:\n\n```yaml\nmetadata:\n  ownerReferences:\n  - blockOwnerDeletion: true\n```\n\nbut lacks permission on the **owner resource’s `/finalizers` subresource**.\n\nGrant the controller or user `update` permission on the owner’s finalizers subresource—not necessarily on the dependent resource. For example, if the owner is a Deployment:\n\n```yaml\nrules:\n- apiGroups: [\"apps\"]\n  resources: [\"deployments/finalizers\"]\n  verbs: [\"update\"]\n```\n\nIf the owner is a custom resource, use its API group and plural resource name:\n\n```yaml\nrules:\n- apiGroups: [\"example.com\"]\n  resources: [\"myresources/finalizers\"]\n  verbs: [\"update\"]\n```\n\nThe permission must apply to the **referenced owner**. For example, an error while creating a DaemonSet owned by a `KataConfig` requires finalizer permission on `KataConfig`, not on the DaemonSet.\n\n`OwnerReferencesPermissionEnforcement` protects `blockOwnerDeletion`; it requires permission to update the owner’s finalizers subresource. Without it, the API returns an error such as:\n\n```text\ncannot set blockOwnerDeletion if an ownerReference refers to a resource you can't set finalizers on\n```\n\nAlternatively, do not set `blockOwnerDeletion: true`, or disable the admission plugin if appropriate.",
+ "num_citations": 10,
+ "citation_text_tokens": 4830,
+ "citation_text_chars": 19676,
+ "search_queries": [
+  "kubernetes OwnerReference blockOwnerDeletion missing permission error response"
+ ],
+ "model_cost_usd": 0.00206285,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6092,
+  "output_tokens": 450,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 152
+ },
+ "latency_ms": 8697.60462490376,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00906285,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_025",
+ "prompt": "GraphQL error path aliased field name behavior",
+ "attempt": 1,
+ "answer": "GraphQL error paths use the **aliased field name**, not the field’s original name, because the path represents a location in the response rather than in the request.\n\nFor example:\n\n```graphql\n{\n  hero {\n    heroFriends: friends {\n      name\n    }\n  }\n}\n```\n\nAn error for a friend’s `name` should use:\n\n```json\n\"path\": [\"hero\", \"heroFriends\", 1, \"name\"]\n```\n\nList indexes are represented as 0-based integers. The path includes the full path to the field where the error occurred, even if null propagation removes that field from the response.",
+ "num_citations": 10,
+ "citation_text_tokens": 4019,
+ "citation_text_chars": 16490,
+ "search_queries": [
+  "GraphQL error path aliased field name behavior"
+ ],
+ "model_cost_usd": 0.00152405,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5468,
+  "output_tokens": 131,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 6622.775083058514,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00852405,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_286",
+  "prompt": "haproxy base32 fetch hash function algorithm",
+  "attempt": 1,
+  "answer": "HAProxy’s `base32` fetch is a **32-bit hash**, not Base32 encoding.\n\nAlgorithm:\n\n1. Initialize `hash = 0`.\n2. Hash the first `Host` header value, byte by byte.\n3. Parse the request path.\n4. If the path begins with `/`, hash the path up to—but excluding—the `?` query delimiter.\n5. If there is no `Host` header, the path is hashed alone.\n6. Apply `full_hash(hash)` as a final avalanche step.\n7. Return the resulting 32-bit integer.\n\nThe per-byte mixing operation is:\n\n```c\nhash = byte + (hash << 6) + (hash << 16) - hash;\n```\n\nEquivalently:\n\n```c\nhash = byte + hash * 65599;\n```\n\nThe source describes this as hashing the concatenation of the Host header and path, followed by a full avalanche hash. The supplied results do not include the implementation of `full_hash()`, so its exact bit-level operations cannot be determined here.\n\n`base32+src` then stores the 32-bit hash in network byte order followed by the source IPv4 or IPv6 address.",
+  "num_citations": 10,
+  "citation_text_tokens": 6532,
+  "citation_text_chars": 20658,
+  "search_queries": [
+    "haproxy base32 fetch hash function algorithm"
+  ],
+  "model_cost_usd": 0.00255515,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8018,
+    "output_tokens": 459,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 209
+  },
+  "latency_ms": 7623.938165954314,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00655515,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

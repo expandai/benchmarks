@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_078",
+  "prompt": "jq |= update-assignment RHS produces no values",
+  "attempt": 1,
+  "answer": "For `|=`, the RHS is evaluated against the value at the LHS path.\n\nIf the RHS produces no values—i.e. `empty`—jq deletes the LHS path, equivalent to `del(path)`. It does not produce an output value for that assignment.\n\nFor example:\n\n```sh\njq -cn '{a:0,b:true} | .a |= select(. % 2 == 1) + 1'\n```\n\noutputs:\n\n```json\n{\"b\":true}\n```\n\nThe path `.a` is deleted because the RHS produces no value.",
+  "num_citations": 4,
+  "citation_text_tokens": 3849,
+  "citation_text_chars": 13712,
+  "search_queries": [
+    "jq |= update-assignment RHS produces no values"
+  ],
+  "model_cost_usd": 0.00128445,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4548,
+    "output_tokens": 123,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2991.7077920399606,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062844500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

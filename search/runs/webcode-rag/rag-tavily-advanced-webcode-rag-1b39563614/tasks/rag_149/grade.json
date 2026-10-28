@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_149",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 349.9,
+    "total_citation_tokens": 3499.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 255 characters. The predicted answer gives the same limit, with bytes as a clarifying detail that does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the maximum limit for pO printer redirection.\n2. Citations [1] and [2] identify pO as redirecting output for n characters and state that n should be no more than 255. Citation [3] likewise says pO applies for a number of characters and its parameter should not exceed 255.\n3. Thus the sources support the gold answer of 255 characters.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008516,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

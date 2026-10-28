@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_069",
+  "prompt": "protobuf allow_alias enum all values distinct numbers behavior",
+  "attempt": 1,
+  "answer": "`allow_alias = true` is intended for enums where multiple names share the same numeric value.\n\nIf every enum value has a distinct number, the Go protobuf descriptor validator rejects the enum with:\n\n```text\nenum \"<name>\" allows aliases, but none were found\n```\n\nTherefore, when all values are distinct, omit `allow_alias`; it is unnecessary. The option is required only when duplicate numeric values are used.",
+  "num_citations": 10,
+  "citation_text_tokens": 5159,
+  "citation_text_chars": 19984,
+  "search_queries": [
+    "protobuf allow_alias enum all values distinct numbers behavior"
+  ],
+  "model_cost_usd": 0.00194115,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6450,
+    "output_tokens": 274,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 184
+  },
+  "latency_ms": 5190.890708006918,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00894115,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

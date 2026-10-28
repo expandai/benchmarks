@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 430.0,
+    "total_citation_tokens": 4300.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer gives the key result: the value is in the first component, with the other components unspecified, matching (V, X, X, X). Its advice to use .r is consistent with that result, and the additional examples for the unspecified channels do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states the sampled values are (V, X, X, X).\n2. Both citations explicitly give that behavior and define each X as an implementation-defined unspecified value.\n3. The retrieved citations contain all the non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0014864750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

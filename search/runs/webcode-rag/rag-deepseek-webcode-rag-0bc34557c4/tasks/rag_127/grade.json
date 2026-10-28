@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_127",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 466.4,
+    "total_citation_tokens": 4664.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold answer identifies `rect()` in the `clip` property. The prediction instead identifies `calc()` and other math functions as the exception, and does not mention the required `rect()` case. It therefore gives a different answer to the question.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. None of the citations mention `rect()` or the `clip` property. 2. Citation [1] discusses quirks inside `calc()`, but it does not identify `rect()` in `clip` as an exception. 3. Therefore, the retrieved sources do not contain the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001440975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

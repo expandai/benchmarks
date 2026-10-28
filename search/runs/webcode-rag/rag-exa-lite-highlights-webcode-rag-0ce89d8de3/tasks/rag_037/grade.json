@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_037",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 514.4,
+    "total_citation_tokens": 5144.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states the gold-target restriction: a `repr(packed)` type cannot contain a `repr(align)` type. Its additional details are consistent with that restriction and do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states that a packed type cannot contain a type with an align representation hint. Citation [3] further clarifies that this restriction applies transitively to nested types. Citation [5] gives a concrete nested-type example. Step 2: These passages support the gold target claim that a `repr(packed)` type may not contain a `repr(align(n))` type. The relevant factual claim is present.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00116285,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

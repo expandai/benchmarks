@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_131",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 507.4,
+    "total_citation_tokens": 5074.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that GNU Mach ddb macro nesting supports up to 5 levels, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that GNU Mach ddb macro nesting has a maximum depth of 5 levels.\n2. Citation [1] defines `DB_MACRO_LEVEL` as 5 and labels it the maximum macro nesting; the execution guard enforces that limit.\n3. Citations [3] and [4] explicitly state that macro nesting is allowed up to 5 levels.\n4. The retrieved citations contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000979475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

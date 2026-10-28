@@ -1,0 +1,46 @@
+{
+  "task_id": "seal-0-068",
+  "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+  "attempt": 1,
+  "answer": "This is based on the **Central Limit Theorem (CLT)**.\n\nMore precisely, if \\(X_1,\\ldots,X_n\\) are independent and identically distributed with finite mean \\(\\mu\\) and variance \\(\\sigma^2\\), then their sample mean\n\n\\[\n\\bar X=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nis approximately normally distributed for large \\(n\\):\n\n\\[\n\\bar X \\approx N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]\n\nEquivalently,\n\n\\[\n\\frac{\\sqrt n(\\bar X-\\mu)}{\\sigma}\\xrightarrow{d}N(0,1).\n\\]\n\nA key clarification: the CLT says that the **sample mean or sum** becomes approximately normal—not that the individual sampled observations themselves become normally distributed. Their individual distribution remains the original population distribution.",
+  "num_citations": 10,
+  "citation_text_tokens": 3725,
+  "citation_text_chars": 17602,
+  "search_queries": [
+    "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?"
+  ],
+  "query_clipped": false,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search-high-reasoning",
+    "reasoning_effort": "high",
+    "max_output_tokens": null,
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 28, 2026"
+  },
+  "model_cost_usd": 0.0016176,
+  "search_cost_usd": 0.007,
+  "total_cost_usd": 0.0086176,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4335,
+    "output_tokens": 445,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 249
+  },
+  "latency_ms": 7693.669124972075,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

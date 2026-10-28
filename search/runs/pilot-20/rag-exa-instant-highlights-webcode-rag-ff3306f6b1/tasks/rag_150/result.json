@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_150",
+ "prompt": "rustdoc doc auto_cfg hide default hidden cfg attributes",
+ "attempt": 1,
+ "answer": "Rustdoc hides the `doc` and `doctest` cfg attributes by default. The documentation says this default list may change.\n\nTo explicitly hide them with `auto_cfg`, use:\n\n```rust\n#![doc(auto_cfg(hide(doc, doctest)))]\n```\n\n`hide(...)` applies only to automatically generated cfg markers from `#[doc(auto_cfg)]`; it does not affect explicit `#[doc(cfg(...))]` attributes. It can also be applied to an item or module, affecting its descendants.",
+ "num_citations": 10,
+ "citation_text_tokens": 5322,
+ "citation_text_chars": 20385,
+ "search_queries": [
+  "rustdoc doc auto_cfg hide default hidden cfg attributes"
+ ],
+ "model_cost_usd": 0.0019987,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6685,
+  "output_tokens": 273,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 162
+ },
+ "latency_ms": 4950.378459063359,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0059987,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

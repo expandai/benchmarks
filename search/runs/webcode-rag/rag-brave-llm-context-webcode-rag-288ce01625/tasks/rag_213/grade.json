@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_213",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 260.2,
+    "total_citation_tokens": 2602.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides none of the information in the gold target. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target makes two claims about Spring Data Cassandra: object fields are used for mapping, and public JavaBean properties are not used.\n2. Citation [2] is about Cassandra and says object properties are used; its statement that private fields are mapped does not establish that public JavaBean properties are not used.\n3. Citations [4] and [6] state the field-versus-JavaBean distinction explicitly, but concern Spring Data Relational and MongoDB, respectively—not Cassandra.\n4. Therefore, the retrieved Cassandra evidence does not establish all the gold target’s non-trivial claims for the technology asked about.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0008051,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

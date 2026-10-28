@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 202.8,
+    "total_citation_tokens": 2028.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the required Undertow option `server.undertow.options.server.record-request-start-time=true`, matching the gold target. The additional access-log configuration and explanation do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] gives the exact property and states that recording request start times is required when the access log pattern includes response time (%D).\nStep 2: The gold target is precisely that property, so all non-trivial information is directly supported.\nStep 3: Citation [2] contains the exact answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0005941,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 444.7,
+    "total_citation_tokens": 4447.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a foreign exception unwinding into Rust through a non-unwinding ABI such as `extern \"C\"` is undefined behavior, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a foreign exception/unwind reaching a non-unwinding ABI boundary in Rust has undefined behavior.\n2. Citation [2] explicitly identifies an uncaught foreign exception entering Rust through a non-unwinding ABI as undefined behavior. Citation [4] states the same rule directly, and [5] corroborates it in the ABI behavior table.\n3. The retrieved citations contain the full non-trivial claim in the gold target, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000353815,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

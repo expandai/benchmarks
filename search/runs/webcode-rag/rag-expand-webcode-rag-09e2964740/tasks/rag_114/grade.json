@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 208.3,
+    "total_citation_tokens": 2083.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives REQUEST for Spring Boot 2.x, matching the gold target. However, it also claims older Spring Boot 1.x versions defaulted to several dispatcher types; that extra claim is inaccurate, since the default is REQUEST. The contradictory added information makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited Spring Boot documentation explicitly states that when no dispatcherType is specified for a filter registration, REQUEST is used.\nStep 2: The gold target answer is REQUEST, and this fact is directly stated in the retrieved sources. The answer is fully supported.\nStep 3: Citations [1], [4], [8], [9], and [10] directly contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0008227250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

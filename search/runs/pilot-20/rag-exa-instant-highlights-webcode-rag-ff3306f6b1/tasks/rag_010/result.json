@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_010",
+ "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+ "attempt": 1,
+ "answer": "HTTP/2 treats them differently:\n\n- **DATA padding:** Intermediaries **SHOULD maintain** it. DATA padding is included in flow control and can obscure message size.\n- **HEADERS and PUSH_PROMISE padding:** Intermediaries **MAY pass it through, re-pad it, or remove it**. These frames carry header blocks, are not flow-controlled like DATA, and excessive padding can block other streams on a multiplexed connection.\n\nThe HTTP/2 frame definitions confirm that all three frame types can contain padding, but the intermediary-specific guidance appears in the HTTP/2 specification issue search result.",
+ "num_citations": 10,
+ "citation_text_tokens": 5009,
+ "citation_text_chars": 21213,
+ "search_queries": [
+  "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+ ],
+ "model_cost_usd": 0.0018919,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6349,
+  "output_tokens": 254,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 125
+ },
+ "latency_ms": 4451.543416944332,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0058919,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

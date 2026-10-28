@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_184",
+  "prompt": "Haskell Data.List maximumBy multiple largest tie-breaker selection",
+  "attempt": 1,
+  "answer": "`Data.List.maximumBy` selects the **rightmost** element among values tied for the maximum.\n\n```haskell\nmaximumBy (comparing fst) (zip [2,7,3,7] [0..])\n-- (7,3)\n```\n\nThe documented behavior is:\n\n> If there are multiple largest elements, the rightmost one is chosen.\n\nTo select the **leftmost** maximum instead, define a left-biased variant:\n\n```haskell\nmaximumByLeft cmp = foldl1 max'\n  where\n    max' x y =\n      case cmp x y of\n        LT -> y\n        _  -> x\n```\n\nExample:\n\n```haskell\nmaximumByLeft (comparing fst) (zip [2,7,3,7] [0..])\n-- (7,1)\n```\n\nAlternatively, reverse the tie-breaker in the comparison:\n\n```haskell\nmaximumBy (comparing (\\(v, i) -> (v, -i))) (zip [2,7,3,7] [0..])\n-- (7,1)\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 4770,
+  "citation_text_chars": 18431,
+  "search_queries": [
+    "Haskell Data.List maximumBy multiple largest tie-breaker selection"
+  ],
+  "model_cost_usd": 0.0019196,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6047,
+    "output_tokens": 340,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 108
+  },
+  "latency_ms": 5252.347416011617,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059196000000000006,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

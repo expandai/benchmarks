@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_224",
+ "prompt": "wasm binary format name section placement ordering requirement",
+ "attempt": 1,
+ "answer": "The WebAssembly **name section** is a custom section with the name `\"name\"`. Its placement requirements are:\n\n- It **should appear at most once** in a module.\n- It should appear **only after the data section**.\n- Its subsections may each occur at most once and must be ordered by **increasing subsection ID**.\n\nSince the data section is the final non-custom section, the name section effectively appears after all standard sections. Custom sections may otherwise be inserted anywhere.",
+ "num_citations": 10,
+ "citation_text_tokens": 3865,
+ "citation_text_chars": 15299,
+ "search_queries": [
+  "wasm binary format name section placement ordering requirement"
+ ],
+ "model_cost_usd": 0.0015204,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5079,
+  "output_tokens": 209,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 104
+ },
+ "latency_ms": 4315.819750074297,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008520400000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

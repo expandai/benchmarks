@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_147",
+  "prompt": "gettext LC_MESSAGES mingw arbitrary value substitute",
+  "attempt": 1,
+  "answer": "On MinGW, `LC_MESSAGES` is not provided by the runtime. GNU gettext substitutes the arbitrary value **1729**:\n\n```c\n#ifndef LC_MESSAGES\n# define LC_MESSAGES 1729\n#endif\n```\n\nGNU gettext uses this value internally to represent the message locale category; its `setlocale` implementation stores and handles the `LC_MESSAGES` locale separately. The value 1729 is described as the smallest positive integer representable as the sum of two cubes in two different ways.",
+  "num_citations": 10,
+  "citation_text_tokens": 6263,
+  "citation_text_chars": 21444,
+  "search_queries": [
+    "gettext LC_MESSAGES mingw arbitrary value substitute"
+  ],
+  "model_cost_usd": 0.0022088,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7775,
+    "output_tokens": 221,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 115
+  },
+  "latency_ms": 4189.608208020218,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062088,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

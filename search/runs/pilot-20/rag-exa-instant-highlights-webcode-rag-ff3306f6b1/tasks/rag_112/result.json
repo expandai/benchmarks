@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_112",
+ "prompt": "automake parallel make recovery locking portable test-and-set command",
+ "attempt": 1,
+ "answer": "Use `mkdir` as the portable filesystem-level test-and-set:\n\n```sh\ntrap 'rm -rf data.lock data.stamp' 1 2 13 15\n\nif mkdir data.lock 2>/dev/null; then\n    # First process: rebuild\n    rm -f data.stamp\n    $(MAKE) $(AM_MAKEFLAGS) data.stamp\n    result=$?\n    rm -rf data.lock\n    exit $result\nelse\n    # Follower processes: wait for the lock holder\n    while test -d data.lock; do sleep 1; done\n    test -f data.stamp\nfi\n```\n\nThe search results identify `mkdir data.lock 2>/dev/null` as a portable test-and-set: only the first process creates the directory; concurrent processes wait until it is removed.",
+ "num_citations": 9,
+ "citation_text_tokens": 4360,
+ "citation_text_chars": 17991,
+ "search_queries": [
+  "automake parallel make recovery locking portable test-and-set command"
+ ],
+ "model_cost_usd": 0.00168145,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5488,
+  "output_tokens": 258,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 81
+ },
+ "latency_ms": 4233.538124943152,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00568145,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

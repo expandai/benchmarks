@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_023",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 83.5,
+    "total_citation_tokens": 835.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact gold-target value, Integer.MIN_VALUE, and its accompanying explanation is consistent with the MySQL JDBC fetch-size behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is the specific MassIndexer `idFetchSize` value `Integer.MIN_VALUE` for MySQL.\n2. Citations [1] and [4] explicitly give `.idFetchSize(Integer.MIN_VALUE)`, and citation [5] says to set `idFetchSize` to `Integer.MIN_VALUE` for MySQL.\n3. The retrieved sources therefore contain the requested value.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00047597499999999995,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

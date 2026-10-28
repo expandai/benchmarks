@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_245",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 289.3,
+    "total_citation_tokens": 2893.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold target of 1024 bytes as the maximum size for the info parameter. The additional error detail does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The retrieved citations explicitly state that the info parameter cannot exceed 1024 bytes. Step 2 — The gold target answer is 1024 bytes, which is directly supported. Every non-trivial claim in the target is present in the sources. Step 3 — Citations [1], [4], and [6] directly provide the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00068885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

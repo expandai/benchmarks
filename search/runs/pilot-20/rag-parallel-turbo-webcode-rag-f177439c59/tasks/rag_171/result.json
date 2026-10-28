@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_171",
+ "prompt": "CSS box-shadow spread distance corner radius adjustment proportion",
+ "attempt": 1,
+ "answer": "When the corner radius `R` is smaller than the positive spread distance `S`, CSS adjusts the spread used for the shadow’s corner radii:\n\n```text\nr = R / S\nadjustment factor = 1 + (r - 1)³\nadjusted spread = S × [1 + (R / S - 1)³]\n```\n\nThe resulting shadow corner radius is calculated using the adjusted spread rather than simply adding the full spread. The adjustment approaches `0` when `R` is `0`, and becomes `1` when `R` equals `S` or more. This adjustment is specified for outer shadows with positive spreads. (W3C CSSWG search results)",
+ "num_citations": 10,
+ "citation_text_tokens": 6739,
+ "citation_text_chars": 26107,
+ "search_queries": [
+  "CSS box-shadow spread distance corner radius adjustment proportion"
+ ],
+ "model_cost_usd": 0.0024703,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7957,
+  "output_tokens": 401,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 251
+ },
+ "latency_ms": 6246.053208014928,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0034703,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

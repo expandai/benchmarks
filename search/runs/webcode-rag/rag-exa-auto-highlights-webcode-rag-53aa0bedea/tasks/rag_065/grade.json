@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 341.8,
+    "total_citation_tokens": 3418.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies that the logged server name is replaced by “<CACHE>”. The predicted answer instead says it is replaced by a blank value, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] discusses the server name logged when an object is delivered from the cache.\n2. The gold target is the literal value “<CACHE>”. The quoted passage says the server name is replaced by “` `” (a blank), not “<CACHE>”.\n3. Therefore, the citations do not establish the specific value in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00100085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_171",
+ "prompt": "CSS box-shadow spread distance corner radius adjustment proportion",
+ "attempt": 1,
+ "answer": "For an outset `box-shadow`, the traditional CSS adjustment is:\n\n```text\nr = border-radius / spread\neffectiveSpread = spread × [1 + (r − 1)³]\nshadowRadius = border-radius + effectiveSpread\n```\n\nThis adjustment is used when the border radius is smaller than the spread. If the radius is at least the spread, the spread is added directly. For example, with a `10px` radius and `20px` spread:\n\n```text\nr = 10 / 20 = 0.5\nshadowRadius = 10 + 20 × [1 + (0.5 − 1)³]\n             = 27.5px\n```\n\nFor inset shadows, the radius is reduced rather than increased.\n\nThe CSS Working Group later resolved to use a coverage-based algorithm that also considers how much of the element’s width and height the radius occupies. Its formula is:\n\n```js\ncoverage = Math.min(\n  2 * radiusWidth / edgeWidth,\n  2 * radiusHeight / edgeHeight\n) || 0;\n\nif (radiusComponent >= spread || coverage >= 1) {\n  shadowRadius = radiusComponent + spread;\n} else {\n  r = 1 - radiusComponent / spread;\n  shadowRadius =\n    radiusComponent + spread * (1 - r ** 3 * (1 - coverage ** 3));\n}\n```\n\nThis preserves circular corners more reliably when the radius covers at least half of the relevant edge.",
+ "num_citations": 10,
+ "citation_text_tokens": 5175,
+ "citation_text_chars": 20064,
+ "search_queries": [
+  "CSS box-shadow spread distance corner radius adjustment proportion"
+ ],
+ "model_cost_usd": 0.0022824,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6567,
+  "output_tokens": 534,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 224
+ },
+ "latency_ms": 8161.009500036016,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0092824,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

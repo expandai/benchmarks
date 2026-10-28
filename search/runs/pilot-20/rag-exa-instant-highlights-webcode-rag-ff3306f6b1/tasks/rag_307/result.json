@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_307",
+ "prompt": "libtool _cmds _eval variable command list separator",
+ "attempt": 1,
+ "answer": "In libtool, `*_cmds` variables contain a **tilde-separated command list**:\n\n```sh\ncommand1~command2~command3\n```\n\nThe list is split by temporarily setting:\n\n```sh\nIFS='~'\n```\n\nEach resulting command is then expanded/evaluated separately:\n\n```sh\nsave_ifs=$IFS\nIFS='~'\nfor cmd in $cmds; do\n  IFS=$save_ifs\n  eval cmd=\\\"\\$cmd\\\"\n  eval \"$cmd\"\ndone\nIFS=$save_ifs\n```\n\nThe separation must occur **before** expansion. Expanding the entire command list first can incorrectly split pathnames containing `~`, such as `c:/progra~1/foo/lib`. (Search results 1, 4, and 8.)",
+ "num_citations": 10,
+ "citation_text_tokens": 6076,
+ "citation_text_chars": 20952,
+ "search_queries": [
+  "libtool _cmds _eval variable command list separator"
+ ],
+ "model_cost_usd": 0.00224675,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7610,
+  "output_tokens": 287,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 116
+ },
+ "latency_ms": 4699.5527079561725,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0062467500000000006,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_255",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 125.2,
+    "total_citation_tokens": 1252.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer “url” exactly matches the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] identifies a section about the <uri> element but gives no rendering details or CSS class.\n2. Citation [3] gives the class name \"url\", but its passage describes <url>, not <uri>, and does not support the target’s specific contrast that the value is not \"uri\".\n3. Because the retrieved citations do not establish that the <uri> element has the class \"url\", a non-trivial link in the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00081346,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

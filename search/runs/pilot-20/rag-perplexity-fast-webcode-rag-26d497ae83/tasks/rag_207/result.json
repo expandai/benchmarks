@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_207",
+ "prompt": "ffmpeg select filter expression output index routing",
+ "attempt": 1,
+ "answer": "In FFmpeg’s `select` filter, the expression result determines what happens to each frame:\n\n- **`0`**: discard the frame.\n- **Negative or NaN**: send the frame to output **0** (the first output).\n- **Positive value `v`**: send it to output index:\n\n```text\nceil(v) - 1\n```\n\nOutput indexes are zero-based.\n\nExamples:\n\n| Expression result | Destination |\n|---:|---|\n| `0` | Discarded |\n| `-1` | Output 0 |\n| `0.1` | Output 0 |\n| `1` | Output 0 |\n| `1.2` | Output 1 |\n| `2.0` | Output 1 |\n| `2.7` | Output 2 |\n\nMultiple outputs must be enabled with the `outputs`/`n` option; its default is `1`.\n\nFor example, with two outputs:\n\n```text\nselect=n=2:e='if(condition,1,2)'\n```\n\nA result of `1` routes to output 0, while a result of `2` routes to output 1.",
+ "num_citations": 10,
+ "citation_text_tokens": 3774,
+ "citation_text_chars": 14532,
+ "search_queries": [
+  "ffmpeg select filter expression output index routing"
+ ],
+ "model_cost_usd": 0.001711,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5155,
+  "output_tokens": 352,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 104
+ },
+ "latency_ms": 4341.565957991406,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.002711,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

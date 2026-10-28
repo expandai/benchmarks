@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_260",
+  "prompt": "LLVM constrained frem rounding mode argument effect",
+  "attempt": 1,
+  "answer": "The rounding mode argument to `llvm.experimental.constrained.frem` has **no effect** on the computed result, because `frem`’s result is never rounded. It is included only for consistency with the other constrained floating-point intrinsics.\n\nThe intrinsic still needs the exception-behavior argument to preserve constrained exception semantics, such as for `frem inf, x` or `frem x, 0`.",
+  "num_citations": 10,
+  "citation_text_tokens": 4557,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "LLVM constrained frem rounding mode argument effect"
+  ],
+  "model_cost_usd": 0.00158915,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5930,
+    "output_tokens": 89,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2692.667708033696,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00558915,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_085",
+  "prompt": "click CliRunner isolation stderr error handling mode",
+  "attempt": 1,
+  "answer": "- **Isolation:** `CliRunner.invoke()` runs the command-line script in isolation and captures its output. `CliRunner.isolated_filesystem()` creates an empty folder and changes the current working directory to it.\n- **stderr handling:**\n  - In older Click versions, `mix_stderr=False` kept stdout and stderr independent.\n  - Since Click 8.2, stdout and stderr are always independent, `mix_stderr` was removed, and stderr is always collected.\n- **Exception handling:** Use `catch_exceptions=False` with `invoke()` to allow exceptions to propagate instead of being caught and wrapped.\n- **File mode/errors:** `click.File` accepts a `mode` for opening the file and an `errors` argument specifying the error-handling mode.\n\nSources: [Click changes](https://click.palletsprojects.com/en/stable/changes/), [Click testing guide](https://lyz-code.github.io/blue-book/coding/python/click/), [Click Extra documentation](https://kdeldycke.github.io/click-extra/click_extra.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 2562,
+  "citation_text_chars": 11318,
+  "search_queries": [
+    "click CliRunner isolation stderr error handling mode"
+  ],
+  "model_cost_usd": 0.00144635,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3674,
+    "output_tokens": 440,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 213
+  },
+  "latency_ms": 7456.169332959689,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00644635,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

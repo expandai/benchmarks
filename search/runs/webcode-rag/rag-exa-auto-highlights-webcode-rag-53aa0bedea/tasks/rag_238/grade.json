@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_238",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 381.3,
+    "total_citation_tokens": 3813.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is EV_IPL, and the predicted answer gives EV_IPL exactly. It matches the requested event log type without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that GRUB measured-boot events are logged with event type EV_IPL.\nStep 2: The gold target answer is EV_IPL, and this factual claim is directly present in the retrieved citations. No additional non-trivial details are required.\nStep 3: Citations [1], [2], [4], and [8] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000821475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

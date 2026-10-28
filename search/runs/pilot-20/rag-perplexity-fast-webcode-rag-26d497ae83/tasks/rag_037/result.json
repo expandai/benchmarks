@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_037",
+ "prompt": "rust repr packed struct nested repr align member restriction",
+ "attempt": 1,
+ "answer": "A `#[repr(packed)]` struct cannot transitively contain a `#[repr(align)]` type. This restriction applies even when the aligned type is nested inside another member type.\n\nThe restrictions are:\n\n- `#[repr(packed)]` and `#[repr(align(...))]` cannot be applied to the same type.\n- A packed type cannot contain an aligned type transitively.\n- The reverse is allowed: an aligned type may contain a packed type.\n- `packed` also reduces field alignment for layout, potentially making fields unaligned; references to such fields are not allowed because that is undefined behavior.\n\n`#[repr(packed)]` is equivalent to `#[repr(packed(1))]`; `#[repr(packed(N))]` limits field alignment to the smaller of `N` and the field type’s alignment.",
+ "num_citations": 10,
+ "citation_text_tokens": 3953,
+ "citation_text_chars": 16333,
+ "search_queries": [
+  "rust repr packed struct nested repr align member restriction"
+ ],
+ "model_cost_usd": 0.0014531,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4973,
+  "output_tokens": 175,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3383.383125066757,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0024530999999999997,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

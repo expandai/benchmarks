@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_228",
+ "prompt": "pytest norecursedirs vs collect-in-virtualenv precedence",
+ "attempt": 1,
+ "answer": "`norecursedirs` takes precedence over `--collect-in-virtualenv`.\n\n- Pytest normally ignores directories identified as virtual environments.\n- `--collect-in-virtualenv` allows collection from those directories.\n- However, if the virtualenv directory also matches a `norecursedirs` pattern, it remains excluded.\n- To collect from it, remove or override the matching `norecursedirs` pattern **and** use `--collect-in-virtualenv`.\n\nFor example, a virtualenv whose base directory matches `.*` requires overriding `norecursedirs` in addition to passing `--collect-in-virtualenv`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4741,
+ "citation_text_chars": 20231,
+ "search_queries": [
+  "pytest norecursedirs vs collect-in-virtualenv precedence"
+ ],
+ "model_cost_usd": 0.00174225,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6312,
+  "output_tokens": 137,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2801.905707921833,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00874225,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

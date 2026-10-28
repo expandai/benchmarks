@@ -1,0 +1,46 @@
+{
+  "task_id": "seal-0-068",
+  "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+  "attempt": 1,
+  "answer": "This is based on the **Central Limit Theorem (CLT)**—but only if “sampled variables” means the **sample means or sums**.\n\nFor i.i.d. observations \\(X_1,\\dots,X_n\\) with mean \\(\\mu\\) and finite variance \\(\\sigma^2\\),\n\n\\[\n\\frac{\\bar X-\\mu}{\\sigma/\\sqrt n}\n\\;\\xrightarrow{d}\\;\nN(0,1)\n\\]\n\nas \\(n\\) becomes large. Thus, the **sampling distribution of \\(\\bar X\\)** becomes approximately normal, even if the original population is not normal.\n\nThe individual sampled observations do **not** become normally distributed; they continue to follow the original distribution. If referring to the empirical distribution of the observations converging to the population distribution, that is related to the **Law of Large Numbers**.",
+  "num_citations": 10,
+  "citation_text_tokens": 2109,
+  "citation_text_chars": 9797,
+  "search_queries": [
+    "If I randomly select i i d samples from a distribution n times the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large This statement is based on which theory"
+  ],
+  "query_clipped": true,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search-high-reasoning",
+    "reasoning_effort": "high",
+    "max_output_tokens": null,
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 27, 2026"
+  },
+  "model_cost_usd": 0.0011704,
+  "search_cost_usd": 0.005,
+  "total_cost_usd": 0.0061704,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 2767,
+    "output_tokens": 399,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 214
+  },
+  "latency_ms": 8059.701333055273,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

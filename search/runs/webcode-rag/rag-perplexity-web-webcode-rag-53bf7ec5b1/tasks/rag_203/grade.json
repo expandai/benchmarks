@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 394.8,
+    "total_citation_tokens": 3948.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target keywords, but it adds conflicting claims: it says the shorthand values compute to include `style` and reports that MDN gives the computed value as “as specified,” rather than the gold-target value. Because the answer contains contradictory information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states the computed value of the CSS contain property.\n2. Citations [2] and [4] give that computed value explicitly, matching the target.\n3. All non-trivial information in the gold target is present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013113500000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_092",
+ "prompt": "clang mlong-double-80 storage padding size",
+ "attempt": 1,
+ "answer": "`-mlong-double-80` uses an 80-bit value padded to 128 bits for storage:\n\n- **x86-64:** 16-byte storage → **6 bytes of padding**\n- **i386/IA-32:** 12-byte storage → **2 bytes of padding**\n\nThe Clang option description explicitly says “80 bits, padded to 128 bits for storage,” while the Intel result specifies 12-byte IA-32 and 16-byte Intel 64 storage.",
+ "num_citations": 10,
+ "citation_text_tokens": 5367,
+ "citation_text_chars": 19450,
+ "search_queries": [
+  "clang mlong-double-80 storage padding size"
+ ],
+ "model_cost_usd": 0.00194665,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6760,
+  "output_tokens": 214,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 109
+ },
+ "latency_ms": 4236.623542034067,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00894665,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

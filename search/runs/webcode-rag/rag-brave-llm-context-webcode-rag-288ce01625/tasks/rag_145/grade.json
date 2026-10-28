@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 197.4,
+    "total_citation_tokens": 1974.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the exception type or contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [8] indicates that a missing requested snapshot may cause an exception when unavailable snapshots are not ignored, but it does not identify the exception type.\n2. Citation [10] says the request returns an error for unavailable snapshots when ignore_unavailable is false, but also does not give an exception type.\n3. The gold target specifically names SnapshotMissingException. That non-trivial fact is not present in the retrieved citations, so the sources do not contain sufficient information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0006184750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

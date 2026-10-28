@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_040",
+ "prompt": "Nx byte_size sub-byte s2 u2 u4 types behavior",
+ "attempt": 1,
+ "answer": "For tensors with `s2`, `s4`, `u2`, or `u4` types, `Nx.byte_size/1` rounds the computed size down to whole bytes. Use `Nx.bit_size/1` for the exact size in bits.\n\nExample:\n\n```elixir\ntensor = Nx.tensor([[1, 2, 3], [3, 2, 1]], type: :u2)\n\nNx.bit_size(tensor)\n# 12\n\nNx.byte_size(tensor)\n# 1\n```\n\nThe type sizes include `:s2`, `:s4`, `:u2`, and `:u4`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3873,
+ "citation_text_chars": 12568,
+ "search_queries": [
+  "Nx byte_size sub-byte s2 u2 u4 types behavior"
+ ],
+ "model_cost_usd": 0.00155,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4991,
+  "output_tokens": 252,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 112
+ },
+ "latency_ms": 3434.6428340068087,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00255,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

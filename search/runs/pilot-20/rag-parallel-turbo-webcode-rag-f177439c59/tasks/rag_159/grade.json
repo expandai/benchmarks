@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_159",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 566.4,
+    "total_citation_tokens": 5664.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer does not give the gold direction, bottom-to-top (btt), and explicitly says that no intrinsic vertical direction is specified. That conflicts with the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation identifies the table column for vertical intrinsic direction, but the supplied table entries do not include Ogham.\n2. The Ogham passage says that vertical mixed typesetting cannot automatically handle Ogham and mentions sideways-lr as an option; it does not specify Ogham’s vertical intrinsic direction as btt (bottom-to-top).\n3. Therefore, a specific non-trivial claim in the gold target is missing from the retrieved citations, so the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011198500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

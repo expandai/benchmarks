@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_211",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 27.9,
+    "total_citation_tokens": 279.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target asserts that a primitive resource’s priority is ignored when it is inside a bundle, and that only the bundle’s own priority matters.\n2. None of the retrieved citations states either of these priority rules. Citation [8] mentions a primitive resource in a bundle, but does not address priority; citation [7] discusses priority generally, not priority assignment within bundles.\n3. Therefore, the key factual claim in the gold target cannot be derived from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000353975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

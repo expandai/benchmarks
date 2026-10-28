@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_136",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 419.2,
+    "total_citation_tokens": 4192.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives GT as the result when comparing NaN, including compare NaN NaN, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target says the result of comparing a Haskell `Double` NaN is `GT`. Citation [2] explicitly states that `compare` returns `GT` when either argument is NaN, including comparing NaN with itself. The target is therefore directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00086935,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

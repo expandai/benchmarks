@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_017",
+  "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+  "attempt": 1,
+  "answer": "- **LLVM 3.7/3.8 and earlier:** `llvm.sqrt` is *not* equivalent to `libm sqrt` for negative inputs. It has **undefined behavior for negative numbers other than `-0.0`**, enabling optimizations without concern about `errno`.\n- **`llvm.sqrt(-0.0)`:** defined to return `-0.0`, like IEEE square root.\n- **`libm sqrt`:** the older LLVM documentation contrasts it with `llvm.sqrt`; `llvm.sqrt` is described as otherwise returning the same square-root value as `libm sqrt`.\n- **LLVM 8/9 documentation:** the semantics were changed/described as returning the corresponding `libm sqrt` result **without trapping or setting `errno`**. For IEEE-754 types, the result matches a conforming libm implementation.\n\nThus, for the older LLVM versions shown, passing a negative value to `llvm.sqrt` is undefined behavior, whereas `libm sqrt` has defined library semantics.",
+  "num_citations": 10,
+  "citation_text_tokens": 3066,
+  "citation_text_chars": 12042,
+  "search_queries": [
+    "LLVM llvm.sqrt negative number behavior vs libm"
+  ],
+  "model_cost_usd": 0.00147345,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4104,
+    "output_tokens": 373,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 159
+  },
+  "latency_ms": 6124.405500013381,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00647345,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_039",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 306.3,
+    "total_citation_tokens": 3063.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer includes all three databases in the gold target, but it additionally claims PostgreSQL is supported. Since the gold target specifies MySQL, Microsoft SQL Server, and Oracle, this extra database makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [8] explicitly names MySQL, Microsoft SQL Server, and Oracle as supported for stored-function metadata lookup.\nStep 2: Those three named databases match every database in the gold target, so the target’s factual claims are supported. Citation [2] also supports those three, although it additionally lists PostgreSQL.\nStep 3: Citation [8] contains information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001023225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

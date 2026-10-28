@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_229",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.9,
+    "avg_citation_tokens": 379.0,
+    "total_citation_tokens": 3790.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a negative count causes the enumerable to be traversed twice: first to determine the position from the end, and again to perform the split. This matches the gold target. Its additional linear-time explanation is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that a negative count causes the enumerable to be enumerated twice, first to calculate the position and then to perform the split. Citations [7] and [9] use “collection” in place of “enumerable” but give the same information.\nStep 2: This covers the full gold target claim, so it is GROUNDED.\nStep 3: Citations [1]–[9] each contain sufficient information to derive the target. Citation [10] does not provide the relevant negative-count split behavior.",
+    "judge_cost_known": true,
+    "num_answer_sources": 9
+  },
+  "judge_cost_usd": 0.000996475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

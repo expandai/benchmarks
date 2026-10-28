@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 550.3,
+    "total_citation_tokens": 5503.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer discusses colormap entry limits and distinguishes those from pixel precision, but it never states the gold answer that remap precision is at most 8 bits. It does not clearly contradict that limit, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that ImageMagick remap is limited to at most 8 bits of precision.\n2. Citation [1] describes a hard limit of 65,536 colormap entries, which is a palette-size limit, not a limit of at most 8-bit precision.\n3. Citation [4] explains how `-depth` affects settings and file writing, but does not establish an 8-bit precision limit for remap.\n4. Citation [7] uses `-depth 8` in a particular script; it does not say that remap is limited to 8-bit precision.\n5. Thus, the retrieved citations do not contain the gold target’s non-trivial claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001448225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

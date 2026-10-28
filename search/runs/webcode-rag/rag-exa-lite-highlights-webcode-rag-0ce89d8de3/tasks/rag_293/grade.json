@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_293",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 289.8,
+    "total_citation_tokens": 2898.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the default separator as carriage return (CR) and says linefeeds are replaced with CR, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that tmux replaces linefeeds with carriage return (CR) by default. Citation [3] also shows the implementation setting the default separator to \"\\r\" unless -r is used.\nStep 2: The gold target answer, “carriage return (CR),” is fully supported by the retrieved passages. No non-trivial factual claim is missing.\nStep 3: Citations [1], [2], [3], and [5] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007141000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

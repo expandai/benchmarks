@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_252",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.667,
+    "avg_citation_tokens": 441.7,
+    "total_citation_tokens": 3975.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target for other PowerPC CPUs, but also claims CR-bit tracking is enabled on POWER8 and later regardless of optimization level. That contradicts the stated threshold of -O2 and above.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the relevant optimization level is -O2 and above. The citations explicitly say that for PowerPC, -mcrbits is enabled by default for CPUs other than POWER8 and above when optimization is applied at -O2 and above. This directly supports the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.0010555999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

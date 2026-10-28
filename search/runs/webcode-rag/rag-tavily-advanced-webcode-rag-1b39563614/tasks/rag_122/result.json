@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_122",
+  "prompt": "rust asm! explicit register operands position operand list",
+  "attempt": 1,
+  "answer": "In Rust’s `asm!` operand list, explicit register operands must appear last:\n\n1. Positional operands\n2. Named operands\n3. Explicit register operands\n\nFor example:\n\n```rust\nasm!(\n    \"mov {value}, eax\",\n    value = in(reg) input,\n    out(\"eax\") _,\n);\n```\n\nExplicit register operands cannot be referenced with placeholders such as `{}`; write the register name directly in the assembly template.",
+  "num_citations": 10,
+  "citation_text_tokens": 3693,
+  "citation_text_chars": 14661,
+  "search_queries": [
+    "rust asm! explicit register operands position operand list"
+  ],
+  "model_cost_usd": 0.0013006,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4747,
+    "output_tokens": 95,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4437.5996249727905,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0173006,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

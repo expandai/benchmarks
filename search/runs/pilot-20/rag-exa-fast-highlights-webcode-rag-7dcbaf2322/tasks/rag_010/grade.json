@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_010",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 487.2,
+    "total_citation_tokens": 4872.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly captures the key distinction: intermediaries SHOULD retain DATA padding and MAY drop HEADERS or PUSH_PROMISE padding. However, it also asserts that padding octets must be zero when sent. HTTP/2 does not require padding octets to be zero; receivers must ignore them. This incorrect extra claim makes the predicted answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The citation states that intermediaries SHOULD maintain padding in DATA frames, which supports retaining DATA padding. It also states that intermediaries MAY drop padding from header-bearing frames; HEADERS and PUSH_PROMISE are the header-bearing frames in this context. Thus, all non-trivial claims in the gold target are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001146725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

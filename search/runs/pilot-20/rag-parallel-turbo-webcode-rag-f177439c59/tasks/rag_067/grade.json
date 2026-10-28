@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_067",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 488.8,
+    "total_citation_tokens": 4888.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies AuditException as the exception thrown when the revision number overflows to a negative value and states that the current transaction is rolled back, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [10] explicitly states that when the revision number wraps around and becomes negative, Envers throws an `AuditException` and rolls back the current transaction.\nStep 2 — Both non-trivial claims in the gold target answer (the exception type and the transaction rollback) are supported by the citation. The answer is GROUNDED.\nStep 3 — Citation [10] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009242250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

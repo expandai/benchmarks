@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_297",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 462.8,
+    "total_citation_tokens": 4628.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states the target side effect: @NotFound(action = IGNORE) makes a to-one association non-lazy and implicitly eagerly fetched, even when declared LAZY. The additional explanation does not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] directly states that applying @NotFound(action = NotFoundAction.IGNORE) in the described Envers relation case causes implicit eager loading of to-one relations. Step 2: This fully supports the gold target answer, with no additional non-trivial claims missing. Step 3: Citation [2] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009249750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 650.2,
+    "total_citation_tokens": 6502.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies leading zero-byte padding rather than trailing padding. The predicted answer explicitly says to add zero bytes before the challenge data, so it matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [4] state that a short V2ClientHello challenge is padded on the left, with leading rather than trailing zero bytes.\nStep 2: The gold target answer, “leading (not trailing) zero bytes,” is fully supported by the retrieved text. No non-trivial claim is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00124785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

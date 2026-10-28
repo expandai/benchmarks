@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_177",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 485.5,
+    "total_citation_tokens": 4855.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer discusses custom payload parsing and says that __declspec parsing uses a specialized parser, but it does not identify the gold target’s specific behavior: __declspec-spelled attributes ignore HasCustomParsing and are handled by Parser::ParseMicrosoftDeclSpec. It also says the exact interaction cannot be determined. It does not clearly contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] shows that `Parser::ParseMicrosoftDeclSpecs` parses `__declspec` attributes and delegates parenthesized arguments to `ParseMicrosoftDeclSpecArgs`.\n2. Citation [2] establishes that `HasCustomParsing` exists and describes custom parsing for plugins, but does not state how `__declspec` spellings interact with that flag.\n3. Neither citation establishes that `__declspec` attributes ignore `HasCustomParsing`; the excerpt in [1] does not include the implementation of `ParseMicrosoftDeclSpecArgs`, where that behavior could be determined.\n4. This missing interaction is a non-trivial claim in the gold target, so the citations do not sufficiently ground it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0016729750000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

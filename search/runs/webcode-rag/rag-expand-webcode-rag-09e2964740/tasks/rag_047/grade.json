@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_047",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 915.4,
+    "total_citation_tokens": 9154.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer gives the requested maximum span as 1,024 Unicode characters, matching the gold target. Its additional details are consistent with the implicit-key restriction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations state that implicit keys in block mappings must not span more than 1024 Unicode characters.\nStep 2: The gold target, “1024 Unicode characters,” is directly supported by these passages; no non-trivial claim is missing.\nStep 3: Citations [1]–[4] each contain sufficient information to derive the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001678225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

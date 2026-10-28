@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_060",
+  "prompt": "haproxy set-var ifgt iflt non-integer type check",
+  "attempt": 1,
+  "answer": "For `set-var` conditions:\n\n- `ifgt` and `iflt` apply only when **both the existing variable and the incoming sample are scalar types**—for example, integers.\n- If either side is a string or binary/non-scalar type, the condition is ignored; the assignment is not performed based on that comparison. This is explicitly tested for both `ifgt` and `iflt` in the HAProxy regression test: [cond_set_var.vtc](https://fossies.org/linux/haproxy/reg-tests/sample_fetches/cond_set_var.vtc).\n- Ensure values are typed as integers using `int(...)`. A `var()` fetch is treated as a string by default during configuration parsing, so it must be converted to an integer before comparison: [HAProxy issue #1215](https://github.com/haproxy/haproxy/issues/1215).\n\nExample:\n\n```haproxy\nhttp-response set-var(res.limit) int(5)\n\n# 55 > 5: condition fails; variable remains 5\nhttp-response set-var(res.limit,ifgt) int(55)\n\n# 2 > 5: condition succeeds; variable becomes 2\nhttp-response set-var(res.limit,ifgt) int(2)\n```\n\nFor `iflt`, the same typed-scalar requirement applies, with the comparison reversed.",
+  "num_citations": 10,
+  "citation_text_tokens": 6645,
+  "citation_text_chars": 22113,
+  "search_queries": [
+    "haproxy set-var ifgt iflt non-integer type check"
+  ],
+  "model_cost_usd": 0.0024216,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7863,
+    "output_tokens": 380,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 97
+  },
+  "latency_ms": 6161.815375089645,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0094216,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

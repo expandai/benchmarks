@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_006",
+ "prompt": "HTML5 img sizes attribute source-size-value allowed CSS functions",
+ "attempt": 1,
+ "answer": "The `sizes` attribute’s `<source-size-value>`:\n\n- Must be non-negative.\n- Must not use CSS functions other than math functions.\n- Allows `calc()`, `min()`, `max()`, and `clamp()`.\n\nFor example:\n\n```html\n<img\n  sizes=\"(max-width: 50em) calc(100vw - 2rem), clamp(300px, 50vw, 800px)\"\n  srcset=\"image-400.jpg 400w, image-800.jpg 800w\"\n>\n```\n\nPercentages are not allowed. Length units such as `px`, `em`, `rem`, and `vw` may be used; relative units are interpreted as in media queries, so font-related units are relative to the document root.",
+ "num_citations": 10,
+ "citation_text_tokens": 4498,
+ "citation_text_chars": 19451,
+ "search_queries": [
+  "HTML5 img sizes attribute source-size-value allowed CSS functions"
+ ],
+ "model_cost_usd": 0.00158115,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5538,
+  "output_tokens": 164,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 12909.590041963384,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00858115,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

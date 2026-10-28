@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 244.0,
+    "total_citation_tokens": 2440.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Bazel records metrics for the top 20 action mnemonics, ranked by number of executed actions, matching the gold target. The additional flag information does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states the default limit is the top 20, ranked by number of executed actions for ActionData. Citation [3] also confirms the top-20 default for action types.\nStep 2: The gold target’s factual claim—that the tracking reports the 20 mnemonics with the largest number of executed actions—is fully supported. Citation [1] directly connects the top-20 limit, executed-action count, and ActionData mnemonics.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007411,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

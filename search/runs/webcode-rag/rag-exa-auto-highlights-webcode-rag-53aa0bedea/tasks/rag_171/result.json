@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_171",
+  "prompt": "CSS box-shadow spread distance corner radius adjustment proportion",
+  "attempt": 1,
+  "answer": "For an outset `box-shadow`, when a corner radius is smaller than the spread distance, the spread is adjusted to keep the corner relatively sharp:\n\n\\[\nr=\\frac{\\text{border-radius}}{\\text{spread}}\n\\]\n\n\\[\n\\text{adjusted spread}\n=\\text{spread}\\times\\left(1+(r-1)^3\\right)\n\\]\n\nThe shadow’s corner radius is then:\n\n\\[\n\\text{shadow radius}\n=\\text{border-radius}+\\text{adjusted spread}\n\\]\n\nExample: with a `10px` radius and `20px` spread:\n\n\\[\nr=10/20=0.5\n\\]\n\n\\[\n10+20\\left(1+(0.5-1)^3\\right)=27.5\\text{px}\n\\]\n\nSo the result is `27.5px`, rather than `30px`.\n\nA newer coverage-based algorithm was resolved for adoption. It also considers how much of the element’s width and height the radius covers, preserving circular corners for shapes such as `border-radius: 50%`. Its adjustment is:\n\n```js\nlet coverage = Math.min(\n  2 * radiusWidth / edgeWidth,\n  2 * radiusHeight / edgeHeight\n) || 0;\n\nif (value >= spread || coverage >= 1)\n  return value + spread;\n\nlet r = 1 - value / spread;\nreturn value + spread * (1 - r**3 * (1 - coverage**3));\n```\n\nThe Chromium search result reports that this coverage-based algorithm was applied in a commit dated October 16, 2025.",
+  "num_citations": 10,
+  "citation_text_tokens": 5147,
+  "citation_text_chars": 20056,
+  "search_queries": [
+    "CSS box-shadow spread distance corner radius adjustment proportion"
+  ],
+  "model_cost_usd": 0.0023954,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6611,
+    "output_tokens": 619,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 278
+  },
+  "latency_ms": 8460.50291589927,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0093954,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

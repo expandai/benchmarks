@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_134",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 491.9,
+    "total_citation_tokens": 3935.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer says the field was immutable through Kubernetes 1.22 and became mutable starting in 1.23, matching the gold target that it was immutable in versions up to and including 1.22 and is now mutable.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the field was immutable in Kubernetes versions <= 1.22 and is now mutable.\n2. Citations [1], [4], [7], and [8] explicitly state both facts.\n3. Therefore, all non-trivial claims in the gold target are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00085085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

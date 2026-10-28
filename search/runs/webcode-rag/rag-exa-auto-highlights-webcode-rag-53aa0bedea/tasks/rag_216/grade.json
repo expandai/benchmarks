@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_216",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 333.8,
+    "total_citation_tokens": 3338.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that `&key` is not allowed in `define-modify-macro`, matching the gold target. Its additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that `&key` is not allowed in the `arglist` of `define-modify-macro`.\n2. Citation [1] explicitly shows that an arglist containing `&key` signals an error, and citation [3] states directly that `&key` is not allowed in arglist.\n3. The retrieved sources therefore support the complete non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000827725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

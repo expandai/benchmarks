@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_160",
+ "prompt": "python sum() start parameter type restriction",
+ "attempt": 1,
+ "answer": "`sum()` does not require `start` to be a specific numeric type. It may be a number, list, or tuple, provided the `+` operations are valid.\n\nThe explicit restriction is that `start` cannot be a string. Real Python also reports that `bytes` and `bytearray` are rejected. For concatenation, use `''.join()`, `b''.join()`, or an appropriate container start value.\n\nExamples:\n\n```python\nsum([1, 2, 3], start=10)       # 16\nsum([[1], [2]], start=[])      # [1, 2]\n\nsum([1, 2], start='')           # TypeError\nsum(['a', 'b'], start='')       # TypeError\n```\n\nThe Python documentation states: “the start value is not allowed to be a string.” <https://docs.python.org/3/library/functions.html>",
+ "num_citations": 10,
+ "citation_text_tokens": 5353,
+ "citation_text_chars": 19940,
+ "search_queries": [
+  "python sum() start parameter type restriction"
+ ],
+ "model_cost_usd": 0.00193975,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6478,
+  "output_tokens": 267,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 70
+ },
+ "latency_ms": 4338.015666930005,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00893975,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

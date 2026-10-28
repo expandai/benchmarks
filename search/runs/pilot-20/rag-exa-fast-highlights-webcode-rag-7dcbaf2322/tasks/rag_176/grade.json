@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_176",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 487.4,
+    "total_citation_tokens": 4874.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states the gold rule: only one of `rsc` and `with-rsc` may reference a resource template, and the other must be a regular resource. Its example is consistent with that rule.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly states that only one template may be referenced through `rsc` or `with-rsc`, and that the other reference must be a regular resource. 2. This directly supports the full gold target answer, with no non-trivial claims missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000954225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

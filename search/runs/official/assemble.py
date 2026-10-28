@@ -1,0 +1,127 @@
+"""Assemble RESULTS.md: run report.py, insert the per-suite tables at ``<!-- TABLES -->`` (between
+the protocol section and the pins), append the coverage/spend/windows section and deviations.md.
+
+    "$EXA_BENCH_VENV/bin/python" runs/official/assemble.py
+"""
+
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+PY = sys.executable
+SUITE_TITLES = {
+    "simpleqa-verified-official": "SimpleQA Verified (1,000 questions) — headline F1",
+    "seal-0-official": "SealQA Seal-0 (111 questions) — accuracy",
+    "seal-hard-official": "SealQA Seal-Hard (254 questions) — accuracy",
+    "frames-official": "FRAMES (824 questions) — accuracy",
+}
+ORDER = ["simpleqa-verified-official", "seal-0-official", "seal-hard-official", "frames-official"]
+
+
+def run_report() -> str:
+    out = subprocess.run([PY, str(HERE / "report.py")], capture_output=True, text=True, check=True).stdout
+    return out
+
+
+def split_tables(report_text: str) -> dict[str, str]:
+    """Map suite name -> its markdown table block from report.py's stdout."""
+    blocks: dict[str, str] = {}
+    current = None
+    for line in report_text.splitlines():
+        if line.startswith("### "):
+            name = line[4:].split(" ", 1)[0]
+            current = name if name in SUITE_TITLES else None
+            if current:
+                blocks[current] = ""
+            continue
+        if current and line.startswith("|"):
+            blocks[current] += line + "\n"
+    return blocks
+
+
+def newest_run_created_at() -> str:
+    """The latest ``created_at`` over the run directories' config.json, so the stamp depends only on the records."""
+    stamps = [json.loads(path.read_text())["created_at"] for path in HERE.glob("*/*/config.json")]
+    return max(stamps, default="")
+
+
+def windows() -> dict[str, list[str]]:
+    """Per suite: the UTC run windows from logs/wall.txt (full runs only)."""
+    out: dict[str, list[str]] = {}
+    for suite in ORDER:
+        wall = HERE / suite / "logs" / "wall.txt"
+        if not wall.exists():
+            continue
+        lines = [ln for ln in wall.read_text().splitlines() if "limit=all" in ln]
+        out[suite] = lines
+    return out
+
+
+def main() -> int:
+    report_text = run_report()
+    tables = split_tables(report_text)
+    data = json.loads((HERE / "report.json").read_text())
+    spend = data["spend"]
+    rows = data["suites"]
+
+    parts = []
+    for suite in ORDER:
+        if suite not in tables:
+            continue
+        parts.append(f"## {SUITE_TITLES[suite]}\n")
+        rev = rows[suite][0]["suite_revision"] if rows[suite] else ""
+        judge = rows[suite][0]["judge_model"] if rows[suite] else ""
+        reported = sorted({m for r in rows[suite] for m in r["judge_model_reported"]})
+        parts.append(f"Suite revision `{rev}`; judge `{judge}` (provider reported {reported}).\n")
+        parts.append(tables[suite].rstrip() + "\n")
+        partial = [r for r in rows[suite] if r["tasks"] != r["suite_tasks"]]
+        if partial:
+            names = ", ".join(f"{r['system'].removeprefix('rag-')} ({r['tasks']}/{r['suite_tasks']})" for r in partial)
+            parts.append(
+                f"**Partial rows** (stopped mid-run and reported on the tasks graded before the stop, in suite order, "
+                f"so they are not a random sample of the suite): {names}.\n"
+            )
+    tables_md = "\n".join(parts)
+
+    cov = ["## Coverage, spend and run windows\n"]
+    cov.append(f"Recorded costs of the committed official-suite run directories, pilots included (search + answer model + judge): **${spend['spent_usd']:.2f}**. By suite: "
+               + ", ".join(f"{s.replace('-official', '')} ${u:.2f}" for s, u in spend["spent_by_suite"].items())
+               + ". By system: " + ", ".join(f"{s.removeprefix('rag-')} ${u:.2f}" for s, u in sorted(spend["spent_by_system"].items(), key=lambda kv: -kv[1])) + ".\n")
+    cov.append("Run windows (UTC, from `logs/wall.txt`; one line per pass, stamped when the pass ended):\n")
+    passes = windows()
+    if any("exit=143" in ln for lines in passes.values() for ln in lines):
+        cov.append(
+            "The `exit=143` passes are processes stopped at 02:03 UTC on 2026-10-27 when the run was paused; the same "
+            "run directories were resumed on 2026-10-28 with their graded tasks kept, so every task has one stored "
+            "answer and one grade.\n"
+        )
+    for suite, lines in passes.items():
+        cov.append(f"- `{suite}`:")
+        for ln in lines:
+            cov.append(f"  - {ln}")
+    cov.append("")
+    cov_md = "\n".join(cov)
+
+    deviations = (HERE / "deviations.md").read_text()
+    results = HERE / "RESULTS.md"
+    text = results.read_text()
+    marker = "<!-- TABLES -->"
+    pins = "\n## Pins and exact commands"
+    head = text.split(marker, 1)[0]
+    tail = pins + text.split(pins, 1)[1]
+    stamp = newest_run_created_at()
+    generated = f"<!-- generated by assemble.py; newest run directory created {stamp} -->" if stamp else "<!-- generated by assemble.py -->"
+    body = head + f"{marker}\n{generated}\n\n" + tables_md + "\n" + cov_md
+    body += "\n# Official protocols and deviations, per suite\n\n" + deviations
+    body += "\n" + tail.lstrip("\n")
+    results.write_text(body)
+    print(f"wrote {results} ({len(body)} chars); spend ${spend['spent_usd']:.2f}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

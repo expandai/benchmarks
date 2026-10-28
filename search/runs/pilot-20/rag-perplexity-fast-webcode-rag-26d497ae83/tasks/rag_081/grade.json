@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_081",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 384.7,
+    "total_citation_tokens": 3847.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact memory address range in the gold target; the dash style differs only typographically.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target asks for the memory address range of MEGA65 BASIC single-letter fast variables.\n2. Citation [1] explicitly identifies single-letter BASIC variables as fast variables and gives their fixed address range as $FD00-$FEFF.\n3. Citation [8] independently states that the single-letter variables have fixed addresses in the same range.\n4. The retrieved citations contain the complete target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000776475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

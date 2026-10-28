@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_037",
+  "prompt": "rust repr packed struct nested repr align member restriction",
+  "attempt": 1,
+  "answer": "Rust does not allow a `#[repr(packed)]` type to contain a `#[repr(align(N))]` type, even indirectly. This produces E0588:\n\n```rust\n#[repr(align(16))]\nstruct Aligned(i32);\n\n#[repr(packed)]\nstruct Packed(Aligned); // error\n```\n\nThe restriction is transitive, so it also applies through intermediate structs, unions, or other nested types.\n\nYou also cannot put both hints on the same type:\n\n```rust\n#[repr(packed, align(8))]\nstruct Invalid(i32); // error E0587\n```\n\nThe reverse nesting is allowed: a `#[repr(align(N))]` type may contain a `#[repr(packed)]` type.\n\n```rust\n#[repr(packed)]\nstruct Packed(i32);\n\n#[repr(align(16))]\nstruct Aligned(Packed); // allowed\n```\n\nUsing `#[repr(packed(N))]` does not remove the restriction when a nested type has `#[repr(align)]`. Rust currently rejects such combinations because GCC and MSVC differ in their layout behavior for packed types containing aligned members.",
+  "num_citations": 10,
+  "citation_text_tokens": 5144,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "rust repr packed struct nested repr align member restriction"
+  ],
+  "model_cost_usd": 0.002014,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6631,
+    "output_tokens": 297,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 58
+  },
+  "latency_ms": 4366.420125006698,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006014,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_040",
+  "prompt": "Nx byte_size sub-byte s2 u2 u4 types behavior",
+  "attempt": 1,
+  "answer": "`Nx.byte_size/1` rounds **down** for sub-byte tensor types:\n\n- `:s2`\n- `:s4`\n- `:u2`\n- `:u4`\n\nUse `Nx.bit_size/1` when you need the exact size in bits.\n\nFor example, a `2 × 3` `:u2` tensor has:\n\n```elixir\nNx.bit_size(tensor)\n# 12\n```\n\nIts `Nx.byte_size/1` is therefore rounded down to the number of complete bytes:\n\n```elixir\nNx.byte_size(tensor)\n# 1\n```\n\nThe Nx documentation explicitly recommends `bit_size/1` for these types because `byte_size/1` may discard a fractional byte.",
+  "num_citations": 10,
+  "citation_text_tokens": 3849,
+  "citation_text_chars": 11691,
+  "search_queries": [
+    "Nx byte_size sub-byte s2 u2 u4 types behavior"
+  ],
+  "model_cost_usd": 0.00169285,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5044,
+    "output_tokens": 360,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 200
+  },
+  "latency_ms": 6078.441708930768,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00669285,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

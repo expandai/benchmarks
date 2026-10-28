@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_090",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 382.7,
+    "total_citation_tokens": 3827.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer identifies a lambda literal, matching the gold target. However, it also incorrectly says that a code block itself has the value of its last expression (or Unit); in Kotlin, that behavior applies to lambda bodies and certain expression contexts, not to code blocks generally. The added factual error makes the prediction incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is “lambda literal.”\n2. Citations [1], [2], and [3] explicitly state that a curly-braces code block in a statement position is a lambda literal.\n3. The retrieved citations therefore contain the full non-trivial answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00120035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 245.7,
+    "total_citation_tokens": 2457.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer matches the gold target: intermediaries should retain padding for DATA frames and may drop padding for HEADERS and PUSH_PROMISE frames.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages directly state the intermediary padding guidance for DATA, HEADERS, and PUSH_PROMISE frames.\nStep 2: Both parts of the gold target claim are explicitly present in the retrieved citations, so the answer is GROUNDED.\nStep 3: Citations [1], [3], [4], [5], [7], and [10] each contain the relevant claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.000675975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Use an aspect-specific texture view:\n\n- A `\"depth-only\"` view exposes only the depth aspect.\n- A `\"stencil-only\"` view exposes only the stencil aspect.\n- When sampled, the exposed value is placed in the first component: `(V, 0, 0, 1)` when the relevant feature is enabled. Without it, the result is `(V, X, X, X)`, where the other components are implementation-defined.\n- Therefore, read the value from the red/first component; WebGPU does not provide meaningful independent non-depth color channels for a depth/stencil aspect.\n- A stencil texture view must use a `uint` sample type according to the cited WebGPU specification discussion.\n\nThe search results do not specify the complete creation code or identify a way to emulate arbitrary texture-component-swizzle behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 1507,
+ "citation_text_chars": 6480,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.0012316,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2479,
+  "output_tokens": 510,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 337
+ },
+ "latency_ms": 7596.320957993157,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0022316000000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

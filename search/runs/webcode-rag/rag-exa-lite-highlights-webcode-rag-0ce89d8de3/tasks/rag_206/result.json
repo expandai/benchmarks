@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_206",
+  "prompt": "Redis cluster configEpoch conflict same epoch which node increments",
+  "attempt": 1,
+  "answer": "The node with the **lexicographically smaller Node ID** increments its `currentEpoch` by 1 and assigns that value as its new `configEpoch`.\n\nThus, among nodes with the same `configEpoch`, the node with the **greatest Node ID does not increment**; all others eventually move forward.",
+  "num_citations": 10,
+  "citation_text_tokens": 4257,
+  "citation_text_chars": 20347,
+  "search_queries": [
+    "Redis cluster configEpoch conflict same epoch which node increments"
+  ],
+  "model_cost_usd": 0.0014055,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5301,
+    "output_tokens": 67,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2778.423332958482,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.005405500000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_152",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 474.1,
+    "total_citation_tokens": 4741.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that EXPECT variants are recommended for void-returning callbacks, matching the gold target. Its distinction that EXPECT reports failures while continuing and ASSERT stops execution is consistent with the stated use case.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] explicitly states that EXPECT variants are designed for methods, especially callbacks, that return void.\n2. This covers the full non-trivial claim in the gold target answer.\n3. Therefore, the retrieved citations ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001265975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

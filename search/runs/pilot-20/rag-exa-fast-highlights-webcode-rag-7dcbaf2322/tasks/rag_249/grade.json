@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_249",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 518.4,
+    "total_citation_tokens": 5184.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that on wasm32-unknown-unknown, HashMaps are not randomized, unlike on other platforms. This matches the gold target and adds a consistent explanation about deterministic behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [3], and [4] directly state that `wasm32-unknown-unknown` supports `HashMap` and that its hash maps are not randomized like on other platforms.\nStep 2: This directly supports the complete gold target claim; no non-trivial detail is missing. The target and citations agree.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000984975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

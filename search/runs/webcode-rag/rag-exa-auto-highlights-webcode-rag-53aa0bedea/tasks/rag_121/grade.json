@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_121",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 280.3,
+    "total_citation_tokens": 2803.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies `postsync` as the hook context where `.Event.Error` contains a failed-release error and says it is nil on success. This captures the gold target’s key point that the error is available for postsync hooks, not as a separate event. The extra list of supported hook events does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says `.Event.Error` is available for `postsync` hooks only and is otherwise nil.\n2. Citations [1], [2], and [3] explicitly state both that it is exposed for `postsync` hooks only and that otherwise its value is `nil`.\n3. The retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008711,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

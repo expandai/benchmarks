@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_020",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 543.0,
+    "total_citation_tokens": 5430.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly identifies Go Protobuf v1.29.0 as the version, matching the gold target. The extra detail does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the Go support version for protobuf option retention is 1.29.0.\n2. Citations [7] and [10] explicitly list support for the protobuf retention feature in the v1.29.0 release; [3] ties the feature-support commit to the v1.28.1-to-v1.29.0 comparison.\n3. The sources therefore contain the specific version needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001095225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_118",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 294.7,
+    "total_citation_tokens": 2947.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the correct limit of 4096 bytes, but it also claims that Docker appends an ellipsis when truncating output. Docker truncates the stored output at the limit; it does not append an ellipsis. The unsupported extra claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly sets the maximum stored healthcheck probe output to 4096 and identifies the limit as bytes. Citation [3] likewise says only the first 4096 bytes of command output are stored.\nStep 2: The gold target’s only factual claim—4096 bytes—is directly supported by the retrieved citations. Therefore, the answer is GROUNDED.\nStep 3: Citations [1] and [3] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000951475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_002",
+  "prompt": "CSS grid find fr size flex factor sum less than threshold",
+  "attempt": 1,
+  "answer": "In CSS Grid, when calculating the size of an `fr`:\n\n1. Sum the flex factors of the flexible tracks.\n2. If the sum is less than `1`, use `1` instead.\n3. Calculate:\n\n```text\nfr size = leftover space / max(sum of flex factors, 1)\n```\n\nFor example, with one `0.5fr` track in an `800px` container:\n\n```text\nflex factor sum = 0.5 → treated as 1\nfr size = 800px / 1 = 800px\ntrack size = 0.5 × 800px = 400px\n```\n\nThus, a total flex-factor sum below `1` causes the tracks to occupy only that corresponding fraction of the leftover space rather than filling it entirely.",
+  "num_citations": 10,
+  "citation_text_tokens": 3999,
+  "citation_text_chars": 16962,
+  "search_queries": [
+    "CSS grid find fr size flex factor sum less than threshold"
+  ],
+  "model_cost_usd": 0.0015373,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5041,
+    "output_tokens": 231,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 60
+  },
+  "latency_ms": 4327.879374963231,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065373,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

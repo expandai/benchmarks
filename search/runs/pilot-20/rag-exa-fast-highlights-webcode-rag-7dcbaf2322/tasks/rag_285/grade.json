@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_285",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 484.4,
+    "total_citation_tokens": 4844.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that URI fragments/anchors remain unchanged and are compared case-sensitively, matching the gold target. Its additional clarification that the URL portion may be case-folded does not contradict the target about fragments.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says URI fragments remain case-sensitive when case-insensitive URL comparisons are enabled.\n2. Citations [1] and [3] explicitly state that URI fragments are case-sensitive.\n3. The shown normalization case-folds only the URL portion before `#` and preserves the fragment unchanged, supporting the target claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001096475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

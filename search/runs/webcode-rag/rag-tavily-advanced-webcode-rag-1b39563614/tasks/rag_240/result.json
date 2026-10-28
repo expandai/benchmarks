@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_240",
+  "prompt": "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue",
+  "attempt": 1,
+  "answer": "`SelectedListValue` differs from GraphQL’s `ListValue` in that each list element may contain only one `SelectedValue`.\n\n- **`SelectedListValue`**: an ordered list of `SelectedValue` elements, used to express equivalence between a list argument and values selected from a list field. It does **not** allow multiple `SelectedValue` elements within one list element.\n- **`ListValue`**: a general GraphQL input list whose `[Valuelist]` may contain multiple values.\n\nThus, `parts[id]` is valid, while `parts[id, name]` is invalid as a `SelectedListValue`. A `SelectedObjectValue` may be used as one element when selecting multiple fields from structurally equivalent objects. (Source: [Field Selection specification](https://github.com/graphql/composite-schemas-spec/blob/main/spec/Appendix%20A%20--%20Field%20Selection.md); [GraphQL specification](https://spec.graphql.org/September2025))",
+  "num_citations": 10,
+  "citation_text_tokens": 3799,
+  "citation_text_chars": 17643,
+  "search_queries": [
+    "GraphQL FieldSelectionMap SelectedListValue elements allowed difference ListValue"
+  ],
+  "model_cost_usd": 0.0016045,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4873,
+    "output_tokens": 322,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 107
+  },
+  "latency_ms": 6538.230792037211,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017604500000000002,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

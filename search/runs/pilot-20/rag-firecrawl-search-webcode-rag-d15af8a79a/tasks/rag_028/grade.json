@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_028",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 97.7,
+    "total_citation_tokens": 977.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `INT_MIN` as the relevant value for `width` or `precision` when `*` is used. That matches the gold target, and the extra note about the `arginfo` return value does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is INT_MIN.\n2. Citations [1] and [2] explicitly state that INT_MIN is the value used for width or precision when the format uses `*`.\n3. The retrieved citations therefore contain the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00051885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

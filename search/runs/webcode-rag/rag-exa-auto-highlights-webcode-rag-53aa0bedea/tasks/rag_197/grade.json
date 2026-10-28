@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_197",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 496.4,
+    "total_citation_tokens": 4964.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target’s claim that a Content-Length mismatch causes Wget to download the remote file regardless of timestamps. However, it later says newer Wget versions may fail to detect the size mismatch and leave the incorrect local file in place, which contradicts the target’s unconditional claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target says a remote file is downloaded regardless of timestamps when the local and remote sizes do not match. Citations [4], [7], [9], and [10] state this directly. Thus, the retrieved sources contain the claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001227725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

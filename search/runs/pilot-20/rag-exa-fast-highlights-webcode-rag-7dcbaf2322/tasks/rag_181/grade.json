@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 437.8,
+    "total_citation_tokens": 4378.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that `select_next_some()` produces a ready item for `Some(item)` and does not produce an item for `None`, matching the target’s claim that the branch runs only for `Some(_)` values and ignores `None`s. Its additional details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer claims that `select_next_some` produces a ready value only when the stream yields `Some(item)`.\n2. Citation [1] directly shows that `Some(item)` becomes `Poll::Ready(item)`, while the `None` case becomes `Poll::Pending` rather than producing a value for the branch.\n3. Thus the sources support that a branch selecting this future runs for yielded items and ignores `None` results. The gold target's non-trivial claims are covered.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00132635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

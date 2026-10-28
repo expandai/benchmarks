@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_263",
+  "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+  "attempt": 1,
+  "answer": "`NGX_PEER_NEXT` is triggered for upstream HTTP status codes:\n\n- **403 Forbidden**\n- **404 Not Found**\n\nIn `ngx_http_upstream_next()`, both `NGX_HTTP_UPSTREAM_FT_HTTP_403` and `NGX_HTTP_UPSTREAM_FT_HTTP_404` set:\n\n```c\nstate = NGX_PEER_NEXT;\n```\n\nThese statuses do **not** mark the peer as failed; they instruct nginx to try another backend. Retrying occurs only when the corresponding option is enabled in `proxy_next_upstream` (for example, `http_403` or `http_404`). After all eligible peers are tried, nginx returns the respective **403** or **404** response. ([nginx development guide](https://nginx.org/en/docs/dev/development_guide.html), [nginx changeset](https://freenginx.org/hg/nginx/rev/05c53652e7b4))",
+  "num_citations": 10,
+  "citation_text_tokens": 5846,
+  "citation_text_chars": 21576,
+  "search_queries": [
+    "nginx NGX_PEER_NEXT upstream status codes trigger"
+  ],
+  "model_cost_usd": 0.0021479,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7037,
+    "output_tokens": 324,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 122
+  },
+  "latency_ms": 5806.117707979865,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0041478999999999995,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

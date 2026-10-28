@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_058",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 392.6,
+    "total_citation_tokens": 3926.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that calling runtime.GOMAXPROCS(0) leaves the setting unchanged and returns its current value, which matches the gold target that it just queries the value.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that calling GOMAXPROCS with zero simply queries the current value.\n2. Citation [1] states this directly: `runtime.GOMAXPROCS(0)` reads the current setting and does not change it.\n3. Citation [2] corroborates this behavior in the documentation and implementation: non-positive arguments do not change the setting, and the function returns the existing value.\n4. The gold target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000873225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Without `texture-component-swizzle`, only the first component is guaranteed when sampling a depth or stencil aspect:\n\n- Depth: behaves as `(V, X, X, X)`.\n- Stencil: behaves as `vec4<u32>(S, X, X, X)`.\n\n`X` is implementation-defined and unspecified, so `.y`, `.z`, and `.w` must not be used.\n\nRead the value from `.r` and replicate it in WGSL if needed:\n\n```wgsl\nlet depth = textureSample(depthTexture, sampler, uv).r;\nlet rgba = vec4<f32>(depth);\n```\n\nFor stencil:\n\n```wgsl\nlet stencil = textureLoad(stencilTexture, coords, 0).r;\nlet rgba = vec4<u32>(stencil);\n```\n\nThe provided specification says stencil must be read through a normal texture binding such as `texture_2d`, `texture_2d_array`, `texture_cube`, or `texture_cube_array`; the stencil value is returned in the first component.",
+ "num_citations": 10,
+ "citation_text_tokens": 5515,
+ "citation_text_chars": 20420,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.00221055,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6654,
+  "output_tokens": 456,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 238
+ },
+ "latency_ms": 6118.025208008476,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00321055,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

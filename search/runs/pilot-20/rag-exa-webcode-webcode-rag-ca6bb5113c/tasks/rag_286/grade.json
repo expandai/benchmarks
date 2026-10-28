@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_286",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 553.5,
+    "total_citation_tokens": 5535.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the algorithm as SDBM followed by full avalanche mixing, which matches the gold target. Its additional details do not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] gives the per-byte hash recurrence used by base32 and explicitly shows that full_hash is applied afterward. Citation [3] identifies SDBM as a hash function implemented by HAProxy. The recurrence in [1] is the SDBM recurrence, so the evidence supports both the SDBM algorithm and the final avalanche. Step 2: The gold target’s non-trivial claims are supported by the cited recurrence and explicit full_hash step. Step 3: Citation [1] contains the base32 implementation and citation [3] supports the algorithm identification.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001713725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

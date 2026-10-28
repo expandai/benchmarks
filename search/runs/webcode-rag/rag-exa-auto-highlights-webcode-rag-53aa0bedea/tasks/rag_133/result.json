@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_133",
+  "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+  "attempt": 1,
+  "answer": "A `MediaStreamTrack` received from an `RTCPeerConnection` is a **remote track**, and `applyConstraints()` is expected to reject with an `OverconstrainedError` for it.\n\nThe WebRTC documentation states that for remote tracks:\n\n- `getCapabilities()` returns an empty set.\n- `applyConstraints()` always rejects with `OverconstrainedError`.\n- Remote video tracks expose settings such as `width`, `height`, `frameRate`, and `aspectRatio`.\n- No constrainable properties are defined for remote audio tracks.\n\nTherefore, code such as:\n\n```js\ntry {\n  await remoteTrack.applyConstraints({ width: 1280 });\n} catch (error) {\n  console.log(error.name); // \"OverconstrainedError\"\n}\n```\n\nis expected to reject for a remote `RTCRtpReceiver` track. `applyConstraints()` is intended to configure applicable tracks, such as those obtained from `getUserMedia()`, rather than configure the remote source.",
+  "num_citations": 10,
+  "citation_text_tokens": 4487,
+  "citation_text_chars": 20208,
+  "search_queries": [
+    "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+  ],
+  "model_cost_usd": 0.00190665,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5760,
+    "output_tokens": 389,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 183
+  },
+  "latency_ms": 6517.83974992577,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00890665,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

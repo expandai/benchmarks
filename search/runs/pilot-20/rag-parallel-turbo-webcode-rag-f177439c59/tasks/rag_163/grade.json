@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 285.2,
+    "total_citation_tokens": 2852.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies HTTPException and exceptions with registered error handlers as excluded from got_request_exception. It also correctly states that exceptions raised from an error handler are included, matching the gold target's exception to the exclusion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states that the signal is not sent for HTTPException or for other exceptions with registered error handlers, unless the exception was raised from an error handler.\n2. This contains every non-trivial claim in the gold target answer.\n3. Therefore, the answer is fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00069785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_071",
+ "prompt": "GNU diff expand-tabs encoding error column width treatment",
+ "attempt": 1,
+ "answer": "GNU `diff` does not reliably calculate display columns for encoding errors. Its documented/assumed treatment is that each encoding-error byte occupies one column, but this assumption can be incorrect; multibyte and non-ASCII characters can also make column calculations wrong, particularly with `--side-by-side`. Consequently, tab expansion and alignment may be inaccurate for such input.\n\nSources: [diffutils-devel discussion](https://lists.libreplanet.org/archive/html/diffutils-devel/2023-07/msg00031.html), [GNU diff documentation excerpt](https://www.linuxtopia.org/online_books/linux_tool_guides/comparing_and_merging_linux_files/diff_101.html).",
+ "num_citations": 10,
+ "citation_text_tokens": 5717,
+ "citation_text_chars": 21451,
+ "search_queries": [
+  "GNU diff expand-tabs encoding error column width treatment"
+ ],
+ "model_cost_usd": 0.00212965,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7012,
+  "output_tokens": 314,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 170
+ },
+ "latency_ms": 14940.065291011706,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00912965,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

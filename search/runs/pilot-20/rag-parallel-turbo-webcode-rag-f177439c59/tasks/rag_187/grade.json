@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_187",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 588.2,
+    "total_citation_tokens": 5882.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies valid ACKs, URGs, and RSTs as the acceptable or specially handled segment types, matching the gold target. The additional context does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target names three segment types: valid ACKs, URGs, and RSTs.\n2. Citations [1] and [10] explicitly state that valid ACKs, URGs, and RSTs should be specially allowed when RCV.WND is zero.\n3. Therefore, all non-trivial information in the gold target is present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011266,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

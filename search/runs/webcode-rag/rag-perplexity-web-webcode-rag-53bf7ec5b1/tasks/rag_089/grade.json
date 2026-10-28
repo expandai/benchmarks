@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 392.1,
+    "total_citation_tokens": 3921.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer correctly identifies the X and Z components as the Vec2 values and says to extract them from the local coordinates after applying the ground plane’s inverse transform. Although it initially writes `global_position.xz`, its explanation clarifies the local-coordinate operation the question asks about.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] says to transform the global position into local coordinates and extract its XZ components. 2. It also states that the Y coordinate should be zero on the plane. 3. The `.xz()` notation is a trivial way to express extracting those components, so the citation supports the full gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010421,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

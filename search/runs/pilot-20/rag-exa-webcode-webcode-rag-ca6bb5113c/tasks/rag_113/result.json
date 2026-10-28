@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_113",
+ "prompt": "wasm-bindgen webdriver.json headless argument override behavior",
+ "attempt": 1,
+ "answer": "`webdriver.json` cannot override or disable headless mode when running headless tests.\n\nThe runner reads the configured capabilities, then appends its own arguments to the browser’s existing `args` array:\n\n- Firefox: `\"-headless\"`\n- Chrome: `\"headless\"`, `\"disable-dev-shm-usage\"`, and `\"no-sandbox\"`\n- Edge: `\"headless\"`, `\"disable-dev-shm-usage\"`, and `\"no-sandbox\"`\n\nIf the browser options or `args` array are missing, they are created. Existing arguments from `webdriver.json` are preserved, not replaced, so duplicate or conflicting arguments may be sent if you specify similar options yourself. This behavior is shown in the `headless.rs` source result.\n\nTo disable headless mode, omit the `--headless` flag or set `NO_HEADLESS=1`; changing `webdriver.json` is not the documented mechanism.",
+ "num_citations": 10,
+ "citation_text_tokens": 4882,
+ "citation_text_chars": 20229,
+ "search_queries": [
+  "wasm-bindgen webdriver.json headless argument override behavior"
+ ],
+ "model_cost_usd": 0.00201175,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6526,
+  "output_tokens": 317,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 125
+ },
+ "latency_ms": 10167.342458036728,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00901175,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

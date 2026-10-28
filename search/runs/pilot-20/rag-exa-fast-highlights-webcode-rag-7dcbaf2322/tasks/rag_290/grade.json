@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_290",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 357.4,
+    "total_citation_tokens": 3574.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists both default mappings—80 to 443 and 8080 to 8443—which fully match the gold target. The additional note about overriding the mappings does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that PortMapperImpl defaults to the mappings 80:443 and 8080:8443. 2. Citation [1] explicitly gives both mappings as the defaults; citation [2] independently confirms them. 3. The citations contain all factual information in the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000769725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

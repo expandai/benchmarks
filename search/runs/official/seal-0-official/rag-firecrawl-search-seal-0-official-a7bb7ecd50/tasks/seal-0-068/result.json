@@ -1,0 +1,46 @@
+{
+ "task_id": "seal-0-068",
+ "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+ "attempt": 1,
+ "answer": "This is based on the **Central Limit Theorem (CLT)**—with an important correction.\n\nThe CLT says that if \\(X_1,\\ldots,X_n\\) are i.i.d. observations with finite mean \\(\\mu\\) and variance \\(\\sigma^2\\), then the **sample mean**\n\n\\[\n\\bar X_n=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nis approximately normally distributed for large \\(n\\):\n\n\\[\n\\bar X_n \\approx N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]\n\nEquivalently,\n\n\\[\n\\frac{\\sqrt n(\\bar X_n-\\mu)}{\\sigma}\n\\Rightarrow N(0,1).\n\\]\n\nThe individual sampled variables do **not** become normally distributed; they retain the original population distribution. It is the distribution of **sample means across many repeated samples** that becomes approximately normal.",
+ "num_citations": 10,
+ "citation_text_tokens": 4646,
+ "citation_text_chars": 18398,
+ "search_queries": [
+  "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?"
+ ],
+ "query_clipped": false,
+ "num_searches": 1,
+ "filtered_results_by_reason": {},
+ "skipped_results_by_reason": {},
+ "answer_protocol": {
+  "name": "neutral-single-search-high-reasoning",
+  "reasoning_effort": "high",
+  "max_output_tokens": null,
+  "with_search": true,
+  "model": "openai/gpt-5.6-luna",
+  "current_date": "October 27, 2026"
+ },
+ "model_cost_usd": 0.0017854,
+ "search_cost_usd": 0.00198,
+ "total_cost_usd": 0.0037654,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5203,
+  "output_tokens": 404,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 201
+ },
+ "latency_ms": 8460.52308299113,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "filtered_results",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

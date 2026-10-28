@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_124",
+  "prompt": "pulumi fully_qualified_stack_name diy backend org requirement",
+  "attempt": 1,
+  "answer": "For Pulumi DIY backends:\n\n- **Legacy DIY backends**—local file, S3, and Azure Blob—do **not** support fully qualified names; they use only `stack`.\n- **Non-legacy DIY backends** support `org/project/stack`, but the organization is fixed and must be exactly **`organization`**.\n- Thus, the fully qualified stack name is, for example:\n\n```text\norganization/my-project/dev\n```\n\nThe `organization` value is constant and cannot be changed. Project-scoped stack support is available in Pulumi **v3.61.0 and later**; older backends may require `pulumi state upgrade`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3720,
+  "citation_text_chars": 15437,
+  "search_queries": [
+    "pulumi fully_qualified_stack_name diy backend org requirement"
+  ],
+  "model_cost_usd": 0.00137325,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4812,
+    "output_tokens": 142,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6745.787000050768,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01737325,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

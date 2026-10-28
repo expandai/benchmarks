@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_283",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 609.1,
+    "total_citation_tokens": 6091.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies the shlex module. The predicted answer explicitly says pytest uses `shlex.split()` to parse `PYTEST_ADDOPTS`, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citation shows pytest processes the `PYTEST_ADDOPTS` value using `shlex.split`.\n2. This directly identifies the parsing method as the `shlex` module.\n3. The gold target contains no additional non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001111225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

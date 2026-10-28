@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_095",
+  "prompt": "ffmpeg ffmetadata chapter missing timebase assumed units",
+  "attempt": 1,
+  "answer": "If the `TIMEBASE` is missing in an FFmpeg `ffmetadata` chapter, `START` and `END` are assumed to be in **nanoseconds**.\n\nThe format is:\n\n```ini\n[CHAPTER]\nSTART=0\nEND=60000000000\ntitle=Chapter 1\n```\n\nThis corresponds to the FFmpeg formats documentation and current `metadata.texi`. A search result citing an older ticket says milliseconds, but the current documentation specifies nanoseconds.",
+  "num_citations": 10,
+  "citation_text_tokens": 3568,
+  "citation_text_chars": 12404,
+  "search_queries": [
+    "ffmpeg ffmetadata chapter missing timebase assumed units"
+  ],
+  "model_cost_usd": 0.001263,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4563,
+    "output_tokens": 102,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 6155.04833299201,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.017263,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

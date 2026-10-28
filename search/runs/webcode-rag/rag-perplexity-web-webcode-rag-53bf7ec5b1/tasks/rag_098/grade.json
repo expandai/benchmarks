@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 399.1,
+    "total_citation_tokens": 3991.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the maximum numeral length is 200 characters, matching the gold target. The extra detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the maximum input length for Lua's `file:read \"n\"` numeral format is 200 characters.\n2. Citations [2] and [3] explicitly state that an input longer than 200 characters is too long and is discarded for this format. Citation [6] corroborates the 200-character maximum in the Lua source code.\n3. The retrieved sources contain the factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00086735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

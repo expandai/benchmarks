@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_090",
+  "prompt": "Kotlin curly braces code block statement position interpretation",
+  "attempt": 1,
+  "answer": "In Kotlin, curly braces can represent either a **code block** or a **lambda**, depending on their position.\n\n- After constructs such as `if`, `else`, `for`, `while`, `do`, or a `when` branch, `{ ... }` is interpreted as the construct’s **body/code block**.\n- In a function declaration, the braces form the function body.\n- In a position where an expression is expected, `{ ... }` is a **lambda literal**.\n- Kotlin does not support a standalone code block as a statement; a bare `{ ... }` in statement position is interpreted as a lambda literal.\n\nFor example:\n\n```kotlin\nif (condition) {\n    println(\"yes\")   // code block belonging to if\n}\n```\n\nBut:\n\n```kotlin\nval action = {\n    println(\"hello\") // lambda body\n}\n```\n\nThis distinction is context-sensitive. If a lambda is needed immediately after a control-flow construct, an additional pair of braces or parentheses may be necessary so that the first brace is not taken as the control-flow body.",
+  "num_citations": 10,
+  "citation_text_tokens": 2557,
+  "citation_text_chars": 11215,
+  "search_queries": [
+    "Kotlin curly braces code block statement position interpretation"
+  ],
+  "model_cost_usd": 0.0012633,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3609,
+    "output_tokens": 301,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 74
+  },
+  "latency_ms": 5735.659250058234,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062633,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

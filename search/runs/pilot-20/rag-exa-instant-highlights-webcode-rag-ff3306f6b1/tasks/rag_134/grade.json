@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_134",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.444,
+    "avg_citation_tokens": 415.9,
+    "total_citation_tokens": 3743.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that storageCapacity was immutable through Kubernetes 1.22 and became mutable in 1.23, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [3], [5], and [8] directly state the field’s immutability history and when it became mutable. Step 2: The gold target’s complete factual claim—that storageCapacity was immutable through Kubernetes 1.22 and is mutable starting in a later version—is supported by the cited passages; citation [3] specifies Kubernetes 1.23 as the starting version. The answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007876,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

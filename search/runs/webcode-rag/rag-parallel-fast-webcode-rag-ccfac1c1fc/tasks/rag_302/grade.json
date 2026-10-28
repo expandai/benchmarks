@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_302",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 233.6,
+    "total_citation_tokens": 2336.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is `enableProfiledLibs`, but the predicted answer gives `enableLibraryProfiling`, a different parameter name.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations discuss configuring profiling for GHC’s bundled core libraries.\n2. Neither passage gives the specific override parameter name `enableProfiledLibs`.\n3. Because that specific name is a non-trivial fact in the gold target and is absent from the retrieved text, the citations do not contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007583500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

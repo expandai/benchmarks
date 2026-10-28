@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_056",
+ "prompt": "doxygen \\image command inline option caption behavior HTML",
+ "attempt": 1,
+ "answer": "Use the option in braces, after `\\image`:\n\n```text\n\\image{inline} html image.png \"caption\"\n```\n\n- `inline` was introduced in Doxygen 1.8.15; it does not work in 1.8.14.\n- For HTML, the caption is shown as an image tooltip (`title`), not as visible text below the image.\n- Without `{inline}`, the image is placed on its own line and the caption is handled as a regular image caption.\n- The image must also be findable through `IMAGE_PATH`, for example:\n\n```text\nIMAGE_PATH = ./\n```\n\nThe syntax `\\image inline html ...` is invalid; `inline` must be enclosed in braces.",
+ "num_citations": 10,
+ "citation_text_tokens": 4215,
+ "citation_text_chars": 15939,
+ "search_queries": [
+  "doxygen \\image command inline option caption behavior HTML"
+ ],
+ "model_cost_usd": 0.0017017,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5569,
+  "output_tokens": 258,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 101
+ },
+ "latency_ms": 4409.72045797389,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0024517000000000002,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

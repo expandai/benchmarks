@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 387.0,
+    "total_citation_tokens": 3870.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the missing-snapshot error as `snapshot_missing_exception`, which corresponds to the gold target `SnapshotMissingException`. The additional note about the Python client wrapping it as `NotFoundError` does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] names SnapshotMissingException in connection with Snapshot.get when the snapshot does not exist, and identifies the underlying Elasticsearch error as `snapshot_missing_exception` while clarifying that the Python client wraps it as NotFoundError.\n2. Citation [3] also explicitly names SnapshotMissingException for unavailable snapshots when ignore_unavailable defaults to false, though it describes the status API rather than get.\n3. The gold target is only the exception type, and that type is explicitly present in the retrieved citations. The Python-client wrapper caveat does not undermine the target when interpreted as the Elasticsearch-side exception.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013380999999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

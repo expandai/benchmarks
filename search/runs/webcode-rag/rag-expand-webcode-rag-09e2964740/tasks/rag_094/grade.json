@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_094",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 194.0,
+    "total_citation_tokens": 1940.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says the codebase is well over 100K lines. The predicted answer says it is over 120,000 lines, which confirms that scale and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] states that Bluespec SystemVerilog is primarily implemented in Haskell and contains over 120,000 lines of Haskell code. Step 2: This directly supports the target claim that the codebase size is well over 100K lines. The source does not use the exact phrase “core tool,” but the code-size statement is about the Bluespec SystemVerilog implementation, so the target’s size claim is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000624475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

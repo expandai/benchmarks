@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 474.7,
+    "total_citation_tokens": 4747.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains how to make an HTTP request over a Unix domain socket using `socketPath`, but it does not state whether proxy settings are ignored. It neither confirms nor contradicts the gold target, so the key answer was not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] says that when both a proxy and a socket are specified, the socket is used, which is relevant to the target claim.\n2. However, [4] discusses Axios’s HTTP adapter, not Node.js’s built-in `http` request behavior.\n3. Citation [1] documents built-in proxy configuration, and [5] shows a built-in `http` request using `socketPath`, but neither says what happens when both are configured.\n4. Therefore, the citations do not establish the target claim for Node.js’s built-in HTTP API.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001396725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

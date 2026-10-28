@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_214",
+ "prompt": "cargo install target-dir default remote crate location",
+ "attempt": 1,
+ "answer": "For a remote crate from the default source, **crates.io**, `cargo install` builds it in a **new temporary target directory located in the platform’s temporary directory** by default.\n\nYou can override this with:\n\n```bash\ncargo install --target-dir <directory> <crate>\n```\n\nor by setting `CARGO_TARGET_DIR`. When using `--path`, Cargo instead defaults to the local crate workspace’s `target` directory.",
+ "num_citations": 10,
+ "citation_text_tokens": 1444,
+ "citation_text_chars": 6095,
+ "search_queries": [
+  "cargo install target-dir default remote crate location"
+ ],
+ "model_cost_usd": 0.0008086,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2419,
+  "output_tokens": 170,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 75
+ },
+ "latency_ms": 3608.037416008301,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0015586,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

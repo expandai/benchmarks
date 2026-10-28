@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 442.3,
+    "total_citation_tokens": 4423.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that tokens are regenerated only on session upgrades. The predicted answer claims they are also regenerated when there is no token, the token is malformed or expired, and after successful unsafe requests. These additional conditions contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations confirm that a session upgrade is one condition that causes token regeneration, and [2] says the token is reused when the session is unchanged.\n2. But the gold target says tokens are regenerated only on session upgrades. Citation [1] identifies other regeneration conditions: the session has no token, the token has expired, and a successful unsafe request refreshes the token.\n3. Those are non-trivial conditions, so the retrieved sources do not support the gold target’s exclusive “only” claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00111135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

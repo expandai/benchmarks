@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_218",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 388.5,
+    "total_citation_tokens": 3885.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer describes the parent assign and child `assign_new/3` requirements, but omits the key restrictions in the gold target: the child must be mounted when the parent is mounted, and it must not be rendered with `sticky: true`. By presenting its listed requirements as the conditions for sharing, it gives an incomplete and misleading answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that a nested child can access parent assigns via `assign_new` in its mount callback.\n2. The gold target specifies additional conditions: the child is mounted when the parent is mounted, and the child is not rendered with `sticky: true`.\n3. Neither quoted passage states either of those conditions, especially the `sticky: true` condition. Since a non-trivial condition is missing, the retrieved citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001110975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

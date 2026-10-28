@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_253",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 560.0,
+    "total_citation_tokens": 5600.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold information that install-sh came from the X Consortium and is described by Autoconf as not copyrighted. However, it also explicitly claims that an X11R6 version carried a 1994 X Consortium copyright and that older copies had a 1991 MIT copyright. Those statements contradict the gold target's claim that it is not copyrighted, so the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target has two claims: install-sh is from the X Consortium, and it is not copyrighted.\n2. Citations [2] and [4] state both claims directly.\n3. Therefore, the retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011054749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

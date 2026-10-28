@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_302",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 376.9,
+    "total_citation_tokens": 3769.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer gives the exact gold target, `enableProfiledLibs`, as the GHC override parameter. The additional statement about a separate Haskell-package parameter does not contradict the answer to the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target asks for the name of the GHC parameter used to control profiling of bundled core libraries.\n2. Citations [2] and [5] explicitly show the GHC override setting as `enableProfiledLibs`.\n3. The gold target’s only factual claim is therefore directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000910225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

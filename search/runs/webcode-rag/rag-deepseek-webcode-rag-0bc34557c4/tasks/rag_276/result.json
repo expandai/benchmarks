@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Yes. Without `texture-component-swizzle`, bind the appropriate aspect view as a regular sampled texture and read the **`.r` channel**:\n\n- **Depth aspect:** bind it to a regular `texture_2d<f32>`-type binding. Sampling behaves as `vec4<f32>(D, X, X, X)`, so use `.r`.\n- **Stencil aspect:** bind a stencil-aspect view to a regular texture binding with `sampleType: \"uint\"`. The value likewise occupies the first component, so use `.r`.\n\nThe other components (`g`, `b`, and `a`) are implementation-defined and unspecified. The specification notes that they may appear as either `(V,V,V,V)` or `(V,0,0,1)`, depending on hardware. Therefore, do not depend on non-`.r` channels or use them to obtain the depth/stencil value. (WebGPU depth/stencil sampling result: [W3C WebGPU](https://www.w3.org/TR/2022/WD-webgpu-20220930/#23))",
+ "num_citations": 10,
+ "citation_text_tokens": 4300,
+ "citation_text_chars": 17289,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.00201775,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5902,
+  "output_tokens": 452,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 225
+ },
+ "latency_ms": 5732.894584070891,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0027677500000000002,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

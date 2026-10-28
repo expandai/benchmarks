@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.7,
+    "avg_citation_tokens": 328.2,
+    "total_citation_tokens": 3282.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Bazel tracks metrics for the top 20 action mnemonics, ranked by executed-action count, matching the gold target. The additional flag information does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states the default limit is 20 mnemonics, selected by the largest number of executed actions. Citations [2]–[7] corroborate that the default collects or limits metrics to the top 20 action types, based on executed actions. Step 2: The gold target contains only this factual claim, and the retrieved citations support it. Therefore, the answer is fully grounded. Step 3: Citation [1] directly contains the answer; citations [2]–[7] also provide supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 7
+  },
+  "judge_cost_usd": 0.000905475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

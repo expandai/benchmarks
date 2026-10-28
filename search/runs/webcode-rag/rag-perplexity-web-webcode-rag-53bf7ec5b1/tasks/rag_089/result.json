@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_089",
+  "prompt": "bevy 3D ground plane local cursor coordinates which components Vec2",
+  "attempt": 1,
+  "answer": "XZ components: `global_position.xz` (equivalently `Vec3::xz()`), producing a `Vec2` with:\n\n- `Vec2.x = global_position.x`\n- `Vec2.y = global_position.z`\n\nThe local coordinates are obtained by applying the ground plane’s inverse transform, then extracting XZ; the local Y coordinate is zero on the plane.",
+  "num_citations": 10,
+  "citation_text_tokens": 3921,
+  "citation_text_chars": 14857,
+  "search_queries": [
+    "bevy 3D ground plane local cursor coordinates which components Vec2"
+  ],
+  "model_cost_usd": 0.0013868,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5159,
+    "output_tokens": 81,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3521.729875006713,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063868,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

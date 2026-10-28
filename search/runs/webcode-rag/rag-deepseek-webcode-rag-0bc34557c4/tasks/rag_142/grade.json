@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_142",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 271.6,
+    "total_citation_tokens": 2716.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides no answer about the minimum length. It neither includes nor contradicts the gold target of 6 bytes.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations establish that TLS messages can have an extensions field and give a length range for extension_data.\n2. They do not specify the ServerHello extensions field’s minimum encoded length, nor provide the structure needed to derive that minimum.\n3. The gold target’s specific value, 6 bytes, is therefore not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000793975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

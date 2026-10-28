@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 166.7,
+    "total_citation_tokens": 1667.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer to the question. It neither confirms nor contradicts the gold target of 200 characters.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations say that `file:read`/`io.read` reads the longest valid numeral prefix and that a numeral overflowing the reading buffer is rejected. However, none gives the buffer's size or states a maximum input length of 200 characters. Since the specific number in the gold target is missing, the answer is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000542305,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

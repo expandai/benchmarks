@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_207",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 540.4,
+    "total_citation_tokens": 5404.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the requested routing formula: a positive expression value v is sent to output index ceil(v) - 1. It also correctly notes that a zero result discards the frame and illustrates the formula with valid routing examples.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that a nonzero, non-negative expression result routes the frame to output index ceil(val)-1. Step 2: This is the complete gold target answer, so all its non-trivial information is present. Step 3: Citation [1] directly supports the answer; citation [4] also contains the routing formula.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0012247249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

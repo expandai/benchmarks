@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_060",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 382.1,
+    "total_citation_tokens": 3821.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides no answer to the question. It does not contradict the gold target, so it is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that variables inherit the output type of their expression and that `ifgt` is one of the conditions, but they do not explain how `ifgt` or `iflt` behaves when the value is non-integer. In particular, none says that the check is considered true by default. That non-trivial claim is therefore not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00092685,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

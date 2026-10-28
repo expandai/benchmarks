@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-068",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 346.4,
+    "total_citation_tokens": 3464.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer names the Central Limit Theorem, but that theorem concerns the distribution of the sample mean, not the distribution of the sampled variables themselves. The gold target says no theory supports the stated claim, so the answer is incorrect.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold answer says no theory supports the statement as written.\n2. The citations identify the relevant Central Limit Theorem as applying to normalized sample means (or means of samples), not to the distribution of the original sampled variables.\n3. Citation [1] explicitly distinguishes the sample mean from the original variables and notes that those variables need not be normally distributed. This supports the correction that the stated claim about the sampled variables is not what the CLT says.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00116023,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

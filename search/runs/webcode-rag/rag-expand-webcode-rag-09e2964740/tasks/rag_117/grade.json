@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_117",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 287.6,
+    "total_citation_tokens": 2876.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer initially matches the gold target, but then says each layer of an incremental MIDX chain can have its own bitmap file. That implies multiple bitmap files may be in use, contradicting the stated limit of at most one.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a repository may have at most one bitmap file in use.\n2. Citations [1] and [2] say this explicitly, and [3]–[5] also state the one-bitmap limit.\n3. The citations therefore contain the target’s factual claim directly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00106585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

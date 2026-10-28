@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_167",
+ "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+ "attempt": 1,
+ "answer": "With Beautiful Soup’s `html5lib` parser:\n\n- `tag.sourceline` gives the source line number.\n- `tag.sourcepos` gives the position of the **final `>` character of the start tag**.\n- The position is zero-based within the line.\n\nExample:\n\n```python\nmarkup = '<p class=\"1\"\\n>Paragraph 1</p>\\n    <p class=\"2\">Paragraph 2</p>'\n\nsoup = BeautifulSoup(markup, \"html5lib\")\n\nfor tag in soup.find_all(\"p\"):\n    print(tag.sourceline, tag.sourcepos)\n```\n\nOutput:\n\n```python\n(2, 0)\n(3, 16)\n```\n\nFor the first tag, `sourcepos == 0` because the final `>` is the first character on line 2. For the second tag, `sourcepos == 16`, the position of its `>` on line 3.",
+ "num_citations": 10,
+ "citation_text_tokens": 1421,
+ "citation_text_chars": 5127,
+ "search_queries": [
+  "beautifulsoup html5lib sourceline sourcepos position reference"
+ ],
+ "model_cost_usd": 0.00091535,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2318,
+  "output_tokens": 280,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 77
+ },
+ "latency_ms": 4283.481125021353,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00289535,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

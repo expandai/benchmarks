@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_150",
+ "prompt": "rustdoc doc auto_cfg hide default hidden cfg attributes",
+ "attempt": 1,
+ "answer": "`rustdoc`’s `doc(auto_cfg)` hides these cfg predicates by default:\n\n- `test`\n- `doc`\n- `doctest`\n\nThe current rustdoc implementation initializes its hidden set with those three predicates: [`CfgInfo::default`](https://github.com/rust-lang/rust/blob/2972b5e5/src/librustdoc/clean/cfg.rs).\n\nTo hide additional predicates, use:\n\n```rust\n#![doc(auto_cfg(hide(unix)))]\n```\n\nThis hides `unix` from automatically generated cfg markers for the crate’s items and descendants. Multiple predicates can be specified:\n\n```rust\n#![doc(auto_cfg(hide(unix, windows, feature = \"internal\")))]\n```\n\n`auto_cfg(hide(...))` affects automatically generated cfg information, not explicit `#[doc(cfg(...))]` attributes. It accepts only identifiers or key/value items, not expressions such as `not(unix)`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5357,
+ "citation_text_chars": 20454,
+ "search_queries": [
+  "rustdoc doc auto_cfg hide default hidden cfg attributes"
+ ],
+ "model_cost_usd": 0.00217535,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6758,
+  "output_tokens": 405,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 204
+ },
+ "latency_ms": 4749.055667081848,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00917535,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

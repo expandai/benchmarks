@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 492.8,
+    "total_citation_tokens": 4928.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides none of the address-selection order from the gold target. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The target answer asserts a specific address-selection order: private IPv4, then public IPv4, then public IPv6.\n2. The citations establish that these address types exist and show examples of using public IPv4 or public IPv6. Citation [4] mentions public IPv4 as the default.\n3. No citation states that the instance role selects among these addresses in the target’s stated order. In particular, the sources do not establish private IPv4 as the first choice or public IPv6 as the final fallback.\n4. Because the specific ordering is a non-trivial claim that is not supported, the citations do not contain sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010613649999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

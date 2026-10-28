@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_242",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 520.8,
+    "total_citation_tokens": 5208.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the full composition in the gold target: a 16-byte prefix/key name, a 16-byte HMAC key, and a 16-byte AES key. The additional 48-byte total and offsets are consistent with those components.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [2] explicitly states the buffer composition and the size of each component.\n\nSTEP 2 — GROUNDEDNESS: The gold target’s three claims—16-byte prefix, 16-byte HMAC key, and 16-byte AES key—are all directly present in citation [2]. The answer is GROUNDED.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citation [2] alone contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010501,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

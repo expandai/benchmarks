@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_008",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 250.5,
+    "total_citation_tokens": 2505.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `-mcrbits` is enabled by default on POWER8 and newer CPUs, and on other CPUs at `-O2` or above. This matches the gold target. Its clarification about older CPUs at `-O0` and `-O1` is consistent with that condition.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages directly state the default condition for -mcrbits: it is enabled by default on POWER8 and above, and on other CPUs when optimization is applied at -O2 or above.\nStep 2: This covers every non-trivial claim in the gold target answer, with no unsupported additions.\nStep 3: Citations [1], [2], [3], and [4] each contain the complete condition.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000784225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

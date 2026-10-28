@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_208",
+  "prompt": "imagemagick remap colormap precision bit depth limit",
+  "attempt": 1,
+  "answer": "ImageMagick’s `-remap` has two relevant limits:\n\n- **Colormap precision:** at most **8 bits of precision**; deeper color maps are automatically coalesced to meet this requirement. ([ImageMagick command-line options](https://imagemagick.org/command-line-options))\n- **Maximum palette size:** for Q16 and higher builds, the hard limit is **65,536 colors** (`MaxColormapSize 65536`). ([ImageMagick discussion #7525](https://github.com/ImageMagick/ImageMagick/discussions/7525))\n\nThe `-depth` option controls the image’s bits per channel, but it does not remove the `-remap` colormap limitations.",
+  "num_citations": 10,
+  "citation_text_tokens": 4172,
+  "citation_text_chars": 16609,
+  "search_queries": [
+    "imagemagick remap colormap precision bit depth limit"
+  ],
+  "model_cost_usd": 0.0015636,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5151,
+    "output_tokens": 230,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 77
+  },
+  "latency_ms": 6552.176917088218,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0175636,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

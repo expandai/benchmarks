@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_114",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 203.5,
+    "total_citation_tokens": 2035.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the gold-target default, REQUEST, for current Spring Boot. However, it also asserts that Spring Boot 1.5 had a different default including FORWARD and INCLUDE (and optionally ASYNC), which is an inaccurate additional claim about the default. Because the response contains incorrect information, it is incorrect overall.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [5], [6], and [8] explicitly identify REQUEST as the default or general-purpose default dispatcher type for filter registration. Step 2: The gold target contains only the claim that the default is REQUEST, and that claim is directly supported. Citation [1] notes that defaults can depend on the filter type, but does not negate the explicit support for REQUEST as the general-purpose/default value in the other citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001378725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

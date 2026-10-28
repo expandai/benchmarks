@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_221",
+ "prompt": "kubernetes OwnerReference blockOwnerDeletion missing permission error response",
+ "attempt": 1,
+ "answer": "`metadata.ownerReferences[].blockOwnerDeletion: true` requires the requesting identity to have permission on the **owner** resource. Kubernetes enforces this to prevent unauthorized users from delaying garbage collection.\n\nThe request can fail with errors such as:\n\n```text\ncannot set blockOwnerDeletion if an ownerReference refers to a resource you can't set finalizers on\n```\n\nor HTTP `422 Unprocessable Entity`.\n\nTo resolve it:\n\n- Grant the controller or service account permission to update the owner’s `finalizers` subresource—for example, `update` on `<owner-resource>/finalizers`.\n- The Kubernetes documentation describes this requirement as needing `delete` permission on the owner.\n- Ensure the `ownerReference.apiVersion` and `kind` resolve correctly; an invalid REST mapping can also produce:\n\n```text\ncannot set blockOwnerDeletion in this case because cannot find RESTMapping\n```\n\n`blockOwnerDeletion` defaults to `false`. If the permission cannot be granted, omit it or set it to `false`, provided the controller does not require the dependent to block owner deletion.",
+ "num_citations": 10,
+ "citation_text_tokens": 4487,
+ "citation_text_chars": 19995,
+ "search_queries": [
+  "kubernetes OwnerReference blockOwnerDeletion missing permission error response"
+ ],
+ "model_cost_usd": 0.0019337,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5657,
+  "output_tokens": 433,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 211
+ },
+ "latency_ms": 5007.840416976251,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0059337,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

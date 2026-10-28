@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 474.7,
+    "total_citation_tokens": 4747.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer explains how to make a direct HTTP request over a Unix domain socket and says there is no built-in option to use one specifically as an HTTP proxy. It does not state that proxy settings will be ignored, and it does not contradict that claim.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [4] explicitly says that when a socket and proxy are both provided, the socket is used. Step 2: This supports the gold target’s claim that the proxy settings are ignored in that combination. The evidence appears in an Axios UNIX-socket support discussion, rather than directly in the Node.js built-in HTTP documentation, but it states the relevant behavior.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00104846,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_002",
+ "prompt": "CSS grid find fr size flex factor sum less than threshold",
+ "attempt": 1,
+ "answer": "In CSS Grid, if the sum of the flexible track factors is less than `1`, clamp it to `1`:\n\n```text\nflex factor sum = max(sum of flex factors, 1)\nhypothetical fr size = leftover space / flex factor sum\n```\n\nFor example, with `0.25fr 0.5fr`:\n\n```text\nflex factor sum = 0.25 + 0.5 = 0.75\nclamped sum     = 1\nfr size         = leftover space / 1\n```\n\nThe algorithm then checks whether `fr size × track’s flex factor` is smaller than that track’s base size; if so, it restarts while treating those tracks as inflexible. (Search result: Stack Overflow result quoting the CSS Grid algorithm.)",
+ "num_citations": 10,
+ "citation_text_tokens": 3619,
+ "citation_text_chars": 12025,
+ "search_queries": [
+  "CSS grid find fr size flex factor sum less than threshold"
+ ],
+ "model_cost_usd": 0.00160475,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5234,
+  "output_tokens": 247,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 77
+ },
+ "latency_ms": 4033.824499929324,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00235475,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

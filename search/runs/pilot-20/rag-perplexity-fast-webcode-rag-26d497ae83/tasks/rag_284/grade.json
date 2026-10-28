@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_284",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 500.5,
+    "total_citation_tokens": 1001.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when the right-hand side of `|=` produces no values, jq deletes the left-hand-side path, equivalent to `del(path)`, which matches the gold target. The additional statement that it does not produce an updated value is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that when the `|=` right-hand side outputs no values, the left-hand-side path is deleted, as with `del(path)`.\n2. Citation [1] states this directly, and citation [2] independently states the same fact.\n3. The retrieved citations contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00039384999999999995,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

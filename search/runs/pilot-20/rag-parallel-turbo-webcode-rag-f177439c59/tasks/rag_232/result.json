@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_232",
+ "prompt": "hpx::future destructor blocking behavior vs std::future",
+ "attempt": 1,
+ "answer": "`hpx::future` destructors never block, even if the asynchronous operation has not completed.\n\n`std::future` destructors generally do not block, except for futures returned by `std::async` with an asynchronous launch policy. In that case, the destructor blocks until the associated task completes if it has not already been synchronized with `get()` or `wait()`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4692,
+ "citation_text_chars": 20769,
+ "search_queries": [
+  "hpx::future destructor blocking behavior vs std::future"
+ ],
+ "model_cost_usd": 0.0015521,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5825,
+  "output_tokens": 80,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2345.7144999410957,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025521,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

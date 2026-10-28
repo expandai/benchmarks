@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_221",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 427.7,
+    "total_citation_tokens": 4277.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explains the permission issue and says the request is rejected, but it does not identify the response status code 422 (Unprocessable Entity). It contains no contradictory status code, so the target information is simply not answered.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states the response returned when the required permission is missing. Step 2: The gold target answer, “422 (Unprocessable Entity),” is directly supported by that passage. Step 3: Citation [1] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000897475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

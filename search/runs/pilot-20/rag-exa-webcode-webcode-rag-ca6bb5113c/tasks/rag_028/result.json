@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_028",
+ "prompt": "glibc printf_info width precision star arginfo function value",
+ "attempt": 1,
+ "answer": "For `struct printf_info`:\n\n| Format component | No `*` specified | With `*` in the handler | With `*` in the arginfo function |\n|---|---:|---:|---:|\n| `width` | `0` if omitted | Actual `int` value retrieved from the argument list | `INT_MIN` |\n| `prec` | `-1` if omitted | Actual value retrieved from the argument list | `INT_MIN` |\n\nThe `arginfo` function should also describe each `*` argument as `PA_INT` in its `argtypes` array. Its prototype is:\n\n```c\nint function(const struct printf_info *info, size_t n, int *argtypes);\n```\n\nThe handler prototype is:\n\n```c\nint function(FILE *stream, const struct printf_info *info,\n             const void *const *args);\n```\n\nSources: [Conversion Specifier Options](https://sourceware.org/glibc/manual/latest/html_node/Conversion-Specifier-Options.html), [Defining the Output Handler](https://www.sourceware.org/glibc/manual/latest/html_node/Defining-the-Output-Handler.html)",
+ "num_citations": 10,
+ "citation_text_tokens": 4871,
+ "citation_text_chars": 20197,
+ "search_queries": [
+  "glibc printf_info width precision star arginfo function value"
+ ],
+ "model_cost_usd": 0.0019649,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6233,
+  "output_tokens": 339,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 90
+ },
+ "latency_ms": 9746.993292006664,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089649,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

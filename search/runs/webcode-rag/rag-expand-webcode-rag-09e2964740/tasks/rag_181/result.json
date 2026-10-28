@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_181",
+  "prompt": "rust futures select_next_some behavior with None",
+  "attempt": 1,
+  "answer": "`select_next_some()` does **not** resolve with `None`.\n\n- It resolves only when the stream produces `Some(item)`.\n- If the stream is empty/terminated, the returned future reports `FusedFuture::is_terminated() == true`, so `select!` can disable that branch.\n- Polling the `select_next_some()` future after the stream is empty can panic; use it with a `FusedFuture`-aware primitive such as `select!`.\n- The stream must implement `Unpin + FusedStream`.\n\nExample behavior from the tests:\n\n```rust\nlet mut select_next_some = tasks.select_next_some();\n\nassert!(!select_next_some.is_terminated());\nassert_eq!(select_next_some.poll_unpin(&mut cx), Poll::Pending);\nassert!(select_next_some.is_terminated());\n```\n\nIf an item is later added to a dynamic stream such as `FuturesUnordered`, a newly created or reused `select_next_some()` can produce that item.\n\nFor a stream that can return `None` temporarily but is not actually terminated, its `FusedStream::is_terminated()` implementation must correctly report that state. An inconsistent implementation can cause a panic in debug builds or a busy loop.",
+  "num_citations": 10,
+  "citation_text_tokens": 4722,
+  "citation_text_chars": 18057,
+  "search_queries": [
+    "rust futures select_next_some behavior with None"
+  ],
+  "model_cost_usd": 0.00203015,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6014,
+    "output_tokens": 439,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 183
+  },
+  "latency_ms": 6154.469708097167,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00403015,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

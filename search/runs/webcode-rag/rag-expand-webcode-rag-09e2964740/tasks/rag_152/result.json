@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_152",
+  "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+  "attempt": 1,
+  "answer": "- **`NS_TEST_ASSERT_*`**: Use when the condition is a critical prerequisite or when continuing would cause cascading or invalid checks. If it fails, the current test case is aborted.\n\n- **`NS_TEST_EXPECT_*`**: Use when you want to record a failure but continue running the test, typically to perform multiple independent checks and see all failures in one run. ns-3 documentation specifically recommends these variants for `void` callbacks, especially callbacks used by test programs; otherwise, use `ASSERT`.\n\nExample:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ (setupResult, true,\n                       \"Required setup failed\");\n\n// Continue checking independent results:\nNS_TEST_EXPECT_MSG_EQ (receivedPackets, expectedPackets,\n                       \"Unexpected packet count\");\n```\n\nFor floating-point comparisons, use the tolerance variants, such as `NS_TEST_ASSERT_MSG_EQ_TOL` or `NS_TEST_EXPECT_MSG_EQ_TOL`, rather than the plain `EQ` macros.",
+  "num_citations": 10,
+  "citation_text_tokens": 7511,
+  "citation_text_chars": 30442,
+  "search_queries": [
+    "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+  ],
+  "model_cost_usd": 0.0024621,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8913,
+    "output_tokens": 195,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4148.601249908097,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0044621,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

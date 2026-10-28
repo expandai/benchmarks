@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_177",
+ "prompt": "clang HasCustomParsing __declspec spelling interaction",
+ "attempt": 1,
+ "answer": "A `Declspec<\"...\">` spelling is handled specially: `HasCustomParsing` does **not** affect it. Clang parses `__declspec(attr)` through `Parser::ParseMicrosoftDeclSpec`, and the `HasCustomParsing` flag is currently ignored for attributes with a `__declspec` spelling.\n\n`HasCustomParsing` otherwise indicates that the parsed form differs from the semantic form and enables custom attribute parsing.",
+ "num_citations": 10,
+ "citation_text_tokens": 2201,
+ "citation_text_chars": 8934,
+ "search_queries": [
+  "clang HasCustomParsing __declspec spelling interaction"
+ ],
+ "model_cost_usd": 0.0010455,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3189,
+  "output_tokens": 207,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 116
+ },
+ "latency_ms": 4451.313207973726,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0020455,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

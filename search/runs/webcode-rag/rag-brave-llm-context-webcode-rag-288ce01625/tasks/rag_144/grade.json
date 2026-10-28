@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_144",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 170.7,
+    "total_citation_tokens": 1707.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer directly states that null Prisma numeric fields are not updated by increment, decrement, multiply, or divide, matching the gold target. Its additional guidance does not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [2] states exactly how atomic operations behave when a field is null.\nStep 2 — Groundedness: The gold target makes the same claim and lists the same operations, so all of its non-trivial information is present in the retrieved sources.\nStep 3 — Source attribution: Citation [2] directly contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0006364750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

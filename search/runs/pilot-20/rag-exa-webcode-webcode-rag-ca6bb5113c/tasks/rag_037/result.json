@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_037",
+ "prompt": "rust repr packed struct nested repr align member restriction",
+ "attempt": 1,
+ "answer": "Rust forbids a `#[repr(packed)]` type from containing a `#[repr(align(...))]` type, including transitively through nested structs or unions. This produces error **E0588**.\n\n```rust\n#[repr(align(16))]\nstruct Aligned(i32);\n\n#[repr(packed)]\nstruct Packed(Aligned); // error\n```\n\nThe restriction also applies when the aligned type is nested inside another type:\n\n```rust\nstruct Wrapper(Aligned);\n\n#[repr(packed)]\nstruct Packed(Wrapper); // error\n```\n\nA type cannot use both `packed` and `align` itself; that produces **E0587**:\n\n```rust\n#[repr(packed, align(8))]\nstruct Invalid(i32); // error\n```\n\nThe reverse nesting is allowed: a `#[repr(align(...))]` type may contain a `#[repr(packed)]` type.\n\nSources: [E0588](https://doc.rust-lang.org/stable/error_codes/E0588.html), [E0587](https://doc.rust-lang.org/stable/error_codes/E0587.html).",
+ "num_citations": 10,
+ "citation_text_tokens": 5027,
+ "citation_text_chars": 19998,
+ "search_queries": [
+  "rust repr packed struct nested repr align member restriction"
+ ],
+ "model_cost_usd": 0.00199625,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6416,
+  "output_tokens": 327,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 92
+ },
+ "latency_ms": 12059.41041605547,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00899625,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

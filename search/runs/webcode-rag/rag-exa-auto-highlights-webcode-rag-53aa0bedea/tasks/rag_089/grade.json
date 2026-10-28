@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 470.9,
+    "total_citation_tokens": 4709.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the local X and Z components via `local_cursor.xz()` and explains that Y is discarded, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says to derive local coordinates with `local_cursor.xz()` and discard the Y coordinate because it is zero on the plane.\n2. Citations [1], [2], and [7] explicitly state both that the Y coordinate can be discarded because the point is on the plane and that the local coordinates are assigned using `local_cursor.xz()`.\n3. All non-trivial claims in the gold target are present in the retrieved citations, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00097635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

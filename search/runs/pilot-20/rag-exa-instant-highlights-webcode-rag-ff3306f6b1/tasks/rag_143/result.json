@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_143",
+ "prompt": "CSS grid align-content justify-content stretch which tracks accept space",
+ "attempt": 1,
+ "answer": "In a grid, `align-content` and `justify-content` align **grid tracks**, not grid items:\n\n- `align-content`: aligns the grid **rows** along the block/column axis.\n- `justify-content`: aligns the grid **columns** along the inline/row axis.\n\nWith `stretch`, **only `auto`-sized tracks accept the extra space and grow equally** (subject to size constraints). Fixed-size tracks and flexible `fr` tracks do not stretch via these properties.\n\nThus:\n\n```css\ngrid-template-columns: auto auto; /* can stretch via justify-content */\ngrid-template-rows: auto auto;    /* can stretch via align-content */\n```\n\n`normal` behaves as `stretch` for grid containers. Stretching only matters when the grid is smaller than its container and there is extra space to distribute.",
+ "num_citations": 10,
+ "citation_text_tokens": 4273,
+ "citation_text_chars": 20234,
+ "search_queries": [
+  "CSS grid align-content justify-content stretch which tracks accept space"
+ ],
+ "model_cost_usd": 0.0015444,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5343,
+  "output_tokens": 174,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3672.4880420370027,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0055444,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

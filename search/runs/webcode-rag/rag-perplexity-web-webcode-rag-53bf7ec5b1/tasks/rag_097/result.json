@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_097",
+  "prompt": "Rust StreamExt next method where clause constraint",
+  "attempt": 1,
+  "answer": "`StreamExt::next` has this constraint:\n\n```rust\nfn next(&mut self) -> Next<'_, Self>\nwhere\n    Self: Unpin;\n```\n\nBecause `next` borrows the stream rather than taking ownership, the stream type must implement `Unpin`.\n\nFor a `!Unpin` stream, pin it first—for example with `Box::pin` or the `pin_mut!` macro—then call `.next()`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3738,
+  "citation_text_chars": 12600,
+  "search_queries": [
+    "Rust StreamExt next method where clause constraint"
+  ],
+  "model_cost_usd": 0.00150965,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4940,
+    "output_tokens": 229,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 131
+  },
+  "latency_ms": 3859.2688749777153,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065096500000000005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

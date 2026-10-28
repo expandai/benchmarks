@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_301",
+ "prompt": "gnu units !var environment variable not set behavior",
+ "attempt": 1,
+ "answer": "For GNU `units`, if the environment variable named after `!var` is unset:\n\n- `units` prints an error message.\n- It ignores the definitions in that `!var` block.\n\nExample:\n\n```text\n!var INCH_UNIT usa\nyard 3600|3937 m\n!endvar\n```\n\nIf `INCH_UNIT` is unset, this block is ignored. Use `!set` beforehand to provide a default:\n\n```text\n!set INCH_UNIT usa\n!var INCH_UNIT usa\nyard 3600|3937 m\n!endvar\n```\n\n`!set` assigns the value only if the variable is not already set.",
+ "num_citations": 10,
+ "citation_text_tokens": 2412,
+ "citation_text_chars": 10522,
+ "search_queries": [
+  "gnu units !var environment variable not set behavior"
+ ],
+ "model_cost_usd": 0.00100665,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3336,
+  "output_tokens": 144,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 5884.007917018607,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00800665,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

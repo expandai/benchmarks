@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_035",
+ "prompt": "istio TracingServiceName APP_LABEL_AND_NAMESPACE missing app label fallback",
+ "attempt": 1,
+ "answer": "For `TracingServiceName: APP_LABEL_AND_NAMESPACE`, if the workload has no `app` label, Istio falls back to `istio-proxy` as the service name. Otherwise, it combines the `app` label and workload namespace with a period, such as `my-app.my-namespace`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4785,
+ "citation_text_chars": 20214,
+ "search_queries": [
+  "istio TracingServiceName APP_LABEL_AND_NAMESPACE missing app label fallback"
+ ],
+ "model_cost_usd": 0.0016689,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6009,
+  "output_tokens": 139,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 71
+ },
+ "latency_ms": 13547.458042041399,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0086689,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

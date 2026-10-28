@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_053",
+ "prompt": "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes",
+ "attempt": 1,
+ "answer": "RFC 9114 specifies that each HTTP/3 SETTINGS identifier and value is encoded as a **QUIC variable-length integer**.\n\nThe search results establish that:\n\n- SETTINGS values use the QUIC variable-length integer encoding.\n- The usable integer space is **62 bits**, with values in **[0, 2⁶²)**.\n- The results do **not** specify the individual wire-encoding sizes (such as how many bytes correspond to each bit length).\n\nSo, the maximum SETTINGS value size is **62 bits**; the exact variable-length encoding-size breakdown is not provided in the supplied results.",
+ "num_citations": 10,
+ "citation_text_tokens": 5305,
+ "citation_text_chars": 20732,
+ "search_queries": [
+  "RFC 9114 HTTP/3 SETTINGS values variable-length integer bit sizes"
+ ],
+ "model_cost_usd": 0.0020809,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6457,
+  "output_tokens": 389,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 261
+ },
+ "latency_ms": 6112.964999978431,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0060809,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

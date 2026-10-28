@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 533.0,
+    "total_citation_tokens": 5330.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a short challenge is left-padded with leading zero bytes, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that a short V2ClientHello challenge is padded with leading rather than trailing zero bytes.\n2. Citation [2] states this directly, including the leading-versus-trailing distinction. Citation [5] also describes the challenge as left-padded when forming the TLS random.\n3. The retrieved citations support the gold target’s factual claim, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001022975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

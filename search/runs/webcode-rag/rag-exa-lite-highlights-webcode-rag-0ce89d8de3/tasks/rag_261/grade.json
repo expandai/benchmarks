@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 285.1,
+    "total_citation_tokens": 2851.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer does not identify threads and userdata. Instead, it gives other types as unsupported or not represented by literals, including number literals, so it does not provide the requested answer and conflicts with the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] identifies `thread` and `userdata` as Lua types, but its discussion of representation concerns how types are specified by name, not whether values of those types can be represented as literals.\n2. Citation [6] lists expression forms, but does not define `literal` or explicitly say that thread and userdata values cannot be represented as literals.\n3. Therefore, the citations do not establish the gold target’s specific claim about both threads and userdata. That missing claim is non-trivial, so the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013631,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_134",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 46.6,
+    "total_citation_tokens": 466.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide the version or immutability information in the gold target. It neither confirms nor contradicts the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold answer makes two non-trivial claims: that CSIDriverSpec.storageCapacity was immutable in Kubernetes versions up to 1.22, and that it is now mutable.\n2. None of the citations states either claim or identifies a Kubernetes version when this field's mutability changed. The citations mentioning immutability concern other fields or resources, so they do not establish the gold answer.\n3. Because the retrieved sources do not support the required claims, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000471975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

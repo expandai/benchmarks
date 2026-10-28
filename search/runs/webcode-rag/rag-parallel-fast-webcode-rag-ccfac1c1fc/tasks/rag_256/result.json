@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "For `|=`, the RHS is run with the old LHS value as its input. Its outputs determine the replacement value.\n\nIf the RHS produces **no values**—for example, via `empty`—the update does not automatically preserve the old value. The assignment can produce no result. This behavior has been reported as a bug in jq 1.6.\n\nThis differs from `=`:\n\n- `=` produces an updated document for each RHS output.\n- `|=` uses the RHS as an update filter and does not behave that way for multiple outputs or zero outputs.\n\nA workaround is to use ordinary assignment and explicitly apply the RHS to the old value:\n\n```jq\n.a = (.a | ...)\n```\n\nSource: [jq issue #970](https://github.com/jqlang/jq/issues/970), [Stack Overflow answer](https://stackoverflow.com/questions/68160740/update-operator-yields-empty-object-in-jq/68160909).",
+ "num_citations": 10,
+ "citation_text_tokens": 2497,
+ "citation_text_chars": 9319,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.00169175,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3542,
+  "output_tokens": 672,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 471
+ },
+ "latency_ms": 7891.982041997835,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0026917499999999997,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

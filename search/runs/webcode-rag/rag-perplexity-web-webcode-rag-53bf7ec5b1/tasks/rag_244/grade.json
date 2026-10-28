@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_244",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 291.6,
+    "total_citation_tokens": 2916.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the environment variable patterns `*_SERVICE_HOST` and `*_SERVICE_PORT`, which match the gold target. The additional statement about overriding detection does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly identify `*_SERVICE_HOST` and `*_SERVICE_PORT` as the environment variables used by Spring Boot to detect Kubernetes deployment environments. Citation [10] states the same in Chinese. Step 2: These are exactly the variables named in the gold target; no additional non-trivial facts are required. Therefore, the target is fully supported. Step 3: Citations [1]–[10] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 10
+  },
+  "judge_cost_usd": 0.0008787249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

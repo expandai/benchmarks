@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_049",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 306.5,
+    "total_citation_tokens": 3065.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says a negative processor-cache value makes the cache unlimited, with a theoretical maximum equal to the maximum number of connections. The predicted answer says a negative value is ignored and does not make the cache unlimited, directly contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] links a value of -1 with an unlimited cache size and says Spring Boot applies the property only when it is positive. Citation [3] also shows that Spring Boot applies the processor-cache setting only for positive values. Step 2 — The citations do not state that the unlimited cache has a theoretical maximum equal to the maximum number of connections. That is a specific, non-trivial claim missing from the retrieved sources, so the gold target is not fully grounded. Step 3 — No citation contains enough information to derive the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007971,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

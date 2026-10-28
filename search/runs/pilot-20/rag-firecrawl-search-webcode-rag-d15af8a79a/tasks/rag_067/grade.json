@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_067",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 60.0,
+    "total_citation_tokens": 600.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the exception as org.hibernate.envers.exception.AuditException, matching the gold target. It adds a message but does not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] identifies the exception type as AuditException when negative revision numbers are encountered, and [2] mentions integer overflow causing a negative revision number. Step 2: The gold target also claims that this causes the current transaction to be rolled back. No retrieved citation states or establishes that transaction rollback consequence. Since this is a non-trivial claim missing from the citations, the answer is UNGROUNDED. Step 3: No citation contains sufficient information to derive the entire gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00045072499999999996,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

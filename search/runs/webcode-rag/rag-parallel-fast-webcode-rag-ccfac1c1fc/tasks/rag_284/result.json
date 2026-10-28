@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_284",
+ "prompt": "jq |= update-assignment right-hand side outputs empty",
+ "attempt": 1,
+ "answer": "In jq, if the RHS of `|=` produces no values (`empty`), the LHS path is supposed to be deleted, equivalent to `del(path)`.\n\nHowever, in jq 1.6:\n\n```sh\necho '[1, 2]' | jq -c '.[] |= empty'\n```\n\nproduces:\n\n```json\n[2]\n```\n\nOnly the first path is deleted, whereas:\n\n```sh\necho '[1, 2]' | jq -c 'del(.[])'\n```\n\nproduces:\n\n```json\n[]\n```\n\nThis is a reported jq bug.",
+ "num_citations": 10,
+ "citation_text_tokens": 2692,
+ "citation_text_chars": 9618,
+ "search_queries": [
+  "jq |= update-assignment right-hand side outputs empty"
+ ],
+ "model_cost_usd": 0.00118675,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3634,
+  "output_tokens": 232,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 4575.8771249093115,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0021867500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

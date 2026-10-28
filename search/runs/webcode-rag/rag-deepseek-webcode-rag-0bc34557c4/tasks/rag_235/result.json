@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_235",
+ "prompt": "elixir to_timeout Duration year month fields constraint",
+ "attempt": 1,
+ "answer": "`Kernel.to_timeout/1` does not support `Duration` values containing `month` or `year` fields. It raises because months and years cannot be converted to an absolute millisecond value without a reference datetime.\n\nUse a reference datetime instead, such as:\n\n```elixir\nDateTime.diff(DateTime.shift(dt, duration), dt)\n```\n\n`to_timeout/1` supports fixed-length units such as hours and returns milliseconds.",
+ "num_citations": 10,
+ "citation_text_tokens": 2231,
+ "citation_text_chars": 9151,
+ "search_queries": [
+  "elixir to_timeout Duration year month fields constraint"
+ ],
+ "model_cost_usd": 0.0011259,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3549,
+  "output_tokens": 199,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 105
+ },
+ "latency_ms": 3982.602500007488,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0018759,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

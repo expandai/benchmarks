@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_063",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 499.0,
+    "total_citation_tokens": 4990.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the internal Calc function name for the `+` operator as `add`, matching the gold target. The additional explanation does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the internal function name for Calc’s `+` operator.\n2. Citation [3] explicitly states that an `apply` pattern matching `a+b` binds the function name to `add`.\n3. Citation [6] also identifies infix `+` with `add`.\n4. The retrieved sources contain the complete target fact, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010266,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-133",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 592.5,
+    "total_citation_tokens": 5925.0,
+    "filtered_results": 0.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nTo evaluate, let's break down the requirements of the question and compare the numerical facts in both answers:\n\n1. Identify the \"guest host of SNL 12/6/1997\" and the number of Tony Awards they have won.\n   - Predicted Answer: Helen Hunt, 0 Tony Awards.\n   - Ground Truth (implied): Must be someone who has won more than 0 Tonys (otherwise the calculated answer could not be 12).\n\n2. Greta Gerwig’s 2023 film (Barbie) received 8 Oscar nominations. Both answers agree here.\n\n3. Fleetwood Mac (band behind \"Tusk\") has won 2 Grammys. Both answers use this value.\n\n4. The calculation in the Predicted Answer: (0 × 8) ÷ 2 = 0. The Ground Truth states the answer is 12, which would only be possible if the number of Tony's won by the SNL host is 3 (since 3×8=24, 24/2=12).\n\nComparing the above, the core reason for the difference is the number of Tony Awards associated with the SNL host. The predicted answer claims the host was Helen Hunt with 0 Tonys, leading to a final answer of 0, while the ground truth expects an answer of 12, implying a different Tony win count or host.\n\nConclusion: The information and calculation provided in the \"Predicted Answer\" do not contain or align with the ground truth answer (12).\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.003252
+}

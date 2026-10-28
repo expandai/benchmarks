@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_118",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 545.1,
+    "total_citation_tokens": 5451.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the correct size limit of 4096 bytes. However, it adds that truncated output is marked with an ellipsis (`...`), which is not part of Docker’s documented truncation behavior. Because the answer includes this inaccurate extra claim, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that Docker stores a maximum of 4096 bytes of HEALTHCHECK output, with longer output truncated. Step 2: The gold target answer, “4096 bytes,” is fully supported by these passages. Therefore, the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.001238225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

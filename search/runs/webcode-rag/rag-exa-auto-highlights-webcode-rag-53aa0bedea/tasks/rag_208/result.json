@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_208",
+  "prompt": "imagemagick remap colormap precision bit depth limit",
+  "attempt": 1,
+  "answer": "ImageMagick’s `-remap` is limited by the colormap size, not directly by the image bit depth:\n\n- For Q16 and higher builds, `MaxColormapSize` is defined as **65,536** entries.\n- In practice, ImageMagick reports support for a maximum of **65,535 colors**; exceeding that may cause the colormap to be reduced or trigger `UnableToCreateColormap`.\n- A remap image must therefore contain fewer than roughly **65,535 unique colors**.\n- When the limit is exceeded, remapping may fail and ImageMagick may continue processing without actually remapping the image.  \n  Source: [Discussion #7525](https://github.com/ImageMagick/ImageMagick/discussions/7525), [Issue #7569](https://github.com/ImageMagick/ImageMagick/issues/7569)\n\nBit depth is separate:\n\n- Q8 has a `QuantumRange` of 255.\n- Q16 has a range of 65,535.\n- Q32 has a range of 4,294,967,295.\n- Q64 has a range of 18,446,744,073,709,551,615.  \n  Source: [RMagick constants](http://rmagick.github.io/constants.html)\n\n`-depth 8` primarily controls file-writing behavior according to the cited discussion; it is not a general operation for reducing an image’s internal precision. The discussion also notes that `-posterize` and `-colors` generate colors at the source bit depth, so reducing a 16-bit image to 8-bit afterward can cause distinct palette colors to collapse into the same 8-bit color. Source: [Issue #7569](https://github.com/ImageMagick/ImageMagick/issues/7569)\n\nPractical solution: ensure the remap palette contains fewer than 65,535 unique colors, and write the result to a lossless format such as PNG rather than JPEG.",
+  "num_citations": 10,
+  "citation_text_tokens": 5621,
+  "citation_text_chars": 20469,
+  "search_queries": [
+    "imagemagick remap colormap precision bit depth limit"
+  ],
+  "model_cost_usd": 0.002582,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7103,
+    "output_tokens": 672,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 260
+  },
+  "latency_ms": 11277.154957992025,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.009582,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

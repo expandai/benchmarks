@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 199.0,
+    "total_citation_tokens": 1990.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides none of the address-selection order from the gold target. It does not contradict the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [7] names all three address types in the same sequence as the gold answer and says the role uses private IPv4 by default. Citation [8] shows that public IPv6 can be selected through relabeling.\n2. However, the sources do not establish that private IPv4, public IPv4, and public IPv6 form a selection or fallback order. A sequence in a list of metadata labels does not demonstrate address-selection precedence. Citation [2] also gives a conflicting default claim, without establishing the requested order.\n3. Because the gold answer’s non-trivial claim is an address selection order and that order is not supported by the citations, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001058975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

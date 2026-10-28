@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_307",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 567.9,
+    "total_citation_tokens": 5679.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the command-list separator as the tilde character (`~`), matching the gold target. The additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the separator for libtool `_cmds`/`_eval` command lists is `~` (tilde).\n2. Citation [2] explicitly describes these variables as containing a “~”-separated list of commands.\n3. The retrieved source therefore contains the requested fact.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00106185,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

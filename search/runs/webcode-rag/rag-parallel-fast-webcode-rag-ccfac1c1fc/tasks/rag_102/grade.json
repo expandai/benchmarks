@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_102",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 235.6,
+    "total_citation_tokens": 2356.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Cachegrind simulates the access size of large FPU instructions such as `fsave` as 16 bytes, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations directly state that large x86/amd64 FPU instructions such as fsave are treated as accessing only 16 bytes.\nStep 2: This contains the gold target answer, 16 bytes, and grounds the relevant claim.\nStep 3: Citations [1], [2], [3], [4], and [7] each provide the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000721225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

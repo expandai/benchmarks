@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 396.2,
+    "total_citation_tokens": 3962.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `file:read(\"n\")` accepts numerals up to 200 characters by default, matching the gold target. The additional detail about the compile-time macro does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks for the maximum input length accepted for the numeral format in file:read(\"n\"). 2. Citation [2] identifies the read-number format and defines the maximum numeral length as 200; citations [3] and [4] confirm the same limit. 3. The gold answer, “200 characters,” is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00088335,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

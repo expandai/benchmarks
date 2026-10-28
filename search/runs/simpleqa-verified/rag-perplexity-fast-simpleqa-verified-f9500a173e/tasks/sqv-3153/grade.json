@@ -1,0 +1,31 @@
+{
+  "task_id": "sqv-3153",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 90.2,
+    "total_citation_tokens": 541.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives 60 livres, which is exactly the gold target and within the acceptable range.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations associate the 60-livre sale with an earlier, separate painting (citation [3] identifies it as *The Departing Regiment*). They state that *Camp-Fire* was later bought by Sirois for 200 livres (citations [1], [2], and [4]). Step 2: The gold answer says 60 livres for *Camp-fire*, but the retrieved sources do not support that attribution; they distinguish the 60-livre sale from the 200-livre *Camp-Fire* sale. Thus a non-trivial fact in the gold answer is unsupported, so the answer is UNGROUNDED. Step 3: No citation contains information supporting 60 livres as the price of *Camp-Fire*.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000585105,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 391.0,
+    "total_citation_tokens": 3910.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when there are no active servers, HAProxy's avg_queue uses twice the number of queued connections. This matches the gold target, and the additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Both citations explicitly state that when there are no active servers, HAProxy uses twice the number of queued connections as the measured value.\nStep 2: This directly supports the full gold target answer; no non-trivial claim is missing. The answer is GROUNDED.\nStep 3: Citations [1] and [5] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008611,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

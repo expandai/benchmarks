@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_276",
+  "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+  "attempt": 1,
+  "answer": "Without `texture-component-swizzle`, you cannot reliably sample meaningful non-depth channels from a depth/stencil texture.\n\n- A depth aspect may be bound to a normal texture binding, but sampling it returns `vec4<f32>(D, X, X, X)`, where only `.r`/the first component is defined.\n- A stencil aspect must use a normal texture binding with `sampleType: \"uint\"` and returns `vec4<u32>(S, X, X, X)`.\n- The remaining components are implementation-defined unspecified values. They may appear as replicated values or as `(0, 0, 1)`, depending on hardware.\n- Therefore, read only the first component and manually replicate it in WGSL if needed, for example conceptually `vec4<f32>(sample.r)` or `vec4<u32>(sample.r)`. You cannot obtain defined `.g`, `.b`, or `.a` values from the texture itself.\n\nThe WebGPU specification explicitly says authors must not rely on the non-first components for stencil reads, and gives the same unspecified-component behavior for depth reads.",
+  "num_citations": 10,
+  "citation_text_tokens": 3978,
+  "citation_text_chars": 15659,
+  "search_queries": [
+    "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+  ],
+  "model_cost_usd": 0.00181975,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5062,
+    "output_tokens": 462,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 231
+  },
+  "latency_ms": 6867.586000007577,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00681975,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

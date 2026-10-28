@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_183",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 239.3,
+    "total_citation_tokens": 2393.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the anticipatory scheduler honors `--io_nice_level` only up to priority 4, matching the gold target. The additional scale information does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that the anticipatory scheduler may only honor priority values up to 4.\nStep 2: This directly supports the entire gold target answer, “up to priority 4,” with no missing non-trivial facts.\nStep 3: Citations [1], [2], [3], [4], [5], and [7] each contain the supporting statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.000718475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

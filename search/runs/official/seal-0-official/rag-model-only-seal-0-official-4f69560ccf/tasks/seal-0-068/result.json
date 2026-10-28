@@ -1,0 +1,44 @@
+{
+ "task_id": "seal-0-068",
+ "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+ "attempt": 1,
+ "answer": "This is based on the **Central Limit Theorem (CLT)**—specifically, the **Lindeberg–Lévy Central Limit Theorem** for i.i.d. samples.\n\nIf \\(X_1,\\dots,X_n\\) are i.i.d. with mean \\(\\mu\\) and finite variance \\(\\sigma^2\\), then the sample mean\n\n\\[\n\\bar X_n=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nbecomes approximately normally distributed as \\(n\\) grows:\n\n\\[\n\\bar X_n \\approx N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]\n\nStrictly speaking, the individual sampled variables do **not** become normally distributed; it is their **sum or sample mean** whose distribution approaches normality.",
+ "num_citations": 0,
+ "citation_text_tokens": 0,
+ "citation_text_chars": 0,
+ "search_queries": [],
+ "query_clipped": false,
+ "num_searches": 0,
+ "filtered_results_by_reason": {},
+ "skipped_results_by_reason": {},
+ "answer_protocol": {
+  "name": "neutral-single-search-high-reasoning",
+  "reasoning_effort": "high",
+  "max_output_tokens": null,
+  "with_search": false,
+  "model": "openai/gpt-5.6-luna",
+  "current_date": "October 27, 2026"
+ },
+ "model_cost_usd": 0.0003634,
+ "search_cost_usd": 0.0,
+ "total_cost_usd": 0.0003634,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 47,
+  "output_tokens": 295,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 117
+ },
+ "latency_ms": 3693.3545829961076,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "filtered_results",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

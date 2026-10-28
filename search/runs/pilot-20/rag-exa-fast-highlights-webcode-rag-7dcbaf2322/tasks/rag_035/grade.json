@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_035",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 477.6,
+    "total_citation_tokens": 4776.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `istio-proxy` as the fallback when the `app` label is missing, matching the gold target. Its additional namespace example does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target is `istio-proxy`, the fallback service name when the app label is missing. The citations state this fallback directly, so the target is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001042975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

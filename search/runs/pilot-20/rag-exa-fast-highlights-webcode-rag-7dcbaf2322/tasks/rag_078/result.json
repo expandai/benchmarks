@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_078",
+ "prompt": "jq |= update-assignment RHS produces no values",
+ "attempt": 1,
+ "answer": "In `jq`, `|=` treats an RHS that produces no values (`empty`) as a request to delete the corresponding LHS path:\n\n```jq\n.a |= empty\n```\n\nis effectively like deleting `.a`, rather than producing no output. This differs from `=`:\n\n```jq\n.a = (.a | empty)\n```\n\nwhich produces an empty stream.\n\nFor example:\n\n```sh\njq -nc '{\"a\":[1,2,3]} | .a[] |= empty'\n```\n\nmay produce:\n\n```json\n{\"a\":[2]}\n```\n\nThe intended behavior is that each matching path is deleted when the RHS produces no value. However, jq 1.6 has known bugs with multiple paths and `empty`; the documented workaround is to use `del(...)` explicitly, or avoid `|=` where possible.",
+ "num_citations": 10,
+ "citation_text_tokens": 3979,
+ "citation_text_chars": 15051,
+ "search_queries": [
+  "jq |= update-assignment RHS produces no values"
+ ],
+ "model_cost_usd": 0.0015988,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5143,
+  "output_tokens": 261,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 87
+ },
+ "latency_ms": 5086.70337498188,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0085988,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

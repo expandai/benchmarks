@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_013",
+  "prompt": "haproxy src_http_fail_cnt 5xx status codes excluded",
+  "attempt": 1,
+  "answer": "By default, HAProxy’s `http_fail_cnt`—and therefore the source-based failure counter—counts HTTP status codes **500–599**, except:\n\n- **501**\n- **505**\n\nThese are excluded because they can be triggered by clients.\n\nTo exclude additional 5xx codes, use `http-fail-codes` with the `-` prefix. For example:\n\n```haproxy\nhttp-fail-codes -500\n```\n\nThis removes status `500` from the failure range. The directive applies to the `http_fail_cnt` stick-table counter.",
+  "num_citations": 10,
+  "citation_text_tokens": 4621,
+  "citation_text_chars": 18237,
+  "search_queries": [
+    "haproxy src_http_fail_cnt 5xx status codes excluded"
+  ],
+  "model_cost_usd": 0.00174885,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5652,
+    "output_tokens": 280,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 158
+  },
+  "latency_ms": 9856.206375057809,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01774885,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 498.4,
+    "total_citation_tokens": 4984.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target specifies that the tracking limit is the 20 mnemonics with the largest number of executed actions. The predicted answer states that Bazel collects the top 20 action mnemonics by default, which conveys the same key information. The additional flag does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] says the BEP reports the most-executed action types and collects the top 20 by default. Step 2: This supports the answer that the tracking limit is 20 mnemonics with the largest number of executed actions; “action types” refers to the mnemonic categories in this context. No non-trivial claim in the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00107035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

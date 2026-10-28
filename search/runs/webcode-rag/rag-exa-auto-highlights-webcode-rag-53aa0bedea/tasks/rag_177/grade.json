@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_177",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 476.2,
+    "total_citation_tokens": 4762.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the key point from the gold target: `HasCustomParsing` is ignored for `__declspec` spellings, which are handled through Clang’s Microsoft declspec parsing path rather than the custom parser. The additional parser details do not contradict that point.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that attributes with a __declspec spelling ignore HasCustomParsing and are handled by Parser::ParseMicrosoftDeclSpec.\n2. Citation [2] states both points explicitly: the flag applies only to GNU-spelled arguments, and __declspec-spelled attributes ignore it and are handled by Parser::ParseMicrosoftDeclSpec.\n3. The source therefore contains all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0010666,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

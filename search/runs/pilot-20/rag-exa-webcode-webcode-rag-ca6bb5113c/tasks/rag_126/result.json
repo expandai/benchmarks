@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_126",
+ "prompt": "ssl SSLObject suppress_ragged_eofs EOF behavior",
+ "attempt": 1,
+ "answer": "`SSLObject` does not support `suppress_ragged_eofs`.\n\nUnlike `SSLSocket`, it has no handling for that setting. All EOF conditions that violate the TLS protocol raise `ssl.SSLEOFError`; they are not converted into a normal EOF (`b\"\"`). `SSLObject` instances are created with `SSLContext.wrap_bio()`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4899,
+ "citation_text_chars": 20196,
+ "search_queries": [
+  "ssl SSLObject suppress_ragged_eofs EOF behavior"
+ ],
+ "model_cost_usd": 0.00167165,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5996,
+  "output_tokens": 144,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 63
+ },
+ "latency_ms": 13626.569667016156,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00867165,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

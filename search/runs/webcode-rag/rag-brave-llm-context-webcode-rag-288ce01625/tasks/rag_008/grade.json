@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_008",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 231.8,
+    "total_citation_tokens": 2318.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that CR-bit tracking is enabled by default at -O2 and higher, and is also the default for POWER8 and newer CPUs. This captures the target's conditions: POWER8 and above, and other CPUs when optimization is applied at -O2 or above.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [4] directly states the default condition for CR-bit tracking. Step 2 — It contains all non-trivial claims in the gold target: the default applies to POWER8 and above, and to all other CPUs when optimization is applied at -O2 and above. Therefore, the gold target is fully grounded. Step 3 — Citation [4] contains the information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00067135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

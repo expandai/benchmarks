@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_207",
+ "prompt": "ffmpeg select filter expression output index routing",
+ "attempt": 1,
+ "answer": "In FFmpeg’s `select` filter, the expression result controls both selection and output routing:\n\n```text\nselect=n=NUMBER_OF_OUTPUTS:e=EXPRESSION\n```\n\n- Result `0`: discard the frame.\n- Result `< 0` or `NaN`: send the frame to output index `0` (the first output).\n- Result `> 0`: send it to output index:\n\n```text\nceil(result) - 1\n```\n\nOutput indexes are zero-based.\n\nExamples:\n\n```text\nselect=n=2:e=1\n```\n\nSends frames to output index `0` (the first output), because:\n\n```text\nceil(1) - 1 = 0\n```\n\n```text\nselect=n=2:e=1.2\n```\n\nSends frames to output index `1` (the second output), because:\n\n```text\nceil(1.2) - 1 = 1\n```\n\nA documented routing example is:\n\n```text\nselect=n=2:e='mod(n, 2)+1'\n```\n\nThe `n`/`outputs` option sets the number of output pads; its default is `1`. Source: [FFmpeg select filter documentation](https://ayosec.github.io/ffmpeg-filters-docs/8.1/Filters/Multimedia/select.html).",
+ "num_citations": 10,
+ "citation_text_tokens": 5580,
+ "citation_text_chars": 20136,
+ "search_queries": [
+  "ffmpeg select filter expression output index routing"
+ ],
+ "model_cost_usd": 0.0023678,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7019,
+  "output_tokens": 511,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 226
+ },
+ "latency_ms": 15332.36120804213,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0093678,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

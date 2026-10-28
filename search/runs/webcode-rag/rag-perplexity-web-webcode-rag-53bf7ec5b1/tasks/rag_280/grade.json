@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_280",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 375.0,
+    "total_citation_tokens": 3750.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that Node.js ignores built-in proxy settings for requests made through a Unix domain socket, matching the gold target. The extra explanation and example do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] directly state that proxy settings are ignored for requests made to a Unix domain socket; [6] states the same in Chinese.\nStep 2: The gold target claim, “proxy settings will be ignored,” is directly supported by the retrieved sources. No non-trivial claim is missing, so the answer is GROUNDED.\nStep 3: Citations [1], [2], and [6] contain the supporting information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00082585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_208",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 534.9,
+    "total_citation_tokens": 5349.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the precision limit is at most 8 bits. The predicted answer explicitly says the limit is not a per-channel precision limit and instead describes a colormap-size limit, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations mention limits on colormap size: 65,536 in [3] and 256 colors for the Q8 version in [7]. These are limits on the number of colors, not a statement that remap colormap precision is at most 8 bits.\n2. Citation [9] shows a script using `-depth 8`, but does not say that 8-bit precision is a limit for ImageMagick remapping.\n3. Therefore, the specific gold-target claim “at most 8-bits of precision” is not established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001213975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

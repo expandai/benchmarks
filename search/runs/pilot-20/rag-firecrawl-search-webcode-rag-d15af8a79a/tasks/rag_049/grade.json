@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_049",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 32.4,
+    "total_citation_tokens": 324.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a negative processor-cache value, specifically -1, means unlimited processor caching. This matches the gold target's description of an unlimited cache, and it adds no contradictory information.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citations [3] and [5] support that a value of -1 means the processor cache is unlimited.\n2. The gold target also claims that the theoretical maximum cache size equals the maximum number of connections.\n3. None of the retrieved citations states that relationship. Citation [3] mentions max threads and a truncated max-* setting but does not establish the claimed maximum-size relationship.\n4. Because a non-trivial claim in the gold target is missing, the citations do not fully ground the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000467725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

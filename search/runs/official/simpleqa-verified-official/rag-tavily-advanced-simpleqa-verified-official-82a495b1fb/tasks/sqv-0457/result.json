@@ -1,0 +1,46 @@
+{
+  "task_id": "sqv-0457",
+  "prompt": "Which Google Sheets function is specifically designed to convert a Unix epoch timestamp to a regular datetime in the UTC timezone?",
+  "attempt": 1,
+  "answer": "The Google Sheets function is **`EPOCHTODATE`**.\n\nExample:\n\n```gs\n=EPOCHTODATE(A1)\n```\n\nIt converts a Unix timestamp in seconds to a datetime in **UTC**. Specify the unit for milliseconds or microseconds:\n\n```gs\n=EPOCHTODATE(A1, 2)  // milliseconds\n=EPOCHTODATE(A1, 3)  // microseconds\n```",
+  "num_citations": 10,
+  "citation_text_tokens": 11053,
+  "citation_text_chars": 42177,
+  "search_queries": [
+    "Which Google Sheets function is specifically designed to convert a Unix epoch timestamp to a regular datetime in the UTC timezone?"
+  ],
+  "query_clipped": false,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search",
+    "reasoning_effort": null,
+    "max_output_tokens": null,
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 27, 2026"
+  },
+  "model_cost_usd": 0.0030385,
+  "search_cost_usd": 0.016,
+  "total_cost_usd": 0.0190385,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 11713,
+    "output_tokens": 92,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 5332.98016700428,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

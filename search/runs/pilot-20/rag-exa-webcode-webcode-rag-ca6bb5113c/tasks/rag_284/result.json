@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_284",
+ "prompt": "jq |= update-assignment right-hand side outputs empty",
+ "attempt": 1,
+ "answer": "`empty` produces no values at all. Therefore, using it as the RHS of `|=` is problematic:\n\n```jq\n.a |= empty\n```\n\nThe behavior depends on the jq version:\n\n- In jq 1.6 and some earlier implementations, it can produce `null` or behave incorrectly.\n- Current jq assignment internals treat an empty update as a request to delete the selected path, equivalent to `del(path)`.\n- Array updates such as `.[] |= empty` are specifically documented as inconsistent between versions; jq 1.6 may delete only some elements.\n\nUse an explicit operation for the intended result:\n\n```jq\n# Delete the field\ndel(.a)\n\n# Preserve the field when the update produces no result\n.a |= (., update)\n\n# Use a fallback value\n.a |= (update // default)\n\n# If the RHS does not depend on the existing .a value\n.a = (expression)\n```\n\nFor example, instead of:\n\n```jq\n.a |= select(. != 1)\n```\n\nuse:\n\n```jq\nif .a != 1 then . else del(.a) end\n```\n\nwhen deletion is the desired behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 4827,
+ "citation_text_chars": 17706,
+ "search_queries": [
+  "jq |= update-assignment right-hand side outputs empty"
+ ],
+ "model_cost_usd": 0.0022313,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6065,
+  "output_tokens": 596,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 353
+ },
+ "latency_ms": 24210.709750070237,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0092313,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

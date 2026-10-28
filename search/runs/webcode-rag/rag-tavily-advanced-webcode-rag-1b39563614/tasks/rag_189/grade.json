@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 387.2,
+    "total_citation_tokens": 3872.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the same address selection order as the gold target: private IPv4, public IPv4, then public IPv6. The additional information does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states the address-selection order. Step 2: The gold target answer lists all three address types in that same order, with no additional claims. Therefore, the retrieved citation contains all the required information. Step 3: Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000773725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_291",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 271.9,
+    "total_citation_tokens": 2719.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the default WebAssembly module name is \"env\" when `wasm_import_module` is not specified on the extern block, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that when `wasm_import_module` is not specified for an extern block, the default module name is `env`.\nStep 2: This supports the complete gold target answer, “env,” with no missing non-trivial information.\nStep 3: Citations [1], [3], and [4] each contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000692725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

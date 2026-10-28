@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_284",
+ "prompt": "jq |= update-assignment right-hand side outputs empty",
+ "attempt": 1,
+ "answer": "In `jq`, `|=` treats an RHS that produces no values—such as `empty`—as a deletion of the path selected on the left-hand side:\n\n```jq\n.path |= empty\n```\n\nis equivalent to deleting `.path` with `del(path)`.\n\nFor example:\n\n```sh\njq '{data: [0,1,2,3,4,5]} | .data |= map(if . == 2 then empty else . end)'\n```\n\nproduces:\n\n```json\n{\"data\":[0,1,3,4,5]}\n```\n\nFor an array, prefer updating the array with `map(...)` rather than using `.data[] |= empty`, since multiple-path update assignments involving `empty` have had surprising behavior in jq versions. If you want to retain the original value instead of deleting it, use `else .` rather than `else empty`.",
+ "num_citations": 10,
+ "citation_text_tokens": 6925,
+ "citation_text_chars": 23520,
+ "search_queries": [
+  "jq |= update-assignment right-hand side outputs empty"
+ ],
+ "model_cost_usd": 0.00244995,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 8130,
+  "output_tokens": 348,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 161
+ },
+ "latency_ms": 5781.6415829584,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00344995,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

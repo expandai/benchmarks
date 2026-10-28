@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_199",
+ "prompt": "gnulib pthread_rwlock_trywrlock error code already owned write lock",
+ "attempt": 1,
+ "answer": "`pthread_rwlock_trywrlock()` should return **`EBUSY`** when the lock is already held for reading or writing, including when the current thread already owns the write lock.\n\nHowever, Gnulib documents a macOS 12 portability bug: it returns **`EDEADLK`** instead of `EBUSY` when the current thread already owns the write lock. `EDEADLK` is the error associated with `pthread_rwlock_wrlock()` when the current thread already owns the lock.",
+ "num_citations": 10,
+ "citation_text_tokens": 2765,
+ "citation_text_chars": 12449,
+ "search_queries": [
+  "gnulib pthread_rwlock_trywrlock error code already owned write lock"
+ ],
+ "model_cost_usd": 0.0012391,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3925,
+  "output_tokens": 215,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 102
+ },
+ "latency_ms": 3975.9732090169564,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0019890999999999997,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

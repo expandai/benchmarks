@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_083",
+  "prompt": "Spring SockJS sessionCookieNeeded false IE 8 9 transport",
+  "attempt": 1,
+  "answer": "With `sessionCookieNeeded(false)`, SockJS chooses **`xdr-streaming`** for IE 8 and 9. This uses Microsoft’s `XDomainRequest`, which supports cross-domain requests but **does not send cookies**.\n\nUse this only when the application does not require cookies or the HTTP session (`JSESSIONID`). With the default `true`, SockJS prefers the iframe-based `iframe-htmlfile` transport so cookies can be sent.",
+  "num_citations": 10,
+  "citation_text_tokens": 2122,
+  "citation_text_chars": 9905,
+  "search_queries": [
+    "Spring SockJS sessionCookieNeeded false IE 8 9 transport"
+  ],
+  "model_cost_usd": 0.00100605,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3156,
+    "output_tokens": 181,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 83
+  },
+  "latency_ms": 4643.653375096619,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.006006050000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

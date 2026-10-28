@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_195",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 856.7,
+    "total_citation_tokens": 8567.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that the field block MUST be processed unless the connection is closed, matching the gold target. Its additional details do not contradict that obligation.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the field block must be processed to preserve consistent connection state, except when the connection is closed.\n2. Citations [2], [4], and [5] state that obligation verbatim. Citation [1] also supports the processing requirement by requiring reassembly and decompression even for blocks that will be discarded.\n3. The retrieved citations therefore contain all factual information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00185235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_021",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 174.9,
+    "total_citation_tokens": 1749.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the decode-failure output string as `64dec-fail`, matching the gold target `[64dec-fail]`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [4] and [8] explicitly state the output used when 64dec cannot decode the input.\nStep 2: The gold target answer, `[64dec-fail]`, is directly supported by both citations. All factual content is present.\nStep 3: Citations [4] and [8] contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006131,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

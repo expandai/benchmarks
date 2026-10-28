@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_133",
+  "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+  "attempt": 1,
+  "answer": "`applyConstraints()` rejects with an `OverconstrainedError` when the requested constraints cannot be met. Constraints using `min`, `max`, or `exact` are mandatory; if a remote track cannot satisfy them, the promise is rejected.\n\nFor a remote WebRTC track, some properties may not apply because RTP does not provide those values. In particular, a track associated with an `RTCPeerConnection` may not include `facingMode` or `groupId`. Check the track’s supported capabilities before applying constraints:\n\n```js\nconst capabilities = track.getCapabilities();\nconst settings = track.getSettings();\n\ntry {\n  await track.applyConstraints({\n    width: { ideal: 1280 },\n    height: { ideal: 720 }\n  });\n} catch (error) {\n  if (error.name === \"OverconstrainedError\") {\n    console.error(\"Constraint:\", error.constraint);\n  }\n}\n```\n\nUse `ideal` for preferences when possible, and use `getCapabilities()` to determine which properties and value ranges the track supports.",
+  "num_citations": 5,
+  "citation_text_tokens": 3842,
+  "citation_text_chars": 18036,
+  "search_queries": [
+    "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+  ],
+  "model_cost_usd": 0.0015867,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4677,
+    "output_tokens": 348,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 131
+  },
+  "latency_ms": 4592.558917007409,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065867,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_141",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 373.0,
+    "total_citation_tokens": 373.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the requested default quantum, nor does it contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The question asks for the default quantum when using a mapfile/readarray callback without specifying -c.\n2. Citation [1] discusses readarray and mapfile generally, but gives no information about the -C callback option, the -c quantum, or its default value.\n3. The gold target answer, 5000, is therefore not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00016881,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

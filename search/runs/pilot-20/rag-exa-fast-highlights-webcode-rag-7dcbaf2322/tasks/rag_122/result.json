@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_122",
+ "prompt": "rust asm! explicit register operands position operand list",
+ "attempt": 1,
+ "answer": "In Rust’s `asm!`, explicit register operands must come after positional operands:\n\n1. Template strings\n2. Positional operands\n3. Named operands\n4. Explicit register operands\n5. `clobber_abi` / `options` as applicable\n\nFor example:\n\n```rust\nunsafe {\n    core::arch::asm!(\n        \"mov eax, {}\",\n        in(reg) 5,          // positional operand\n        value = const 10,   // named operand\n        lateout(\"eax\") x,   // explicit register operand\n    );\n}\n```\n\nA positional operand cannot follow an explicit register operand:\n\n```rust\nunsafe {\n    core::arch::asm!(\n        \"/* {} */\",\n        in(\"eax\") 0,\n        in(reg) 5, // error\n    );\n}\n```\n\nExplicit register operands also cannot be referenced with `{}` in the template; write the register name directly, such as `eax`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5509,
+ "citation_text_chars": 20240,
+ "search_queries": [
+  "rust asm! explicit register operands position operand list"
+ ],
+ "model_cost_usd": 0.0019714,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6931,
+  "output_tokens": 199,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 3190.589417004958,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008971400000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

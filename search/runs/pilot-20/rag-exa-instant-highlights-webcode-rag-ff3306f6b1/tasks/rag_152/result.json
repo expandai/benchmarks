@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_152",
+ "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+ "attempt": 1,
+ "answer": "- **`NS_TEST_ASSERT_*`**: Use when failure makes the rest of the current test case invalid or pointless. It reports the failure and aborts the current test case.\n- **`NS_TEST_EXPECT_*`**: Use when you want to report a failure but continue execution, typically to check multiple independent conditions. For example, check A, B, and C even if A fails.\n\nThe ns-3 manual additionally recommends reserving `NS_TEST_EXPECT_*` for `void` methods, especially callbacks, and using `NS_TEST_ASSERT_*` elsewhere.\n\nExample:\n\n```cpp\n// Failure makes subsequent checks moot:\nNS_TEST_ASSERT_MSG_EQ(result, expected, \"Unexpected result\");\n\n// Continue checking other independent conditions:\nNS_TEST_EXPECT_MSG_EQ(conditionA, true, \"A failed\");\nNS_TEST_EXPECT_MSG_EQ(conditionB, true, \"B failed\");\n```\n\nThere is also a `test.py -m` option that can make `NS_TEST_ASSERT` behave like `NS_TEST_EXPECT`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4806,
+ "citation_text_chars": 20243,
+ "search_queries": [
+  "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+ ],
+ "model_cost_usd": 0.00187255,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6214,
+  "output_tokens": 266,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 58
+ },
+ "latency_ms": 4267.423624987714,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00587255,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_090",
+ "prompt": "Kotlin curly braces code block statement position interpretation",
+ "attempt": 1,
+ "answer": "In Kotlin, `{ ... }` is interpreted according to its syntactic position:\n\n- After a control-flow construct that accepts a `controlStructureBody`, it is a **code block**, not a lambda. This includes:\n  - `for`\n  - `while`\n  - `do-while`\n  - `if`\n  - `when`\n  - a `when` entry\n\n- In a position where an expression is required, `{ ... }` is generally a **lambda expression**.\n\nFor example:\n\n```kotlin\nval x = if (condition) {\n    1\n} else {\n    2\n}\n```\n\nHere the braces belong to `if` and `else`, so the final expressions produce the value of the `if`.\n\nTo return a lambda from an `if`, add another pair of braces or use parentheses:\n\n```kotlin\nval f: () -> Int =\n    if (condition) {\n        { 1 }\n    } else {\n        { 2 }\n    }\n```\n\nor:\n\n```kotlin\nval f: () -> Int =\n    if (condition) ({ 1 }) else ({ 2 })\n```\n\nFunction bodies are another distinct use of braces:\n\n```kotlin\nfun f(): Int {\n    return 1\n}\n```\n\nKotlin does not generally support arbitrary standalone code blocks; for that purpose, the search results mention using a helper such as `run { ... }`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3207,
+ "citation_text_chars": 12715,
+ "search_queries": [
+  "Kotlin curly braces code block statement position interpretation"
+ ],
+ "model_cost_usd": 0.0015395,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4493,
+  "output_tokens": 347,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 49
+ },
+ "latency_ms": 4157.011499977671,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0022895,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

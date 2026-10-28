@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_151",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 167.2,
+    "total_citation_tokens": 1672.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `InvalidAccessError` as the exception thrown when too many values are provided, matching the gold target. Its added detail does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer identifies the exception thrown when too many values are supplied to CSSFontFeatureValuesMap.set().\n2. Citation [10] explicitly states that exceeding the permitted number of values causes an InvalidAccessError exception; citation [3] states the same rule.\n3. The cited passages directly support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006051,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

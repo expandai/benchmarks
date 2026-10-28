@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_070",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 450.1,
+    "total_citation_tokens": 4501.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly says FetchEvent.replacesClientId is not implemented in any current browser engine and concludes there is no shipping browser support, matching the gold target. The additional implementation-status details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that FetchEvent.replacesClientId is implemented in no current engines.\n2. Citation [1] explicitly says “In no current engines” and lists Firefox, Safari, and Chrome as “None,” directly supporting that status.\n3. The retrieved citations therefore contain the information needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009691000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

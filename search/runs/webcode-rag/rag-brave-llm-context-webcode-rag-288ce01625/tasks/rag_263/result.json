@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_263",
+  "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+  "attempt": 1,
+  "answer": "In nginx, `NGX_PEER_NEXT` is triggered for:\n\n- **HTTP 403** (`FT_HTTP_403`)\n- **HTTP 404** (`FT_HTTP_404`)\n\nThese statuses cause nginx to try the next peer but **do not count the current peer as failed**. Other upstream failure types use `NGX_PEER_FAILED` instead. The next peer is used only when there are remaining tries (`u->peer.tries > 1`) and the relevant `proxy_next_upstream` condition is enabled. ([GitHub issue #102](https://github.com/gvozdetsky/ruxen/issues/102), [nginx-devel](http://mailman.nginx.org/pipermail/nginx-devel/2018-April/011015.html))",
+  "num_citations": 10,
+  "citation_text_tokens": 2971,
+  "citation_text_chars": 10241,
+  "search_queries": [
+    "nginx NGX_PEER_NEXT upstream status codes trigger"
+  ],
+  "model_cost_usd": 0.0013907,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4085,
+    "output_tokens": 308,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 142
+  },
+  "latency_ms": 5616.025250055827,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0063907,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

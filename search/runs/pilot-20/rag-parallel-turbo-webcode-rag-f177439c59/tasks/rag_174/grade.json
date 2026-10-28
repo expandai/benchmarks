@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_174",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.111,
+    "avg_citation_tokens": 781.0,
+    "total_citation_tokens": 7029.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer captures the frame types but changes the normative meaning: RFC 9113 says intermediaries SHOULD retain DATA-frame padding and MAY drop padding from HEADERS and PUSH_PROMISE frames. Saying they simply “drop” the latter padding presents an optional action as a requirement.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [6] explicitly identifies the three frame types and says intermediaries retain DATA padding while dropping HEADERS and PUSH_PROMISE padding. 2. It also contains the modal terms SHOULD and MAY, although they are detached from the sentence in the extraction. Together, this supports the gold answer’s behavior and its normative strength. 3. The other citations describe padding in frame formats but do not state this intermediary guidance.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0015653499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

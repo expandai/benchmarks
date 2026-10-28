@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 442.5,
+    "total_citation_tokens": 4425.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says NUL bytes are replaced with line terminators. The predicted answer instead describes binary-file detection and stopping behavior, without giving that replacement behavior; its claim that ripgrep stops at NUL conflicts with the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target says NUL bytes are “replaced with line terminators.” Citation [4] states this directly for ripgrep when the text flag is not enabled. The target’s factual claim is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001273475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

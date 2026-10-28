@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 490.8,
+    "total_citation_tokens": 4908.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says zero or negative starting values are rendered in decimal regardless of the `<ol>` `type` attribute. The predicted answer says the `type` attribute controls the numbering representation and does not state this exception, implying a different rendering may apply. It therefore does not provide the required answer and conflicts with the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations describe the numbering styles available for `ol` and note that a zero value only makes sense for certain CSS list styles. However, none says that zero or negative numbers are always rendered using decimal numbering regardless of the `type` attribute. The quoted passages do not establish the gold target’s universal rendering claim, so a non-trivial factual claim is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00132485,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

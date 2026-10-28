@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_082",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 849.4,
+    "total_citation_tokens": 8494.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies HTAB as the only control character allowed in an RFC 7230 quoted-pair, matching the gold target. The additional details are consistent with the quoted-pair grammar.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target identifies the control character allowed by RFC 7230’s quoted-pair rule.\n2. Citation [1] lists HTAB in the quoted-pair grammar and states that no control characters other than HTAB may be escaped.\n3. Therefore, the gold target is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00141635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_252",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 191.6,
+    "total_citation_tokens": 1916.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that CR-bit tracking is enabled at -O2 and above for other PowerPC CPUs, matching the gold target. Its additional qualification about POWER8 and newer does not contradict that optimization-level threshold.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that CR-bit tracking is enabled by default at optimization level -O2 and above. Citations [1], [2], and [3] explicitly state that for CPUs other than POWER8 and above, it is the default when optimization is applied at -O2 and above. This directly supports the requested optimization-level threshold.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000925725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

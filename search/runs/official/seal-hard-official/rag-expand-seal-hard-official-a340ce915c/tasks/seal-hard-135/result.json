@@ -1,0 +1,46 @@
+{
+  "task_id": "seal-hard-135",
+  "prompt": "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?",
+  "attempt": 1,
+  "answer": "This is based on the **Central Limit Theorem (CLT)**.\n\nMore precisely, if \\(X_1,\\ldots,X_n\\) are i.i.d. with finite mean \\(\\mu\\) and variance \\(\\sigma^2\\), then as \\(n\\) becomes large,\n\n\\[\n\\frac{\\sqrt n(\\bar X_n-\\mu)}{\\sigma}\n\\;\\xrightarrow{d}\\;\nN(0,1),\n\\]\n\nso the **sample mean** is approximately\n\n\\[\n\\bar X_n \\sim N\\left(\\mu,\\frac{\\sigma^2}{n}\\right).\n\\]\n\nThe CLT applies to the **sum or average** of the sampled variables—not generally to the individual raw observations themselves. The latter continue to follow the original distribution.",
+  "num_citations": 10,
+  "citation_text_tokens": 5225,
+  "citation_text_chars": 22570,
+  "search_queries": [
+    "If I randomly select i.i.d. samples from a distribution n times, the distribution of the sampled variables will approximately follow a normal distribution as n becomes very large. This statement is based on which theory?"
+  ],
+  "query_clipped": false,
+  "num_searches": 1,
+  "filtered_results_by_reason": {},
+  "skipped_results_by_reason": {},
+  "answer_protocol": {
+    "name": "neutral-single-search-high-reasoning",
+    "reasoning_effort": "high",
+    "max_output_tokens": null,
+    "with_search": true,
+    "model": "openai/gpt-5.6-luna",
+    "current_date": "October 27, 2026"
+  },
+  "model_cost_usd": 0.0019234,
+  "search_cost_usd": 0.002,
+  "total_cost_usd": 0.0039234000000000005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5731,
+    "output_tokens": 409,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 241
+  },
+  "latency_ms": 10259.325332939625,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "filtered_results",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_121",
+  "prompt": "helmfile hook Event.Error which events available",
+  "attempt": 1,
+  "answer": "Helmfile’s currently supported hook events are:\n\n- `prepare`\n- `preapply`\n- `presync`\n- `preuninstall`\n- `postuninstall`\n- `postsync`\n- `cleanup`\n\n`.Event.Error` is not an event; it is template data. According to the Helmfile hooks documentation, it contains the error from a failed release for `postsync` hooks. If the release succeeds, its value is `nil`.\n\nExample:\n\n```yaml\nhooks:\n  - events:\n      - postsync\n    command: echo\n    args:\n      - '{{`{{ if .Event.Error }}failure{{ else }}success{{ end }}`}}'\n```\n\nFor global hooks, only `prepare` and `cleanup` are available.",
+  "num_citations": 10,
+  "citation_text_tokens": 2803,
+  "citation_text_chars": 11693,
+  "search_queries": [
+    "helmfile hook Event.Error which events available"
+  ],
+  "model_cost_usd": 0.0016558,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 3955,
+    "output_tokens": 556,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 395
+  },
+  "latency_ms": 8085.987291997299,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0086558,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

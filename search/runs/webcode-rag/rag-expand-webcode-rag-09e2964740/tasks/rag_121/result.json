@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_121",
+  "prompt": "helmfile hook Event.Error which events available",
+  "attempt": 1,
+  "answer": "`.Event.Error` is available for:\n\n- **`postsync`** — populated when a release fails; otherwise `nil`.\n- **`cleanup`** — newer Helmfile changes propagate release errors to cleanup hooks. Older versions may always provide `nil`.\n\nThe documented hook events are:\n\n`prepare`, `preapply`, `presync`, `preuninstall`, `postuninstall`, `postsync`, and `cleanup`.\n\nAccording to the Helmfile documentation, `.Event.Error` is explicitly documented for `postsync` hooks only.",
+  "num_citations": 10,
+  "citation_text_tokens": 4001,
+  "citation_text_chars": 15287,
+  "search_queries": [
+    "helmfile hook Event.Error which events available"
+  ],
+  "model_cost_usd": 0.00165315,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5322,
+    "output_tokens": 269,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 154
+  },
+  "latency_ms": 5036.971500026993,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00365315,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

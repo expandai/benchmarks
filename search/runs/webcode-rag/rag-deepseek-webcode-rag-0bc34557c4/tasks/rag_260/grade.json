@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_260",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 229.0,
+    "total_citation_tokens": 2290.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target states that the rounding-mode argument to constrained `frem` has no effect because the result is never rounded. The prediction instead claims that it describes a mode to the compiler and controls optimizer behavior, which assigns it an effect contrary to the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [9] gives a general statement about constrained floating-point intrinsics, but does not say that `frem` results are never rounded. 2. No citation states that the rounding-mode argument has no effect specifically for `frem`, or that it is included for consistency with other constrained intrinsics. 3. Those are non-trivial claims in the gold target, so the retrieved citations do not contain enough information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000823225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

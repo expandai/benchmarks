@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_067",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 482.2,
+    "total_citation_tokens": 4822.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies the exception as an AuditException, which causes the current transaction to be rolled back. The predicted answer explicitly says no exception is thrown, contradicting the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] describes the revision number overflowing to a negative value, and explicitly says no warnings or exceptions occurred; it does not identify AuditException or say the transaction is rolled back.\n2. Citation [4] mentions AuditException only for conditions related to modified-entity tracking, not overflow, and does not state that it causes transaction rollback.\n3. Therefore, the citations do not support the gold answer’s claims that the exception is AuditException and that the current transaction is rolled back.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00099885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

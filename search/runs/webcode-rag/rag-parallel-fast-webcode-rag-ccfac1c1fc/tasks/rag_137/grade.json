@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_137",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 201.2,
+    "total_citation_tokens": 2012.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies imageAtomicExchange only. The predicted answer also claims imageAtomicAdd is available for floating-point image data, which conflicts with that target, even though it mentions imageAtomicExchange.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly supports imageAtomicExchange as the only function for the float image case described in the OES extension. Citations [2] and [3], however, also identify imageAtomicAdd for float image operations in other GLSL extensions. Step 2: Since the question does not limit the claim to the OES extension, the target’s unqualified word “only” is not supported across the retrieved sources; the sources include a counterexample. Therefore, the target answer is UNGROUNDED as stated. Step 3: Citation [1] contains the scoped exchange-only claim, but the retrieved set does not support the unqualified answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011080999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

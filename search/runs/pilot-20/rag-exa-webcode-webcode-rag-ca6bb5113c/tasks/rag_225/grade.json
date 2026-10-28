@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_225",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 515.7,
+    "total_citation_tokens": 5157.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer first gives 100–999 as the range accepted by `res.sendStatus()`, which conflicts with the gold target of 100–599 for valid HTTP status codes. Although it later states that standard HTTP status codes are 100–599, the answer also presents the broader range as the API’s accepted range, so it does not give an unambiguous correct answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states the Node.js range as 100 to 599, and citation [2] explicitly identifies 100 to 599 inclusive as the range of valid HTTP status codes. Step 2: The gold target answer, “100 to 599,” is fully supported by these passages. Step 3: Citations [1] and [2] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001330975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

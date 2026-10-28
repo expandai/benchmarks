@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_146",
+  "prompt": "CSS display contents pseudo-elements box not generated",
+  "attempt": 1,
+  "answer": "`display: contents` does **not** suppress pseudo-elements. The element itself generates no box, but its children and pseudo-elements—such as `::before` and `::after`—should still generate boxes normally.\n\n```css\n.wrapper {\n  display: contents;\n}\n\n.wrapper::before {\n  content: \"\";\n  display: block;\n}\n```\n\nIf the pseudo-element has no generated box, check its `content` property. When `content` is applied to a pseudo-element, the pseudo-element is not generated if it does not produce content.\n\nAlso note that the W3C specification states that `display: contents` was not implemented correctly in major browsers at the time of the cited result, so browser behavior may differ.",
+  "num_citations": 10,
+  "citation_text_tokens": 3981,
+  "citation_text_chars": 16652,
+  "search_queries": [
+    "CSS display contents pseudo-elements box not generated"
+  ],
+  "model_cost_usd": 0.00162215,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5126,
+    "output_tokens": 284,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 130
+  },
+  "latency_ms": 4920.755915925838,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00662215,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 492.7,
+    "total_citation_tokens": 4927.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says zero or negative values always render using the decimal system regardless of the `type` attribute. The predicted answer instead says `type` controls the numbering style and says rendering with alphabetic or Roman-numeral types is unspecified, contradicting the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations show that ordered lists can start at zero or a negative number, and give decimal output for those examples.\n2. They separately describe the `type` attribute and provide examples, but do not show zero or negative starting values combined with different `type` values.\n3. Therefore, the retrieved sources do not establish the gold answer’s universal claim that zero and negative values always render in decimal regardless of the `type` attribute. This is a missing non-trivial relationship, so the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00145035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

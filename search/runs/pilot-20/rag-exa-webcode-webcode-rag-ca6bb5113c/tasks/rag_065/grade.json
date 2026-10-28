@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_065",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 263.1,
+    "total_citation_tokens": 2631.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target indicates that the logged server name is <CACHE>. The predicted answer says it is replaced by a blank value, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly states what happens to the server name in the log when HAProxy serves an object from cache: it is replaced by a blank value.\n2. The gold target is “<CACHE>,” but no citation says that the log contains the literal marker “<CACHE>” or otherwise identifies that as the replacement.\n3. Since the cited replacement differs from the gold target, the sources do not support the target as written.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007308499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

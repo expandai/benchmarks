@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_276",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 92.8,
+    "total_citation_tokens": 928.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and provides none of the required channel values, but it also does not contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations mention sampled depth/stencil texture components and point to a WebGPU section on depth/stencil sampling, but none gives the component values. In particular, they do not establish that the result is (V, X, X, X), or that each X is an implementation-defined unspecified value. Since these are specific factual claims in the gold target and are absent from the retrieved text, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000500475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

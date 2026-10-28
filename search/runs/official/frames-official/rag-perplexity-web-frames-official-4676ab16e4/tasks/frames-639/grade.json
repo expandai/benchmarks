@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-639",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 9.0,
+    "avg_citation_tokens": 97.7,
+    "total_citation_tokens": 879.0,
+    "filtered_results": 1.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nTo evaluate, let's break down both answers:\n\n1. **Ground Truth Calculation:**\n   - Distance between bases in baseball: 90 ft\n   - Diameter of softball pitching plate: 16 ft\n   - Difference: 90 - 16 = 74 ft\n   - Year Joe DiMaggio married Marilyn Monroe: 1954\n   - Calculation: 74 × 1954 = **144,596**\n\n2. **Predicted Answer Calculation:**\n   - Distance between bases in baseball: 90 ft (same as ground truth)\n   - Diameter used for softball pitching plate: **1.5 ft** (but ground truth says 16 ft; 1.5 ft is likely the width of the rectangular pitching rubber, not the diameter)\n   - Difference: 90 - 1.5 = 88.5 ft\n   - Multiplied by 1954 (correct year)\n   - Calculation: 88.5 × 1954 = **172,929**\n\n**Key Issue:**  \nThe \"diameter of the pitching plate\" was incorrectly identified in the Predicted Answer as 1.5 ft (representing width), not 16 ft (actual diameter per ground truth). Therefore, the vital fact of subtracting 16 ft is **not** present in the predicted answer.\n\n**Conclusion:**  \nSince the substance of the ground truth (subtracting 16 ft as the diameter) is missing in the Predicted Answer, the core meaning is **not present**.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.00327
+}

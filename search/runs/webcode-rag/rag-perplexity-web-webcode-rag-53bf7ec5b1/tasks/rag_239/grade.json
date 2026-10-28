@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_239",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 381.2,
+    "total_citation_tokens": 3812.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The answer does not provide the gold target of 199 commands per script. Its implementation-specific limits and statement that the GNU limit is unspecified do not directly contradict that target, so it is not an attempted correct answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target gives a specific maximum of 199 commands per script.\n2. Citations [1], [2], and [4] state a limit of 100 commands, while [5] states a limit of 99 commands.\n3. None of the retrieved citations states or supports a 199-command limit. The retrieved limits are different and do not provide enough information to derive 199.\n4. Therefore, a non-trivial factual claim in the gold target is missing from the retrieved sources, so the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001002225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

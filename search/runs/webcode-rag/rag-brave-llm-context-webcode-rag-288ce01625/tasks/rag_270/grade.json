@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_270",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 353.5,
+    "total_citation_tokens": 3535.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the alternate form as a cons cell, `(level . score)`, and explains that `level` is the subscription level while `score` is the rank score. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Evidence: Citation [3] explicitly states that the subscription level can alternatively be a rank represented as a cons cell, with the car as the level and the cdr as the score.\n2. Groundedness: This covers the full non-trivial claim in the gold target answer.\n3. Source attribution: Citation [3] alone contains sufficient information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0007765999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

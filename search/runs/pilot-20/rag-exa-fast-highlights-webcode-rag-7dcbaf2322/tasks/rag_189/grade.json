@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_189",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 508.9,
+    "total_citation_tokens": 5089.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide any address-selection order. It also contains no contradictory factual claim.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations mention the three address types in the gold answer, and citation [5] says public IPv4 is used by default. Citation [3] shows a configuration that explicitly uses public IPv6. Step 2: None of the quoted passages specifies the address-selection precedence or the complete order private IPv4 → public IPv4 → public IPv6. Since that ordering is a non-trivial claim missing from the sources, the citations do not sufficiently ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00106849,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

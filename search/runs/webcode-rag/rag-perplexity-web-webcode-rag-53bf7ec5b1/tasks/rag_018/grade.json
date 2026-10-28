@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 395.5,
+    "total_citation_tokens": 3955.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that a foreign exception crossing a non-unwinding Rust ABI boundary causes undefined behavior, matching the gold target. The additional context does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that a foreign exception entering Rust across an ABI boundary that does not permit unwinding causes undefined behavior. Citation [4] also shows undefined behavior for native foreign unwinding at a non-unwinding ABI boundary under both panic runtimes. Step 2: These passages directly support the gold target answer, with no missing non-trivial claim. Step 3: Citation [1] directly states the answer; citation [4] supports it in the reference table.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00089235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

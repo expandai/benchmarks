@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_071",
+  "prompt": "GNU diff expand-tabs encoding error column width treatment",
+  "attempt": 1,
+  "answer": "GNU `diff` treats each byte of an encoding error as **one display column**. There is no standard width for encoding errors—some programs use one or two columns, and Emacs uses four—so `diff` makes this simple one-column-per-byte approximation.\n\nFor tabs:\n\n- `-t` / `--expand-tabs` enables tab expansion.\n- The default tab size is **8**.\n- In side-by-side layout, GNU `diff` uses a tab-width factor of **1** when tabs are expanded, otherwise the configured tab size, and calculates the half-line and gutter widths accordingly.\n- Older documentation notes that column handling for multibyte and varying-width characters can be incorrect, particularly with `-y` / `--side-by-side`.\n\nThus, encoding-error bytes are counted as one column each; tab expansion is handled separately and affects side-by-side width and padding calculations.",
+  "num_citations": 10,
+  "citation_text_tokens": 6503,
+  "citation_text_chars": 21472,
+  "search_queries": [
+    "GNU diff expand-tabs encoding error column width treatment"
+  ],
+  "model_cost_usd": 0.00253755,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8274,
+    "output_tokens": 391,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 203
+  },
+  "latency_ms": 5948.745250003412,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00653755,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

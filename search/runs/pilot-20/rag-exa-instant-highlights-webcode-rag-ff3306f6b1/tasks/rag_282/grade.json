@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_282",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.556,
+    "avg_citation_tokens": 645.1,
+    "total_citation_tokens": 5806.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `yypstate_delete(NULL)` does nothing, which directly matches the gold target. The additional note that null is explicitly supported does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that yypstate_delete does nothing when given a null pointer; citation [6] also shows the implementation guarded by `if (yyps)`. Step 2: The gold target contains the single non-trivial claim that the function does nothing when called with a null pointer, and the citations directly support it. Step 3: Citations [2], [3], [6], [7], and [8] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0010797250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

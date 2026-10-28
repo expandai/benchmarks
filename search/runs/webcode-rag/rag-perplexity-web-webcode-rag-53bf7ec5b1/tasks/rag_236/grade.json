@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_236",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.9,
+    "avg_citation_tokens": 386.7,
+    "total_citation_tokens": 3867.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives `call identity()` as the default for both `classIdentityQuery` and `sidIdentityQuery`, matching the gold target. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target answer is `call identity()`.\n2. Citation [1] explicitly states that both `classIdentityQuery` and `sidIdentityQuery` default to call `identity()`; citation [5] likewise says both default to `call identity()`.\n3. The retrieved sources therefore contain the complete answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 9
+  },
+  "judge_cost_usd": 0.0008447250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

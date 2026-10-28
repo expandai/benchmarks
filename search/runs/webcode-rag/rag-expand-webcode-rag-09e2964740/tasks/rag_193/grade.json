@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 415.5,
+    "total_citation_tokens": 4155.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Undertow request start-time recording must be enabled and gives the matching configuration `server.undertow.options.server.record-request-start-time: true`, which is the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citations [1] and [2] show the Undertow options setting `server.record-request-start-time: true` and state it is required when `%D` is in the access log pattern.\n\nSTEP 2 — GROUNDEDNESS: The nested configuration shown corresponds to `server.undertow.options.server.record-request-start-time=true`. The required setting and its relationship to `%D` are both present in the citations. The gold target is therefore fully grounded.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citations [1] and [2] contain sufficient information to derive the target configuration.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001020475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

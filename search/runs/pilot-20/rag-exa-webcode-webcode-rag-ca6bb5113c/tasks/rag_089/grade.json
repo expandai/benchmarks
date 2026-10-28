@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 466.6,
+    "total_citation_tokens": 4666.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the X and Z components via `local_cursor.xz()` and says the Y coordinate is discarded because the point lies on the plane, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [6] explicitly show that the local cursor coordinates are computed with `local_cursor.xz()` and explain that the Y coordinate is discarded because it should be zero on the plane.\nStep 2: These passages support both factual claims in the gold target answer: the expression is `local_cursor.xz()`, and the Y coordinate is discarded because it is zero on the plane. No non-trivial information is missing.\nStep 3: Citations [1], [2], and [6] contain the answer directly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00097635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

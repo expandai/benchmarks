@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_145",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 148.1,
+    "total_citation_tokens": 1481.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The response says \"I don't know\" and does not provide an exception type or contradict the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that a request can return an error or fail when snapshots are unavailable, but none identifies that error as `SnapshotMissingException`. The gold target’s specific exception type is a non-trivial factual claim not supported by the retrieved citations, so the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0005007249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

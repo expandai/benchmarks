@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_181",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 143.5,
+    "total_citation_tokens": 1435.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that None values are ignored while the branch runs only for Some values. The prediction instead says that None causes SelectNextSome to panic, which contradicts that behavior.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] supports that `select_next_some` does not resolve to a `None` value, and instead resolves when the next item is ready.\n2. The gold target additionally claims that `None` values are ignored. The citations do not establish that behavior; citation [2] instead mentions a panic when the stream returns `None` in the described case.\n3. Because the behavior on `None` is not shown to be ignoring it, a non-trivial part of the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013633500000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

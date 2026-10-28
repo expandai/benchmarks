@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-008",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 544.5,
+    "total_citation_tokens": 5445.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target is 11, while the predicted answer explicitly gives 12 versions. These numbers contradict each other.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The dates in citation [3] provide release and end dates for the listed versions, so their support durations can be compared with 12 months. 2. Twelve listed versions have a date span longer than 12 months. In particular, .NET Core 2.2 spans from December 4, 2018 to December 24, 2019, which is also more than 12 months. 3. Thus the retrieved dates support a count of 12, not the gold target answer of 11. The citations do not ground the gold answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0017429799999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

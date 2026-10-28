@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_216",
+ "prompt": "emacs define-modify-macro arglist disallowed parameter types",
+ "attempt": 1,
+ "answer": "For an Emacs `define-modify-macro`, the arglist may contain:\n\n- Required parameters\n- `&optional` parameters, including default and supplied-p forms\n- `&rest` parameters\n\nIt may not contain:\n\n- `&key` — Emacs signals `&key not allowed in define-modify-macro`\n- `&aux` — auxiliary variables are not supported\n- Keyword arguments generally\n\n`&rest` can be used to pass keyword-like arguments through to the underlying function.",
+ "num_citations": 10,
+ "citation_text_tokens": 2965,
+ "citation_text_chars": 11523,
+ "search_queries": [
+  "emacs define-modify-macro arglist disallowed parameter types"
+ ],
+ "model_cost_usd": 0.00138035,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4130,
+  "output_tokens": 290,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 181
+ },
+ "latency_ms": 3871.4480840135366,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00838035,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

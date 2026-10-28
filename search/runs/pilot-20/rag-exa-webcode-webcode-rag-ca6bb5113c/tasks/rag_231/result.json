@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_231",
+ "prompt": "HTML img sizes attribute source-size-value valid CSS functions",
+ "attempt": 1,
+ "answer": "For an `<img>` `sizes` attribute, a `<source-size-value>`:\n\n- May use CSS **math functions**.\n- Explicitly supported functions shown in the results are:\n  - `calc()`\n  - `min()`\n  - `max()`\n  - `clamp()`\n- CSS functions other than math functions are invalid.\n- The resulting value must be non-negative; percentages are not allowed.\n\nExamples:\n\n```html\n<img\n  srcset=\"small.jpg 400w, large.jpg 800w\"\n  sizes=\"calc(100vw - 2rem)\"\n  alt=\"\"\n>\n```\n\n```html\n<img\n  srcset=\"small.jpg 400w, large.jpg 800w\"\n  sizes=\"min(67em, 100vw)\"\n  alt=\"\"\n>\n```\n\nThe current HTML Standard describes the rule as: a source-size value “must not use CSS functions other than the math functions.” (HTML Standard search result.)",
+ "num_citations": 10,
+ "citation_text_tokens": 4747,
+ "citation_text_chars": 20230,
+ "search_queries": [
+  "HTML img sizes attribute source-size-value valid CSS functions"
+ ],
+ "model_cost_usd": 0.0018896,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5807,
+  "output_tokens": 365,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 162
+ },
+ "latency_ms": 8300.206874962896,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008889600000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

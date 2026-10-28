@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_245",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 156.4,
+    "total_citation_tokens": 1564.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the 1024-byte maximum for the `info` parameter, matching the gold target. Its additional statement does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] states that the `info` parameter for `crypto.hkdfSync` cannot exceed 1024 bytes. Step 2: This directly supports the gold target answer, 1024 bytes. Step 3: Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00051085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

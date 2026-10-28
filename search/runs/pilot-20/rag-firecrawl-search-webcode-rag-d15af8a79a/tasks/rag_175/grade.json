@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_175",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 1046.3,
+    "total_citation_tokens": 10463.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the status as Reserved and includes the matching description, which fully answers the question. Its additional statement about IETF Review does not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The RFC 7231 content-coding registry passage identifies “identity” as “Reserved” and gives its meaning as a synonym for “no encoding” in Accept-Encoding. Step 2 — This covers all the non-trivial information in the gold target answer. The answer is grounded. Step 3 — Citations [1] and [4] both contain this registration entry.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001648725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

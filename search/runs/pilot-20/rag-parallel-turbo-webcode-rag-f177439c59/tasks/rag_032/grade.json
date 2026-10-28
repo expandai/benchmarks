@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_032",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 346.4,
+    "total_citation_tokens": 3464.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Bazel action metrics track the top 20 action types (mnemonics), matching the gold target of 20 mnemonics with the largest number of executed actions. The additional flag information does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] says the action statistics show the most-executed action types and, by default, collect the top 20. Citation [2] establishes that an action has a mnemonic. Together, these support the target's description of the 20 mnemonics with the largest number of executed actions. Step 2 — All non-trivial information in the gold target is supported: the count of 20, that they are action mnemonics/types, and that they are ranked by executed actions. Therefore, the citations ground the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00093585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

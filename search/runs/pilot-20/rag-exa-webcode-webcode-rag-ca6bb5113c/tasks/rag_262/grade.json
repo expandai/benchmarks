@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_262",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 491.3,
+    "total_citation_tokens": 4913.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that a proxy server MUST NOT generate `Vary: *` and that only an origin server may generate it, matching the gold target. The additional discussion describes an unresolved issue and a proposed scenario without asserting that the restriction is false.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [2] explicitly states both parts of the gold target: a proxy server MUST NOT generate `*`, and only an origin server may generate it.\n\nStep 2 — All non-trivial claims in the gold target are directly present in the retrieved citation, so the answer is GROUNDED.\n\nStep 3 — Citation [2] contains sufficient information to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001043975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

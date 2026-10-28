@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_214",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.6,
+    "avg_citation_tokens": 406.7,
+    "total_citation_tokens": 4067.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that remote crates are built in a new temporary target directory located in the platform’s temporary directory by default, matching the gold target. The additional details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the default target directory is “a new temporary folder located in the temporary directory of the platform.”\n2. Citation [1] states this explicitly for `--target-dir`; it also clarifies that crates.io and Git installs use a temporary target directory by default. The same default description appears in citations [3], [5], [6], [7], and [8].\n3. The gold target’s factual claim is directly supported by the retrieved sources, so the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 6
+  },
+  "judge_cost_usd": 0.00094835,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

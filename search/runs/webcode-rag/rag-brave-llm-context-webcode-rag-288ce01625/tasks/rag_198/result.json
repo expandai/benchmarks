@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_198",
+  "prompt": "RFC 3986 relative-part path rule instead of path-rootless",
+  "attempt": 1,
+  "answer": "In RFC 3986:\n\n```abnf\nhier-part     = \"//\" authority path-abempty\n              / path-absolute\n              / path-rootless\n              / path-empty\n```\n\nBut for a relative reference, the rule is:\n\n```abnf\nrelative-part = \"//\" authority path-abempty\n              / path-absolute\n              / path-noscheme\n              / path-empty\n```\n\nSo `relative-part` uses `path-noscheme`, not `path-rootless`, because the first segment of a relative-path reference must not contain a colon (`:`). `path-rootless` permits a colon in its first segment.\n\nThere is also a held RFC erratum proposing that `relative-part` include `path-abempty`:\n\n```abnf\nrelative-part = \"//\" authority path-abempty\n              / path-absolute\n              / path-noscheme\n              / path-abempty\n              / path-empty\n```\n\nThe erratum is marked **Held for Document Update**, not incorporated into the published RFC.",
+  "num_citations": 10,
+  "citation_text_tokens": 4056,
+  "citation_text_chars": 17274,
+  "search_queries": [
+    "RFC 3986 relative part path rule instead of path rootless"
+  ],
+  "model_cost_usd": 0.0017571,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5253,
+    "output_tokens": 370,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 156
+  },
+  "latency_ms": 6057.49904201366,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0067571,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

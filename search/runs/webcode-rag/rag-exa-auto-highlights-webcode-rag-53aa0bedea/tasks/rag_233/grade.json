@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_233",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 524.3,
+    "total_citation_tokens": 5243.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that Guile scans the top 500 characters of a source file, matching the gold target. Its additional statement about the declaration being in a Scheme comment does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target specifies the scan-range limit for a Guile source-file coding declaration.\n2. Citations [3] and [4] directly state that a coding declaration can be placed in the top 500 characters of the source file. Citations [8] and [9] explicitly state that the file is scanned for a declaration in its top 500 characters.\n3. The retrieved citations therefore contain the requested limit, with no additional non-trivial claim in the gold target left unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00109085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

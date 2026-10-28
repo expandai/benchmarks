@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_040",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 349.5,
+    "total_citation_tokens": 3495.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no claim about whether the value is rounded down. It does not contradict the gold target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations identify byte_size as being computed from tensor shape and type, and note that data for sub-byte types may be represented as a bitstring. They do not state that byte_size rounds down, nor provide a formula or example establishing that behavior. The gold target’s rounding claim is therefore not supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000811595,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

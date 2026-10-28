@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_278",
+ "prompt": "typing get_args argument order different reason",
+ "attempt": 1,
+ "answer": "`typing.get_args()` can return arguments in a different order because of **type caching performed by generic types**. When a `Union` or `Literal` is nested inside another generic type, the cached type may already exist with its arguments in another order, so `get_args()` returns that cached representation rather than preserving the original spelling.\n\nFor example, `Union[int, str]` and `Union[str, int]` are considered equal because union argument order is ignored. Nested unions may also be flattened during this normalization.\n\nTherefore, do not rely on the order of `get_args()` for unions or nested `Union`/`Literal` types.",
+ "num_citations": 10,
+ "citation_text_tokens": 4203,
+ "citation_text_chars": 16912,
+ "search_queries": [
+  "typing get_args argument order different reason"
+ ],
+ "model_cost_usd": 0.0015987,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5349,
+  "output_tokens": 218,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 80
+ },
+ "latency_ms": 4695.728459046222,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0025987,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_268",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 331.5,
+    "total_citation_tokens": 3315.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states the gold requirement of at least 32 octets. Its additional explanation about the equivalent unpadded base64url length does not contradict that requirement.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the minimum client_secret size for HS256 is 32 octets.\n2. Citations [2], [3], [4], [5], and [6] explicitly state that for HS256 the client_secret must contain at least 32 octets.\n3. The retrieved sources therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.000876225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

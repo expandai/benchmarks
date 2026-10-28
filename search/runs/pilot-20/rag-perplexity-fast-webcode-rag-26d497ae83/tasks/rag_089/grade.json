@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 260.2,
+    "total_citation_tokens": 2602.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the local X and Z components as the Vec2, matching the gold target `local_cursor.xz()`. It also correctly explains that Y points up and is not part of the ground-plane coordinates.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] supports converting a position into the plane’s local coordinates, and [1] shows a ray intersecting a ground plane.\n2. Citation [7] establishes that Y points up, but the retrieved passages do not state that the cursor’s local Y coordinate is always zero on the plane or that the Vec2 should be obtained from the X and Z components with `local_cursor.xz()`.\n3. Because those are specific claims in the gold target and the citations do not establish them, the answer is not fully derivable from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001232225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

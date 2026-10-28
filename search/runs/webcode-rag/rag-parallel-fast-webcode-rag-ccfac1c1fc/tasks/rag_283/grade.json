@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_283",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 223.4,
+    "total_citation_tokens": 2234.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is the shlex module. The predicted answer explicitly says pytest parses PYTEST_ADDOPTS using shlex.split() and identifies shlex as the module, so it contains the required answer without contradiction.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target identifies the shlex module as the method used to parse PYTEST_ADDOPTS. Citation [8] explicitly says the command-line in PYTEST_ADDOPTS is parsed by the shlex module, and citation [4] shows the implementation calling shlex.split on the environment variable. The target is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000621225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

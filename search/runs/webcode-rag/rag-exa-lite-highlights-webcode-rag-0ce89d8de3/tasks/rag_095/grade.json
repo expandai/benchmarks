@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_095",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 350.5,
+    "total_citation_tokens": 3505.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that omitted TIMEBASE values are interpreted as nanoseconds, matching the gold target. The additional context does not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited documentation explicitly states that when the timebase is missing, chapter start/end times are assumed to be in nanoseconds.\nStep 2: This directly supports the gold target answer, “nanoseconds”; no non-trivial claim is missing.\nStep 3: Citations [1], [2], [8], and [10] each contain the answer directly.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.00083135,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

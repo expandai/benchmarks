@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_133",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 226.4,
+    "total_citation_tokens": 2264.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `OverconstrainedError`, matching the gold target, and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The citations explicitly name OverconstrainedError as an error returned or thrown by applyConstraints.\n2. The gold target consists of that error name, and the retrieved citations contain it.\n3. Although the excerpts do not specifically tie the error to a WebRTC remote track, the requested target is only the error name; that name is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000841475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

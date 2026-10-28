@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_257",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 237.7,
+    "total_citation_tokens": 2377.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target states that the query count is 3N + 1, with N the number of different entity classes modified. The prediction gives m × n + 1 and explicitly says there are three revision types, yielding 3n + 1; n has the same defined meaning as N. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [8] explicitly give the query count for `findEntitiesGroupByRevisionType` and define the variable as the number of different entity classes modified in the revision.\nStep 2: These passages contain all non-trivial claims in the gold target, including the `3N + 1` count and the definition of N. The target is grounded.\nStep 3: Citations [1] and [8] directly support the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007322250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

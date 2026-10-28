@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_006",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 445.6,
+    "total_citation_tokens": 4456.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says only calc() is allowed. The predicted answer additionally claims that min(), max(), and clamp() are allowed, contradicting the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [5] explicitly states that CSS functions other than `calc()` are invalid for a source-size value.\n2. This directly supports the gold target that only `calc()` is allowed. Citation [5] is an older HTML 5.3 source; newer citations refer more broadly to math functions, but [5] contains the exact calc-only rule stated in the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00135735,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

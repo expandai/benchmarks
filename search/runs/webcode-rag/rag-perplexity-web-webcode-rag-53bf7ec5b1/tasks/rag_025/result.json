@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_025",
+  "prompt": "GraphQL error path aliased field name behavior",
+  "attempt": 1,
+  "answer": "GraphQL error paths use the **aliased field name**, not the original field name, because the path identifies a location in the response rather than in the request.\n\nFor example:\n\n```graphql\nquery {\n  primaryUser: user(id: 1) {\n    name\n  }\n}\n```\n\nAn error for that field would use:\n\n```json\n\"path\": [\"primaryUser\"]\n```\n\nNested fields and list indexes are represented similarly, with list indexes as 0-based integers.",
+  "num_citations": 10,
+  "citation_text_tokens": 3865,
+  "citation_text_chars": 15968,
+  "search_queries": [
+    "GraphQL error path aliased field name behavior"
+  ],
+  "model_cost_usd": 0.00138705,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5064,
+    "output_tokens": 101,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2678.8117500254884,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00638705,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

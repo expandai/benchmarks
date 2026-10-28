@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_220",
+  "prompt": "aiohttp FormData add_field bytes value no filename fallback",
+  "attempt": 1,
+  "answer": "For `aiohttp` 3.8, when `add_field()` receives a `bytes`, `bytearray`, or `memoryview` value and no `filename` or `content_transfer_encoding` is specified, it uses the field’s `name` as the filename:\n\n```python\nform = aiohttp.FormData()\nform.add_field(\"file\", data)\n# filename becomes \"file\"\n```\n\nThis creates a multipart form field. To avoid the filename fallback, explicitly pass `filename`, or use an `io.BytesIO` object.",
+  "num_citations": 10,
+  "citation_text_tokens": 4378,
+  "citation_text_chars": 16920,
+  "search_queries": [
+    "aiohttp FormData add_field bytes value no filename fallback"
+  ],
+  "model_cost_usd": 0.00149765,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5444,
+    "output_tokens": 114,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4000.7790829986334,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0034976499999999997,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

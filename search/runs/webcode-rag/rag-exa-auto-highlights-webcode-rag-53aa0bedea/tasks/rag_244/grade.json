@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_244",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 414.6,
+    "total_citation_tokens": 4146.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies both required Kubernetes environment-variable patterns, `*_SERVICE_HOST` and `*_SERVICE_PORT`. The additional configuration details do not contradict the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] explicitly states the two environment-variable patterns Spring Boot checks for Kubernetes deployment detection. Step 2 — The gold target answer is exactly those patterns, so all of its factual content is present. Step 3 — Citation [1] alone contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008371,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

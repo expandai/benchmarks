@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_087",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 333.6,
+    "total_citation_tokens": 3336.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the fallback Map as `default-kafka-broker`, matching the gold target. The additional explanation does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that when the resolved configuration Map does not contain an attribute value, the default Map is used and identify its name as `default-kafka-broker`.\nStep 2: This directly supports the gold target answer; no non-trivial information is missing.\nStep 3: Citations [1] and [2] explicitly contain the fallback Map name.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000752725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_197",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.125,
+    "avg_citation_tokens": 492.6,
+    "total_citation_tokens": 3941.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that when the remote Content-Length differs from the local file size, Wget downloads the remote file regardless of timestamps, matching the gold target. The additional details do not contradict that target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [6] explicitly says that when the local and remote sizes differ, Wget downloads the remote file regardless of the timestamp. Step 2: This contains the full factual claim in the gold target answer. Step 3: Citation [6] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008723499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

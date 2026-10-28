@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_017",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 422.0,
+    "total_citation_tokens": 4220.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The response includes the gold-target behavior as the pre-D28797 behavior, but then says that after D28797 llvm.sqrt returns libm-like NaN behavior for negative inputs. That contradicts the target’s unqualified claim that negative inputs other than -0.0 have undefined behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target claims that llvm.sqrt has undefined behavior for negative inputs other than -0.0. Citations [1], [4], [7], and [10] explicitly state this behavior. The gold target contains no unsupported non-trivial claims, so the retrieved citations fully ground it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001146225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

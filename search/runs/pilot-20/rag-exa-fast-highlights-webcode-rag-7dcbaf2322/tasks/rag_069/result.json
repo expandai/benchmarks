@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_069",
+ "prompt": "protobuf allow_alias enum all values distinct numbers behavior",
+ "attempt": 1,
+ "answer": "If `allow_alias = true` is set but every enum value has a distinct number, the enum is invalid: allowing aliases requires that at least two values share a number. The protobuf Go descriptor validator reports:\n\n> `enum \"... \" allows aliases, but none were found`\n\nSee the [Protobuf language specification](https://github.com/bufbuild/protobuf-language-spec/blob/main/language-spec.md) and the Go descriptor validation code.",
+ "num_citations": 10,
+ "citation_text_tokens": 5240,
+ "citation_text_chars": 19993,
+ "search_queries": [
+  "protobuf allow_alias enum all values distinct numbers behavior"
+ ],
+ "model_cost_usd": 0.0018825,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6465,
+  "output_tokens": 222,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 128
+ },
+ "latency_ms": 4040.3739999746904,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0088825,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

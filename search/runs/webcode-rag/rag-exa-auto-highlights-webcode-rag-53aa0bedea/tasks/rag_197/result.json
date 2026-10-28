@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_197",
+  "prompt": "wget time-stamping Content-Length size mismatch behavior",
+  "attempt": 1,
+  "answer": "With `wget -N` (`--timestamping`), the intended behavior is:\n\n- If the local file does not exist, download it.\n- If the remote and local `Content-Length` values differ, download the remote file regardless of timestamps.\n- Otherwise, compare the remote `Last-Modified` timestamp with the local timestamp.\n\nOlder Wget versions implement this by sending a preliminary `HEAD` request to obtain both `Last-Modified` and `Content-Length`.\n\nIn newer versions, Wget may instead send a `GET` with `If-Modified-Since`. If the server responds `304 Not Modified`, the response may contain neither content nor a file-size header, so Wget cannot detect that the local file has the wrong size. This can leave a partial or corrupted file in place.\n\nTo restore the size-checking behavior, use:\n\n```sh\nwget -N --no-if-modified-since URL\n```\n\n`--no-if-modified-since` makes Wget send the preliminary `HEAD` request instead. The server must support `HEAD` and provide both `Last-Modified` and `Content-Length`.\n\n`--ignore-length` is different: it tells Wget to ignore the `Content-Length` header during transfer, which is intended for servers that send incorrect headers.",
+  "num_citations": 10,
+  "citation_text_tokens": 4964,
+  "citation_text_chars": 20462,
+  "search_queries": [
+    "wget time-stamping Content-Length size mismatch behavior"
+  ],
+  "model_cost_usd": 0.0019765,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6097,
+    "output_tokens": 377,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 109
+  },
+  "latency_ms": 7024.2110000690445,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0089765,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

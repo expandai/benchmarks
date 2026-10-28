@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_258",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 195.0,
+    "total_citation_tokens": 1950.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides none of the target information, so it is not an attempt to answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target asserts a specific restriction: `:ignore` may be returned from the Ecto Repo `init/2` callback only in the `:supervisor` case.\n2. The citations mentioning Repo `init/2` describe using the callback or show configuration examples, but none state that `:ignore` is an allowed return or that its use is restricted to the `:supervisor` case.\n3. Since this specific non-trivial restriction is not supported by the retrieved citations, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0006006,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

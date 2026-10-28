@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_110",
+ "prompt": "Ecto with_ties limit redefined interaction requirement",
+ "attempt": 1,
+ "answer": "Redefining the limit must reset the previous `with_ties` setting.\n\n```elixir\nfrom(p in Post)\n|> limit([], 1)\n|> with_ties(true)\n|> limit([], 2)\n```\n\nmust produce a query where:\n\n```elixir\nquery.limit.expr == 2\nquery.limit.with_ties == false\n```\n\nThe same reset behavior is required for runtime-built queries. `with_ties` itself can only be applied to a query that already contains a limit, and in `from` syntax the `with_ties` keyword must immediately follow that limit.",
+ "num_citations": 10,
+ "citation_text_tokens": 6326,
+ "citation_text_chars": 24103,
+ "search_queries": [
+  "Ecto with_ties limit redefined interaction requirement"
+ ],
+ "model_cost_usd": 0.002191,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7459,
+  "output_tokens": 272,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 142
+ },
+ "latency_ms": 4589.126292034052,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.003191,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

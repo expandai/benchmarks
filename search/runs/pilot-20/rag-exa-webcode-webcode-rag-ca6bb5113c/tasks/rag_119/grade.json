@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 519.1,
+    "total_citation_tokens": 5191.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the behavior described by the gold target. It also makes no conflicting factual claim, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explains that avg_queue divides queued connections by the number of alive servers, but it does not say what value is used when there are no active servers or that the result is twice the queued-connection count.\n2. Citation [9] mentions that a queue is still considered in a particular server-down case, but the quoted passage does not give the avg_queue behavior or the claimed multiplier.\n3. The specific non-trivial claim that avg_queue returns twice the number of queued connections when no server is active is therefore not established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00102493,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

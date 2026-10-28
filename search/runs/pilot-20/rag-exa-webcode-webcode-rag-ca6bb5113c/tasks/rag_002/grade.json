@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_002",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 503.4,
+    "total_citation_tokens": 5034.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when the sum of flex factors is less than 1, the algorithm uses 1 instead, matching the gold target. Its formula and example are consistent with that rule.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that when the flex factor sum is less than 1, it is set to 1.\n2. Citation [2] states this exact rule. Citation [5] also describes the sum as floored at 1, which supports the same rule.\n3. The retrieved citations contain the non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001059975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

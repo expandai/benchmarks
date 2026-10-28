@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_160",
+ "prompt": "python sum() start parameter type restriction",
+ "attempt": 1,
+ "answer": "`sum(iterable, start=0)` does not require `start` to be a number in every case. It must be compatible with addition (`+`) with the iterable’s items.\n\n- `start` defaults to `0`.\n- The function computes `start + item1 + item2 + ...` from left to right.\n- A string is explicitly not allowed as `start`.\n- Other types can work when their addition is compatible with the items:\n\n```python\nsum([[1, 2], [3, 4]], start=[])\n# [1, 2, 3, 4]\n\nsum(((1, 2), (3, 4)), start=())\n# (1, 2, 3, 4)\n```\n\nThus, the restriction is specifically that `start` cannot be a string; more generally, it must support addition with the iterable’s elements.",
+ "num_citations": 10,
+ "citation_text_tokens": 2309,
+ "citation_text_chars": 8477,
+ "search_queries": [
+  "python sum() start parameter type restriction"
+ ],
+ "model_cost_usd": 0.00124385,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3248,
+  "output_tokens": 360,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 171
+ },
+ "latency_ms": 5510.163249913603,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00224385,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

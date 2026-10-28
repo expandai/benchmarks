@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_133",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 451.5,
+    "total_citation_tokens": 4515.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target, OverconstrainedError, but adds unsupported or inaccurate claims. In particular, `MediaStreamTrack` does not have a standard `remote` property, and `applyConstraints()` is not guaranteed to reject for every call on every remote track (for example, an empty constraint set need not fail).",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [8] explicitly states the rejection error for applyConstraints() on remote tracks. Step 2: The gold target answer is “OverconstrainedError,” and this exact error is stated in the citation. Step 3: Citation [8] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00124985,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

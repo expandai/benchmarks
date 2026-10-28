@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-022",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 536.9,
+    "total_citation_tokens": 5369.0,
+    "filtered_results": 0.0,
+    "query_clipped": 0.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nThe question asks for the total population, according to the 1990 census, of the cities in Oklahoma that had at least 100,000 residents in the 2020 census. The ground truth answer for this population sum is 950,135.\n\nThe predicted answer lists which cities met the 100,000-resident criterion in 2020:\n- Oklahoma City (1990 population: 444,719)\n- Tulsa (367,302)\n- Norman (77,350)\n- Broken Arrow (29,799)\n\nThe LLM sums these as 919,170, though the actual addition gives 444,719 + 367,302 + 77,350 + 29,799 = 919,170. This matches the predicted answer's total. However, the ground truth answer is 950,135.\n\nThis suggests that one or more cities that met the 2020 100,000-resident criterion has been missed, or the populations used are incorrect/missing a city. Upon fact-checking, Norman and Broken Arrow had populations below 100,000 in 1990, but the question asks for the 1990 populations of cities which had at least 100,000 residents in 2020—regardless of their 1990 population sizes.\n\nHowever, the key issue is: Is the ground truth answer (950,135) present in the predicted answer? The predicted answer gives 919,170. This is not the same as 950,135, nor is the method used in the LLM’s response yielding the ground truth total.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.003264
+}

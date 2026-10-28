@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_288",
+ "prompt": "curl variable 64dec invalid base64 decode output",
+ "attempt": 1,
+ "answer": "When `curl`’s `64dec` function receives invalid Base64 content, it does not decode it. It returns a failure marker:\n\n```text\n[64dec-fail]\n```\n\nOne curl documentation page shows the marker as `64dec-fail` without brackets, but the curl man page and other results specify `[64dec-fail]`. The function is used as:\n\n```sh\ncurl --expand-url 'https://example.com/{{var:64dec}}'\n```\n\n`64dec` was added in curl 8.13.0.",
+ "num_citations": 6,
+ "citation_text_tokens": 2172,
+ "citation_text_chars": 9503,
+ "search_queries": [
+  "curl variable 64dec invalid base64 decode output"
+ ],
+ "model_cost_usd": 0.0009398,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2939,
+  "output_tokens": 171,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 50
+ },
+ "latency_ms": 3252.249874989502,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0019398,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

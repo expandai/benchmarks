@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_089",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 41.2,
+    "total_citation_tokens": 412.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and does not provide the required local_cursor.xz() components. It also contains no contradictory information, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] indicates the cursor position on the ground plane has local coordinates represented by Vec2, but it does not state to use `local_cursor.xz()` or explain that the Y coordinate is discarded because it is always zero on the plane.\n2. Citation [2] mentions ray intersection with a ground plane, but gives no coordinate-component details.\n3. Since the specific expression and the claim about the Y coordinate are not supported, the citations do not contain all non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00045335000000000004,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

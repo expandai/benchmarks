@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_268",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 500.3,
+    "total_citation_tokens": 5003.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the HS256 client_secret must contain at least 32 octets, matching the gold target. The additional entropy guidance does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited passages explicitly state that an HS256 client_secret must contain at least 32 octets.\nStep 2: The gold target answer is exactly this requirement, and the retrieved citations state it directly. All non-trivial information in the gold answer is supported.\nStep 3: Citations [2], [4], [5], and [7] each contain the 32-octet requirement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000997975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

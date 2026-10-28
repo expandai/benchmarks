@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_063",
+ "prompt": "emacs calc rewrite apply pattern plus operator internal name",
+ "attempt": 1,
+ "answer": "In Emacs Calc rewrite patterns, `+` is internally represented by the function name `add`.\n\nThus:\n\n```calc\napply(f, x)\n```\n\nmatches:\n\n```calc\na + b\n```\n\nwith:\n\n```calc\nf = add\nx = [a,b]\n```\n\nTo match addition specifically, use:\n\n```calc\napply(quote(add), args)\n```\n\nThe corresponding Lisp function is `calcFunc-add`.",
+ "num_citations": 8,
+ "citation_text_tokens": 4498,
+ "citation_text_chars": 16240,
+ "search_queries": [
+  "emacs calc rewrite apply pattern plus operator internal name"
+ ],
+ "model_cost_usd": 0.00157295,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5414,
+  "output_tokens": 183,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 88
+ },
+ "latency_ms": 3709.246625076048,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00557295,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

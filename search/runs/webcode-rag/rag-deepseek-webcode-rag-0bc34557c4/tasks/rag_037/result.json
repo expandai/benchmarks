@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_037",
+ "prompt": "rust repr packed struct nested repr align member restriction",
+ "attempt": 1,
+ "answer": "Historically, Rust forbade a `#[repr(packed)]` struct or union from containing a field whose type—and transitively, any nested type—had `#[repr(align(...))]`:\n\n```rust\n#[repr(align(16))]\nstruct Aligned(i32);\n\n#[repr(packed)]\nstruct Packed(Aligned); // historically rejected\n```\n\nThis was diagnosed as:\n\n> packed type cannot transitively contain a `#[repr(align)]` type\n\nThe reverse nesting was allowed:\n\n```rust\n#[repr(packed)]\nstruct Packed(i32);\n\n#[repr(align(16))]\nstruct Aligned(Packed); // allowed\n```\n\n`#[repr(align(N))]` and `#[repr(packed(N))]` also cannot be applied to the same type. However, the current Rust source notes that error E0588 is no longer emitted; the provided results do not specify the replacement behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 5066,
+ "citation_text_chars": 20080,
+ "search_queries": [
+  "rust repr packed struct nested repr align member restriction"
+ ],
+ "model_cost_usd": 0.00206945,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6632,
+  "output_tokens": 343,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 149
+ },
+ "latency_ms": 5319.7515840874985,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0028194500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

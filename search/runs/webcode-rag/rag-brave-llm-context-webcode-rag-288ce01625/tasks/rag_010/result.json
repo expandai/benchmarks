@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_010",
+  "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+  "attempt": 1,
+  "answer": "Intermediaries have different guidance for these frame types:\n\n- **DATA:** Intermediaries **SHOULD retain padding**.\n- **HEADERS and PUSH_PROMISE:** Intermediaries **MAY drop padding**.\n\nThis is because padding is a security feature, and an intermediary may change padding to improve the protections it provides. [RFC 9113 §10.7](https://httpwg.org/specs/rfc9113.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 4568,
+  "citation_text_chars": 19327,
+  "search_queries": [
+    "HTTP 2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+  ],
+  "model_cost_usd": 0.00161435,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5714,
+    "output_tokens": 155,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 58
+  },
+  "latency_ms": 4711.577959009446,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00661435,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_060",
+  "prompt": "haproxy set-var ifgt iflt non-integer type check",
+  "attempt": 1,
+  "answer": "`ifgt` and `iflt` only apply when **both the existing variable and the new sample are scalar values of a comparable type**—in the tested cases, integers.\n\nFrom the HAProxy regression test:\n\n- String variable + integer sample: condition is ignored.\n- Integer variable + string sample: condition is ignored.\n- Integer variable + integer sample:\n  - `ifgt`: sets only when the new value is greater.\n  - `iflt`: sets only when the new value is less.\n- Non-scalar values such as binary/string data do not satisfy the condition.\n\nExample:\n\n```haproxy\nhttp-response set-var(res.limit) int(5)\n\n# Not set: 55 is not less than 5\nhttp-response set-var(res.limit,iflt) int(55)\n\n# Set: 2 is less than 5\nhttp-response set-var(res.limit,iflt) int(2)\n\n# Not set: 55 is not greater than 5\nhttp-response set-var(res.limit,ifgt) int(55)\n\n# Set: 2 is not greater than 5? No — this would not set.\nhttp-response set-var(res.limit,ifgt) int(2)\n```\n\nIf a variable comes from `var()`, its return type is treated as a string during configuration parsing by default. Convert it to an integer before numeric comparison, for example:\n\n```haproxy\nvar(req.limit),int\n```\n\nThe search results also state that ACL right-hand comparison values must be static; for variable-to-variable comparisons, the `sub()` converter can be used and compared against zero.",
+  "num_citations": 10,
+  "citation_text_tokens": 6641,
+  "citation_text_chars": 22018,
+  "search_queries": [
+    "haproxy set-var ifgt iflt non-integer type check"
+  ],
+  "model_cost_usd": 0.0025113,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7809,
+    "output_tokens": 466,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 127
+  },
+  "latency_ms": 6772.442249930464,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065113,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

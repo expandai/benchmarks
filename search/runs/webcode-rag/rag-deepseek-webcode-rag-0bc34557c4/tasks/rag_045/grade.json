@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_045",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 358.5,
+    "total_citation_tokens": 3585.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is Datadog, and the predicted answer “DATADOG” gives the same answer; capitalization does not matter.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] states that the StatsD flavor field is initialized to `StatsdFlavor.DATADOG`.\nStep 2: This directly establishes Datadog as the default flavor, which is the full gold target answer.\nStep 3: Citation [3] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008013499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

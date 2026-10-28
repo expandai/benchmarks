@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_281",
+ "prompt": "automake per-target compilation flags object rename trigger condition",
+ "attempt": 1,
+ "answer": "Automake renames intermediate object files whenever it detects **per-target flags** for a target, such as:\n\n```make\nfoo_CFLAGS = -some -flags\n```\n\nThen `foo.c` becomes, for example, `foo-foo.o`.\n\nThe trigger is the **presence of the per-target variable**, not whether it contains a nonempty or meaningful value. Thus even this triggers renamed objects:\n\n```make\nfoo_CFLAGS = $(AM_CFLAGS)\n```\n\n—even if `AM_CFLAGS` is undefined. The same applies to other per-target `*FLAGS` variables, such as `foo_CPPFLAGS`, `foo_CXXFLAGS`, `foo_YFLAGS`, and `foo_LDFLAGS`.\n\nAutomake renames all objects for that target; it does not first check whether source files are actually shared or whether a filename collision occurs. Global flags such as `AM_CPPFLAGS` do not trigger this behavior.",
+ "num_citations": 7,
+ "citation_text_tokens": 3184,
+ "citation_text_chars": 12288,
+ "search_queries": [
+  "automake per-target compilation flags object rename trigger condition"
+ ],
+ "model_cost_usd": 0.00139635,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4170,
+  "output_tokens": 295,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 101
+ },
+ "latency_ms": 5657.970541971736,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00539635,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

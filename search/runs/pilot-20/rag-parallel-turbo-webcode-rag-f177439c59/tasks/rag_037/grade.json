@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_037",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 431.1,
+    "total_citation_tokens": 4311.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the restriction described by the gold target. It makes no contradictory factual claims, so it is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] says repr(align(n)) is incompatible with repr(packed), which is relevant to the question.\n2. However, it does not state that a repr(packed) type is prohibited from containing a member whose type has repr(align(n)); the quoted incompatibility does not establish this nested-member restriction.\n3. The gold answer’s specific claim is therefore not fully supported by the retrieved citations. Since a non-trivial claim is missing, the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00099085,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

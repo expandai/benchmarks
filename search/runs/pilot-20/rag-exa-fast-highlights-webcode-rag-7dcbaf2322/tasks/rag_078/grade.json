@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_078",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 397.9,
+    "total_citation_tokens": 3979.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when the RHS of `|=` produces no values, the corresponding left-hand-side path is deleted, matching the gold target. Its additional details do not contradict that core behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [4] explicitly state that when the `|=` update RHS produces no values, the corresponding LHS path is deleted; citation [2] states the gold target wording directly.\nStep 2: The gold target’s non-trivial claim is fully present in the retrieved citations. The citations also mention version-specific bugs elsewhere, but that does not remove the direct support for the stated rule.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001125225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

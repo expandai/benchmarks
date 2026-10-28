@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_120",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 475.8,
+    "total_citation_tokens": 4758.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the `q` and `x` modifiers are mutually exclusive and that the last one supplied is used, matching the gold target. Its additional examples and descriptions are consistent with Bash history modifier behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target makes two claims: q and x are mutually exclusive, and when both are supplied the last one supplied is used.\n2. Citations [4] and [6] explicitly state both claims.\n3. The retrieved citations therefore contain all non-trivial information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00096585,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

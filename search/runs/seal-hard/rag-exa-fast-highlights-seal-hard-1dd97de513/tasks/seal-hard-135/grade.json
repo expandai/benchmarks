@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-135",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 505.2,
+    "total_citation_tokens": 5052.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The question refers to the distribution of the sampled variables themselves, which does not become normal merely by increasing the number of samples. The predicted answer names the Central Limit Theorem, which applies to sample means or normalized sums, not the statement as written; this conflicts with the gold target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations distinguish the distribution of the individual sampled variables from the distribution of a normalized sum or sample mean. They support that the central limit theorem concerns the latter, not that the individual i.i.d. variables become normally distributed as the sample size grows. However, they do not establish the gold target’s broader claim that no theory supports the statement; they only clarify what the central limit theorem does and does not say. Since that non-trivial claim is not fully supported by the citations, the gold target is not sufficiently grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00177648,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_229",
+  "prompt": "Elixir Enum.split negative count enumeration performance",
+  "attempt": 1,
+  "answer": "`Enum.split/2` with a negative count enumerates the enumerable **twice**:\n\n1. It traverses it once to determine its length and calculate the split position.\n2. It traverses it again to construct the two result lists.\n\nThe Elixir documentation explicitly warns that a negative `count` has this behavior: [Enum.split/2 documentation](https://hexdocs.pm/elixir/Enum.html).\n\nFor example:\n\n```elixir\nEnum.split([1, 2, 3], -1)\n# {[1, 2], [3]}\n```\n\nFor a positive count, the split can proceed directly from the beginning. A negative count requires knowing the enumerable’s size first, which is especially costly for streams or files because traversing them may be expensive. This was also cited in the related Elixir discussion: performing a count followed by another operation can be harmful for expensive-to-traverse collections.\n\n`Enum` functions are eager, so the traversals happen immediately. If you only need one side of the split, `Enum.take/2` or `Enum.drop/2` may avoid producing both lists; if you need both sides, `Enum.split/2` is generally the appropriate operation.",
+  "num_citations": 10,
+  "citation_text_tokens": 5241,
+  "citation_text_chars": 19307,
+  "search_queries": [
+    "Elixir Enum.split negative count enumeration performance"
+  ],
+  "model_cost_usd": 0.0021167,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6557,
+    "output_tokens": 398,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 145
+  },
+  "latency_ms": 7740.036792005412,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0091167,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

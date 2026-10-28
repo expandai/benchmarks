@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_085",
+ "prompt": "click CliRunner isolation stderr error handling mode",
+ "attempt": 1,
+ "answer": "`CliRunner.isolation()` configures `sys.stderr` with the text wrapper error mode:\n\n```python\nerrors=\"backslashreplace\"\n```\n\nThus, invalid characters written to stderr are escaped rather than raising `UnicodeEncodeError`; for example, `\"\\udce2\"` is captured as `b\"\\\\udce2\"`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5001,
+ "citation_text_chars": 20241,
+ "search_queries": [
+  "click CliRunner isolation stderr error handling mode"
+ ],
+ "model_cost_usd": 0.00181395,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6354,
+  "output_tokens": 188,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 114
+ },
+ "latency_ms": 11386.261375038885,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008813950000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

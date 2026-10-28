@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_216",
+  "prompt": "emacs define-modify-macro arglist disallowed parameter types",
+  "attempt": 1,
+  "answer": "In Emacs `define-modify-macro`, `&key` is explicitly disallowed:\n\n```elisp\n(define-modify-macro NAME ARGLIST FUNC &optional DOC)\n```\n\nThe `ARGLIST` may use `&optional` and `&rest`, but not `&key`. Aux variables are also unsupported. A `&rest` parameter can be used to pass keyword arguments through to the function.",
+  "num_citations": 10,
+  "citation_text_tokens": 3001,
+  "citation_text_chars": 11612,
+  "search_queries": [
+    "emacs define-modify-macro arglist disallowed parameter types"
+  ],
+  "model_cost_usd": 0.0011568,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4191,
+    "output_tokens": 91,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 2765.8639169530943,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0051568,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

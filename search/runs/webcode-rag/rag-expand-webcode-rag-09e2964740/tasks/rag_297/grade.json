@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_297",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 409.7,
+    "total_citation_tokens": 4097.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that @NotFound(action = IGNORE) causes a to-one association to be implicitly fetched eagerly, including in the Envers context. This matches the gold target, and the added details do not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the side effect is implicit eager loading of to-one relations.\n2. Citations [1] and [2] explicitly state this as the consequence of applying `@NotFound(IGNORE)` in the Envers context.\n3. The gold target’s factual claim is therefore fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000899225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_276",
+ "prompt": "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle",
+ "attempt": 1,
+ "answer": "Use a **stencil-only texture view** and bind it as a normal unsigned texture, not as a depth texture:\n\n```wgsl\n@group(0) @binding(0)\nvar stencilTex: texture_2d<u32>;\n\nlet stencil = textureLoad(stencilTex, coords, 0).x;\n```\n\nFor stencil sampling, WebGPU specifies the result as:\n\n```wgsl\nvec4<u32>(S, X, X, X)\n```\n\nwhere `S` is the stencil value and `.y`, `.z`, and `.w` are implementation-defined and unspecified. Therefore, use only `.x`; there are no other portable meaningful channels to sample.\n\nA `\"stencil-only\"` view exposes only the stencil aspect. The `texture-component-swizzle` feature is not required merely to access the stencil value this way. Depth sampling is separate: bind the depth aspect as a `texture_depth_*`, which returns a scalar `f32`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3913,
+ "citation_text_chars": 15494,
+ "search_queries": [
+  "WebGPU sampling depth stencil texture non-depth channels without texture-component-swizzle"
+ ],
+ "model_cost_usd": 0.00197615,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 4958,
+  "output_tokens": 614,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 412
+ },
+ "latency_ms": 7660.759457969107,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00297615,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

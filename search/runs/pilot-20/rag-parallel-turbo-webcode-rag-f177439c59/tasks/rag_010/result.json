@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_010",
+ "prompt": "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE",
+ "attempt": 1,
+ "answer": "An HTTP/2 intermediary:\n\n- **DATA frames:** **SHOULD retain padding**.\n- **HEADERS and PUSH_PROMISE frames:** **MAY drop padding**.\n\nThe intermediary may change or remove padding on HEADERS and PUSH_PROMISE frames to improve the protection padding provides. DATA padding is different because the entire DATA payload—including its padding—counts toward flow control. Padding octets contain no application semantic value and must be zero when sent. ([RFC 9113, §10.7](https://www.rfc-editor.org/info/rfc9113/))",
+ "num_citations": 10,
+ "citation_text_tokens": 6546,
+ "citation_text_chars": 27781,
+ "search_queries": [
+  "HTTP/2 intermediary padding DATA vs HEADERS PUSH_PROMISE"
+ ],
+ "model_cost_usd": 0.0021426,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7707,
+  "output_tokens": 180,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 58
+ },
+ "latency_ms": 3625.5801250226796,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0031426,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

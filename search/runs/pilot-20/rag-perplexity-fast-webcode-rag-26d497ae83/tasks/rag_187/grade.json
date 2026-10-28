@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_187",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.9,
+    "avg_citation_tokens": 399.3,
+    "total_citation_tokens": 3993.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies ACKs, URGs, and RSTs as acceptable or requiring processing with a zero receive window, matching the gold target. Its additional statement that data-bearing segments are not acceptable is consistent with the zero-window segment-acceptability rule.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The quoted passages explicitly identify valid ACKs, URGs, and RSTs as the special allowances when RCV.WND is zero.\nStep 2: These are all the non-trivial items in the gold target answer, and the citations state each one directly. The gold target is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 9
+  },
+  "judge_cost_usd": 0.0014816,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

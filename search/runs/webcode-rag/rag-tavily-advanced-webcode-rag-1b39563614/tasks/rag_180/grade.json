@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_180",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 405.9,
+    "total_citation_tokens": 4059.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says that when the new root is identical to the old root, coreutils avoids the chroot system call. The predicted answer explicitly claims that chroot still performs the chroot operation, contradicting the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] concerns the `--skip-chdir` option: it says that option is permitted when NEWROOT is the old `/` directory, but does not say the chroot system call is avoided.\n2. Citation [6] shows the code calls `chroot (newroot)`; it does not support the claim that the system call is avoided when NEWROOT is the old root.\n3. Therefore, the retrieved citations do not contain the gold target claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000979475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

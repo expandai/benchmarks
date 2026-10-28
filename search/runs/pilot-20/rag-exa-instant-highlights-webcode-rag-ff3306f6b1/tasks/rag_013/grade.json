@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_013",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 554.4,
+    "total_citation_tokens": 5544.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says “I don't know” and provides neither of the excluded status codes, 501 and 505. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that 501 and 505 are excluded 5xx status codes for `src_http_fail_cnt`.\n2. Citation [2] discusses 501 and server-error status codes, but says nothing about exclusions or `src_http_fail_cnt`; it does not mention 505.\n3. Citation [4] shows configurable `http-fail-codes` and a test involving `http_fail_cnt`, but does not establish that 501 or 505 are excluded.\n4. Since the retrieved citations do not support the specific exclusions in the gold target, the answer is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00128396,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_078",
+ "prompt": "jq |= update-assignment RHS produces no values",
+ "attempt": 1,
+ "answer": "For `|=`, if the right-hand-side filter produces no values (`empty`), jq deletes the left-hand-side path, equivalent to `del(path)`. It does not output `null`.\n\nExample:\n\n```sh\necho '{\"a\":1,\"b\":2}' | jq '.a |= empty'\n```\n\nproduces:\n\n```json\n{\"b\":2}\n```\n\nTo retain the existing value, have the RHS output `.` instead of `empty`.",
+ "num_citations": 10,
+ "citation_text_tokens": 2714,
+ "citation_text_chars": 10687,
+ "search_queries": [
+  "jq |= update-assignment RHS produces no values"
+ ],
+ "model_cost_usd": 0.0011127,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 3981,
+  "output_tokens": 98,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2404.2104580439627,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0018627000000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

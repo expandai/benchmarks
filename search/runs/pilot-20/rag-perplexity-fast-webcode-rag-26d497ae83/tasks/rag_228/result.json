@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_228",
+ "prompt": "pytest norecursedirs vs collect-in-virtualenv precedence",
+ "attempt": 1,
+ "answer": "`norecursedirs` takes precedence over `--collect-in-virtualenv`.\n\nTherefore, `--collect-in-virtualenv` does not override a directory excluded by `norecursedirs`. To collect tests from such a virtualenv, you must both:\n\n1. Use `--collect-in-virtualenv`, and\n2. Override `norecursedirs` so the virtualenv’s directory name is not matched—especially if it matches the default `.*` pattern.",
+ "num_citations": 10,
+ "citation_text_tokens": 3999,
+ "citation_text_chars": 14295,
+ "search_queries": [
+  "pytest norecursedirs vs collect-in-virtualenv precedence"
+ ],
+ "model_cost_usd": 0.00142365,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5196,
+  "output_tokens": 104,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2346.2550829863176,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0024236500000000003,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

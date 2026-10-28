@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_078",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 607.2,
+    "total_citation_tokens": 6072.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that when `|=` has an RHS producing no values, jq deletes the path being updated, matching the gold target. Its additional examples and caveats do not negate that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly states that when the RHS outputs no values, the LHS path is deleted, as with `del(path)`.\n2. Citation [10] independently confirms that an update expression producing no values causes the path to be deleted.\n3. These passages support the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00139385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

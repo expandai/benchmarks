@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 144.8,
+    "total_citation_tokens": 1448.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies `vec2<T>`, while the predicted answer gives `__atomic_compare_exchange_result<T>` with an `old_value` and a boolean `exchanged` field. These are not the same type, so the prediction does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims the return type is `vec2<T>`.\n2. The retrieved sources describe the WGSL return type as a struct (`__atomic_compare_exchange_result<T>`), with `old_value` and `exchanged` members.\n3. Citation [6] mentions `vec2`, but explicitly says it was replaced by a struct, so it does not support `vec2<T>` as the return type. The citations do not establish the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00077235,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_197",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 490.1,
+    "total_citation_tokens": 4901.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer explicitly states that with timestamping enabled, Wget downloads when the remote and local sizes differ regardless of timestamps, which matches the gold target. Its later caveat distinguishes cases where a 304 response provides no Content-Length, so Wget cannot detect a size mismatch; that does not contradict the stated behavior when the mismatch is detected.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that a remote file is downloaded regardless of its timestamp when the local and remote sizes differ.\n2. Citation [4] says exactly that Wget downloads the remote file when the sizes do not match, irrespective of timestamps.\n3. Citation [5] independently quotes the same behavior from the manual.\n4. The retrieved sources therefore contain the gold target’s factual claim.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001274225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

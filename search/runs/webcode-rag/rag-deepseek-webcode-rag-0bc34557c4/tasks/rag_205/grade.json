@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_205",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 182.1,
+    "total_citation_tokens": 1821.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target specifies the exact WebIDL return type as `short`. The response says only that the method returns an integer and mentions `long` as a suggested alternative, without identifying `short` as the return type. It does not clearly assert that `long` is the actual type, so it does not directly contradict the gold, but it fails to provide the requested exact answer.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] mentions “short” only as one possible replacement for the undefined “int”; it does not identify short as the actual return type. 2. Citation [2] says the result is an integer but does not specify its type. 3. Citation [10] shows a PRInt16 output parameter, but the citation does not state that the IDBFactory.cmp method’s return type is short. Therefore, the sources do not establish the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001042975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

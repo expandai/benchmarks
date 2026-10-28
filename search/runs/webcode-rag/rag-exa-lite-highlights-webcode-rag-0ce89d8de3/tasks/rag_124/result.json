@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_124",
+  "prompt": "pulumi fully_qualified_stack_name diy backend org requirement",
+  "attempt": 1,
+  "answer": "For a project-scoped DIY backend, the fully qualified stack name must use the fixed organization name `organization`:\n\n```text\norganization/<project>/<stack>\n```\n\nFor example:\n\n```text\norganization/my-project/dev\n```\n\nThe `org` argument to `fullyQualifiedStackName(org, project, stack)` must therefore be `\"organization\"` for a DIY backend. A different organization name is not supported.\n\nLegacy DIY backends only support the unqualified form:\n\n```text\n<stack>\n```\n\nProject-scoped stack names require a new or empty DIY backend, or upgrading an existing backend with `pulumi state upgrade`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3972,
+  "citation_text_chars": 17214,
+  "search_queries": [
+    "pulumi fully_qualified_stack_name diy backend org requirement"
+  ],
+  "model_cost_usd": 0.00156885,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5268,
+    "output_tokens": 210,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 77
+  },
+  "latency_ms": 4116.699457983486,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00556885,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_057",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 400.7,
+    "total_citation_tokens": 4007.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that any user can run GNU coreutils chroot on Cygwin without special privileges, and explains that the underlying function is non-privileged because Windows lacks the relevant support. This fully matches the gold target. The additional note about chroot not being a security boundary does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [2], [5], and [10] state the gold target answer verbatim. Citation [1] independently supports that Windows lacks the chroot concept and that the call is non-privileged and available to any user. Step 2: Every non-trivial claim in the gold target is present in the retrieved citations, so the answer is GROUNDED. Step 3: Citations [2], [5], and [10] each contain the complete answer; [1] also contains information sufficient to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0009781,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

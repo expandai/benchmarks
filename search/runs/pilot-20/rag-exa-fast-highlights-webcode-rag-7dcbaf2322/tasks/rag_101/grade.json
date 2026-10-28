@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_101",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 415.6,
+    "total_citation_tokens": 4156.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all four usage locations in the gold target: authorization request, authorization response, token request, and token response. The additional registry details do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [3] explicitly list all four usage locations for the OAuth `scope` parameter. Step 2: Each non-trivial item in the gold target answer is present in those passages, so the answer is fully grounded. Step 3: Citations [1] and [3] contain information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000843725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

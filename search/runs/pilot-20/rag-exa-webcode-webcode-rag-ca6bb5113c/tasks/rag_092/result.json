@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_092",
+ "prompt": "clang mlong-double-80 storage padding size",
+ "attempt": 1,
+ "answer": "`-mlong-double-80` uses an 80-bit value padded to **128 bits (16 bytes) for storage**.\n\nThe padding is therefore:\n\n- **x86-64:** 6 bytes of padding (10-byte value + 6 bytes)\n- **i386:** 2 bytes of padding when the storage size is 12 bytes\n\nThe Clang option documentation explicitly says: “Force long double to be 80 bits, padded to 128 bits for storage.”",
+ "num_citations": 10,
+ "citation_text_tokens": 5900,
+ "citation_text_chars": 20154,
+ "search_queries": [
+  "clang mlong-double-80 storage padding size"
+ ],
+ "model_cost_usd": 0.001953,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7323,
+  "output_tokens": 102,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 12408.408041927032,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008953000000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

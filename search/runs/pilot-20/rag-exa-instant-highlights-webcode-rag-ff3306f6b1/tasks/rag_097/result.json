@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_097",
+ "prompt": "Rust StreamExt next method where clause constraint",
+ "attempt": 1,
+ "answer": "`where Self: Unpin` means that `StreamExt::next` can only be called when the stream type implements `Unpin`.\n\n```rust\nfn next(&mut self) -> Next<'_, Self>\nwhere\n    Self: Unpin;\n```\n\n`next` borrows the stream rather than taking ownership of it, so the stream must be safely movable after being pinned. For a `!Unpin` stream, pin it first, for example with `Box::pin` or `pin_mut!`.\n\nA `where` clause adds constraints required to use an item; here, the constraint is specifically that `Self` implements `Unpin`.",
+ "num_citations": 10,
+ "citation_text_tokens": 4500,
+ "citation_text_chars": 17815,
+ "search_queries": [
+  "Rust StreamExt next method where clause constraint"
+ ],
+ "model_cost_usd": 0.00160525,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5764,
+  "output_tokens": 137,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2756.5777499694377,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00560525,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

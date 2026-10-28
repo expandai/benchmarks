@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_210",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 444.8,
+    "total_citation_tokens": 4448.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides none of the version requirement stated in the gold target. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations confirm that ConfigMaps have a `binaryData` field and describe its use, but none state the Kubernetes version requirement. The gold answer’s specific claim that both the apiserver and kubelet must be version 1.10 or newer is not present, so the retrieved citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000890225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

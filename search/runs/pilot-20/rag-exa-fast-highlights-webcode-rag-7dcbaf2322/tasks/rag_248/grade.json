@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_248",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 585.3,
+    "total_citation_tokens": 5853.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies Automake 1.11 as the bug-fix version. The predicted answer instead names Automake 1.18.94 and 1.19, which contradicts the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [6] describes a directory-creation bug involving `make dist`, and [7] describes a patch for related `srcdir` handling.\n2. Neither citation gives a release version for that directory-creation fix.\n3. Citation [2] names Automake 1.11.1, but explicitly ties it to a security-related race condition, not the directory-creation bug in [6] and [7].\n4. The gold target, Automake 1.11, is therefore not supported as the version that fixed the asked-about bug. A specific version is a non-trivial claim, so the target is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0013212249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

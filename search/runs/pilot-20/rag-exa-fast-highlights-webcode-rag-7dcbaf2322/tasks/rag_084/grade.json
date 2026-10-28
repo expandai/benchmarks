@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_084",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 472.1,
+    "total_citation_tokens": 4721.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that when an `ssl_context` is provided, the default port is 8443, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The target answer is 8443. Citation [2] states that when no port is specified, the TCP site uses port 8443 if an SSL context is present. Citation [5] directly confirms that run_app with an SSL context and no explicit port uses 8443. The answer is fully supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009426,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

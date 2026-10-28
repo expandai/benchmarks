@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_126",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 488.1,
+    "total_citation_tokens": 4881.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that EOF conditions violating the TLS protocol raise ssl.SSLEOFError, matching the gold target. Its additional statement about SSLObject not supporting suppress_ragged_eofs does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] state directly that SSLObject has no handling of suppress_ragged_eofs and that protocol-violating EOF conditions are reported with SSLEOFError.\nStep 2: This directly supplies the gold target’s full factual claim, so the target is grounded.\nStep 3: Citations [1] and [2] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009389750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

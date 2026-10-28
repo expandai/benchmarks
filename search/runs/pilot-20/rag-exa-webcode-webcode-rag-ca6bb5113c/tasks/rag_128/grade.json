@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_128",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 429.5,
+    "total_citation_tokens": 4295.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is HTTP status code 409. The predicted answer identifies 409 Conflict as the response code retried by `retriable-4xx`, so it matches.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that the only response code in the retriable-4xx category is 409. Step 2: This directly supports the gold target answer, 409, with no missing factual claims. Step 3: Citations [2] and [3] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000832195,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

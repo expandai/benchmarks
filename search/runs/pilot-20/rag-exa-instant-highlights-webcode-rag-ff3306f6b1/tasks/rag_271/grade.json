@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_271",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 464.1,
+    "total_citation_tokens": 4641.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the requested range as 0 through 255, inclusive, matching the gold target. Its additional comments distinguish the required handshake version from the representable version-number range and do not alter the answer to the question.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [4] explicitly gives the permitted range for WebSocket version numbers: 0 through 255, inclusive.\n2. This matches the gold target answer, with no missing non-trivial claims.\n3. Therefore, the citations ground the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001032975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

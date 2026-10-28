@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_069",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 233.5,
+    "total_citation_tokens": 2335.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that enabling `allow_alias` when all enum values have distinct numbers causes a protobuf compiler error, matching the gold target. The added explanation is consistent with that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that it is an error when an enum uses `allow_alias` but all values have distinct numbers.\n2. Citation [6] explicitly says the compiler generates an error when alias support is declared but no enum values share field numbers, and gives the corresponding error message.\n3. Citation [10] contains the same error message. The citations directly support the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0007226,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

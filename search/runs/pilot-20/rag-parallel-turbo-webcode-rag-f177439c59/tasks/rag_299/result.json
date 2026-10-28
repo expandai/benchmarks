@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_299",
+ "prompt": "Vert.x CSRFHandler session aware token regeneration condition",
+ "attempt": 1,
+ "answer": "For safe methods, Vert.x regenerates the CSRF token when:\n\n- **There is no session:** a new token is generated on every request.\n- **A session exists but has no valid stored token:** a new token is generated and stored in the session.\n  - This includes tokens missing from the session.\n  - It also includes tokens associated with a previous session ID, since the stored value contains the session ID and session IDs change during session upgrades.\n\nIf a valid token is already stored for the current session, it is reused. The handler also evaluates the token timestamp against its configured timeout. ([CSRFHandlerImpl.java](https://github.com/vert-x3/vertx-web/blob/master/vertx-web/src/main/java/io/vertx/ext/web/handler/impl/CSRFHandlerImpl.java))",
+ "num_citations": 10,
+ "citation_text_tokens": 5448,
+ "citation_text_chars": 21060,
+ "search_queries": [
+  "Vert.x CSRFHandler session aware token regeneration condition"
+ ],
+ "model_cost_usd": 0.002128,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6943,
+  "output_tokens": 327,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 156
+ },
+ "latency_ms": 5391.30404102616,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.003128,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

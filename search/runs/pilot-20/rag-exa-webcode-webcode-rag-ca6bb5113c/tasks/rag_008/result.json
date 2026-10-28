@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_008",
+ "prompt": "clang PowerPC mcrbits CR-bit tracking default condition",
+ "attempt": 1,
+ "answer": "The documented default for Clang’s PowerPC CR-bit tracking is:\n\n- **POWER8 and newer:** enabled by default.\n- **Other CPUs:** enabled when optimization is **`-O2` or higher**.\n- It can be explicitly controlled with **`-mcrbits`** or **`-mno-crbits`**.\n\nA 2025 LLVM change proposes moving this decision to the backend: CR-bit tracking is used if the target supports CR bits and either the CPU is POWER8–POWER-future or the optimization level is at least `-O2`.",
+ "num_citations": 10,
+ "citation_text_tokens": 3650,
+ "citation_text_chars": 12278,
+ "search_queries": [
+  "clang PowerPC mcrbits CR-bit tracking default condition"
+ ],
+ "model_cost_usd": 0.00162165,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5052,
+  "output_tokens": 299,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 175
+ },
+ "latency_ms": 15135.684875072911,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00862165,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

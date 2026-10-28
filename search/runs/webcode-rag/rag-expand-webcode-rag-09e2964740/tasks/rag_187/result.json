@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_187",
+  "prompt": "RFC 793 TCP RCV.WND zero acceptable segment types",
+  "attempt": 1,
+  "answer": "With `RCV.WND = 0`, RFC 793 says:\n\n- **ACK segments** are acceptable.\n- **Valid URG and RST fields** must still be processed.\n- **Data-bearing segments are not acceptable**.\n- The normal zero-length-segment test would accept a segment only if `SEG.SEQ = RCV.NXT`, but RFC 793 explicitly makes special allowance for ACKs, URGs, and RSTs.",
+  "num_citations": 10,
+  "citation_text_tokens": 8522,
+  "citation_text_chars": 34051,
+  "search_queries": [
+    "RFC 793 TCP RCV.WND zero acceptable segment types"
+  ],
+  "model_cost_usd": 0.0027135,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 9693,
+    "output_tokens": 242,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 144
+  },
+  "latency_ms": 5830.676957964897,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.004713500000000001,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

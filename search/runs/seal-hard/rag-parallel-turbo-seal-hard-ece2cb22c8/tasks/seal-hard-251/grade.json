@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-251",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 266.3,
+    "total_citation_tokens": 2663.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The gold target identifies Phở Chín and Phở Tái as the cheapest beef phở dishes, while the prediction instead names Phở Nạm and Phở Gầu as the cheapest. This contradicts the gold target.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [10] lists beef-phở items and prices, but it does not list standalone “Phở Chín” or “Phở Tái.” It lists “Phở Tái Chín” and “Phở Tái Nạm” at 75,000Đ, and “Phở Nạm” and “Phở Gầu” at 70,000Đ.\n2. The retrieved citations therefore do not support the gold target’s specific claim that “Phở Chín” and “Phở Tái” are the cheapest dishes. Those dish names and their status as the cheapest are not established by the retrieved information.\n3. Since a non-trivial claim in the gold target is missing, the result is UNGROUNDED.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00085848,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

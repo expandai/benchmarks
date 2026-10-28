@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_071",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 650.3,
+    "total_citation_tokens": 6503.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold specifies one column per encoding error. The answer instead says each byte within an encoding error takes one column, which could make a multi-byte encoding error occupy multiple columns and does not match the stated treatment.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says encoding errors are treated as one column wide.\n2. Citation [1] explicitly says diff guesses one column per encoding-error byte, and citation [6] likewise says each encoding-error byte is displayed in a single column.\n3. The wording “per encoding error” is grounded insofar as it refers to each encoding-error byte, as stated in the citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013724750000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

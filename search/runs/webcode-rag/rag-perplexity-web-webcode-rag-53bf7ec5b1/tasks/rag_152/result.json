@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_152",
+  "prompt": "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use",
+  "attempt": 1,
+  "answer": "Use:\n\n- **`NS_TEST_ASSERT_*`** when a failed check should abort the current test case. Use these by default in ordinary test code.\n- **`NS_TEST_EXPECT_*`** in `void`-returning methods, especially callbacks, where a failure should be reported but execution should continue. The ns-3 manual specifically recommends reserving `EXPECT` for test callbacks and using `ASSERT` otherwise.\n\nExample:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ(actual, expected, \"Values differ\");\n```\n\nUse `EXPECT` when you want to perform additional checks after a failure:\n\n```cpp\nNS_TEST_EXPECT_MSG_EQ(actual, expected, \"Values differ\");\n```\n\nFor floating-point comparisons, use the tolerance variants:\n\n```cpp\nNS_TEST_ASSERT_MSG_EQ_TOL(actual, expected, tolerance, \"Values differ\");\nNS_TEST_EXPECT_MSG_EQ_TOL(actual, expected, tolerance, \"Values differ\");\n```\n\nThe search results describe `ASSERT` as reporting and aborting on failure, while `EXPECT` reports the failure without returning from the check.",
+  "num_citations": 10,
+  "citation_text_tokens": 3925,
+  "citation_text_chars": 15376,
+  "search_queries": [
+    "ns3 NS_TEST_EXPECT vs NS_TEST_ASSERT when to use"
+  ],
+  "model_cost_usd": 0.00152415,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5046,
+    "output_tokens": 219,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 3767.8865829948336,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00652415,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

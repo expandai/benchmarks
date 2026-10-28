@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 365.5,
+    "total_citation_tokens": 3655.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is the Undertow property `server.undertow.options.server.record-request-start-time=true`. The predicted answer includes that exact property as the prerequisite for `%D`, so it contains the required information and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] gives the Undertow configuration hierarchy and sets `record-request-start-time` to `true`.\n2. Citation [3] states the exact Spring Boot property `server.undertow.options.server.record-request-start-time=true`.\n3. Together, the citations provide the prerequisite property in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008914750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

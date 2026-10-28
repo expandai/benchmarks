@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_181",
+  "prompt": "rust futures select_next_some behavior with None",
+  "attempt": 1,
+  "answer": "`select_next_some()` is intended for use with `select!` when you only want to handle `Some(item)`:\n\n- It does **not** complete with `None`.\n- When the stream is empty/terminated, its future reports `FusedFuture::is_terminated() == true`, so `select!` can stop polling that branch.\n- If the future is polled after the stream is empty, it may panic; using it with a `FusedFuture`-aware primitive such as `select!` prevents this.\n- The stream must implement `FusedStream + Unpin`.\n\nIn contrast, `.next()` can resolve to `None`. Use `.next()` if you need to explicitly match and handle `None`.",
+  "num_citations": 10,
+  "citation_text_tokens": 3752,
+  "citation_text_chars": 14413,
+  "search_queries": [
+    "rust futures select_next_some behavior with None"
+  ],
+  "model_cost_usd": 0.00158155,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4978,
+    "output_tokens": 281,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 126
+  },
+  "latency_ms": 9065.80375006888,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.01758155,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_138",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 376.1,
+    "total_citation_tokens": 3761.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer first says the transform API supports only `inline`, which matches the gold target, but then claims that `external` and `inlineAndExternal` are also available sourcemap modes for the transform API. That contradicts the target, so the prediction is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly states which sourcemap mode the CLI form of the transform API supports.\n2. It says the only supported mode is `inline`, matching the gold target answer.\n3. Therefore, the citations contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0008602249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

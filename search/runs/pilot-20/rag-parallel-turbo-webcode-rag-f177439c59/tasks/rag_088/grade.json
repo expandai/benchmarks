@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_088",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 321.5,
+    "total_citation_tokens": 3215.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the default GCC SPU `-msmall-mem` assumption is 18-bit addresses, matching the gold target. The additional contrast with `-mlarge-mem` does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is that the default address-size assumption is 18 bits.\n2. Citations [1], [2], and [9] explicitly state that GCC assumes addresses are never larger than 18 bits by default.\n3. The retrieved sources therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000767475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_037",
+  "prompt": "rust repr packed struct nested repr align member restriction",
+  "attempt": 1,
+  "answer": "Rust currently forbids a `#[repr(packed)]` type from transitively containing a `#[repr(align)]` type—including as a nested member. This restriction applies even when the packing value is at least the aligned type’s alignment.\n\nFor example:\n\n```rust\nuse std::sync::atomic::AtomicU32;\n\n#[repr(C, packed(4))]\nstruct Foo {\n    bar: AtomicU32, // error: packed type cannot transitively contain a `#[repr(align)]` type\n}\n```\n\nThe compiler reports error `E0588`. The Rust Reference states:\n\n- `#[repr(align(N))]` and `#[repr(packed(N))]` cannot be applied to the same type.\n- A packed type cannot transitively contain another aligned type.\n- An aligned type may contain a packed type.\n\nThe restriction exists because GCC and MSVC differ in how packed and aligned layouts interact. An RFC to lift the limitation was proposed, but the search results do not indicate that it has been accepted or implemented.",
+  "num_citations": 10,
+  "citation_text_tokens": 9014,
+  "citation_text_chars": 36402,
+  "search_queries": [
+    "rust repr packed struct nested repr align member restriction"
+  ],
+  "model_cost_usd": 0.00297005,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 10412,
+    "output_tokens": 306,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 89
+  },
+  "latency_ms": 5234.23299996648,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00497005,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

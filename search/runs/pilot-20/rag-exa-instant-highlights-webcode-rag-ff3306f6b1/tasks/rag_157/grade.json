@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_157",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 453.9,
+    "total_citation_tokens": 4539.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer states the gold target, “last four major Go releases,” but then adds that newer documentation says three releases and that the policy changed. This introduces a conflicting answer to how many releases Echo supports, so the prediction is not fully consistent with the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that Echo supports the last four Go major releases. Citations [3] and [6] directly say Echo tries to support the last four Go versions, and [10] explicitly says Echo Core tests with the last four major releases. The key number and scope are present in the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000951475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

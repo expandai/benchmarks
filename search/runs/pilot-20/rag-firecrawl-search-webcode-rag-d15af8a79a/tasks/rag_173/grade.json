@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_173",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 36.0,
+    "total_citation_tokens": 360.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and does not provide any of the restricted statements in the gold target. It makes no contradictory factual claim.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1 — The retrieved excerpts mention the debugger and its eval command, but none states which statements the eval command restricts. Step 2 — The gold answer names five specific restricted statements: exit, getline, next, nextfile, and return. Since the citations do not provide these names, a non-trivial part of the answer is unsupported. Step 3 — No citation contains information sufficient to derive the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000423725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

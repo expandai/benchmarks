@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_019",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 394.3,
+    "total_citation_tokens": 3943.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says CSS1 backslash Unicode escapes allow at most four hexadecimal digits. The predicted answer says the maximum is six, which contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that CSS1 backslash Unicode escapes allow at most four hexadecimal digits.\n2. The relevant retrieved passages instead describe six hexadecimal digits, and do not establish the CSS1-specific four-digit maximum.\n3. Because the citations do not contain the gold target’s specific claim, the answer is ungrounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00091385,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

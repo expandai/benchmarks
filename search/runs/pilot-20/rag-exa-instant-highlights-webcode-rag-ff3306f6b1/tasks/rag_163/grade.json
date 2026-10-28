@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 224.4,
+    "total_citation_tokens": 2244.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer correctly identifies HTTPException instances and exceptions handled by an error handler as excluded, and it correctly notes the exception raised from an error handler is an exception to that exclusion.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that `HTTPException` and other handled exceptions do not cause the signal to be sent, supporting their exclusion.\n2. Citation [4] says that an exception raised from an error handler is handled by `handle_exception`, which always sends the signal. This supports the gold answer’s exception to the exclusion.\n3. Together, the citations support all non-trivial claims in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008091,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

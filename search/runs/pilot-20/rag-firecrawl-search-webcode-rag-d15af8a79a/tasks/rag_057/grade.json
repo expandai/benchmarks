@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_057",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 28.5,
+    "total_citation_tokens": 285.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The response says it does not know and provides none of the gold target's information. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] discusses a specific case where coreutils chroot skips the chroot system call for a non-root user, but it does not say that anyone can run the command on Cygwin or explain that this is due to missing MS-Windows support. 2. Citation [2] mentions a Windows distribution of core utilities but says nothing about chroot privileges or the underlying function. 3. The target’s claims about Cygwin, unrestricted execution, and lack of MS-Windows support are not established by the retrieved citations. Therefore, the gold target is not grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00039572500000000004,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

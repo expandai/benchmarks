@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_028",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 376.5,
+    "total_citation_tokens": 3765.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies INT_MIN as the arginfo sentinel for a `*` width or precision, matching the gold target. Its additional distinction that the conversion handler receives the actual argument value does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is INT_MIN, the value used in printf_info for a star-specified width or precision when passed to an arginfo function.\n2. Citation [2] explicitly states INT_MIN for both star-specified precision and width in the arginfo function’s printf_info structure. Citation [3] also states that INT_MIN indicates a star-specified width or precision.\n3. The retrieved sources directly support the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0010121,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

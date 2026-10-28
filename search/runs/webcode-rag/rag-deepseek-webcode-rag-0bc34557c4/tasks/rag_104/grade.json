@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_104",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 183.0,
+    "total_citation_tokens": 1830.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides no answer about the tmux user argument maximum length. It neither confirms nor contradicts the gold target of 15 bytes.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations show examples of `range=user` syntax, but they do not state a maximum argument length for it. Citation [5] mentions a 2048-byte environment-value filter, not a limit on `range=user` arguments. The gold target’s specific claim of 15 bytes is therefore unsupported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0006993500000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_006",
+ "prompt": "HTML5 img sizes attribute source-size-value allowed CSS functions",
+ "attempt": 1,
+ "answer": "The `sizes` attribute’s `source-size-value`:\n\n- **May use CSS math functions**, including:\n  - `calc()`\n  - `min()`\n  - `max()`\n  - `clamp()`\n- **Must not use other CSS functions.**\n- The resulting value must be **non-negative**.\n\nExamples:\n\n```html\n<img sizes=\"calc(100vw - 2rem)\" ...>\n<img sizes=\"min(100vw, 800px)\" ...>\n<img sizes=\"clamp(300px, 50vw, 800px)\" ...>\n```\n\nPercentages are not allowed as standalone source-size values.",
+ "num_citations": 10,
+ "citation_text_tokens": 4456,
+ "citation_text_chars": 18908,
+ "search_queries": [
+  "HTML5 img sizes attribute source-size-value allowed CSS functions"
+ ],
+ "model_cost_usd": 0.00169475,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5546,
+  "output_tokens": 257,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 118
+ },
+ "latency_ms": 4046.678000013344,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00569475,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

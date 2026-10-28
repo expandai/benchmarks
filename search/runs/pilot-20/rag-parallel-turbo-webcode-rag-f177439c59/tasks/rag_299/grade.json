@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_299",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 544.8,
+    "total_citation_tokens": 5448.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says tokens are regenerated only on session upgrades. The predicted answer instead says tokens are also generated when there is no session or when no valid token is stored, contradicting that condition.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [6] links session upgrades to session IDs changing and explains that a token from a previous session ID may be invalid.\n2. However, it also explicitly says a new token is created when there is no token in the session, which is a regeneration condition not limited to session upgrades.\n3. Therefore, the citations do not support the gold target’s claim that tokens will be regenerated only on session upgrades.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00142035,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

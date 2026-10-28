@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_234",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 1.0,
+    "avg_citation_tokens": 383.1,
+    "total_citation_tokens": 3831.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that `validate_required/3` does not add another error when the field already has an error, matching the gold target. Its additional detail does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that validate_required does not add an error when the field already has an error.\n2. Each retrieved citation explicitly states this behavior.\n3. The retrieved sources therefore contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 10
+  },
+  "judge_cost_usd": 0.000914475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

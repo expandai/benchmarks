@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_203",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 406.5,
+    "total_citation_tokens": 4065.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold-target information: `none` or one or more of `size`, `layout`, and `paint`. However, it also says the computed value is “as specified,” which conflicts with the requested computed-value keywords in the gold target. Because the answer contains a contradictory claim, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Evidence: Citation [1] directly states the computed value for the CSS `contain` property as “the keyword none or one or more of size, layout, paint.”\nStep 2 — Groundedness: This matches the gold target answer exactly and contains all its non-trivial information. The answer is GROUNDED.\nStep 3 — Source attribution: Citation [1] contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000909475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

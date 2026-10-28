@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_212",
+ "prompt": "automake TESTS program exit status result ignored",
+ "attempt": 1,
+ "answer": "For Automake `TESTS`:\n\n- A test exiting with status **77** is treated as **skipped/ignored** and does not count as a failure.\n- For TAP tests, pass **`--ignore-exit`** to `tap-driver.sh` to ignore the test script’s exit status, including nonzero statuses caused by signals.\n\nFor example:\n\n```sh\nexit 77\n```\n\nmarks a simple Automake test as ignored.",
+ "num_citations": 10,
+ "citation_text_tokens": 5474,
+ "citation_text_chars": 20325,
+ "search_queries": [
+  "automake TESTS program exit status result ignored"
+ ],
+ "model_cost_usd": 0.0019017,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6777,
+  "output_tokens": 173,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 75
+ },
+ "latency_ms": 14923.177792108618,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0089017,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

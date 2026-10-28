@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_090",
+  "prompt": "Kotlin curly braces code block statement position interpretation",
+  "attempt": 1,
+  "answer": "In Kotlin, curly braces are interpreted according to the grammar position:\n\n- A **code block** is allowed where a construct expects a `controlStructureBody`, such as the body of `if`, `else`, `for`, `while`, `do-while`, or a `when` entry. The grammar defines this as either a `block` or a single `statement` ([Kotlin grammar](https://kotlinlang.org/grammar/)).\n- Kotlin does **not** support arbitrary standalone code blocks as statements. A `{ ... }` in an ordinary statement position is interpreted as a **lambda literal** ([Kotlin specification](https://kotlinlang.org/spec/statements.html)).\n- Expressions can also be used as statements, so a lambda may appear as a statement, although it may have no useful effect ([Kotlin expressions specification](https://github.com/Kotlin/kotlin-spec/blob/release/docs/src/md/kotlin.core/expressions.md)).\n\nFor example:\n\n```kotlin\nif (condition) {\n    println(\"yes\")\n}\n```\n\nHere the braces are the `if` body.\n\nBut this:\n\n```kotlin\nval f = {\n    println(\"called\")\n}\n```\n\ndefines a lambda.\n\nKotlin has no general-purpose block expression like some other languages. To evaluate several statements and obtain the last expression’s value, use a function such as `run`:\n\n```kotlin\nval result = run {\n    val a = 1\n    val b = 2\n    a + b\n}\n```\n\nA block’s value is its last expression; if it has no last expression, its value is `Unit` ([Kotlin specification](https://kotlinlang.org/spec/statements.html)).\n\nAlso, braces following `if`, `else`, `for`, `while`, or `when` are taken as control-structure bodies. If a lambda is required in such a position, an additional pair of braces may be needed:\n\n```kotlin\nval a: () -> Int = if (condition) {\n    { 1 }\n} else {\n    { 2 }\n}\n```\n\nThe outer braces are the `if` branches; the inner braces are the lambdas.",
+  "num_citations": 10,
+  "citation_text_tokens": 2937,
+  "citation_text_chars": 12752,
+  "search_queries": [
+    "Kotlin curly braces code block statement position interpretation"
+  ],
+  "model_cost_usd": 0.0019461,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4041,
+    "output_tokens": 780,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 326
+  },
+  "latency_ms": 10193.599791964516,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0059461,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

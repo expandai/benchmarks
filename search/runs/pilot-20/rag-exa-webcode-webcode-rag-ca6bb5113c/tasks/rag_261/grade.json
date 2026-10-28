@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_261",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 265.1,
+    "total_citation_tokens": 2651.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer does not identify threads and userdata, which are the requested types. Its other claims do not directly contradict the gold target, so this is an unattempted answer rather than an incorrect one.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "Step 1: The citations identify `thread` and `userdata` among Luau's primitive types and describe how some types are represented. They do not state that both threads and userdata cannot be represented as literals. In fact, [2] says other types can be specified by name, which includes `thread`, and describes userdata as represented by concrete types.\nStep 2: The target's specific claim about threads and userdata being unrepresentable as literals is not established by the retrieved passages. This missing claim is non-trivial, so the citations do not ground the target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.00109785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

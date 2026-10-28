@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_271",
+ "prompt": "RFC 6455 Sec-WebSocket-Version number valid range",
+ "attempt": 1,
+ "answer": "RFC 6455 defines the `version` syntax as **0–255**, with **no leading zeros**:\n\n```abnf\nversion = DIGIT | (NZDIGIT DIGIT) |\n          (\"1\" DIGIT DIGIT) | (\"2\" DIGIT DIGIT)\n; Limited to 0-255 range, with no leading zeros\n```\n\nHowever, for RFC 6455 WebSocket handshakes, `Sec-WebSocket-Version` **MUST be `13`**. Values **9–12 were reserved and are not valid**. Source: [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html).",
+ "num_citations": 10,
+ "citation_text_tokens": 2118,
+ "citation_text_chars": 9105,
+ "search_queries": [
+  "RFC 6455 Sec-WebSocket-Version number valid range"
+ ],
+ "model_cost_usd": 0.0010466,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2963,
+  "output_tokens": 255,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 111
+ },
+ "latency_ms": 14817.39508395549,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.008046600000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

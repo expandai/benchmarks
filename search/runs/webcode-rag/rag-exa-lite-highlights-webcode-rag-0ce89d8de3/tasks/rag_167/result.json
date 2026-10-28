@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_167",
+  "prompt": "beautifulsoup html5lib sourceline sourcepos position reference",
+  "attempt": 1,
+  "answer": "For Beautiful Soup, `Tag.sourceline` and `Tag.sourcepos` identify where a tag was found in the original document:\n\n```python\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html, \"html5lib\")\n\ntag = soup.find(\"font\")\nprint(tag.sourceline)\nprint(tag.sourcepos)\n```\n\n- `sourceline`: the source line containing the tag.\n- `sourcepos`: parser-dependent character position on that line.\n- With `html5lib`, `sourcepos` represents the position of the final `>` of the start tag, rather than the position of its initial `<`. The Beautiful Soup html5lib builder obtains the tokenizer position immediately after the tag and subtracts one.\n- These properties are supported by `html.parser` and `html5lib`, but not by `lxml`.\n- The functionality is documented for Beautiful Soup 4.8.1 and later.\n\nFor example, an `html5lib` parse can produce `sourceline == 5` and `sourcepos == 60` for a tag found on line 5.",
+  "num_citations": 10,
+  "citation_text_tokens": 2836,
+  "citation_text_chars": 11361,
+  "search_queries": [
+    "beautifulsoup html5lib sourceline sourcepos position reference"
+  ],
+  "model_cost_usd": 0.00172065,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4008,
+    "output_tokens": 599,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 364
+  },
+  "latency_ms": 7644.681915990077,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00572065,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

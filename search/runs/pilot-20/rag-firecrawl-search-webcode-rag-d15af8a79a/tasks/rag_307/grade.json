@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_307",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 36.5,
+    "total_citation_tokens": 365.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target identifies the separator as a tilde (~), while the predicted answer says the command list is separated by semicolons. This contradicts the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that `_cmds` and `_eval` variables contain a `~`-separated list of commands. Step 2: This supports the gold target answer, `~`, with no missing non-trivial information. Step 3: Citation [1] contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000366975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

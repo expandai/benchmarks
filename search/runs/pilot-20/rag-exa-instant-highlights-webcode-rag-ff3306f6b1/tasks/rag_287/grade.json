@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_287",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 520.5,
+    "total_citation_tokens": 5205.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the date-time separator T and UTC designator Z must be uppercase, and that lowercase t and z are invalid. The additional note that a space can serve as a separator in certain non-normalized strings does not contradict the uppercase constraint for T and Z when those letters are used.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the letters must always be uppercase.\n2. Citations [2] and [4] state this exact constraint for both `T` and `Z` in date/time syntax.\n3. The retrieved sources therefore contain the full non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011226,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

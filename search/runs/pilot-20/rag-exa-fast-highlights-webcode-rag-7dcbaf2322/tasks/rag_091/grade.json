@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_091",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 602.9,
+    "total_citation_tokens": 6029.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that the byte length is divided by the element size with integer truncation, so trailing remainder bytes are ignored. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [3] shows that the file length and element size are stored as integer values, then the length is divided by the element size using integer division.\nStep 2: Integer division drops any remainder, so the citation supports the gold target that any remainder is ignored.\nStep 3: Citation [3] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011777250000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

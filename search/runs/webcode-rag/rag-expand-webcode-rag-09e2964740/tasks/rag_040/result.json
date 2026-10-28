@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_040",
+  "prompt": "Nx byte_size sub-byte s2 u2 u4 types behavior",
+  "attempt": 1,
+  "answer": "For `s2`, `s4`, `u2`, and `u4` tensors, `Nx.byte_size/1` computes the data size in bytes and **rounds the result down**. It may therefore report `0` for tensors whose total bit size is less than 8, and generally does not account for partial bytes.\n\nUse `Nx.bit_size/1` instead when working with these sub-byte types; it reports the exact number of bits. For example, a `2 × 3` `u2` tensor has:\n\n```elixir\nNx.bit_size(tensor)  # 12\n```\n\nwhile `Nx.byte_size(tensor)` rounds the corresponding byte value down.",
+  "num_citations": 10,
+  "citation_text_tokens": 3472,
+  "citation_text_chars": 11541,
+  "search_queries": [
+    "Nx byte_size sub-byte s2 u2 u4 types behavior"
+  ],
+  "model_cost_usd": 0.00130095,
+  "search_cost_usd": 0.002,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4494,
+    "output_tokens": 148,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4342.8647089749575,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00330095,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_232",
+  "prompt": "hpx::future destructor blocking behavior vs std::future",
+  "attempt": 1,
+  "answer": "`hpx::future` destructors do not block, whereas `std::future` destructors may block in a specific case.\n\n| Future type | Destructor behavior |\n|---|---|\n| `hpx::future` | Does not wait on destruction, even if the result has not been extracted. HPX deliberately diverges from the standard behavior so that all HPX futures have the same semantics, regardless of whether they came from `hpx::async`, a promise, or another source. |\n| `std::future` | Normally does not block. However, the destructor blocks if the shared state was created by `std::async`, is not ready, and this is the last reference to that state. |\n\nThe HPX documentation lists `~future() = default`, and HPX’s authors explicitly state that HPX futures “don’t wait on destruction.”",
+  "num_citations": 10,
+  "citation_text_tokens": 4349,
+  "citation_text_chars": 19997,
+  "search_queries": [
+    "hpx::future destructor blocking behavior vs std::future"
+  ],
+  "model_cost_usd": 0.0015946,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5515,
+    "output_tokens": 180,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "latency_ms": 4537.661749986,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0085946,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_248",
+  "prompt": "automake dist distcheck -n creating directories bug fix version",
+  "attempt": 1,
+  "answer": "The recursive `make distcheck` directory-cleanup bug was fixed in Automake commit `866eab242` on September 2, 2026. It is included in the `automake 1.18.94` tag and listed as a new feature for Automake 1.19.\n\nThe fix prevents `make dist` from propagating its internal distribution-directory cleanup override to recursive makes, which could leave a nested `distcheck` distribution directory behind and cause the `distclean` check to fail.",
+  "num_citations": 10,
+  "citation_text_tokens": 5853,
+  "citation_text_chars": 19998,
+  "search_queries": [
+    "automake dist distcheck -n creating directories bug fix version"
+  ],
+  "model_cost_usd": 0.0022553,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 7337,
+    "output_tokens": 351,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 240
+  },
+  "latency_ms": 7073.663500021212,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0062553,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

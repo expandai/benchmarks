@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_139",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 602.3,
+    "total_citation_tokens": 6023.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold range (-15 to -9) for raw compression, but also claims raw decompression permits -15 to -8. That extra claim conflicts with the stated valid range for raw data in the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says the valid raw-data windowBits range is -15 to -9.\n2. Citation [1] explicitly enforces the raw range -15..-9, and citation [3] states the same range for raw data.\n3. The retrieved sources contain the complete non-trivial claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001229225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

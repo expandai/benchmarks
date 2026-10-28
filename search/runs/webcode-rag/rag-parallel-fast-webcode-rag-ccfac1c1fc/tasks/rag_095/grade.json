@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_095",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 281.4,
+    "total_citation_tokens": 2814.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is nanoseconds. The predicted answer explicitly states that omitted TIMEBASE means START and END are assumed to be in nanoseconds, matching the target. Its additional explanation does not contradict this.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations directly state the assumed units when the timebase is missing. Step 2: The gold target answer, “nanoseconds,” is fully supported by these passages. Step 3: Citations [1]–[5] each contain the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0007111000000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

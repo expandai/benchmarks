@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_142",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 359.9,
+    "total_citation_tokens": 3599.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states a minimum length of 6 bytes, matching the gold target, and its explanation is consistent with that value.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited ServerHello structures specify the extensions vector as `extensions<6..2^16-1>`.\nStep 2: The lower bound is 6, so the minimum length of the TLS 1.3 ServerHello extensions field is 6 bytes.\nStep 3: The sources directly support the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.00080785,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

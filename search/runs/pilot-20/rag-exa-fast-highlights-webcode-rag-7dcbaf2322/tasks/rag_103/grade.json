@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 314.7,
+    "total_citation_tokens": 3147.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five keywords in the gold target: HASH, MERGE, LOOKUP, INVERTED, and STRAIGHT. The additional statements do not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [5] and [9] explicitly enumerate the supported hint cases as AstHash, AstLookup, AstInverted, AstMerge, and AstStraight. Step 2: These correspond to all five keywords in the gold target—HASH, LOOKUP, INVERTED, MERGE, and STRAIGHT—so every non-trivial claim is supported. Step 3: Citations [5] and [9] provide the needed information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000803475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

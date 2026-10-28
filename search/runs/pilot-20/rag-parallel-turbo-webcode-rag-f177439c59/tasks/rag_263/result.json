@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_263",
+ "prompt": "nginx NGX_PEER_NEXT upstream status codes trigger",
+ "attempt": 1,
+ "answer": "`NGX_PEER_NEXT` is triggered when the upstream failure type is `NGX_HTTP_UPSTREAM_FT_HTTP_404`—that is, when `proxy_next_upstream http_404` applies:\n\n```c\nif (ft_type == NGX_HTTP_UPSTREAM_FT_HTTP_404) {\n    state = NGX_PEER_NEXT;\n} else {\n    state = NGX_PEER_FAILED;\n}\n```\n\nThe cited nginx ticket describes this in the context of retrying after an upstream returns HTTP 404. The search results do not provide a complete list of other conditions that may trigger `NGX_PEER_NEXT`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5139,
+ "citation_text_chars": 19441,
+ "search_queries": [
+  "nginx NGX_PEER_NEXT upstream status codes trigger"
+ ],
+ "model_cost_usd": 0.00200635,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6370,
+  "output_tokens": 345,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 210
+ },
+ "latency_ms": 4733.104583108798,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00300635,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

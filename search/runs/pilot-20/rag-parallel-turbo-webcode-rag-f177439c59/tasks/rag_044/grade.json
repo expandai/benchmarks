@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_044",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 520.7,
+    "total_citation_tokens": 5207.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the challenge is padded with leading zero bytes, not trailing bytes, matching the gold target. Its clarification that the challenge is right-justified is consistent.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that the padding direction is leading, not trailing, and that the padding consists of zero bytes.\n2. Citations [1], [2], and [8] explicitly say the TLS server pads a short challenge with “leading (note: not trailing) zero bytes.”\n3. The citation text directly supports the full gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.001030975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

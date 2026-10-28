@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_025",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 445.1,
+    "total_citation_tokens": 4451.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer directly states that GraphQL error paths use the aliased field name because they describe the response path, matching the gold target. The additional example and explanation are consistent with that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that an error path for an aliased field should use the aliased name.\n2. It also states the reason: the path describes the response rather than the request.\n3. Citations [1] and [9] explicitly state both claims, so all non-trivial information in the gold target is supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009198499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "frames-132",
+  "scores": {
+    "score": 0.0,
+    "num_citations": 10.0,
+    "avg_citation_tokens": 328.3,
+    "total_citation_tokens": 3283.0,
+    "filtered_results": 0.0,
+    "query_clipped": 1.0
+  },
+  "details": {
+    "label": "FALSE",
+    "judge_reply": "Explanation:  \nThe ground truth answer is \"109 times.\" The predicted answer explains the calculation in detail, establishing that the interval is 210 months, and then divides the time span (23,200 months) by 210 to get about 110.5. The predicted answer says the volcano would have erupted \"110 times—counting only complete 210-month intervals before the song’s release.\" This suggests that the model counted only the complete intervals, but reported 110, which would indicate it rounded down (since you can't have a partial eruption), yet 23,200 ÷ 210 = 110.476, so only 110 complete intervals (but a check for inclusive/exclusive counting of start/end dates might affect the value). The ground truth says \"109 times,\" implying perhaps a different treatment of endpoints or a more precise calculation. Since the numbers are different (110 vs 109) and the predicted answer does not contain the ground truth value or its calculation method, the ground truth answer is not present in the predicted answer.\n\nDecision: FALSE",
+    "judge_model_reported": "openai/gpt-4.1",
+    "judge_attempts": 1,
+    "judge_calls": 1,
+    "judge_cost_known": true
+  },
+  "judge_cost_usd": 0.002642
+}

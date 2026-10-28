@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_071",
+  "prompt": "GNU diff expand-tabs encoding error column width treatment",
+  "attempt": 1,
+  "answer": "GNU `diff` treats each byte of an encoding error as occupying **one display column**. This is a practical guess, since there is no standard column width for encoding errors; other programs may display such bytes using different widths. [Paul Eggert’s explanation](https://public-inbox.org/bug-gnulib/9946e92b-daca-7c7c-bf8d-ff95897774f3@cs.ucla.edu/)\n\nFor tabs:\n\n- `-t` / `--expand-tabs` expands tabs to spaces in the output.\n- The default tab stop is every **8 print columns**; `--tabsize=NUM` changes it.\n- `diff` assumes the output device honors tab stops and that ordinary character widths are supplied by the operating system, but these assumptions can be incorrect. [GNU diff manual excerpt](https://manpages.debian.org/testing/diffutils/diff.1.en.html) [development discussion](https://lists.libreplanet.org/archive/html/diffutils-devel/2023-07/txtLnL_3AmLXk.txt)\n\nA 2024 implementation change specifically overhauled column-width and padding calculations and rewrote tab expansion for `--expand-tabs` with `--side-by-side`. [FreeBSD commit summary](https://lists.freebsd.org/archives/dev-commits-src-all/2024-February/038191.html)",
+  "num_citations": 10,
+  "citation_text_tokens": 6470,
+  "citation_text_chars": 21423,
+  "search_queries": [
+    "GNU diff expand-tabs encoding error column width treatment"
+  ],
+  "model_cost_usd": 0.00258145,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 8200,
+    "output_tokens": 443,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 146
+  },
+  "latency_ms": 7144.48629191611,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00958145,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

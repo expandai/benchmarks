@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_242",
+ "prompt": "node tls server ticketKeys buffer internal composition",
+ "attempt": 1,
+ "answer": "Node’s 48-byte `ticketKeys` buffer is composed of three 16-byte values, in this order:\n\n| Offset | Size | Purpose |\n|---|---:|---|\n| `0–15` | 16 bytes | Prefix |\n| `16–31` | 16 bytes | HMAC key |\n| `32–47` | 16 bytes | AES key |\n\nNode internally uses three 16-byte keys but exposes them as one 48-byte buffer. This composition is explicitly documented in the Node.js v11.3.0 TLS documentation search result.",
+ "num_citations": 10,
+ "citation_text_tokens": 6639,
+ "citation_text_chars": 26899,
+ "search_queries": [
+  "node tls server ticketKeys buffer internal composition"
+ ],
+ "model_cost_usd": 0.00213905,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7760,
+  "output_tokens": 166,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 42
+ },
+ "latency_ms": 3563.5628340533003,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00313905,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

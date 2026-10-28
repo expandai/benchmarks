@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_180",
+ "prompt": "coreutils chroot newroot identical old root directory behavior",
+ "attempt": 1,
+ "answer": "When `NEWROOT` resolves to the existing `/` directory:\n\n- `--skip-chdir` is permitted.\n- Without `--skip-chdir`, coreutils still calls `chroot(NEWROOT)` and then `chdir(\"/\")`.\n- With `--skip-chdir`, it calls `chroot(NEWROOT)` but does not change the working directory, allowing the previous working directory to be retained.\n- The current source checks whether `NEWROOT` canonicalizes to `/`; this avoids relying only on path spelling.\n- `chroot()` is still called even when `NEWROOT` is `/`, because `/` may be a separate bind-mounted tree. Older documentation saying the call is avoided describes earlier behavior.",
+ "num_citations": 10,
+ "citation_text_tokens": 4401,
+ "citation_text_chars": 16555,
+ "search_queries": [
+  "coreutils chroot newroot identical old root directory behavior"
+ ],
+ "model_cost_usd": 0.0017671,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5725,
+  "output_tokens": 280,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 129
+ },
+ "latency_ms": 5259.204208035953,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0087671,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

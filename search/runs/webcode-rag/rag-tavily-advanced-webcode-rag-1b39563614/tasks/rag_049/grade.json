@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_049",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 347.9,
+    "total_citation_tokens": 3479.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer initially says that setting the property to -1 configures an unlimited cache, matching the gold target. But it then says Spring Boot's property handling prevented -1 from configuring that cache, which contradicts the target behavior. Since the answer contains contradictory information, it is incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target claims that setting the cache to -1 makes it unlimited and that its theoretical maximum is the maximum number of connections.\n2. Citation [3] states both claims directly, and citation [1] independently supports them.\n3. Citation [2] adds an implementation caveat: the Spring Boot property was only applied when positive, preventing it from configuring -1. That caveat does not undermine the stated behavior of the cache when set to -1.\n4. Therefore, the retrieved citations contain the gold target’s factual claims.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011122249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

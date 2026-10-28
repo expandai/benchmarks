@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_262",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 242.8,
+    "total_citation_tokens": 2428.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that a proxy server MUST NOT generate `Vary: *` and that an origin server may generate it, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] directly establishes that a proxy MUST NOT generate the Vary wildcard.\n2. Citations [2] and [5] state that an origin server can generate the wildcard. Together with the proxy restriction, these support the gold target’s stated distinction between proxy and origin-server generation.\n3. The retrieved citations contain the non-trivial claims in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008606,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

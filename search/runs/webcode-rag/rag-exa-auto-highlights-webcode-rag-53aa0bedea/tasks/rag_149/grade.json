@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_149",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 445.2,
+    "total_citation_tokens": 4452.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the maximum value of n is 255, matching the gold target of 255 characters. The additional explanation does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target states that the maximum pO limit is 255 characters. Citation [1] directly sets the pO parameter ceiling at 255; citation [3] independently expresses the limit as less than 256 bytes; and citation [6] directly says n should not be more than 255. These passages support the target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.0008935999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

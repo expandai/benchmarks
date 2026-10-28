@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_172",
+  "prompt": "Cargo virtual workspace resolver edition 2024 opt-in",
+  "attempt": 1,
+  "answer": "For a Cargo virtual workspace, Rust 2024 does **not** automatically select resolver 3 because a virtual workspace has no root package edition. Set it explicitly in the root `Cargo.toml`:\n\n```toml\n[workspace]\nresolver = \"3\"\nmembers = [\"crates/*\"]\n```\n\n`edition = \"2024\"` in `[workspace.package]` does not affect the workspace resolver. Without `resolver = \"3\"`, Cargo defaults a virtual workspace to resolver 1 and may emit a warning. Resolver 3 enables Rust-version-aware dependency resolution and requires Rust 1.84 or later.",
+  "num_citations": 10,
+  "citation_text_tokens": 3882,
+  "citation_text_chars": 14678,
+  "search_queries": [
+    "Cargo virtual workspace resolver edition 2024 opt-in"
+  ],
+  "model_cost_usd": 0.0015014,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5003,
+    "output_tokens": 209,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 79
+  },
+  "latency_ms": 4128.477166988887,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0065014,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

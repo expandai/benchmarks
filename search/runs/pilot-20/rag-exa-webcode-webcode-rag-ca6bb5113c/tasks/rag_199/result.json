@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_199",
+ "prompt": "gnulib pthread_rwlock_trywrlock error code already owned write lock",
+ "attempt": 1,
+ "answer": "On glibc/Linux, `pthread_rwlock_trywrlock()` returns **`EBUSY`** when the calling thread already owns the write lock. The glibc implementation explicitly returns `EBUSY` whenever it cannot acquire the lock.\n\n`EDEADLK` applies to `pthread_rwlock_wrlock()` when a deadlock is detected or the current thread already owns the lock; it is not a specified error for `pthread_rwlock_trywrlock()`.\n\nAlso, pthread lock functions return the error code directly rather than setting `errno`.",
+ "num_citations": 10,
+ "citation_text_tokens": 5347,
+ "citation_text_chars": 20217,
+ "search_queries": [
+  "gnulib pthread_rwlock_trywrlock error code already owned write lock"
+ ],
+ "model_cost_usd": 0.00194495,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6686,
+  "output_tokens": 228,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 109
+ },
+ "latency_ms": 8068.440292030573,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00894495,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

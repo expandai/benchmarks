@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_018",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 341.9,
+    "total_citation_tokens": 3419.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly identifies the behavior asked about: a foreign exception crossing a non-unwinding Rust ABI boundary is undefined behavior. However, it adds the claim that with `panic=abort` a foreign unwind through an unwind-permitting ABI is caught at the boundary and aborts. `panic=abort` governs Rust panics; it does not by itself force foreign exceptions to abort. Because the response includes this inaccurate additional claim, it is not fully correct.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citations explicitly state that a foreign unwind reaching an FFI boundary declared with a non-unwind ABI causes undefined behavior.\nStep 2 — This directly supports the gold target answer, “undefined behavior.”\nStep 3 — Citations [3] and [4] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001313725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

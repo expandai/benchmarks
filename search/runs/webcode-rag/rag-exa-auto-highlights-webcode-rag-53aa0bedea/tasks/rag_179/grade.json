@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_179",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 517.5,
+    "total_citation_tokens": 5175.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that Eshell ranges include the start and exclude the end, and contrasts this with Bash ranges that include both endpoints. This matches the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] explicitly says the Eshell range excludes its end and contrasts it with Bash, where both endpoints are included.\n2. Citation [1] also says this behavior matches Emacs Lisp functions such as `substring`; citation [2] independently confirms that the half-open range was chosen to match Emacs Lisp `substring` behavior.\n3. Thus, all non-trivial claims in the gold target answer are supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001072225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

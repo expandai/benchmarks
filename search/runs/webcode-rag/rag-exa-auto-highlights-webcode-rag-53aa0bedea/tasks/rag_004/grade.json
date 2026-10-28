@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_004",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 284.0,
+    "total_citation_tokens": 2840.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists both worker types in the gold target: DedicatedWorker and SharedWorker. Its additional statement that FileReaderSync is not exposed in service workers does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The quoted IDL passages explicitly list DedicatedWorker and SharedWorker as the exposed worker types for FileReaderSync. Step 2 — Both non-trivial elements of the gold target answer are present in the retrieved citations, so the answer is fully grounded. Step 3 — Citations [2], [3], [4], and [9] directly contain the exposure types.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.000757225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

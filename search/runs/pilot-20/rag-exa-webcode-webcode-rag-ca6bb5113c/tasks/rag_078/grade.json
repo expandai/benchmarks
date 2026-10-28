@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_078",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 480.0,
+    "total_citation_tokens": 4800.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that when the RHS of jq’s `|=` produces no values, the path is deleted, matching the gold target. Its examples and additional explanation do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] states the gold target answer verbatim. 2. Citation [5] independently confirms that an update expression producing no values causes the path to be deleted. The citations therefore contain the answer, though other citations note version-specific behavior and bugs.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0011796,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

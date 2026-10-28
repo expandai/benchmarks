@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_098",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 317.3,
+    "total_citation_tokens": 3173.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer gives the requested maximum as 200 characters, matching the gold target. However, it also claims that any numeral exceeding the limit is treated as invalid and returns nil; Lua's reader can truncate the input to the buffer limit and parse that prefix, so this additional factual claim makes the answer incorrect.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly labels `L_MAXLENNUM` as the maximum length of a numeral and sets it to 200; the overflow check confirms this is the reading limit. Step 2: The gold target, “200 characters,” is fully supported by this evidence. Step 3: Citation [1] contains the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0019159749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

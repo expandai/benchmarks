@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "For jq’s update-assignment operator `|=`, if the RHS produces no values—such as with `empty`—the corresponding LHS path is deleted, rather than the whole expression producing no output.\n\nExamples:\n\n```jq\n{a: 1} | .a |= empty\n```\n\nproduces:\n\n```json\n{}\n```\n\nWhereas:\n\n```jq\n{a: 1} | .a = (.a | empty)\n```\n\nproduces no output at all.\n\nInternally, jq treats an RHS that produces a value as an update, and an RHS that produces no values as a queued deletion of that path. However, behavior involving multiple paths, especially expressions such as `.[] |= empty`, has bugs or version-dependent behavior. For example, jq 1.6 gives:\n\n```sh\necho '[1, 2]' | jq '.[] |= empty'\n```\n\n```json\n[2]\n```\n\nThe documented workaround for reliably deleting matching paths is to use `del(...)` instead.",
+ "num_citations": 10,
+ "citation_text_tokens": 5550,
+ "citation_text_chars": 18848,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.0021364,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6943,
+  "output_tokens": 334,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 121
+ },
+ "latency_ms": 7609.130874974653,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0091364,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

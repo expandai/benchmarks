@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_193",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 370.9,
+    "total_citation_tokens": 3709.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly gives the required Undertow option, `server.undertow.options.server.record-request-start-time=true`, matching the gold target. The additional access-log configuration is consistent with the question and does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target is the exact Spring Boot property `server.undertow.options.server.record-request-start-time=true`. 2. Citation [3] and citation [7] state this exact property and value. Citation [1] also gives the equivalent YAML configuration with the option set to true. 3. The citations therefore contain all the information in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008636,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

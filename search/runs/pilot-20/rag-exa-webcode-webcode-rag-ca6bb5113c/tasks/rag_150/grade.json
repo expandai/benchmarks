@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_150",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 527.5,
+    "total_citation_tokens": 5275.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer includes the gold target’s `doc` and `doctest`, but it also claims that `test` is hidden by default. Since the question asks for the default hidden cfg attributes, adding `test` makes the answer inaccurate.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target names `doc` and `doctest` as the default hidden attributes.\n2. Citation [1] explicitly states that Rustdoc hides both `doc` and `doctest` attributes by default. Citation [8] also lists both among the default hidden configurations.\n3. The target’s factual claims are directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001211225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

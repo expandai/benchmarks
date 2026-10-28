@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_082",
+ "prompt": "RFC 7230 quoted-pair backslash escape allowed control characters",
+ "attempt": 1,
+ "answer": "Only **HTAB** (horizontal tab) may be escaped as a control character in an RFC 7230 `quoted-pair`. The grammar is:\n\n```abnf\nquoted-pair = \"\\\" ( HTAB / SP / VCHAR / obs-text )\n```\n\nThus, other control characters—including NUL, CR, and LF—are not allowed as escaped characters. RFC 7230 explicitly states that the rule “no longer allows escaping control characters other than HTAB.” (RFC 7230, Appendix A.2 and Section 3.2.6)",
+ "num_citations": 10,
+ "citation_text_tokens": 4509,
+ "citation_text_chars": 17161,
+ "search_queries": [
+  "RFC 7230 quoted-pair backslash escape allowed control characters"
+ ],
+ "model_cost_usd": 0.00165955,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5746,
+  "output_tokens": 186,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 65
+ },
+ "latency_ms": 3428.99733397644,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00265955,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

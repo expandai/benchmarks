@@ -1,0 +1,31 @@
+{
+  "task_id": "seal-hard-025",
+  "scores": {
+    "score": 0.0,
+    "correct": 0.0,
+    "incorrect": 1.0,
+    "not_attempted": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 537.0,
+    "total_citation_tokens": 5370.0
+  },
+  "details": {
+    "label": "INCORRECT",
+    "reasoning": "The predicted answer explicitly gives 16 episodes, while the gold target is 11, so it contradicts the correct count.",
+    "judge_calls": 2,
+    "correctness": "INCORRECT",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The released-season episode total is 16: citation [9] lists eight episodes in each of the two seasons. 2. In Season 1, citation [2] identifies two episodes directed by Brändström, four by Wayne Che Yip, and the opening two by J. A. Bayona. Thus, six Season 1 episodes were not directed solely by Brändström. 3. In Season 2, citation [4] identifies three episodes directed by Brändström solo; the two she co-directed are not directed solely by her, and the remaining episodes are not identified as solo-directed by her. Therefore five Season 2 episodes were not directed solely by Brändström. 4. Adding the seasons gives 6 + 5 = 11. The citations contain the information needed to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.00200273,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

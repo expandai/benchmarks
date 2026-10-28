@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 393.4,
+    "total_citation_tokens": 3934.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target requires explicit register operands to appear at the end of the operand list, after all other operand types. The predicted answer says named operands and explicit register operands may be freely mixed, which permits named operands after explicit register operands and contradicts the required ordering.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "The gold target makes one non-trivial claim: explicit register operands must be placed at the end of the operand list, after other operand types. Citations [3]–[6] state that requirement directly. Therefore, the retrieved citations contain sufficient information to derive the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.001017225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

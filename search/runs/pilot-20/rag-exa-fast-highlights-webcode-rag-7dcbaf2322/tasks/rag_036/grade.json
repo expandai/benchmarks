@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_036",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 468.3,
+    "total_citation_tokens": 4683.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer identifies the vertex shader stage as prohibited, matching the gold target. Its additional statement does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks which WGSL shader stage prohibits atomic built-in functions.\n2. Citation [1] explicitly says they must not be used in a vertex shader stage. Citations [4] and [10] independently identify the vertex stage as disallowed.\n3. The gold target, “vertex shader stage,” is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000945725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

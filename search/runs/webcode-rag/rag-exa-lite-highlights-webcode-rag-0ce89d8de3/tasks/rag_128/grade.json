@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_128",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 456.4,
+    "total_citation_tokens": 4564.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target is HTTP status code 409, and the predicted answer states that retriable-4xx retries on HTTP 409 Conflict. This matches the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [2] maps the Envoy Gateway TriggerEnum Retriable4XX to the retry trigger `retriable-4xx`.\n2. Citation [1] states that the only response code in the `retriable-4xx` category is 409.\n3. Together, the citations support the gold target answer, 409.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009270999999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

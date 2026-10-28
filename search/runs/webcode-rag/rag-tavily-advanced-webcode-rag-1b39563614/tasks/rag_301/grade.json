@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_301",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 375.1,
+    "total_citation_tokens": 3751.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says “I don't know” and does not provide the behavior described by the gold target. It also makes no contradictory factual claim, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [2] contains an example of an unset environment variable producing a warning and being ignored, but it concerns a systemd user service.\n2. No citation explains GNU Units’ `!var` behavior or says that it ignores a block of definitions.\n3. The gold answer’s specific claims about GNU Units and the block of definitions are therefore not supported by the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000819975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

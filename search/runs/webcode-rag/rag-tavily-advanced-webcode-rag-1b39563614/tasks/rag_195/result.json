@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_195",
+  "prompt": "HTTP/2 RFC 9113 oversized field block rejected processing obligation",
+  "attempt": 1,
+  "answer": "An oversized field block may be rejected, but it **MUST still be processed to maintain a consistent connection state, unless the connection is closed**. A server may respond with **HTTP 431 (Request Header Fields Too Large)**, and a client may discard a response it cannot process.\n\nFor `HEADERS`, `PUSH_PROMISE`, or `CONTINUATION` frames, the endpoint must reassemble and decompress the field block **even if the frames will be discarded**. If it does not decompress the field block, it **MUST terminate the connection with a `COMPRESSION_ERROR`**. ([RFC 9113](https://www.rfc-editor.org/rfc/rfc9113.html))",
+  "num_citations": 10,
+  "citation_text_tokens": 4325,
+  "citation_text_chars": 16076,
+  "search_queries": [
+    "HTTP/2 RFC 9113 oversized field block rejected processing obligation"
+  ],
+  "model_cost_usd": 0.0016052,
+  "search_cost_usd": 0.016,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5327,
+    "output_tokens": 228,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 79
+  },
+  "latency_ms": 5834.757166914642,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0176052,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

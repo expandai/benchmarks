@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_147",
+ "prompt": "gettext LC_MESSAGES mingw arbitrary value substitute",
+ "attempt": 1,
+ "answer": "On MinGW systems that do not define `LC_MESSAGES`, GNU gettext defines it as:\n\n```c\n#define LC_MESSAGES 1729\n```\n\nThe value is intentionally arbitrary; `1729` is described as the smallest positive integer representable in two different ways as the sum of two cubes. GNU gettext uses this value to simulate the `LC_MESSAGES` category, storing its locale name separately when the system lacks that category. ([libintl.h](https://chromium.googlesource.com/external/msysgit/msysgit/+/chromium-1.9.0/mingw/include/libintl.h), [gettext manual](https://www.gnu.org.cach3.com/software/gettext/manual/html_node/Locating-Catalogs.html))",
+ "num_citations": 10,
+ "citation_text_tokens": 6315,
+ "citation_text_chars": 21608,
+ "search_queries": [
+  "gettext LC_MESSAGES mingw arbitrary value substitute"
+ ],
+ "model_cost_usd": 0.00225235,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 7834,
+  "output_tokens": 245,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 86
+ },
+ "latency_ms": 3999.7809580527246,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00925235,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_184",
+  "prompt": "Haskell Data.List maximumBy multiple largest tie-breaker selection",
+  "attempt": 1,
+  "answer": "`Data.List.maximumBy` selects the **rightmost** element among multiple equally largest elements.\n\nIts behavior is equivalent to:\n\n```haskell\nmaximumBy cmp = foldl1 maxBy\n  where\n    maxBy x y =\n      case cmp x y of\n        GT -> x\n        _  -> y\n```\n\nThus, when `cmp x y` returns `EQ`, `y` replaces `x`, so the later element wins. The input must be non-empty (and, for lists, finite).",
+  "num_citations": 8,
+  "citation_text_tokens": 3815,
+  "citation_text_chars": 11906,
+  "search_queries": [
+    "Haskell Data.List maximumBy multiple largest tie-breaker selection"
+  ],
+  "model_cost_usd": 0.0014338,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4891,
+    "output_tokens": 176,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 63
+  },
+  "latency_ms": 5054.247500025667,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064338,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

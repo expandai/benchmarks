@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_103",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 203.1,
+    "total_citation_tokens": 2031.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer says \"I don't know\" and provides none of the valid hint keywords. It does not contradict the target, so this is not attempted.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish that LOOKUP and MERGE are join-hint terms, but they do not provide the complete valid-keyword list. In particular, none of the retrieved passages identifies HASH, INVERTED, or STRAIGHT as valid opt_join_hint keywords. Since specific non-trivial items in the gold answer are missing, the answer is not fully derivable from these citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000620725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

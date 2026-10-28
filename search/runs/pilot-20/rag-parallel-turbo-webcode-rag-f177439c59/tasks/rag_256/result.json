@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_256",
+ "prompt": "jq |= update assignment RHS outputs no values behavior",
+ "attempt": 1,
+ "answer": "In jq, for update assignment:\n\n```jq\npath |= filter\n```\n\nthe RHS filter is applied to the current value at `path`.\n\n- If the RHS produces **no values** (`empty`), the path is **deleted**, like `del(path)`.\n- If the RHS produces multiple values, only the **first** is used in current jq versions.\n\nExamples:\n\n```sh\njq -nc '{} | .a |= empty'\n# null\n```\n\nFor an existing path:\n\n```sh\njq -nc '{\"a\":1} | .a |= empty'\n# {}\n```\n\nAnd:\n\n```sh\njq -nc '{} | .a |= (1,2,3)'\n# {\"a\":1}\n```\n\nThis differs from plain assignment (`=`), where all RHS outputs produce separate modified outputs. Sources: [jq manual](https://man.archlinux.org/man/jq.1.en), [jq issue #873](https://github.com/jqlang/jq/issues/873).\n\nFor `//=`, the reported jq behavior is that its RHS is evaluated even when the LHS is already non-null/non-false:\n\n```sh\njq -n '{a:1} | .a //= (debug | 2)'\n```\n\nThe `debug` output still occurs, although the value remains `{\"a\":1}`. The issue describes conditional RHS evaluation as the expected behavior. Source: [jq issue #2410](https://github.com/jqlang/jq/issues/2410).",
+ "num_citations": 10,
+ "citation_text_tokens": 8164,
+ "citation_text_chars": 27599,
+ "search_queries": [
+  "jq |= update assignment RHS outputs no values behavior"
+ ],
+ "model_cost_usd": 0.0031963,
+ "search_cost_usd": 0.001,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 9373,
+  "output_tokens": 711,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 397
+ },
+ "latency_ms": 7342.091833008453,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0041963,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

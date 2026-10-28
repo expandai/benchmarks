@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_187",
+ "prompt": "RFC 793 TCP RCV.WND zero acceptable segment types",
+ "attempt": 1,
+ "answer": "With `RCV.WND = 0`, RFC 793 says no segments are acceptable based on sequence-space overlap, except:\n\n- **ACK** segments\n- Segments with **URG** set\n- Segments with **RST** set\n\nData-bearing segments are not acceptable. RFC 793 also states that the **RST and URG fields must be processed** for all incoming segments.",
+ "num_citations": 10,
+ "citation_text_tokens": 4599,
+ "citation_text_chars": 20616,
+ "search_queries": [
+  "RFC 793 TCP RCV.WND zero acceptable segment types"
+ ],
+ "model_cost_usd": 0.00167095,
+ "search_cost_usd": 0.00198,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5638,
+  "output_tokens": 218,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 133
+ },
+ "latency_ms": 4813.929374911822,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00365095,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

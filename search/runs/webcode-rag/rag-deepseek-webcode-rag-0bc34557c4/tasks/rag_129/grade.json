@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_129",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 171.8,
+    "total_citation_tokens": 1718.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says NUL bytes are replaced with line terminators. The predicted answer instead says they trigger binary-file detection and that searching normally stops, which conflicts with the target behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [1] explicitly says that without the -a flag, ripgrep replaces all NUL bytes with line terminators. Step 2 — This contains the gold target’s factual claim. Step 3 — Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0009151,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

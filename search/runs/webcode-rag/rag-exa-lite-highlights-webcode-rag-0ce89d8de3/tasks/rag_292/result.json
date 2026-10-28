@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_292",
+  "prompt": "ctypes BigEndianStructure non-native byte order field type restriction",
+  "attempt": 1,
+  "answer": "`ctypes.BigEndianStructure` fields cannot be pointer types, nor any type that contains pointer fields.\n\nThe supported field types include:\n\n- ctypes primitive types that provide an opposite-endian representation, such as integer types\n- Arrays of supported types\n- Nested structures or unions\n\nThe current `ctypes._endian` implementation handles arrays recursively and accepts structure or union types without converting them. However, a nested native `Structure` or `Union` retains its own byte-order behavior; use an appropriate `BigEndianStructure` or `BigEndianUnion` when its contents must also be big-endian.\n\nSome ctypes types may still be unsupported if they do not provide an opposite-endian representation. For example, `c_bool` produced `TypeError: This type does not support other endian` in the cited issue.",
+  "num_citations": 10,
+  "citation_text_tokens": 5324,
+  "citation_text_chars": 19999,
+  "search_queries": [
+    "ctypes BigEndianStructure non-native byte order field type restriction"
+  ],
+  "model_cost_usd": 0.00208545,
+  "search_cost_usd": 0.004,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 6528,
+    "output_tokens": 378,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 207
+  },
+  "latency_ms": 5910.605833050795,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00608545,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

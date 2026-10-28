@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_119",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 511.5,
+    "total_citation_tokens": 5115.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and does not provide or contradict the gold target, which is that avg_queue is twice the number of queued connections when there is no active server.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citations describe avg_queue as dividing queued connections by the number of alive servers (or servers in the backend).\n2. Neither citation says what avg_queue returns when there are no active servers, nor supports the specific claim that it is twice the number of queued connections.\n3. Therefore, a non-trivial claim in the gold target is missing from the retrieved sources.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001064555,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

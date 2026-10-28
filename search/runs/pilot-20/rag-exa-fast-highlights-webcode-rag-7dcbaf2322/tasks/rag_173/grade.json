@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_173",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 348.0,
+    "total_citation_tokens": 3480.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer lists all five restricted statements in the gold target: exit, getline, next, nextfile, and return. The additional context does not contradict the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1] and [2] explicitly list the statements that cannot be used in an eval command.\nStep 2: The list exactly matches every item in the gold target answer, so all its non-trivial information is present.\nStep 3: Both citations contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000791475,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

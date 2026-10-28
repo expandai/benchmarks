@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_071",
+  "prompt": "GNU diff expand-tabs encoding error column width treatment",
+  "attempt": 1,
+  "answer": "With GNU `diff --expand-tabs` (`-t`):\n\n- Tabs are converted to the number of spaces needed to reach the next tab stop.\n- Tab stops default to every 8 print/display columns and can be changed with `--tabsize=columns`.\n- For column counting, `diff` uses the current locale to determine each character’s display width.\n- Each encoding-error byte—an input byte that is not part of any character—is assumed to occupy one column.\n- GNU `diff` also assumes the output device honors tab stops and uses the operating system’s character widths. These assumptions may be wrong for encoding errors or non-ASCII characters, so complex output may not align as displayed.",
+  "num_citations": 9,
+  "citation_text_tokens": 3892,
+  "citation_text_chars": 15487,
+  "search_queries": [
+    "GNU diff expand-tabs encoding error column width treatment"
+  ],
+  "model_cost_usd": 0.0014877,
+  "search_cost_usd": 0.005,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 4905,
+    "output_tokens": 218,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 71
+  },
+  "latency_ms": 4125.269042095169,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.0064877,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

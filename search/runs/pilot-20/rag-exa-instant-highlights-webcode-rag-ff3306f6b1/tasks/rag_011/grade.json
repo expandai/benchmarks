@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 121.8,
+    "total_citation_tokens": 1218.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies `vec2<T>`, while the predicted answer gives a two-member structure with fields of types `T` and `bool`. These are different return types, so the prediction does not match the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The gold target says the return type is `vec2<T>`. Citation [5] mentions `vec2`, but explicitly says the function now returns a struct instead. Citation [1] likewise gives the return type as a struct with `old_value` and `exchanged` fields. Therefore, the retrieved citations do not support the gold target as the current WGSL return type; they contradict it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000654975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

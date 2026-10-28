@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_226",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 455.9,
+    "total_citation_tokens": 4559.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The gold target says that `on` is treated as 1 second. The prediction states that `nonblock on` is treated as `nonblock 1`, equivalent to 1 second, matching the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that `on` is treated as 1 second.\n2. Citations [1], [2], and [4] explicitly state that `on` is treated as a one-second timeout.\n3. The retrieved sources therefore contain the full factual claim in the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.0008901,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

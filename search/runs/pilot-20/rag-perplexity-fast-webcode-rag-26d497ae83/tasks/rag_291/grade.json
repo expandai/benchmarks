@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_291",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 372.5,
+    "total_citation_tokens": 3725.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the default WebAssembly import module name is `env`, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations explicitly state that when `wasm_import_module` is omitted, the default module name is `env`. Step 2: The gold target answer consists of that one factual claim, and it is directly supported by the retrieved sources. Step 3: Citations [1], [2], [3], [5], [6], and [9] explicitly provide the default; [7] and [8] also describe `env` as the default for imports without a specified module.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.000872975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

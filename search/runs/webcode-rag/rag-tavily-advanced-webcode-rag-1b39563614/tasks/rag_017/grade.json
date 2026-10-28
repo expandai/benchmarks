@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_017",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 526.9,
+    "total_citation_tokens": 5269.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says negative inputs other than -0.0 have undefined behavior. The prediction instead says current llvm.sqrt returns NaN for negative nonzero inputs and characterizes undefined behavior as only historical semantics, directly contradicting the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [1] explicitly states that llvm.sqrt has undefined behavior for negative inputs other than -0.0. Step 2: This directly contains the gold target’s factual claim. Step 3: Citation [1] is sufficient to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0011246,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

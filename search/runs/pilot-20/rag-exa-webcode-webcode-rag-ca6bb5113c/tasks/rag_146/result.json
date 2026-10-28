@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_146",
+ "prompt": "CSS display contents pseudo-elements box not generated",
+ "attempt": 1,
+ "answer": "According to CSS Display Level 3, `display: contents` removes the element’s own box, but **does not remove its pseudo-elements**:\n\n```css\n.wrapper {\n  display: contents;\n}\n\n.wrapper::before {\n  content: \"Before\";\n  display: block;\n}\n```\n\nThe `.wrapper` box is omitted, while `.wrapper::before`, `.wrapper::after`, and the wrapper’s children should still generate boxes normally. The specification treats the element as replaced by its contents, including `::before` and `::after`.\n\nIf the pseudo-element itself is not generating a box, likely causes include:\n\n- The pseudo-element has no generated `content`.\n- The pseudo-element is one to which `display` does not apply, such as `::marker` or `::first-line`.\n- Browser-specific implementation differences or bugs. The CSSWG issue explicitly reports inconsistent behavior across browsers, including differences for `::before` and `::after`.\n\nSo, for `::before` and `::after`, the expected behavior is that they continue to generate boxes when their originating element has `display: contents`; however, browser support has historically been inconsistent.",
+ "num_citations": 10,
+ "citation_text_tokens": 4285,
+ "citation_text_chars": 20143,
+ "search_queries": [
+  "CSS display contents pseudo-elements box not generated"
+ ],
+ "model_cost_usd": 0.0021271,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5485,
+  "output_tokens": 630,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 390
+ },
+ "latency_ms": 12516.071249963716,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.009127099999999999,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

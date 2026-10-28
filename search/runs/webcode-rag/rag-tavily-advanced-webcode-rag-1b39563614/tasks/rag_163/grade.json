@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_163",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 325.3,
+    "total_citation_tokens": 3253.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The answer correctly identifies HTTPException instances as excluded, but it omits other exceptions with registered error handlers and the exception to that rule when an exception is raised from an error handler. Since it does not give the complete answer to which exceptions are excluded, it is incorrect.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [4] directly supports that HTTPException instances are excluded from triggering got_request_exception.\n2. Citations [1] and [2] describe when the signal is sent relative to error-handler lookup, but do not say that exceptions with registered error handlers are excluded.\n3. No citation states the exception raised from an error handler qualification.\n4. Since these are non-trivial parts of the gold target answer and are not supported by the citations, the answer is not fully grounded.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000865725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

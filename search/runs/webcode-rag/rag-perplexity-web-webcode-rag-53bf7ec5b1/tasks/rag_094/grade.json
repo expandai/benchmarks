@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_094",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 204.4,
+    "total_citation_tokens": 2044.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the Bluespec BSV core tool Haskell codebase is well over 100,000 lines. The prediction gives approximately 70,000 lines, and an earlier figure of 61,000 lines, both of which conflict with the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [1] gives an estimate of about 70K Haskell lines for several Bluespec tools.\n2. Citation [4] reports 61K Haskell lines in the compiler, alongside 109K lines of C; the C lines do not establish the size of the Haskell codebase.\n3. Neither citation supports the gold target’s claim that the Haskell codebase is well over 100K lines. The retrieved size evidence instead gives lower Haskell-specific figures.\n4. Since the gold target’s specific size claim is not supported, the citations do not contain sufficient information to derive it.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0007214750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

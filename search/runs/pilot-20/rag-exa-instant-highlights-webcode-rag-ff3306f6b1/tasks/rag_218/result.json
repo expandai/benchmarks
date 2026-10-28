@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_218",
+ "prompt": "Phoenix LiveView assign_new parent child sharing conditions",
+ "attempt": 1,
+ "answer": "`assign_new/3` can share assigns from a parent LiveView to a child when all of these conditions hold:\n\n- The parent and child are **nested LiveViews**.\n- The child is **mounted when the parent is mounted**.\n- The child is **not rendered with `sticky: true`**.\n- The child calls `assign_new/3` for the **same key**.\n\nExample:\n\n```elixir\n# Parent\n{:ok, socket} =\n  {:ok, assign_new(socket, :current_user, fn -> load_user() end)}\n\n# Child\n{:ok, socket} =\n  {:ok, assign_new(socket, :current_user, fn -> load_user() end)}\n```\n\nWhen sharing is available, the child receives the parent’s value and its function is not needed for that key.\n\nImportant limitations:\n\n- Sharing is **possible but not guaranteed**. The child’s function must return the same value the parent would provide; otherwise, pass the value through the child’s session.\n- A child LiveView added **dynamically after the parent has mounted** should not be expected to receive the parent’s assigns.\n- During the initial disconnected render, `assign_new/3` can reuse assigns from `Plug.Conn`; those connection assigns are not available during the connected mount.\n- Live navigation mounts a new LiveView and does not provide access to the previous LiveView’s assigns.",
+ "num_citations": 10,
+ "citation_text_tokens": 4692,
+ "citation_text_chars": 19994,
+ "search_queries": [
+  "Phoenix LiveView assign_new parent child sharing conditions"
+ ],
+ "model_cost_usd": 0.00196105,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5896,
+  "output_tokens": 406,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 115
+ },
+ "latency_ms": 5203.058999963105,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.005961050000000001,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

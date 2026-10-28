@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_133",
+ "prompt": "WebRTC remote MediaStreamTrack applyConstraints rejection error",
+ "attempt": 1,
+ "answer": "`RTCRtpReceiver.track.applyConstraints()` may reject with `OverconstrainedError` because constraints on remote tracks were historically under-specified.\n\nThe search results indicate:\n\n- Remote-track settings are populated only from the remote SDP and actual RTP data.\n- Properties such as `facingMode`, `echoCancellation`, `latency`, `deviceId`, and `groupId` may be absent.\n- An implementation that always rejects `applyConstraints()` on a remote track with `OverconstrainedError`—as Firefox does—was considered compliant.\n- Browser behavior differed: Firefox rejected unsupported constraints such as `latency` consistently, while Chrome rejected them for remote audio but resolved them for remote video in the reported case.\n\nTherefore, a rejection generally means the requested constraint is unsupported or not applicable to that remote track; remote-track constraint behavior was not consistently defined across browsers.",
+ "num_citations": 10,
+ "citation_text_tokens": 4834,
+ "citation_text_chars": 20209,
+ "search_queries": [
+  "WebRTC remote MediaStreamTrack applyConstraints rejection error"
+ ],
+ "model_cost_usd": 0.001888,
+ "search_cost_usd": 0.004,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6079,
+  "output_tokens": 307,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 126
+ },
+ "latency_ms": 4319.395833066665,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.005888,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

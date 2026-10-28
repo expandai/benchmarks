@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_306",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 231.2,
+    "total_citation_tokens": 2312.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says the suggested increase is 30 times the default. The predicted answer instead gives 10× and an example value of 16,000 based on a stated default of 1,600, so it contradicts the target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "The citations establish an example increase of ten times the default, and state the default is 1600. None says to increase it by 30 times or provides information from which that suggested factor can be derived. The gold target’s specific factor is therefore missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000642975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

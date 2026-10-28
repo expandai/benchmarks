@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_035",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.8,
+    "avg_citation_tokens": 559.8,
+    "total_citation_tokens": 5598.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies `istio-proxy` as the fallback when the `app` label is missing, matching the gold target. The additional namespace detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The citations directly state that when the app label is absent, Istio uses `istio-proxy`.\nStep 2: The gold target answer is `istio-proxy`; that complete factual claim is explicitly supported, with no missing non-trivial information.\nStep 3: Citations [1]–[8] contain the fallback statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 8
+  },
+  "judge_cost_usd": 0.001128225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

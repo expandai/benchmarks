@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_170",
+ "prompt": "awk next statement executed END action historical behavior",
+ "attempt": 1,
+ "answer": "If `next` causes the end of input to be reached, the `END` actions are executed. The GNU Awk User’s Guide states this explicitly: “If the `next` statement causes the end of the input to be reached, then the code in any `END` rules will be executed.”  \n<http://odysseus.fi.muni.cz/pub/gnu/old-gnu/Manuals/gawk-3.0.3/html_node/gawk_104.es.html>\n\nHowever, using `next` *within* a `BEGIN` or `END` action has undefined behavior under POSIX; `gawk` treats it as a syntax error.  \n<https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/awk.html>",
+ "num_citations": 10,
+ "citation_text_tokens": 4853,
+ "citation_text_chars": 21931,
+ "search_queries": [
+  "awk next statement executed END action historical behavior"
+ ],
+ "model_cost_usd": 0.00188495,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 6014,
+  "output_tokens": 318,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 147
+ },
+ "latency_ms": 4809.951249975711,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00888495,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

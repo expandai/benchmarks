@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_011",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 112.3,
+    "total_citation_tokens": 1123.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target specifies the return type as vec2<T>, while the predicted answer gives a two-member structure with fields of types T and bool. These are different types, so the answer does not match the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The gold target says the return type is `vec2<T>`.\n2. The retrieved passages identify the return type as `__atomic_compare_exchange_result<T>`, a two-member structure with `old_value: T` and `exchanged: bool`.\n3. No citation states that the return type is `vec2<T>`; the retrieved information instead gives a different type. Therefore the citations do not ground the gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006246,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

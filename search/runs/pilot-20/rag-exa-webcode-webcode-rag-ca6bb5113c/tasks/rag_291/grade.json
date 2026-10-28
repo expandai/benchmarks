@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_291",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 193.2,
+    "total_citation_tokens": 1932.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that the default module name is \"env\", matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The question asks for the default module name for a Rust WebAssembly `extern` block using `wasm_import_module`.\n2. Citation [2] explicitly says imports default to the \"env\" module, and citation [3] directly states that the `extern` block module name defaults to \"env\".\n3. The gold target answer, \"env\", is directly supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.000591725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

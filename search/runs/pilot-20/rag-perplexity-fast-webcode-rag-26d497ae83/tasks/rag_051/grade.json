@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_051",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 390.5,
+    "total_citation_tokens": 3905.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer explicitly says it does not know and provides none of the information in the gold target. It does not contradict the target, so this is not an attempt.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The target claims that rendering always uses decimal numbering regardless of the `type` attribute.\n2. The retrieved passages describe `type` as selecting the marker style, including letters and Roman numerals, rather than establishing that decimal is always used.\n3. Citation [3] says negative values may be used for `start`, but does not explain how zero or negative list values render or say that they override the `type` attribute.\n4. No retrieved citation supports the target's specific claim about zero/negative values rendering in decimal regardless of `type`; therefore a non-trivial claim is missing.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.000890225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

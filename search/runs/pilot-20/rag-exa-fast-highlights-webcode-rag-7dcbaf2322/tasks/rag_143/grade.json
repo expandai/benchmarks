@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_143",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 434.9,
+    "total_citation_tokens": 4349.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer identifies auto-sized tracks as the tracks stretched by these properties and distinguishes them from explicitly sized and other non-auto tracks. This matches the gold target’s condition that only tracks with an auto max track sizing function accept the extra space.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [1] states that only `auto` track sizes can be stretched by `align-content` and `justify-content`. 2. Citation [8] says that `auto` as a maximum allows a track to expand through those properties. 3. Together, the sources support the target’s claim that the tracks accepting this stretching have an `auto` maximum track sizing function.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.001226725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

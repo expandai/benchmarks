@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_195",
+ "prompt": "HTTP/2 RFC 9113 oversized field block rejected processing obligation",
+ "attempt": 1,
+ "answer": "An oversized HTTP/2 field block must still be fully reassembled and decompressed before it is rejected. RFC 9113 requires a receiver to process `HEADERS`, `PUSH_PROMISE`, and `CONTINUATION` blocks even when the associated request or response will be discarded; failing to decompress the block requires a connection-level `COMPRESSION_ERROR`.\n\nThis is necessary to keep the HPACK compression context synchronized, including dynamic-table updates. After complete decoding, the endpoint may reject the oversized field section—typically as a stream-level rejection, such as HTTP `431` or `RST_STREAM`—rather than abandoning processing partway through. `SETTINGS_MAX_HEADER_LIST_SIZE` is advisory, and a peer may send a field section exceeding the advertised value.",
+ "num_citations": 10,
+ "citation_text_tokens": 4728,
+ "citation_text_chars": 20243,
+ "search_queries": [
+  "HTTP/2 RFC 9113 oversized field block rejected processing obligation"
+ ],
+ "model_cost_usd": 0.00204855,
+ "search_cost_usd": 0.007,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 5790,
+  "output_tokens": 501,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 342
+ },
+ "latency_ms": 16424.418083042838,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.00904855,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

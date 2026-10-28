@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_122",
+  "scores": {
+    "score": 0.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 513.9,
+    "total_citation_tokens": 5139.0
+  },
+  "details": {
+    "correctness": "INCORRECT",
+    "correctness_reasoning": "The gold target says explicit-register operands must appear at the end of the operand list, after all other operand types. Although the answer mentions that older ordering required this, it also claims that current Rust allows named and explicit-register operands to be freely mixed, which contradicts the target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citation [2] states the gold target claim directly. Step 2: The gold target contains one non-trivial claim—that explicit register operands must come after all other operand types—and that claim is present verbatim in the retrieved citations. Citation [3] describes relaxed ordering rules, but citation [2] still directly contains the target statement.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.0013611,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

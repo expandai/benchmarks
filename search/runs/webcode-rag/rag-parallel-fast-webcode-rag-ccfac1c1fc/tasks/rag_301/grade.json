@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_301",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 209.8,
+    "total_citation_tokens": 2098.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that when the environment variable after `!var` is not set, GNU Units prints an error and ignores the following block of definitions, matching the gold target.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [3] and [7] state what happens when the environment variable used by `!var` or `!varnot` is unset/undefined. Step 2: They provide both non-trivial claims in the gold target: `units` prints an error message and ignores the definitions block. Therefore, the target is fully supported. Step 3: Citations [3] and [7] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006106,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_058",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.5,
+    "avg_citation_tokens": 539.8,
+    "total_citation_tokens": 5398.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The answer states that calling runtime.GOMAXPROCS(0) leaves the setting unchanged and returns its current value, matching the gold target that it just queries the value. The additional details do not contradict that behavior.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target says that calling `runtime.GOMAXPROCS` with zero merely queries the current value.\n2. The cited documentation says values below 1 do not change the current setting, and the implementations return `ret` (the current setting) when `n <= 0`.\n3. Since zero satisfies `n <= 0`, the citations directly support that the call leaves the setting unchanged and returns its current value.",
+    "judge_cost_known": true,
+    "num_answer_sources": 5
+  },
+  "judge_cost_usd": 0.00123885,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

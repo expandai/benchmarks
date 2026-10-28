@@ -1,0 +1,34 @@
+{
+  "task_id": "rag_297",
+  "prompt": "Hibernate Envers @NotFound IGNORE side effect to-one",
+  "attempt": 1,
+  "answer": "`@NotFound(action = NotFoundAction.IGNORE)` has the following side effect on Hibernate to-one associations:\n\n- It makes the association **non-lazy**, even if `FetchType.LAZY` is specified.\n- If the foreign-key value is non-null but no referenced row exists, Hibernate treats the association as `null`.\n- For a non-lazy association, Hibernate may log an `ObjectNotFoundException` at `INFO` level while returning the owning entity with a `null` association.\n- Combining `@NotFound(IGNORE)` with a non-optional to-one association results in a `MappingException`.\n- Envers added support for `@NotFound` in HHH-8174.",
+  "num_citations": 10,
+  "citation_text_tokens": 4823,
+  "citation_text_chars": 19267,
+  "search_queries": [
+    "Hibernate Envers @NotFound IGNORE side effect to-one"
+  ],
+  "model_cost_usd": 0.00179455,
+  "search_cost_usd": 0.007,
+  "cost_known": true,
+  "usage": {
+    "input_tokens": 5926,
+    "output_tokens": 261,
+    "cached_input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 112
+  },
+  "latency_ms": 4914.247374981642,
+  "skipped_results_by_reason": {},
+  "total_cost_usd": 0.00879455,
+  "_redacted": {
+    "removed": [
+      "messages",
+      "citations[].text",
+      "citations",
+      "skipped_results"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

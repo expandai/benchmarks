@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_085",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 704.3,
+    "total_citation_tokens": 7043.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The gold target is `backslashreplace`, but the predicted answer does not state an error-handling mode for isolated stderr. It discusses stream isolation, capture modes, and exception handling without contradicting the gold target.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. The citation shows that invalid characters written to stderr are escaped, and gives the expected escaped bytes. 2. It does not identify the error-handling mode by name as `backslashreplace`; the observed output alone does not explicitly establish which mode produced it. 3. Since the specific mode named in the gold target is not stated in the retrieved citations, the sources do not contain all the required information.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.001655975,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

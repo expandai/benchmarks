@@ -1,0 +1,34 @@
+{
+ "task_id": "rag_017",
+ "prompt": "LLVM llvm.sqrt negative number behavior vs libm",
+ "attempt": 1,
+ "answer": "`llvm.sqrt` differs from `libm` for negative inputs:\n\n- **`libm` `sqrt`** returns **NaN for any negative number**.\n- **`llvm.sqrt`** has **undefined behavior for negative numbers other than `-0.0`**.\n- **`llvm.sqrt(-0.0)`** is defined to return **`-0.0`**, consistent with IEEE square root.\n\nTherefore, replacing a `libm` `sqrt` call with `llvm.sqrt` is unsafe unless the input is known to be nonnegative or the operation is appropriately annotated, such as with `nnan`.",
+ "num_citations": 10,
+ "citation_text_tokens": 1160,
+ "citation_text_chars": 4553,
+ "search_queries": [
+  "LLVM llvm.sqrt negative number behavior vs libm"
+ ],
+ "model_cost_usd": 0.0007772,
+ "search_cost_usd": 0.00075,
+ "cost_known": true,
+ "usage": {
+  "input_tokens": 2471,
+  "output_tokens": 133,
+  "cached_input_tokens": 0,
+  "cache_creation_tokens": 0,
+  "reasoning_tokens": 0
+ },
+ "latency_ms": 2750.0767080346122,
+ "skipped_results_by_reason": {},
+ "total_cost_usd": 0.0015272,
+ "_redacted": {
+  "removed": [
+   "messages",
+   "citations[].text",
+   "citations",
+   "skipped_results"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

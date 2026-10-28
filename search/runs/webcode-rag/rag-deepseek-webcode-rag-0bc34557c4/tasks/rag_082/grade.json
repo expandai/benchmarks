@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_082",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 200.1,
+    "total_citation_tokens": 2001.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly identifies HTAB as the only allowed control character in the quoted-pair, matching the gold target. Its accompanying ABNF is also consistent with RFC 7230.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. Citation [3] explicitly includes HTAB among the characters that may follow the backslash in a quoted-pair. 2. Citation [5] confirms that HTAB is the exception among control characters; other control characters are not allowed, even when escaped. 3. The gold target answer, HTAB, is directly supported.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0006674750000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

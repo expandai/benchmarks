@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_080",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.2,
+    "avg_citation_tokens": 427.7,
+    "total_citation_tokens": 4277.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer states that R's `#line` directive must occupy the first five characters of the line, with no leading whitespace, matching the gold target. It also accurately contrasts this with C, where whitespace may precede `#` and appear between `#` and the directive name.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "1. The gold target states that R’s `#line` directive must appear as the first five characters on a line.\n2. Citations [1] and [6] state this constraint explicitly and contrast it with the C directive.\n3. The gold target’s factual claim is fully supported by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 2
+  },
+  "judge_cost_usd": 0.0009251,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

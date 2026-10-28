@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_221",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.4,
+    "avg_citation_tokens": 247.3,
+    "total_citation_tokens": 2473.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer explicitly states that the API returns HTTP 422 Unprocessable Entity, matching the gold target. The additional details do not contradict that answer.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: Citations [1], [2], and [3] directly state that lacking the required permission to set blockOwnerDeletion returns 422 (Unprocessable Entity); citation [10] states the same in Chinese.\nStep 2: The gold target answer is exactly the response code and status description stated by the sources. All non-trivial information is present, so the answer is grounded.\nStep 3: Citations [1], [2], [3], and [10] contain sufficient information to derive the answer.",
+    "judge_cost_known": true,
+    "num_answer_sources": 4
+  },
+  "judge_cost_usd": 0.0007848499999999999,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_142",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.3,
+    "avg_citation_tokens": 459.2,
+    "total_citation_tokens": 4592.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer gives the minimum length as 6 bytes, matching the gold target. The cited TLS 1.3 notation also supports that minimum.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1: The cited ServerHello structure explicitly defines the extensions field with a minimum length of 6 bytes. Step 2: This directly supports the gold target answer, “6 bytes.” Step 3: Citations [2], [6], and [9] contain the supporting specification.",
+    "judge_cost_known": true,
+    "num_answer_sources": 3
+  },
+  "judge_cost_usd": 0.000920725,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

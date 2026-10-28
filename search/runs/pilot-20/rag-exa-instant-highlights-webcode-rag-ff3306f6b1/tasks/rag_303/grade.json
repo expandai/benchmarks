@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_303",
+  "scores": {
+    "score": 0.0,
+    "grounded": 0.0,
+    "citation_precision": 0.0,
+    "avg_citation_tokens": 529.0,
+    "total_citation_tokens": 5290.0
+  },
+  "details": {
+    "correctness": "NOT_ATTEMPTED",
+    "correctness_reasoning": "The predicted answer states that it does not know and does not provide or contradict the gold behavior.",
+    "groundedness": "UNGROUNDED",
+    "groundedness_reasoning": "1. Citation [10] mentions that `scale=0:0` is valid, but does not say that setting both dimensions to `-n` is equivalent to setting both to 0.\n2. Citation [3] explains the behavior of `-1` and `-2` when computing a dimension, but does not cover the case where both dimensions use `-n`.\n3. The gold target’s specific equivalence claim is therefore not established by the retrieved citations.",
+    "judge_cost_known": true,
+    "num_answer_sources": 0
+  },
+  "judge_cost_usd": 0.0011567300000000001,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}

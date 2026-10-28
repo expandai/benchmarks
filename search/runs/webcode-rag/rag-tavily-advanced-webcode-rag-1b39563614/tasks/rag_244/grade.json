@@ -1,0 +1,26 @@
+{
+  "task_id": "rag_244",
+  "scores": {
+    "score": 1.0,
+    "grounded": 1.0,
+    "citation_precision": 0.1,
+    "avg_citation_tokens": 399.6,
+    "total_citation_tokens": 3996.0
+  },
+  "details": {
+    "correctness": "CORRECT",
+    "correctness_reasoning": "The predicted answer correctly identifies the Kubernetes environment variables as names ending in `_SERVICE_HOST` and `_SERVICE_PORT`, matching the gold target. The additional override detail does not contradict it.",
+    "groundedness": "GROUNDED",
+    "groundedness_reasoning": "Step 1 — The citation explicitly identifies the environment-variable suffixes Spring Boot checks for Kubernetes auto-detection.\nStep 2 — The gold target’s `*_SERVICE_HOST` and `*_SERVICE_PORT` expresses those same suffixes with a wildcard prefix. This is a formatting difference, not a missing factual claim.\nStep 3 — Citation [1] contains sufficient information to derive the complete gold target.",
+    "judge_cost_known": true,
+    "num_answer_sources": 1
+  },
+  "judge_cost_usd": 0.000835225,
+  "_redacted": {
+    "removed": [
+      "details.evidence",
+      "details.answer_source_urls"
+    ],
+    "see": "runs/EXCLUDED.md"
+  }
+}
